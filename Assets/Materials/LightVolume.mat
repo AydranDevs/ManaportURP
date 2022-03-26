@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LightVolume
-  m_Shader: {fileID: 4800000, guid: e260cfa7296ee7642b167f1eb5be5023, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 4c0b14134948b79479558cd4ffaaf0d9, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -35,9 +35,30 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Boolean_29bada568c8d4ec799ac63f2a2c05e52: 0
+    - Boolean_425ee81698d04523924ebb4e5805e8b0: 0
+    - Vector1_5bd784f1d0f74567af3266788aa2c3b4: 0
+    - Vector1_6216cce7d03f42238fe3d30adbecf58d: 0
+    - Vector1_67c5fcab60dd423591d8389119134676: 0
+    - Vector1_69c7a906001047c883d5a5b1e7fb9397: 0
+    - Vector1_6fa6a03f5aa141718c92ceaea43d911f: 0
+    - Vector1_74356e0acb35448698080e28f78c11aa: 0
     - _EnableExternalAlpha: 0
     m_Colors:
+    - Color_571fc57aa16c447f90c84abffd6ace65: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

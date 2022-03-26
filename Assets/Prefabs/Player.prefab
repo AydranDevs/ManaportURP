@@ -216,7 +216,7 @@ MonoBehaviour:
   willSkid: 0
   isDashing: 0
   ability: 0
-  auxilaryType: 1
+  auxilaryType: 0
   primary: 2
   primaryElement: 0
   secondary: 2
@@ -234,10 +234,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vectorValue: {fileID: 11400000, guid: d1763db8f165bb64f9351c5557ec3030, type: 2}
+  canHandleMovement: 0
   reconstructedMovement: {x: 0, y: 0}
   angle: 0
   movementSp: 0
   runDuration: 0
+  runDustParActive: 0
   dashPoofParActive: 0
   dashDustParActive: 0
   horizontal: 0
@@ -281,6 +283,7 @@ MonoBehaviour:
   parent: {fileID: 29131144075423908}
   pfDashPoof: {fileID: 428652152852413941, guid: 4cec690b84ac8fd47b181642020538e8, type: 3}
   pfDashDust: {fileID: 2657419111771902253, guid: fe9533f71b9cb574ca8e088365d22e06, type: 3}
+  pfRunDust: {fileID: 3724344965056208213, guid: f60ec64c868ac724c974091324ae6dbc, type: 3}
 --- !u!50 &6132941125272086960
 Rigidbody2D:
   serializedVersion: 4
@@ -746,7 +749,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -458034991
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 8707969002921207541, guid: b015a22ed87b74c4692f848f55c9c4ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -810,7 +813,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 0
   m_CastsShadows: 1
   m_SelfShadows: 1
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50
   m_ShapePath:
   - {x: -0.37423944, y: -1.1249961, z: 0}
   - {x: -0.3733972, y: -1.1863539, z: 0}

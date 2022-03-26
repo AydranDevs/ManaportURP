@@ -49,3 +49,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Terrain
+    uniqueID: 3308310591
+    locked: 0
+  - name: Player
+    uniqueID: 3836932305
+    locked: 0
+  - name: Ambience
+    uniqueID: 1354468613
+    locked: 0
