@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 1507ec6a5681d604a94ce44ce3d8874f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - legumel: {instanceID: 0}
+  - parent: {instanceID: 0}
+  - pfDust: {fileID: 9046670275389832802, guid: 65fea28058278cf4aba4e5542901860e, type: 3}
+  - pfFire: {fileID: 3420680959492203744, guid: 1439776d9ff79cc429fe875a0cdffdf6, type: 3}
+  - pfIce: {fileID: 9098321865381320971, guid: 48b86c8b627cac24a9151f0e3ef65827, type: 3}
+  - pfLightning: {fileID: 1663747276983756663, guid: f7ed38362a227284a9d2c2c505e4eb40, type: 3}
+  - pfToxic: {fileID: 3197205075778771279, guid: e7941d674ec2fd64995b95d550290e9f, type: 3}
+  - pfCrit: {fileID: 2320573872470112330, guid: b09c1f01de0e07248be747b389a84a0e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
