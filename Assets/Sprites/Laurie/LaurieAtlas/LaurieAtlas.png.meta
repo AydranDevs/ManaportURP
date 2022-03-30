@@ -1,0 +1,1757 @@
+fileFormatVersion: 2
+guid: 43cc1b05306459e478c1c0613483e9cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1283470321471306533
+    second: LaurieAtlas0
+  - first:
+      213: 6311938412232307374
+    second: LaurieAtlas_0
+  - first:
+      213: -6025367354546464254
+    second: LaurieAtlas_1
+  - first:
+      213: -4854406651222724460
+    second: LaurieAtlas_2
+  - first:
+      213: 10603835831704967
+    second: LaurieAtlas_3
+  - first:
+      213: 7615392285035010232
+    second: LaurieAtlas_4
+  - first:
+      213: -6998880870840831146
+    second: LaurieAtlas_5
+  - first:
+      213: -1535346757824337861
+    second: LaurieAtlas_6
+  - first:
+      213: 3462066903513594485
+    second: LaurieAtlas_7
+  - first:
+      213: 6917317055737834727
+    second: LaurieAtlas_8
+  - first:
+      213: 6268983117880890572
+    second: LaurieAtlas_9
+  - first:
+      213: -2485626521765152546
+    second: LaurieAtlas_10
+  - first:
+      213: 940317877287091961
+    second: LaurieAtlas_11
+  - first:
+      213: 3181204467590197399
+    second: LaurieAtlas_12
+  - first:
+      213: 1663295487462603237
+    second: LaurieAtlas_13
+  - first:
+      213: 4288857934393851237
+    second: LaurieAtlas_14
+  - first:
+      213: 2062767625408874400
+    second: LaurieAtlas_15
+  - first:
+      213: -4278731446448031274
+    second: LaurieAtlas_16
+  - first:
+      213: -1245016039377620997
+    second: LaurieAtlas_17
+  - first:
+      213: 2119303874758073598
+    second: LaurieAtlas_18
+  - first:
+      213: -3674621092320498275
+    second: LaurieAtlas_19
+  - first:
+      213: 7879415399401569288
+    second: LaurieAtlas_20
+  - first:
+      213: 7855479105798224913
+    second: LaurieAtlas_21
+  - first:
+      213: -867946380413822253
+    second: LaurieAtlas_22
+  - first:
+      213: 2866561108077373979
+    second: LaurieAtlas_23
+  - first:
+      213: -8475531801402529383
+    second: LaurieAtlas_24
+  - first:
+      213: 7764625030934030540
+    second: LaurieAtlas_25
+  - first:
+      213: 8963385457636099385
+    second: LaurieAtlas_26
+  - first:
+      213: 4703893603116377502
+    second: LaurieAtlas_27
+  - first:
+      213: 5933194527941680758
+    second: LaurieAtlas_28
+  - first:
+      213: -1193594379660075565
+    second: LaurieAtlas_29
+  - first:
+      213: 1387507626375646302
+    second: LaurieAtlas_30
+  - first:
+      213: -9102204129054400218
+    second: LaurieAtlas_31
+  - first:
+      213: 7411120100666251170
+    second: LaurieAtlas_32
+  - first:
+      213: -980721463477253869
+    second: LaurieAtlas_33
+  - first:
+      213: -4356310478560337540
+    second: LaurieAtlas_34
+  - first:
+      213: -8768222180127609486
+    second: LaurieAtlas_35
+  - first:
+      213: -8385397434887250525
+    second: LaurieAtlas_36
+  - first:
+      213: 414570471070531165
+    second: LaurieAtlas_37
+  - first:
+      213: -5497244153038400197
+    second: LaurieAtlas_38
+  - first:
+      213: 6194260942861004294
+    second: LaurieAtlas_39
+  - first:
+      213: -962719446691434628
+    second: LaurieAtlas_40
+  - first:
+      213: 8201677230066192651
+    second: LaurieAtlas_41
+  - first:
+      213: -6873472962487772294
+    second: LaurieAtlas_42
+  - first:
+      213: -4409982455199224053
+    second: LaurieAtlas_43
+  - first:
+      213: 1543139920549667432
+    second: LaurieAtlas_44
+  - first:
+      213: 2024364746773381215
+    second: LaurieAtlas_45
+  - first:
+      213: 8828085709872912179
+    second: LaurieAtlas_46
+  - first:
+      213: 3525662307633514679
+    second: LaurieAtlas_47
+  - first:
+      213: -461569477279683912
+    second: LaurieAtlas_48
+  - first:
+      213: 7186157376494963967
+    second: LaurieAtlas_49
+  - first:
+      213: 5013715975026361648
+    second: LaurieAtlas_50
+  - first:
+      213: 874203017144730925
+    second: LaurieAtlas_51
+  - first:
+      213: -12312160663945507
+    second: LaurieAtlas_52
+  - first:
+      213: 6140968448965033187
+    second: LaurieAtlas_53
+  - first:
+      213: 170441073108066383
+    second: LaurieAtlas_54
+  - first:
+      213: -6487674457345516795
+    second: LaurieAtlas_55
+  - first:
+      213: 9159959505113775043
+    second: LaurieAtlas_56
+  - first:
+      213: 1926960378003171371
+    second: LaurieAtlas_57
+  - first:
+      213: 2628747575984438312
+    second: LaurieAtlas_58
+  - first:
+      213: 7842126270455926355
+    second: LaurieAtlas_59
+  - first:
+      213: 7896127355124341103
+    second: LaurieAtlas_60
+  - first:
+      213: -379900742432603573
+    second: LaurieAtlas_61
+  - first:
+      213: -2688930853181611250
+    second: LaurieAtlas_62
+  - first:
+      213: -4035324144062316932
+    second: LaurieAtlas_63
+  - first:
+      213: -5042708540102654777
+    second: LaurieAtlas_64
+  - first:
+      213: 1962120263553704859
+    second: LaurieAtlas_65
+  - first:
+      213: -1678613061848058442
+    second: LaurieAtlas_66
+  - first:
+      213: -4682711334322380434
+    second: LaurieAtlas_67
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LaurieAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 218
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2ff393b82889750800000000000000
+      internalID: 6311938412232307374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 218
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ad5079058916ca0800000000000000
+      internalID: -6025367354546464254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 218
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4907396dedea1acb0800000000000000
+      internalID: -4854406651222724460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 218
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d510ce12ca52000800000000000000
+      internalID: 10603835831704967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 218
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b813c66fee4fa960800000000000000
+      internalID: 7615392285035010232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 218
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 653714cfdeafede90800000000000000
+      internalID: -6998880870840831146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 218
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3825d4224a51bae0800000000000000
+      internalID: -1535346757824337861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 218
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a7094818bbb0030800000000000000
+      internalID: 3462066903513594485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 218
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec2102763f3fff50800000000000000
+      internalID: 6917317055737834727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 218
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc416346ee6eff650800000000000000
+      internalID: 6268983117880890572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 218
+        width: 16
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8f5ed09d7418dd0800000000000000
+      internalID: -2485626521765152546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 218
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe75ab902eac0d00800000000000000
+      internalID: 940317877287091961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7907998cb98e52c20800000000000000
+      internalID: 3181204467590197399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e9f7beee66351710800000000000000
+      internalID: 1663295487462603237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 218
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d39a76195158b30800000000000000
+      internalID: 4288857934393851237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 218
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a70caee93c60ac10800000000000000
+      internalID: 2062767625408874400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9fb2d4b64ee94c0800000000000000
+      internalID: -4278731446448031274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bffab313280d8bee0800000000000000
+      internalID: -1245016039377620997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc501245a7496d10800000000000000
+      internalID: 2119303874758073598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d2414e59f110dc0800000000000000
+      internalID: -3674621092320498275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 218
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cb21f0f8e495d60800000000000000
+      internalID: 7879415399401569288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 218
+        width: 18
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11c3b9960a4440d60800000000000000
+      internalID: 7855479105798224913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da19579d5f64f3f0800000000000000
+      internalID: -867946380413822253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 218
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ae6edd32218c720800000000000000
+      internalID: 2866561108077373979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 179
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99920ee5bbcd06a80800000000000000
+      internalID: -8475531801402529383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 179
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8edeea35d71cb60800000000000000
+      internalID: 7764625030934030540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 179
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9354d4b6597546c70800000000000000
+      internalID: 8963385457636099385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 179
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95ebfa4f46974140800000000000000
+      internalID: 4703893603116377502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 179
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e514ddcf0f65250800000000000000
+      internalID: 5933194527941680758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 179
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd55725c308f6fe0800000000000000
+      internalID: -1193594379660075565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c0449b5da614310800000000000000
+      internalID: 1387507626375646302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6216e96f1997ea180800000000000000
+      internalID: -9102204129054400218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a718fb377699d660800000000000000
+      internalID: 7411120100666251170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31946d96607c362f0800000000000000
+      internalID: -980721463477253869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c71691253b64b83c0800000000000000
+      internalID: -4356310478560337540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27deac91264015680800000000000000
+      internalID: -8768222180127609486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3add211f57511ab80800000000000000
+      internalID: -8385397434887250525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e768e95a9d0c500800000000000000
+      internalID: 414570471070531165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_38
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b359d86819dd5b3b0800000000000000
+      internalID: -5497244153038400197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_39
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e6e49428f66f550800000000000000
+      internalID: 6194260942861004294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_40
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fa89193cbb3a2f0800000000000000
+      internalID: -962719446691434628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_41
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0151848cf532d170800000000000000
+      internalID: 8201677230066192651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_42
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b1aa102c48c90a0800000000000000
+      internalID: -6873472962487772294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_43
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0f252472589cc2c0800000000000000
+      internalID: -4409982455199224053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_44
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 179
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8626613f4955a6510800000000000000
+      internalID: 1543139920549667432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_45
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 179
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50404bf20df71c10800000000000000
+      internalID: 2024364746773381215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_46
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 140
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3375daf0e29a38a70800000000000000
+      internalID: 8828085709872912179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_47
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 140
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8ca74603bade030800000000000000
+      internalID: 3525662307633514679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_48
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 140
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bae493810d2899f0800000000000000
+      internalID: -461569477279683912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_49
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 140
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffc090e5f0c5ab360800000000000000
+      internalID: 7186157376494963967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_50
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 140
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035c5209d1c449540800000000000000
+      internalID: 5013715975026361648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_51
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 140
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d258c7a230bc12c00800000000000000
+      internalID: 874203017144730925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_52
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 140
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dde3535b72244dff0800000000000000
+      internalID: -12312160663945507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_53
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 140
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec3171a44a193550800000000000000
+      internalID: 6140968448965033187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_54
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 140
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f402eb1c0478d5200800000000000000
+      internalID: 170441073108066383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_55
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 140
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b9b87447627f5a0800000000000000
+      internalID: -6487674457345516795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_56
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 140
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbf44b63a6be1f70800000000000000
+      internalID: 9159959505113775043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_57
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 140
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28a12b1140fdba10800000000000000
+      internalID: 1926960378003171371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_58
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 140
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cb8be1eff2b7420800000000000000
+      internalID: 2628747575984438312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_59
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 140
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ec84a2b44d4dc60800000000000000
+      internalID: 7842126270455926355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_60
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 140
+        width: 25
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f695e677efda49d60800000000000000
+      internalID: 7896127355124341103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_61
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 140
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b42c56d99425abaf0800000000000000
+      internalID: -379900742432603573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_62
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 140
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03a586b2affeaad0800000000000000
+      internalID: -2688930853181611250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_63
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 140
+        width: 19
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ebb9f2216aff7c0800000000000000
+      internalID: -4035324144062316932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_64
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 106
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c44a59dc43b40ab0800000000000000
+      internalID: -5042708540102654777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_65
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 106
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93e6b3ebf9da3b10800000000000000
+      internalID: 1962120263553704859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_66
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 106
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b5373d505e54b8e0800000000000000
+      internalID: -1678613061848058442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieAtlas_67
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 106
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e61e40cf9daa30fb0800000000000000
+      internalID: -4682711334322380434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bfee57c6428dda44299928ff2799fae3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: fcbcecfad89fbac4d93e94aa86e27b43, type: 3}
+      name: _NormalMap
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

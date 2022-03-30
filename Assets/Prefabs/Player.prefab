@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 8748948775429690951}
   - component: {fileID: 157315004392795411}
   - component: {fileID: 1727260451276729324}
+  - component: {fileID: 2038762598593908112}
   - component: {fileID: 8522449253854330943}
   - component: {fileID: 6132941125272086960}
   - component: {fileID: 7216965811880539656}
@@ -268,6 +269,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75d02fab137f0b44a993f8f19047a0a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2038762598593908112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164113302670634765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26bbcc4151ca414db09f24ae72fb88d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idleAnimTimer: 7
 --- !u!114 &8522449253854330943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,8 +496,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -458034991
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a30296a71d441bf44b97dfff2a765f8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -815,21 +829,13 @@ MonoBehaviour:
   m_SelfShadows: 1
   m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50
   m_ShapePath:
-  - {x: -0.37423944, y: -1.1249961, z: 0}
-  - {x: -0.3733972, y: -1.1863539, z: 0}
-  - {x: 0.37496895, y: -1.187096, z: 0}
-  - {x: 0.37483472, y: -1.1236922, z: 0}
-  - {x: 0.43788776, y: -1.1236922, z: 0}
-  - {x: 0.43877667, y: -1.0624864, z: 0}
-  - {x: 0.3735073, y: -1.0620457, z: 0}
-  - {x: 0.37357178, y: -1.0002775, z: 0}
-  - {x: -0.37538373, y: -1.0000796, z: 0}
-  - {x: -0.3747362, y: -1.0622706, z: 0}
-  - {x: -0.43615857, y: -1.0633577, z: 0}
-  - {x: -0.43615857, y: -1.1253237, z: 0}
-  m_ShapePathHash: -1714526835
+  - {x: -0.44, y: -1.185, z: 0}
+  - {x: 0.44, y: -1.185, z: 0}
+  - {x: 0.44, y: -1, z: 0}
+  - {x: -0.44, y: -1, z: 0}
+  m_ShapePathHash: 142176501
   m_Mesh: {fileID: 0}
-  m_InstanceId: -92946
+  m_InstanceId: -1250
 --- !u!1 &6829359299229603085
 GameObject:
   m_ObjectHideFlags: 0

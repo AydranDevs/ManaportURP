@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector]
     public Vector2 reconstructedMovement;
+    [HideInInspector]
+    public Vector3 position;
     public float angle;
     
     public float movementSp;
@@ -85,17 +87,25 @@ public class PlayerMovement : MonoBehaviour
             OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
         }
 
+        // if (runDuration == 0f && Player.movementType != MovementState.Idle | Player.movementType != MovementState.Walk) {
+        //    Debug.Log("Check");
+        // }
+
         if(Input.GetAxisRaw("Horizontal") > 0f) {
             horizontal = 1;
+            Player.facing = FacingState.East;
         }else if(Input.GetAxisRaw("Horizontal") < 0f) {
             horizontal = -1;
+            Player.facing = FacingState.West;
         }else {
             horizontal = 0;
         }
         if(Input.GetAxisRaw("Vertical") > 0f) {
             vertical = 1;
+            Player.facing = FacingState.North;
         }else if(Input.GetAxisRaw("Vertical") < 0f) {
             vertical = -1;
+            Player.facing = FacingState.South;
         }else {
             vertical = 0;
         }
@@ -111,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Player.move.Equals(new Vector2(0, 0))) return;
 
-        Vector3 position = Player.transform.position;
+        position = Player.transform.position;
         position = PixelPerfectClamp(position, 16f);
 
 
@@ -131,6 +141,10 @@ public class PlayerMovement : MonoBehaviour
         reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
 
         rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * laurie.movementSp) * d));        
+    }
+
+    private void Update() {
+        
     }
 
     private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {
