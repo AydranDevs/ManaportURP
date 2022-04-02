@@ -103,6 +103,7 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
         abilityCooldownLimit = 2f;
 
         spindashDist = 5f;
+        blinkdashDist = 3f;
 
         movementSp = 2f;
         sprintMod = 1.75f;

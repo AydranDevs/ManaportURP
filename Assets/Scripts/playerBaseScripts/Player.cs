@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MovementState { Idle, Walk, Run, Dash, Skid }
+public enum MovementState { Idle, Walk, Run, Dash, Skid, AuxilaryMovement }
 public enum DirectionState { North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest }
 public enum FacingState { North, East, South, West }
 public enum AbilityState { None, AuxilaryMovement, SpellcastPrimary, SpellcastSecondary }

@@ -3,29 +3,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+This script handles one component of an AI for an enemy in a game. 
+The goal here is to get Legumel (enemy) to move a random direction
+a random amount of tiles after a set time between 1s and 7.5s. This
+requires no input from the user and runs indefinitely until Legumel
+is either defeated or out of range.
+
+2 of the 4 methods here are called by the Unity API.
+*/
+
 public class Roam : MonoBehaviour {
     
+    // scripts to be referenced
     private Rigidbody2D rb;
     private Legumel legumel;
     private LegumelAI legumelAI;
 
+    // values that Legumel will go to
     private float roamDist;
-
     private Vector3 targetPos;
 
+    // simple movement vectors
     private int horizontal;
     private int vertical;
 
     private bool awaitingDir = false;
-
     private bool isMoving = false;
+    
     float speed = 3f;
-    [SerializeField]
     float time = 2f;
 
+    // This function is called by Unity's API  when the script's instance is loaded.
     private void Awake() {
         legumel = GetComponent<Legumel>();
         legumelAI = GetComponent<LegumelAI>();
+
+        // making the function "LegumelRoamMove_OnRoamWaitOver" a listener to the "OnRoamWaitOver" event, called from the script LegumelAI after a random time of waiting is over.
         legumelAI.OnRoamWaitOver += LegumelRoamMove_OnRoamWaitOver;
     }
     
@@ -35,8 +49,10 @@ public class Roam : MonoBehaviour {
         awaitingDir = true;
     }
 
+    // This function is called by Unity's API every frame during play mode.
     private void Update() {
         
+        // if not moving, Legumel is Idle.
         if (!isMoving) {
             legumelAI.stateHandler.aIMovementState = AIMovementState.Idle;
             legumelAI.move = new Vector2(0, 0);
@@ -45,6 +61,8 @@ public class Roam : MonoBehaviour {
         }
         
         if (isMoving) {
+
+            // Get a random direction if waiting for one.
             if (awaitingDir) {
                 int rand = UnityEngine.Random.Range(1, 9);
                 targetPos = GetRandomDir(rand);
@@ -78,11 +96,9 @@ public class Roam : MonoBehaviour {
                 isMoving = false;
             }
         }
-
-        // Debug.Log(legumelAI.stateHandler.aIMovementState);
     }
 
-    // this function gets a random position of the 8.
+    // this function returns a random Vector3 representing 1 direction of the 8.
     private Vector3 GetRandomDir(int num) { 
         
         Vector2 right = new Vector2(roamDist, 0); // right

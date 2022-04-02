@@ -9,9 +9,8 @@ public class Lightspeed : MonoBehaviour {
     private Rigidbody2D rb;
     private PlayerMovement playerMovement;
 
-    // public float range; // default 5
-    public float speed; // default 5
-    public float angle;
+    public float speed; // default 30
+    public float time;
     public float dist;
 
     [SerializeField]
@@ -23,18 +22,32 @@ public class Lightspeed : MonoBehaviour {
         playerAbilities = GetComponent<PlayerAbilities>();
         playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
+
+        speed = 50f;
+        time = 0.1f;
     }
 
     private void Update() {
         if (player.auxilaryType == AuxilaryMovementType.BlinkDash && player.ability == AbilityState.AuxilaryMovement) {
             float range = laurie.blinkdashDist;
-            
             dashTarget = player.transform.position + (Vector3)playerMovement.reconstructedMovement * range;
 
-            player.transform.position = dashTarget;
+            time -= Time.deltaTime;
 
-            playerAbilities.abilitiesAvailable = false;
-            playerAbilities.abilityCooldown = laurie.abilityCooldownLimit;
+            float step =  speed * Time.deltaTime; // calculate distance to move
+            player.transform.position = Vector3.MoveTowards(player.transform.position, dashTarget, step);
+
+            // reset all timers and player ability state
+            if (time <= 0f) {
+                player.ability = AbilityState.None;
+                player.movementType = MovementState.Idle;
+                
+                playerAbilities.abilitiesAvailable = false;
+                playerAbilities.abilityCooldown = laurie.abilityCooldownLimit;
+                time = 0.1f;
+
+                // spinDashParActive = false;
+            }
         }
     }
 }

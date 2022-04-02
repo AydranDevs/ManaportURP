@@ -36,6 +36,7 @@ public class PlayerAbilities : MonoBehaviour {
 
         if (controls.buttonAuxilaryMovement == true && abilitiesAvailable == true) {
             player.ability = AbilityState.AuxilaryMovement;
+            player.movementType = MovementState.AuxilaryMovement;
         }
 
 

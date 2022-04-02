@@ -66,6 +66,12 @@ public class PlayerAnimation : MonoBehaviour
         }else {
             animator.SetBool("spindashing", false);
         }
+
+        if (Player.auxilaryType == AuxilaryMovementType.BlinkDash && Player.ability == AbilityState.AuxilaryMovement) {
+            animator.SetBool("blinkdashing", true);
+        }else {
+            animator.SetBool("blinkdashing", false);
+        }
     }
 
     private void AnimatePlayer_OnIdleWaveActive(object sender, PlayerIdleAnimation.OnIdleWaveActiveEventArgs e) {

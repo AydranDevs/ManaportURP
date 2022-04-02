@@ -1,214 +1,202 @@
 fileFormatVersion: 2
-guid: 43cc1b05306459e478c1c0613483e9cd
+guid: 670b977bb1be1ca42a736c0837da62ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1283470321471306533
-    second: LaurieAtlas0
+      213: -4870008654134179148
+    second: Laurie00
   - first:
-      213: 6311938412232307374
-    second: LaurieAtlas_0
+      213: 5276704422257322258
+    second: Laurie01
   - first:
-      213: -6025367354546464254
-    second: LaurieAtlas_1
+      213: 7002340962949841560
+    second: Laurie02
   - first:
-      213: -4854406651222724460
-    second: LaurieAtlas_2
+      213: 6172913426697246805
+    second: Laurie03
   - first:
-      213: 10603835831704967
-    second: LaurieAtlas_3
+      213: -822866971172271365
+    second: Laurie04
   - first:
-      213: 7615392285035010232
-    second: LaurieAtlas_4
+      213: -8430064576445122428
+    second: Laurie05
   - first:
-      213: -6998880870840831146
-    second: LaurieAtlas_5
+      213: 5007253975281378923
+    second: Laurie06
   - first:
-      213: -1535346757824337861
-    second: LaurieAtlas_6
+      213: 5731374932030329987
+    second: Laurie07
   - first:
-      213: 3462066903513594485
-    second: LaurieAtlas_7
+      213: -6422970271844303034
+    second: Laurie08
   - first:
-      213: 6917317055737834727
-    second: LaurieAtlas_8
+      213: 79546690139428655
+    second: Laurie09
   - first:
-      213: 6268983117880890572
-    second: LaurieAtlas_9
+      213: 6679205193561986117
+    second: Laurie10
   - first:
-      213: -2485626521765152546
-    second: LaurieAtlas_10
+      213: 6033314859652931165
+    second: Laurie11
   - first:
-      213: 940317877287091961
-    second: LaurieAtlas_11
+      213: 6170353249351372569
+    second: Laurie12
   - first:
-      213: 3181204467590197399
-    second: LaurieAtlas_12
+      213: -6210458270207766794
+    second: Laurie13
   - first:
-      213: 1663295487462603237
-    second: LaurieAtlas_13
+      213: 6523691199163929466
+    second: Laurie14
   - first:
-      213: 4288857934393851237
-    second: LaurieAtlas_14
+      213: -2263885173299367563
+    second: Laurie15
   - first:
-      213: 2062767625408874400
-    second: LaurieAtlas_15
+      213: -2916371287337960818
+    second: Laurie16
   - first:
-      213: -4278731446448031274
-    second: LaurieAtlas_16
+      213: -2987120065795544536
+    second: Laurie17
   - first:
-      213: -1245016039377620997
-    second: LaurieAtlas_17
+      213: 9161925108953852626
+    second: Laurie18
   - first:
-      213: 2119303874758073598
-    second: LaurieAtlas_18
+      213: -926984727813311019
+    second: Laurie19
   - first:
-      213: -3674621092320498275
-    second: LaurieAtlas_19
+      213: -321710887743868859
+    second: Laurie20
   - first:
-      213: 7879415399401569288
-    second: LaurieAtlas_20
+      213: 3008047875422124826
+    second: Laurie21
   - first:
-      213: 7855479105798224913
-    second: LaurieAtlas_21
+      213: -2483953131244324556
+    second: Laurie22
   - first:
-      213: -867946380413822253
-    second: LaurieAtlas_22
+      213: -5055458757321307325
+    second: Laurie23
   - first:
-      213: 2866561108077373979
-    second: LaurieAtlas_23
+      213: 908903223161240909
+    second: Laurie24
   - first:
-      213: -8475531801402529383
-    second: LaurieAtlas_24
+      213: 1139341470860684531
+    second: Laurie25
   - first:
-      213: 7764625030934030540
-    second: LaurieAtlas_25
+      213: -515018657544409955
+    second: Laurie26
   - first:
-      213: 8963385457636099385
-    second: LaurieAtlas_26
+      213: 2432529219515437413
+    second: Laurie27
   - first:
-      213: 4703893603116377502
-    second: LaurieAtlas_27
+      213: -5973687308818518706
+    second: Laurie28
   - first:
-      213: 5933194527941680758
-    second: LaurieAtlas_28
+      213: -4334429380591199317
+    second: Laurie29
   - first:
-      213: -1193594379660075565
-    second: LaurieAtlas_29
+      213: 7165403986646058645
+    second: Laurie30
   - first:
-      213: 1387507626375646302
-    second: LaurieAtlas_30
+      213: 8080910747093847667
+    second: Laurie31
   - first:
-      213: -9102204129054400218
-    second: LaurieAtlas_31
+      213: 98686845196779260
+    second: Laurie32
   - first:
-      213: 7411120100666251170
-    second: LaurieAtlas_32
+      213: -5921002707299513103
+    second: Laurie33
   - first:
-      213: -980721463477253869
-    second: LaurieAtlas_33
+      213: -142545605545361680
+    second: Laurie34
   - first:
-      213: -4356310478560337540
-    second: LaurieAtlas_34
+      213: -8539179283127584747
+    second: Laurie35
   - first:
-      213: -8768222180127609486
-    second: LaurieAtlas_35
+      213: -4023641206876193733
+    second: Laurie36
   - first:
-      213: -8385397434887250525
-    second: LaurieAtlas_36
+      213: -8333625170984613424
+    second: Laurie37
   - first:
-      213: 414570471070531165
-    second: LaurieAtlas_37
+      213: -8329922583448230834
+    second: Laurie38
   - first:
-      213: -5497244153038400197
-    second: LaurieAtlas_38
+      213: -8019452822974090936
+    second: Laurie39
   - first:
-      213: 6194260942861004294
-    second: LaurieAtlas_39
+      213: -3095570246660324221
+    second: Laurie40
   - first:
-      213: -962719446691434628
-    second: LaurieAtlas_40
+      213: 6887141040276487023
+    second: Laurie41
   - first:
-      213: 8201677230066192651
-    second: LaurieAtlas_41
+      213: 4473103232601364920
+    second: Laurie42
   - first:
-      213: -6873472962487772294
-    second: LaurieAtlas_42
+      213: 2294505561149503639
+    second: Laurie43
   - first:
-      213: -4409982455199224053
-    second: LaurieAtlas_43
+      213: 4018015619942085937
+    second: Laurie44
   - first:
-      213: 1543139920549667432
-    second: LaurieAtlas_44
+      213: -9194348276816795251
+    second: Laurie45
   - first:
-      213: 2024364746773381215
-    second: LaurieAtlas_45
+      213: 7624733410669495963
+    second: Laurie46
   - first:
-      213: 8828085709872912179
-    second: LaurieAtlas_46
+      213: 7106662240077094505
+    second: Laurie47
   - first:
-      213: 3525662307633514679
-    second: LaurieAtlas_47
+      213: -5305985121538940404
+    second: Laurie48
   - first:
-      213: -461569477279683912
-    second: LaurieAtlas_48
+      213: 6753537794666094951
+    second: Laurie49
   - first:
-      213: 7186157376494963967
-    second: LaurieAtlas_49
+      213: -274456323310309465
+    second: Laurie50
   - first:
-      213: 5013715975026361648
-    second: LaurieAtlas_50
+      213: 5141528903758282257
+    second: Laurie51
   - first:
-      213: 874203017144730925
-    second: LaurieAtlas_51
+      213: 4355780208910073884
+    second: Laurie52
   - first:
-      213: -12312160663945507
-    second: LaurieAtlas_52
+      213: -8322442578850005720
+    second: Laurie53
   - first:
-      213: 6140968448965033187
-    second: LaurieAtlas_53
+      213: 3014127105525717392
+    second: Laurie54
   - first:
-      213: 170441073108066383
-    second: LaurieAtlas_54
+      213: -4546778919555490302
+    second: Laurie55
   - first:
-      213: -6487674457345516795
-    second: LaurieAtlas_55
+      213: -2391521312765499484
+    second: Laurie56
   - first:
-      213: 9159959505113775043
-    second: LaurieAtlas_56
+      213: -6657309422639566734
+    second: Laurie57
   - first:
-      213: 1926960378003171371
-    second: LaurieAtlas_57
+      213: 8326956292324855773
+    second: Laurie58
   - first:
-      213: 2628747575984438312
-    second: LaurieAtlas_58
+      213: 8486316656751133851
+    second: Laurie59
   - first:
-      213: 7842126270455926355
-    second: LaurieAtlas_59
+      213: 1010232239856560476
+    second: Laurie60
   - first:
-      213: 7896127355124341103
-    second: LaurieAtlas_60
+      213: 3612337236498728895
+    second: Laurie61
   - first:
-      213: -379900742432603573
-    second: LaurieAtlas_61
+      213: -4329652138911333492
+    second: Laurie62
   - first:
-      213: -2688930853181611250
-    second: LaurieAtlas_62
+      213: -5401084403644950996
+    second: Laurie63
   - first:
-      213: -4035324144062316932
-    second: LaurieAtlas_63
-  - first:
-      213: -5042708540102654777
-    second: LaurieAtlas_64
-  - first:
-      213: 1962120263553704859
-    second: LaurieAtlas_65
-  - first:
-      213: -1678613061848058442
-    second: LaurieAtlas_66
-  - first:
-      213: -4682711334322380434
-    second: LaurieAtlas_67
+      213: -5040681159284111627
+    second: Laurie64
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -272,7 +260,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -284,7 +272,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -296,7 +284,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 512
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -310,1429 +298,1366 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LaurieAtlas_0
+      name: Laurie00
       rect:
         serializedVersion: 2
-        x: 2
-        y: 218
-        width: 16
-        height: 38
+        x: 1
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ea2ff393b82889750800000000000000
-      internalID: 6311938412232307374
+      spriteID: 4ba01457ee04a6cb0800000000000000
+      internalID: -4870008654134179148
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_1
+      name: Laurie01
       rect:
         serializedVersion: 2
-        x: 20
-        y: 218
-        width: 16
-        height: 38
+        x: 67
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 20ad5079058916ca0800000000000000
-      internalID: -6025367354546464254
+      spriteID: 219616107be9a3940800000000000000
+      internalID: 5276704422257322258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_2
+      name: Laurie02
       rect:
         serializedVersion: 2
-        x: 38
-        y: 218
-        width: 16
-        height: 38
+        x: 133
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 4907396dedea1acb0800000000000000
-      internalID: -4854406651222724460
+      spriteID: 892cacc71005d2160800000000000000
+      internalID: 7002340962949841560
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_3
+      name: Laurie03
       rect:
         serializedVersion: 2
-        x: 56
-        y: 218
-        width: 16
-        height: 38
+        x: 199
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 78d510ce12ca52000800000000000000
-      internalID: 10603835831704967
+      spriteID: 558578b5e089aa550800000000000000
+      internalID: 6172913426697246805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_4
+      name: Laurie04
       rect:
         serializedVersion: 2
-        x: 74
-        y: 218
-        width: 16
-        height: 37
+        x: 265
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8b813c66fee4fa960800000000000000
-      internalID: 7615392285035010232
+      spriteID: bfa00e579d69494f0800000000000000
+      internalID: -822866971172271365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_5
+      name: Laurie05
       rect:
         serializedVersion: 2
-        x: 92
-        y: 218
-        width: 16
-        height: 38
+        x: 331
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 653714cfdeafede90800000000000000
-      internalID: -6998880870840831146
+      spriteID: 488726f9ee4620b80800000000000000
+      internalID: -8430064576445122428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_6
+      name: Laurie06
       rect:
         serializedVersion: 2
-        x: 110
-        y: 218
-        width: 16
-        height: 37
+        x: 397
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b3825d4224a51bae0800000000000000
-      internalID: -1535346757824337861
+      spriteID: b662fc006f65d7540800000000000000
+      internalID: 5007253975281378923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_7
+      name: Laurie07
       rect:
         serializedVersion: 2
-        x: 128
-        y: 218
-        width: 16
-        height: 38
+        x: 463
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 57a7094818bbb0030800000000000000
-      internalID: 3462066903513594485
+      spriteID: 3841f32722fe98f40800000000000000
+      internalID: 5731374932030329987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_8
+      name: Laurie08
       rect:
         serializedVersion: 2
-        x: 146
-        y: 218
-        width: 16
-        height: 36
+        x: 529
+        y: 529
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7ec2102763f3fff50800000000000000
-      internalID: 6917317055737834727
+      spriteID: 64f73df61960dd6a0800000000000000
+      internalID: -6422970271844303034
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_9
+      name: Laurie09
       rect:
         serializedVersion: 2
-        x: 164
-        y: 218
-        width: 16
-        height: 37
+        x: 1
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cc416346ee6eff650800000000000000
-      internalID: 6268983117880890572
+      spriteID: f2791d01b4b9a1100800000000000000
+      internalID: 79546690139428655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_10
+      name: Laurie10
       rect:
         serializedVersion: 2
-        x: 182
-        y: 218
-        width: 16
-        height: 36
+        x: 67
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ed8f5ed09d7418dd0800000000000000
-      internalID: -2485626521765152546
+      spriteID: 544d4305cbd41bc50800000000000000
+      internalID: 6679205193561986117
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_11
+      name: Laurie11
       rect:
         serializedVersion: 2
-        x: 200
-        y: 218
-        width: 16
-        height: 37
+        x: 133
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9fe75ab902eac0d00800000000000000
-      internalID: 940317877287091961
+      spriteID: d5ed2b326e3aab350800000000000000
+      internalID: 6033314859652931165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_12
+      name: Laurie12
       rect:
         serializedVersion: 2
-        x: 218
-        y: 218
-        width: 18
-        height: 38
+        x: 199
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7907998cb98e52c20800000000000000
-      internalID: 3181204467590197399
+      spriteID: 91f044e969f71a550800000000000000
+      internalID: 6170353249351372569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_13
+      name: Laurie13
       rect:
         serializedVersion: 2
-        x: 238
-        y: 218
-        width: 18
-        height: 38
+        x: 265
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5e9f7beee66351710800000000000000
-      internalID: 1663295487462603237
+      spriteID: 6fe01ef8b1500d9a0800000000000000
+      internalID: -6210458270207766794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_14
+      name: Laurie14
       rect:
         serializedVersion: 2
-        x: 258
-        y: 218
-        width: 18
-        height: 37
+        x: 331
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 56d39a76195158b30800000000000000
-      internalID: 4288857934393851237
+      spriteID: a731286e49ec88a50800000000000000
+      internalID: 6523691199163929466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_15
+      name: Laurie15
       rect:
         serializedVersion: 2
-        x: 278
-        y: 218
-        width: 18
-        height: 37
+        x: 397
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 0a70caee93c60ac10800000000000000
-      internalID: 2062767625408874400
+      spriteID: 571b731fd601590e0800000000000000
+      internalID: -2263885173299367563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_16
+      name: Laurie16
       rect:
         serializedVersion: 2
-        x: 298
-        y: 218
-        width: 18
-        height: 38
+        x: 463
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6d9fb2d4b64ee94c0800000000000000
-      internalID: -4278731446448031274
+      spriteID: e8a721904c7f687d0800000000000000
+      internalID: -2916371287337960818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_17
+      name: Laurie17
       rect:
         serializedVersion: 2
-        x: 318
-        y: 218
-        width: 18
-        height: 38
+        x: 529
+        y: 463
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: bffab313280d8bee0800000000000000
-      internalID: -1245016039377620997
+      spriteID: 82aa0d8602e9b86d0800000000000000
+      internalID: -2987120065795544536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_18
+      name: Laurie18
       rect:
         serializedVersion: 2
-        x: 338
-        y: 218
-        width: 18
-        height: 38
+        x: 1
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: efc501245a7496d10800000000000000
-      internalID: 2119303874758073598
+      spriteID: 2da2de93852b52f70800000000000000
+      internalID: 9161925108953852626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_19
+      name: Laurie19
       rect:
         serializedVersion: 2
-        x: 358
-        y: 218
-        width: 18
-        height: 38
+        x: 67
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d9d2414e59f110dc0800000000000000
-      internalID: -3674621092320498275
+      spriteID: 5d5b97a2d40b223f0800000000000000
+      internalID: -926984727813311019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_20
+      name: Laurie20
       rect:
         serializedVersion: 2
-        x: 378
-        y: 218
-        width: 18
-        height: 37
+        x: 133
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 80cb21f0f8e495d60800000000000000
-      internalID: 7879415399401569288
+      spriteID: 540b6afe6ad098bf0800000000000000
+      internalID: -321710887743868859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_21
+      name: Laurie21
       rect:
         serializedVersion: 2
-        x: 398
-        y: 218
-        width: 18
-        height: 37
+        x: 199
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 11c3b9960a4440d60800000000000000
-      internalID: 7855479105798224913
+      spriteID: a1b77e9fa9bbeb920800000000000000
+      internalID: 3008047875422124826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_22
+      name: Laurie22
       rect:
         serializedVersion: 2
-        x: 418
-        y: 218
-        width: 18
-        height: 38
+        x: 265
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3da19579d5f64f3f0800000000000000
-      internalID: -867946380413822253
+      spriteID: 4397675a9c9378dd0800000000000000
+      internalID: -2483953131244324556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_23
+      name: Laurie23
       rect:
         serializedVersion: 2
-        x: 438
-        y: 218
-        width: 18
-        height: 38
+        x: 331
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b1ae6edd32218c720800000000000000
-      internalID: 2866561108077373979
+      spriteID: 34bc9319b0767d9b0800000000000000
+      internalID: -5055458757321307325
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_24
+      name: Laurie24
       rect:
         serializedVersion: 2
-        x: 2
-        y: 179
-        width: 21
-        height: 37
+        x: 397
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 99920ee5bbcd06a80800000000000000
-      internalID: -8475531801402529383
+      spriteID: d4dbbb77aa21d9c00800000000000000
+      internalID: 908903223161240909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_25
+      name: Laurie25
       rect:
         serializedVersion: 2
-        x: 26
-        y: 179
-        width: 18
-        height: 36
+        x: 463
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cc8edeea35d71cb60800000000000000
-      internalID: 7764625030934030540
+      spriteID: 3fca5800801cfcf00800000000000000
+      internalID: 1139341470860684531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_26
+      name: Laurie26
       rect:
         serializedVersion: 2
-        x: 48
-        y: 179
-        width: 21
-        height: 37
+        x: 529
+        y: 397
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 9354d4b6597546c70800000000000000
-      internalID: 8963385457636099385
+      spriteID: d9ced5872494ad8f0800000000000000
+      internalID: -515018657544409955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_27
+      name: Laurie27
       rect:
         serializedVersion: 2
-        x: 72
-        y: 179
-        width: 18
-        height: 36
+        x: 1
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e95ebfa4f46974140800000000000000
-      internalID: 4703893603116377502
+      spriteID: 561d9f2ef6412c120800000000000000
+      internalID: 2432529219515437413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_28
+      name: Laurie28
       rect:
         serializedVersion: 2
-        x: 94
-        y: 179
-        width: 21
-        height: 37
+        x: 67
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 67e514ddcf0f65250800000000000000
-      internalID: 5933194527941680758
+      spriteID: e4dec96ea03391da0800000000000000
+      internalID: -5973687308818518706
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_29
+      name: Laurie29
       rect:
         serializedVersion: 2
-        x: 118
-        y: 179
-        width: 18
-        height: 36
+        x: 133
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3dd55725c308f6fe0800000000000000
-      internalID: -1193594379660075565
+      spriteID: bab58d1717309d3c0800000000000000
+      internalID: -4334429380591199317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_30
+      name: Laurie30
       rect:
         serializedVersion: 2
-        x: 138
-        y: 179
-        width: 16
-        height: 37
+        x: 199
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e5c0449b5da614310800000000000000
-      internalID: 1387507626375646302
+      spriteID: 596c43046f0a07360800000000000000
+      internalID: 7165403986646058645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_31
+      name: Laurie31
       rect:
         serializedVersion: 2
-        x: 156
-        y: 179
-        width: 16
-        height: 38
+        x: 265
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 6216e96f1997ea180800000000000000
-      internalID: -9102204129054400218
+      spriteID: 37e4a2e8289252070800000000000000
+      internalID: 8080910747093847667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_32
+      name: Laurie32
       rect:
         serializedVersion: 2
-        x: 174
-        y: 179
-        width: 16
-        height: 37
+        x: 331
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2a718fb377699d660800000000000000
-      internalID: 7411120100666251170
+      spriteID: cfe35ffa92b9e5100800000000000000
+      internalID: 98686845196779260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_33
+      name: Laurie33
       rect:
         serializedVersion: 2
-        x: 192
-        y: 179
-        width: 16
-        height: 38
+        x: 397
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 31946d96607c362f0800000000000000
-      internalID: -980721463477253869
+      spriteID: 1fc4945986f54dda0800000000000000
+      internalID: -5921002707299513103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_34
+      name: Laurie34
       rect:
         serializedVersion: 2
-        x: 210
-        y: 179
-        width: 16
-        height: 37
+        x: 463
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c71691253b64b83c0800000000000000
-      internalID: -4356310478560337540
+      spriteID: 0fefc29e683950ef0800000000000000
+      internalID: -142545605545361680
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_35
+      name: Laurie35
       rect:
         serializedVersion: 2
-        x: 228
-        y: 179
-        width: 16
-        height: 38
+        x: 529
+        y: 331
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 27deac91264015680800000000000000
-      internalID: -8768222180127609486
+      spriteID: 5183ecb3fadbe7980800000000000000
+      internalID: -8539179283127584747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_36
+      name: Laurie36
       rect:
         serializedVersion: 2
-        x: 246
-        y: 179
-        width: 16
-        height: 37
+        x: 1
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3add211f57511ab80800000000000000
-      internalID: -8385397434887250525
+      spriteID: b3c3588f3a72928c0800000000000000
+      internalID: -4023641206876193733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_37
+      name: Laurie37
       rect:
         serializedVersion: 2
-        x: 264
-        y: 179
-        width: 16
-        height: 38
+        x: 67
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d5e768e95a9d0c500800000000000000
-      internalID: 414570471070531165
+      spriteID: 0d945387f04095c80800000000000000
+      internalID: -8333625170984613424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_38
+      name: Laurie38
       rect:
         serializedVersion: 2
-        x: 282
-        y: 179
-        width: 16
-        height: 37
+        x: 133
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b359d86819dd5b3b0800000000000000
-      internalID: -5497244153038400197
+      spriteID: e44601f4b8b266c80800000000000000
+      internalID: -8329922583448230834
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_39
+      name: Laurie39
       rect:
         serializedVersion: 2
-        x: 300
-        y: 179
-        width: 16
-        height: 38
+        x: 199
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 60e6e49428f66f550800000000000000
-      internalID: 6194260942861004294
+      spriteID: 84130a9752e25b090800000000000000
+      internalID: -8019452822974090936
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_40
+      name: Laurie40
       rect:
         serializedVersion: 2
-        x: 318
-        y: 179
-        width: 16
-        height: 37
+        x: 265
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c7fa89193cbb3a2f0800000000000000
-      internalID: -962719446691434628
+      spriteID: 3840b8ef2435a05d0800000000000000
+      internalID: -3095570246660324221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_41
+      name: Laurie41
       rect:
         serializedVersion: 2
-        x: 336
-        y: 179
-        width: 16
-        height: 38
+        x: 331
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b0151848cf532d170800000000000000
-      internalID: 8201677230066192651
+      spriteID: f6bb1b7594a049f50800000000000000
+      internalID: 6887141040276487023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_42
+      name: Laurie42
       rect:
         serializedVersion: 2
-        x: 354
-        y: 179
-        width: 16
-        height: 37
+        x: 397
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a7b1aa102c48c90a0800000000000000
-      internalID: -6873472962487772294
+      spriteID: 8b91bd6c0b7a31e30800000000000000
+      internalID: 4473103232601364920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_43
+      name: Laurie43
       rect:
         serializedVersion: 2
-        x: 372
-        y: 179
-        width: 16
-        height: 38
+        x: 463
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b0f252472589cc2c0800000000000000
-      internalID: -4409982455199224053
+      spriteID: 798797ba6a8b7df10800000000000000
+      internalID: 2294505561149503639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_44
+      name: Laurie44
       rect:
         serializedVersion: 2
-        x: 390
-        y: 179
-        width: 16
-        height: 37
+        x: 529
+        y: 265
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8626613f4955a6510800000000000000
-      internalID: 1543139920549667432
+      spriteID: 1357e900bebd2c730800000000000000
+      internalID: 4018015619942085937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_45
+      name: Laurie45
       rect:
         serializedVersion: 2
-        x: 408
-        y: 179
-        width: 16
-        height: 38
+        x: 1
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f50404bf20df71c10800000000000000
-      internalID: 2024364746773381215
+      spriteID: d892c1bb4fc176080800000000000000
+      internalID: -9194348276816795251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_46
+      name: Laurie46
       rect:
         serializedVersion: 2
-        x: 2
-        y: 140
-        width: 21
-        height: 37
+        x: 67
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3375daf0e29a38a70800000000000000
-      internalID: 8828085709872912179
+      spriteID: b960202b3ae70d960800000000000000
+      internalID: 7624733410669495963
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_47
+      name: Laurie47
       rect:
         serializedVersion: 2
-        x: 27
-        y: 140
-        width: 18
-        height: 36
+        x: 133
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7b8ca74603bade030800000000000000
-      internalID: 3525662307633514679
+      spriteID: 96e1a7697afef9260800000000000000
+      internalID: 7106662240077094505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_48
+      name: Laurie48
       rect:
         serializedVersion: 2
-        x: 48
-        y: 140
-        width: 21
-        height: 37
+        x: 199
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 8bae493810d2899f0800000000000000
-      internalID: -461569477279683912
+      spriteID: c02e92fe4aa5d56b0800000000000000
+      internalID: -5305985121538940404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_49
+      name: Laurie49
       rect:
         serializedVersion: 2
-        x: 73
-        y: 140
-        width: 18
-        height: 36
+        x: 265
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: ffc090e5f0c5ab360800000000000000
-      internalID: 7186157376494963967
+      spriteID: 7616f3ca7d269bd50800000000000000
+      internalID: 6753537794666094951
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_50
+      name: Laurie50
       rect:
         serializedVersion: 2
-        x: 94
-        y: 140
-        width: 21
-        height: 37
+        x: 331
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 035c5209d1c449540800000000000000
-      internalID: 5013715975026361648
+      spriteID: 7afaab69d6fe03cf0800000000000000
+      internalID: -274456323310309465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_51
+      name: Laurie51
       rect:
         serializedVersion: 2
-        x: 119
-        y: 140
-        width: 18
-        height: 36
+        x: 397
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d258c7a230bc12c00800000000000000
-      internalID: 874203017144730925
+      spriteID: 11e7ae60c416a5740800000000000000
+      internalID: 5141528903758282257
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_52
+      name: Laurie52
       rect:
         serializedVersion: 2
-        x: 139
-        y: 140
-        width: 25
-        height: 36
+        x: 463
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: dde3535b72244dff0800000000000000
-      internalID: -12312160663945507
+      spriteID: c1003c7a507d27c30800000000000000
+      internalID: 4355780208910073884
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_53
+      name: Laurie53
       rect:
         serializedVersion: 2
-        x: 168
-        y: 140
-        width: 19
-        height: 36
+        x: 529
+        y: 199
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3ec3171a44a193550800000000000000
-      internalID: 6140968448965033187
+      spriteID: 82d3f08919eb08c80800000000000000
+      internalID: -8322442578850005720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_54
+      name: Laurie54
       rect:
         serializedVersion: 2
-        x: 189
-        y: 140
-        width: 25
-        height: 38
+        x: 1
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f402eb1c0478d5200800000000000000
-      internalID: 170441073108066383
+      spriteID: 0999cb802a454d920800000000000000
+      internalID: 3014127105525717392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_55
+      name: Laurie55
       rect:
         serializedVersion: 2
-        x: 216
-        y: 140
-        width: 25
-        height: 37
+        x: 67
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 50b9b87447627f5a0800000000000000
-      internalID: -6487674457345516795
+      spriteID: 20e19ab99a896e0c0800000000000000
+      internalID: -4546778919555490302
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_56
+      name: Laurie56
       rect:
         serializedVersion: 2
-        x: 243
-        y: 140
-        width: 25
-        height: 38
+        x: 133
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 3cbf44b63a6be1f70800000000000000
-      internalID: 9159959505113775043
+      spriteID: 4a726df690c9fced0800000000000000
+      internalID: -2391521312765499484
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_57
+      name: Laurie57
       rect:
         serializedVersion: 2
-        x: 270
-        y: 140
-        width: 25
-        height: 37
+        x: 199
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b28a12b1140fdba10800000000000000
-      internalID: 1926960378003171371
+      spriteID: 27035bf1a5c7c93a0800000000000000
+      internalID: -6657309422639566734
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_58
+      name: Laurie58
       rect:
         serializedVersion: 2
-        x: 297
-        y: 140
-        width: 25
-        height: 37
+        x: 265
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 82cb8be1eff2b7420800000000000000
-      internalID: 2628747575984438312
+      spriteID: ddf0a3831aa4f8370800000000000000
+      internalID: 8326956292324855773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_59
+      name: Laurie59
       rect:
         serializedVersion: 2
-        x: 324
-        y: 140
-        width: 25
-        height: 36
+        x: 331
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 35ec84a2b44d4dc60800000000000000
-      internalID: 7842126270455926355
+      spriteID: b94c121790475c570800000000000000
+      internalID: 8486316656751133851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_60
+      name: Laurie60
       rect:
         serializedVersion: 2
-        x: 351
-        y: 140
-        width: 25
-        height: 37
+        x: 397
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f695e677efda49d60800000000000000
-      internalID: 7896127355124341103
+      spriteID: c592c45aed0150e00800000000000000
+      internalID: 1010232239856560476
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_61
+      name: Laurie61
       rect:
         serializedVersion: 2
-        x: 378
-        y: 140
-        width: 25
-        height: 36
+        x: 463
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b42c56d99425abaf0800000000000000
-      internalID: -379900742432603573
+      spriteID: fb74c6ed399912230800000000000000
+      internalID: 3612337236498728895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_62
+      name: Laurie62
       rect:
         serializedVersion: 2
-        x: 405
-        y: 140
-        width: 25
-        height: 36
+        x: 529
+        y: 133
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e03a586b2affeaad0800000000000000
-      internalID: -2688930853181611250
+      spriteID: c830e23b15cf9e3c0800000000000000
+      internalID: -4329652138911333492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_63
+      name: Laurie63
       rect:
         serializedVersion: 2
-        x: 436
-        y: 140
-        width: 19
-        height: 36
+        x: 1
+        y: 67
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: c7ebb9f2216aff7c0800000000000000
-      internalID: -4035324144062316932
+      spriteID: c2617ded95e7b05b0800000000000000
+      internalID: -5401084403644950996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: LaurieAtlas_64
+      name: Laurie64
       rect:
         serializedVersion: 2
-        x: 2
-        y: 106
-        width: 21
-        height: 32
+        x: 67
+        y: 67
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7c44a59dc43b40ab0800000000000000
-      internalID: -5042708540102654777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LaurieAtlas_65
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 106
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b93e6b3ebf9da3b10800000000000000
-      internalID: 1962120263553704859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LaurieAtlas_66
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 106
-        width: 22
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b5373d505e54b8e0800000000000000
-      internalID: -1678613061848058442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LaurieAtlas_67
-      rect:
-        serializedVersion: 2
-        x: 73
-        y: 106
-        width: 21
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e61e40cf9daa30fb0800000000000000
-      internalID: -4682711334322380434
+      spriteID: 5f6cdda3137eb0ab0800000000000000
+      internalID: -5040681159284111627
       vertices: []
       indices: 
       edges: []
@@ -1740,14 +1665,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: bfee57c6428dda44299928ff2799fae3
+    spriteID: d98c42b6021520a4ba6d90b7e9c6e65a
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures:
-    - texture: {fileID: 2800000, guid: fcbcecfad89fbac4d93e94aa86e27b43, type: 3}
+    - texture: {fileID: 2800000, guid: 9b6dc705335ca6a42ba99ece490890c1, type: 3}
       name: _NormalMap
   spritePackingTag: 
   pSDRemoveMatte: 0

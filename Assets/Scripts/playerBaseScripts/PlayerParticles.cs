@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerParticles : MonoBehaviour {
     private PlayerMovement playerMovement;
+    private Spindash spindash;
 
     public Transform parent;
 
@@ -11,29 +12,45 @@ public class PlayerParticles : MonoBehaviour {
     public GameObject pfDashPoof;
     public GameObject pfDashDust;
     public GameObject pfRunDust;
+    public GameObject pfSpinDashStars;
 
     // gameObjects to be instantiated
     private GameObject dashPoofParticles;
     private GameObject dashDustParticles;
     private GameObject runDustParticles;
+    private GameObject spinDashParticles;
 
     private void Start() {
         playerMovement = GetComponent<PlayerMovement>();
+        spindash = GetComponentInChildren<Spindash>();
 
         playerMovement.OnDashStart += SummonParticles_OnDashStart;
         playerMovement.OnDashEnd += DestroyParticles_OnDashEnd;
         playerMovement.OnRunStart += SummonParticles_OnRunStart;
         playerMovement.OnRunEnd += DestroyParticles_OnRunEnd;
+
+        spindash.OnSpinDashStart += SummonParticles_OnSpinDashStart;
+        spindash.OnSpinDashEnd += DestroyParticles_OnSpinDashEnd;
+        
     }
 
     public void SummonParticles_OnDashStart(object sender, PlayerMovement.OnDashStartEventArgs e) {
         dashPoofParticles = Instantiate(pfDashPoof, GetPosition(), Quaternion.identity, parent);
-        dashDustParticles = Instantiate(pfDashDust, GetPosition(), Quaternion.identity, parent);
+        dashDustParticles = Instantiate(pfDashDust, GetPosition() - new Vector3(0, 1, 0), Quaternion.identity, parent);
     }
 
     public void DestroyParticles_OnDashEnd(object sender, PlayerMovement.OnDashEndEventArgs e) {
-        Destroy(dashPoofParticles);
-        Destroy(dashDustParticles);
+        if (dashPoofParticles != null) {
+            ParticleSystem dashPoofParticleSystem = dashPoofParticles.GetComponentInChildren<ParticleSystem>();
+            dashPoofParticleSystem.Stop();
+        }
+        if (dashDustParticles != null) { 
+            ParticleSystem dashDustParticleSystem = dashDustParticles.GetComponentInChildren<ParticleSystem>();
+            dashDustParticleSystem.Stop();
+        }
+
+        Destroy(dashPoofParticles, 2f);
+        Destroy(dashDustParticles, 2f);
     }
 
     public void SummonParticles_OnRunStart(object sender, PlayerMovement.OnRunStartEventArgs e) {
@@ -41,7 +58,29 @@ public class PlayerParticles : MonoBehaviour {
     }
 
     public void DestroyParticles_OnRunEnd(object sender, PlayerMovement.OnRunEndEventArgs e) {
-        Destroy(runDustParticles);
+        if (runDustParticles != null) {
+            ParticleSystem runDustParticleSystem = runDustParticles.GetComponentInChildren<ParticleSystem>();
+            runDustParticleSystem.Stop();
+        }
+
+        Destroy(runDustParticles, 2f);
+    }
+
+    public void SummonParticles_OnSpinDashStart(object sender, Spindash.OnSpinDashStartEventArgs e) {
+        spinDashParticles = Instantiate(pfSpinDashStars, GetPosition() - new Vector3(0, 1, 0), Quaternion.identity, parent);
+    }
+
+    public void DestroyParticles_OnSpinDashEnd(object sender, Spindash.OnSpinDashEndEventArgs e) {
+        if (spinDashParticles != null) {
+            GameObject ps = spinDashParticles.gameObject.transform.GetChild(0).gameObject;
+            GameObject ps2 = spinDashParticles.gameObject.transform.GetChild(1).gameObject;
+
+            ParticleSystem spinDashParticleSystem = ps.GetComponent<ParticleSystem>();
+            ParticleSystem spinDashParticleSystem2 = ps2.GetComponent<ParticleSystem>();
+            spinDashParticleSystem.Stop();
+            spinDashParticleSystem2.Stop();
+        }
+        Destroy(spinDashParticles, 2f);
     }
 
     public Vector3 GetPosition() {
