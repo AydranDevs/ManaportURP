@@ -128,7 +128,7 @@ MonoBehaviour:
   - {x: -0.4342997, y: -0.80669534, z: 0}
   m_ShapePathHash: 1622792825
   m_Mesh: {fileID: 0}
-  m_InstanceId: -389740
+  m_InstanceId: -1298
 --- !u!1 &164113302670634765
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +193,10 @@ MonoBehaviour:
   xp: 0
   hitPointsMax: 20
   hitPoints: 0
+  stabilityMax: 1
+  stability: 1
+  stressMax: 1
+  stress: 0
   manaPointsMax: 5
   manaPoints: 0
   movementSp: 0
@@ -202,6 +206,7 @@ MonoBehaviour:
   spindashDist: 0
   blinkdashDist: 0
   pounceDist: 0
+  stressRes: 0
   pyroRes: 0
   cryoRes: 0
   boltRes: 0
@@ -298,6 +303,8 @@ MonoBehaviour:
   position: {x: 0, y: 0, z: 0}
   angle: 0
   movementSp: 0
+  sprintMod: 0
+  dashMod: 0
   runDuration: 0
   runDustParActive: 0
   dashPoofParActive: 0
@@ -944,6 +951,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
-  angle: 0
+  time: 0
   dist: 0
   dashTarget: {x: 0, y: 0, z: 0}

@@ -15,6 +15,13 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
     public float hitPointsMax = 20f;
     public float hitPoints;
 
+    // Player stability point values
+    [Header("Stability Points")]
+    public float stabilityMax = 1f;
+    public float stability = 1f; // (100%)
+    public float stressMax = 1f;
+    public float stress = 0f;
+
     // Player mana point values
     [Header("Mana Points")]
     public float manaPointsMax = 5f;
@@ -23,8 +30,13 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
     // Movement
     [Header("Movement")]
     public float movementSp;
+    private float defaultMovementSp = 2f;
+    
     public float sprintMod;
+    private float defaultSprintMod = 1.75f;
+
     public float dashMod;
+    private float defaultDashMod = 2.5f;
 
     // Abilities
     [Header("Abilities")]
@@ -36,11 +48,13 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
 
     // Defenses
     [Header("Defenses")]
-    public float pyroRes = 0f;
-    public float cryoRes = 0f;
-    public float boltRes = 0f;
-    public float toxiRes = 0f;
-    public float arcaneRes = 0f;
+    // percents
+    public float stressRes = 0.50f;
+    public float pyroRes = 0.00f;
+    public float cryoRes = 0.00f;
+    public float boltRes = 0.00f;
+    public float toxiRes = 0.00f;
+    public float arcaneRes = 0.00f;
 
     // Debuffs
     [Header("Debuffs")]
@@ -96,7 +110,7 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
     [SerializeField]
     private Transform pfCrit;
 
-    private void Awake() {
+    private void Start() {
         MaxHP();
         MaxMP();
 
@@ -105,9 +119,9 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
         spindashDist = 5f;
         blinkdashDist = 3f;
 
-        movementSp = 2f;
-        sprintMod = 1.75f;
-        dashMod = 2.5f;
+        movementSp = defaultMovementSp;
+        sprintMod = defaultSprintMod;
+        dashMod = defaultDashMod;
     }
 
     public void MaxHP() {
@@ -138,6 +152,41 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
         manaPointsMax += 2f;
     }
     
+    // might add functionality for bypassing stress resistance
+    // public void CalcStress() {
+    //     float refactoredStress = stress - stressRes;
+    //     if (stress < 0f) stress = 0f;
+    //     float refactoredStability = stability - refactoredStress;
+
+    //     movementSp = movementSp * refactoredStability;
+    //     sprintMod = sprintMod * refactoredStability;
+    //     dashMod = dashMod * refactoredStability;
+    // }
+
+    private float CalcMovementSpeedWithStress() {
+        float refactoredStress = stress - stressRes;
+        if (stress < 0f) stress = 0f;
+        float refactoredStability = stability - refactoredStress;
+
+        return defaultMovementSp * refactoredStability;
+    }
+
+    private float CalcSprintModWithStress() {
+        float refactoredStress = stress - stressRes;
+        if (stress < 0f) stress = 0f;
+        float refactoredStability = stability - refactoredStress;
+
+        return defaultSprintMod * refactoredStability;
+    }
+
+    private float CalcDashModWithStress() {
+        float refactoredStress = stress - stressRes;
+        if (stress < 0f) stress = 0f;
+        float refactoredStability = stability - refactoredStress;
+
+        return defaultDashMod * refactoredStability;
+    }
+
     public float CheckRes(float damage, string statusType) {
         float refactoredDamage;
         
@@ -243,11 +292,15 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
     }
 
     private void Update() {
-        
+
         if (hitPoints <= 0f) {
             Die();
             return;
         }
+
+        movementSp = CalcMovementSpeedWithStress();
+        sprintMod = CalcSprintModWithStress();
+        dashMod = CalcDashModWithStress();
 
         /* 
         This is a 1s timer. every time this timer hits 0,

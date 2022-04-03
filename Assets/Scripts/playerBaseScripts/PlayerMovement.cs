@@ -21,6 +21,9 @@ public class PlayerMovement : MonoBehaviour
     public float angle;
     
     public float movementSp;
+    public float sprintMod;
+    public float dashMod;
+
     public float runDuration;
     
     public bool runDustParActive = false;
@@ -47,11 +50,14 @@ public class PlayerMovement : MonoBehaviour
         laurie = GetComponent<Laurie>();
         Player.transform.position = vectorValue.initialValue;
 
-        movementSp = laurie.movementSp;
+        
     }  
     
     public void Move(float d) {
-
+        movementSp = laurie.movementSp;
+        sprintMod = laurie.sprintMod;
+        dashMod = laurie.dashMod;
+        
         if(Player.movementType == MovementState.Run){
             runDuration += Time.deltaTime;
 
@@ -130,11 +136,11 @@ public class PlayerMovement : MonoBehaviour
         angle = (float)(Mathf.Atan2(yDiff, xDiff));
 
         if (Player.isDashing == true) {
-            movementSp = laurie.movementSp * laurie.dashMod;
+            movementSp = movementSp * dashMod;
         }else if (Player.movementType == MovementState.Run) {
-            movementSp = laurie.movementSp * laurie.sprintMod;
+            movementSp = movementSp * sprintMod;
         }else {
-            movementSp = laurie.movementSp;
+            movementSp = movementSp;
         }
 
         reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
