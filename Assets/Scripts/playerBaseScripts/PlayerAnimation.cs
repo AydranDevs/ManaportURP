@@ -68,9 +68,9 @@ public class PlayerAnimation : MonoBehaviour
         }
 
         if (Player.auxilaryType == AuxilaryMovementType.BlinkDash && Player.ability == AbilityState.AuxilaryMovement) {
-            animator.SetBool("blinkdashing", true);
+            //animator.SetBool("blinkdashing", true);
         }else {
-            animator.SetBool("blinkdashing", false);
+            //animator.SetBool("blinkdashing", false);
         }
     }
 
