@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 0.2
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -58,8 +58,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 2
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 3.75
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -279,6 +279,7 @@ MonoBehaviour:
   skidThreshold: 8
   willSkid: 0
   isDashing: 0
+  isPushing: 0
   ability: 0
   auxilaryType: 0
   primary: 2
@@ -302,6 +303,8 @@ MonoBehaviour:
   reconstructedMovement: {x: 0, y: 0}
   position: {x: 0, y: 0, z: 0}
   angle: 0
+  targetDelta: {x: 0, y: 0}
+  actualDelta: {x: 0, y: 0}
   movementSp: 0
   sprintMod: 0
   dashMod: 0
@@ -365,6 +368,7 @@ MonoBehaviour:
   pfDashDust: {fileID: 7923280764400931731, guid: 32d3fcb5a9adb684f98f42916d985a3c, type: 3}
   pfRunDust: {fileID: 3724344965056208213, guid: f60ec64c868ac724c974091324ae6dbc, type: 3}
   pfSpinDashStars: {fileID: 4137723919395584313, guid: fa05030fb1c225f47b942cce4d7075f2, type: 3}
+  pfPushSweat: {fileID: 7321643856011136819, guid: 7631ef8eaffed25488e64f2e66dc9e2c, type: 3}
 --- !u!50 &6132941125272086960
 Rigidbody2D:
   serializedVersion: 4
@@ -450,7 +454,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.93580407}
+  m_Offset: {x: 0, y: -0.8123885}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -461,7 +465,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.379027}
+  m_Size: {x: 1, y: 0.625}
   m_EdgeRadius: 0
 --- !u!61 &4848127566673774633
 BoxCollider2D:

@@ -55,6 +55,12 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetBool("dashing", false);
         }
 
+        if (Player.isPushing == true) {
+            animator.SetBool("pushing", true);
+        }else {
+            animator.SetBool("pushing", false);
+        }
+
         if (Player.movementType == MovementState.Skid) {
             animator.SetBool("skidding", true);
         }else {

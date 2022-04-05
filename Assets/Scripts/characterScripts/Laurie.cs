@@ -29,6 +29,9 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
 
     // Movement
     [Header("Movement")]
+    public float pushSp;
+    private float defaultPushSp = 1f;
+
     public float movementSp;
     private float defaultMovementSp = 2f;
     
@@ -119,6 +122,7 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
         spindashDist = 5f;
         blinkdashDist = 3f;
 
+        pushSp = defaultPushSp;
         movementSp = defaultMovementSp;
         sprintMod = defaultSprintMod;
         dashMod = defaultDashMod;

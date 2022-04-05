@@ -13,12 +13,14 @@ public class PlayerParticles : MonoBehaviour {
     public GameObject pfDashDust;
     public GameObject pfRunDust;
     public GameObject pfSpinDashStars;
+    public GameObject pfPushSweat;
 
     // gameObjects to be instantiated
     private GameObject dashPoofParticles;
     private GameObject dashDustParticles;
     private GameObject runDustParticles;
     private GameObject spinDashParticles;
+    private GameObject pushSweatParticles;
 
     private void Start() {
         playerMovement = GetComponent<PlayerMovement>();
@@ -28,6 +30,8 @@ public class PlayerParticles : MonoBehaviour {
         playerMovement.OnDashEnd += DestroyParticles_OnDashEnd;
         playerMovement.OnRunStart += SummonParticles_OnRunStart;
         playerMovement.OnRunEnd += DestroyParticles_OnRunEnd;
+        playerMovement.OnPushStart += SummonParticles_OnPushStart;
+        playerMovement.OnPushEnd += DestroyParticles_OnPushEnd;
 
         spindash.OnSpinDashStart += SummonParticles_OnSpinDashStart;
         spindash.OnSpinDashEnd += DestroyParticles_OnSpinDashEnd;
@@ -64,6 +68,19 @@ public class PlayerParticles : MonoBehaviour {
         }
 
         Destroy(runDustParticles, 2f);
+    }
+
+    public void SummonParticles_OnPushStart(object sender, PlayerMovement.OnPushStartEventArgs e) {
+        pushSweatParticles = Instantiate(pfPushSweat, GetPosition() + new Vector3(0, 2, 0), Quaternion.identity, parent);
+    }
+
+    public void DestroyParticles_OnPushEnd(object sender, PlayerMovement.OnPushEndEventArgs e) {
+        if (pushSweatParticles != null) {
+            ParticleSystem pushSweatParticleSystem = pushSweatParticles.GetComponentInChildren<ParticleSystem>();
+            pushSweatParticleSystem.Stop();
+        }
+
+        Destroy(pushSweatParticles, 2f);
     }
 
     public void SummonParticles_OnSpinDashStart(object sender, Spindash.OnSpinDashStartEventArgs e) {

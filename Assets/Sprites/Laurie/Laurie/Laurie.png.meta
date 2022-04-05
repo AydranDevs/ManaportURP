@@ -197,6 +197,63 @@ TextureImporter:
   - first:
       213: -5040681159284111627
     second: Laurie64
+  - first:
+      213: -6946010848354087529
+    second: Laurie65
+  - first:
+      213: -3581603657127344034
+    second: Laurie66
+  - first:
+      213: -8485163596021669398
+    second: Laurie67
+  - first:
+      213: 6709539198411862094
+    second: Laurie68
+  - first:
+      213: -1870927282131944831
+    second: Laurie69
+  - first:
+      213: 5403941880087525879
+    second: Laurie70
+  - first:
+      213: -7675547580338583598
+    second: Laurie71
+  - first:
+      213: -3511835248067398001
+    second: Laurie72
+  - first:
+      213: 3437551916253480191
+    second: Laurie73
+  - first:
+      213: -1728133817266064199
+    second: Laurie74
+  - first:
+      213: -1396269134170736680
+    second: Laurie75
+  - first:
+      213: 7040880014240354481
+    second: Laurie76
+  - first:
+      213: 1637742550126301368
+    second: Laurie77
+  - first:
+      213: -5669343965987889929
+    second: Laurie78
+  - first:
+      213: -1698850060692823598
+    second: Laurie79
+  - first:
+      213: -1557327645730066621
+    second: Laurie80
+  - first:
+      213: 4192726402834529791
+    second: Laurie81
+  - first:
+      213: -8942645661739384082
+    second: Laurie82
+  - first:
+      213: -4724450311859236238
+    second: Laurie83
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -302,7 +359,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -323,7 +380,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 67
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -344,7 +401,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 133
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -365,7 +422,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 199
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -386,7 +443,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -407,7 +464,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 331
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -428,7 +485,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 397
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -449,7 +506,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 463
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -470,7 +527,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 529
-        y: 529
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -490,8 +547,8 @@ TextureImporter:
       name: Laurie09
       rect:
         serializedVersion: 2
-        x: 1
-        y: 463
+        x: 595
+        y: 595
         width: 64
         height: 64
       alignment: 0
@@ -511,8 +568,8 @@ TextureImporter:
       name: Laurie10
       rect:
         serializedVersion: 2
-        x: 67
-        y: 463
+        x: 1
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -532,8 +589,8 @@ TextureImporter:
       name: Laurie11
       rect:
         serializedVersion: 2
-        x: 133
-        y: 463
+        x: 67
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -553,8 +610,8 @@ TextureImporter:
       name: Laurie12
       rect:
         serializedVersion: 2
-        x: 199
-        y: 463
+        x: 133
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -574,8 +631,8 @@ TextureImporter:
       name: Laurie13
       rect:
         serializedVersion: 2
-        x: 265
-        y: 463
+        x: 199
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -595,8 +652,8 @@ TextureImporter:
       name: Laurie14
       rect:
         serializedVersion: 2
-        x: 331
-        y: 463
+        x: 265
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -616,8 +673,8 @@ TextureImporter:
       name: Laurie15
       rect:
         serializedVersion: 2
-        x: 397
-        y: 463
+        x: 331
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -637,8 +694,8 @@ TextureImporter:
       name: Laurie16
       rect:
         serializedVersion: 2
-        x: 463
-        y: 463
+        x: 397
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -658,8 +715,8 @@ TextureImporter:
       name: Laurie17
       rect:
         serializedVersion: 2
-        x: 529
-        y: 463
+        x: 463
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -679,8 +736,8 @@ TextureImporter:
       name: Laurie18
       rect:
         serializedVersion: 2
-        x: 1
-        y: 397
+        x: 529
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -700,8 +757,8 @@ TextureImporter:
       name: Laurie19
       rect:
         serializedVersion: 2
-        x: 67
-        y: 397
+        x: 595
+        y: 529
         width: 64
         height: 64
       alignment: 0
@@ -721,8 +778,8 @@ TextureImporter:
       name: Laurie20
       rect:
         serializedVersion: 2
-        x: 133
-        y: 397
+        x: 1
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -742,8 +799,8 @@ TextureImporter:
       name: Laurie21
       rect:
         serializedVersion: 2
-        x: 199
-        y: 397
+        x: 67
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -763,8 +820,8 @@ TextureImporter:
       name: Laurie22
       rect:
         serializedVersion: 2
-        x: 265
-        y: 397
+        x: 133
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -784,8 +841,8 @@ TextureImporter:
       name: Laurie23
       rect:
         serializedVersion: 2
-        x: 331
-        y: 397
+        x: 199
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -805,8 +862,8 @@ TextureImporter:
       name: Laurie24
       rect:
         serializedVersion: 2
-        x: 397
-        y: 397
+        x: 265
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -826,8 +883,8 @@ TextureImporter:
       name: Laurie25
       rect:
         serializedVersion: 2
-        x: 463
-        y: 397
+        x: 331
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -847,8 +904,8 @@ TextureImporter:
       name: Laurie26
       rect:
         serializedVersion: 2
-        x: 529
-        y: 397
+        x: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -868,8 +925,8 @@ TextureImporter:
       name: Laurie27
       rect:
         serializedVersion: 2
-        x: 1
-        y: 331
+        x: 463
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -889,8 +946,8 @@ TextureImporter:
       name: Laurie28
       rect:
         serializedVersion: 2
-        x: 67
-        y: 331
+        x: 529
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -910,8 +967,8 @@ TextureImporter:
       name: Laurie29
       rect:
         serializedVersion: 2
-        x: 133
-        y: 331
+        x: 595
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -931,8 +988,8 @@ TextureImporter:
       name: Laurie30
       rect:
         serializedVersion: 2
-        x: 199
-        y: 331
+        x: 1
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -952,8 +1009,8 @@ TextureImporter:
       name: Laurie31
       rect:
         serializedVersion: 2
-        x: 265
-        y: 331
+        x: 67
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -973,8 +1030,8 @@ TextureImporter:
       name: Laurie32
       rect:
         serializedVersion: 2
-        x: 331
-        y: 331
+        x: 133
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -994,8 +1051,8 @@ TextureImporter:
       name: Laurie33
       rect:
         serializedVersion: 2
-        x: 397
-        y: 331
+        x: 199
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -1015,8 +1072,8 @@ TextureImporter:
       name: Laurie34
       rect:
         serializedVersion: 2
-        x: 463
-        y: 331
+        x: 265
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -1036,8 +1093,8 @@ TextureImporter:
       name: Laurie35
       rect:
         serializedVersion: 2
-        x: 529
-        y: 331
+        x: 331
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -1057,8 +1114,8 @@ TextureImporter:
       name: Laurie36
       rect:
         serializedVersion: 2
-        x: 1
-        y: 265
+        x: 397
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -1078,8 +1135,8 @@ TextureImporter:
       name: Laurie37
       rect:
         serializedVersion: 2
-        x: 67
-        y: 265
+        x: 463
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -1099,8 +1156,8 @@ TextureImporter:
       name: Laurie38
       rect:
         serializedVersion: 2
-        x: 133
-        y: 265
+        x: 529
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -1120,8 +1177,8 @@ TextureImporter:
       name: Laurie39
       rect:
         serializedVersion: 2
-        x: 199
-        y: 265
+        x: 595
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -1141,8 +1198,8 @@ TextureImporter:
       name: Laurie40
       rect:
         serializedVersion: 2
-        x: 265
-        y: 265
+        x: 1
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1162,8 +1219,8 @@ TextureImporter:
       name: Laurie41
       rect:
         serializedVersion: 2
-        x: 331
-        y: 265
+        x: 67
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1183,8 +1240,8 @@ TextureImporter:
       name: Laurie42
       rect:
         serializedVersion: 2
-        x: 397
-        y: 265
+        x: 133
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1204,8 +1261,8 @@ TextureImporter:
       name: Laurie43
       rect:
         serializedVersion: 2
-        x: 463
-        y: 265
+        x: 199
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1225,8 +1282,8 @@ TextureImporter:
       name: Laurie44
       rect:
         serializedVersion: 2
-        x: 529
-        y: 265
+        x: 265
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1246,8 +1303,8 @@ TextureImporter:
       name: Laurie45
       rect:
         serializedVersion: 2
-        x: 1
-        y: 199
+        x: 331
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1267,8 +1324,8 @@ TextureImporter:
       name: Laurie46
       rect:
         serializedVersion: 2
-        x: 67
-        y: 199
+        x: 397
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1288,8 +1345,8 @@ TextureImporter:
       name: Laurie47
       rect:
         serializedVersion: 2
-        x: 133
-        y: 199
+        x: 463
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1309,8 +1366,8 @@ TextureImporter:
       name: Laurie48
       rect:
         serializedVersion: 2
-        x: 199
-        y: 199
+        x: 529
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1330,8 +1387,8 @@ TextureImporter:
       name: Laurie49
       rect:
         serializedVersion: 2
-        x: 265
-        y: 199
+        x: 595
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -1351,8 +1408,8 @@ TextureImporter:
       name: Laurie50
       rect:
         serializedVersion: 2
-        x: 331
-        y: 199
+        x: 1
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1372,8 +1429,8 @@ TextureImporter:
       name: Laurie51
       rect:
         serializedVersion: 2
-        x: 397
-        y: 199
+        x: 67
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1393,8 +1450,8 @@ TextureImporter:
       name: Laurie52
       rect:
         serializedVersion: 2
-        x: 463
-        y: 199
+        x: 133
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1414,8 +1471,8 @@ TextureImporter:
       name: Laurie53
       rect:
         serializedVersion: 2
-        x: 529
-        y: 199
+        x: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1435,8 +1492,8 @@ TextureImporter:
       name: Laurie54
       rect:
         serializedVersion: 2
-        x: 1
-        y: 133
+        x: 265
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1456,8 +1513,8 @@ TextureImporter:
       name: Laurie55
       rect:
         serializedVersion: 2
-        x: 67
-        y: 133
+        x: 331
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1477,8 +1534,8 @@ TextureImporter:
       name: Laurie56
       rect:
         serializedVersion: 2
-        x: 133
-        y: 133
+        x: 397
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1498,8 +1555,8 @@ TextureImporter:
       name: Laurie57
       rect:
         serializedVersion: 2
-        x: 199
-        y: 133
+        x: 463
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1519,8 +1576,8 @@ TextureImporter:
       name: Laurie58
       rect:
         serializedVersion: 2
-        x: 265
-        y: 133
+        x: 529
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1540,8 +1597,8 @@ TextureImporter:
       name: Laurie59
       rect:
         serializedVersion: 2
-        x: 331
-        y: 133
+        x: 595
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -1561,8 +1618,8 @@ TextureImporter:
       name: Laurie60
       rect:
         serializedVersion: 2
-        x: 397
-        y: 133
+        x: 1
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1582,8 +1639,8 @@ TextureImporter:
       name: Laurie61
       rect:
         serializedVersion: 2
-        x: 463
-        y: 133
+        x: 67
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1603,8 +1660,8 @@ TextureImporter:
       name: Laurie62
       rect:
         serializedVersion: 2
-        x: 529
-        y: 133
+        x: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1624,8 +1681,8 @@ TextureImporter:
       name: Laurie63
       rect:
         serializedVersion: 2
-        x: 1
-        y: 67
+        x: 199
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1645,8 +1702,8 @@ TextureImporter:
       name: Laurie64
       rect:
         serializedVersion: 2
-        x: 67
-        y: 67
+        x: 265
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1658,6 +1715,405 @@ TextureImporter:
       bones: []
       spriteID: 5f6cdda3137eb0ab0800000000000000
       internalID: -5040681159284111627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie65
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 199
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d48d95fefca9f90800000000000000
+      internalID: -6946010848354087529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie66
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 199
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e584fa233769b4ec0800000000000000
+      internalID: -3581603657127344034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie67
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 199
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae16d0e6aa4ae3a80800000000000000
+      internalID: -8485163596021669398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie68
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 199
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40f5ef2a521d1d50800000000000000
+      internalID: 6709539198411862094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie69
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 199
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a30fbac812906e0800000000000000
+      internalID: -1870927282131944831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie70
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f939753288aefa40800000000000000
+      internalID: 5403941880087525879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie71
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d74f49742afa7590800000000000000
+      internalID: -7675547580338583598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie72
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f863f39c274734fc0800000000000000
+      internalID: -3511835248067398001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie73
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff480414143a4bf20800000000000000
+      internalID: 3437551916253480191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie74
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b43481037f6408e0800000000000000
+      internalID: -1728133817266064199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie75
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d739e6ce947f9ce0800000000000000
+      internalID: -1396269134170736680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie76
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b091fa911b36b160800000000000000
+      internalID: 7040880014240354481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie77
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b012d51c2e6ab610800000000000000
+      internalID: 1637742550126301368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie78
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc99cd43b17251b0800000000000000
+      internalID: -5669343965987889929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie79
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 133
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1e0c5eed87c68e0800000000000000
+      internalID: -1698850060692823598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie80
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f2d5dd1c2436ae0800000000000000
+      internalID: -1557327645730066621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie81
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffd7a59037e8f2a30800000000000000
+      internalID: 4192726402834529791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie82
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee206db962755e380800000000000000
+      internalID: -8942645661739384082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laurie83
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27295aaf8716f6eb0800000000000000
+      internalID: -4724450311859236238
       vertices: []
       indices: 
       edges: []

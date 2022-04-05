@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 17f1d8e4adae0ae4481415a3e0e2ce33
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - testRoomBlueInactive: {fileID: 575301175129891007, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  - testRoomBlueActive: {fileID: -3274764747548219563, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  - testRoomRedInactive: {fileID: -2118637581585201360, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  - testRoomRedActive: {fileID: 3375357824922994616, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  - testRoomGreenInactive: {fileID: 1502495672772269097, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  - testRoomGreenActive: {fileID: -583388304992328143, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  - testRoomYellowIactive: {fileID: 2782117246884486442, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  - testRoomYellowActive: {fileID: 140557385938223132, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

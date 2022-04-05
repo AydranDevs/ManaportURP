@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e6b40a09931b448a7bddecab1dd206, type: 3}
+  m_Name: PuzzleSlotTestroomBlue
+  m_EditorClassIdentifier: 
+  sprite: {fileID: -7613770441395093686, guid: aaecd10158ae3ec478bfe881e06e5415, type: 3}
+  slotTypeId: 0
