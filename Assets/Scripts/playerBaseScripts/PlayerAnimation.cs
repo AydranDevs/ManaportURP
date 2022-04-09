@@ -54,11 +54,16 @@ public class PlayerAnimation : MonoBehaviour
         }else {
             animator.SetBool("dashing", false);
         }
-
-        if (Player.isPushing == true) {
-            animator.SetBool("pushing", true);
-        }else {
+        
+        if (Player.movementType == MovementState.Idle) {
             animator.SetBool("pushing", false);
+        }
+        if (Player.movementType != MovementState.Idle) {
+            if (Player.isPushing == true) {
+                animator.SetBool("pushing", true);
+            }else {
+                animator.SetBool("pushing", false);
+            }
         }
 
         if (Player.movementType == MovementState.Skid) {

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3208570615497060051}
   - component: {fileID: 3208570615497060050}
   - component: {fileID: 3208570615497060049}
+  - component: {fileID: 9076678999856929870}
   m_Layer: 0
   m_Name: PuzzleBox
   m_TagString: Untagged
@@ -55,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: bc5cb5e094b32c64d91804540f1459c8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,7 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f1d8e4adae0ae4481415a3e0e2ce33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
   puzzleBoxSprite: {fileID: 11400000, guid: cc621fbd1d697fc4bb8f01d24285285f, type: 2}
+  boxTypeId: 0
+  active: 0
 --- !u!61 &3208570615497060044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,7 +142,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 100
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -172,7 +176,7 @@ MonoBehaviour:
   - {x: -0.5, y: -0.5, z: 0}
   m_ShapePathHash: -2131506267
   m_Mesh: {fileID: 0}
-  m_InstanceId: 51660
+  m_InstanceId: -1352
 --- !u!114 &3208570615497060049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,3 +192,44 @@ MonoBehaviour:
   sortingOrderBase: 5000
   offset: 2
   runOnlyOnce: 0
+--- !u!114 &9076678999856929870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3208570615497060040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 3
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.75
+  m_Color: {r: 0.3254717, g: 0.93386984, b: 1, a: 1}
+  m_Intensity: 1.79
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 2.5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}

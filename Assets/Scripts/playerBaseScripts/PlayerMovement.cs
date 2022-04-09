@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour {
         float yDiff = Player.move.y;
         angle = (float)(Mathf.Atan2(yDiff, xDiff));
 
-        if (Player.isDashing == true) {
+        if (Player.isDashing == true) { 
             movementSp = movementSp * dashMod;
         }else if (Player.movementType == MovementState.Run) {
             movementSp = movementSp * sprintMod;
@@ -180,7 +180,6 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Update() {
-        
         if (Player.isDashing == true) {
             pushThreshold = DASH_PUSH_THRESHOLD;
         }else if (Player.movementType == MovementState.Run) {
@@ -202,26 +201,34 @@ public class PlayerMovement : MonoBehaviour {
                 Player.isPushing = false;
             }
         }
-        
-        if (Player.isPushing == true) {
 
-            time = time - Time.deltaTime;
 
-            if (time <= 0f) {
-                Player.isPushing = true;
-                runDuration = 0f;
+        if (Player.movementType != MovementState.Idle) {
+            if (Player.isPushing == true) {
+
+                time = time - Time.deltaTime;
+
+                if (time <= 0f) {
+                    Player.isPushing = true;
+                    runDuration = 0f;
                     
-                if (!pushSweatParActive) {
-                    OnPushStart?.Invoke(this, new OnPushStartEventArgs {});
+                    if (!pushSweatParActive) {
+                        OnPushStart?.Invoke(this, new OnPushStartEventArgs {});
 
-                    OnRunEnd?.Invoke(this, new OnRunEndEventArgs{});
-                    runDustParActive = false;
-                    OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
-                    dashDustParActive = false;
+                        OnRunEnd?.Invoke(this, new OnRunEndEventArgs{});
+                        runDustParActive = false;
+                        OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
+                        dashDustParActive = false;
 
-                    pushSweatParActive = true;
+                        pushSweatParActive = true;
+                    }
+                }else {
+                    Player.isPushing = false;
+                    OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
+                    pushSweatParActive = false;
                 }
             }else {
+                time = 0.03f;
                 Player.isPushing = false;
                 OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
                 pushSweatParActive = false;
