@@ -55,9 +55,6 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetBool("dashing", false);
         }
         
-        if (Player.movementType == MovementState.Idle) {
-            animator.SetBool("pushing", false);
-        }
         if (Player.movementType != MovementState.Idle) {
             if (Player.isPushing == true) {
                 animator.SetBool("pushing", true);

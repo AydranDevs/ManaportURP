@@ -24,7 +24,8 @@ public class PuzzleSlot : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
-        if (col.name != "PuzzleBox") return;
+        if (col.gameObject.tag != "Pushable") return;
+        
         var puzzleBoxScript = col.gameObject.GetComponent<PuzzleBox>();
 
         if (puzzleBoxScript.boxTypeId != slotTypeId) return;

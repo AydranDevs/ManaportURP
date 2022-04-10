@@ -20,13 +20,29 @@ public class PuzzleBox : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         light = GetComponent<Light2D>();
         
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        
         light.enabled = false;
 
         boxTypeId = puzzleBoxSprite.boxTypeId;
     }
 
+    private void OnCollisionStay2D(Collision2D col) {
+        if (col.gameObject.tag != "Player") return;
+
+        Player player = col.gameObject.GetComponent<Player>();
+        if (player != null) {
+            if (player.isPushing) {
+                rb.constraints = RigidbodyConstraints2D.None;
+                rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+            }else {
+                rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            }
+        }
+    }
+
     void Update() {
-        if (!active) return;
+        // if (!active) return;
         spriteRenderer.sprite = puzzleBoxSprite.inactiveSprite;
 
         if (!active) return;

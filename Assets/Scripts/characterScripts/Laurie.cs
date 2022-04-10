@@ -30,7 +30,7 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
     // Movement
     [Header("Movement")]
     public float pushSp;
-    private float defaultPushSp = 1f;
+    private float defaultPushSp = 1.5f;
 
     public float movementSp;
     private float defaultMovementSp = 2f;

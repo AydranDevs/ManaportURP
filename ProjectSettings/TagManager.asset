@@ -12,6 +12,7 @@ TagManager:
   - SpellOriginPos
   - PlayerAnimator
   - PlayerBullet
+  - Pushable
   layers:
   - Default
   - TransparentFX

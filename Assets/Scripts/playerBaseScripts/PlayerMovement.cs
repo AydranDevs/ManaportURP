@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour {
     [HideInInspector]
     public Vector3 position;
     public float angle;
+    public float initialPushAngle;
 
     private Vector2 initialPosition;
     private Vector2 targetPosition;
@@ -161,7 +162,7 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         if (Player.isPushing == true) {
-            // movementSp = pushSp;
+            movementSp = pushSp;
         }
 
         reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
@@ -179,66 +180,87 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
+    private void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.tag != "Pushable") return;
+
+        initialPushAngle = angle;
+        Player.isPushing = true;
+    }
+
+    private void OnCollisionStay2D(Collision2D col) {
+        if (col.gameObject.tag != "Pushable") return;
+        if (angle == initialPushAngle) return;
+        
+        Player.isPushing = false;
+    }
+
+    private void OnCollisionExit2D(Collision2D col) {
+        Debug.Log("no touchin'");
+
+        Player.isPushing = false;
+    }
+
     private void Update() {
-        if (Player.isDashing == true) {
-            pushThreshold = DASH_PUSH_THRESHOLD;
-        }else if (Player.movementType == MovementState.Run) {
-            pushThreshold = RUN_PUSH_THRESHOLD;
-        }else {
-            pushThreshold = WALK_PUSH_THRESHOLD;
-        }
+        
+        // if (Player.isDashing == true) {
+        //     pushThreshold = DASH_PUSH_THRESHOLD;
+        // }else if (Player.movementType == MovementState.Run) {
+        //     pushThreshold = RUN_PUSH_THRESHOLD;
+        // }else {
+        //     pushThreshold = WALK_PUSH_THRESHOLD;
+        // }
 
-        if (Player.movementType != MovementState.Idle) {
-            if (targetDelta.x > pushThreshold) {
-                Player.isPushing = true;
-            }else if (targetDelta.x < -pushThreshold) {
-                Player.isPushing = true;
-            }else if (targetDelta.y > pushThreshold) {
-                Player.isPushing = true;
-            }else if (targetDelta.y < -pushThreshold) {
-                Player.isPushing = true;
-            }else {
-                Player.isPushing = false;
-            }
-        }
+        // if (Player.movementType != MovementState.Idle) {
+        //     if (targetDelta.x > pushThreshold) {
+        //         Player.isPushing = true;
+        //     }else if (targetDelta.x < -pushThreshold) {
+        //         Player.isPushing = true;
+        //     }else if (targetDelta.y > pushThreshold) {
+        //         Player.isPushing = true;
+        //     }else if (targetDelta.y < -pushThreshold) {
+        //         Player.isPushing = true;
+        //     }else {
+        //         Player.isPushing = false;
+        //     }
+        // }
 
 
-        if (Player.movementType != MovementState.Idle) {
-            if (Player.isPushing == true) {
+        // if (Player.movementType != MovementState.Idle) {
+        //     if (Player.isPushing == true) {
 
-                time = time - Time.deltaTime;
+        //         time = time - Time.deltaTime;
 
-                if (time <= 0f) {
-                    Player.isPushing = true;
-                    runDuration = 0f;
+        //         if (time <= 0f) {
+        //             Player.isPushing = true;
+        //             runDuration = 0f;
                     
-                    if (!pushSweatParActive) {
-                        OnPushStart?.Invoke(this, new OnPushStartEventArgs {});
+        //             if (!pushSweatParActive) {
+        //                 OnPushStart?.Invoke(this, new OnPushStartEventArgs {});
 
-                        OnRunEnd?.Invoke(this, new OnRunEndEventArgs{});
-                        runDustParActive = false;
-                        OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
-                        dashDustParActive = false;
+        //                 OnRunEnd?.Invoke(this, new OnRunEndEventArgs{});
+        //                 runDustParActive = false;
+        //                 OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
+        //                 dashDustParActive = false;
 
-                        pushSweatParActive = true;
-                    }
-                }else {
-                    Player.isPushing = false;
-                    OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
-                    pushSweatParActive = false;
-                }
-            }else {
-                time = 0.03f;
-                Player.isPushing = false;
-                OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
-                pushSweatParActive = false;
-            }
-        }else {
-            time = 0.03f;
-            Player.isPushing = false;
-            OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
-            pushSweatParActive = false;
-        }
+        //                 pushSweatParActive = true;
+        //             }
+        //         }else {
+        //             Player.isPushing = false;
+        //             OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
+        //             pushSweatParActive = false;
+        //         }
+        //     }else {
+        //         time = 0.03f;
+        //         Player.isPushing = false;
+        //         OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
+        //         pushSweatParActive = false;
+        //     }
+        // }else {
+        //     time = 0.03f;
+        //     Player.isPushing = false;
+        //     OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
+        //     pushSweatParActive = false;
+        // }
     }
 
     private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {
