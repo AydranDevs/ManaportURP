@@ -84,7 +84,5 @@ public class PlayerAnimation : MonoBehaviour
 
     private void AnimatePlayer_OnIdleWaveActive(object sender, PlayerIdleAnimation.OnIdleWaveActiveEventArgs e) {
         animator.SetTrigger("idleWave");
-
-        Debug.Log("check");
     }
 }

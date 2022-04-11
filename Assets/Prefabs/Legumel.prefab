@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 6872371772960072766}
   m_Layer: 0
   m_Name: Legumel
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,6 +37,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4880039849749460569}
+  - {fileID: 5822917674593395825}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +75,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343592b9776492e4c9c0748f23ffbc5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
 --- !u!114 &9154113924638106254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4875a927b1b34148b0bd69d3c15166c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0
+  stateHandler: {fileID: 0}
+  move: {x: 0, y: 0}
 --- !u!114 &1910692143008271256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aIState: 0
+  aIMovementState: 0
+  aIFacingState: 3
   aIStateDebuff: 0
   aIStateBuff: 0
 --- !u!114 &2448001878222807503
@@ -115,7 +118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a66095242d37a49bd68c6d2fb2613e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 2
 --- !u!114 &3354318535378123396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +265,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -281,10 +283,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -458034991
+  m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2793937135676105407, guid: f8a774bba1aecac4982510b9af1b01a9, type: 3}
+  m_Sprite: {fileID: 2921611316655579148, guid: d0cf9b0a46747104a8f5bc3c5e811933, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -329,3 +331,60 @@ MonoBehaviour:
   sortingOrderBase: 5000
   offset: 0
   runOnlyOnce: 0
+--- !u!1 &8985726874303789845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5822917674593395825}
+  - component: {fileID: 571230093022748868}
+  m_Layer: 0
+  m_Name: ShadowCaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5822917674593395825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985726874303789845}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4880039849312698549}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &571230093022748868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985726874303789845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50017aa2da
+  m_ShapePath:
+  - {x: -0.5620785, y: -0.99960554, z: 0}
+  - {x: 0.55890846, y: -0.99960554, z: 0}
+  - {x: 0.5429287, y: -0.74016356, z: 0}
+  - {x: -0.547699, y: -0.73539376, z: 0}
+  m_ShapePathHash: 938426501
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 27104

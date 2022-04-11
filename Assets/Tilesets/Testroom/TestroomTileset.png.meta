@@ -314,6 +314,18 @@ TextureImporter:
   - first:
       213: 2553588010546018074
     second: TestroomTileset_103
+  - first:
+      213: 2451942440139241216
+    second: TestroomTileset_104
+  - first:
+      213: -7568962690927046894
+    second: TestroomTileset_105
+  - first:
+      213: -7361316775722776373
+    second: TestroomTileset_106
+  - first:
+      213: -3449195459038170241
+    second: TestroomTileset_107
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
