@@ -13,14 +13,15 @@ TagManager:
   - PlayerAnimator
   - PlayerBullet
   - Pushable
+  - Cursor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Spell
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -58,4 +59,7 @@ TagManager:
     locked: 0
   - name: Ambience
     uniqueID: 1354468613
+    locked: 0
+  - name: Cursor
+    uniqueID: 3668081153
     locked: 0

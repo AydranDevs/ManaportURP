@@ -1,23 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public struct SpellInfo {
-    public string type;
-    public string element;
-}
-
-public struct SpellStats {
-    public float damage;
-    public int cooldown;
-    public int cost;
+[Serializable]
+public struct SpriteIcons {
+    public Sprite arcane;
+    public Sprite pyro;
+    public Sprite cryo;
+    public Sprite toxi;
+    public Sprite volt;
 }
 
 public abstract class Spell : MonoBehaviour {
-    public SpellInfo spellInfo;
-    public SpellStats spellStats;
+    public int cost;
+    public float cooldown;
+    public int damage;
+    public string spellId;
+    public SpriteIcons icons;
 
-    // public virtual void Cast(Vector2 direction, string element) { }
-
-    public virtual void SetStats(bool isPrimary) { }
+    // redefinable function called from derived classes
+    public virtual void Cast(Vector2 direction, string element) { }
 }
