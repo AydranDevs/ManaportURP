@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Laurie : EnemyTarget, IEnemyDamageable {
+public class Laurie : EnemyTarget {
 
     // Player experience point values
     [Header("Experience Points")]
@@ -26,6 +26,9 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
     [Header("Mana Points")]
     public float manaPointsMax = 5f;
     public float manaPoints;
+    
+    public float manaPointsRegen;
+    public const float MANA_REGEN_DEFAULT = 0.5f;
 
     // Movement
     [Header("Movement")]
@@ -86,34 +89,14 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
     [Tooltip("Converts all damage taken to shield for a short amount of time")]
     public bool isAbsorbing = false;
 
-    
-    
-    public float dps;
-    public float dpsTimer = 1f;
+    private Player player;
 
-    public int dpsCountMax = 20;
-    public int dpsCount = 20;
-
-    private bool fireParActive = false;
-    private bool iceParActive = false;
-    private bool toxicParActive = false;
-
-    public Transform parent;
-
-    [SerializeField]
-    private Transform pfDust;
-    [SerializeField]
-    private Transform pfFire;
-    [SerializeField]
-    private Transform pfIce;
-    [SerializeField]
-    private Transform pfLightning;
-    [SerializeField]
-    private Transform pfToxic;
-    [SerializeField]
-    private Transform pfCrit;
+    private float manaRegenTimer;
+    public const float MANA_REGEN_TIMER_DEFAULT = 1f;
 
     private void Start() {
+        player = GetComponent<Player>();
+
         MaxHP();
         MaxMP();
 
@@ -126,6 +109,9 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
         movementSp = defaultMovementSp;
         sprintMod = defaultSprintMod;
         dashMod = defaultDashMod;
+
+        manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
+        manaPointsRegen = MANA_REGEN_DEFAULT;
     }
 
     public void MaxHP() {
@@ -134,6 +120,15 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
 
     public void MaxMP() {
         manaPoints = manaPointsMax;
+    }
+
+    public void RegenMP() {
+        manaRegenTimer = manaRegenTimer - Time.deltaTime;
+
+        if (manaRegenTimer <= 0f) {
+            manaPoints = manaPoints + manaPointsRegen;
+            manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
+        }
     }
 
     public void AddXP(string type, float amount) {
@@ -155,190 +150,15 @@ public class Laurie : EnemyTarget, IEnemyDamageable {
         hitPointsMax += 2f;
         manaPointsMax += 2f;
     }
-    
-    // might add functionality for bypassing stress resistance
-    // public void CalcStress() {
-    //     float refactoredStress = stress - stressRes;
-    //     if (stress < 0f) stress = 0f;
-    //     float refactoredStability = stability - refactoredStress;
-
-    //     movementSp = movementSp * refactoredStability;
-    //     sprintMod = sprintMod * refactoredStability;
-    //     dashMod = dashMod * refactoredStability;
-    // }
-
-    private float CalcMovementSpeedWithStress() {
-        float refactoredStress = stress - stressRes;
-        if (stress < 0f) stress = 0f;
-        float refactoredStability = stability - refactoredStress;
-
-        return defaultMovementSp * refactoredStability;
-    }
-
-    private float CalcSprintModWithStress() {
-        float refactoredStress = stress - stressRes;
-        if (stress < 0f) stress = 0f;
-        float refactoredStability = stability - refactoredStress;
-
-        return defaultSprintMod * refactoredStability;
-    }
-
-    private float CalcDashModWithStress() {
-        float refactoredStress = stress - stressRes;
-        if (stress < 0f) stress = 0f;
-        float refactoredStability = stability - refactoredStress;
-
-        return defaultDashMod * refactoredStability;
-    }
-
-    public float CheckRes(float damage, string statusType) {
-        float refactoredDamage;
-        
-        if (statusType == "Pyro") {
-            refactoredDamage = damage * pyroRes;
-        }else if (statusType == "Cryo") {
-            refactoredDamage = damage * cryoRes;
-        }else if (statusType == "Bolt") {
-            refactoredDamage = damage * boltRes;
-        }else if (statusType == "Toxi") {
-            refactoredDamage = damage * toxiRes;
-        }else {
-            refactoredDamage = damage * arcaneRes;
-        }
-
-        return refactoredDamage;
-    }
-
-    // When Laurie takes damage, this function is called.
-    // it brings in baseDamage, critDamage, statusType and dps 
-    // from the bullet that hit her.
-
-    public void Damage(float damage, float critDamage, bool crit, bool status, string statusType, float dps, bool castByPlayer) {
-
-        // If hit by a bullet cast by the caster, stop here.
-        
-        if (castByPlayer) return;
-
-        // Logs the bullet stats on hit.
-
-       Debug.Log("Damage: " + damage + " | Crit Damage: " + critDamage + "| Crit? " + crit + " | Status? " + status + " | Element: " + statusType + " | Damage/sec: " + dps); 
-
-       // Check resistances and buffs.
-
-       float refactoredDamage = CheckRes(damage, statusType);
-
-       // Applies debuffs.
-
-        if (statusType == "Pyro") {
-            isOnFire = true;
-        }
-        if (statusType == "Cryo") {
-            isFreezing = true;
-        }
-        if (statusType == "Bolt") {
-            isZapped = true;
-        }
-        if (statusType == "Toxi") {
-            isPoisoned = true;
-        }
-
-        this.dps = dps;
-
-       // Subtracts the bullet damage from hp.
-
-       hitPoints -= refactoredDamage;
-
-       // Logs final hp calc.
-
-       Debug.Log("Health: " + hitPoints);
-
-       HandleParticles(statusType, crit);
-    }
-
-    // This function is only called if Laurie
-    // needs to take damage from a status effect.
-
-    public void DamageOverTime() {
-        if (hitPoints <= 0f) {
-            Die();
-            return;
-        }
-
-        hitPoints -= dps;
-        dpsCount -= 1;
-
-        Debug.Log("Damage/sec: " + dps);
-        Debug.Log("Health " + hitPoints);
-    }
-
-    // this function spawns particles when needed.
-
-    private void HandleParticles(string statusType, bool isCrit) {
-        if (isCrit) {
-            Transform crit = Instantiate(pfCrit, GetPosition(), Quaternion.identity, parent);
-        }
-        
-        if (statusType == "Arcane") { 
-            Transform dust = Instantiate(pfDust, GetPosition(), Quaternion.identity, parent);
-        }else if (isOnFire && !fireParActive) {
-            Transform fire = Instantiate(pfFire, GetPosition(), new Quaternion(-1f, 0f, 0f, 1f), parent);
-            fireParActive = true;
-        }else if (isFreezing && !iceParActive) {
-            Transform ice = Instantiate(pfIce, GetPosition(), Quaternion.identity, parent);
-            iceParActive = true;
-        }else if (isZapped) {
-            Transform lightning = Instantiate(pfLightning, GetPosition(), Quaternion.identity, parent);
-        }else if (isPoisoned && !toxicParActive) {
-            Transform toxic = Instantiate(pfToxic, GetPosition(), Quaternion.identity, parent);
-            toxicParActive = true;
-        }
-        
-    }
 
     private void Update() {
-
         if (hitPoints <= 0f) {
             Die();
             return;
         }
 
-        movementSp = CalcMovementSpeedWithStress();
-        sprintMod = CalcSprintModWithStress();
-        dashMod = CalcDashModWithStress();
-
-        /* 
-        This is a 1s timer. every time this timer hits 0,
-        it is reset back to 1, and the DamageOverTime method 
-        is called. essentially, there is a 1 in 20 chance that
-        the debuff is removed on the first tick of damage. with
-        every tick of damage, the chance of the debuff getting
-        removed is higher, until the dpsCount is zero, where 20s
-        have passed and the debuff is removed. 
-        */
-
-        float timerMax = 1f;
-
-        dpsTimer = dpsTimer - Time.deltaTime;
-        if (dpsTimer <= 0) {
-            if(isOnFire) {DamageOverTime();}
-            if(isFreezing) {DamageOverTime();}
-            if(isZapped) {DamageOverTime();}
-            if(isPoisoned) {DamageOverTime();}
-
-            int dpsRand = Random.Range(1,dpsCount);
-            
-            if(dpsRand == 1) {
-
-                // remove all debuffs
-                isOnFire = false;
-                isFreezing = false;
-                isZapped = false;
-                isPoisoned = false;
-
-                // reset dpsCount
-                dpsCount = dpsCountMax;
-            }
-            dpsTimer = timerMax;
+        if (!player.manaRegenCoolingDown && manaPoints < manaPointsMax) {
+            RegenMP();
         }
     }
 

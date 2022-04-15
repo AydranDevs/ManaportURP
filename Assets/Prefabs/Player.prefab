@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 905713082}
   - component: {fileID: 905713083}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.648
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.3
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50
   m_LightCookieSprite: {fileID: 0}
@@ -72,6 +72,118 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1068604874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068604875}
+  - component: {fileID: 1068604877}
+  - component: {fileID: 1068604876}
+  - component: {fileID: 1068604878}
+  m_Layer: 6
+  m_Name: Spells
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1068604875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068604874}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 29131144075423908}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1068604877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068604874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f5c9cc2e8379d419f2344ffc3ef617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  cooldown: 0.3
+  damage: 3
+  spellId: spell_burston
+  icons:
+    arcane: {fileID: 0}
+    pyro: {fileID: 0}
+    cryo: {fileID: 0}
+    toxi: {fileID: 0}
+    volt: {fileID: 0}
+  burston: {fileID: 8509226589283875488, guid: 18ec5ea9b96498d47a1b718c2c380f1d, type: 3}
+  pyroBurston: {fileID: 442811730796009271, guid: a166abad35502314093aea3fee900061, type: 3}
+  cryoBurston: {fileID: 4052920604075934681, guid: 3f7f372f0e354e042a456ab0d047f0c4, type: 3}
+  toxiBurston: {fileID: 1076952640063043624, guid: f50c6750faf65e842b866a4a6226dd2c, type: 3}
+  voltBurston: {fileID: 2339452479426438412, guid: 310536f2ac0c63449b5fba3dbce915cc, type: 3}
+  speed: 5
+  lifetime: 3
+--- !u!114 &1068604876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068604874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010d01d86ebd73847ae9f0dffcf46a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  cooldown: 0.5
+  damage: 4
+  spellId: spell_blasteur
+  icons:
+    arcane: {fileID: 0}
+    pyro: {fileID: 0}
+    cryo: {fileID: 0}
+    toxi: {fileID: 0}
+    volt: {fileID: 0}
+  blasteur: {fileID: 6213410681897852948, guid: 02eddc6bfbb491d4d8cb4c1241087b29, type: 3}
+  speed: 7.5
+  lifetime: 3
+--- !u!114 &1068604878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068604874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6abff250c0acff84ebfb0d5205e5c6c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  cooldown: 0.2
+  damage: 2
+  spellId: spell_automa
+  icons:
+    arcane: {fileID: 0}
+    pyro: {fileID: 0}
+    cryo: {fileID: 0}
+    toxi: {fileID: 0}
+    volt: {fileID: 0}
+  automa: {fileID: 5044041582067445021, guid: cee63864710c1c14587d8bfe3eca3553, type: 3}
+  speed: 10
+  lifetime: 2
 --- !u!1 &1329251936
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1329251937}
   - component: {fileID: 1329251938}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShadowCaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +232,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 1
-  m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50
+  m_ApplyToSortingLayers: 000000003fd030c5058dbb50
   m_ShapePath:
   - {x: -0.4357253, y: -0.9984118, z: 0}
   - {x: 0.44221225, y: -1.0021486, z: 0}
@@ -128,7 +240,7 @@ MonoBehaviour:
   - {x: -0.4342997, y: -0.80669534, z: 0}
   m_ShapePathHash: 1622792825
   m_Mesh: {fileID: 0}
-  m_InstanceId: 23562
+  m_InstanceId: -1272
 --- !u!1 &164113302670634765
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,7 +263,7 @@ GameObject:
   - component: {fileID: 7216965811880539656}
   - component: {fileID: 306731759080797305}
   - component: {fileID: 4848127566673774633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -173,6 +285,7 @@ Transform:
   - {fileID: 1415156077723168264}
   - {fileID: 905713082}
   - {fileID: 1329251937}
+  - {fileID: 1068604875}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -285,8 +398,10 @@ MonoBehaviour:
   auxilaryType: 0
   primary: 2
   primaryElement: 0
-  secondary: 2
-  secondaryElement: 2
+  secondary: 0
+  secondaryElement: 0
+  laurie: {fileID: 0}
+  casting: {fileID: 0}
 --- !u!114 &8748948775429690951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,8 +502,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   primarySpell: {fileID: 0}
   secondarySpell: {fileID: 0}
-  primarySpellImage: {fileID: 0}
-  secondarySpellImage: {fileID: 0}
+  primaryElement: arcane
+  secondaryElement: volt
 --- !u!50 &6132941125272086960
 Rigidbody2D:
   serializedVersion: 4
@@ -525,7 +640,7 @@ GameObject:
   - component: {fileID: 78873626412738677}
   - component: {fileID: 8297398301622311357}
   - component: {fileID: 8701271704738977326}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerAnimator
   m_TagString: PlayerAnimator
   m_Icon: {fileID: 0}
@@ -643,7 +758,7 @@ GameObject:
   - component: {fileID: 1932743902171102524}
   - component: {fileID: 5494221786192318203}
   - component: {fileID: 5948526162681274999}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerAbilities
   m_TagString: Untagged
   m_Icon: {fileID: 0}

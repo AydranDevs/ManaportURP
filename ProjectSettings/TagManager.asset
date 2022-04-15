@@ -19,11 +19,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Spell
+  - PlayerSpell
   - Water
   - UI
   - Player
-  - 
+  - EnemySpell
   - 
   - 
   - 

@@ -17,6 +17,8 @@ public abstract class Spell : MonoBehaviour {
     public string spellId;
     public SpriteIcons icons;
 
+    public bool coolingDown = false;
+
     // redefinable function called from derived classes
     public virtual void Cast(Vector2 direction, string element) { }
 }

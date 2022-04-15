@@ -9,15 +9,14 @@ public enum AbilityState { None, AuxilaryMovement, SpellcastPrimary, SpellcastSe
 public enum AuxilaryMovementType { Spindash, BlinkDash, Pounce }
 
 public enum PrimarySpellType { Automa, Blasteur, Burston }
-public enum PrimarySpellElement { Arcane, Pyro, Cryo, Toxi, Bolt }
+public enum PrimarySpellElement { Arcane, Pyro, Cryo, Toxi, Volt }
 public enum SecondarySpellType { Automa, Blasteur, Burston }
-public enum SecondarySpellElement { Arcane, Pyro, Cryo, Toxi, Bolt }
+public enum SecondarySpellElement { Arcane, Pyro, Cryo, Toxi, Volt }
 
 // This class could hold all the values for player which would make for a nice singular place for everything
 // to access them.  Sorta like the PlayerStateManager before
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
     // Movement
     public MovementState movementType = MovementState.Idle; // sets "movementType" to None / Initializes MovementState
     public DirectionState direction = DirectionState.South; // sets "direction" to South / Initializes DirectionState
@@ -33,17 +32,52 @@ public class Player : MonoBehaviour
     public AbilityState ability = AbilityState.None; // sets "ability" to None / Initializes AbilityState
     public AuxilaryMovementType auxilaryType = AuxilaryMovementType.Spindash; //sets "auxilaryType" to Spindash / Initializes AuxilaryMovementType
 
-    // Controls
-
     // Spellcasting
     public PrimarySpellType primary = PrimarySpellType.Blasteur;
     public PrimarySpellElement primaryElement = PrimarySpellElement.Arcane;
     
     public SecondarySpellType secondary = SecondarySpellType.Blasteur;
     public SecondarySpellElement secondaryElement = SecondarySpellElement.Arcane;
-    
 
 
+    public Laurie laurie;
+    public PlayerCasting casting;
+
+    public float manaRegenCooldown;
+    public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
+    public bool manaRegenCoolingDown = false;
     
-    
+    private void Start() {
+        laurie = GetComponent<Laurie>();
+        casting = GetComponent<PlayerCasting>();
+    }
+
+    public void Damage(float damage) {
+        // Debug.Log("Hit! Damage: " + damage);
+    }
+
+    public void UseMana(float amount) {
+        // Debug.Log("Mana used: " + amount);
+        laurie.manaPoints = laurie.manaPoints - amount;
+
+        manaRegenCoolingDown = true;
+        manaRegenCooldown = MANA_REGEN_COOLDOWN_DEFUALT;
+    }
+
+    public float ManaPointsAfterUse(float amount) {
+        return laurie.manaPoints - amount;
+    }
+
+    private void Update() {
+        if (manaRegenCoolingDown) {
+            CoolDownManaRegen();
+        }
+    }
+
+    private void CoolDownManaRegen() {
+        manaRegenCooldown = manaRegenCooldown - Time.deltaTime;
+        if (manaRegenCooldown <= 0f) {
+            manaRegenCoolingDown = false;
+        }
+    }
 }

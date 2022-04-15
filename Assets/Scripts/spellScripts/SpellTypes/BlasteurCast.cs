@@ -5,29 +5,50 @@ public class BlasteurCast : Spell {
     public float speed;
     public float lifetime;
 
+    float time;
+
+    private void Start() {
+        time = cooldown;
+    }
+
     public override void Cast(Vector2 direction, string element) {
-        if (blasteur) {
-            // PlayerMain.INSTANCE.playerAnimation.PlaySpellcast();
+        if (!coolingDown) {
+            if (blasteur) {
+                // PlayerMain.INSTANCE.playerAnimation.PlaySpellcast();
 
-            var primaryRotation = Quaternion.FromToRotation(Vector2.up, direction);
-            var leftRotation = primaryRotation * Quaternion.Euler(0, 0, -20);
-            var rightRotation = primaryRotation * Quaternion.Euler(0, 0, 20);
+                var primaryRotation = Quaternion.FromToRotation(Vector2.up, direction);
+                var leftRotation = primaryRotation * Quaternion.Euler(0, 0, -20);
+                var rightRotation = primaryRotation * Quaternion.Euler(0, 0, 20);
 
-            var leftDirection = rotate(direction, Mathf.Deg2Rad * -20);
-            var rightDirection = rotate(direction, Mathf.Deg2Rad * 20);
+                var leftDirection = rotate(direction, Mathf.Deg2Rad * -20);
+                var rightDirection = rotate(direction, Mathf.Deg2Rad * 20);
 
-            CreateBlasteur(direction, primaryRotation);
-            CreateBlasteur(leftDirection, leftRotation);
-            CreateBlasteur(rightDirection, rightRotation);
+                CreateBlasteur(direction, primaryRotation);
+                CreateBlasteur(leftDirection, leftRotation);
+                CreateBlasteur(rightDirection, rightRotation);
+            }
+
+            coolingDown = true;
         }
     }
 
     private void CreateBlasteur(Vector2 direction, Quaternion rotation) {
         GameObject go = Instantiate(blasteur, transform.position, rotation);
         var orb = go.GetComponent<Blasteur>();
+        orb.damage = damage;
         orb.direction = direction;
         orb.lifetime = lifetime;
         orb.speed = speed;
+    }
+
+    private void Update() {
+        if (coolingDown) {
+            time = time - Time.deltaTime;
+            if (time <= 0f) {
+                time = cooldown;
+                coolingDown = false;
+            }
+        }
     }
 
     public static Vector2 rotate(Vector2 v, float delta) {
