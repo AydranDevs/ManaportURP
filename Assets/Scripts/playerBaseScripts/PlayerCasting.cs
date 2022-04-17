@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class PlayerCasting : MonoBehaviour {
     private GameStateManager gameStateManager;
@@ -242,29 +243,29 @@ public class PlayerCasting : MonoBehaviour {
         }
 
         if (gameStateManager.state == GameState.Main) {
-            if (Input.GetMouseButtonDown(0) && primarySpell != null) {
-                var direction = (cursor.transform.position - transform.position).normalized;
-                if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
-                    if (!primarySpell.coolingDown) {
-                        player.UseMana(primarySpell.cost);
-                        primarySpell.Cast(direction, primaryElement);
-                    }
-                }else {
-                    // no more mana :(
-                }
-            }
+            // if (Input.GetMouseButtonDown(0) && primarySpell != null) {
+            //     var direction = (cursor.transform.position - transform.position).normalized;
+            //     if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
+            //         if (!primarySpell.coolingDown) {
+            //             player.UseMana(primarySpell.cost);
+            //             primarySpell.Cast(direction, primaryElement);
+            //         }
+            //     }else {
+            //         // no more mana :(
+            //     }
+            // }
 
-            if (Input.GetMouseButtonDown(1) && secondarySpell != null) {
-                var direction = (cursor.transform.position - transform.position).normalized;
-                if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
-                    if (!secondarySpell.coolingDown) {
-                        player.UseMana(secondarySpell.cost);
-                        secondarySpell.Cast(direction, secondaryElement);
-                    }
-                }else {
-                    // Debug.Log("no more mana :(");
-                }
-            }
+            // if (Input.GetMouseButtonDown(1) && secondarySpell != null) {
+            //     var direction = (cursor.transform.position - transform.position).normalized;
+            //     if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
+            //         if (!secondarySpell.coolingDown) {
+            //             player.UseMana(secondarySpell.cost);
+            //             secondarySpell.Cast(direction, secondaryElement);
+            //         }
+            //     }else {
+            //         // Debug.Log("no more mana :(");
+            //     }
+            // }
         }
 
         if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
@@ -280,5 +281,41 @@ public class PlayerCasting : MonoBehaviour {
 
         primarySpellImage.UpdateCooldown(primarySpell.cooldownTime, primarySpell.cooldown);
         secondarySpellImage.UpdateCooldown(secondarySpell.cooldownTime, secondarySpell.cooldown);
+    }
+
+    public void OnPrimaryCast(InputAction.CallbackContext context) {
+        if (!context.started) return;
+
+        if (gameStateManager.state == GameState.Main) {
+            if (primarySpell != null) {
+                var direction = (cursor.transform.position - transform.position).normalized;
+                if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
+                    if (!primarySpell.coolingDown) {
+                        player.UseMana(primarySpell.cost);
+                        primarySpell.Cast(direction, primaryElement);
+                    }
+                }else {
+                    // no more mana :(
+                }
+            }
+        }
+    }
+
+    public void OnSecondaryCast(InputAction.CallbackContext context) {
+        if (!context.started) return;
+
+        if (gameStateManager.state == GameState.Main) {
+            if (secondarySpell != null) {
+                var direction = (cursor.transform.position - transform.position).normalized;
+                if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
+                    if (!secondarySpell.coolingDown) {
+                        player.UseMana(secondarySpell.cost);
+                        secondarySpell.Cast(direction, secondaryElement);
+                    }
+                }else {
+                    // no more mana :(
+                }
+            }
+        }
     }
 }

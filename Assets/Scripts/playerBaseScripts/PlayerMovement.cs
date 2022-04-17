@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour {
     private const float WALK_PUSH_THRESHOLD = .07f;
@@ -66,15 +67,39 @@ public class PlayerMovement : MonoBehaviour {
     public class OnPushEndEventArgs : EventArgs {}
 
     float time = 0.03f;
+    Vector2 inputVector;
+    bool shiftHeld = false;
 
-    void Awake() {
+    void Start() {
         rb = GetComponent<Rigidbody2D>();
         Player = GetComponent<Player>();
         laurie = GetComponent<Laurie>();
+
+        gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
         Player.transform.position = vectorValue.initialValue;
 
         
-    }  
+    }
+
+    void Update() {
+        if (gameStateManager.state == GameState.Main) {
+            if (Player.ability != AbilityState.AuxilaryMovement) {
+                Move(Time.fixedDeltaTime);
+            }
+        }
+    }
+
+    public void OnMove(InputAction.CallbackContext context) {
+        inputVector = context.ReadValue<Vector2>();
+    }
+
+    public void ShiftHeld(InputAction.CallbackContext context) {
+        if (!context.canceled) {
+            shiftHeld = true;
+        }else {
+            shiftHeld = false;
+        }
+    }
     
     public void Move(float d) {
         pushSp = laurie.pushSp;
@@ -116,30 +141,14 @@ public class PlayerMovement : MonoBehaviour {
             OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
         }
 
-        if(Input.GetAxisRaw("Horizontal") > 0f) {
-            horizontal = 1;
-            Player.facing = FacingState.East;
-        }else if(Input.GetAxisRaw("Horizontal") < 0f) {
-            horizontal = -1;
-            Player.facing = FacingState.West;
-        }else {
-            horizontal = 0;
-        }
-        if(Input.GetAxisRaw("Vertical") > 0f) {
-            vertical = 1;
-            Player.facing = FacingState.North;
-        }else if(Input.GetAxisRaw("Vertical") < 0f) {
-            vertical = -1;
-            Player.facing = FacingState.South;
-        }else {
-            vertical = 0;
-        }
-
-
-        Player.move = new Vector2(horizontal, vertical);
+        Player.move = inputVector;
 
         if (!Player.move.Equals(new Vector2(0, 0))) {
-            Player.movementType = Input.GetKey(KeyCode.LeftShift) ? MovementState.Run : MovementState.Walk;
+            if (shiftHeld) {
+                Player.movementType = MovementState.Run;
+            }else {
+                Player.movementType = MovementState.Walk;
+            }
         }else {
             Player.movementType = MovementState.Idle;
         }
@@ -196,69 +205,6 @@ public class PlayerMovement : MonoBehaviour {
 
     private void OnCollisionExit2D(Collision2D col) {
         Player.isPushing = false;
-    }
-
-    private void Update() {
-        
-        // if (Player.isDashing == true) {
-        //     pushThreshold = DASH_PUSH_THRESHOLD;
-        // }else if (Player.movementType == MovementState.Run) {
-        //     pushThreshold = RUN_PUSH_THRESHOLD;
-        // }else {
-        //     pushThreshold = WALK_PUSH_THRESHOLD;
-        // }
-
-        // if (Player.movementType != MovementState.Idle) {
-        //     if (targetDelta.x > pushThreshold) {
-        //         Player.isPushing = true;
-        //     }else if (targetDelta.x < -pushThreshold) {
-        //         Player.isPushing = true;
-        //     }else if (targetDelta.y > pushThreshold) {
-        //         Player.isPushing = true;
-        //     }else if (targetDelta.y < -pushThreshold) {
-        //         Player.isPushing = true;
-        //     }else {
-        //         Player.isPushing = false;
-        //     }
-        // }
-
-
-        // if (Player.movementType != MovementState.Idle) {
-        //     if (Player.isPushing == true) {
-
-        //         time = time - Time.deltaTime;
-
-        //         if (time <= 0f) {
-        //             Player.isPushing = true;
-        //             runDuration = 0f;
-                    
-        //             if (!pushSweatParActive) {
-        //                 OnPushStart?.Invoke(this, new OnPushStartEventArgs {});
-
-        //                 OnRunEnd?.Invoke(this, new OnRunEndEventArgs{});
-        //                 runDustParActive = false;
-        //                 OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
-        //                 dashDustParActive = false;
-
-        //                 pushSweatParActive = true;
-        //             }
-        //         }else {
-        //             Player.isPushing = false;
-        //             OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
-        //             pushSweatParActive = false;
-        //         }
-        //     }else {
-        //         time = 0.03f;
-        //         Player.isPushing = false;
-        //         OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
-        //         pushSweatParActive = false;
-        //     }
-        // }else {
-        //     time = 0.03f;
-        //     Player.isPushing = false;
-        //     OnPushEnd?.Invoke(this, new OnPushEndEventArgs {});
-        //     pushSweatParActive = false;
-        // }
     }
 
     private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {

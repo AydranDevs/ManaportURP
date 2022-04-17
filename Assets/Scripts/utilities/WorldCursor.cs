@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class WorldCursor : MonoBehaviour {
 
@@ -6,6 +7,8 @@ public class WorldCursor : MonoBehaviour {
 
     private bool primaryFire = true;
     private bool secondaryFire = false;
+
+    Vector2 cursorPos;
     
     void Start() {
         Cursor.visible = false;
@@ -13,24 +16,32 @@ public class WorldCursor : MonoBehaviour {
         animator = GetComponent<Animator>();
     }
 
+    public void OnMouseMove(InputAction.CallbackContext context) {
+        cursorPos = context.ReadValue<Vector2>();
+    }
+
     void Update() {
-        var cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(cursorPos.x, cursorPos.y, 0);
+        Vector2 finalCursorPos = Camera.main.ScreenToWorldPoint(cursorPos);
+        transform.position = new Vector3(finalCursorPos.x, finalCursorPos.y, 0);
+    }
+    
+    public void OnPrimaryCast(InputAction.CallbackContext context) {
+        if (!context.started) return;
 
-        if (Input.GetMouseButtonDown(0)) {
-            primaryFire = true;
-            secondaryFire = false;
+        primaryFire = true;
+        secondaryFire = false;
 
-            animator.Rebind();
-            animator.SetTrigger("PrimaryFire");
-        }
+        animator.Rebind();
+        animator.SetTrigger("PrimaryFire");
+    }
 
-        if (Input.GetMouseButtonDown(1)) {
-            primaryFire = false;
-            secondaryFire = true;
+    public void OnSecondaryCast(InputAction.CallbackContext context) {
+        if (!context.started) return;
+        
+        primaryFire = false;
+        secondaryFire = true;
 
-            animator.Rebind();
-            animator.SetTrigger("SecondaryFire");
-        }
+        animator.Rebind();
+        animator.SetTrigger("SecondaryFire");
     }
 }

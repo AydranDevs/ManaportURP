@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAbilities : MonoBehaviour {
 
@@ -33,15 +34,15 @@ public class PlayerAbilities : MonoBehaviour {
             abilitiesAvailable = false;
             player.ability = AbilityState.None;
         }
+    }
 
-        if (controls.buttonAuxilaryMovement == true && abilitiesAvailable == true) {
+    public void OnAuxilaryMovement(InputAction.CallbackContext context) {
+        if (!context.started) return;
+
+        if (abilitiesAvailable == true) {
             player.ability = AbilityState.AuxilaryMovement;
             player.movementType = MovementState.AuxilaryMovement;
         }
-
-
-
-        
     }
 
 }

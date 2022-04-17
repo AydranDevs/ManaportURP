@@ -1558,7 +1558,7 @@ MonoBehaviour:
   - {x: -0.4342997, y: -0.80669534, z: 0}
   m_ShapePathHash: 1622792825
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1272
+  m_InstanceId: 22892
 --- !u!1 &1356472442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1880,10 +1880,9 @@ GameObject:
   m_Component:
   - component: {fileID: 29131144075423908}
   - component: {fileID: 3866531759002883635}
-  - component: {fileID: 6710627835437737490}
+  - component: {fileID: 628363590701261794}
   - component: {fileID: 303277092434572762}
   - component: {fileID: 8748948775429690951}
-  - component: {fileID: 157315004392795411}
   - component: {fileID: 1727260451276729324}
   - component: {fileID: 2038762598593908112}
   - component: {fileID: 8522449253854330943}
@@ -1971,7 +1970,7 @@ MonoBehaviour:
   isLashingOut: 0
   isInvincible: 0
   isAbsorbing: 0
---- !u!114 &6710627835437737490
+--- !u!114 &628363590701261794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1980,19 +1979,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 164113302670634765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da22a56496b4766458e2f21f3efff9c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonSpellcastPrimary: 0
-  buttonSpellcastSecondary: 0
-  buttonAuxilaryMovement: 0
-  buttonInventory: 0
-  buttonEquipment: 0
-  buttonBestiary: 0
-  buttonSlot1: 0
-  buttonSlot2: 0
-  buttonPause: 0
-  buttonMap: 0
+  m_Actions: {fileID: -944628639613478452, guid: 91714a081a8bc864d92a6b9617b6c2fd, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Keyboard&Mouse
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!114 &303277092434572762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2057,18 +2064,6 @@ MonoBehaviour:
   pushSweatParActive: 0
   horizontal: 0
   vertical: 0
---- !u!114 &157315004392795411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 164113302670634765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af00f06fbd8ad642939b90e997b13ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1727260451276729324
 MonoBehaviour:
   m_ObjectHideFlags: 0
