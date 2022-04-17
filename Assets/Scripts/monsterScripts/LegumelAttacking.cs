@@ -30,6 +30,8 @@ public class LegumelAttacking : MonoBehaviour {
     }
 
     private void Update() {
+        if (legumel.dead) return;
+
         if (legumel.aggro) {
             if (!once) {
                 StartCoroutine(Wait());
@@ -40,7 +42,7 @@ public class LegumelAttacking : MonoBehaviour {
 
     IEnumerator Wait() {
         yield return new WaitForSeconds(2);
-        if (gameStateManager.state == GameState.Main) {
+        if (gameStateManager.state == GameState.Main && !legumel.dead) {
             OnSpellCast?.Invoke(this, new OnSpellCastEventArgs { });
             var direction = (legumel.targetPosition - (Vector2)transform.position).normalized;
             spell.Cast(direction, element);

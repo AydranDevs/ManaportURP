@@ -4,17 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - LegumelAnimator
-  - BulletShooterTarget
-  - BulletShooter
   - GameManager
-  - Spellcaster
-  - SpellOriginPos
   - PlayerAnimator
-  - PlayerBullet
   - Pushable
   - Cursor
   - Creature
+  - HealthBar
+  - ManaBar
+  - PrimaryIcon
+  - SecondaryIcon
   layers:
   - Default
   - TransparentFX

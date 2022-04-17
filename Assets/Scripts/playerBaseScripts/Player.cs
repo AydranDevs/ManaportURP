@@ -42,6 +42,9 @@ public class Player : MonoBehaviour {
 
     public Laurie laurie;
     public PlayerCasting casting;
+    
+    public HealthBarScript healthBar;
+    public ManaBarScript manaBar;
 
     public float manaRegenCooldown;
     public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
@@ -50,10 +53,20 @@ public class Player : MonoBehaviour {
     private void Start() {
         laurie = GetComponent<Laurie>();
         casting = GetComponent<PlayerCasting>();
+        
+        healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
+        manaBar = GameObject.FindGameObjectWithTag("ManaBar").GetComponent<ManaBarScript>();
+
+        healthBar.SetMaxHealth(laurie.hitPointsMax);
+        manaBar.SetMaxMana(laurie.manaPointsMax);
     }
 
     public void Damage(float damage) {
-        // Debug.Log("Hit! Damage: " + damage);
+        laurie.hitPoints = laurie.hitPoints - damage;
+    }
+
+    private void UpdateHealthBar() {
+        healthBar.SetHealth(laurie.hitPoints);
     }
 
     public void UseMana(float amount) {
@@ -68,16 +81,23 @@ public class Player : MonoBehaviour {
         return laurie.manaPoints - amount;
     }
 
-    private void Update() {
-        if (manaRegenCoolingDown) {
-            CoolDownManaRegen();
-        }
-    }
-
     private void CoolDownManaRegen() {
         manaRegenCooldown = manaRegenCooldown - Time.deltaTime;
         if (manaRegenCooldown <= 0f) {
             manaRegenCoolingDown = false;
         }
+    }
+
+    private void Update() {
+        UpdateHealthBar();
+        UpdateManaBar();
+
+        if (manaRegenCoolingDown) {
+            CoolDownManaRegen();
+        }
+    }
+
+    private void UpdateManaBar() {
+        manaBar.SetMana(laurie.manaPoints);
     }
 }

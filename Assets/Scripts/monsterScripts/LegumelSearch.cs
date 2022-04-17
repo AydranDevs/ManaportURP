@@ -13,6 +13,8 @@ public class LegumelSearch : MonoBehaviour {
     }
 
     private void Update() {
+        if (legumel.dead) return;
+
         if (Vector2.Distance(transform.position, legumel.targetPosition) < aggroRange) {
             legumel.aggro = true;
         }

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PlayerCasting : MonoBehaviour {
     private GameStateManager gameStateManager;
+    private PrimarySpellImage primarySpellImage;
+    private SecondarySpellImage secondarySpellImage;
     private Player player;
     
     private GameObject cursor;
@@ -14,15 +16,14 @@ public class PlayerCasting : MonoBehaviour {
     public Spell secondarySpell;
 
     public string primaryElement = Elements.Arcane;
-    public string secondaryElement = Elements.Volt;
+    public string secondaryElement = Elements.Arcane;
 
     bool spellsFound;
 
-    // public Image primarySpellImage;
-    // public Image secondarySpellImage;
-
     private void Start() {
         gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
+        primarySpellImage = GameObject.FindGameObjectWithTag("PrimaryIcon").GetComponent<PrimarySpellImage>();
+        secondarySpellImage = GameObject.FindGameObjectWithTag("SecondaryIcon").GetComponent<SecondarySpellImage>();
         player = GetComponent<Player>();
         cursor = GameObject.FindGameObjectWithTag("Cursor");
 
@@ -39,23 +40,40 @@ public class PlayerCasting : MonoBehaviour {
 
                 switch (primaryElement) {
                     case Elements.Arcane:
-                        // primarySpellImage.sprite = spell.icons.arcane;
+                        primarySpellImage.SetIcon(primarySpell.icons.arcane);
                         break;
                     case Elements.Pyro:
-                        // primarySpellImage.sprite = spell.icons.pyro;
+                        primarySpellImage.SetIcon(primarySpell.icons.pyro);
+                        break;
+                    case Elements.Cryo:
+                        primarySpellImage.SetIcon(primarySpell.icons.cryo);
+                        break;
+                    case Elements.Toxi:
+                        primarySpellImage.SetIcon(primarySpell.icons.toxi);
+                        break;
+                    case Elements.Volt:
+                        primarySpellImage.SetIcon(primarySpell.icons.volt);
                         break;
                 }
-
                 break;
             case 1:
                 secondarySpell = spell;
 
                 switch (secondaryElement) {
                     case Elements.Arcane:
-                        // secondarySpellImage.sprite = Spell.icons.arcane;
+                        secondarySpellImage.SetIcon(secondarySpell.icons.arcane);
                         break;
                     case Elements.Pyro:
-                        // secondarySpellImage.sprite = spell.icons.pyro;
+                        secondarySpellImage.SetIcon(secondarySpell.icons.pyro);
+                        break;
+                    case Elements.Cryo:
+                        secondarySpellImage.SetIcon(secondarySpell.icons.cryo);
+                        break;
+                    case Elements.Toxi:
+                        secondarySpellImage.SetIcon(secondarySpell.icons.toxi);
+                        break;
+                    case Elements.Volt:
+                        secondarySpellImage.SetIcon(secondarySpell.icons.volt);
                         break;
                 }
                 break;
@@ -232,7 +250,7 @@ public class PlayerCasting : MonoBehaviour {
                         primarySpell.Cast(direction, primaryElement);
                     }
                 }else {
-                    // Debug.Log("no more mana :(");
+                    // no more mana :(
                 }
             }
 
@@ -248,5 +266,19 @@ public class PlayerCasting : MonoBehaviour {
                 }
             }
         }
+
+        if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
+            primarySpellImage.UpdateSpellLock(true);
+        }else {
+            primarySpellImage.UpdateSpellLock(false);
+        }
+        if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
+            secondarySpellImage.UpdateSpellLock(true);
+        }else {
+            secondarySpellImage.UpdateSpellLock(false);
+        }
+
+        primarySpellImage.UpdateCooldown(primarySpell.cooldownTime, primarySpell.cooldown);
+        secondarySpellImage.UpdateCooldown(secondarySpell.cooldownTime, secondarySpell.cooldown);
     }
 }

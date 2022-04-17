@@ -12,6 +12,7 @@ public class Laurie : EnemyTarget {
     
     // Player health point values
     [Header("Hit Points")]
+    public const float HIT_POINTS_MAX_DEFAULT = 20f;
     public float hitPointsMax = 20f;
     public float hitPoints;
 
@@ -24,6 +25,7 @@ public class Laurie : EnemyTarget {
 
     // Player mana point values
     [Header("Mana Points")]
+    public const float  MANA_POINTS_MAX_DEFAULT = 5f;
     public float manaPointsMax = 5f;
     public float manaPoints;
     
@@ -95,6 +97,7 @@ public class Laurie : EnemyTarget {
     public const float MANA_REGEN_TIMER_DEFAULT = 1f;
 
     private void Start() {
+        hitPointsMax = HIT_POINTS_MAX_DEFAULT;
         player = GetComponent<Player>();
 
         MaxHP();

@@ -6,10 +6,8 @@ public class AutomaCast : Spell {
     public float speed;
     public float lifetime;
 
-    float time;
-
     private void Start() {
-        time = cooldown;
+        cooldownTime = cooldown;
     }
 
     public override void Cast(Vector2 direction, string element) {
@@ -33,9 +31,9 @@ public class AutomaCast : Spell {
 
     private void Update() {
         if (coolingDown) {
-            time = time - Time.deltaTime;
-            if (time <= 0f) {
-                time = cooldown;
+            cooldownTime = cooldownTime - Time.deltaTime;
+            if (cooldownTime <= 0f) {
+                cooldownTime = cooldown;
                 coolingDown = false;
             }
         }
