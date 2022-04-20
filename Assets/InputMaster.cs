@@ -65,6 +65,22 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""ToggleDebug"",
+                    ""type"": ""Button"",
+                    ""id"": ""db01e565-3f24-4fe8-a439-5ab5c4c4ecbe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Return"",
+                    ""type"": ""Button"",
+                    ""id"": ""9549112c-ad66-42ed-a0a6-087675ee8a70"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -177,6 +193,28 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Sprint"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""43c43507-4235-47c5-9b6a-0534188a9b17"",
+                    ""path"": ""<Keyboard>/backquote"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""ToggleDebug"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27e624c0-de9a-49e0-b7e9-4ca0be4dadea"",
+                    ""path"": ""<Keyboard>/enter"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Return"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -208,6 +246,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_AuxilaryMovement = m_Player.FindAction("AuxilaryMovement", throwIfNotFound: true);
         m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
+        m_Player_ToggleDebug = m_Player.FindAction("ToggleDebug", throwIfNotFound: true);
+        m_Player_Return = m_Player.FindAction("Return", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -263,6 +303,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_AuxilaryMovement;
     private readonly InputAction m_Player_MousePosition;
     private readonly InputAction m_Player_Sprint;
+    private readonly InputAction m_Player_ToggleDebug;
+    private readonly InputAction m_Player_Return;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -273,6 +315,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @AuxilaryMovement => m_Wrapper.m_Player_AuxilaryMovement;
         public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
+        public InputAction @ToggleDebug => m_Wrapper.m_Player_ToggleDebug;
+        public InputAction @Return => m_Wrapper.m_Player_Return;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -300,6 +344,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                 @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                 @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
+                @ToggleDebug.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleDebug;
+                @ToggleDebug.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleDebug;
+                @ToggleDebug.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnToggleDebug;
+                @Return.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturn;
+                @Return.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturn;
+                @Return.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturn;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -322,6 +372,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Sprint.started += instance.OnSprint;
                 @Sprint.performed += instance.OnSprint;
                 @Sprint.canceled += instance.OnSprint;
+                @ToggleDebug.started += instance.OnToggleDebug;
+                @ToggleDebug.performed += instance.OnToggleDebug;
+                @ToggleDebug.canceled += instance.OnToggleDebug;
+                @Return.started += instance.OnReturn;
+                @Return.performed += instance.OnReturn;
+                @Return.canceled += instance.OnReturn;
             }
         }
     }
@@ -343,5 +399,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnAuxilaryMovement(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
+        void OnToggleDebug(InputAction.CallbackContext context);
+        void OnReturn(InputAction.CallbackContext context);
     }
 }

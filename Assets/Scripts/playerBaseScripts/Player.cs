@@ -40,6 +40,7 @@ public class Player : MonoBehaviour {
     public SecondarySpellElement secondaryElement = SecondarySpellElement.Arcane;
 
 
+    public static Player instance;
     public Laurie laurie;
     public PlayerCasting casting;
     
@@ -51,6 +52,7 @@ public class Player : MonoBehaviour {
     public bool manaRegenCoolingDown = false;
     
     private void Start() {
+        instance = this;
         laurie = GetComponent<Laurie>();
         casting = GetComponent<PlayerCasting>();
         
@@ -99,5 +101,75 @@ public class Player : MonoBehaviour {
 
     private void UpdateManaBar() {
         manaBar.SetMana(laurie.manaPoints);
+    }
+
+    public void Debug_SetMaxHP(float hp) {
+        laurie.hitPointsMax = hp;
+    }
+
+    public void Debug_MaxHP() {
+        laurie.hitPoints = laurie.hitPointsMax;
+    }
+
+    public void Debug_SetMaxMP(float mp) {
+        laurie.manaPointsMax = mp;
+        healthBar.SetMaxHealth(laurie.hitPointsMax);
+    }
+
+    public void Debug_MaxMP() {
+        laurie.manaPoints = laurie.manaPointsMax;
+        manaBar.SetMaxMana(laurie.manaPointsMax);
+    }
+
+    public Vector3 GetPosition() {
+        return transform.position;
+    }
+
+    public void Debug_SetPrimarySpell(int spell) {
+        if (spell == 0) {
+            primary = PrimarySpellType.Burston;
+        }else if (spell == 1) {
+            primary = PrimarySpellType.Blasteur;
+        }else if (spell == 2) {
+            primary = PrimarySpellType.Automa;
+        }
+    }
+
+    public void Debug_SetSecondarySpell(int spell) {
+        if (spell == 0) {
+            secondary = SecondarySpellType.Burston;
+        }else if (spell == 1) {
+            secondary = SecondarySpellType.Blasteur;
+        }else if (spell == 2) {
+            secondary = SecondarySpellType.Automa;
+        }
+    }
+
+    public void Debug_SetPrimaryElement(int element) {
+        if (element == 0) {
+            primaryElement = PrimarySpellElement.Arcane;
+        }else if (element == 1) {
+            primaryElement = PrimarySpellElement.Pyro;
+        }else if (element == 2) {
+            primaryElement = PrimarySpellElement.Cryo;
+        }else if (element == 3) {
+            primaryElement = PrimarySpellElement.Toxi;
+        }else if (element == 4) {
+            primaryElement = PrimarySpellElement.Volt;
+        }
+    }
+
+    public void Debug_SetSecondaryElement(int element) {
+        if (element == 0) {
+            secondaryElement = SecondarySpellElement.Arcane;
+        }else if (element == 1) {
+            secondaryElement = SecondarySpellElement.Pyro;
+        }else if (element == 2) {
+            secondaryElement = SecondarySpellElement.Cryo;
+        }else if (element == 3) {
+            secondaryElement = SecondarySpellElement.Toxi;
+        }else if (element == 4) {
+            secondaryElement = SecondarySpellElement.Volt;
+        }
     }
 }

@@ -11,10 +11,11 @@ public class PlayerCasting : MonoBehaviour {
     private Player player;
     
     private GameObject cursor;
-    private GameObject spells;
+    // private GameObject spells;
 
     public Spell primarySpell;
     public Spell secondarySpell;
+    public Spell[] spells;
 
     public string primaryElement = Elements.Arcane;
     public string secondaryElement = Elements.Arcane;
@@ -28,7 +29,7 @@ public class PlayerCasting : MonoBehaviour {
         player = GetComponent<Player>();
         cursor = GameObject.FindGameObjectWithTag("Cursor");
 
-        var spells = GetComponentsInChildren<Spell>();
+        spells = GetComponentsInChildren<Spell>();
 
         SetSpell(0, spells[1]);
         SetSpell(1, spells[0]);
@@ -82,7 +83,7 @@ public class PlayerCasting : MonoBehaviour {
     }
 
     void Update() {
-        var spells = GetComponentsInChildren<Spell>();
+        // spells = GetComponentsInChildren<Spell>();
 
         switch (player.primaryElement) {
             case PrimarySpellElement.Arcane:

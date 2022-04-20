@@ -27,9 +27,13 @@ public class Legumel : Creature {
 
         hitPoints = hitPointsMax;
         healthBar.SetMaxHealth(hitPointsMax);
+
+        Creature.creatureList.Add(this);
     }
 
     private void Update() {
+        // Debug.Log(creatureList.Count);
+
         if (dead) return;
 
         if (hitPoints <= 0f) {
