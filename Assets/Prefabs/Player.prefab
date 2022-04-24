@@ -151,8 +151,8 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 416, y: 234}
-  m_ScreenMatchMode: 1
-  m_MatchWidthOrHeight: 0
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1115,7 +1115,7 @@ MonoBehaviour:
   cryoBurston: {fileID: 4052920604075934681, guid: 3f7f372f0e354e042a456ab0d047f0c4, type: 3}
   toxiBurston: {fileID: 1076952640063043624, guid: f50c6750faf65e842b866a4a6226dd2c, type: 3}
   voltBurston: {fileID: 2339452479426438412, guid: 310536f2ac0c63449b5fba3dbce915cc, type: 3}
-  speed: 5
+  speed: 10
   lifetime: 3
 --- !u!114 &1068604876
 MonoBehaviour:
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1
-  cooldown: 0.7
+  cooldown: 0.9
   damage: 4
   spellId: spell_blasteur
   icons:
@@ -1142,6 +1142,10 @@ MonoBehaviour:
   coolingDown: 0
   cooldownTime: 0
   blasteur: {fileID: 6213410681897852948, guid: 02eddc6bfbb491d4d8cb4c1241087b29, type: 3}
+  pyroBlasteur: {fileID: 2305402969185800511, guid: d65f5c77a6014994893b4be03d2a1bb4, type: 3}
+  cryoBlasteur: {fileID: 3654743371908635121, guid: d20dbe0c7ec886d4487db151f0219c63, type: 3}
+  toxiBlasteur: {fileID: 6958861180970386994, guid: 21f006d79010f6644b5cf83f140d4893, type: 3}
+  voltBlasteur: {fileID: 3285871824011285555, guid: 475ccbd29026fbd4e9eed23d2995a631, type: 3}
   speed: 7.5
   lifetime: 3
 --- !u!114 &1068604878
@@ -1157,7 +1161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1
-  cooldown: 0.5
+  cooldown: 0.7
   damage: 2
   spellId: spell_automa
   icons:
@@ -1169,6 +1173,10 @@ MonoBehaviour:
   coolingDown: 0
   cooldownTime: 0
   automa: {fileID: 5044041582067445021, guid: cee63864710c1c14587d8bfe3eca3553, type: 3}
+  pyroAutoma: {fileID: 6700740985639937200, guid: a70c4fe4c3df2634b86e4343a8dc61af, type: 3}
+  cryoAutoma: {fileID: 6740124753434496818, guid: 091e556944b5c6e43a4fd8a95b480834, type: 3}
+  toxiAutoma: {fileID: 5042890343888349599, guid: 3f586f10ae8fa594ea25e3c693db52d6, type: 3}
+  voltAutoma: {fileID: 4928828678709623695, guid: a02cfb00c0564eb469427f9a008fc4f1, type: 3}
   speed: 10
   lifetime: 2
 --- !u!1 &1118264352
@@ -1557,7 +1565,7 @@ MonoBehaviour:
   - {x: -0.4342997, y: -0.80669534, z: 0}
   m_ShapePathHash: 1622792825
   m_Mesh: {fileID: 0}
-  m_InstanceId: 23286
+  m_InstanceId: -1346
 --- !u!1 &1356472442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,7 +2185,7 @@ MonoBehaviour:
   auxilaryType: 0
   primary: 2
   primaryElement: 0
-  secondary: 0
+  secondary: 2
   secondaryElement: 0
   laurie: {fileID: 0}
   casting: {fileID: 0}

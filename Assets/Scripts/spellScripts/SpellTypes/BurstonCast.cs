@@ -22,7 +22,7 @@ public class BurstonCast : Spell {
                     var orb = go.GetComponent<PyroBurston>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
-                    orb.speed = speed;
+                    speed = orb.speed;
                     go.transform.rotation = Quaternion.FromToRotation(Vector2.up, direction);
                 }
             }else if (element == "cryo") {
@@ -31,7 +31,7 @@ public class BurstonCast : Spell {
                     var orb = go.GetComponent<CryoBurston>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
-                    orb.speed = speed;
+                    speed = orb.speed;
                     go.transform.rotation = Quaternion.FromToRotation(Vector2.up, direction);
                 }
             }else if (element == "toxi") {
@@ -40,7 +40,7 @@ public class BurstonCast : Spell {
                     var orb = go.GetComponent<ToxiBurston>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
-                    orb.speed = speed;
+                    speed = orb.speed;
                     go.transform.rotation = Quaternion.FromToRotation(Vector2.up, direction);
                 }
             }else if (element == "volt") {
@@ -49,7 +49,7 @@ public class BurstonCast : Spell {
                     var orb = go.GetComponent<VoltBurston>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
-                    orb.speed = speed;
+                    speed = orb.speed;
                     go.transform.rotation = Quaternion.FromToRotation(Vector2.up, direction);
                 }
             }else {
@@ -59,7 +59,7 @@ public class BurstonCast : Spell {
                     orb.damage = damage;
                     orb.direction = direction;
                     orb.lifetime = lifetime;
-                    orb.speed = speed;
+                    speed = orb.speed;
                     go.transform.rotation = Quaternion.FromToRotation(Vector2.up, direction);
                 }
             }

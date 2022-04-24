@@ -88,6 +88,7 @@ public class Automa : MonoBehaviour {
     IEnumerator StopParticles() {
         yield return new WaitForSeconds(lifetime);
         if (gameObject != null) {
+            collider.enabled = false;
             corePs.Stop();
             trailPs.Stop();
         }

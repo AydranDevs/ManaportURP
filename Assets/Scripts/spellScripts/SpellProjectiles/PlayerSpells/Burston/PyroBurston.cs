@@ -5,6 +5,7 @@ using UnityEngine;
 public class PyroBurston : MonoBehaviour {
     private Rigidbody2D rb;
     private CircleCollider2D collider;
+    public GameObject light;
     private ParticleSystem corePs;
     private ParticleSystem trailPs;
 
@@ -54,6 +55,7 @@ public class PyroBurston : MonoBehaviour {
         collider.enabled = false;
 
         StartCoroutine(DestroySpellImpact());
+        Destroy(light);
         corePs.Stop();
         trailPs.Stop();
 
@@ -77,6 +79,7 @@ public class PyroBurston : MonoBehaviour {
         collider.enabled = false;
 
         StartCoroutine(DestroySpellImpact());
+        Destroy(light);
         corePs.Stop();
         trailPs.Stop();
 
@@ -89,6 +92,8 @@ public class PyroBurston : MonoBehaviour {
     IEnumerator StopParticles() {
         yield return new WaitForSeconds(lifetime);
         if (gameObject != null) {
+            collider.enabled = false;
+            Destroy(light);
             corePs.Stop();
             trailPs.Stop();
         }

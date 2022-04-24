@@ -5,8 +5,8 @@ using UnityEngine;
 public class Burston : MonoBehaviour {
     private Rigidbody2D rb;
     private CircleCollider2D collider;
-    private ParticleSystem corePs;
-    private ParticleSystem trailPs;
+    public ParticleSystem corePs;
+    public ParticleSystem trailPs;
 
     public GameObject explosionPf;
     private GameObject explosion;
@@ -26,8 +26,6 @@ public class Burston : MonoBehaviour {
         collider = GetComponent<CircleCollider2D>();
 
         thisBurston = this.gameObject;
-        corePs = thisBurston.transform.GetChild(0).GetComponent<ParticleSystem>();
-        trailPs = thisBurston.transform.GetChild(1).GetComponent<ParticleSystem>();
 
         StartCoroutine(StopParticles());
         StartCoroutine(DestroySpell());
@@ -89,6 +87,7 @@ public class Burston : MonoBehaviour {
     IEnumerator StopParticles() {
         yield return new WaitForSeconds(lifetime);
         if (gameObject != null) {
+            collider.enabled = false;
             corePs.Stop();
             trailPs.Stop();
         }

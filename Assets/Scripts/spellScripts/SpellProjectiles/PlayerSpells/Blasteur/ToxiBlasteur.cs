@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VoltBurston : MonoBehaviour {
+public class ToxiBlasteur : MonoBehaviour {
     private Rigidbody2D rb;
     private CircleCollider2D collider;
     private ParticleSystem corePs;
-    private ParticleSystem lightningPs;
     private ParticleSystem trailPs;
 
     public GameObject explosionPf;
     private GameObject explosion;
 
-    private GameObject thisBurston;
+    private GameObject thisBlasteur;
 
     public Vector3 direction;
     public float speed = 10;
@@ -26,10 +25,9 @@ public class VoltBurston : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         collider = GetComponent<CircleCollider2D>();
 
-        thisBurston = this.gameObject;
-        corePs = thisBurston.transform.GetChild(0).GetComponent<ParticleSystem>();
-        lightningPs = thisBurston.transform.GetChild(1).GetComponent<ParticleSystem>();
-        trailPs = thisBurston.transform.GetChild(2).GetComponent<ParticleSystem>();
+        thisBlasteur = this.gameObject;
+        corePs = thisBlasteur.transform.GetChild(0).GetComponent<ParticleSystem>();
+        trailPs = thisBlasteur.transform.GetChild(1).GetComponent<ParticleSystem>();
 
         StartCoroutine(StopParticles());
         StartCoroutine(DestroySpell());
@@ -38,7 +36,6 @@ public class VoltBurston : MonoBehaviour {
     void Update() {
         if (direction != null) {
             transform.position = transform.position + (direction * speed * Time.deltaTime);
-            
         }
     }
 
@@ -57,7 +54,6 @@ public class VoltBurston : MonoBehaviour {
 
         StartCoroutine(DestroySpellImpact());
         corePs.Stop();
-        lightningPs.Stop();
         trailPs.Stop();
 
         if (!hit) {
@@ -81,7 +77,6 @@ public class VoltBurston : MonoBehaviour {
 
         StartCoroutine(DestroySpellImpact());
         corePs.Stop();
-        lightningPs.Stop();
         trailPs.Stop();
 
         if (!hit) {
@@ -95,7 +90,6 @@ public class VoltBurston : MonoBehaviour {
         if (gameObject != null) {
             collider.enabled = false;
             corePs.Stop();
-            lightningPs.Stop();
             trailPs.Stop();
         }
     }

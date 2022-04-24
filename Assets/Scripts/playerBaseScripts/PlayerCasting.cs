@@ -100,7 +100,7 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(0, spells[0]);
                         break;
                 }
-                break;
+            break;
             case PrimarySpellElement.Pyro:
                 primaryElement = Elements.Pyro;
 
@@ -115,7 +115,7 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(0, spells[0]);
                         break;
                 }
-                break;
+            break;
             case PrimarySpellElement.Cryo:
                 primaryElement = Elements.Cryo;
 
@@ -130,7 +130,7 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(0, spells[0]);
                         break;
                 }
-                break;
+            break;
             case PrimarySpellElement.Toxi:
                 primaryElement = Elements.Toxi;
 
@@ -145,23 +145,22 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(0, spells[0]);
                         break;
                 }
-                break;
+            break;
             case PrimarySpellElement.Volt:
                 primaryElement = Elements.Volt;
 
                 switch (player.primary) {
                     case PrimarySpellType.Automa:
-                        SetSpell(1, spells[2]);
+                        SetSpell(0, spells[2]);
                         break;
                     case PrimarySpellType.Blasteur:
-                        SetSpell(1, spells[1]);
+                        SetSpell(0, spells[1]);
                         break;
                     case PrimarySpellType.Burston:
-                        SetSpell(1, spells[0]);
+                        SetSpell(0, spells[0]);
                         break;
                 }
-                break;
-            break;    
+            break;   
         }
 
         switch (player.secondaryElement) {
