@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/*
+    Author: Aydranna Walker
+
+    This program handles the debug console of a larger game. using user input as a string and
+    parses parts of that string into usable data that the program can use to change attributes
+    of the player.
+
+    This program uses the Unity API and some Unity Libraries.
+*/
+
 public class DebugController : MonoBehaviour {
     bool showConsole;
     bool showHelp;
     bool showPosition;
 
-    string input;
+    string input; // holds what the user types
     string position;
 
     public static DebugCommand HELP;
@@ -24,8 +34,9 @@ public class DebugController : MonoBehaviour {
     public static DebugCommand GET_POSITION;
     // public static DebugCommand<Vector2> TELEPORT;
 
-    public List<object> commandList;
+    public List<object> commandList; // commandList holds every command that may be used
 
+    // called when user presses enter on keyboard
     public void OnEnter() {
         if (showConsole) {
             HandleInput();
@@ -33,6 +44,7 @@ public class DebugController : MonoBehaviour {
         }
     }
 
+    // called when user presses grave (`) on keyboard
     public void OnToggleDebug() {
         showConsole = !showConsole;
     }
@@ -90,6 +102,7 @@ public class DebugController : MonoBehaviour {
         //     Player.instance.gameObject.transform.position = (Vector3)x;
         // });
 
+        // add all commands to commandList
         commandList = new List<object> {
             HELP,
             KILL_ALL,
@@ -110,6 +123,7 @@ public class DebugController : MonoBehaviour {
 
     Vector2 scroll;
 
+    // Called by Unity API when GUI is to be drawn
     private void OnGUI() {
         if (!showConsole) {
             showPosition = false;
@@ -118,7 +132,7 @@ public class DebugController : MonoBehaviour {
 
         float y = 0f;
 
-        if (showHelp) {
+        if (showHelp) { // if user inputs "help" command, move console down by 100 and print commands from commandList
             GUI.Box(new Rect(0, y, Screen.width, 100), "");
 
             Rect viewport = new Rect(0, 0, Screen.width - 30, 20 * commandList.Count);
@@ -137,25 +151,27 @@ public class DebugController : MonoBehaviour {
             y = y + 100;
         }
 
-        if (showPosition) {
+        if (showPosition) { // if user inputs "get_position" command, move console down by 20 and print Player position
             GUI.Box(new Rect(0, y, Screen.width, 20), position);
             GUI.backgroundColor = new Color(0, 0, 0, 0);
 
             y = y + 20;
         }
 
+        // if showConsole is true, draw console at y = 0
         GUI.Box(new Rect(0, y, Screen.width, 30), "");
         GUI.backgroundColor = new Color(0, 0, 0, 0);
         input = GUI.TextField(new Rect(10f, y + 5f, Screen.width - 20f, 20f), input);
     }
-
+    
     private void HandleInput() {
-        string[] properties = input.Split(' ');
+        string[] properties = input.Split(' '); // string array holds every word or text broken by spaces
 
+        // for every command in commandList, check command syntax and invoke proper function
         for (int i=0; i<commandList.Count; i++) {
-            DebugCommandBase commandBase = commandList[i] as DebugCommandBase;
+            DebugCommandBase commandBase = commandList[i] as DebugCommandBase; // index commandBase according to commandList.Count 
 
-            if (input.Contains(commandBase.commandId)) {
+            if (input.Contains(commandBase.commandId)) { // if input contains specified commandId (and additional arguments if necessary), invoke command
                 if(commandList[i] is DebugCommand debugCommand){
                     debugCommand.Invoke();
                 }else if (commandList[i] is DebugCommand<float> floatDebugCommand) {
