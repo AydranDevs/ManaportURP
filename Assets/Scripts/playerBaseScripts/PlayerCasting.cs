@@ -178,7 +178,7 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(1, spells[0]);
                         break;
                 }
-                break;
+            break;
             case SecondarySpellElement.Pyro:
                 secondaryElement = Elements.Pyro;
 
@@ -193,7 +193,7 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(1, spells[0]);
                         break;
                 }
-                break;
+            break;
             case SecondarySpellElement.Cryo:
                 secondaryElement = Elements.Cryo;
 
@@ -208,7 +208,7 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(1, spells[0]);
                         break;
                 }
-                break;
+            break;
             case SecondarySpellElement.Toxi:
                 secondaryElement = Elements.Toxi;
 
@@ -223,7 +223,7 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(1, spells[0]);
                         break;
                 }
-                break;
+            break;
             case SecondarySpellElement.Volt:
                 secondaryElement = Elements.Volt;
 
@@ -238,7 +238,6 @@ public class PlayerCasting : MonoBehaviour {
                         SetSpell(1, spells[0]);
                         break;
                 }
-                break;
             break;    
         }
 

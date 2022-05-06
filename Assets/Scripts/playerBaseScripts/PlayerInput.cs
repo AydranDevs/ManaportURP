@@ -1,28 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
-// This script, as it exsits now, might be better to just put in the PlayerMovement script instead.
-public class PlayerInput : MonoBehaviour
-{
-    private GameStateManager gameStateManager;
-    private PlayerMovement playerMovement;
-    private Player player;
+public class PlayerInput : MonoBehaviour {
+    [SerializeField] private InputProvider provider;
 
-    void Start()
-    {
-        gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
-        playerMovement = GetComponent<PlayerMovement>();
-        player = GetComponent<Player>();
+    private void Start() {
+
+    }
+   
+    
+    public void OnMove(InputAction.CallbackContext context) {
+        provider.inputState.movementDirection = context.ReadValue<Vector2>();
     }
 
-    void Update()
-    {
-        if (gameStateManager.state == GameState.Main) {
-            if (player.ability != AbilityState.AuxilaryMovement) {
-                playerMovement.Move(Time.fixedDeltaTime);
-            }
-            // Spellcaster.RotateCursor();
+    public void OnSprint(InputAction.CallbackContext context) {
+        if (!context.canceled) {
+            provider.inputState.isSprinting = true;
+        }else {
+            provider.inputState.isSprinting = false;
         }
     }
 }

@@ -1886,10 +1886,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 29131144075423908}
+  - component: {fileID: 303277092434572762}
   - component: {fileID: 3866531759002883635}
   - component: {fileID: 628363590701261794}
-  - component: {fileID: 303277092434572762}
-  - component: {fileID: 8748948775429690951}
+  - component: {fileID: 5929757725831716452}
+  - component: {fileID: 1926885419188272804}
   - component: {fileID: 1727260451276729324}
   - component: {fileID: 2038762598593908112}
   - component: {fileID: 8522449253854330943}
@@ -1926,6 +1927,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &303277092434572762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164113302670634765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5cbaef8334a3142bcd159b0190190c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementType: 0
+  direction: 4
+  facing: 2
+  move: {x: 0, y: 0}
+  sprintModifier: 1.75
+  skidThreshold: 8
+  willSkid: 0
+  isDashing: 0
+  isPushing: 0
+  ability: 0
+  auxilaryType: 0
+  primary: 2
+  primaryElement: 0
+  secondary: 0
+  secondaryElement: 0
+  laurie: {fileID: 0}
+  casting: {fileID: 0}
+  healthBar: {fileID: 0}
+  manaBar: {fileID: 0}
+  manaRegenCooldown: 0
+  manaRegenCoolingDown: 0
 --- !u!114 &3866531759002883635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2061,8 +2095,8 @@ MonoBehaviour:
     m_ActionName: Player/SecondaryCast[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8748948775429690951}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+      - m_Target: {fileID: 5929757725831716452}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -2109,7 +2143,7 @@ MonoBehaviour:
     m_ActionName: Player/MousePosition[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8748948775429690951}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
         m_MethodName: ShiftHeld
         m_Mode: 0
@@ -2160,7 +2194,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &303277092434572762
+--- !u!114 &5929757725831716452
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2169,31 +2203,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 164113302670634765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f5cbaef8334a3142bcd159b0190190c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3af00f06fbd8ad642939b90e997b13ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementType: 0
-  direction: 4
-  facing: 2
-  move: {x: 0, y: 0}
-  sprintModifier: 1.75
-  skidThreshold: 8
-  willSkid: 0
-  isDashing: 0
-  isPushing: 0
-  ability: 0
-  auxilaryType: 0
-  primary: 2
-  primaryElement: 0
-  secondary: 0
-  secondaryElement: 0
-  laurie: {fileID: 0}
-  casting: {fileID: 0}
-  healthBar: {fileID: 0}
-  manaBar: {fileID: 0}
-  manaRegenCooldown: 0
-  manaRegenCoolingDown: 0
---- !u!114 &8748948775429690951
+  provider: {fileID: 11400000, guid: 7775162937d3111478301e06e68670b0, type: 2}
+--- !u!114 &1926885419188272804
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2202,28 +2216,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 164113302670634765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32befebf15e75b34fa65173c303d8d52, type: 3}
+  m_Script: {fileID: 11500000, guid: 6192d019aef2f46438f46f751a964e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vectorValue: {fileID: 11400000, guid: d1763db8f165bb64f9351c5557ec3030, type: 2}
-  canHandleMovement: 0
-  reconstructedMovement: {x: 0, y: 0}
-  position: {x: 0, y: 0, z: 0}
-  angle: 0
-  initialPushAngle: 0
-  targetDelta: {x: 0, y: 0}
-  actualDelta: {x: 0, y: 0}
-  pushSp: 0
-  movementSp: 0
-  sprintMod: 0
-  dashMod: 0
-  runDuration: 0
-  runDustParActive: 0
-  dashPoofParActive: 0
-  dashDustParActive: 0
-  pushSweatParActive: 0
-  horizontal: 0
-  vertical: 0
+  provider: {fileID: 11400000, guid: 7775162937d3111478301e06e68670b0, type: 2}
 --- !u!114 &1727260451276729324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2556,7 +2552,7 @@ SpriteRenderer:
   m_SortingLayerID: -458034991
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4870008654134179148, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+  m_Sprite: {fileID: 2340057521793802220, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

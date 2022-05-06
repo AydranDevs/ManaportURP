@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerParticles : MonoBehaviour {
-    private PlayerMovement playerMovement;
+    // private PlayerMovement playerMovement;
     private Spindash spindash;
 
     public Transform parent;
@@ -23,15 +23,15 @@ public class PlayerParticles : MonoBehaviour {
     private GameObject pushSweatParticles;
 
     private void Start() {
-        playerMovement = GetComponent<PlayerMovement>();
+        // playerMovement = GetComponent<PlayerMovement>();
         spindash = GetComponentInChildren<Spindash>();
 
-        playerMovement.OnDashStart += SummonParticles_OnDashStart;
-        playerMovement.OnDashEnd += DestroyParticles_OnDashEnd;
-        playerMovement.OnRunStart += SummonParticles_OnRunStart;
-        playerMovement.OnRunEnd += DestroyParticles_OnRunEnd;
-        playerMovement.OnPushStart += SummonParticles_OnPushStart;
-        playerMovement.OnPushEnd += DestroyParticles_OnPushEnd;
+        // playerMovement.OnDashStart += SummonParticles_OnDashStart;
+        // playerMovement.OnDashEnd += DestroyParticles_OnDashEnd;
+        // playerMovement.OnRunStart += SummonParticles_OnRunStart;
+        // playerMovement.OnRunEnd += DestroyParticles_OnRunEnd;
+        // playerMovement.OnPushStart += SummonParticles_OnPushStart;
+        // playerMovement.OnPushEnd += DestroyParticles_OnPushEnd;
 
         spindash.OnSpinDashStart += SummonParticles_OnSpinDashStart;
         spindash.OnSpinDashEnd += DestroyParticles_OnSpinDashEnd;
