@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RunEast
+  m_Name: runEast
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
