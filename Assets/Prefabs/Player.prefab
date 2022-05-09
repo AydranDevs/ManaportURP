@@ -1565,7 +1565,7 @@ MonoBehaviour:
   - {x: -0.4342997, y: -0.80669534, z: 0}
   m_ShapePathHash: 1622792825
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1280
+  m_InstanceId: -1282
 --- !u!1 &1356472442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,7 +1985,9 @@ MonoBehaviour:
   manaPoints: 0
   manaPointsRegen: 0
   pushSp: 0
-  movementSp: 0
+  dashSp: 0
+  sprintSp: 0
+  walkSp: 0
   sprintMod: 0
   dashMod: 0
   abilityCooldownLimit: 0
@@ -2039,8 +2041,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7608931079791578693}
-        m_TargetAssemblyTypeName: PlayerCasting, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WorldCursor, Assembly-CSharp
         m_MethodName: OnPrimaryCast
         m_Mode: 0
         m_Arguments:
@@ -2051,9 +2053,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WorldCursor, Assembly-CSharp
-        m_MethodName: OnPrimaryCast
+      - m_Target: {fileID: 5929757725831716452}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: OnPrimary
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2067,8 +2069,8 @@ MonoBehaviour:
     m_ActionName: Player/PrimaryCast[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7608931079791578693}
-        m_TargetAssemblyTypeName: PlayerCasting, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: WorldCursor, Assembly-CSharp
         m_MethodName: OnSecondaryCast
         m_Mode: 0
         m_Arguments:
@@ -2079,9 +2081,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WorldCursor, Assembly-CSharp
-        m_MethodName: OnSecondaryCast
+      - m_Target: {fileID: 5929757725831716452}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: OnSecondary
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2123,6 +2125,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5929757725831716452}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: OnAuxMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 60a112de-bf57-4626-80ea-51c6e98184a8
     m_ActionName: Player/AuxilaryMovement[/Keyboard/space]
   - m_PersistentCalls:
@@ -2143,9 +2157,9 @@ MonoBehaviour:
     m_ActionName: Player/MousePosition[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: ShiftHeld
+      - m_Target: {fileID: 5929757725831716452}
+        m_TargetAssemblyTypeName: PlayerInput, Assembly-CSharp
+        m_MethodName: OnSprint
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2158,35 +2172,11 @@ MonoBehaviour:
     m_ActionId: 979bc7f2-e651-4ee8-9a13-4da87fc6b805
     m_ActionName: Player/Sprint[/Keyboard/leftShift]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5028069056247187698}
-        m_TargetAssemblyTypeName: DebugController, Assembly-CSharp
-        m_MethodName: OnToggleDebug
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: db01e565-3f24-4fe8-a439-5ab5c4c4ecbe
     m_ActionName: Player/ToggleDebug[/Keyboard/backquote]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5028069056247187698}
-        m_TargetAssemblyTypeName: DebugController, Assembly-CSharp
-        m_MethodName: OnEnter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 9549112c-ad66-42ed-a0a6-087675ee8a70
     m_ActionName: Player/Return[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
@@ -2220,6 +2210,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   provider: {fileID: 11400000, guid: 7775162937d3111478301e06e68670b0, type: 2}
+  _movementDirection: {x: 0, y: 0}
+  movementSp: 0
+  _isSprinting: 0
+  isDashing: 0
+  sprintDuration: 0
 --- !u!114 &1727260451276729324
 MonoBehaviour:
   m_ObjectHideFlags: 0

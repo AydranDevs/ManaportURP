@@ -9,7 +9,7 @@ public class Spindash : MonoBehaviour {
     private Laurie laurie;
     private PlayerAbilities playerAbilities;
     private Rigidbody2D rb;
-    private PlayerMovement playerMovement;
+    private PlayerController controller;
 
     private bool spinDashParActive = false;
 
@@ -31,7 +31,7 @@ public class Spindash : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         laurie = GameObject.FindGameObjectWithTag("Player").GetComponent<Laurie>();
         playerAbilities = GetComponent<PlayerAbilities>();
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        controller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     
         time = laurie.spindashDist * 0.1f;
@@ -45,7 +45,7 @@ public class Spindash : MonoBehaviour {
                 spinDashParActive = true;
             }
             float range = laurie.spindashDist;
-            dashTarget = player.transform.position + (Vector3)playerMovement.reconstructedMovement * range;
+            dashTarget = player.transform.position + (Vector3)controller.reconstructedMovement * range;
 
             time -= Time.deltaTime;
 

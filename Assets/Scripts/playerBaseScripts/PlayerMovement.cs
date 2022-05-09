@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour {
     void Update() {
         if (gameStateManager.state == GameState.Main) {
             if (Player.ability != AbilityState.AuxilaryMovement) {
-                Move(Time.fixedDeltaTime);
+                // Move(Time.fixedDeltaTime);
             }
         }
     }
@@ -101,93 +101,93 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
     
-    public void Move(float d) {
-        pushSp = laurie.pushSp;
-        movementSp = laurie.movementSp;
-        sprintMod = laurie.sprintMod;
-        dashMod = laurie.dashMod;
+    // public void Move(float d) {
+    //     pushSp = laurie.pushSp;
+    //     movementSp = laurie.movementSp;
+    //     sprintMod = laurie.sprintMod;
+    //     dashMod = laurie.dashMod;
         
-        if(Player.movementType == MovementState.Run) {
-            runDuration += Time.deltaTime;
+    //     if(Player.movementType == MovementState.Run) {
+    //         runDuration += Time.deltaTime;
 
-            if (!runDustParActive && !Player.isPushing) {
-                OnRunStart?.Invoke(this, new OnRunStartEventArgs{});
-                runDustParActive = true;
-            }
-        }else {
-            runDuration = 0;
-            runDustParActive = false;
+    //         if (!runDustParActive && !Player.isPushing) {
+    //             OnRunStart?.Invoke(this, new OnRunStartEventArgs{});
+    //             runDustParActive = true;
+    //         }
+    //     }else {
+    //         runDuration = 0;
+    //         runDustParActive = false;
             
-            OnRunEnd?.Invoke(this, new OnRunEndEventArgs{});
+    //         OnRunEnd?.Invoke(this, new OnRunEndEventArgs{});
 
-            Player.willSkid = false;
-            Player.isDashing = false;
-        }
+    //         Player.willSkid = false;
+    //         Player.isDashing = false;
+    //     }
 
-        if(runDuration >= Player.skidThreshold){
-            Player.willSkid = true;
-            Player.isDashing = true;
+    //     if(runDuration >= Player.skidThreshold){
+    //         Player.willSkid = true;
+    //         Player.isDashing = true;
          
-            // make cool dash particles appear
-            if (!dashPoofParActive && !dashDustParActive && !Player.isPushing) {
-                OnDashStart?.Invoke(this, new OnDashStartEventArgs {});
-                dashPoofParActive = true;
-                dashDustParActive = true;
-            }
-        }else {
-            dashPoofParActive = false;
-            dashDustParActive = false;
+    //         // make cool dash particles appear
+    //         if (!dashPoofParActive && !dashDustParActive && !Player.isPushing) {
+    //             OnDashStart?.Invoke(this, new OnDashStartEventArgs {});
+    //             dashPoofParActive = true;
+    //             dashDustParActive = true;
+    //         }
+    //     }else {
+    //         dashPoofParActive = false;
+    //         dashDustParActive = false;
 
-            OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
-        }
+    //         OnDashEnd?.Invoke(this, new OnDashEndEventArgs {});
+    //     }
 
-        Player.move = inputVector;
+    //     Player.move = inputVector;
 
-        if (!Player.move.Equals(new Vector2(0, 0))) {
-            if (shiftHeld) {
-                Player.movementType = MovementState.Run;
-            }else {
-                Player.movementType = MovementState.Walk;
-            }
-        }else {
-            Player.movementType = MovementState.Idle;
-        }
+    //     if (!Player.move.Equals(new Vector2(0, 0))) {
+    //         if (shiftHeld) {
+    //             Player.movementType = MovementState.Run;
+    //         }else {
+    //             Player.movementType = MovementState.Walk;
+    //         }
+    //     }else {
+    //         Player.movementType = MovementState.Idle;
+    //     }
 
-        if (Player.move.Equals(new Vector2(0, 0))) return;
+    //     if (Player.move.Equals(new Vector2(0, 0))) return;
 
-        position = Player.transform.position;
-        position = PixelPerfectClamp(position, 16f);
+    //     position = Player.transform.position;
+    //     position = PixelPerfectClamp(position, 16f);
 
-        float xDiff = Player.move.x;
-        float yDiff = Player.move.y;
-        angle = (float)(Mathf.Atan2(yDiff, xDiff));
+    //     float xDiff = Player.move.x;
+    //     float yDiff = Player.move.y;
+    //     angle = (float)(Mathf.Atan2(yDiff, xDiff));
 
-        if (Player.isDashing == true) { 
-            movementSp = movementSp * dashMod;
-        }else if (Player.movementType == MovementState.Run) {
-            movementSp = movementSp * sprintMod;
-        }else {
-            movementSp = movementSp;
-        }
+    //     if (Player.isDashing == true) { 
+    //         movementSp = movementSp * dashMod;
+    //     }else if (Player.movementType == MovementState.Run) {
+    //         movementSp = movementSp * sprintMod;
+    //     }else {
+    //         movementSp = movementSp;
+    //     }
 
-        if (Player.isPushing == true) {
-            movementSp = pushSp;
-        }
+    //     if (Player.isPushing == true) {
+    //         movementSp = pushSp;
+    //     }
 
-        reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
-        reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
+    //     reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
+    //     reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
         
-        rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * laurie.movementSp) * d));
-        resultPosition = Player.transform.position;
+    //     rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * laurie.movementSp) * d));
+    //     resultPosition = Player.transform.position;
 
-        targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * laurie.movementSp) * d);
+    //     targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * laurie.movementSp) * d);
 
-        targetDelta = targetPosition - initialPosition;
-        actualDelta = resultPosition - initialPosition;
+    //     targetDelta = targetPosition - initialPosition;
+    //     actualDelta = resultPosition - initialPosition;
 
-        initialPosition = Player.transform.position;
+    //     initialPosition = Player.transform.position;
 
-    }
+    // }
 
     private void OnCollisionEnter2D(Collision2D col) {
         if (col.gameObject.tag != "Pushable") return;

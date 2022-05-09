@@ -37,14 +37,16 @@ public class Laurie : EnemyTarget {
     public float pushSp;
     private float defaultPushSp = 1.5f;
 
-    public float movementSp;
-    private float defaultMovementSp = 2f;
+    public float dashSp;
+    public float sprintSp;
+    public float walkSp;
+    private float defaultwalkSp = 2f;
     
     public float sprintMod;
-    private float defaultSprintMod = 1.75f;
+    private float defaultSprintMod = 1.35f;
 
     public float dashMod;
-    private float defaultDashMod = 2.5f;
+    private float defaultDashMod = 1.5f;
 
     // Abilities
     [Header("Abilities")]
@@ -107,11 +109,14 @@ public class Laurie : EnemyTarget {
 
         spindashDist = 5f;
         blinkdashDist = 3f;
-
+ 
         pushSp = defaultPushSp;
-        movementSp = defaultMovementSp;
+        walkSp = defaultwalkSp;
         sprintMod = defaultSprintMod;
         dashMod = defaultDashMod;
+
+        sprintSp = defaultwalkSp * sprintMod;
+        dashSp = defaultwalkSp * dashMod;
 
         manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
         manaPointsRegen = MANA_REGEN_DEFAULT;

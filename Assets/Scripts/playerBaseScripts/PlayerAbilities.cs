@@ -36,13 +36,10 @@ public class PlayerAbilities : MonoBehaviour {
         }
     }
 
-    public void OnAuxilaryMovement(InputAction.CallbackContext context) {
-        if (!context.started) return;
-
+    public void AuxMove() {
         if (abilitiesAvailable == true) {
             player.ability = AbilityState.AuxilaryMovement;
             player.movementType = MovementState.AuxilaryMovement;
         }
     }
-
 }
