@@ -43,7 +43,7 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetBool("walking", false);
         }
 
-        if (Player.movementType == MovementState.Run) {
+        if (Player.movementType == MovementState.Sprint) {
             animator.SetBool("running", true);
         }else {
             animator.SetBool("running", false);

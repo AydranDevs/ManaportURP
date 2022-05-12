@@ -9,19 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: FacingSwitch
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: LaurieIdleEast
   m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  cels: []
   controlDriver:
     name: 
     autoIncrement: 0
     percentageBased: 0
-    guid: 2f20a5ea-8f48-49da-9e5d-ab88154a3918
+    guid: b8a85134-a968-4f57-82eb-726a8cf9a362
   drivers:
     keys: []
     values: 

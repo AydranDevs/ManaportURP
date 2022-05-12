@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MovementState { Idle, Push, Walk, Run, Dash, Skid, AuxilaryMovement }
+public enum MovementState { Idle, Push, Walk, Sprint, Dash, Skid, AuxilaryMovement }
 public enum DirectionState { North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest }
 public enum FacingState { North, East, South, West }
 public enum AbilityState { None, AuxilaryMovement, SpellcastPrimary, SpellcastSecondary }
@@ -12,6 +12,8 @@ public enum PrimarySpellType { Automa, Blasteur, Burston }
 public enum PrimarySpellElement { Arcane, Pyro, Cryo, Toxi, Volt }
 public enum SecondarySpellType { Automa, Blasteur, Burston }
 public enum SecondarySpellElement { Arcane, Pyro, Cryo, Toxi, Volt }
+
+public enum State { Movement, Attack, AuxMove }
 
 // This class could hold all the values for player which would make for a nice singular place for everything
 // to access them.  Sorta like the PlayerStateManager before
@@ -38,6 +40,8 @@ public class Player : MonoBehaviour {
     
     public SecondarySpellType secondary = SecondarySpellType.Blasteur;
     public SecondarySpellElement secondaryElement = SecondarySpellElement.Arcane;
+
+    public State state = State.Movement;
 
 
     public static Player instance;

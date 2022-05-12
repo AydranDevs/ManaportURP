@@ -5,10 +5,11 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] private InputProvider provider;
     
     private Laurie laurie;
+    private Player player;
     private PlayerCasting casting;
     private PlayerAbilities abilities;
     
-    [SerializeField] private Vector2 _movementDirection;
+    public Vector2 _movementDirection;
     [SerializeField] private float movementSp;
     [SerializeField] private bool _isSprinting;
     [SerializeField] private bool isDashing;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start() {
         laurie = GetComponent<Laurie>();
+        player = GetComponent<Player>();
         casting = GetComponent<PlayerCasting>();
         abilities = GetComponentInChildren<PlayerAbilities>();
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Move(float d) {
         if (_movementDirection.Equals(new Vector2(0, 0))) {
+            player.movementType = MovementState.Idle;
             sprintDuration = 0f;
             isDashing = false;
             return;
@@ -55,14 +58,17 @@ public class PlayerController : MonoBehaviour {
 
         if (_isSprinting) {
             if (sprintDuration >= 7f) {
+                player.movementType = MovementState.Dash;
                 isDashing = true;
                 movementSp = laurie.dashSp;
             }else {
+                player.movementType = MovementState.Sprint;
                 movementSp = laurie.sprintSp;
                 isDashing = false;
             }
             sprintDuration += Time.deltaTime;
         }else {
+            player.movementType = MovementState.Walk;
             movementSp = laurie.walkSp;
             sprintDuration = 0f;
         }

@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: SouthSwitch
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: LaurieWalkEast
   m_EditorClassIdentifier: 
-  nodes: []
+  cels: []
   controlDriver:
     name: 
     autoIncrement: 0
     percentageBased: 0
-    guid: 3185f2d4-1c05-44c0-9a6f-a6ff990f6e12
+    guid: e99e42b1-d922-4768-88eb-9365d6711b7c
   drivers:
     keys: []
     values: 

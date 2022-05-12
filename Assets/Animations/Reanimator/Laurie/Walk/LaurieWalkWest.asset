@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: EastSwitch
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: LaurieWalkWest
   m_EditorClassIdentifier: 
-  nodes: []
+  cels: []
   controlDriver:
     name: 
     autoIncrement: 0
     percentageBased: 0
-    guid: 72b766da-da77-46bc-8edb-2bead1c24f3e
+    guid: 62ad3f25-6d48-4713-ae1b-504ac82a8732
   drivers:
     keys: []
     values: 

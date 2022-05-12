@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: LaurieMovementSwitch
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: e11a28d49d196364781e8aff624f414f, type: 2}
+  - {fileID: 11400000, guid: 45cf0ae1214c1a04ea559ea9e23c4b00, type: 2}
+  - {fileID: 11400000, guid: 87a95ef9f91ec324d91d907dec6c9e8e, type: 2}
+  - {fileID: 11400000, guid: 092e4bce328fb494da0e24b86c0c94d9, type: 2}
+  controlDriver:
+    name: movementState
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 42ac53e0-707b-43b7-bc67-d1ec4c987326
+  drivers:
+    keys: []
+    values: 
