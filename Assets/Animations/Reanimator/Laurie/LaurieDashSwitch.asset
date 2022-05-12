@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: LaurieDashSwitch
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 11400000, guid: 9bc58c419d21d2845bb77ee9c47d5311, type: 2}
+  - {fileID: 11400000, guid: ad02695f87e1b5b4ca1cde1da1688e73, type: 2}
+  - {fileID: 11400000, guid: e784d3ef44800b942a02124d9854031d, type: 2}
+  - {fileID: 11400000, guid: 0c094bad731022a469bc6fe098d0ec8e, type: 2}
   controlDriver:
     name: facingState
     autoIncrement: 0

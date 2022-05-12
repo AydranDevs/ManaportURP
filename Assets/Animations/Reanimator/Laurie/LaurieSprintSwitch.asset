@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: LaurieSprintSwitch
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 11400000, guid: e33df9e91c4dafd45a36e9388e412bb2, type: 2}
+  - {fileID: 11400000, guid: b8d8b5e12c3428d4099ee7e575c9d502, type: 2}
+  - {fileID: 11400000, guid: 4e48952a08c2ef948b99061a02c92763, type: 2}
+  - {fileID: 11400000, guid: 8d1244635d772c7429b36bb2b5bc6a11, type: 2}
   controlDriver:
-    name: 
+    name: facingState
     autoIncrement: 0
     percentageBased: 0
     guid: 8cafd607-67a9-457a-9f16-9da6ce6a3a5c

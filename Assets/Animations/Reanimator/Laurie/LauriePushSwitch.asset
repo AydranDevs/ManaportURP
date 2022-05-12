@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: LauriePushSwitch
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 11400000, guid: d31e2f550be488b43849aeb22d7953eb, type: 2}
+  - {fileID: 11400000, guid: f7fbdde6e9a7379478bd3850b73b64a9, type: 2}
+  - {fileID: 11400000, guid: ec952fa99f988ac459d64c155c4aa658, type: 2}
+  - {fileID: 11400000, guid: fe6e6805be6a4254b9639e016f42c9f9, type: 2}
   controlDriver:
-    name: 
+    name: facingState
     autoIncrement: 0
     percentageBased: 0
     guid: 2c18b01b-4816-407f-8a54-a2b9f1683018

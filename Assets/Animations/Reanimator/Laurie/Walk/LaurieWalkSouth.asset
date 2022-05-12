@@ -12,10 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: LaurieWalkSouth
   m_EditorClassIdentifier: 
-  cels: []
+  cels:
+  - sprite: {fileID: -1530755006349401082, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 8379028014638002393, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 140992815485279837, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -3499546279601478863, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
   controlDriver:
-    name: 
-    autoIncrement: 0
+    name: walk
+    autoIncrement: 1
     percentageBased: 0
     guid: a840e062-1c68-461b-959f-1a2f8970e820
   drivers:

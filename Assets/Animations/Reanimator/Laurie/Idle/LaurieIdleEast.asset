@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: LaurieIdleEast
   m_EditorClassIdentifier: 
-  cels: []
+  cels:
+  - sprite: {fileID: -6675839592002895966, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
   controlDriver:
     name: 
     autoIncrement: 0

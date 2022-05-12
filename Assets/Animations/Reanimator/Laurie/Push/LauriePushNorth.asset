@@ -12,10 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: LauriePushNorth
   m_EditorClassIdentifier: 
-  cels: []
+  cels:
+  - sprite: {fileID: 2589975779647922144, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 4861590564003005370, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -9170890491723658062, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -7949272346846906670, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1351789695414449394, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 6639221606055976956, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 259844772813707809, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -6472220199004513473, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
   controlDriver:
-    name: 
-    autoIncrement: 0
+    name: push
+    autoIncrement: 1
     percentageBased: 0
     guid: 79567f0b-7775-4bd9-ba7b-f5262412d957
   drivers:

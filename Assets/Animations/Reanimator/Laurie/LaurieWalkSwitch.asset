@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: LaurieWalkSwitch
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 11400000, guid: 28699e867ec12c340ab7e258babccace, type: 2}
+  - {fileID: 11400000, guid: fce117d7221fdc845ab1041918b2c869, type: 2}
+  - {fileID: 11400000, guid: 3187aa3f3fdc38b4b95153165d38e588, type: 2}
+  - {fileID: 11400000, guid: 32d41e888a5170e4f9a8027369493b47, type: 2}
   controlDriver:
-    name: 
-    autoIncrement: 0
+    name: facingState
+    autoIncrement: 1
     percentageBased: 0
     guid: 8a2011a9-6917-4544-915b-f4629ceb3f0e
   drivers:

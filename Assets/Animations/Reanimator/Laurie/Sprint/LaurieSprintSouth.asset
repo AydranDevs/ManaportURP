@@ -12,10 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
   m_Name: LaurieSprintSouth
   m_EditorClassIdentifier: 
-  cels: []
+  cels:
+  - sprite: {fileID: -473472974792202941, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -744642997647205999, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 9019400024810909178, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 4871167096957743481, guid: 670b977bb1be1ca42a736c0837da62ad, type: 3}
+    drivers:
+      keys: []
+      values: 
   controlDriver:
-    name: 
-    autoIncrement: 0
+    name: sprint
+    autoIncrement: 1
     percentageBased: 0
     guid: bd30fcd8-4747-4fab-902a-cb9969ae3c1c
   drivers:
