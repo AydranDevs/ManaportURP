@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: LaurieRootSwitch
+  m_Name: LaurieAuxMoveSwitch
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 11400000, guid: a3eef0081ccfa8e4b9502e3d072703e0, type: 2}
+  - {fileID: 11400000, guid: 829bf5c4fc42ba341b9dd4d966c69a11, type: 2}
   - {fileID: 0}
-  - {fileID: 11400000, guid: b1cb655b92c2359489b7be4d49978add, type: 2}
+  - {fileID: 0}
   controlDriver:
-    name: state
-    autoIncrement: 0
+    name: auxilaryType
+    autoIncrement: 1
     percentageBased: 0
-    guid: 52d129b1-0316-4b67-b1f1-565eccec3aac
+    guid: f4b66f86-0af5-42b5-a417-0d80318ba2fe
   drivers:
     keys: []
     values: 

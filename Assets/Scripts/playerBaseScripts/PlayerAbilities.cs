@@ -32,12 +32,14 @@ public class PlayerAbilities : MonoBehaviour {
             abilitiesAvailable = true;  
         }else {
             abilitiesAvailable = false;
+            player.state = State.Movement;
             player.ability = AbilityState.None;
         }
     }
 
     public void AuxMove() {
         if (abilitiesAvailable == true) {
+            player.state = State.AuxMove;
             player.ability = AbilityState.AuxilaryMovement;
             player.movementType = MovementState.AuxilaryMovement;
         }

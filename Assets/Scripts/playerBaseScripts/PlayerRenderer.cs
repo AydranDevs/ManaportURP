@@ -6,6 +6,7 @@ public class PlayerRenderer : MonoBehaviour {
         public const string STATE = "state";
         public const string MOVEMENT_STATE = "movementState";
         public const string FACING_STATE = "facingState";
+        public const string AUXILARY_TYPE = "auxilaryType";
     }
 
     private Reanimator _reanimator;
@@ -44,5 +45,6 @@ public class PlayerRenderer : MonoBehaviour {
         _reanimator.Set(Drivers.STATE, (int)_player.state);
         _reanimator.Set(Drivers.FACING_STATE, facingState);
         _reanimator.Set(Drivers.MOVEMENT_STATE, (int)_player.movementType);
+        _reanimator.Set(Drivers.AUXILARY_TYPE, (int)_player.auxilaryType);
     }
 }
