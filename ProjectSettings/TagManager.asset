@@ -13,6 +13,9 @@ TagManager:
   - ManaBar
   - PrimaryIcon
   - SecondaryIcon
+  - BulletShooter
+  - BulletShooterTarget
+  - PlayerPartyMember
   layers:
   - Default
   - TransparentFX
