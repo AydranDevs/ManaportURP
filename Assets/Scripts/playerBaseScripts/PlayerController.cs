@@ -4,7 +4,7 @@ public class PlayerController : MonoBehaviour {
     
     [SerializeField] private InputProvider provider;
     
-    private Laurie laurie;
+    // private Laurie laurie;
     private Player player;
     private PlayerCasting casting;
     private PlayerAbilities abilities;
@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
     public float sprintDuration;
 
     private void Start() {
-        laurie = GetComponent<Laurie>();
+        // laurie = GetComponent<Laurie>();
         player = GetComponent<Player>();
         casting = GetComponent<PlayerCasting>();
         abilities = GetComponentInChildren<PlayerAbilities>();
@@ -60,16 +60,16 @@ public class PlayerController : MonoBehaviour {
             if (sprintDuration >= 7f) {
                 player.movementType = MovementState.Dash;
                 isDashing = true;
-                movementSp = laurie.dashSp;
+                // movementSp = laurie.dashSp;
             }else {
                 player.movementType = MovementState.Sprint;
-                movementSp = laurie.sprintSp;
+                // movementSp = laurie.sprintSp;
                 isDashing = false;
             }
             sprintDuration += Time.deltaTime;
         }else {
             player.movementType = MovementState.Walk;
-            movementSp = laurie.walkSp;
+            // movementSp = laurie.walkSp;
             sprintDuration = 0f;
         }
 

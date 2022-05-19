@@ -5,13 +5,12 @@ using UnityEngine;
 public class PlayerCam : MonoBehaviour
 {
     public float speed = 1f;
-    Transform target;
+    public Transform target;
     Camera cam;
 
     void Start()
     {
         cam = GetComponent<Camera>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void FixedUpdate()

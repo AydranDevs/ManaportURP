@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Legumel : Creature {
-    public Transform player;
+    public GameObject[] targets;
     public Vector2 targetPosition;
 
     public LegumelAttacking legumelAttacking;
@@ -21,7 +21,7 @@ public class Legumel : Creature {
     public float hitPointsMax = 10f;
 
     private void Start() {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        targets = GameObject.FindGameObjectsWithTag("Friendly");
         legumelAttacking = GetComponent<LegumelAttacking>();
         legumelSearch = GetComponent<LegumelSearch>();
 
@@ -32,16 +32,16 @@ public class Legumel : Creature {
     }
 
     private void Update() {
-        // Debug.Log(creatureList.Count);
-
         if (dead) return;
-
         if (hitPoints <= 0f) {
             Die();
         }
+        
         UpdateHealthBar();
         
-        targetPosition = (Vector2)player.transform.position;
+
+        
+        targetPosition = (Vector2)targets[0].transform.position;
     }
 
     public void Die() {

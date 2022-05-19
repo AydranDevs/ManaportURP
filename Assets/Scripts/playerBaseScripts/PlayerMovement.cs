@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
 
     Rigidbody2D rb;
     private Player Player;
-    private Laurie laurie;
+    // private Laurie laurie;
     private GameStateManager gameStateManager;
     public VectorValue vectorValue;
 
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour {
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         Player = GetComponent<Player>();
-        laurie = GetComponent<Laurie>();
+        // laurie = GetComponent<Laurie>();
 
         gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
         Player.transform.position = vectorValue.initialValue;

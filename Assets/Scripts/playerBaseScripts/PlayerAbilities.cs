@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerAbilities : MonoBehaviour {
 
     private Player player;
-    private Laurie laurie;
+    // private Laurie laurie;
     private Controls controls;
     private Spindash spindash;
     private Lightspeed lightspeed;
@@ -17,12 +17,12 @@ public class PlayerAbilities : MonoBehaviour {
 
     private void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        laurie = GameObject.FindGameObjectWithTag("Player").GetComponent<Laurie>();
+        // laurie = GameObject.FindGameObjectWithTag("Player").GetComponent<Laurie>();
         controls = GameObject.FindGameObjectWithTag("Player").GetComponent<Controls>();
         spindash = GetComponent<Spindash>();
         lightspeed = GetComponent<Lightspeed>();
 
-        abilityCooldown = laurie.abilityCooldownLimit; // Sets cooldown time to whatever CooldownLimit is set to
+        // abilityCooldown = laurie.abilityCooldownLimit; // Sets cooldown time to whatever CooldownLimit is set to
     }
 
     private void Update() {

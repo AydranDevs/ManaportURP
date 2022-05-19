@@ -241,46 +241,46 @@ public class PlayerCasting : MonoBehaviour {
             break;    
         }
 
-        if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
-            primarySpellImage.UpdateSpellLock(true);
-        }else {
-            primarySpellImage.UpdateSpellLock(false);
-        }
-        if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
-            secondarySpellImage.UpdateSpellLock(true);
-        }else {
-            secondarySpellImage.UpdateSpellLock(false);
-        }
+        // if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
+        //     primarySpellImage.UpdateSpellLock(true);
+        // }else {
+        //     primarySpellImage.UpdateSpellLock(false);
+        // }
+        // if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
+        //     secondarySpellImage.UpdateSpellLock(true);
+        // }else {
+        //     secondarySpellImage.UpdateSpellLock(false);
+        // }
 
         primarySpellImage.UpdateCooldown(primarySpell.cooldownTime, primarySpell.cooldown);
         secondarySpellImage.UpdateCooldown(secondarySpell.cooldownTime, secondarySpell.cooldown);
     }
 
     public void PrimaryCast() {
-        if (primarySpell != null) {
-            var direction = (cursor.transform.position - transform.position).normalized;
-            if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
-                if (!primarySpell.coolingDown) {
-                    player.UseMana(primarySpell.cost);
-                    primarySpell.Cast(direction, primaryElement);
-                }
-            }else {
-                // no more mana :(
-            }
-        }
+        // if (primarySpell != null) {
+        //     var direction = (cursor.transform.position - transform.position).normalized;
+        //     if (player.ManaPointsAfterUse(primarySpell.cost) >= 0f) {
+        //         if (!primarySpell.coolingDown) {
+        //             player.UseMana(primarySpell.cost);
+        //             primarySpell.Cast(direction, primaryElement);
+        //         }
+        //     }else {
+        //         // no more mana :(
+        //     }
+        // }
     }
 
     public void SecondaryCast() {
-        if (secondarySpell != null) {
-            var direction = (cursor.transform.position - transform.position).normalized;
-            if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
-                if (!secondarySpell.coolingDown) {
-                    player.UseMana(secondarySpell.cost);
-                    secondarySpell.Cast(direction, secondaryElement);
-                }
-            }else {
-                // no more mana :(
-            }
-        }
+        // if (secondarySpell != null) {
+        //     var direction = (cursor.transform.position - transform.position).normalized;
+        //     if (player.ManaPointsAfterUse(secondarySpell.cost) >= 0f) {
+        //         if (!secondarySpell.coolingDown) {
+        //             player.UseMana(secondarySpell.cost);
+        //             secondarySpell.Cast(direction, secondaryElement);
+        //         }
+        //     }else {
+        //         // no more mana :(
+        //     }
+        // }
     }
 }

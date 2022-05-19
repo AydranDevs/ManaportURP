@@ -305,7 +305,7 @@ MonoBehaviour:
   - {x: -0.4342997, y: -0.80669534, z: 0}
   m_ShapePathHash: 1622792825
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1290
+  m_InstanceId: 40230
 --- !u!1 &7323598142334173366
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +580,7 @@ MonoBehaviour:
   secondary: 0
   secondaryElement: 0
   state: 0
+  partyMember: {fileID: 0}
   laurie: {fileID: 0}
   casting: {fileID: 0}
   healthBar: {fileID: 0}

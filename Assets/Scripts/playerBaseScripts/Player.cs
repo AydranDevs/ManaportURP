@@ -45,7 +45,8 @@ public class Player : MonoBehaviour {
 
 
     public static Player instance;
-    public Laurie laurie;
+    public PartyMember partyMember;
+    //public Laurie laurie;
     public PlayerCasting casting;
     
     public HealthBarScript healthBar;
@@ -57,35 +58,35 @@ public class Player : MonoBehaviour {
     
     private void Start() {
         instance = this;
-        laurie = GetComponent<Laurie>();
+        // laurie = GetComponent<Laurie>();
         casting = GetComponent<PlayerCasting>();
         
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
         manaBar = GameObject.FindGameObjectWithTag("ManaBar").GetComponent<ManaBarScript>();
 
-        healthBar.SetMaxHealth(laurie.hitPointsMax);
-        manaBar.SetMaxMana(laurie.manaPointsMax);
+        // healthBar.SetMaxHealth(laurie.hitPointsMax);
+        // manaBar.SetMaxMana(laurie.manaPointsMax);
     }
 
     public void Damage(float damage) {
-        laurie.hitPoints = laurie.hitPoints - damage;
+        // laurie.hitPoints = laurie.hitPoints - damage;
     }
 
     private void UpdateHealthBar() {
-        healthBar.SetHealth(laurie.hitPoints);
+        // healthBar.SetHealth(laurie.hitPoints);
     }
 
     public void UseMana(float amount) {
         // Debug.Log("Mana used: " + amount);
-        laurie.manaPoints = laurie.manaPoints - amount;
+        // laurie.manaPoints = laurie.manaPoints - amount;
 
         manaRegenCoolingDown = true;
         manaRegenCooldown = MANA_REGEN_COOLDOWN_DEFUALT;
     }
 
-    public float ManaPointsAfterUse(float amount) {
-        return laurie.manaPoints - amount;
-    }
+    // public float ManaPointsAfterUse(float amount) {
+    //     // return laurie.manaPoints - amount;
+    // }
 
     private void CoolDownManaRegen() {
         manaRegenCooldown = manaRegenCooldown - Time.deltaTime;
@@ -104,25 +105,25 @@ public class Player : MonoBehaviour {
     }
 
     private void UpdateManaBar() {
-        manaBar.SetMana(laurie.manaPoints);
+        // manaBar.SetMana(laurie.manaPoints);
     }
 
     public void Debug_SetMaxHP(float hp) {
-        laurie.hitPointsMax = hp;
+        // laurie.hitPointsMax = hp;
     }
 
     public void Debug_MaxHP() {
-        laurie.hitPoints = laurie.hitPointsMax;
+        // laurie.hitPoints = laurie.hitPointsMax;
     }
 
     public void Debug_SetMaxMP(float mp) {
-        laurie.manaPointsMax = mp;
-        healthBar.SetMaxHealth(laurie.hitPointsMax);
+        // laurie.manaPointsMax = mp;
+        // healthBar.SetMaxHealth(laurie.hitPointsMax);
     }
 
     public void Debug_MaxMP() {
-        laurie.manaPoints = laurie.manaPointsMax;
-        manaBar.SetMaxMana(laurie.manaPointsMax);
+        // laurie.manaPoints = laurie.manaPointsMax;
+        // manaBar.SetMaxMana(laurie.manaPointsMax);
     }
 
     public Vector3 GetPosition() {

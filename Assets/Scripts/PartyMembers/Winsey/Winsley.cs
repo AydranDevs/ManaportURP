@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Winsley : PartyMember {
-    [SerializeField] public PartyMembers party;
+public class Winsley : MonoBehaviour {
+    public PartyMember partyMember;
+    private GameObject winsley;
 
-    private void Start() {
-        party = GetPartyMembers();
-
-        party.members.Add(this.gameObject);
+    void Start() {
+        winsley = this.gameObject;
     }
 }
