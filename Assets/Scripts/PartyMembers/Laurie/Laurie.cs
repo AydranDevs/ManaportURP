@@ -135,6 +135,8 @@ namespace LaurieNamespace {
         public ManaBarScript manaBar;
 
         public LaurieController controller;
+        public LaurieCasting casting;
+        public LaurieAbilities abilities;
 
         public float manaRegenCooldown;
         public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
@@ -143,11 +145,15 @@ namespace LaurieNamespace {
         private float manaRegenTimer;
         public const float MANA_REGEN_TIMER_DEFAULT = 1f;
 
+        private void Awake() {
+            controller = GetComponentInChildren<LaurieController>();
+            casting = GetComponentInChildren<LaurieCasting>();
+            abilities = GetComponentInChildren<LaurieAbilities>();
+        }
+
         private void Start() {
             healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
             manaBar = GameObject.FindGameObjectWithTag("ManaBar").GetComponent<ManaBarScript>();
-
-            controller = GetComponentInChildren<LaurieController>();
 
             hitPointsMax = HIT_POINTS_MAX_DEFAULT;
             manaPointsMax = MANA_POINTS_MAX_DEFAULT;

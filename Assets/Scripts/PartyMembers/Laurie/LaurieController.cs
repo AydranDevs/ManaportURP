@@ -5,8 +5,8 @@ namespace LaurieNamespace {
         [SerializeField] private InputProvider provider;
         
         private Laurie laurie;
-        // private PlayerCasting casting;
-        // private PlayerAbilities abilities;
+        private LaurieCasting casting;
+        private LaurieAbilities abilities;
         
         public Vector2 movementDirection;
         [SerializeField] private float movementSp;
@@ -30,13 +30,16 @@ namespace LaurieNamespace {
 
         private void Start() {
             laurie = GetComponentInParent<Laurie>();
-            // casting = GetComponent<PlayerCasting>();
-            // abilities = GetComponentInChildren<PlayerAbilities>();
             rb = GetComponentInParent<Rigidbody2D>();
+
+            casting = laurie.casting;
+            abilities = laurie.abilities;
 
             provider.OnPrimary += OnPrimary_PrimaryCast;
             provider.OnSecondary += OnSecondary_SecondaryCast;
             provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+
+            if (laurie == null) Debug.Log("laurie is null");
         }
 
         private void Update() {
@@ -91,15 +94,15 @@ namespace LaurieNamespace {
         }
 
         public void OnPrimary_PrimaryCast() {
-            //casting.PrimaryCast();
+            casting.PrimaryCast();
         }
 
         public void OnSecondary_SecondaryCast() {
-            //casting.SecondaryCast();
+            casting.SecondaryCast();
         }
 
         public void OnAuxMove_AuxillaryMovement() {
-            //abilities.AuxMove();
+            abilities.AuxMove();
         }
         
         private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {

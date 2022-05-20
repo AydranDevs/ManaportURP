@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spindash : MonoBehaviour {
-    
-    private Player player;
-    // private Laurie laurie;
-    private PlayerAbilities playerAbilities;
+    private Laurie laurie;
+    private LaurieAbilities playerAbilities;
     private Rigidbody2D rb;
     private PlayerController controller;
 
@@ -18,8 +16,6 @@ public class Spindash : MonoBehaviour {
     public event EventHandler<OnSpinDashEndEventArgs> OnSpinDashEnd;
     public class OnSpinDashEndEventArgs : EventArgs { }
 
-    // private ParticleSystem particleSystem;
-
     // public float range; // default 5
     public float speed; // default 5
     public float time;
@@ -28,9 +24,8 @@ public class Spindash : MonoBehaviour {
     public Vector3 dashTarget;
 
     private void Awake() {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        // laurie = GameObject.FindGameObjectWithTag("Player").GetComponent<Laurie>();
         playerAbilities = GetComponent<PlayerAbilities>();
+        laurie = GetComponentInParent<Laurie>();
         controller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
     
@@ -38,33 +33,33 @@ public class Spindash : MonoBehaviour {
     }
 
     private void Update() {
-        // if (player.auxilaryType == AuxilaryMovementType.Spindash && player.ability == AbilityState.AuxilaryMovement) {
-        //     if (!spinDashParActive) {
-        //         OnSpinDashStart?.Invoke(this, new OnSpinDashStartEventArgs { });
+        if (player.auxilaryType == AuxilaryMovementType.Spindash && player.ability == AbilityState.AuxilaryMovement) {
+            if (!spinDashParActive) {
+                OnSpinDashStart?.Invoke(this, new OnSpinDashStartEventArgs { });
 
-        //         spinDashParActive = true;
-        //     }
-        //     float range = laurie.spindashDist;
-        //     dashTarget = player.transform.position + (Vector3)controller.reconstructedMovement * range;
+                spinDashParActive = true;
+            }
+            float range = laurie.spindashDist;
+            dashTarget = player.transform.position + (Vector3)controller.reconstructedMovement * range;
 
-        //     time -= Time.deltaTime;
+            time -= Time.deltaTime;
 
-        //     float step =  speed * Time.deltaTime; // calculate distance to move
-        //     player.transform.position = Vector3.MoveTowards(player.transform.position, dashTarget, step);
+            float step =  speed * Time.deltaTime; // calculate distance to move
+            player.transform.position = Vector3.MoveTowards(player.transform.position, dashTarget, step);
 
-        //     // reset all timers and player ability state
-        //     if (time <= 0f) {
-        //         player.ability = AbilityState.None;
-        //         player.movementType = MovementState.Idle;
-                
-        //         playerAbilities.abilitiesAvailable = false;
-        //         playerAbilities.abilityCooldown = laurie.abilityCooldownLimit;
-        //         time = laurie.spindashDist * 0.1f;
+            // reset all timers and player ability state
+            if (time <= 0f) {
+                player.ability = AbilityState.None;
+                player.movementType = MovementState.Idle;
+             
+                playerAbilities.abilitiesAvailable = false;
+                playerAbilities.abilityCooldown = laurie.abilityCooldownLimit;
+                time = laurie.spindashDist * 0.1f;
 
-        //         OnSpinDashEnd?.Invoke(this, new OnSpinDashEndEventArgs { });
-        //         spinDashParActive = false;
-        //     }
-        // }
+                OnSpinDashEnd?.Invoke(this, new OnSpinDashEndEventArgs { });
+                spinDashParActive = false;
+            }
+        }
     }
 
     

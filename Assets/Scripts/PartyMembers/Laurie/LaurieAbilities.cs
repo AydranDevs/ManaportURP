@@ -31,6 +31,14 @@ namespace LaurieNamespace {
                 laurie.abilityState = AbilityState.None;
             }
         }
+
+        public void AuxMove() {
+        if (abilitiesAvailable == true) {
+            laurie.state = State.AuxMove;
+            laurie.abilityState = AbilityState.AuxilaryMovement;
+            laurie.movementState = MovementState.AuxilaryMovement;
+        }
+    }
     }
 }
 
