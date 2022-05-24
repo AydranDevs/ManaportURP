@@ -1,13 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace PartyNamespace {
-    namespace LaurieNamespace {
-        public class LaurieController : MonoBehaviour {
+    namespace MirabelleNamespace {
+        public class MirabelleController : MonoBehaviour {
             [SerializeField] private InputProvider provider;
             
-            private Laurie laurie;
-            private LaurieCasting casting;
-            private LaurieAbilities abilities;
+            private Mirabelle mirabelle;
+            // private LaurieCasting casting;
+            // private LaurieAbilities abilities;
             
             public Vector2 movementDirection;
             [SerializeField] private float movementSp;
@@ -30,11 +32,11 @@ namespace PartyNamespace {
             public float sprintDuration;
 
             private void Start() {
-                laurie = GetComponentInParent<Laurie>();
+                mirabelle = GetComponentInParent<Mirabelle>();
                 rb = GetComponentInParent<Rigidbody2D>();
 
-                casting = laurie.casting;
-                abilities = laurie.abilities;
+                //casting = laurie.casting;
+                //abilities = laurie.abilities;
 
                 provider.OnPrimary += OnPrimary_PrimaryCast;
                 provider.OnSecondary += OnSecondary_SecondaryCast;
@@ -50,7 +52,7 @@ namespace PartyNamespace {
 
             private void Move(float d) {
                 if (movementDirection.Equals(new Vector2(0, 0))) {
-                    laurie.movementState = MovementState.Idle;
+                    mirabelle.movementState = MovementState.Idle;
                     sprintDuration = 0f;
                     isDashing = false;
                     return;
@@ -58,22 +60,22 @@ namespace PartyNamespace {
 
                 if (_isSprinting) {
                     if (sprintDuration >= 7f) {
-                        laurie.movementState = MovementState.Dash;
+                        mirabelle.movementState = MovementState.Dash;
                         isDashing = true;
-                        movementSp = laurie.dashSp;
+                        movementSp = mirabelle.dashSp;
                     }else {
-                        laurie.movementState = MovementState.Sprint;
-                        movementSp = laurie.sprintSp;
+                        mirabelle.movementState = MovementState.Sprint;
+                        movementSp = mirabelle.sprintSp;
                         isDashing = false;
                     }
                     sprintDuration += Time.deltaTime;
                 }else {
-                    laurie.movementState = MovementState.Walk;
-                    movementSp = laurie.walkSp;
+                    mirabelle.movementState = MovementState.Walk;
+                    movementSp = mirabelle.walkSp;
                     sprintDuration = 0f;
                 }
 
-                position = laurie.gameObject.transform.position;
+                position = mirabelle.gameObject.transform.position;
                 position = PixelPerfectClamp(position, 16f);
 
                 angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
@@ -93,15 +95,15 @@ namespace PartyNamespace {
             }
 
             public void OnPrimary_PrimaryCast() {
-                casting.PrimaryCast();
+                //casting.PrimaryCast();
             }
 
             public void OnSecondary_SecondaryCast() {
-                casting.SecondaryCast();
+                //casting.SecondaryCast();
             }
 
             public void OnAuxMove_AuxillaryMovement() {
-                abilities.AuxMove();
+                //abilities.AuxMove();
             }
             
             private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {

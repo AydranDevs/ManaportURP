@@ -81,6 +81,22 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Previous"",
+                    ""type"": ""Button"",
+                    ""id"": ""d67a6a94-350b-47cc-ab22-bd15e768f68f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Next"",
+                    ""type"": ""Button"",
+                    ""id"": ""e55cca3b-f08c-49b1-a471-66b846394669"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -215,6 +231,28 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Return"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""793be0a5-bd8a-43cc-af23-7640103b490a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Previous"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70ae3a4a-de97-4abb-9ac1-0655aa42d9ce"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Next"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -248,6 +286,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_ToggleDebug = m_Player.FindAction("ToggleDebug", throwIfNotFound: true);
         m_Player_Return = m_Player.FindAction("Return", throwIfNotFound: true);
+        m_Player_Previous = m_Player.FindAction("Previous", throwIfNotFound: true);
+        m_Player_Next = m_Player.FindAction("Next", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -305,6 +345,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_ToggleDebug;
     private readonly InputAction m_Player_Return;
+    private readonly InputAction m_Player_Previous;
+    private readonly InputAction m_Player_Next;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -317,6 +359,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @ToggleDebug => m_Wrapper.m_Player_ToggleDebug;
         public InputAction @Return => m_Wrapper.m_Player_Return;
+        public InputAction @Previous => m_Wrapper.m_Player_Previous;
+        public InputAction @Next => m_Wrapper.m_Player_Next;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -350,6 +394,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Return.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturn;
                 @Return.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturn;
                 @Return.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnReturn;
+                @Previous.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrevious;
+                @Previous.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrevious;
+                @Previous.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrevious;
+                @Next.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNext;
+                @Next.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNext;
+                @Next.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnNext;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -378,6 +428,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Return.started += instance.OnReturn;
                 @Return.performed += instance.OnReturn;
                 @Return.canceled += instance.OnReturn;
+                @Previous.started += instance.OnPrevious;
+                @Previous.performed += instance.OnPrevious;
+                @Previous.canceled += instance.OnPrevious;
+                @Next.started += instance.OnNext;
+                @Next.performed += instance.OnNext;
+                @Next.canceled += instance.OnNext;
             }
         }
     }
@@ -401,5 +457,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnToggleDebug(InputAction.CallbackContext context);
         void OnReturn(InputAction.CallbackContext context);
+        void OnPrevious(InputAction.CallbackContext context);
+        void OnNext(InputAction.CallbackContext context);
     }
 }
