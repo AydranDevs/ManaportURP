@@ -23,6 +23,17 @@ namespace PartyNamespace {
                 if (party.partyLeader == PartyLeader.Laurie) { return; }
                 leader = party.members[(int)party.partyLeader];
                 leaderTransform = leader.transform;
+
+                FollowTheLeader();
+            }
+
+            private void FollowTheLeader() {
+                float distance = Vector2.Distance((Vector2)laurie.transform.position, (Vector2)leaderTransform.position);
+                if (distance > party.maxDistance) { return; }
+
+                Vector2 direction = (Vector2)leaderTransform.position - (Vector2)laurie.transform.position; 
+
+                provider.inputState.movementDirection = direction;
             }
         }
     }

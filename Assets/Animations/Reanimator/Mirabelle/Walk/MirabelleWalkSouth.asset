@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: MirabelleWalkSouth
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 8994429758713264792, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 842418881444033116, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 8514424461800056566, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2024121885921567825, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -2347238563778397692, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -3703756155216283297, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: walk
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 29e54a84-bc5f-4d71-9842-ff427214155d
+  drivers:
+    keys: []
+    values: 

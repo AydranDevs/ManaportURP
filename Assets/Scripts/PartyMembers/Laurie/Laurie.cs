@@ -184,6 +184,10 @@ namespace PartyNamespace {
                 
                 healthBar.SetMaxHealth(hitPointsMax);
                 manaBar.SetMaxMana(manaPointsMax);
+
+                if (party.partyLeader == PartyLeader.Laurie) {
+                    party.maxDistance = 5f;
+                }
             }
 
             public void MaxHP() {

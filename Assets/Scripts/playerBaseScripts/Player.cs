@@ -45,7 +45,7 @@ public class Player : MonoBehaviour {
 
 
     public static Player instance;
-    public PartyMember partyMember;
+    // public PartyMember partyMember;
     //public Laurie laurie;
     public PlayerCasting casting;
     

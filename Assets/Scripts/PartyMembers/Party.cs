@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace PartyNamespace {
 
+    public enum PartyMemberState { CurrentLeader, PreviousLeader, OldestLeader }
     public enum PartyLeader { Laurie, Mirabelle, Winsley }
 
     public class Party : MonoBehaviour {
@@ -14,6 +15,8 @@ namespace PartyNamespace {
         public GameObject[] members;
 
         private PartyCam cam;
+
+        public float maxDistance;
 
         private void Start() {
             cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PartyCam>();
@@ -35,10 +38,10 @@ namespace PartyNamespace {
             }
 
             previousLeader = members[(int)partyLeader];
-            PartyLeaderChanged();
             partyLeader = (PartyLeader)index;
             cam.target = members[index].transform;
             cam.PartyLeaderChanged();
+            PartyLeaderChanged();
         }
 
         public void PreviousPartyMember(InputAction.CallbackContext context) {
@@ -53,24 +56,31 @@ namespace PartyNamespace {
             }
 
             previousLeader = members[(int)partyLeader];
-            PartyLeaderChanged();
             partyLeader = (PartyLeader)index;
             cam.target = members[index].transform;
             cam.PartyLeaderChanged();
+            PartyLeaderChanged();
         }
 
         private void PartyLeaderChanged() {
             foreach (GameObject member in members) {
-                if (member != members[(int)partyLeader]) {
-                    if (member != previousLeader) {
-                        oldestLeader = member;
-                    }
+                PartyMember partyMember = member.GetComponent<PartyMember>();
+                if (member == members[(int)partyLeader]) {
+                    partyMember.partyMemberState = PartyMemberState.CurrentLeader; 
+                } else if (member == previousLeader) {
+                    partyMember.partyMemberState = PartyMemberState.PreviousLeader; 
+                } else { 
+                    partyMember.partyMemberState = PartyMemberState.OldestLeader;
                 }
             }
-            
-            PartyMember partyMember = previousLeader.GetComponent<PartyMember>();
-            partyMember.wasLastPartyLeader = true;
+        }
 
+        private void Update() {
+            foreach (GameObject member in members) {
+                if (member != members[(int)partyLeader] && member != previousLeader) {
+                    oldestLeader = member;
+                }
+            }
         }
     }
 }

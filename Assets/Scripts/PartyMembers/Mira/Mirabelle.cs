@@ -145,6 +145,10 @@ namespace PartyNamespace {
                 dashSp = defaultwalkSp * dashMod;
                 
                 healthBar.SetMaxHealth(hitPointsMax);
+
+                if (party.partyLeader == PartyLeader.Mirabelle) {
+                    party.maxDistance = 3f;
+                }
             }
 
             public void MaxHP() {

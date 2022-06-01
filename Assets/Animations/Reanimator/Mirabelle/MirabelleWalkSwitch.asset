@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: MirabelleWalkSwitch
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 7ceee2b6e391e574d80e0fd1a4aa0c5f, type: 2}
+  - {fileID: 11400000, guid: f3614f4cc04f7dc45b5bb030a6f60896, type: 2}
+  - {fileID: 11400000, guid: df9accc12fc41b844b2ba456470adffa, type: 2}
+  - {fileID: 11400000, guid: 61f72425f94de9c42ba3dbf9ebc7c880, type: 2}
+  controlDriver:
+    name: facingState
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 33d2b392-8708-4941-83ad-927f5ec21ceb
+  drivers:
+    keys: []
+    values: 

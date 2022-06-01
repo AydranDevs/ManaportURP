@@ -145,6 +145,10 @@ namespace PartyNamespace {
                 dashSp = defaultwalkSp * dashMod;
                 
                 healthBar.SetMaxHealth(hitPointsMax);
+
+                if (party.partyLeader == PartyLeader.Winsley) {
+                    party.maxDistance = 4f;
+                }
             }
 
             public void MaxHP() {

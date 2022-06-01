@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: MirabelleIdleSwitch
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 8d8349026ca108e4a89331c55c8b8e75, type: 2}
+  - {fileID: 11400000, guid: 6465c130413f47a4cb2f71ada252b691, type: 2}
+  - {fileID: 11400000, guid: b4b660b7abe59eb4fb2ad7749d78abe8, type: 2}
+  - {fileID: 11400000, guid: 1a97042966445a34ab6803d16394bf4f, type: 2}
+  controlDriver:
+    name: facingState
+    autoIncrement: 0
+    percentageBased: 0
+    guid: cc32efdf-bfbe-4d40-8577-d687595e103b
+  drivers:
+    keys: []
+    values: 
