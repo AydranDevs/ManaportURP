@@ -34,6 +34,8 @@ public class CreateGrid : MonoBehaviour {
         // loop through every tile according to grid position
         for (int x = scanStartX; x < scanFinishX; x++) {
             for (int y = scanStartY; y < scanFinishY; y++) {
+                // Debug.Log(x + ", " + y);
+
                 TileBase tile = walkable.GetTile(new Vector3Int(x, y, 0));
                 if (tile != null) {
                     bool foundObstacle = false;
@@ -45,7 +47,8 @@ public class CreateGrid : MonoBehaviour {
                     }
 
                     Vector3 worldPos = new Vector3(x + 0.5f + grid.transform.position.x, y + 0.5f + grid.transform.position.y, 0);
-                    GameObject node = (GameObject)Instantiate(nodePrefab, worldPos, Quaternion.Euler(0, 0, 0));
+                    GameObject node = Instantiate(nodePrefab, worldPos, Quaternion.Euler(0, 0, 0));
+                    Debug.Log(node);
                     Vector3Int cellPos = walkable.WorldToCell(worldPos);
                     WorldTile worldTile = node.GetComponent<WorldTile>();
                     worldTile.gridX = gridX;
@@ -54,6 +57,49 @@ public class CreateGrid : MonoBehaviour {
                     worldTile.cellY = cellPos.y;
                     node.transform.parent = gridNode.transform;
 
+                    // set a tile as walkable or not if foundObstacle is equal to true
+                    if (!foundObstacle) {
+                        foundTileOnLastPass = true;
+                        node.name = "Walkable_" + gridX.ToString() + ", " + gridY.ToString();
+                    } else {
+                        foundTileOnLastPass = true;
+                        node.name = "Unwalkable_" + gridX.ToString() + ", " + gridY.ToString();
+                        worldTile.walkable = false;
+                        node.GetComponent<SpriteRenderer>().color = Color.red;
+                    }
+
+                    unsortedTiles.Add(node);
+
+                    gridY++;
+                    if (gridX > gridBoundX) {
+                        gridBoundX = gridX;
+                    }
+                    if (gridY > gridBoundY) {
+                        gridBoundY = gridY;
+                    }
+                }
+
+            }
+            
+            if (foundTileOnLastPass) {
+                gridX++;
+                gridY = 0;
+                foundTileOnLastPass = false;
+            }
+        }
+
+        sortedTiles = new GameObject[gridBoundX + 1, gridBoundY + 1];
+
+        foreach (GameObject g in unsortedTiles) {
+            WorldTile wt = g.GetComponent<WorldTile>();
+            sortedTiles[wt.gridX, wt.gridY] = g;
+        }
+
+        for (int x = 0; x < gridBoundX; x++) {
+            for (int y = 0; y < gridBoundY; y++) {
+                if (sortedTiles[x, y] != null) {
+                    WorldTile wt = sortedTiles[x, y].GetComponent<WorldTile>();
+                    wt.neighbours = GetNeighbours(x, y, gridBoundX, gridBoundY);
                 }
             }
         }
