@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace PartyNamespace {
     namespace LaurieNamespace {
@@ -140,6 +141,7 @@ namespace PartyNamespace {
             public LaurieController controller;
             public LaurieCasting casting;
             public LaurieAbilities abilities;
+            public NavMeshAgent agent;
 
             public float manaRegenCooldown;
             public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
@@ -154,6 +156,7 @@ namespace PartyNamespace {
                 controller = GetComponentInChildren<LaurieController>();
                 casting = GetComponentInChildren<LaurieCasting>();
                 abilities = GetComponentInChildren<LaurieAbilities>();
+                agent = GetComponent<NavMeshAgent>();
             }
 
             private void Start() {
