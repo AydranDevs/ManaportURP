@@ -79,7 +79,7 @@ namespace PartyNamespace {
                 angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
 
                 reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
-                reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
+                // reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
                 
                 rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d));
                 resultPosition = transform.position;

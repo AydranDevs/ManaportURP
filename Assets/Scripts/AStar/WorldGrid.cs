@@ -166,7 +166,6 @@ public class WorldGrid : MonoBehaviour {
     public WorldTile WorldPositionToTile(Vector3 worldPosition) {
         Vector3Int cellPosition = floor.WorldToCell(worldPosition);
         WorldTile tile = sortedTiles[cellPosition.x, cellPosition.y].GetComponent<WorldTile>();
-        sortedTiles[cellPosition.x, cellPosition.y].GetComponent<SpriteRenderer>().color = Color.green;
         return tile;
     }
 }

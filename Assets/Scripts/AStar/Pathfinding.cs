@@ -11,21 +11,11 @@ public class Pathfinding : MonoBehaviour {
     private List<WorldTile> openList;
     private List<WorldTile> closedList;
 
-    public List<WorldTile> finalPath;
-
     private void Awake() {
         grid = GameObject.FindGameObjectWithTag("WorldGrid").GetComponent<WorldGrid>();
     }
 
-    private void Start() {
-        finalPath = new List<WorldTile>();
-    }
-
-    private void Update() {
-        finalPath = FindPath(this.transform.position, new Vector3(10, 10, 0));
-    }
-
-    private List<WorldTile> FindPath(Vector3 startPosition, Vector3 endPosition) {
+    public List<WorldTile> FindPath(Vector3 startPosition, Vector3 endPosition) {
         WorldTile startTile = grid.WorldPositionToTile(startPosition);
         WorldTile endTile = grid.WorldPositionToTile(endPosition);
         
