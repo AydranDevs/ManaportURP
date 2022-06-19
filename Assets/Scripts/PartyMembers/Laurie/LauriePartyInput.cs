@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.Pathfinding;
 
 namespace PartyNamespace {
     namespace LaurieNamespace {
@@ -13,10 +14,14 @@ namespace PartyNamespace {
             private GameObject leader;
             private Transform leaderTransform;
 
+            private WorldGrid grid;
+            public List<WorldTile> path;
+
             private void Start() {
                 laurie = GetComponentInParent<Laurie>();
                 party = laurie.party;
                 gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
+                grid = GameObject.FindGameObjectWithTag("WorldGrid").GetComponent<WorldGrid>();
             }
 
             private void Update() {
@@ -28,12 +33,10 @@ namespace PartyNamespace {
             }
 
             private void FollowTheLeader() {
-                float distance = Vector2.Distance((Vector2)laurie.transform.position, (Vector2)leaderTransform.position);
-                if (distance > party.maxDistance) { return; }
-
-                Vector2 direction = (Vector2)leaderTransform.position - (Vector2)laurie.transform.position; 
-
-                provider.inputState.movementDirection = direction;
+                path = Pathfinding.FindPath(grid, laurie.transform.position, leaderTransform.position);
+                foreach (WorldTile t in path) {
+                    Debug.Log(t.gridX + ", " + t.gridY);
+                }
             }
         }
     }
