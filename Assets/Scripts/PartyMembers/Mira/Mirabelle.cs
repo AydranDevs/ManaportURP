@@ -146,9 +146,7 @@ namespace PartyNamespace {
                 
                 healthBar.SetMaxHealth(hitPointsMax);
 
-                if (party.partyLeader == PartyLeader.Mirabelle) {
-                    party.maxDistance = 3f;
-                }
+                PartyLeaderCheck();
             }
 
             public void MaxHP() {
@@ -180,6 +178,8 @@ namespace PartyNamespace {
                     return;
                 }
 
+                PartyLeaderCheck();
+                
                 UpdateHealthBar();
             }
 
@@ -193,6 +193,15 @@ namespace PartyNamespace {
 
             public void Die() {
                 Destroy(gameObject);
+            }
+
+            private void PartyLeaderCheck() {
+                if (party.partyLeader == PartyLeader.Mirabelle) {
+                    gameObject.tag = "PlayerPartyLeader";
+                    party.maxDistance = 3f;
+                }else {
+                    gameObject.tag = "PlayerPartyMember";
+                }
             }
             
             public Vector3 GetPosition() {

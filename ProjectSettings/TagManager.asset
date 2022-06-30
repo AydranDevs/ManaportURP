@@ -17,6 +17,9 @@ TagManager:
   - BulletShooterTarget
   - PlayerPartyMember
   - WorldGrid
+  - ChunkGrid
+  - PlayerPartyLeader
+  - ChunkLoader
   layers:
   - Default
   - TransparentFX
@@ -27,7 +30,7 @@ TagManager:
   - Player
   - EnemySpell
   - PartyMember
-  - 
+  - IgnoreSpellCollision
   - 
   - 
   - 

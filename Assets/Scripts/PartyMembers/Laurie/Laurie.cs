@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace PartyNamespace {
     namespace LaurieNamespace {
@@ -141,7 +140,6 @@ namespace PartyNamespace {
             public LaurieController controller;
             public LaurieCasting casting;
             public LaurieAbilities abilities;
-            public NavMeshAgent agent;
 
             public float manaRegenCooldown;
             public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
@@ -156,7 +154,6 @@ namespace PartyNamespace {
                 controller = GetComponentInChildren<LaurieController>();
                 casting = GetComponentInChildren<LaurieCasting>();
                 abilities = GetComponentInChildren<LaurieAbilities>();
-                agent = GetComponent<NavMeshAgent>();
             }
 
             private void Start() {
@@ -188,9 +185,7 @@ namespace PartyNamespace {
                 healthBar.SetMaxHealth(hitPointsMax);
                 manaBar.SetMaxMana(manaPointsMax);
 
-                if (party.partyLeader == PartyLeader.Laurie) {
-                    party.maxDistance = 5f;
-                }
+                PartyLeaderCheck();
             }
 
             public void MaxHP() {
@@ -242,6 +237,8 @@ namespace PartyNamespace {
                     Die();
                     return;
                 }
+
+                PartyLeaderCheck();
 
                 UpdateHealthBar();
                 UpdateManaBar();
@@ -346,6 +343,15 @@ namespace PartyNamespace {
 
             public void Die() {
                 Destroy(gameObject);
+            }
+
+            private void PartyLeaderCheck() {
+                if (party.partyLeader == PartyLeader.Laurie) {
+                    gameObject.tag = "PlayerPartyLeader";
+                    party.maxDistance = 5f;
+                }else {
+                    gameObject.tag = "PlayerPartyMember";
+                }
             }
             
             public Vector3 GetPosition() {

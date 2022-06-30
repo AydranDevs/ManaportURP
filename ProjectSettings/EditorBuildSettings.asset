@@ -11,5 +11,26 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestWorld.unity
     guid: 3a263e15fc6bf254192d78924a72ab9e
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Gameplay.unity
+    guid: 7718f90d3f3d7b044889fd89864c598e
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Manaport/ManaportCity/ManaportCityDocks.unity
+    guid: 2a5caecaa87ca7e42bb562f66bbd3fda
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Manaport/ManaportCity/ManaportCityMarkets.unity
+    guid: 896d1dfa041819d43a112406acc87a79
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Manaport/ManaportCity/ManaportCityTownhall.unity
+    guid: 132837bb73554e64cac43e7e810e7c75
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Manaport/ManaportCity/ManaportCityNeighbourhood.unity
+    guid: 9d182db0e7541914ea13d491973643ea
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Manaport/ManaportValley1.unity
+    guid: c7b1b570e722c25428d3a568802446bd
+  - enabled: 1
+    path: Assets/Scenes/MainGame/Manaport/ManaportValley2.unity
+    guid: ace3db239a031c642b97f1daff71e585
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 7a1204003aee0124ab16e2129e44bb72, type: 2}
