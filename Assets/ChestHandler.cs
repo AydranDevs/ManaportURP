@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ChestHandler : InteractableBase {
+    public LootTableData lootTable;
+    public int tryForLoot = 1;
     public SpriteRenderer renderer;
     public GameObject particleSys;
     
@@ -73,6 +75,8 @@ public class ChestHandler : InteractableBase {
     }
 
     private void DropLoot() {
-        DropTableData dropTable = new DropTableData();
+        for (int i = 0; i < tryForLoot; i++) {
+            GameObject go = Instantiate(lootTable.GetRandomItem().item, transform.position, Quaternion.identity);
+        }
     }
 }

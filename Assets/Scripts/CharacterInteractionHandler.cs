@@ -13,7 +13,7 @@ public class CharacterInteractionHandler : MonoBehaviour {
     }
     
     public void AddToInventory(string itemId) {
-        string[] properties = itemId.Split(' ');
+        string[] properties = itemId.Split('-');
         ItemID id = (ItemID)Enum.Parse(typeof(ItemID), properties[0]);
         PartyInventory.Instance.bag.AddItem(id, 1);
     }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4311441975377527492
+--- !u!1 &4574295240745436890
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4311441975377527491}
-  - component: {fileID: 4311441975377527490}
+  - component: {fileID: 4574295240745436893}
+  - component: {fileID: 4574295240745436892}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -17,27 +17,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4311441975377527491
+--- !u!4 &4574295240745436893
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4311441975377527492}
+  m_GameObject: {fileID: 4574295240745436890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4311441975842876997}
+  m_Father: {fileID: 4574295241403722331}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4311441975377527490
+--- !u!212 &4574295240745436892
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4311441975377527492}
+  m_GameObject: {fileID: 4574295240745436890}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: -458034991
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1061600653231999548, guid: e5da71e2409fda44da69724b0cc21f85, type: 3}
+  m_Sprite: {fileID: 1185527514606905908, guid: e5da71e2409fda44da69724b0cc21f85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &4311441975842876999
+--- !u!1 &4574295241403722329
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,37 +90,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4311441975842876997}
-  - component: {fileID: 4311441975842876998}
+  - component: {fileID: 4574295241403722331}
+  - component: {fileID: 4574295241403722328}
   m_Layer: 0
-  m_Name: CONSUMABLE_RESTORE_MANA_I_POTION
+  m_Name: CONSUMABLE_RESTORE_HEALTH_I_POTION-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4311441975842876997
+--- !u!4 &4574295241403722331
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4311441975842876999}
+  m_GameObject: {fileID: 4574295241403722329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 108.2, y: 9.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4311441975377527491}
+  - {fileID: 4574295240745436893}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4311441975842876998
+--- !u!114 &4574295241403722328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4311441975842876999}
+  m_GameObject: {fileID: 4574295241403722329}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7ffe6cd54d0956a4bbd0628a9834d891, type: 3}
