@@ -1,0 +1,3000 @@
+fileFormatVersion: 2
+guid: 6433c24c5f9ee3746b14e520d28e82d1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 945249768020622370
+    second: AutumnPirchemBreeze_0
+  - first:
+      213: 8298675173628581524
+    second: AutumnPirchemBreeze_1
+  - first:
+      213: -2137489210629870181
+    second: AutumnPirchemBreeze_2
+  - first:
+      213: 4314696262897276067
+    second: AutumnPirchemBreeze_3
+  - first:
+      213: -7724722321577760436
+    second: AutumnPirchemBreeze_4
+  - first:
+      213: -355664357109063215
+    second: AutumnPirchemBreeze_5
+  - first:
+      213: 2209722462135906817
+    second: AutumnPirchemBreeze_6
+  - first:
+      213: -2190703439185085646
+    second: AutumnPirchemBreeze_7
+  - first:
+      213: 8525102699924086977
+    second: AutumnPirchemBreeze_8
+  - first:
+      213: 6316351671464857202
+    second: AutumnPirchemBreeze_9
+  - first:
+      213: -5465599904219119679
+    second: AutumnPirchemBreeze_10
+  - first:
+      213: -1699605801794421255
+    second: AutumnPirchemBreeze_11
+  - first:
+      213: 5130136743484405590
+    second: AutumnPirchemBreeze_12
+  - first:
+      213: 8339393325617101472
+    second: AutumnPirchemBreeze_13
+  - first:
+      213: -5991127760654721146
+    second: AutumnPirchemBreeze_14
+  - first:
+      213: -3586320336566293455
+    second: AutumnPirchemBreeze_15
+  - first:
+      213: -9078482044331455535
+    second: AutumnPirchemBreeze_16
+  - first:
+      213: -759918235909765198
+    second: AutumnPirchemBreeze_17
+  - first:
+      213: 6248097848321220914
+    second: AutumnPirchemBreeze_18
+  - first:
+      213: -5602202066895629423
+    second: AutumnPirchemBreeze_19
+  - first:
+      213: -7821573139093756363
+    second: AutumnPirchemBreeze_20
+  - first:
+      213: 3365393789640576401
+    second: AutumnPirchemBreeze_21
+  - first:
+      213: -6485466839001100817
+    second: AutumnPirchemBreeze_22
+  - first:
+      213: -2154408063158956611
+    second: AutumnPirchemBreeze_23
+  - first:
+      213: -4381370371377241634
+    second: AutumnPirchemBreeze_24
+  - first:
+      213: 8294116444807951343
+    second: AutumnPirchemBreeze_25
+  - first:
+      213: -3687841198596524277
+    second: AutumnPirchemBreeze_26
+  - first:
+      213: -5492737993749563951
+    second: AutumnPirchemBreeze_27
+  - first:
+      213: 1836568692538981243
+    second: AutumnPirchemBreeze_28
+  - first:
+      213: 1861504941729374840
+    second: AutumnPirchemBreeze_29
+  - first:
+      213: -3080141785371720554
+    second: AutumnPirchemBreeze_30
+  - first:
+      213: -6828824384593894512
+    second: AutumnPirchemBreeze_31
+  - first:
+      213: -3362223269058582665
+    second: AutumnPirchemBreeze_32
+  - first:
+      213: -5247568302337774065
+    second: AutumnPirchemBreeze_33
+  - first:
+      213: -6539184354963986322
+    second: AutumnPirchemBreeze_34
+  - first:
+      213: 5251815454760200383
+    second: AutumnPirchemBreeze_35
+  - first:
+      213: 387245022982469806
+    second: AutumnPirchemBreeze_36
+  - first:
+      213: -347703553183258248
+    second: AutumnPirchemBreeze_37
+  - first:
+      213: 1014908778353217710
+    second: AutumnPirchemBreeze_38
+  - first:
+      213: -169554942154435266
+    second: AutumnPirchemBreeze_39
+  - first:
+      213: 5590965642757150427
+    second: AutumnPirchemBreeze_40
+  - first:
+      213: -8315236970020142113
+    second: AutumnPirchemBreeze_41
+  - first:
+      213: -7968468612272638498
+    second: AutumnPirchemBreeze_42
+  - first:
+      213: 8625863431926774612
+    second: AutumnPirchemBreeze_43
+  - first:
+      213: 5228684940635859387
+    second: AutumnPirchemBreeze_44
+  - first:
+      213: 3006534140345723828
+    second: AutumnPirchemBreeze_45
+  - first:
+      213: 6630111220743207811
+    second: AutumnPirchemBreeze_46
+  - first:
+      213: -1279945228135247812
+    second: AutumnPirchemBreeze_47
+  - first:
+      213: -261702422122476081
+    second: AutumnPirchemBreeze_48
+  - first:
+      213: -4494501006605156144
+    second: AutumnPirchemBreeze_49
+  - first:
+      213: -2226866366158345101
+    second: AutumnPirchemBreeze_50
+  - first:
+      213: 2915171020694492975
+    second: AutumnPirchemBreeze_51
+  - first:
+      213: -5435676641965421144
+    second: AutumnPirchemBreeze_52
+  - first:
+      213: -5282347171317376027
+    second: AutumnPirchemBreeze_53
+  - first:
+      213: -5272826215802424037
+    second: AutumnPirchemBreeze_54
+  - first:
+      213: 250461983550421597
+    second: AutumnPirchemBreeze_55
+  - first:
+      213: -2032901721774032439
+    second: AutumnPirchemBreeze_56
+  - first:
+      213: -5067758745626860356
+    second: AutumnPirchemBreeze_57
+  - first:
+      213: 8143902823159858010
+    second: AutumnPirchemBreeze_58
+  - first:
+      213: -2690339541134556744
+    second: AutumnPirchemBreeze_59
+  - first:
+      213: -1265548042524893914
+    second: AutumnPirchemBreeze_60
+  - first:
+      213: 1681987134823565649
+    second: AutumnPirchemBreeze_61
+  - first:
+      213: 4433435918066536802
+    second: AutumnPirchemBreeze_62
+  - first:
+      213: -2311360210922079584
+    second: AutumnPirchemBreeze_63
+  - first:
+      213: -3524076856783117071
+    second: AutumnPirchemBreeze_64
+  - first:
+      213: -2821105358725573911
+    second: AutumnPirchemBreeze_65
+  - first:
+      213: -3011739685179462992
+    second: AutumnPirchemBreeze_66
+  - first:
+      213: -3341675655681337232
+    second: AutumnPirchemBreeze_67
+  - first:
+      213: -3130489033365407834
+    second: AutumnPirchemBreeze_68
+  - first:
+      213: 2844950859509974769
+    second: AutumnPirchemBreeze_69
+  - first:
+      213: 3532466163877530663
+    second: AutumnPirchemBreeze_70
+  - first:
+      213: 5155855320754825863
+    second: AutumnPirchemBreeze_71
+  - first:
+      213: -7804310012625860176
+    second: AutumnPirchemBreeze_72
+  - first:
+      213: 7196113904653273024
+    second: AutumnPirchemBreeze_73
+  - first:
+      213: 8083843427423090114
+    second: AutumnPirchemBreeze_74
+  - first:
+      213: 4041610553380085595
+    second: AutumnPirchemBreeze_75
+  - first:
+      213: -5324307159979314930
+    second: AutumnPirchemBreeze_76
+  - first:
+      213: -5008992315272109786
+    second: AutumnPirchemBreeze_77
+  - first:
+      213: -6557310330682545910
+    second: AutumnPirchemBreeze_78
+  - first:
+      213: -6618557704300232082
+    second: AutumnPirchemBreeze_79
+  - first:
+      213: -2153309058272115469
+    second: AutumnPirchemBreeze_80
+  - first:
+      213: 2760341691647265912
+    second: AutumnPirchemBreeze_81
+  - first:
+      213: -9211837406985994063
+    second: AutumnPirchemBreeze_82
+  - first:
+      213: 2740744956661673120
+    second: AutumnPirchemBreeze_83
+  - first:
+      213: -1306346599227175258
+    second: AutumnPirchemBreeze_84
+  - first:
+      213: 6286454267262746887
+    second: AutumnPirchemBreeze_85
+  - first:
+      213: -6998211300034909323
+    second: AutumnPirchemBreeze_86
+  - first:
+      213: -1550303709381855525
+    second: AutumnPirchemBreeze_87
+  - first:
+      213: 6282126048331529333
+    second: AutumnPirchemBreeze_88
+  - first:
+      213: 2855348244588556479
+    second: AutumnPirchemBreeze_89
+  - first:
+      213: -8814465846832766014
+    second: AutumnPirchemBreeze_90
+  - first:
+      213: 7268571969589806900
+    second: AutumnPirchemBreeze_91
+  - first:
+      213: -4457979006611654300
+    second: AutumnPirchemBreeze_92
+  - first:
+      213: 1464358394106380903
+    second: AutumnPirchemBreeze_93
+  - first:
+      213: 5909018600374911080
+    second: AutumnPirchemBreeze_94
+  - first:
+      213: 8368380119571685043
+    second: AutumnPirchemBreeze_95
+  - first:
+      213: 2958954641685426685
+    second: AutumnPirchemBreeze_96
+  - first:
+      213: -7666210049154853933
+    second: AutumnPirchemBreeze_97
+  - first:
+      213: 1689814995341242915
+    second: AutumnPirchemBreeze_98
+  - first:
+      213: 3966595557160607562
+    second: AutumnPirchemBreeze_99
+  - first:
+      213: 2396022399863961878
+    second: AutumnPirchemBreeze_100
+  - first:
+      213: -7632752764190703928
+    second: AutumnPirchemBreeze_101
+  - first:
+      213: -5458273308497052212
+    second: AutumnPirchemBreeze_102
+  - first:
+      213: 3996767737278429261
+    second: AutumnPirchemBreeze_103
+  - first:
+      213: 4136901977999083139
+    second: AutumnPirchemBreeze_104
+  - first:
+      213: -5873454403507660688
+    second: AutumnPirchemBreeze_105
+  - first:
+      213: 8588208893972508650
+    second: AutumnPirchemBreeze_106
+  - first:
+      213: 3131073399488383294
+    second: AutumnPirchemBreeze_107
+  - first:
+      213: 1816107865625429553
+    second: AutumnPirchemBreeze_108
+  - first:
+      213: 8246702744312083345
+    second: AutumnPirchemBreeze_109
+  - first:
+      213: 2955229495594627519
+    second: AutumnPirchemBreeze_110
+  - first:
+      213: 316593564697663707
+    second: AutumnPirchemBreeze_111
+  - first:
+      213: 5577801945698440495
+    second: AutumnPirchemBreeze_112
+  - first:
+      213: -2780707879842691328
+    second: AutumnPirchemBreeze_113
+  - first:
+      213: -8888353431720208632
+    second: AutumnPirchemBreeze_114
+  - first:
+      213: 459962967276115554
+    second: AutumnPirchemBreeze_115
+  - first:
+      213: -2516620984296315466
+    second: AutumnPirchemBreeze_116
+  - first:
+      213: 6020441978093889542
+    second: AutumnPirchemBreeze_117
+  - first:
+      213: 6826167128345144910
+    second: AutumnPirchemBreeze_118
+  - first:
+      213: 5470563591954745355
+    second: AutumnPirchemBreeze_119
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cb3e6e7a33e1d00800000000000000
+      internalID: 945249768020622370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4961c762a11da2370800000000000000
+      internalID: 8298675173628581524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9d2d2943ec1652e0800000000000000
+      internalID: -2137489210629870181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a492bf0461e0eb30800000000000000
+      internalID: 4314696262897276067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c49a3d1d9f54cc490800000000000000
+      internalID: -7724722321577760436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d12f3fc62d601bf0800000000000000
+      internalID: -355664357109063215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102ffc72fd28aae10800000000000000
+      internalID: 2209722462135906817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b752334de0991e0800000000000000
+      internalID: -2190703439185085646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0e2b6dcbf3f4670800000000000000
+      internalID: 8525102699924086977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e8b16316038a750800000000000000
+      internalID: 6316351671464857202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf3c9858d94624b0800000000000000
+      internalID: -5465599904219119679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fdb9d53789c968e0800000000000000
+      internalID: -1699605801794421255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_12
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65731940038e13740800000000000000
+      internalID: 5130136743484405590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aabbafab0a7bb370800000000000000
+      internalID: 8339393325617101472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f91364b0d3bdca0800000000000000
+      internalID: -5991127760654721146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_15
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ce430b7a4da3ec0800000000000000
+      internalID: -3586320336566293455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db8cd73ea0c20280800000000000000
+      internalID: -9078482044331455535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7c142046a3475f0800000000000000
+      internalID: -759918235909765198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231a113a3e3b5b650800000000000000
+      internalID: 6248097848321220914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_19
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1931ab2e6eaf042b0800000000000000
+      internalID: -5602202066895629423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5366493aba0347390800000000000000
+      internalID: -7821573139093756363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_21
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d05d032d744be20800000000000000
+      internalID: 3365393789640576401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_22
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed83ca754efef5a0800000000000000
+      internalID: -6485466839001100817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd4c26f7410a12e0800000000000000
+      internalID: -2154408063158956611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed163a85cde3233c0800000000000000
+      internalID: -4381370371377241634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_25
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3f08266fe9a1370800000000000000
+      internalID: 8294116444807951343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_26
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b077a9908f722dcc0800000000000000
+      internalID: -3687841198596524277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_27
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5f34e75efd5c3b0800000000000000
+      internalID: -5492737993749563951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bb36cce7dcc7910800000000000000
+      internalID: 1836568692538981243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_29
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872e96fb1e465d910800000000000000
+      internalID: 1861504941729374840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694c4119d532145d0800000000000000
+      internalID: -3080141785371720554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_31
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09361c227642b31a0800000000000000
+      internalID: -6828824384593894512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_32
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777e53820cbf651d0800000000000000
+      internalID: -3362223269058582665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_33
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0eae8c8e64ec27b0800000000000000
+      internalID: -5247568302337774065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_34
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e686499a9762045a0800000000000000
+      internalID: -6539184354963986322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_35
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb863eea45232e840800000000000000
+      internalID: 5251815454760200383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_36
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea878e3fb45cf5500800000000000000
+      internalID: 387245022982469806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_37
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879ee59e575bc2bf0800000000000000
+      internalID: -347703553183258248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_38
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea05b2d182ea51e00800000000000000
+      internalID: 1014908778353217710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_39
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3519feadae95adf0800000000000000
+      internalID: -169554942154435266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd614ff31a9179d40800000000000000
+      internalID: 5590965642757150427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_41
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd301c228085a9c80800000000000000
+      internalID: -8315236970020142113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_42
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5b3a114005a6190800000000000000
+      internalID: -7968468612272638498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_43
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bf60de61935b770800000000000000
+      internalID: 8625863431926774612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_44
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9e8013045009840800000000000000
+      internalID: 5228684940635859387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_45
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb24601fda59b920800000000000000
+      internalID: 3006534140345723828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_46
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bfab50703e20c50800000000000000
+      internalID: 6630111220743207811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_47
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30da01b898bc3ee0800000000000000
+      internalID: -1279945228135247812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_48
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdc78c980f3e5cf0800000000000000
+      internalID: -261702422122476081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_49
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d00aaab52350a1c0800000000000000
+      internalID: -4494501006605156144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37cedd2a6d49811e0800000000000000
+      internalID: -2226866366158345101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_51
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27120c1994c47820800000000000000
+      internalID: 2915171020694492975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_52
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad43c1c4e89094b0800000000000000
+      internalID: -5435676641965421144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_53
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb96591c3551b6b0800000000000000
+      internalID: -5282347171317376027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_54
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15babc4e7823d6b0800000000000000
+      internalID: -5272826215802424037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_55
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5a3347d8d1d97300800000000000000
+      internalID: 250461983550421597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_56
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9f062a7aea9c3e0800000000000000
+      internalID: -2032901721774032439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_57
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4288f5544bba9b0800000000000000
+      internalID: -5067758745626860356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_58
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a538ebb2874f40170800000000000000
+      internalID: 8143902823159858010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_59
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1cc7df07ef9aad0800000000000000
+      internalID: -2690339541134556744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ddc1fa2cedf6ee0800000000000000
+      internalID: -1265548042524893914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_61
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1598fe7336e975710800000000000000
+      internalID: 1681987134823565649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_62
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26150d66a7ab68d30800000000000000
+      internalID: 4433435918066536802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_63
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa740062266cefd0800000000000000
+      internalID: -2311360210922079584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_64
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4644625c6f71fc0800000000000000
+      internalID: -3524076856783117071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_65
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e216338f9b69d8d0800000000000000
+      internalID: -2821105358725573911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_66
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba6ee496b62436d0800000000000000
+      internalID: -3011739685179462992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_67
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0781b8432bbff91d0800000000000000
+      internalID: -3341675655681337232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_68
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7bff86fc44e84d0800000000000000
+      internalID: -3130489033365407834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_69
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f6c888cbbb4b7720800000000000000
+      internalID: 2844950859509974769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cc10f9247d50130800000000000000
+      internalID: 3532466163877530663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_71
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a26eae8174d8740800000000000000
+      internalID: 5155855320754825863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_72
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9496c746581b390800000000000000
+      internalID: -7804310012625860176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_73
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c78b1a387bbdd360800000000000000
+      internalID: 7196113904653273024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_74
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c5fd6764c49f2070800000000000000
+      internalID: 8083843427423090114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_75
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f90ba826fa61830800000000000000
+      internalID: 4041610553380085595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_76
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e013d5ee8d24c16b0800000000000000
+      internalID: -5324307159979314930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_77
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6216b8d270c7c7ab0800000000000000
+      internalID: -5008992315272109786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_78
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09eaa11ff0cff4a0800000000000000
+      internalID: -6557310330682545910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_79
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6282c5a5d82624a0800000000000000
+      internalID: -6618557704300232082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f44f0af1d8ed12e0800000000000000
+      internalID: -2153309058272115469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_81
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c0655c424be4620800000000000000
+      internalID: 2760341691647265912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_82
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0c1fb4faaf82080800000000000000
+      internalID: -9211837406985994063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_83
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac23c95405190620800000000000000
+      internalID: 2740744956661673120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_84
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae468770bceedde0800000000000000
+      internalID: -1306346599227175258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_85
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7014fe859d8fd3750800000000000000
+      internalID: 6286454267262746887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_86
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b6b4696eb51ee90800000000000000
+      internalID: -6998211300034909323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_87
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6f25c7df63c7ae0800000000000000
+      internalID: -1550303709381855525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_88
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c77095b589e2750800000000000000
+      internalID: 6282126048331529333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_89
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb07cb4a91c30a720800000000000000
+      internalID: 2855348244588556479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c368ba630abca580800000000000000
+      internalID: -8814465846832766014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_91
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43703cf12b72fd460800000000000000
+      internalID: 7268571969589806900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_92
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46973ce76b31222c0800000000000000
+      internalID: -4457979006611654300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_93
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76282907332725410800000000000000
+      internalID: 1464358394106380903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_94
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860c5861c1d010250800000000000000
+      internalID: 5909018600374911080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_95
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bed2849165722470800000000000000
+      internalID: 8368380119571685043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_96
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df13724c191501920800000000000000
+      internalID: 2958954641685426685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_97
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3589ed3962c9590800000000000000
+      internalID: -7666210049154853933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_98
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322717509cd637710800000000000000
+      internalID: 1689814995341242915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_99
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f5330b4ad2c0730800000000000000
+      internalID: 3966595557160607562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61935c19da1604120800000000000000
+      internalID: 2396022399863961878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_101
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce38001dc3031690800000000000000
+      internalID: -7632752764190703928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_102
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd790858515044b0800000000000000
+      internalID: -5458273308497052212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_103
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48f83ec41f577730800000000000000
+      internalID: 3996767737278429261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_104
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3860f354e6a396930800000000000000
+      internalID: 4136901977999083139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_105
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 078d872c65c4d7ea0800000000000000
+      internalID: -5873454403507660688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_106
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefe41e9c727f2770800000000000000
+      internalID: 8588208893972508650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_107
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e390e2eeaaec37b20800000000000000
+      internalID: 3131073399488383294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_108
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136856c4b7c143910800000000000000
+      internalID: 1816107865625429553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_109
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193f5faf37c227270800000000000000
+      internalID: 8246702744312083345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb1bcaa9195130920800000000000000
+      internalID: 2955229495594627519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_111
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd89af17b24c46400800000000000000
+      internalID: 316593564697663707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_112
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2596d03155586d40800000000000000
+      internalID: 5577801945698440495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_113
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007c8d58ae0f869d0800000000000000
+      internalID: -2780707879842691328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_114
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807513875a936a480800000000000000
+      internalID: -8888353431720208632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_115
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266d35ab1ed126600800000000000000
+      internalID: 459962967276115554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_116
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b569b46c8a231dd0800000000000000
+      internalID: -2516620984296315466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_117
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608e227d418ec8350800000000000000
+      internalID: 6020441978093889542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_118
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ee57e26da6bbe50800000000000000
+      internalID: 6826167128345144910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AutumnPirchemBreeze_119
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08c5a34a985beb40800000000000000
+      internalID: 5470563591954745355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 64287f23fe1996b4b80384d045dc8d4e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

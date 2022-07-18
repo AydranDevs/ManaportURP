@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: WinsleyWalkNorth
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -8815266010772479394, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 5120640511276966628, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -1333274274895863770, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -7624436235600796743, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 9106404543059902110, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -6285780291629907221, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -6683811620856841312, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -4244079038175086216, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: walk
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 64ed70a9-51b7-4ae1-b53c-0038376990f1
+  drivers:
+    keys: []
+    values: 

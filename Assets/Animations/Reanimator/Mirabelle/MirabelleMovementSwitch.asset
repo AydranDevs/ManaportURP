@@ -16,8 +16,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: af643ce6197009c4c96be8f2f88d1ee6, type: 2}
   - {fileID: 0}
   - {fileID: 11400000, guid: a6dc805b6755fef46abca802089d8648, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: cc75b2ffd8b8fbf4689984de28f037ee, type: 2}
+  - {fileID: 11400000, guid: 8712c66ffcc94e747906b0fd541aad87, type: 2}
   controlDriver:
     name: movementState
     autoIncrement: 0

@@ -8,8 +8,7 @@ namespace PartyNamespace {
             [SerializeField] private InputProvider provider;
             
             private Mirabelle mirabelle;
-            // private LaurieCasting casting;
-            // private LaurieAbilities abilities;
+            private GameStateManager gameManager;
             
             public Vector2 movementDirection;
             [SerializeField] private float movementSp;
@@ -34,9 +33,7 @@ namespace PartyNamespace {
             private void Start() {
                 mirabelle = GetComponentInParent<Mirabelle>();
                 rb = GetComponentInParent<Rigidbody2D>();
-
-                //casting = laurie.casting;
-                //abilities = laurie.abilities;
+                gameManager = GameStateManager.Instance;
 
                 provider.OnPrimary += OnPrimary_PrimaryCast;
                 provider.OnSecondary += OnSecondary_SecondaryCast;
@@ -51,6 +48,8 @@ namespace PartyNamespace {
             }
 
             private void Move(float d) {
+                if (gameManager.state != GameState.Main) return;
+                
                 if (movementDirection.Equals(new Vector2(0, 0))) {
                     mirabelle.movementState = MovementState.Idle;
                     sprintDuration = 0f;

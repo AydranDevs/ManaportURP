@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: WinsleyRootSwitch
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 16c07b31f524022428289e7621ff7c18, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  controlDriver:
+    name: state
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 352d64ec-04ae-4dbc-adf9-97ea174f0bcc
+  drivers:
+    keys: []
+    values: 

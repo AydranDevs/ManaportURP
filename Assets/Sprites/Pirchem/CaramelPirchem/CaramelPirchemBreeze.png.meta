@@ -1,0 +1,3000 @@
+fileFormatVersion: 2
+guid: 91e4d10e8de57a942ad512d2b369528b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4491198721559209519
+    second: CaramelPirchemBreeze_0
+  - first:
+      213: -3242406687207508934
+    second: CaramelPirchemBreeze_1
+  - first:
+      213: -5957039443628499276
+    second: CaramelPirchemBreeze_2
+  - first:
+      213: -3302473552347729113
+    second: CaramelPirchemBreeze_3
+  - first:
+      213: -6568985223119977480
+    second: CaramelPirchemBreeze_4
+  - first:
+      213: 6357944374901727432
+    second: CaramelPirchemBreeze_5
+  - first:
+      213: -4512373854878151096
+    second: CaramelPirchemBreeze_6
+  - first:
+      213: 7169200209107570759
+    second: CaramelPirchemBreeze_7
+  - first:
+      213: -4792442245244938870
+    second: CaramelPirchemBreeze_8
+  - first:
+      213: -1644891711805055997
+    second: CaramelPirchemBreeze_9
+  - first:
+      213: -1779025300837841410
+    second: CaramelPirchemBreeze_10
+  - first:
+      213: 7528979241262236585
+    second: CaramelPirchemBreeze_11
+  - first:
+      213: 2402537684190966835
+    second: CaramelPirchemBreeze_12
+  - first:
+      213: -396869841000763262
+    second: CaramelPirchemBreeze_13
+  - first:
+      213: 8248063905529620221
+    second: CaramelPirchemBreeze_14
+  - first:
+      213: -2201210619053727419
+    second: CaramelPirchemBreeze_15
+  - first:
+      213: 7526615515942359269
+    second: CaramelPirchemBreeze_16
+  - first:
+      213: -1762454336300223407
+    second: CaramelPirchemBreeze_17
+  - first:
+      213: 6923710847577934144
+    second: CaramelPirchemBreeze_18
+  - first:
+      213: -1050041354273681328
+    second: CaramelPirchemBreeze_19
+  - first:
+      213: -8486755671130876599
+    second: CaramelPirchemBreeze_20
+  - first:
+      213: -6905280642434666602
+    second: CaramelPirchemBreeze_21
+  - first:
+      213: 7883086887213711493
+    second: CaramelPirchemBreeze_22
+  - first:
+      213: 3293333364500053604
+    second: CaramelPirchemBreeze_23
+  - first:
+      213: 213529556482412137
+    second: CaramelPirchemBreeze_24
+  - first:
+      213: 905357380808667830
+    second: CaramelPirchemBreeze_25
+  - first:
+      213: -4877006861095343702
+    second: CaramelPirchemBreeze_26
+  - first:
+      213: -8456855578186545555
+    second: CaramelPirchemBreeze_27
+  - first:
+      213: 5818127314149890090
+    second: CaramelPirchemBreeze_28
+  - first:
+      213: -2319795733374687327
+    second: CaramelPirchemBreeze_29
+  - first:
+      213: 1739382080947801667
+    second: CaramelPirchemBreeze_30
+  - first:
+      213: -5760265959300968119
+    second: CaramelPirchemBreeze_31
+  - first:
+      213: -5369239059175742101
+    second: CaramelPirchemBreeze_32
+  - first:
+      213: -3261239020872214496
+    second: CaramelPirchemBreeze_33
+  - first:
+      213: -794719694156997932
+    second: CaramelPirchemBreeze_34
+  - first:
+      213: 2195873823508223235
+    second: CaramelPirchemBreeze_35
+  - first:
+      213: 2191935489348684293
+    second: CaramelPirchemBreeze_36
+  - first:
+      213: 110652269251966552
+    second: CaramelPirchemBreeze_37
+  - first:
+      213: 3478165272542530098
+    second: CaramelPirchemBreeze_38
+  - first:
+      213: 6788628749097740575
+    second: CaramelPirchemBreeze_39
+  - first:
+      213: 1756386927411970962
+    second: CaramelPirchemBreeze_40
+  - first:
+      213: 2510313642962627086
+    second: CaramelPirchemBreeze_41
+  - first:
+      213: -889908997255968048
+    second: CaramelPirchemBreeze_42
+  - first:
+      213: 4851551025352403947
+    second: CaramelPirchemBreeze_43
+  - first:
+      213: -7154875677465008012
+    second: CaramelPirchemBreeze_44
+  - first:
+      213: -4144442582021698580
+    second: CaramelPirchemBreeze_45
+  - first:
+      213: 726863142791852963
+    second: CaramelPirchemBreeze_46
+  - first:
+      213: -8685231695594361926
+    second: CaramelPirchemBreeze_47
+  - first:
+      213: 6538449639942118734
+    second: CaramelPirchemBreeze_48
+  - first:
+      213: -1924051663936161501
+    second: CaramelPirchemBreeze_49
+  - first:
+      213: 7278272270941522749
+    second: CaramelPirchemBreeze_50
+  - first:
+      213: -2047497926347765137
+    second: CaramelPirchemBreeze_51
+  - first:
+      213: 8596087604745262141
+    second: CaramelPirchemBreeze_52
+  - first:
+      213: -7465219668803123775
+    second: CaramelPirchemBreeze_53
+  - first:
+      213: -8591676588190101820
+    second: CaramelPirchemBreeze_54
+  - first:
+      213: -8138704916602777026
+    second: CaramelPirchemBreeze_55
+  - first:
+      213: 2460568727463207272
+    second: CaramelPirchemBreeze_56
+  - first:
+      213: -2369155455876375200
+    second: CaramelPirchemBreeze_57
+  - first:
+      213: 2809132854160284630
+    second: CaramelPirchemBreeze_58
+  - first:
+      213: 3464011460846788930
+    second: CaramelPirchemBreeze_59
+  - first:
+      213: -176331095213853817
+    second: CaramelPirchemBreeze_60
+  - first:
+      213: -5744354166596473203
+    second: CaramelPirchemBreeze_61
+  - first:
+      213: 6266405455073306785
+    second: CaramelPirchemBreeze_62
+  - first:
+      213: 1566579711814513784
+    second: CaramelPirchemBreeze_63
+  - first:
+      213: 7957612962998796673
+    second: CaramelPirchemBreeze_64
+  - first:
+      213: -5793592640194524424
+    second: CaramelPirchemBreeze_65
+  - first:
+      213: 7459584482233917493
+    second: CaramelPirchemBreeze_66
+  - first:
+      213: 1010696843614906055
+    second: CaramelPirchemBreeze_67
+  - first:
+      213: -4199113258976569878
+    second: CaramelPirchemBreeze_68
+  - first:
+      213: 6908182223912033238
+    second: CaramelPirchemBreeze_69
+  - first:
+      213: 720662192926113282
+    second: CaramelPirchemBreeze_70
+  - first:
+      213: 4084190583636587890
+    second: CaramelPirchemBreeze_71
+  - first:
+      213: 6592729742539132018
+    second: CaramelPirchemBreeze_72
+  - first:
+      213: 3101469895492030062
+    second: CaramelPirchemBreeze_73
+  - first:
+      213: -5922093186079476825
+    second: CaramelPirchemBreeze_74
+  - first:
+      213: -8052356734736644582
+    second: CaramelPirchemBreeze_75
+  - first:
+      213: -7481206056748920352
+    second: CaramelPirchemBreeze_76
+  - first:
+      213: -2381024195087506063
+    second: CaramelPirchemBreeze_77
+  - first:
+      213: 6894130633329312190
+    second: CaramelPirchemBreeze_78
+  - first:
+      213: -1669949141818614771
+    second: CaramelPirchemBreeze_79
+  - first:
+      213: -6875234445856255386
+    second: CaramelPirchemBreeze_80
+  - first:
+      213: 7099389452709948791
+    second: CaramelPirchemBreeze_81
+  - first:
+      213: 1653594678667966843
+    second: CaramelPirchemBreeze_82
+  - first:
+      213: -3104278540307524071
+    second: CaramelPirchemBreeze_83
+  - first:
+      213: 345793789398768571
+    second: CaramelPirchemBreeze_84
+  - first:
+      213: -6980405966259055469
+    second: CaramelPirchemBreeze_85
+  - first:
+      213: -8256194195144281048
+    second: CaramelPirchemBreeze_86
+  - first:
+      213: 3577572425727206890
+    second: CaramelPirchemBreeze_87
+  - first:
+      213: 1989984124209299496
+    second: CaramelPirchemBreeze_88
+  - first:
+      213: -8513287463203592397
+    second: CaramelPirchemBreeze_89
+  - first:
+      213: -7213944758710828411
+    second: CaramelPirchemBreeze_90
+  - first:
+      213: 7445349534706697783
+    second: CaramelPirchemBreeze_91
+  - first:
+      213: -8490822198317334089
+    second: CaramelPirchemBreeze_92
+  - first:
+      213: 6683463843991690457
+    second: CaramelPirchemBreeze_93
+  - first:
+      213: 2907594982295271949
+    second: CaramelPirchemBreeze_94
+  - first:
+      213: 6143995090503348327
+    second: CaramelPirchemBreeze_95
+  - first:
+      213: 965659182679294346
+    second: CaramelPirchemBreeze_96
+  - first:
+      213: 3949252621755936579
+    second: CaramelPirchemBreeze_97
+  - first:
+      213: -4404139523541628369
+    second: CaramelPirchemBreeze_98
+  - first:
+      213: -3520368549327899089
+    second: CaramelPirchemBreeze_99
+  - first:
+      213: -6413806637473348990
+    second: CaramelPirchemBreeze_100
+  - first:
+      213: 3011359149787023886
+    second: CaramelPirchemBreeze_101
+  - first:
+      213: -9157461007919974569
+    second: CaramelPirchemBreeze_102
+  - first:
+      213: 7624019937605534272
+    second: CaramelPirchemBreeze_103
+  - first:
+      213: -1915849092639767457
+    second: CaramelPirchemBreeze_104
+  - first:
+      213: -9115499869811918056
+    second: CaramelPirchemBreeze_105
+  - first:
+      213: -519469702727016108
+    second: CaramelPirchemBreeze_106
+  - first:
+      213: 6275362840156748663
+    second: CaramelPirchemBreeze_107
+  - first:
+      213: 7928080457436047601
+    second: CaramelPirchemBreeze_108
+  - first:
+      213: 6929575327673596363
+    second: CaramelPirchemBreeze_109
+  - first:
+      213: -4132048183661914615
+    second: CaramelPirchemBreeze_110
+  - first:
+      213: 4589641082394808527
+    second: CaramelPirchemBreeze_111
+  - first:
+      213: 7076688837036103019
+    second: CaramelPirchemBreeze_112
+  - first:
+      213: -951400376328123792
+    second: CaramelPirchemBreeze_113
+  - first:
+      213: -3028143475500251747
+    second: CaramelPirchemBreeze_114
+  - first:
+      213: 8090677782980065930
+    second: CaramelPirchemBreeze_115
+  - first:
+      213: 3043476851874274192
+    second: CaramelPirchemBreeze_116
+  - first:
+      213: -5458614533885665896
+    second: CaramelPirchemBreeze_117
+  - first:
+      213: -6367691278505518195
+    second: CaramelPirchemBreeze_118
+  - first:
+      213: 3236367673462468016
+    second: CaramelPirchemBreeze_119
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26a93e1171f35e30800000000000000
+      internalID: 4491198721559209519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3435a70c48a003d0800000000000000
+      internalID: -3242406687207508934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be58811038545da0800000000000000
+      internalID: -5957039443628499276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723f0382dc14b22d0800000000000000
+      internalID: -3302473552347729113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3c4295eb646d4a0800000000000000
+      internalID: -6568985223119977480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0e5bf19b4fb3850800000000000000
+      internalID: 6357944374901727432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e4a36f2e3d061c0800000000000000
+      internalID: -4512373854878151096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740538b2b9d1e7360800000000000000
+      internalID: 7169200209107570759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a85999d5b23dd7db0800000000000000
+      internalID: -4792442245244938870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 880
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c10eff3bb2c29e0800000000000000
+      internalID: -1644891711805055997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5c0212ae1af47e0800000000000000
+      internalID: -1779025300837841410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3c9bccabe4c7860800000000000000
+      internalID: 7528979241262236585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_12
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33431b96b47875120800000000000000
+      internalID: 2402537684190966835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28075197bf80e7af0800000000000000
+      internalID: -396869841000763262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df660d50c62077270800000000000000
+      internalID: 8248063905529620221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_15
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5412c7fba9ab371e0800000000000000
+      internalID: -2201210619053727419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e010bc1fe8e37860800000000000000
+      internalID: 7526615515942359269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1547af77e118a87e0800000000000000
+      internalID: -1762454336300223407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049c66d1556f51060800000000000000
+      internalID: 6923710847577934144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_19
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 800
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0501c0f93f08d61f0800000000000000
+      internalID: -1050041354273681328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94556be8eacf83a80800000000000000
+      internalID: -8486755671130876599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_21
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fec4967d38b20a0800000000000000
+      internalID: -6905280642434666602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_22
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580c9ede1c9566d60800000000000000
+      internalID: 7883086887213711493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_23
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46eb7f50f3544bd20800000000000000
+      internalID: 3293333364500053604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e4e23100c96f200800000000000000
+      internalID: 213529556482412137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_25
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2f0e5bdb9709c00800000000000000
+      internalID: 905357380808667830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_26
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9e44d6914615cb0800000000000000
+      internalID: -4877006861095343702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_27
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66096178a633aa80800000000000000
+      internalID: -8456855578186545555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28d6e967f32eb050800000000000000
+      internalID: 5818127314149890090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_29
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 720
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a72cb0421e6ecfd0800000000000000
+      internalID: -2319795733374687327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ec29779c6832810800000000000000
+      internalID: 1739382080947801667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_31
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 941571411ac6f00b0800000000000000
+      internalID: -5760265959300968119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_32
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b656dabe581ac75b0800000000000000
+      internalID: -5369239059175742101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_33
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 028d449a360cdb2d0800000000000000
+      internalID: -3261239020872214496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_34
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dad3c516a698f4f0800000000000000
+      internalID: -794719694156997932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_35
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30559c5bb9f497e10800000000000000
+      internalID: 2195873823508223235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_36
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a4335d6b15b6e10800000000000000
+      internalID: 2191935489348684293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_37
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856ba5217ad198100800000000000000
+      internalID: 110652269251966552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_38
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a4ff323ece44030800000000000000
+      internalID: 3478165272542530098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_39
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 640
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19a9fd21ed063e50800000000000000
+      internalID: 6788628749097740575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293c780da90ff5810800000000000000
+      internalID: 1756386927411970962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_41
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0aaa9345fc66d220800000000000000
+      internalID: 2510313642962627086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_42
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da42206b7866a3f0800000000000000
+      internalID: -889908997255968048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_43
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebefc3f3fb245340800000000000000
+      internalID: 4851551025352403947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_44
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478ad90ca76c4bc90800000000000000
+      internalID: -7154875677465008012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_45
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceb089a0e6bfb76c0800000000000000
+      internalID: -4144442582021698580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_46
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3be626d26561a00800000000000000
+      internalID: 726863142791852963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_47
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb62280acbd77780800000000000000
+      internalID: -8685231695594361926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_48
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dd78a2e4d3dba50800000000000000
+      internalID: 6538449639942118734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_49
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 560
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329f599a4356c45e0800000000000000
+      internalID: -1924051663936161501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3b8b08811e910560800000000000000
+      internalID: 7278272270941522749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_51
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a41bdeb73d593e0800000000000000
+      internalID: -2047497926347765137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_52
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34dafae1207b4770800000000000000
+      internalID: 8596087604745262141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_53
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c50bbe7346366890800000000000000
+      internalID: -7465219668803123775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_54
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce83e7e9ab34c880800000000000000
+      internalID: -8591676588190101820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_55
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e329a22cff28d0f80800000000000000
+      internalID: -8138704916602777026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_56
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86121e19832b52220800000000000000
+      internalID: 2460568727463207272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_57
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d5fca4aa11f1fd0800000000000000
+      internalID: -2369155455876375200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_58
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db5a1b827b0cf620800000000000000
+      internalID: 2809132854160284630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_59
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 480
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241a7ad0214a21030800000000000000
+      internalID: 3464011460846788930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7833cea9dcb8d8df0800000000000000
+      internalID: -176331095213853817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_61
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e6bf30254f740b0800000000000000
+      internalID: -5744354166596473203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_62
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8e6308f8eb6f650800000000000000
+      internalID: 6266405455073306785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_63
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874b903a2fb9db510800000000000000
+      internalID: 1566579711814513784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_64
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181469f14de1f6e60800000000000000
+      internalID: 7957612962998796673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_65
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa43e38036099fa0800000000000000
+      internalID: -5793592640194524424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_66
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 530a1936094c58760800000000000000
+      internalID: 7459584482233917493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_67
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c66643ac67b60e00800000000000000
+      internalID: 1010696843614906055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_68
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae591132db0c9b5c0800000000000000
+      internalID: -4199113258976569878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_69
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 400
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dbd1fba12bcedf50800000000000000
+      internalID: 6908182223912033238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e3a6c327e400a00800000000000000
+      internalID: 720662192926113282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_71
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27577a462b5fda830800000000000000
+      internalID: 4084190583636587890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_72
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c823465c41e7b50800000000000000
+      internalID: 6592729742539132018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_73
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6ece5a0072aa0b20800000000000000
+      internalID: 3101469895492030062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_74
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3b8f4bf9f70dda0800000000000000
+      internalID: -5922093186079476825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_75
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a164c458638404090800000000000000
+      internalID: -8052356734736644582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_76
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1daff7aba6d2890800000000000000
+      internalID: -7481206056748920352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_77
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175e23a1c17e4fed0800000000000000
+      internalID: -2381024195087506063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_78
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb18bbac84fdcaf50800000000000000
+      internalID: 6894130633329312190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_79
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 320
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0cdee07a1623d8e0800000000000000
+      internalID: -1669949141818614771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6625533b2b24690a0800000000000000
+      internalID: -6875234445856255386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_81
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d6ee2d719168260800000000000000
+      internalID: 7099389452709948791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_82
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79fa70699fb2f610800000000000000
+      internalID: 1653594678667966843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_83
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9161a116d136be4d0800000000000000
+      internalID: -3104278540307524071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_84
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb56ae8e918cc400800000000000000
+      internalID: 345793789398768571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_85
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3949c19e1cd902f90800000000000000
+      internalID: -6980405966259055469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_86
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82478c96f1b1c6d80800000000000000
+      internalID: -8256194195144281048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_87
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5e3b99a2716a130800000000000000
+      internalID: 3577572425727206890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_88
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82089208408dd9b10800000000000000
+      internalID: 1989984124209299496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_89
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 240
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337a6f4582abad980800000000000000
+      internalID: -8513287463203592397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58200cb867be2eb90800000000000000
+      internalID: -7213944758710828411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_91
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73600d464f1335760800000000000000
+      internalID: 7445349534706697783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_92
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b14b4a623a8a2a80800000000000000
+      internalID: -8490822198317334089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_93
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc9a42a4fe60cc50800000000000000
+      internalID: 6683463843991690457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_94
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0afa663b3ad95820800000000000000
+      internalID: 2907594982295271949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_95
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76032378bfad34550800000000000000
+      internalID: 6143995090503348327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_96
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8181bd09e5b66d00800000000000000
+      internalID: 965659182679294346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_97
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fea00e5509ec630800000000000000
+      internalID: 3949252621755936579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_98
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a0b0eff6a51e2c0800000000000000
+      internalID: -4404139523541628369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_99
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 160
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f267ad2c473252fc0800000000000000
+      internalID: -3520368549327899089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282cb5358d49df6a0800000000000000
+      internalID: -6413806637473348990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_101
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a8d2e113f7ac920800000000000000
+      internalID: 3011359149787023886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_102
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757707a4bb92ae080800000000000000
+      internalID: -9157461007919974569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_103
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042497d4db5fdc960800000000000000
+      internalID: 7624019937605534272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_104
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54c3fd96698965e0800000000000000
+      internalID: -1915849092639767457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_105
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81bbdb51a2d3f7180800000000000000
+      internalID: -9115499869811918056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_106
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451e061ce097ac8f0800000000000000
+      internalID: -519469702727016108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_107
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bba3c3141961750800000000000000
+      internalID: 6275362840156748663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_108
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f82138db23360e60800000000000000
+      internalID: 7928080457436047601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_109
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 80
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9bb4acb0cca2060800000000000000
+      internalID: 6929575327673596363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906980ac11408a6c0800000000000000
+      internalID: -4132048183661914615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_111
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc09eaa5f3ea1bf30800000000000000
+      internalID: 4589641082394808527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_112
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65528dd003753260800000000000000
+      internalID: 7076688837036103019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_113
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07a0ac10662fbc2f0800000000000000
+      internalID: -951400376328123792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_114
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9504e58d8fd9f5d0800000000000000
+      internalID: -3028143475500251747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_115
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8afbaec39cd74070800000000000000
+      internalID: 8090677782980065930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_116
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b171e521a9c3a20800000000000000
+      internalID: 3043476851874274192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_117
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89dd5fd900b1f34b0800000000000000
+      internalID: -5458614533885665896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_118
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b5359058a61a7a0800000000000000
+      internalID: -6367691278505518195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaramelPirchemBreeze_119
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 50
+        height: 80
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bda9438043e9ec20800000000000000
+      internalID: 3236367673462468016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f288ae5a2a0f84247b854c0c45f97b0f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

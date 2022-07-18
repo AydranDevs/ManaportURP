@@ -1,0 +1,3000 @@
+fileFormatVersion: 2
+guid: 514ff524f390dd249afbf6b7d96ad044
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5328048626858128332
+    second: MarketLamp_0
+  - first:
+      213: 5206707607629951577
+    second: MarketLamp_1
+  - first:
+      213: 6892813562318332247
+    second: MarketLamp_2
+  - first:
+      213: 7228145665699762280
+    second: MarketLamp_3
+  - first:
+      213: 974366807075205649
+    second: MarketLamp_4
+  - first:
+      213: 1338379232293263745
+    second: MarketLamp_5
+  - first:
+      213: -352291958390479232
+    second: MarketLamp_6
+  - first:
+      213: 6983930352943276522
+    second: MarketLamp_7
+  - first:
+      213: -5745515446848646105
+    second: MarketLamp_8
+  - first:
+      213: -7071070738342841542
+    second: MarketLamp_9
+  - first:
+      213: -9142480954230983904
+    second: MarketLamp_10
+  - first:
+      213: -3823501631645635976
+    second: MarketLamp_11
+  - first:
+      213: -6546062954383463155
+    second: MarketLamp_12
+  - first:
+      213: -1540906346568076651
+    second: MarketLamp_13
+  - first:
+      213: -5348495181975753714
+    second: MarketLamp_14
+  - first:
+      213: 1819541481208287695
+    second: MarketLamp_15
+  - first:
+      213: -5827609883448495665
+    second: MarketLamp_16
+  - first:
+      213: -8725872348827354853
+    second: MarketLamp_17
+  - first:
+      213: -5802652569874320475
+    second: MarketLamp_18
+  - first:
+      213: -8291711802411231062
+    second: MarketLamp_19
+  - first:
+      213: 5270174123663106377
+    second: MarketLamp_20
+  - first:
+      213: -8945672453983960360
+    second: MarketLamp_21
+  - first:
+      213: 1439735568267644833
+    second: MarketLamp_22
+  - first:
+      213: 3620844322140115138
+    second: MarketLamp_23
+  - first:
+      213: 8410257121133127444
+    second: MarketLamp_24
+  - first:
+      213: 8387160126351705917
+    second: MarketLamp_25
+  - first:
+      213: 8245704508917208484
+    second: MarketLamp_26
+  - first:
+      213: -6372424911840076042
+    second: MarketLamp_27
+  - first:
+      213: 8579801885593829430
+    second: MarketLamp_28
+  - first:
+      213: -7645891671265558406
+    second: MarketLamp_29
+  - first:
+      213: -1112445710742700629
+    second: MarketLamp_30
+  - first:
+      213: -8249106774384468466
+    second: MarketLamp_31
+  - first:
+      213: 6950058826473642255
+    second: MarketLamp_32
+  - first:
+      213: -7662381857589683267
+    second: MarketLamp_33
+  - first:
+      213: -63162180931886321
+    second: MarketLamp_34
+  - first:
+      213: -5510712045739766036
+    second: MarketLamp_35
+  - first:
+      213: 1537459980553521768
+    second: MarketLamp_36
+  - first:
+      213: 6124806664470057914
+    second: MarketLamp_37
+  - first:
+      213: -4909924186762436922
+    second: MarketLamp_38
+  - first:
+      213: 5585308926548364159
+    second: MarketLamp_39
+  - first:
+      213: 1117798027599751605
+    second: MarketLamp_40
+  - first:
+      213: -4648128236168295420
+    second: MarketLamp_41
+  - first:
+      213: -8989243961790627535
+    second: MarketLamp_42
+  - first:
+      213: 4582493287771479390
+    second: MarketLamp_43
+  - first:
+      213: -1989296249409878862
+    second: MarketLamp_44
+  - first:
+      213: 3516787628609558770
+    second: MarketLamp_45
+  - first:
+      213: 4901752067970405688
+    second: MarketLamp_46
+  - first:
+      213: -4095365706206183853
+    second: MarketLamp_47
+  - first:
+      213: -9047542485613763166
+    second: MarketLamp_48
+  - first:
+      213: -3625254485247198738
+    second: MarketLamp_49
+  - first:
+      213: 6518250550928299974
+    second: MarketLamp_50
+  - first:
+      213: -8532924773055445961
+    second: MarketLamp_51
+  - first:
+      213: -753754177493555598
+    second: MarketLamp_52
+  - first:
+      213: -5955352105609317875
+    second: MarketLamp_53
+  - first:
+      213: 5166134121857147622
+    second: MarketLamp_54
+  - first:
+      213: 4817149038523175233
+    second: MarketLamp_55
+  - first:
+      213: 5209220853458414870
+    second: MarketLamp_56
+  - first:
+      213: -8416010551676724494
+    second: MarketLamp_57
+  - first:
+      213: 3560789393516702759
+    second: MarketLamp_58
+  - first:
+      213: 5748103181655248276
+    second: MarketLamp_59
+  - first:
+      213: 6252176230494461845
+    second: MarketLamp_60
+  - first:
+      213: -6985261155505529639
+    second: MarketLamp_61
+  - first:
+      213: -3034331935304658333
+    second: MarketLamp_62
+  - first:
+      213: 5602076770580972058
+    second: MarketLamp_63
+  - first:
+      213: 6055871308128357129
+    second: MarketLamp_64
+  - first:
+      213: 141716443001679081
+    second: MarketLamp_65
+  - first:
+      213: 1466007937732719175
+    second: MarketLamp_66
+  - first:
+      213: -365822996490095553
+    second: MarketLamp_67
+  - first:
+      213: 7931736543266183849
+    second: MarketLamp_68
+  - first:
+      213: -8107605312111146137
+    second: MarketLamp_69
+  - first:
+      213: 4355722852746870338
+    second: MarketLamp_70
+  - first:
+      213: 598570781081817322
+    second: MarketLamp_71
+  - first:
+      213: 6296317893928243421
+    second: MarketLamp_72
+  - first:
+      213: -6922995146602793499
+    second: MarketLamp_73
+  - first:
+      213: -5248132231060359252
+    second: MarketLamp_74
+  - first:
+      213: -5633900927855272626
+    second: MarketLamp_75
+  - first:
+      213: -4190174919568201201
+    second: MarketLamp_76
+  - first:
+      213: -1312441188401590464
+    second: MarketLamp_77
+  - first:
+      213: 1131420826567226064
+    second: MarketLamp_78
+  - first:
+      213: -4980389246947544070
+    second: MarketLamp_79
+  - first:
+      213: -304739431865418969
+    second: MarketLamp_80
+  - first:
+      213: 5643071471132253801
+    second: MarketLamp_81
+  - first:
+      213: 8221426434858199581
+    second: MarketLamp_82
+  - first:
+      213: -7125061787065284363
+    second: MarketLamp_83
+  - first:
+      213: -335290461334929868
+    second: MarketLamp_84
+  - first:
+      213: 6526185322507835780
+    second: MarketLamp_85
+  - first:
+      213: 8728617130455445661
+    second: MarketLamp_86
+  - first:
+      213: -221590233684802269
+    second: MarketLamp_87
+  - first:
+      213: -7113680853625784878
+    second: MarketLamp_88
+  - first:
+      213: 2135604065373638772
+    second: MarketLamp_89
+  - first:
+      213: -8195795513430342228
+    second: MarketLamp_90
+  - first:
+      213: -4649436843860736200
+    second: MarketLamp_91
+  - first:
+      213: 6860651753467596175
+    second: MarketLamp_92
+  - first:
+      213: 811666819525289479
+    second: MarketLamp_93
+  - first:
+      213: 3234997469536643695
+    second: MarketLamp_94
+  - first:
+      213: -2412073230556284483
+    second: MarketLamp_95
+  - first:
+      213: 6575577966952633606
+    second: MarketLamp_96
+  - first:
+      213: 5210228660322653923
+    second: MarketLamp_97
+  - first:
+      213: 6094904854425000022
+    second: MarketLamp_98
+  - first:
+      213: 1541576794435811717
+    second: MarketLamp_99
+  - first:
+      213: -6889275017939733509
+    second: MarketLamp_100
+  - first:
+      213: 6413959522033273009
+    second: MarketLamp_101
+  - first:
+      213: -1548041742862535995
+    second: MarketLamp_102
+  - first:
+      213: 5885998765491345099
+    second: MarketLamp_103
+  - first:
+      213: 7584354093021097288
+    second: MarketLamp_104
+  - first:
+      213: -334913617576319277
+    second: MarketLamp_105
+  - first:
+      213: -2352555504574488413
+    second: MarketLamp_106
+  - first:
+      213: 1871085834237449926
+    second: MarketLamp_107
+  - first:
+      213: 7694042414298358313
+    second: MarketLamp_108
+  - first:
+      213: -4549301790126055193
+    second: MarketLamp_109
+  - first:
+      213: 1972593985350028909
+    second: MarketLamp_110
+  - first:
+      213: 5002821606314641610
+    second: MarketLamp_111
+  - first:
+      213: 1326071675999248503
+    second: MarketLamp_112
+  - first:
+      213: 1272002909949890787
+    second: MarketLamp_113
+  - first:
+      213: 1127474584841843288
+    second: MarketLamp_114
+  - first:
+      213: -5814339330227869237
+    second: MarketLamp_115
+  - first:
+      213: -5587861469242298170
+    second: MarketLamp_116
+  - first:
+      213: 3075296896481522063
+    second: MarketLamp_117
+  - first:
+      213: 2984485064401787853
+    second: MarketLamp_118
+  - first:
+      213: -3212907051919339855
+    second: MarketLamp_119
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MarketLamp_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3f2e53ff701f940800000000000000
+      internalID: 5328048626858128332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9527b1a9bf0f14840800000000000000
+      internalID: 5206707607629951577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751aafc4a6138af50800000000000000
+      internalID: 6892813562318332247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86050d4cf288f4460800000000000000
+      internalID: 7228145665699762280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11236a8d275a58d00800000000000000
+      internalID: 974366807075205649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189999b12d0e29210800000000000000
+      internalID: 1338379232293263745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086a8e294586c1bf0800000000000000
+      internalID: -352291958390479232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_7
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1a04f47a7ebe060800000000000000
+      internalID: 6983930352943276522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72411136424d340b0800000000000000
+      internalID: -5745515446848646105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 737
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a337a6ba0a28edd90800000000000000
+      internalID: -7071070738342841542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023b945d2026f1180800000000000000
+      internalID: -9142480954230983904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_11
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87aa2a7168130fac0800000000000000
+      internalID: -3823501631645635976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d21aeec66b725a0800000000000000
+      internalID: -6546062954383463155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5923aa487d99d9ae0800000000000000
+      internalID: -1540906346568076651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_14
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c627338f356c5b0800000000000000
+      internalID: -5348495181975753714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_15
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc11289365f404910800000000000000
+      internalID: 1819541481208287695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc13f7fdfab202fa0800000000000000
+      internalID: -5827609883448495665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19fdb4945977e680800000000000000
+      internalID: -8725872348827354853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a332a14b36d87fa0800000000000000
+      internalID: -5802652569874320475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 670
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa85d5d0c0cedec80800000000000000
+      internalID: -8291711802411231062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9412561617b632940800000000000000
+      internalID: 5270174123663106377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_21
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d20a4f9c469ad380800000000000000
+      internalID: -8945672453983960360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_22
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af861d0fd7faf310800000000000000
+      internalID: 1439735568267644833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_23
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c0d6281ab2df3230800000000000000
+      internalID: 3620844322140115138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 417e6deca4c37b470800000000000000
+      internalID: 8410257121133127444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d378385a2bd256470800000000000000
+      internalID: 8387160126351705917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_26
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a5d8d03090ae6270800000000000000
+      internalID: 8245704508917208484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_27
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe1ce32e499097a0800000000000000
+      internalID: -6372424911840076042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6300c027b54911770800000000000000
+      internalID: 8579801885593829430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_29
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 603
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70491fd80654e590800000000000000
+      internalID: -7645891671265558406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad3643258ccf80f0800000000000000
+      internalID: -1112445710742700629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_31
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e9b862819458d80800000000000000
+      internalID: -8249106774384468466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0997000ea1937060800000000000000
+      internalID: 6950058826473642255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_33
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb18fc2c40c9a590800000000000000
+      internalID: -7662381857589683267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03e052c45a9f1ff0800000000000000
+      internalID: -63162180931886321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_35
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cee073667940683b0800000000000000
+      internalID: -5510712045739766036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_36
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a854dd4b7265510800000000000000
+      internalID: 1537459980553521768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_37
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3dea1f53faff450800000000000000
+      internalID: 6124806664470057914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce1ded47f17cdbb0800000000000000
+      internalID: -4909924186762436922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_39
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 536
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7bcbbf50e0038d40800000000000000
+      internalID: 5585308926548364159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b927bd3267338f00800000000000000
+      internalID: 1117798027599751605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cc9bcfef78e7fb0800000000000000
+      internalID: -4648128236168295420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131052a6e3acf3380800000000000000
+      internalID: -8989243961790627535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_43
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d1b3bbd59489f30800000000000000
+      internalID: 4582493287771479390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_44
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b448e4d9999464e0800000000000000
+      internalID: -1989296249409878862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_45
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8d2c927b32ec030800000000000000
+      internalID: 3516787628609558770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_46
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83599640985860440800000000000000
+      internalID: 4901752067970405688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_47
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e7340a6965a27c0800000000000000
+      internalID: -4095365706206183853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_48
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a5acb69b0ca07280800000000000000
+      internalID: -9047542485613763166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_49
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 469
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9f27ac04280bdc0800000000000000
+      internalID: -3625254485247198738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c75315475a757a50800000000000000
+      internalID: 6518250550928299974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_51
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73446e6d026f49980800000000000000
+      internalID: -8532924773055445961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_52
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276a782b1902a85f0800000000000000
+      internalID: -753754177493555598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_53
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0238c010d65a5da0800000000000000
+      internalID: -5955352105609317875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2e15bcc9bc1b740800000000000000
+      internalID: 5166134121857147622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_55
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141d9473783f9d240800000000000000
+      internalID: 4817149038523175233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d22fe34ceda4840800000000000000
+      internalID: 5209220853458414870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_57
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa9e514ef2543b80800000000000000
+      internalID: -8416010551676724494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_58
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72caa8866177a6130800000000000000
+      internalID: 3560789393516702759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_59
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 402
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d8ad2936d55cf40800000000000000
+      internalID: 5748103181655248276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f53cbf72134c650800000000000000
+      internalID: 6252176230494461845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_61
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc12c21dfd5f0f90800000000000000
+      internalID: -6985261155505529639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_62
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362da817e23e3e5d0800000000000000
+      internalID: -3034331935304658333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_63
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1242fa44239ebd40800000000000000
+      internalID: 5602076770580972058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_64
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b887e8ed6ca0450800000000000000
+      internalID: 6055871308128357129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_65
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec62f3aa5a77f100800000000000000
+      internalID: 141716443001679081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_66
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742367eb37e485410800000000000000
+      internalID: 1466007937732719175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_67
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f34f9834ce55ceaf0800000000000000
+      internalID: -365822996490095553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_68
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa9d59ac50331e60800000000000000
+      internalID: 7931736543266183849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_69
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 335
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b8b80bceffb7f80800000000000000
+      internalID: -8107605312111146137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e37026bd2a27c30800000000000000
+      internalID: 4355722852746870338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_71
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae05f4b34fc8e4800800000000000000
+      internalID: 598570781081817322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_72
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd05784e3c3016750800000000000000
+      internalID: 6296317893928243421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_73
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5bcf008949cef90800000000000000
+      internalID: -6922995146602793499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_74
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca77e59aa83ea27b0800000000000000
+      internalID: -5248132231060359252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_75
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d517fa4fc50d1b0800000000000000
+      internalID: -5633900927855272626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_76
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ae2647c1289d5c0800000000000000
+      internalID: -4190174919568201201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_77
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f4bb851b549cde0800000000000000
+      internalID: -1312441188401590464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_78
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d2b40b4f3d93bf00800000000000000
+      internalID: 1131420826567226064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_79
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 268
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af3348cfd5a12eab0800000000000000
+      internalID: -4980389246947544070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b7b9ee91955cbf0800000000000000
+      internalID: -304739431865418969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_81
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e9afeca97305e40800000000000000
+      internalID: 5643071471132253801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_82
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1aaab498cf581270800000000000000
+      internalID: 8221426434858199581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_83
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8834b0e02be1d90800000000000000
+      internalID: -7125061787065284363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_84
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43efd831a1fc85bf0800000000000000
+      internalID: -335290461334929868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_85
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489927e39faa19a50800000000000000
+      internalID: 6526185322507835780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_86
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90bf21b807422970800000000000000
+      internalID: 8728617130455445661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_87
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32585834bd0ccecf0800000000000000
+      internalID: -221590233684802269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_88
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5332a14f0274d90800000000000000
+      internalID: -7113680853625784878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_89
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 201
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470d971259033ad10800000000000000
+      internalID: 2135604065373638772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca58e3a576fa24e80800000000000000
+      internalID: -8195795513430342228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_91
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837411403d1e97fb0800000000000000
+      internalID: -4649436843860736200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_92
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dc815ab6ee53f50800000000000000
+      internalID: 6860651753467596175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_93
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706a6c50cae934b00800000000000000
+      internalID: 811666819525289479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_94
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ae40d0f0505ec20800000000000000
+      internalID: 3234997469536643695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_95
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9b6703d28968ed0800000000000000
+      internalID: -2412073230556284483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_96
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 605d8117255214b50800000000000000
+      internalID: 6575577966952633606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_97
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e657119c537e4840800000000000000
+      internalID: 5210228660322653923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_98
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6585ec34ca3759450800000000000000
+      internalID: 6094904854425000022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_99
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 134
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589f45a4de7c46510800000000000000
+      internalID: 1541576794435811717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3bab34fd06460a0800000000000000
+      internalID: -6889275017939733509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_101
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b80782e336f20950800000000000000
+      internalID: 6413959522033273009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_102
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2b33b9c30448ae0800000000000000
+      internalID: -1548041742862535995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_103
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc6df7d11b44fa150800000000000000
+      internalID: 5885998765491345099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_104
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d6d4d2dd9014960800000000000000
+      internalID: 7584354093021097288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_105
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d62ce9d6d52a5bf0800000000000000
+      internalID: -334913617576319277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_106
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0a273ab3b0a5fd0800000000000000
+      internalID: -2352555504574488413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_107
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c61dfd17ae67f910800000000000000
+      internalID: 1871085834237449926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_108
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922ea0f9fcab6ca60800000000000000
+      internalID: 7694042414298358313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_109
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 67
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0ec770022add0c0800000000000000
+      internalID: -4549301790126055193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e4cd647cf006b10800000000000000
+      internalID: 1972593985350028909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_111
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8880faeb79d6540800000000000000
+      internalID: 5002821606314641610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_112
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77064aad927276210800000000000000
+      internalID: 1326071675999248503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_113
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e093d048ef07a110800000000000000
+      internalID: 1272002909949890787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_114
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85277ca492895af00800000000000000
+      internalID: 1127474584841843288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_115
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc96f225f215f4fa0800000000000000
+      internalID: -5814339330227869237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_116
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c078b7799de372b0800000000000000
+      internalID: -5587861469242298170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_117
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8174a5db36adaa20800000000000000
+      internalID: 3075296896481522063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_118
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb90258a550b6920800000000000000
+      internalID: 2984485064401787853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MarketLamp_119
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 24
+        height: 67
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be000a1f067963d0800000000000000
+      internalID: -3212907051919339855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,9 +11,7 @@ public class WorldCursor : MonoBehaviour {
     Vector2 cursorPos;
     
     void Start() {
-        Cursor.visible = false;
-
-        animator = GetComponent<Animator>();
+        // Cursor.visible = false;
     }
 
     public void OnMouseMove(InputAction.CallbackContext context) {
@@ -22,26 +20,6 @@ public class WorldCursor : MonoBehaviour {
 
     void Update() {
         Vector2 finalCursorPos = Camera.main.ScreenToWorldPoint(cursorPos);
-        transform.position = new Vector3(finalCursorPos.x, finalCursorPos.y, 0);
-    }
-    
-    public void OnPrimaryCast(InputAction.CallbackContext context) {
-        if (!context.started) return;
-
-        primaryFire = true;
-        secondaryFire = false;
-
-        animator.Rebind();
-        animator.SetTrigger("PrimaryFire");
-    }
-
-    public void OnSecondaryCast(InputAction.CallbackContext context) {
-        if (!context.started) return;
-        
-        primaryFire = false;
-        secondaryFire = true;
-
-        animator.Rebind();
-        animator.SetTrigger("SecondaryFire");
+        transform.position = new Vector3(finalCursorPos.x, finalCursorPos.y, 2);
     }
 }

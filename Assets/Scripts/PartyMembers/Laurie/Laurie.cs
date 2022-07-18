@@ -19,6 +19,8 @@ namespace PartyNamespace {
 
         public class Laurie : PartyMember {
 
+            private static Laurie Instance;
+
             #region Attributes
                 
             // Player experience point values
@@ -136,6 +138,7 @@ namespace PartyNamespace {
             public ManaBarScript manaBar;
 
             public Party party;
+            public GameStateManager gameManager;
 
             public LaurieController controller;
             public LaurieCasting casting;
@@ -149,6 +152,8 @@ namespace PartyNamespace {
             public const float MANA_REGEN_TIMER_DEFAULT = 1f;
 
             private void Awake() {
+                Instance = this;
+
                 party = GetComponentInParent<Party>();
 
                 controller = GetComponentInChildren<LaurieController>();
@@ -356,6 +361,16 @@ namespace PartyNamespace {
             
             public Vector3 GetPosition() {
                 return transform.position;
+            }
+
+            public static string GetPrimarySpellInfo() {
+                string spell = Instance.primarySpellElement.ToString() + " " + Instance.primarySpellType.ToString();
+                return spell;
+            }
+
+            public static string GetSecondarySpellInfo() {
+                string spell = Instance.secondarySpellElement.ToString() + " " + Instance.secondarySpellType.ToString();
+                return spell;
             }
         }
     }

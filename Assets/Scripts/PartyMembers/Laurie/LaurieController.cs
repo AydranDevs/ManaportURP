@@ -8,7 +8,8 @@ namespace PartyNamespace {
             private Laurie laurie;
             private LaurieCasting casting;
             private LaurieAbilities abilities;
-            
+            private GameStateManager gameManager;
+
             public Vector2 movementDirection;
             [SerializeField] private float movementSp;
             [SerializeField] private bool _isSprinting;
@@ -31,6 +32,7 @@ namespace PartyNamespace {
 
             private void Start() {
                 laurie = GetComponentInParent<Laurie>();
+                gameManager = GameStateManager.Instance;
                 rb = GetComponentInParent<Rigidbody2D>();
 
                 casting = laurie.casting;
@@ -49,6 +51,8 @@ namespace PartyNamespace {
             }
 
             private void Move(float d) {
+                if (gameManager.state != GameState.Main) return;
+
                 if (movementDirection.Equals(new Vector2(0, 0))) {
                     laurie.movementState = MovementState.Idle;
                     sprintDuration = 0f;
@@ -93,14 +97,17 @@ namespace PartyNamespace {
             }
 
             public void OnPrimary_PrimaryCast() {
+                if (gameManager.state != GameState.Main) return;
                 casting.PrimaryCast();
             }
 
             public void OnSecondary_SecondaryCast() {
+                if (gameManager.state != GameState.Main) return;
                 casting.SecondaryCast();
             }
 
             public void OnAuxMove_AuxillaryMovement() {
+                if (gameManager.state != GameState.Main) return;
                 abilities.AuxMove();
             }
             

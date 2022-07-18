@@ -14,10 +14,12 @@ namespace PartyNamespace {
             private Reanimator reanimator;
             private Laurie laurie;
             private LaurieController laurieController;
+            private GameStateManager gameManager;
 
             private int facingState;
 
             void Start() {
+                gameManager = GameStateManager.Instance;
                 reanimator = GetComponent<Reanimator>();
                 laurie = GetComponentInParent<Laurie>();
                 laurieController = laurie.controller;
@@ -26,6 +28,8 @@ namespace PartyNamespace {
             }
 
             void Update() {
+                if (gameManager.state != GameState.Main) return;
+                
                 if (laurieController.movementDirection.Equals(new Vector2(0, 1))) { // north 
                     facingState = 0; // north
                 }else if (laurieController.movementDirection.Equals(new Vector2(1, 1))) { // northeast

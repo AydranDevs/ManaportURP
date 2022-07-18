@@ -70,7 +70,7 @@ namespace PartyNamespace {
 
             private void PathfindingUpdate() {
                 if (party.partyLeader == PartyLeader.Laurie) { return; }
-                path = Pathfinding.FindPath(grid, laurie.transform.position, leaderTransform.position);
+                // path = Pathfinding.FindPath(grid, laurie.transform.position, leaderTransform.position);
             }
 
             

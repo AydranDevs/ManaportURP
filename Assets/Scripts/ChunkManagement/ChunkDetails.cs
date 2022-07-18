@@ -8,6 +8,9 @@ public class ChunkDetails : MonoBehaviour {
     public List<ChunkDetails> connectedChunks;
     public bool isLoaded { get; private set;}
 
+    public int chunkX, chunkY;
+    public Vector3 worldPos;
+
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.tag != "PlayerPartyLeader") return;
         LoadChunk();

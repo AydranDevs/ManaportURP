@@ -13,6 +13,7 @@ namespace PartyNamespace {
             private Reanimator reanimator;
             private Mirabelle mirabelle;
             private MirabelleController mirabelleController;
+            private GameStateManager gameManager;
 
             private int facingState;
 
@@ -20,11 +21,14 @@ namespace PartyNamespace {
                 reanimator = GetComponent<Reanimator>();
                 mirabelle = GetComponentInParent<Mirabelle>();
                 mirabelleController = mirabelle.controller;
+                gameManager = GameStateManager.Instance;
 
                 facingState = 2;
             }
 
             private void Update() {
+                if (gameManager.state != GameState.Main) return;
+
                 if (mirabelleController.movementDirection.Equals(new Vector2(0, 1))) { // north 
                     facingState = 0; // north
                 }else if (mirabelleController.movementDirection.Equals(new Vector2(1, 1))) { // northeast

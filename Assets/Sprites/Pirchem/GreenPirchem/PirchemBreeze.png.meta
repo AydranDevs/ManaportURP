@@ -1,0 +1,3000 @@
+fileFormatVersion: 2
+guid: b9ce37ed0c7a18f448dde01a7a8caab2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5867602305683392740
+    second: PirchemBreeze_0
+  - first:
+      213: 4785783463043128467
+    second: PirchemBreeze_1
+  - first:
+      213: -3651649508005202101
+    second: PirchemBreeze_2
+  - first:
+      213: 2175767470557663066
+    second: PirchemBreeze_3
+  - first:
+      213: -7923312475278680197
+    second: PirchemBreeze_4
+  - first:
+      213: -1670928960901606551
+    second: PirchemBreeze_5
+  - first:
+      213: -283025956991225221
+    second: PirchemBreeze_6
+  - first:
+      213: 8468154345813820381
+    second: PirchemBreeze_7
+  - first:
+      213: -6653065455715876995
+    second: PirchemBreeze_8
+  - first:
+      213: -2911814835088253172
+    second: PirchemBreeze_9
+  - first:
+      213: -8178179656195732821
+    second: PirchemBreeze_10
+  - first:
+      213: -276683220756611016
+    second: PirchemBreeze_11
+  - first:
+      213: -5760906079035344093
+    second: PirchemBreeze_12
+  - first:
+      213: 7715740049790059117
+    second: PirchemBreeze_13
+  - first:
+      213: 3811471344435909508
+    second: PirchemBreeze_14
+  - first:
+      213: -5557115069790288550
+    second: PirchemBreeze_15
+  - first:
+      213: -1507311912801320153
+    second: PirchemBreeze_16
+  - first:
+      213: 6172648090550563822
+    second: PirchemBreeze_17
+  - first:
+      213: 3287811192964405977
+    second: PirchemBreeze_18
+  - first:
+      213: 7736884859613767114
+    second: PirchemBreeze_19
+  - first:
+      213: -5361052394274485785
+    second: PirchemBreeze_20
+  - first:
+      213: -9027690129197385451
+    second: PirchemBreeze_21
+  - first:
+      213: -5548803292902318256
+    second: PirchemBreeze_22
+  - first:
+      213: 7811394318114657960
+    second: PirchemBreeze_23
+  - first:
+      213: -772118521826534108
+    second: PirchemBreeze_24
+  - first:
+      213: 1629727466779766835
+    second: PirchemBreeze_25
+  - first:
+      213: -3402878004461968772
+    second: PirchemBreeze_26
+  - first:
+      213: -486662228076708497
+    second: PirchemBreeze_27
+  - first:
+      213: -7355951140190372200
+    second: PirchemBreeze_28
+  - first:
+      213: 1528502310277741025
+    second: PirchemBreeze_29
+  - first:
+      213: 3551622665514747392
+    second: PirchemBreeze_30
+  - first:
+      213: 2231527224213357841
+    second: PirchemBreeze_31
+  - first:
+      213: -1803893995861107243
+    second: PirchemBreeze_32
+  - first:
+      213: 8499389042453654604
+    second: PirchemBreeze_33
+  - first:
+      213: -1742601772151310637
+    second: PirchemBreeze_34
+  - first:
+      213: -5042491226938962636
+    second: PirchemBreeze_35
+  - first:
+      213: -497305306250243262
+    second: PirchemBreeze_36
+  - first:
+      213: 8517046070854078535
+    second: PirchemBreeze_37
+  - first:
+      213: -8884688837589979435
+    second: PirchemBreeze_38
+  - first:
+      213: -2347417083721903792
+    second: PirchemBreeze_39
+  - first:
+      213: 5065950163052990844
+    second: PirchemBreeze_40
+  - first:
+      213: -8913432498878187044
+    second: PirchemBreeze_41
+  - first:
+      213: 8544564892380924349
+    second: PirchemBreeze_42
+  - first:
+      213: -4423263248749530029
+    second: PirchemBreeze_43
+  - first:
+      213: -4730210451325443998
+    second: PirchemBreeze_44
+  - first:
+      213: 1404417612377863906
+    second: PirchemBreeze_45
+  - first:
+      213: 2752811840542073414
+    second: PirchemBreeze_46
+  - first:
+      213: 4050419944576574425
+    second: PirchemBreeze_47
+  - first:
+      213: -1888273818619910616
+    second: PirchemBreeze_48
+  - first:
+      213: -745007571673180828
+    second: PirchemBreeze_49
+  - first:
+      213: 6703686584545398127
+    second: PirchemBreeze_50
+  - first:
+      213: -5283381747434639016
+    second: PirchemBreeze_51
+  - first:
+      213: 1764644281406184380
+    second: PirchemBreeze_52
+  - first:
+      213: 6347357898874641914
+    second: PirchemBreeze_53
+  - first:
+      213: -2571644569409992569
+    second: PirchemBreeze_54
+  - first:
+      213: 5328637565299764559
+    second: PirchemBreeze_55
+  - first:
+      213: 8244727249424588910
+    second: PirchemBreeze_56
+  - first:
+      213: -4902345708396908254
+    second: PirchemBreeze_57
+  - first:
+      213: -3333120150960259509
+    second: PirchemBreeze_58
+  - first:
+      213: -2913853435086314929
+    second: PirchemBreeze_59
+  - first:
+      213: 6903425684234102149
+    second: PirchemBreeze_60
+  - first:
+      213: 2467596634420843037
+    second: PirchemBreeze_61
+  - first:
+      213: 5020132917677950547
+    second: PirchemBreeze_62
+  - first:
+      213: -6816171197525727586
+    second: PirchemBreeze_63
+  - first:
+      213: 6581877908409018530
+    second: PirchemBreeze_64
+  - first:
+      213: -1132174379416161968
+    second: PirchemBreeze_65
+  - first:
+      213: -3536769030596259999
+    second: PirchemBreeze_66
+  - first:
+      213: -768027038963702093
+    second: PirchemBreeze_67
+  - first:
+      213: -5277836383358726602
+    second: PirchemBreeze_68
+  - first:
+      213: 4991373078499107265
+    second: PirchemBreeze_69
+  - first:
+      213: 6999144311551069957
+    second: PirchemBreeze_70
+  - first:
+      213: -5734140324753305421
+    second: PirchemBreeze_71
+  - first:
+      213: -2514372266641368442
+    second: PirchemBreeze_72
+  - first:
+      213: 6875411658994251095
+    second: PirchemBreeze_73
+  - first:
+      213: 1301161518942792069
+    second: PirchemBreeze_74
+  - first:
+      213: 3355378353008912818
+    second: PirchemBreeze_75
+  - first:
+      213: -1793153495515889652
+    second: PirchemBreeze_76
+  - first:
+      213: -4125524254667653907
+    second: PirchemBreeze_77
+  - first:
+      213: -5788346704262862929
+    second: PirchemBreeze_78
+  - first:
+      213: 6330197170900974312
+    second: PirchemBreeze_79
+  - first:
+      213: -1400585627892941338
+    second: PirchemBreeze_80
+  - first:
+      213: 1488717763958870230
+    second: PirchemBreeze_81
+  - first:
+      213: 3058733257296523564
+    second: PirchemBreeze_82
+  - first:
+      213: -1747743379693729714
+    second: PirchemBreeze_83
+  - first:
+      213: 1173702962568127518
+    second: PirchemBreeze_84
+  - first:
+      213: -7232036657256127841
+    second: PirchemBreeze_85
+  - first:
+      213: 6135236360472145160
+    second: PirchemBreeze_86
+  - first:
+      213: 916778621459217576
+    second: PirchemBreeze_87
+  - first:
+      213: -6013480179351667051
+    second: PirchemBreeze_88
+  - first:
+      213: 8801606360105639504
+    second: PirchemBreeze_89
+  - first:
+      213: 38468234139999067
+    second: PirchemBreeze_90
+  - first:
+      213: -1004618537751619884
+    second: PirchemBreeze_91
+  - first:
+      213: -304651845760090908
+    second: PirchemBreeze_92
+  - first:
+      213: 3675015491880807653
+    second: PirchemBreeze_93
+  - first:
+      213: -6047183770330669942
+    second: PirchemBreeze_94
+  - first:
+      213: 3240373718828156235
+    second: PirchemBreeze_95
+  - first:
+      213: -310924953461287841
+    second: PirchemBreeze_96
+  - first:
+      213: -3727222969231651558
+    second: PirchemBreeze_97
+  - first:
+      213: -4607364967468908170
+    second: PirchemBreeze_98
+  - first:
+      213: -9172241904929057578
+    second: PirchemBreeze_99
+  - first:
+      213: -4599166909091833407
+    second: PirchemBreeze_100
+  - first:
+      213: -8174185064419478198
+    second: PirchemBreeze_101
+  - first:
+      213: 6562696412538936523
+    second: PirchemBreeze_102
+  - first:
+      213: -1841835319242988835
+    second: PirchemBreeze_103
+  - first:
+      213: -5837390350477883791
+    second: PirchemBreeze_104
+  - first:
+      213: -3095536115920307643
+    second: PirchemBreeze_105
+  - first:
+      213: 8534586289446793627
+    second: PirchemBreeze_106
+  - first:
+      213: -4729125847024748503
+    second: PirchemBreeze_107
+  - first:
+      213: 7412354244819546784
+    second: PirchemBreeze_108
+  - first:
+      213: -686382463247356084
+    second: PirchemBreeze_109
+  - first:
+      213: 3082017531222418105
+    second: PirchemBreeze_110
+  - first:
+      213: 5863286134594752711
+    second: PirchemBreeze_111
+  - first:
+      213: -96212898111418726
+    second: PirchemBreeze_112
+  - first:
+      213: -8965128500011104274
+    second: PirchemBreeze_113
+  - first:
+      213: 7871801835451472506
+    second: PirchemBreeze_114
+  - first:
+      213: 1174842991193464744
+    second: PirchemBreeze_115
+  - first:
+      213: 4665773404949415863
+    second: PirchemBreeze_116
+  - first:
+      213: 1531586557857753179
+    second: PirchemBreeze_117
+  - first:
+      213: 7425188063779404243
+    second: PirchemBreeze_118
+  - first:
+      213: 7689563845477083029
+    second: PirchemBreeze_119
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PirchemBreeze_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e885898539ed6150800000000000000
+      internalID: 5867602305683392740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39cdf9614b48a6240800000000000000
+      internalID: 4785783463043128467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b47be17ae1cb25dc0800000000000000
+      internalID: -3651649508005202101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5f807c9cf0e13e10800000000000000
+      internalID: 2175767470557663066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fd792884dba0290800000000000000
+      internalID: -7923312475278680197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9631c8886faafc8e0800000000000000
+      internalID: -1670928960901606551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72b253446d721cf0800000000000000
+      internalID: -283025956991225221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd3c965e28de48570800000000000000
+      internalID: 8468154345813820381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ff1aca7309ba3a0800000000000000
+      internalID: -6653065455715876995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_9
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f1adeb5d72797d0800000000000000
+      internalID: -2911814835088253172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_10
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa802bbee4418e80800000000000000
+      internalID: -8178179656195732821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_11
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830cd7f9316092cf0800000000000000
+      internalID: -276683220756611016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bb5b691762d00b0800000000000000
+      internalID: -5760906079035344093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_13
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62cdfe02b0d31b60800000000000000
+      internalID: 7715740049790059117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_14
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483dea46ef015e430800000000000000
+      internalID: 3811471344435909508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_15
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a550e21794921e2b0800000000000000
+      internalID: -5557115069790288550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_16
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72343c72dc3f41be0800000000000000
+      internalID: -1507311912801320153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_17
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee372c8fbb6a9a550800000000000000
+      internalID: 6172648090550563822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_18
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 486
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9da52354cd6a0ad20800000000000000
+      internalID: 3287811192964405977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5606db9cfee5b60800000000000000
+      internalID: 7736884859613767114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e903016047b995b0800000000000000
+      internalID: -5361052394274485785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519b3e288a337b280800000000000000
+      internalID: -9027690129197385451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_22
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f1a0ecdc0bef2b0800000000000000
+      internalID: -5548803292902318256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a69abbeeb5a76c60800000000000000
+      internalID: 7811394318114657960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_24
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d97069b42e845f0800000000000000
+      internalID: -772118521826534108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330fa121f74fd9610800000000000000
+      internalID: 1629727466779766835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_26
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72ed02fb7c86c0d0800000000000000
+      internalID: -3402878004461968772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_27
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d33e138470f39f0800000000000000
+      internalID: -486662228076708497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_28
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89eb2d759696ae990800000000000000
+      internalID: -7355951140190372200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9f77ab0c4563510800000000000000
+      internalID: 1528502310277741025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_30
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0068b3a3ff5e94130800000000000000
+      internalID: 3551622665514747392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_31
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115c9d1ff2af7fe10800000000000000
+      internalID: 2231527224213357841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_32
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd1d3cd7f747f6e0800000000000000
+      internalID: -1803893995861107243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_33
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4c2c4b6d45e3f570800000000000000
+      internalID: 8499389042453654604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_34
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d674f1cbe801d7e0800000000000000
+      internalID: -1742601772151310637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_35
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d874302f8750ab0800000000000000
+      internalID: -5042491226938962636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_36
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243990475773919f0800000000000000
+      internalID: -497305306250243262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_37
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 405
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740d4e4b640a23670800000000000000
+      internalID: 8517046070854078535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_38
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de2297439e33b480800000000000000
+      internalID: -8884688837589979435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_39
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0519219799c4c6fd0800000000000000
+      internalID: -2347417083721903792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_40
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c711b9e25dedd4640800000000000000
+      internalID: 5065950163052990844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_41
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd971fe1e502d4480800000000000000
+      internalID: -8913432498878187044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_42
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db983a2af74649670800000000000000
+      internalID: 8544564892380924349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_43
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3547e3eb2896d92c0800000000000000
+      internalID: -4423263248749530029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_44
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26028eff7aaea5eb0800000000000000
+      internalID: -4730210451325443998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_45
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6b516a06e7d7310800000000000000
+      internalID: 1404417612377863906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_46
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642eff0b8c3f33620800000000000000
+      internalID: 2752811840542073414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_47
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3e4a3ca7bf53830800000000000000
+      internalID: 4050419944576574425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_48
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8266d7a67f08bc5e0800000000000000
+      internalID: -1888273818619910616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_49
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465917f8f8339a5f0800000000000000
+      internalID: -745007571673180828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_50
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d41655e67480d50800000000000000
+      internalID: 6703686584545398127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_51
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85130631b48ada6b0800000000000000
+      internalID: -5283381747434639016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_52
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbbd32cdf964d7810800000000000000
+      internalID: 1764644281406184380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_53
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd51b81168561850800000000000000
+      internalID: 6347357898874641914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_54
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78841c7a3eeaf4cd0800000000000000
+      internalID: -2571644569409992569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_55
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4dae7022af13f940800000000000000
+      internalID: 5328637565299764559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_56
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 324
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60afeb30c72b6270800000000000000
+      internalID: 8244727249424588910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22177dc4d8e57fbb0800000000000000
+      internalID: -4902345708396908254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_58
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e3150e1e06eb1d0800000000000000
+      internalID: -3333120150960259509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_59
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f42e0223db9ef87d0800000000000000
+      internalID: -2913853435086314929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_60
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585e41a7515edcf50800000000000000
+      internalID: 6903425684234102149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_61
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d129a9ba01aae3220800000000000000
+      internalID: 2467596634420843037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_62
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35680737a481ba540800000000000000
+      internalID: 5020132917677950547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_63
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96ea33d8681861a0800000000000000
+      internalID: -6816171197525727586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_64
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8e5bdd517875b50800000000000000
+      internalID: 6581877908409018530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_65
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051f9138665b940f0800000000000000
+      internalID: -1132174379416161968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_66
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f05b62e4fdaeec0800000000000000
+      internalID: -3536769030596259999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_67
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b66cac2a7b6755f0800000000000000
+      internalID: -768027038963702093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_68
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e4543c5cb51c6b0800000000000000
+      internalID: -5277836383358726602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_69
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c123659e5be44540800000000000000
+      internalID: 4991373078499107265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_70
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f82b51ba4f12160800000000000000
+      internalID: 6999144311551069957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_71
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b016d261cd3c60b0800000000000000
+      internalID: -5734140324753305421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_72
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a5fb5ceb72b1dd0800000000000000
+      internalID: -2514372266641368442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_73
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7557ee2f97e5a6f50800000000000000
+      internalID: 6875411658994251095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_74
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5892ef3f187ae0210800000000000000
+      internalID: 1301161518942792069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_75
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 243
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9a122a5d2b09e20800000000000000
+      internalID: 3355378353008912818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_76
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00860875607d17e0800000000000000
+      internalID: -1793153495515889652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_77
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decb6406c813fb6c0800000000000000
+      internalID: -4125524254667653907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_78
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7eb972759abafa0800000000000000
+      internalID: -5788346704262862929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_79
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea3cb1c9c069d750800000000000000
+      internalID: 6330197170900974312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_80
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed7ce3cace109ce0800000000000000
+      internalID: -1400585627892941338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_81
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d015933becf8a410800000000000000
+      internalID: 1488717763958870230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_82
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2135df01bdc27a20800000000000000
+      internalID: 3058733257296523564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_83
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4880d6f7a4ceb7e0800000000000000
+      internalID: -1747743379693729714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_84
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1462bb30a4d94010800000000000000
+      internalID: 1173702962568127518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_85
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9225a92af4a2ab90800000000000000
+      internalID: -7232036657256127841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_86
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80da007c6fcb42550800000000000000
+      internalID: 6135236360472145160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_87
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acbfb58c4d09bc00800000000000000
+      internalID: 916778621459217576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_88
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e34ed33a3db8ca0800000000000000
+      internalID: -6013480179351667051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_89
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e5ae20a56952a70800000000000000
+      internalID: 8801606360105639504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_90
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b1d07b7aaa88000800000000000000
+      internalID: 38468234139999067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_91
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6da8a33c0ee02f0800000000000000
+      internalID: -1004618537751619884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_92
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec7d49a2c8a5cbf0800000000000000
+      internalID: -304651845760090908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_93
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecec996e17400330800000000000000
+      internalID: 3675015491880807653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_94
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 162
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8cdee57666141ca0800000000000000
+      internalID: -6047183770330669942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b458342aabe18fc20800000000000000
+      internalID: 3240373718828156235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_96
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f549225f66f5fabf0800000000000000
+      internalID: -310924953461287841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_97
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d4548057e364cc0800000000000000
+      internalID: -3727222969231651558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_98
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671cf6319f95f00c0800000000000000
+      internalID: -4607364967468908170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_99
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d450c68596a5b080800000000000000
+      internalID: -9172241904929057578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_100
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c999d8401a7c20c0800000000000000
+      internalID: -4599166909091833407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_101
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4539fa1ef57f8e80800000000000000
+      internalID: -8174185064419478198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_102
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc1d16dd91631b50800000000000000
+      internalID: 6562696412538936523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_103
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2e0cd198c7076e0800000000000000
+      internalID: -1841835319242988835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_104
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1760970776c6dfea0800000000000000
+      internalID: -5837390350477883791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_105
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a7d2dad427a05d0800000000000000
+      internalID: -3095536115920307643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_106
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9135671301f07670800000000000000
+      internalID: 8534586289446793627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_107
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928b8fd1915ce5eb0800000000000000
+      internalID: -4729125847024748503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_108
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2f3dfc9e8fdd660800000000000000
+      internalID: 7412354244819546784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_109
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f651a49ca7976f0800000000000000
+      internalID: -686382463247356084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_110
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2e90c8d9685ca20800000000000000
+      internalID: 3082017531222418105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_111
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c05ef4aca39e5150800000000000000
+      internalID: 5863286134594752711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_112
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e024101ee2aaef0800000000000000
+      internalID: -96212898111418726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_113
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 81
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee78b17e027759380800000000000000
+      internalID: -8965128500011104274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_114
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a5a5010124e3d60800000000000000
+      internalID: 7871801835451472506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_115
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af91f4d971ed4010800000000000000
+      internalID: 1174842991193464744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_116
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b78974013820c040800000000000000
+      internalID: 4665773404949415863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_117
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58efd31cd9414510800000000000000
+      internalID: 1531586557857753179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_118
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9ba0424319b0760800000000000000
+      internalID: 7425188063779404243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PirchemBreeze_119
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 50
+        height: 81
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597295f8391d6ba60800000000000000
+      internalID: 7689563845477083029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

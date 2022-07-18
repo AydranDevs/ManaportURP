@@ -8,8 +8,7 @@ namespace PartyNamespace {
             [SerializeField] private InputProvider provider;
             
             private Winsley winsley;
-            // private LaurieCasting casting;
-            // private LaurieAbilities abilities;
+            private GameStateManager gameManager;
             
             public Vector2 movementDirection;
             [SerializeField] private float movementSp;
@@ -34,6 +33,7 @@ namespace PartyNamespace {
             private void Start() {
                 winsley = GetComponentInParent<Winsley>();
                 rb = GetComponentInParent<Rigidbody2D>();
+                gameManager = GameStateManager.Instance;
 
                 //casting = laurie.casting;
                 //abilities = laurie.abilities;
@@ -51,6 +51,8 @@ namespace PartyNamespace {
             }
 
             private void Move(float d) {
+                if (gameManager.state != GameState.Main) return;
+
                 if (movementDirection.Equals(new Vector2(0, 0))) {
                     winsley.movementState = MovementState.Idle;
                     sprintDuration = 0f;
