@@ -33,7 +33,7 @@ public class InvSlotsUIHandler : MonoBehaviour
         for (int i = 0; i < (int)ItemID.MAXCOUNT; i++) {
             slotsFilled[i] = false; 
         }
-        emptyImage.enabled = true;
+        emptyImage.gameObject.SetActive(true);
     }
 
     public void Refresh() {
@@ -54,8 +54,8 @@ public class InvSlotsUIHandler : MonoBehaviour
 
         // check if bag is empty and if so activate the empty image
         int num = 0;
-        foreach (var slotState in slotsFilled) {
-            if (slotState) num++;
+        foreach (bool slotState in slotsFilled) {
+            if (slotState == true) num++;
         }
         if (num == 0) { emptyImage.gameObject.SetActive(true); } else { emptyImage.gameObject.SetActive(false); }
     }

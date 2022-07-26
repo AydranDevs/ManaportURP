@@ -1,100 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 namespace Manapotion.Pathfinding {
     /*
     Class for collecting all ChunkGrids into one large WorldGrid for pathfinding and such.
     */
     public class WorldGrid : MonoBehaviour {
+        private static WorldGrid Instance;
         private Grid grid;
-        public Tilemap floor;
-        public List<ChunkGrid> chunkGrids;
-        public List<Tilemap> unwalkableLayers;
+        [SerializeField] private List<string> chunkIds;
         public GameObject gridNode; 
         public GameObject nodePrefab;
 
         // these are the bounds of where we are searching in the world for tiles, have to use world coords to check for tiles in the tile map
         public int scanStartX = -100, scanStartY = -100, scanFinishX = 100, scanFinishY = 100, gridSizeX, gridSizeY;
-
         
         private List<WorldTile> unsortedTiles;
         public WorldTile[,] sortedTiles; // Sorted 2d array of tiles, may contain null entries
-        [HideInInspector] public int gridBoundX = 0, gridBoundY = 0; // used for  checking if boundary is reached during scan, preventing stack overflow error when adding cells to the unsortedTiles list
-
+        public int gridBoundX = 1000, gridBoundY = 1000; // used for  checking if boundary is reached during scan, preventing stack overflow error when adding cells to the unsortedTiles list
+        
         private void Start() {
+            gridBoundX = 1000;
+            gridBoundY = 1000;
+            Instance = this;
+            chunkIds = new List<string>();
+            unsortedTiles = new List<WorldTile>();
+            sortedTiles = new WorldTile[gridBoundX, gridBoundY];
+            
             grid = GetComponent<Grid>();
 
             // define grid size with scanStart and scanFinish (modifiable in inspector)
             gridSizeX = Mathf.Abs(scanStartX) + Mathf.Abs(scanFinishX);
             gridSizeY = Mathf.Abs(scanStartY) + Mathf.Abs(scanFinishY);
 
-            chunkGrids = GetLoadedChunkGrids();
-            // CreateGrid();
         }
-
-        private void CreateGrid() {
-            int gridX = 0, gridY = 0; // used to ensure we arent hitting the boundary of the scan area
-            bool foundTileOnLastPass = false;
-            unsortedTiles = new List<WorldTile>();
-
-            // loop through every tile according to grid position
-            for (int x = scanStartX; x < scanFinishX; x++) {
-                for (int y = scanStartY; y < scanFinishY; y++) {
-
-                    TileBase tile = floor.GetTile(new Vector3Int(x, y, 0));
-                    if (tile != null) {
-                        bool foundObstacle = false;
-
-                        // for each unwalkable layer, check if the tile occupies an unwalkable space, if so, we've found an obstacle
-                        foreach (Tilemap unwalkableLayer in unwalkableLayers) {
-                            TileBase tile2 = unwalkableLayer.GetTile(new Vector3Int(x, y, 0));
-                            if (tile2 != null) { foundObstacle = true; }
-                        }
-
-                        Vector3 worldPos = new Vector3(x + 0.5f + grid.transform.position.x, y + 0.5f + grid.transform.position.y, 0);
-                        Vector3Int cellPos = floor.WorldToCell(worldPos);
-                        WorldTile worldTile = new WorldTile(true, gridX, gridY, worldPos);
-                        worldTile.cellX = cellPos.x;
-                        worldTile.cellY = cellPos.y;
-
-                        // set a tile as walkable or not if foundObstacle is equal to true
-                        if (!foundObstacle) {
-                            foundTileOnLastPass = true;
-                            worldTile.walkable = true;
-                        } else {
-                            foundTileOnLastPass = true;
-                            worldTile.walkable = false;
-                        }
-
-                        unsortedTiles.Add(worldTile);
-
-                        gridY++;
-                        if (gridX > gridBoundX) {
-                            gridBoundX = gridX;
-                        }
-                        if (gridY > gridBoundY) {
-                            gridBoundY = gridY;
-                        }
-                    }
-
-                }
-                
-                if (foundTileOnLastPass) {
-                    gridX++;
-                    gridY = 0;
-                    foundTileOnLastPass = false;
+    
+        private void SortTiles() {
+            foreach (var tile in unsortedTiles) {
+                if (sortedTiles[tile.gridX, tile.gridY] == null) {
+                    sortedTiles[tile.gridX, tile.gridY] = tile;
                 }
             }
 
-            sortedTiles = new WorldTile[gridBoundX + 1, gridBoundY + 1];
-
-            foreach (WorldTile tile in unsortedTiles) {
-                sortedTiles[tile.gridX, tile.gridY] = tile;
-            }
             for (int x = 0; x < gridBoundX; x++) {
-                for (int y = 0; y < gridBoundY; y++) {
+                for (int y = 0; y < gridBoundY; y++) { 
                     if (sortedTiles[x, y] != null) {
                         sortedTiles[x, y].neighbours = GetNeighbours(x, y, gridBoundX, gridBoundY);
                     }
@@ -159,22 +109,33 @@ namespace Manapotion.Pathfinding {
         }
 
         public WorldTile WorldPositionToTile(Vector3 worldPosition) {
-            Vector3Int cellPosition = floor.WorldToCell(worldPosition);
-            WorldTile tile = sortedTiles[cellPosition.x, cellPosition.y];
-            return tile;
+            return sortedTiles[(int)worldPosition.x, (int)worldPosition.y];
         }
 
-        public List<ChunkGrid> GetLoadedChunkGrids() {
-            List<ChunkGrid> loadedChunkGrids = new List<ChunkGrid>();
-            GameObject[] grids = GameObject.FindGameObjectsWithTag("ChunkGrid");
-
-            foreach (GameObject grid in grids) {
-                ChunkGrid chunkGrid = grid.GetComponent<ChunkGrid>();
-                loadedChunkGrids.Add(chunkGrid);
-                Debug.Log(chunkGrid);
+        private void AddTilesToWorld(List<WorldTile> tiles, string chunkId) {
+            foreach (var tile in tiles) {
+                unsortedTiles.Add(tile);
             }
+            chunkIds.Add(chunkId);
 
-            return loadedChunkGrids;
+            // rebuild grid
+            SortTiles();
+        }
+
+        private bool IsChunkLoaded(string chunkId) {
+            if (chunkIds.Contains(chunkId)) {
+                return true;
+            }else {
+                return false;
+            }
+        }
+
+        public static void AddTilesToWorld_Static(List<WorldTile> tiles, string chunkId) {
+            Instance.AddTilesToWorld(tiles, chunkId);
+        }
+
+        public static bool IsChunkLoaded_Static(string chunkId) {
+            return Instance.IsChunkLoaded(chunkId);
         }
     }
 }

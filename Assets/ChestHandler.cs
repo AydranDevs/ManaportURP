@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChestHandler : InteractableBase {
     public LootTableData lootTable;
     public int tryForLoot = 1;
-    public SpriteRenderer renderer;
+    public SpriteRenderer spriteRenderer;
     public GameObject particleSys;
     
     public Sprite closedSprite;
@@ -49,14 +49,14 @@ public class ChestHandler : InteractableBase {
     }
 
     private void OpenChest() {
-        renderer.sprite = newlyOpenedSprite;
+        spriteRenderer.sprite = newlyOpenedSprite;
         _particleSys = Instantiate(particleSys, transform.position, Quaternion.identity, transform);
         particleSysActive = true;
         DropLoot();
     }
 
     private void MakeChestDormant() {
-        renderer.sprite = openedSprite;
+        spriteRenderer.sprite = openedSprite;
         _particleSys.GetComponentInChildren<ParticleSystem>().Stop();
         particleSysActive = false;
         dormant = true;

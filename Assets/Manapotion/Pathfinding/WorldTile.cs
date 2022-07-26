@@ -6,7 +6,7 @@ namespace Manapotion.Pathfinding {
     Class for tile used in Grid system
     */
     public class WorldTile {
-        private WorldGrid grid;
+        public int chunkX, chunkY;
         public int gridX, gridY, cellX, cellY;
         public Vector3 worldPos;
 
@@ -15,7 +15,6 @@ namespace Manapotion.Pathfinding {
         public int fCost;
 
         public WorldTile cameFromTile;
-        public WorldTile nextTile;
 
         public bool walkable = true;
         public List<WorldTile> neighbours;
@@ -24,29 +23,42 @@ namespace Manapotion.Pathfinding {
             fCost = gCost + hCost;
         }
 
-        public void GetNextTile() {
+        public WorldTile GetNextTile() {
+            WorldTile nextTile;
+
             foreach (WorldTile neighbour in neighbours) {
                 if (neighbour.cameFromTile != this) { continue; }
                 nextTile = neighbour;
-                return;
+                return nextTile;
             }
+
+            // this is likely the final tile in the path
+            return null;
         }
 
-        public Vector2 GetMovementVector() { // returns movement vector required to reach next tile
-            GetNextTile();
-            Vector2 movementVector = new Vector2(0, 0);
-            if (nextTile == null) { return movementVector; } // if no next tile, don't move
+        // returns the vector needed to get to next tile
+        public Vector3 GetMovmentDir() {
+            WorldTile next = GetNextTile();
+            // if (next == null) return Vector3.zero;
 
-            if (nextTile.gridX > gridX) { movementVector.x = 1; } else if (nextTile.gridX < gridX) { movementVector.x = -1; }
-            if (nextTile.gridY > gridY) { movementVector.y = 1; } else if (nextTile.gridY < gridY) { movementVector.y = -1; }
-            return movementVector;
+            float x = 0f;
+            float y = 0f;
+
+            if (next.gridX > gridX) { x = 1f; } else if (next.gridX < gridX) { x = -1f; }
+            if (next.gridY > gridY) { y = 1f; } else if (next.gridY < gridY) { y = -1f; }
+
+            return new Vector3(x, y, 0);  
         }
 
-        public WorldTile(bool _walkable, int _gridX, int _gridY, Vector3 _worldPos) {
-            walkable = _walkable;
-            gridX = _gridX;
-            gridY = _gridY;
+        public WorldTile(bool _walkable, int _gridX, int _gridY, Vector3 _worldPos, int _chunkX, int _chunkY) {
+            chunkX = _chunkX;
+            chunkY = _chunkY;
             worldPos = _worldPos;
+            walkable = _walkable;
+            gridX = _gridX + chunkX * 100;
+            gridY = _gridY + chunkY * 100;
+
+            // Debug.Log(gridX + ", " + gridY);
         }
 
         

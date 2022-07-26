@@ -35,14 +35,14 @@ public class ChunkDetails : MonoBehaviour {
 
     public void LoadChunk() {
         if (isLoaded) return;
-        Debug.Log("Loading " + gameObject.name);
+        // Debug.Log("Loading " + gameObject.name);
         SceneManager.LoadSceneAsync(gameObject.name, LoadSceneMode.Additive);
         isLoaded = true;
     }
 
     public void UnloadChunk() {
         if (!isLoaded) return;
-        Debug.Log("Loading " + gameObject.name);
+        // Debug.Log("Unloading " + gameObject.name);
         SceneManager.UnloadSceneAsync(gameObject.name);
         isLoaded = false;
     }

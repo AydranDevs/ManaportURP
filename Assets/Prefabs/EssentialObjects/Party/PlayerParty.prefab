@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1476012412549320405}
   - component: {fileID: 323739659032081781}
+  - component: {fileID: 6353062231603198672}
   - component: {fileID: 323739659032081780}
   m_Layer: 8
   m_Name: MirabelleInput
@@ -45,6 +46,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   provider: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
+--- !u!114 &6353062231603198672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323739659032081783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6abbbbe1cb32ba48ba1ec32e34ec8c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  provider: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
 --- !u!114 &323739659032081780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +88,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4653062472834927636}
   - component: {fileID: 4653062472834927642}
-  - component: {fileID: 4653062472834927637}
   m_Layer: 8
   m_Name: MirabelleCollider
   m_TagString: Untagged
@@ -122,32 +135,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7489767, y: 0.18557715}
   m_EdgeRadius: 0
---- !u!61 &4653062472834927637
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4653062472834927639}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.74895036, y: 1.8774747}
-  m_EdgeRadius: 0
 --- !u!1 &4653062473120931618
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +146,7 @@ GameObject:
   - component: {fileID: 4653062473120931619}
   - component: {fileID: 4653062473120931617}
   - component: {fileID: 4653062473120931616}
+  - component: {fileID: 1766890477}
   m_Layer: 0
   m_Name: PlayerParty
   m_TagString: Untagged
@@ -223,18 +211,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WorldCursor, Assembly-CSharp
-        m_MethodName: OnPrimaryCast
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 323739659032081781}
         m_TargetAssemblyTypeName: PartyNamespace.MirabelleNamespace.MirabellePlayerInput,
           Assembly-CSharp
@@ -269,18 +245,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PartyNamespace.LaurieNamespace.LauriePlayerInput,
           Assembly-CSharp
         m_MethodName: OnSecondary
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: WorldCursor, Assembly-CSharp
-        m_MethodName: OnSecondaryCast
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -457,6 +421,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TooltipHandler, Assembly-CSharp
+        m_MethodName: OnMouseMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: f4b28910-1294-4ac0-9bcb-53b7c92fb656
     m_ActionName: Player/MousePosition[/Mouse/position]
   - m_PersistentCalls:
@@ -542,6 +518,94 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e55cca3b-f08c-49b1-a471-66b846394669
     m_ActionName: Player/Next[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Inventory.InventoryUI, Assembly-CSharp
+        m_MethodName: OnToggleBag
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4878e56c-cded-4fa5-84b1-f25c8b0fc2b2
+    m_ActionName: Player/ToggleInventory[/Keyboard/b]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Inventory.InventoryUI, Assembly-CSharp
+        m_MethodName: OnToggleEquip
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6e9f8615-5be2-4d40-a9eb-8ce74447a060
+    m_ActionName: Player/ToggleEquip[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Inventory.InventoryUI, Assembly-CSharp
+        m_MethodName: OnToggleBeastiary
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a01bf15e-fb80-42e5-bdbe-a5d58523069b
+    m_ActionName: Player/ToggleBeastiary[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3107066305245821689}
+        m_TargetAssemblyTypeName: CharacterInteractionHandler, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8362760783660087162}
+        m_TargetAssemblyTypeName: CharacterInteractionHandler, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5844575275489569882}
+        m_TargetAssemblyTypeName: CharacterInteractionHandler, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 676582d2-5d0b-42d2-bc4e-fc13852eea3e
+    m_ActionName: Player/Interact[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: KeyboardAndMouse
   m_DefaultActionMap: Player
@@ -567,6 +631,18 @@ MonoBehaviour:
   - {fileID: 4653062474530352088}
   - {fileID: 4653062474753859898}
   maxDistance: 0
+--- !u!114 &1766890477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062473120931618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ee567e09a3f954599105467386f392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4653062473165030203
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +653,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4653062473165030200}
   - component: {fileID: 4653062473165030206}
-  - component: {fileID: 4653062473165030201}
   m_Layer: 8
   m_Name: LaurieCollision
   m_TagString: Untagged
@@ -624,32 +699,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 0.625}
-  m_EdgeRadius: 0
---- !u!61 &4653062473165030201
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4653062473165030203}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.03103292}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2.3169267}
   m_EdgeRadius: 0
 --- !u!1 &4653062473277581978
 GameObject:
@@ -708,7 +757,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 1164130
+  m_InstanceId: 61898
 --- !u!1 &4653062473373116180
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +860,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 1164146
+  m_InstanceId: 61914
 --- !u!1 &4653062473510949495
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,7 +917,7 @@ MonoBehaviour:
   - {x: -0.4399349, y: -0.81787723, z: 0}
   m_ShapePathHash: 1207389597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 1164150
+  m_InstanceId: 61918
 --- !u!1 &4653062473524273189
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +1006,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4653062473526711252}
   - component: {fileID: 4653062473526711258}
-  - component: {fileID: 4653062473526711253}
   m_Layer: 8
   m_Name: MirabelleCollider
   m_TagString: Untagged
@@ -1005,32 +1053,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7489767, y: 0.18557715}
   m_EdgeRadius: 0
---- !u!61 &4653062473526711253
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4653062473526711255}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.74895036, y: 1.8774747}
-  m_EdgeRadius: 0
 --- !u!1 &4653062473991981256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,6 +1063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4653062473991981257}
   - component: {fileID: 4653062473991981263}
+  - component: {fileID: 6349427041879252902}
   - component: {fileID: 4653062473991981262}
   m_Layer: 8
   m_Name: WinsleyInput
@@ -1073,6 +1096,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c24100cf4bd20814fa988a32dc242bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  provider: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
+--- !u!114 &6349427041879252902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062473991981256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47fd78bf69a30fc4590548e031f0db74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   provider: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
@@ -1275,7 +1311,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1411,6 +1447,7 @@ GameObject:
   - component: {fileID: 4653062474263521415}
   - component: {fileID: 4653062474263521412}
   - component: {fileID: 3107066305245821689}
+  - component: {fileID: 1353201914}
   m_Layer: 8
   m_Name: Laurie
   m_TagString: PlayerPartyMember
@@ -1426,7 +1463,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474263521409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 106.09, y: 1.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4653062473524273194}
@@ -1499,9 +1536,9 @@ MonoBehaviour:
   skidThreshold: 8
   abilityState: 0
   auxilaryMovementType: 0
-  primarySpellType: 1
+  primarySpellType: 2
   primarySpellElement: 0
-  secondarySpellType: 1
+  secondarySpellType: 2
   secondarySpellElement: 0
   state: 0
   healthBar: {fileID: 0}
@@ -1546,6 +1583,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5f102558687734fae03792375dbae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactablesList: []
+--- !u!61 &1353201914
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062474263521409}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.03103292}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.3169267}
+  m_EdgeRadius: 0
 --- !u!1 &4653062474517209005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1620,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4653062474517208978}
   - component: {fileID: 4653062474517208979}
+  - component: {fileID: 1189060764}
+  - component: {fileID: 1189060765}
+  - component: {fileID: 1189060766}
   m_Layer: 8
   m_Name: WinsleyAnimator
   m_TagString: Untagged
@@ -1597,7 +1664,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1618,7 +1685,7 @@ SpriteRenderer:
   m_SortingLayerID: -458034991
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a39f84469619db146ad07ec8f6f74098, type: 3}
+  m_Sprite: {fileID: 7990915128693025996, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1629,6 +1696,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1189060764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062474517209005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6697aa0d3dbd3994a868fd95c18e8029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1189060765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062474517209005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 11400000, guid: c9e3ab6646f38414eb8c2c56f6082c57, type: 2}
+  renderer: {fileID: 4653062474517208979}
+  fps: 12
+  temporaryDrivers: []
+--- !u!114 &1189060766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062474517209005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b330b302c69005c4f98a928f7d71b877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrderBase: 5000
+  offset: -1
+  runOnlyOnce: 0
 --- !u!1 &4653062474530352088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1751,7 @@ GameObject:
   - component: {fileID: 4653062474530352089}
   - component: {fileID: 4653062474530352095}
   - component: {fileID: 8362760783660087162}
+  - component: {fileID: 1966671000351986232}
   m_Layer: 8
   m_Name: Mirabelle
   m_TagString: PlayerPartyMember
@@ -1656,7 +1767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474530352088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 101.4, y: 1.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1476012412549320405}
@@ -1756,6 +1867,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5f102558687734fae03792375dbae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactablesList: []
+--- !u!61 &1966671000351986232
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062474530352088}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.74895036, y: 1.8774747}
+  m_EdgeRadius: 0
 --- !u!1 &4653062474753859898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,6 +1906,7 @@ GameObject:
   - component: {fileID: 4653062474753859899}
   - component: {fileID: 4653062474753859897}
   - component: {fileID: 5844575275489569882}
+  - component: {fileID: 715232346444246143}
   m_Layer: 8
   m_Name: Winsley
   m_TagString: PlayerPartyMember
@@ -1783,7 +1922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474753859898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 103.78, y: 1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4653062473991981257}
@@ -1883,6 +2022,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5f102558687734fae03792375dbae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactablesList: []
+--- !u!61 &715232346444246143
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653062474753859898}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.74895036, y: 1.8774747}
+  m_EdgeRadius: 0
 --- !u!1 &4653062474866712413
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,7 +2148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sortingOrderBase: 5000
-  offset: 2
+  offset: -1
   runOnlyOnce: 0
 --- !u!114 &4653062474866712384
 MonoBehaviour:

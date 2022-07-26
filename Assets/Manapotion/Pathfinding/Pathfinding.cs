@@ -7,6 +7,7 @@ namespace Manapotion.Pathfinding {
     Class for A* Pathfinding
     */
     public class Pathfinding {
+        private static Pathfinding Instance;
 
         private const int MOVE_STRAIGHT_COST = 10;
         private const int MOVE_DIAGONAL_COST = 14;
@@ -15,10 +16,15 @@ namespace Manapotion.Pathfinding {
         private static List<WorldTile> openList;
         private static List<WorldTile> closedList;
 
-        public static List<WorldTile> FindPath(WorldGrid grid, Vector3 startPosition, Vector3 endPosition) {
+        public Pathfinding() {
+            Instance = this;
+        }
+
+        private List<WorldTile> FindPath(WorldGrid grid, Vector3 startPosition, Vector3 endPosition) {
             WorldTile startTile = grid.WorldPositionToTile(startPosition);
             WorldTile endTile = grid.WorldPositionToTile(endPosition);
-            
+            // Debug.Log(string.Format("calculating path from ({0}, {1}) to ({2}, {3})", startTile.gridX, startTile.gridY, endTile.gridX, endTile.gridY));
+
             openList = new List<WorldTile>();
             closedList = new List<WorldTile>();
 
@@ -28,9 +34,11 @@ namespace Manapotion.Pathfinding {
             for (int x = 0; x < grid.gridBoundX; x++) {
                 for (int y = 0; y < grid.gridBoundY; y++) {
                     WorldTile worldTile = grid.sortedTiles[x, y];
-                    worldTile.gCost = 99999;
-                    worldTile.CalculateFCost();
-                    worldTile.cameFromTile = null;
+                    if (worldTile != null) {
+                        worldTile.gCost = 99999;
+                        worldTile.CalculateFCost();
+                        worldTile.cameFromTile = null;
+                    }
                 }
             }
 
@@ -73,7 +81,7 @@ namespace Manapotion.Pathfinding {
             return null;
         }
 
-        private static List<WorldTile> CalculatePath(WorldTile endTile) {
+        private List<WorldTile> CalculatePath(WorldTile endTile) {
             List<WorldTile> path = new List<WorldTile>();
             path.Add(endTile);
             WorldTile currentTile = endTile;
@@ -85,14 +93,14 @@ namespace Manapotion.Pathfinding {
             return path;
         }
 
-        private static int CalculateDistanceCost(WorldTile a, WorldTile b) {
+        private int CalculateDistanceCost(WorldTile a, WorldTile b) {
             int xDist = Mathf.Abs(a.gridX - b.gridX);
             int yDist = Mathf.Abs(a.gridY - b.gridY);
             int remaining = Mathf.Abs(xDist - yDist);
             return MOVE_DIAGONAL_COST * Mathf.Min(xDist, yDist) + MOVE_STRAIGHT_COST * remaining;
         }
 
-        private static WorldTile GetLowestFCostTile(List<WorldTile> tiles) {
+        private WorldTile GetLowestFCostTile(List<WorldTile> tiles) {
             WorldTile lowestFCostTile = tiles[0];
             for (int i = 1; i < tiles.Count; i++) {
                 if (tiles[i].fCost < lowestFCostTile.fCost) {
@@ -101,5 +109,9 @@ namespace Manapotion.Pathfinding {
             }
             return lowestFCostTile;
         }   
+
+        public static List<WorldTile> FindPath_Static(WorldGrid grid, Vector3 startPosition, Vector3 endPosition) {
+            return Instance.FindPath(grid, startPosition, endPosition);
+        }
     }
 }

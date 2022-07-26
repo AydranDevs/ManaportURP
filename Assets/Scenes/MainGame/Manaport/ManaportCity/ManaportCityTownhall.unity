@@ -100645,7 +100645,7 @@ GameObject:
   - component: {fileID: 829009484}
   - component: {fileID: 829009483}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: ManaportCityTownhall_Grid
   m_TagString: ChunkGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100667,12 +100667,10 @@ MonoBehaviour:
   unwalkableLayers:
   - {fileID: 774393455}
   gridNode: {fileID: 829009482}
-  scanStartX: -100
-  scanStartY: -100
-  scanFinishX: 100
-  scanFinishY: 100
   gridSizeX: 0
   gridSizeY: 0
+  chunkX: 0
+  chunkY: 0
   gridBoundX: 0
   gridBoundY: 0
 --- !u!156049354 &829009484

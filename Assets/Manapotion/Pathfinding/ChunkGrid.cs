@@ -12,13 +12,20 @@ namespace Manapotion.Pathfinding {
         public GameObject gridNode;
 
         // these are the bounds of where we are searching in the world for tiles, have to use world coords to check for tiles in the tile map
-        public int scanStartX = -100, scanStartY = -100, scanFinishX = 100, scanFinishY = 100, gridSizeX, gridSizeY;
+        private int scanStartX = 0, scanStartY = 0, scanFinishX = 100, scanFinishY = 100;
+        public int gridSizeX, gridSizeY;
+        public int chunkX, chunkY;
         
         private List<WorldTile> unsortedTiles;
         public WorldTile[,] sortedTiles; // Sorted 2d array of tiles, may contain null entries
         [HideInInspector] public int gridBoundX = 0, gridBoundY = 0; // used for  checking if boundary is reached during scan, preventing stack overflow error when adding cells to the unsortedTiles list
         
         private void Start() {
+            chunkX = (int)transform.position.x / 100;
+            chunkY = (int)transform.position.y / 100;
+
+            if (WorldGrid.IsChunkLoaded_Static(this.gameObject.name)) return;
+            
             grid = GetComponent<Grid>();
 
             // define grid size with scanStart and scanFinish (modifiable in inspector)
@@ -26,6 +33,7 @@ namespace Manapotion.Pathfinding {
             gridSizeY = Mathf.Abs(scanStartY) + Mathf.Abs(scanFinishY);
 
             CreateGrid();
+            WorldGrid.AddTilesToWorld_Static(unsortedTiles, this.gameObject.name);
         }
 
         private void CreateGrid() {
@@ -36,7 +44,6 @@ namespace Manapotion.Pathfinding {
             // loop through every tile according to grid position
             for (int x = scanStartX; x < scanFinishX; x++) {
                 for (int y = scanStartY; y < scanFinishY; y++) {
-
                     TileBase tile = floor.GetTile(new Vector3Int(x, y, 0));
                     if (tile != null) {
                         bool foundObstacle = false;
@@ -49,7 +56,7 @@ namespace Manapotion.Pathfinding {
 
                         Vector3 worldPos = new Vector3(x + 0.5f + grid.transform.position.x, y + 0.5f + grid.transform.position.y, 0);
                         Vector3Int cellPos = floor.WorldToCell(worldPos);
-                        WorldTile worldTile = new WorldTile(true, gridX, gridY, worldPos);
+                        WorldTile worldTile = new WorldTile(true, gridX, gridY, worldPos, chunkX, chunkY);
                         worldTile.cellX = cellPos.x;
                         worldTile.cellY = cellPos.y;
 
@@ -81,81 +88,6 @@ namespace Manapotion.Pathfinding {
                     foundTileOnLastPass = false;
                 }
             }
-
-            sortedTiles = new WorldTile[gridBoundX + 1, gridBoundY + 1];
-
-            foreach (WorldTile tile in unsortedTiles) {
-                sortedTiles[tile.gridX, tile.gridY] = tile;
-            }
-            for (int x = 0; x < gridBoundX; x++) {
-                for (int y = 0; y < gridBoundY; y++) {
-                    if (sortedTiles[x, y] != null) {
-                        sortedTiles[x, y].neighbours = GetNeighbours(x, y, gridBoundX, gridBoundY);
-                    }
-                }
-            }
-        }
-
-        public List<WorldTile> GetNeighbours(int x, int y, int width, int height) {
-            List<WorldTile> myNeighbours = new List<WorldTile>();
-
-            if (x < width - 1) {
-                if (sortedTiles[x + 1, y]  != null) { // right
-                    WorldTile rightTile = sortedTiles[x + 1, y];
-                    myNeighbours.Add(rightTile);
-                }
-
-                if (y > 0) {
-                    if (sortedTiles[x + 1, y - 1]  != null) { // down right
-                        WorldTile downRightTile = sortedTiles[x + 1, y - 1];
-                        myNeighbours.Add(downRightTile);
-                    }
-                }
-            }
-            if (y > 0) {
-                if (sortedTiles[x, y - 1]  != null) { // down
-                    WorldTile downTile = sortedTiles[x, y - 1];
-                    myNeighbours.Add(downTile);
-                }
-                if (x > 0) {
-                    if (sortedTiles[x - 1, y - 1]  != null) { // down left
-                        WorldTile downLeftTile = sortedTiles[x - 1, y - 1];
-                        myNeighbours.Add(downLeftTile);
-                    }
-                }
-            }
-            if (x > 0) {
-                if (sortedTiles[x - 1, y]  != null) { // left
-                    WorldTile leftTile = sortedTiles[x - 1, y];
-                    myNeighbours.Add(leftTile);
-                }
-                if (y < height - 1) {
-                    if (sortedTiles[x - 1, y + 1]  != null) { // up left
-                        WorldTile upLeftTile = sortedTiles[x - 1, y + 1];
-                        myNeighbours.Add(upLeftTile);
-                    }
-                }
-            }
-            if (y < height - 1) {
-                if (sortedTiles[x, y + 1]  != null) { // up
-                    WorldTile upTile = sortedTiles[x, y + 1];
-                    myNeighbours.Add(upTile);
-                }
-                if (x < width - 1) {
-                    if (sortedTiles[x + 1, y + 1]  != null) { // up right
-                        WorldTile upRightTile = sortedTiles[x + 1, y + 1];
-                        myNeighbours.Add(upRightTile);
-                    }
-                } 
-            }
-            
-            return myNeighbours;
-        }
-
-        public WorldTile WorldPositionToTile(Vector3 worldPosition) {
-            Vector3Int cellPosition = floor.WorldToCell(worldPosition);
-            WorldTile tile = sortedTiles[cellPosition.x, cellPosition.y];
-            return tile;
         }
     }
 }

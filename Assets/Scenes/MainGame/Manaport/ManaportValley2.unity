@@ -101021,7 +101021,7 @@ GameObject:
   - component: {fileID: 1852280617}
   - component: {fileID: 1852280616}
   m_Layer: 0
-  m_Name: Grid
+  m_Name: ManaportValley2_Grid
   m_TagString: ChunkGrid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101043,12 +101043,10 @@ MonoBehaviour:
   unwalkableLayers:
   - {fileID: 1656289449}
   gridNode: {fileID: 1852280615}
-  scanStartX: -100
-  scanStartY: -100
-  scanFinishX: 100
-  scanFinishY: 100
   gridSizeX: 0
   gridSizeY: 0
+  chunkX: 0
+  chunkY: 0
   gridBoundX: 0
   gridBoundY: 0
 --- !u!156049354 &1852280617
