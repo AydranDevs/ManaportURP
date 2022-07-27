@@ -118,14 +118,14 @@ namespace PartyNamespace {
             public Party party;
 
             public MirabelleController controller;
-            //public LaurieCasting casting;
+            public MirabelleHealing healing;
             //public LaurieAbilities abilities;
 
             private void Awake() {
                 party = GetComponentInParent<Party>();
 
                 controller = GetComponentInChildren<MirabelleController>();
-                //casting = GetComponentInChildren<LaurieCasting>();
+                healing = GetComponentInChildren<MirabelleHealing>();
                 //abilities = GetComponentInChildren<LaurieAbilities>();
             }
 
@@ -198,6 +198,7 @@ namespace PartyNamespace {
             private void PartyLeaderCheck() {
                 if (party.partyLeader == PartyLeader.Mirabelle) {
                     gameObject.tag = "PlayerPartyLeader";
+                    healing.Refresh();
                     party.maxDistance = 3f;
                 }else {
                     gameObject.tag = "PlayerPartyMember";

@@ -757,7 +757,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 61898
+  m_InstanceId: 28796
 --- !u!1 &4653062473373116180
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 61914
+  m_InstanceId: 28812
 --- !u!1 &4653062473510949495
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +917,7 @@ MonoBehaviour:
   - {x: -0.4399349, y: -0.81787723, z: 0}
   m_ShapePathHash: 1207389597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 61918
+  m_InstanceId: 28816
 --- !u!1 &4653062473524273189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1773,7 @@ Transform:
   - {fileID: 1476012412549320405}
   - {fileID: 4653062474118148108}
   - {fileID: 4653062473526711252}
+  - {fileID: 4087469919965045361}
   m_Father: {fileID: 4653062473120931619}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2176,5 +2177,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 41762af03c418764dacb30d25fa4a1b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7186874358893396987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4087469919965045361}
+  - component: {fileID: 4040618396986448748}
+  m_Layer: 8
+  m_Name: MirabelleHealing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4087469919965045361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186874358893396987}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4653062474530352094}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4040618396986448748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7186874358893396987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0894867213eceba40b0b3f9fae10d20c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

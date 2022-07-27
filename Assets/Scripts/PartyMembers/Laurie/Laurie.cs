@@ -353,6 +353,7 @@ namespace PartyNamespace {
             private void PartyLeaderCheck() {
                 if (party.partyLeader == PartyLeader.Laurie) {
                     gameObject.tag = "PlayerPartyLeader";
+                    casting.Refresh();
                     party.maxDistance = 5f;
                 }else {
                     gameObject.tag = "PlayerPartyMember";

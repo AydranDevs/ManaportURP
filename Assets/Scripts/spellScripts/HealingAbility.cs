@@ -2,20 +2,21 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public struct SpellSpriteIcons {
-    public Sprite arcane;
-    public Sprite pyro;
-    public Sprite cryo;
-    public Sprite toxi;
-    public Sprite volt;
+public struct HealSpriteIcons {
+    public Sprite rejuvenating;
+    public Sprite warming;
+    public Sprite comforting;
+    public Sprite caring;
+    public Sprite loving;
 }
 
-public abstract class Spell : MonoBehaviour {
+public abstract class HealingAbility : MonoBehaviour {
     public int cost;
+    public float delay;
     public float cooldown;
-    public int damage;
+    // public int damage;
     public string spellId;
-    public SpellSpriteIcons icons;
+    public HealSpriteIcons icons;
 
     public bool coolingDown = false;
     public float cooldownTime;

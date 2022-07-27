@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace PartyNamespace {
@@ -22,7 +20,7 @@ namespace PartyNamespace {
             bool spellsFound;
 
             private void Start() {
-                gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
+                gameStateManager = GameStateManager.Instance;
                 primarySpellImage = GameObject.FindGameObjectWithTag("PrimaryIcon").GetComponent<PrimarySpellImage>();
                 secondarySpellImage = GameObject.FindGameObjectWithTag("SecondaryIcon").GetComponent<SecondarySpellImage>();
                 laurie = GetComponentInParent<Laurie>();
@@ -30,7 +28,13 @@ namespace PartyNamespace {
 
                 spells = GetComponentsInChildren<Spell>();
 
-                SetSpell(0, spells[1]);
+                SetSpell(0, spells[0]);
+                SetSpell(1, spells[0]);
+            }
+
+            public void Refresh() {
+                // retrieve saved spell info
+                SetSpell(0, spells[0]);
                 SetSpell(1, spells[0]);
             }
 

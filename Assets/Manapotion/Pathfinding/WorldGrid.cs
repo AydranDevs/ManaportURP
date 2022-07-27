@@ -8,6 +8,8 @@ namespace Manapotion.Pathfinding {
     */
     public class WorldGrid : MonoBehaviour {
         private static WorldGrid Instance;
+        public List<SetTileAtPosToUnwalkable> tileModifiers;
+
         private Grid grid;
         [SerializeField] private List<string> chunkIds;
         public GameObject gridNode; 
@@ -20,10 +22,13 @@ namespace Manapotion.Pathfinding {
         public WorldTile[,] sortedTiles; // Sorted 2d array of tiles, may contain null entries
         public int gridBoundX = 1000, gridBoundY = 1000; // used for  checking if boundary is reached during scan, preventing stack overflow error when adding cells to the unsortedTiles list
         
-        private void Start() {
+        private void Awake() {
             gridBoundX = 1000;
             gridBoundY = 1000;
+
             Instance = this;
+            tileModifiers = new List<SetTileAtPosToUnwalkable>();
+            
             chunkIds = new List<string>();
             unsortedTiles = new List<WorldTile>();
             sortedTiles = new WorldTile[gridBoundX, gridBoundY];
@@ -48,6 +53,16 @@ namespace Manapotion.Pathfinding {
                     if (sortedTiles[x, y] != null) {
                         sortedTiles[x, y].neighbours = GetNeighbours(x, y, gridBoundX, gridBoundY);
                     }
+                }
+            }
+
+            foreach (var tileMod in tileModifiers) {
+                WorldTile wt1 = WorldPositionToTile(tileMod.transform.position);
+                wt1.walkable = false;
+
+                foreach (var pos in tileMod.extraPositions) {
+                    WorldTile wt = WorldPositionToTile((Vector3)pos);
+                    wt.walkable = false;
                 }
             }
         }
