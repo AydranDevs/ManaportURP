@@ -1,5 +1,95 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &265180059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265180060}
+  - component: {fileID: 265180061}
+  - component: {fileID: 265180062}
+  m_Layer: 8
+  m_Name: Heals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &265180060
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265180059}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4087469919965045361}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265180061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265180059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a86380cf03e759c498536cca99b73c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  delay: 0
+  range: 0
+  cooldown: 0
+  rate: 0
+  heal: 0
+  spellId: 
+  icons:
+    rejuvenating: {fileID: 21300000, guid: 7f2f22630238fef44bd395112230673c, type: 3}
+    warming: {fileID: 21300000, guid: 085c67d4f1b190c48a0463ecff029104, type: 3}
+    comforting: {fileID: 21300000, guid: 247b2c2aff8ac644a96b1e48b4895abd, type: 3}
+    caring: {fileID: 21300000, guid: 6c5b5e7a0a639a343b7f0f54a5df482a, type: 3}
+    loving: {fileID: 21300000, guid: b7c676265aca5b04f89886a8025c9071, type: 3}
+  coolingDown: 0
+  cooldownTime: 0
+  particles:
+    rejuvenatingBeam: {fileID: 0}
+  _type: 
+  targetsInRange: []
+--- !u!114 &265180062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265180059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cfa3662b88aa648a4cd13ba9526318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  delay: 0
+  range: 0
+  cooldown: 0
+  rate: 0
+  heal: 0
+  spellId: 
+  icons:
+    rejuvenating: {fileID: 21300000, guid: fc88fa40e95473e44b80edab60836730, type: 3}
+    warming: {fileID: 21300000, guid: 81d923449ce9f5a4fa68949b3e4eb317, type: 3}
+    comforting: {fileID: 21300000, guid: c57226f9bcc3c9c46938c4a008dfa66c, type: 3}
+    caring: {fileID: 21300000, guid: 2c2900cc33d85424e826c2f12e6472db, type: 3}
+    loving: {fileID: 21300000, guid: c1ee69dd82f9895459f497f7f29feec9, type: 3}
+  coolingDown: 0
+  cooldownTime: 0
 --- !u!1 &323739659032081783
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +168,90 @@ MonoBehaviour:
   isDashing: 0
   reconstructedMovement: {x: 0, y: 0}
   sprintDuration: 0
+--- !u!1 &790790686599392545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1816724149678847808}
+  - component: {fileID: 6325346444437832267}
+  - component: {fileID: 831457611804762880}
+  m_Layer: 8
+  m_Name: Buffs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1816724149678847808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790790686599392545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4087469919965045361}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6325346444437832267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790790686599392545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e64f28e76d4357419ea8e44310b7f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  cooldown: 0
+  spellId: 
+  icons:
+    strengthening: {fileID: 0}
+    healing: {fileID: 0}
+    swiftening: {fileID: 0}
+    defending: {fileID: 0}
+    pyroWarming: {fileID: 0}
+    cryoChilling: {fileID: 0}
+    toxiSickening: {fileID: 0}
+    voltAmplifying: {fileID: 0}
+  coolingDown: 0
+  cooldownTime: 0
+--- !u!114 &831457611804762880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790790686599392545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d43e8096e433f418058c1bf2b82aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 0
+  cooldown: 0
+  spellId: 
+  icons:
+    strengthening: {fileID: 0}
+    healing: {fileID: 0}
+    swiftening: {fileID: 0}
+    defending: {fileID: 0}
+    pyroWarming: {fileID: 0}
+    cryoChilling: {fileID: 0}
+    toxiSickening: {fileID: 0}
+    voltAmplifying: {fileID: 0}
+  coolingDown: 0
+  cooldownTime: 0
 --- !u!1 &4653062472834927639
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +931,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28796
+  m_InstanceId: 102038
 --- !u!1 &4653062473373116180
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +1034,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28812
+  m_InstanceId: 102054
 --- !u!1 &4653062473510949495
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +1091,7 @@ MonoBehaviour:
   - {x: -0.4399349, y: -0.81787723, z: 0}
   m_ShapePathHash: 1207389597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 28816
+  m_InstanceId: 102058
 --- !u!1 &4653062473524273189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,7 +1637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474263521409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.09, y: 1.18, z: 0}
+  m_LocalPosition: {x: 102, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4653062473524273194}
@@ -1487,11 +1661,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMemberState: 0
+  hitPointsMax: 20
+  hitPoints: 0
   xpLevel: 0
   xpMax: 0
   xp: 0
-  hitPointsMax: 20
-  hitPoints: 0
   stabilityMax: 1
   stability: 1
   stressMax: 1
@@ -1515,20 +1689,6 @@ MonoBehaviour:
   boltRes: 0
   toxiRes: 0
   arcaneRes: 0
-  isOnFire: 0
-  isFreezing: 0
-  isZapped: 0
-  isPoisoned: 0
-  isPyroBoosted: 0
-  isCryoBoosted: 0
-  isBoltBoosted: 0
-  isToxiBoosted: 0
-  isSpeedBoosted: 0
-  isCritBoosted: 0
-  isRegenerating: 0
-  isLashingOut: 0
-  isInvincible: 0
-  isAbsorbing: 0
   movementState: 0
   directionState: 4
   facingState: 2
@@ -1767,7 +1927,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474530352088}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 101.4, y: 1.14, z: 0}
+  m_LocalPosition: {x: 104, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1476012412549320405}
@@ -1790,11 +1950,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMemberState: 0
+  hitPointsMax: 20
+  hitPoints: 0
   xpLevel: 0
   xpMax: 0
   xp: 0
-  hitPointsMax: 20
-  hitPoints: 0
   stabilityMax: 1
   stability: 1
   stressMax: 1
@@ -1815,26 +1975,23 @@ MonoBehaviour:
   isFreezing: 0
   isZapped: 0
   isPoisoned: 0
-  isPyroBoosted: 0
-  isCryoBoosted: 0
-  isBoltBoosted: 0
-  isToxiBoosted: 0
-  isSpeedBoosted: 0
-  isCritBoosted: 0
-  isRegenerating: 0
-  isLashingOut: 0
-  isInvincible: 0
-  isAbsorbing: 0
   movementState: 0
   directionState: 4
   facingState: 2
   sprintModifier: 1.75
   skidThreshold: 8
+  abilityState: 0
+  healingEffect: 0
+  healingType: 0
+  buffEffect: 0
+  buffType: 0
   state: 0
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   party: {fileID: 0}
   controller: {fileID: 0}
+  miraRenderer: {fileID: 0}
+  healing: {fileID: 0}
 --- !u!50 &4653062474530352095
 Rigidbody2D:
   serializedVersion: 4
@@ -1923,7 +2080,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474753859898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 103.78, y: 1.15, z: 0}
+  m_LocalPosition: {x: 106, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4653062473991981257}
@@ -1945,11 +2102,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMemberState: 0
+  hitPointsMax: 20
+  hitPoints: 0
   xpLevel: 0
   xpMax: 0
   xp: 0
-  hitPointsMax: 20
-  hitPoints: 0
   stabilityMax: 1
   stability: 1
   stressMax: 1
@@ -1970,16 +2127,6 @@ MonoBehaviour:
   isFreezing: 0
   isZapped: 0
   isPoisoned: 0
-  isPyroBoosted: 0
-  isCryoBoosted: 0
-  isBoltBoosted: 0
-  isToxiBoosted: 0
-  isSpeedBoosted: 0
-  isCritBoosted: 0
-  isRegenerating: 0
-  isLashingOut: 0
-  isInvincible: 0
-  isAbsorbing: 0
   movementState: 0
   directionState: 4
   facingState: 2
@@ -2206,7 +2353,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 265180060}
+  - {fileID: 1816724149678847808}
   m_Father: {fileID: 4653062474530352094}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2222,3 +2371,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0894867213eceba40b0b3f9fae10d20c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healingAbility: {fileID: 0}
+  buffAbility: {fileID: 0}
+  heals: []
+  buffs: []
+  healingAbilityType: rejuvenating
+  buffAbilityEffect: strengthening

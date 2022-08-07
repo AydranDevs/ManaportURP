@@ -2483,9 +2483,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d8480a629b753489bc8eedf1c36734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  cooldown: {fileID: 0}
-  spellLock: {fileID: 0}
+  image: {fileID: 7345883940412745871}
+  cooldown: {fileID: 5279958913728249814}
+  spellLock: {fileID: 9052391571228143331}
 --- !u!1 &7345883941050573885
 GameObject:
   m_ObjectHideFlags: 0

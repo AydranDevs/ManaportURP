@@ -389,8 +389,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cee4533581d195e40aa03267db29cb2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floor: {fileID: 0}
-  unwalkableLayers: []
+  tileModifiers: []
+  chunkIds: []
   gridNode: {fileID: 3880455879348137568}
   nodePrefab: {fileID: 0}
   scanStartX: -100

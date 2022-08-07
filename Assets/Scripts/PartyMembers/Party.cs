@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,9 @@ namespace PartyNamespace {
     public enum PartyLeader { Laurie, Mirabelle, Winsley }
 
     public class Party : MonoBehaviour {
+        public static Party Instance;
+
+        public static Action OnPartyLeaderChanged;
         
         public PartyLeader partyLeader;
         public GameObject previousLeader;
@@ -17,6 +21,10 @@ namespace PartyNamespace {
         private PartyCam cam;
 
         public float maxDistance;
+
+        private void Awake() {
+            Instance = this;
+        }
 
         private void Start() {
             cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PartyCam>();
@@ -63,7 +71,7 @@ namespace PartyNamespace {
         }
 
         private void PartyLeaderChanged() {
-            foreach (GameObject member in members) {
+            foreach (var member in members) {
                 PartyMember partyMember = member.GetComponent<PartyMember>();
                 if (member == members[(int)partyLeader]) {
                     partyMember.partyMemberState = PartyMemberState.CurrentLeader; 
@@ -73,6 +81,22 @@ namespace PartyNamespace {
                     partyMember.partyMemberState = PartyMemberState.OldestLeader;
                 }
             }
+
+            if (OnPartyLeaderChanged != null) { OnPartyLeaderChanged(); }
+        }
+
+        private PartyMember StaticReturner_GetCurrentLeader() {
+            foreach (var member in members) {
+                var pm = member.GetComponent<PartyMember>();
+                if (pm.partyMemberState == PartyMemberState.CurrentLeader) {
+                    return pm;
+                }
+            }
+            return members[0].GetComponent<PartyMember>();
+        }
+
+        public static PartyMember GetCurrentLeader() {
+            return Instance.StaticReturner_GetCurrentLeader();
         }
 
         private void Update() {

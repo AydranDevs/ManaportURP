@@ -25,5 +25,5 @@ public abstract class BuffAbility : MonoBehaviour {
     public float cooldownTime;
 
     // redefinable function called from derived classes
-    public virtual void Cast(Vector2 direction, string element) { }
+    public virtual void Cast(string effect) { }
 }

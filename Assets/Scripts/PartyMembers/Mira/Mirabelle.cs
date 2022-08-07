@@ -7,31 +7,20 @@ namespace PartyNamespace {
         public enum MovementState { Idle, Push, Walk, Sprint, Dash, Skid, AuxilaryMovement }
         public enum DirectionState { North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest }
         public enum FacingState { North, East, South, West }
-        public enum AbilityState { None, AuxilaryMovement, SpellcastPrimary, SpellcastSecondary }
+        public enum AbilityState { None, AuxilaryMovement, Healing, Buffing }
         public enum AuxilaryMovementType { Spindash, BlinkDash, Pounce }
 
-        public enum PrimarySpellType { Automa, Blasteur, Burston }
-        public enum PrimarySpellElement { Arcane, Pyro, Cryo, Toxi, Volt }
-        public enum SecondarySpellType { Automa, Blasteur, Burston }
-        public enum SecondarySpellElement { Arcane, Pyro, Cryo, Toxi, Volt }
+        public enum HealingEffect { Showera, Spray }
+        public enum HealingType { Rejuvenating, Warming, Comforting, Caring, Loving }
+        public enum BuffEffect { Showera, Spray }
+        public enum BuffType { Strengthening, Healing, Swiftening, Defending, PyroWarming, CryoChilling, ToxiSickening, VoltAmplifying }
 
-        public enum State { Movement, Attack, AuxMove }
+        public enum State { Movement, Umbrella }
+        public enum UmbrellaState {  OpeningUmbrella, UmbrellaOpened, ClosingUmbrella, UmbrellaClosed }
 
         public class Mirabelle : PartyMember {
 
             #region Attributes
-                
-            // Player experience point values
-            [Header("Experience Points")]
-            public float xpLevel;
-            public float xpMax;
-            public float xp;
-            
-            // Player health point values
-            [Header("Hit Points")]
-            public const float HIT_POINTS_MAX_DEFAULT = 20f;
-            public float hitPointsMax = 20f;
-            public float hitPoints;
 
             // Player stability point values
             [Header("Stability Points")]
@@ -80,26 +69,6 @@ namespace PartyNamespace {
             public bool isFreezing = false;
             public bool isZapped = false;
             public bool isPoisoned = false;
-
-            // Buffs
-            [Header("Buffs")]
-            public bool isPyroBoosted = false; // Provides a bit of defense against pyro - increases damage dealt by pyro spells
-            public bool isCryoBoosted = false; // Provides a bit of defense against cryo - increases damage dealt by cryo spells
-            public bool isBoltBoosted = false; // Provides a bit of defense against bolt - increases damage dealt by bolt spells
-            public bool isToxiBoosted = false; // Provides a bit of defense against toxi - increases damage dealt by toxi spells
-
-            [Tooltip("increases the player's movement speed and sprint modifier by a set amount")]
-            public bool isSpeedBoosted = false;
-            [Tooltip("Increases crit chance and crit damage of all spells by a set amount")]
-            public bool isCritBoosted = false;
-            [Tooltip("Regenerates a fixed amount of health over a fixed amount of time")]
-            public bool isRegenerating = false;
-            [Tooltip("Increases overall damage and makes the player nearly 'invinicible', all damage taken is added together and instead taken over time. Similar to Payday 2's Stoic. also causes some visual things you'll see later.")]
-            public bool isLashingOut = false;
-            [Tooltip("Makes the player invulnerable to ALL types of damage for a short amount of time")]
-            public bool isInvincible = false;
-            [Tooltip("Converts all damage taken to shield for a short amount of time")]
-            public bool isAbsorbing = false;
             
             #endregion
 
@@ -110,7 +79,17 @@ namespace PartyNamespace {
             public float sprintModifier = 1.75f; 
             public float skidThreshold = 8f; 
 
+            // Abilities
+            public AbilityState abilityState = AbilityState.None;
+            
+            public HealingEffect healingEffect = HealingEffect.Showera;
+            public HealingType healingType = HealingType.Rejuvenating;
+
+            public BuffEffect buffEffect = BuffEffect.Showera;
+            public BuffType buffType = BuffType.Strengthening; 
+
             public State state = State.Movement;
+            public UmbrellaState umbrellaState = UmbrellaState.UmbrellaClosed;
 
             public HealthBarScript healthBar;
             public ManaBarScript manaBar;
@@ -118,23 +97,22 @@ namespace PartyNamespace {
             public Party party;
 
             public MirabelleController controller;
+            public MirabelleRenderer miraRenderer;
             public MirabelleHealing healing;
             //public LaurieAbilities abilities;
 
             private void Awake() {
+                base.Start();
                 party = GetComponentInParent<Party>();
 
                 controller = GetComponentInChildren<MirabelleController>();
+                miraRenderer = GetComponentInChildren<MirabelleRenderer>();
                 healing = GetComponentInChildren<MirabelleHealing>();
                 //abilities = GetComponentInChildren<LaurieAbilities>();
             }
 
             private void Start() {
                 healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
-
-                hitPointsMax = HIT_POINTS_MAX_DEFAULT;
-                
-                MaxHP();
         
                 pushSp = defaultPushSp;
                 walkSp = defaultwalkSp;
@@ -149,9 +127,9 @@ namespace PartyNamespace {
                 PartyLeaderCheck();
             }
 
-            public void MaxHP() {
-                hitPoints = hitPointsMax;
-            }
+            // public void MaxHP() {
+            //     hitPoints.Max();
+            // }
 
             public void AddXP(string type, float amount) {
                 if (type == "points") {
@@ -173,7 +151,7 @@ namespace PartyNamespace {
             }
         
             private void Update() {
-                if (hitPoints <= 0f) {
+                if (hitPoints.value <= 0f) {
                     Die();
                     return;
                 }
@@ -184,11 +162,11 @@ namespace PartyNamespace {
             }
 
             public void Damage(float damage) {
-                hitPoints = hitPoints - damage;
+                hitPoints.value = hitPoints.value - damage;
             }
 
             private void UpdateHealthBar() {
-                healthBar.SetHealth(hitPoints);
+                healthBar.SetHealth(hitPoints.value);
             }
 
             public void Die() {
@@ -198,7 +176,6 @@ namespace PartyNamespace {
             private void PartyLeaderCheck() {
                 if (party.partyLeader == PartyLeader.Mirabelle) {
                     gameObject.tag = "PlayerPartyLeader";
-                    healing.Refresh();
                     party.maxDistance = 3f;
                 }else {
                     gameObject.tag = "PlayerPartyMember";
@@ -215,7 +192,7 @@ namespace PartyNamespace {
             }
 
             public void Debug_MaxHP() {
-                hitPoints = hitPointsMax;
+                hitPoints.value = hitPointsMax;
             }
 
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.StatusEffects;
 
 namespace PartyNamespace {
     namespace LaurieNamespace {
@@ -22,18 +23,6 @@ namespace PartyNamespace {
             private static Laurie Instance;
 
             #region Attributes
-                
-            // Player experience point values
-            [Header("Experience Points")]
-            public float xpLevel;
-            public float xpMax;
-            public float xp;
-            
-            // Player health point values
-            [Header("Hit Points")]
-            public const float HIT_POINTS_MAX_DEFAULT = 20f;
-            public float hitPointsMax = 20f;
-            public float hitPoints;
 
             // Player stability point values
             [Header("Stability Points")]
@@ -84,33 +73,6 @@ namespace PartyNamespace {
             public float boltRes = 0.00f;
             public float toxiRes = 0.00f;
             public float arcaneRes = 0.00f;
-
-            // Debuffs
-            [Header("Debuffs")]
-            public bool isOnFire = false;
-            public bool isFreezing = false;
-            public bool isZapped = false;
-            public bool isPoisoned = false;
-
-            // Buffs
-            [Header("Buffs")]
-            public bool isPyroBoosted = false; // Provides a bit of defense against pyro - increases damage dealt by pyro spells
-            public bool isCryoBoosted = false; // Provides a bit of defense against cryo - increases damage dealt by cryo spells
-            public bool isBoltBoosted = false; // Provides a bit of defense against bolt - increases damage dealt by bolt spells
-            public bool isToxiBoosted = false; // Provides a bit of defense against toxi - increases damage dealt by toxi spells
-
-            [Tooltip("increases the player's movement speed and sprint modifier by a set amount")]
-            public bool isSpeedBoosted = false;
-            [Tooltip("Increases crit chance and crit damage of all spells by a set amount")]
-            public bool isCritBoosted = false;
-            [Tooltip("Regenerates a fixed amount of health over a fixed amount of time")]
-            public bool isRegenerating = false;
-            [Tooltip("Increases overall damage and makes the player nearly 'invinicible', all damage taken is added together and instead taken over time. Similar to Payday 2's Stoic. also causes some visual things you'll see later.")]
-            public bool isLashingOut = false;
-            [Tooltip("Makes the player invulnerable to ALL types of damage for a short amount of time")]
-            public bool isInvincible = false;
-            [Tooltip("Converts all damage taken to shield for a short amount of time")]
-            public bool isAbsorbing = false;
             
             #endregion
             
@@ -152,6 +114,7 @@ namespace PartyNamespace {
             public const float MANA_REGEN_TIMER_DEFAULT = 1f;
 
             private void Awake() {
+                base.Start();
                 Instance = this;
 
                 party = GetComponentInParent<Party>();
@@ -165,10 +128,8 @@ namespace PartyNamespace {
                 healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
                 manaBar = GameObject.FindGameObjectWithTag("ManaBar").GetComponent<ManaBarScript>();
 
-                hitPointsMax = HIT_POINTS_MAX_DEFAULT;
                 manaPointsMax = MANA_POINTS_MAX_DEFAULT;
                 
-                MaxHP();
                 MaxMP();
 
                 abilityCooldownLimit = 2f;
@@ -193,9 +154,9 @@ namespace PartyNamespace {
                 PartyLeaderCheck();
             }
 
-            public void MaxHP() {
-                hitPoints = hitPointsMax;
-            }
+            // public void MaxHP() {
+            //     hitPoints.Max();
+            // }
 
             public void MaxMP() {
                 manaPoints = manaPointsMax;
@@ -238,7 +199,7 @@ namespace PartyNamespace {
             }
 
             private void Update() {
-                if (hitPoints <= 0f) {
+                if (hitPoints.value <= 0f) {
                     Die();
                     return;
                 }
@@ -258,11 +219,11 @@ namespace PartyNamespace {
             }
 
             public void Damage(float damage) {
-                hitPoints = hitPoints - damage;
+                hitPoints.value = hitPoints.value - damage;
             }
 
             private void UpdateHealthBar() {
-                healthBar.SetHealth(hitPoints);
+                healthBar.SetHealth(hitPoints.value);
             }
 
             public void UseMana(float amount) {
@@ -273,7 +234,7 @@ namespace PartyNamespace {
             }
 
             public float ManaPointsAfterUse(float amount) {
-            return manaPoints - amount;
+                return manaPoints - amount;
             }
 
             private void UpdateManaBar() {
@@ -286,7 +247,7 @@ namespace PartyNamespace {
             }
 
             public void Debug_MaxHP() {
-                hitPoints = hitPointsMax;
+                hitPoints.value = hitPointsMax;
             }
 
             public void Debug_SetMaxMP(float mp) {
@@ -353,7 +314,6 @@ namespace PartyNamespace {
             private void PartyLeaderCheck() {
                 if (party.partyLeader == PartyLeader.Laurie) {
                     gameObject.tag = "PlayerPartyLeader";
-                    casting.Refresh();
                     party.maxDistance = 5f;
                 }else {
                     gameObject.tag = "PlayerPartyMember";

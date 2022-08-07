@@ -55,16 +55,6 @@ namespace Manapotion.Pathfinding {
                     }
                 }
             }
-
-            foreach (var tileMod in tileModifiers) {
-                WorldTile wt1 = WorldPositionToTile(tileMod.transform.position);
-                wt1.walkable = false;
-
-                foreach (var pos in tileMod.extraPositions) {
-                    WorldTile wt = WorldPositionToTile((Vector3)pos);
-                    wt.walkable = false;
-                }
-            }
         }
 
         public List<WorldTile> GetNeighbours(int x, int y, int width, int height) {

@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: UmbrellaMirabelleWalkSouth
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -4763088934872272137, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -2214530016984193202, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -571000522152876944, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -5441957601495044211, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -7618028363911942911, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 1746733974450797848, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: umbrellaWalk
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 784d3765-4b74-403f-a267-9022f671e26d
+  drivers:
+    keys: []
+    values: 

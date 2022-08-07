@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: MirabelleAbilitySwitch
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 71ef431162b114c469a1f6157b4a24cd, type: 2}
+  - {fileID: 11400000, guid: 8b9c92ac3e32af247a729f1633420cd9, type: 2}
+  - {fileID: 0}
+  controlDriver:
+    name: abilityType
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 1dac51aa-db6e-4b34-9861-6cd20863e86c
+  drivers:
+    keys: []
+    values: 

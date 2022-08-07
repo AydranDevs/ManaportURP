@@ -1,17 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace Manapotion.ManaBehaviour {
     
     public class ManaBehaviour : MonoBehaviour {
-
-        public virtual void InitializePartyMember() {}
+        private static ManaBehaviour instance = null;
         
-        public virtual void PathfindingUpdate() {}
+        public static Action OnStart;
+        public static Action OnUpdate;
+ 
+        void Awake() {
+            if ( instance == null ) {
+                instance = this;
+            }
+        }
 
-        private void Update() {
-            
+        void Start() {
+            if ( OnStart != null ) OnStart();
+        }
+ 
+        void Update() {
+            if ( OnUpdate != null ) OnUpdate();
+        }
+
+        void _DestroyObject(GameObject g, float d) {
+            Destroy(g, d);
+        }
+
+        public static void DestroyObject(GameObject g, float d) {
+            instance._DestroyObject(g, d);
         }
     }
 }

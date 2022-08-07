@@ -44,6 +44,9 @@ namespace PartyNamespace {
                 movementDirection = provider.inputState.movementDirection;
                 _isSprinting = provider.inputState.isSprinting;
 
+                if (mirabelle.umbrellaState == UmbrellaState.OpeningUmbrella || mirabelle.umbrellaState == UmbrellaState.ClosingUmbrella) { movementDirection = new Vector2(0, 0); }
+                if (mirabelle.state == State.Movement && (mirabelle.abilityState == AbilityState.Healing || mirabelle.abilityState == AbilityState.Buffing)) { _isSprinting = false; }
+
                 Move(Time.fixedDeltaTime);
             }
 
@@ -94,7 +97,7 @@ namespace PartyNamespace {
             }
 
             public void OnPrimary_PrimaryCast() {
-                //casting.PrimaryCast();
+                mirabelle.healing.CastHeal();
             }
 
             public void OnSecondary_SecondaryCast() {

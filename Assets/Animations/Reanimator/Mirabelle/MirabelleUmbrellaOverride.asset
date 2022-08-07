@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be19956832124e7fa78f325c15e8f32f, type: 3}
+  m_Name: MirabelleUmbrellaOverride
+  m_EditorClassIdentifier: 
+  next: {fileID: 11400000, guid: 492b3fe39369e384e8691e22e4e99785, type: 2}
+  overrides:
+  - fromNode: {fileID: 11400000, guid: 6465c130413f47a4cb2f71ada252b691, type: 2}
+    toNode: {fileID: 11400000, guid: 3b19ba5422a7c014ca3a54637cfeadfa, type: 2}
+  - fromNode: {fileID: 11400000, guid: 8d8349026ca108e4a89331c55c8b8e75, type: 2}
+    toNode: {fileID: 11400000, guid: 98c22560fee99264083f79afad75547f, type: 2}
+  - fromNode: {fileID: 11400000, guid: b4b660b7abe59eb4fb2ad7749d78abe8, type: 2}
+    toNode: {fileID: 11400000, guid: f22d89f33f03aeb40b28422a39dbf0bb, type: 2}
+  - fromNode: {fileID: 11400000, guid: 1a97042966445a34ab6803d16394bf4f, type: 2}
+    toNode: {fileID: 11400000, guid: 394093a365951ee4fb67af411b1e09d0, type: 2}
+  - fromNode: {fileID: 11400000, guid: f3614f4cc04f7dc45b5bb030a6f60896, type: 2}
+    toNode: {fileID: 11400000, guid: a4d1ba597f79a6a419f552f96d86bddc, type: 2}
+  - fromNode: {fileID: 11400000, guid: 7ceee2b6e391e574d80e0fd1a4aa0c5f, type: 2}
+    toNode: {fileID: 11400000, guid: 77ee7365a1746e441bf974540616fd76, type: 2}
+  - fromNode: {fileID: 11400000, guid: df9accc12fc41b844b2ba456470adffa, type: 2}
+    toNode: {fileID: 11400000, guid: eeccce59de7d2a44a966df0c1d3bd428, type: 2}
+  - fromNode: {fileID: 11400000, guid: 61f72425f94de9c42ba3dbf9ebc7c880, type: 2}
+    toNode: {fileID: 11400000, guid: 4e21b8de25c5b2742af700478dfe70d0, type: 2}
+  - fromNode: {fileID: 11400000, guid: 71ef431162b114c469a1f6157b4a24cd, type: 2}
+    toNode: {fileID: 11400000, guid: 71ef431162b114c469a1f6157b4a24cd, type: 2}

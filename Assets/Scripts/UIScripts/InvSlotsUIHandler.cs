@@ -22,15 +22,21 @@ public class InvSlotsUIHandler : MonoBehaviour
     public GameObject ingredientSlot;
     public GameObject materialSlot;
 
-    public bool[] slotsFilled = new bool[(int)ItemID.MAXCOUNT];
-    public GameObject[] slots = new GameObject[(int)ItemID.MAXCOUNT];
-    public ItemIcon[] itemIcons = new ItemIcon[(int)ItemID.MAXCOUNT];
+    public bool[] slotsFilled;
+    public GameObject[] slots;
+    public ItemIcon[] itemIcons;
+
+    private void Awake() {
+        slotsFilled = new bool[(int)ItemID.MAXCOUNT];
+        slots = new GameObject[(int)ItemID.MAXCOUNT];
+        itemIcons = new ItemIcon[(int)ItemID.MAXCOUNT];
+    }
 
     private void Start() {
         Instance = this;
         
         // initialize reference array
-        for (int i = 0; i < (int)ItemID.MAXCOUNT; i++) {
+        for (int i = 0; i < slotsFilled.Length; i++) {
             slotsFilled[i] = false; 
         }
         emptyImage.gameObject.SetActive(true);

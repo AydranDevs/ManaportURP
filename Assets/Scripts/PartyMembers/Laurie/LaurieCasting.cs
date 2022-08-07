@@ -32,12 +32,6 @@ namespace PartyNamespace {
                 SetSpell(1, spells[0]);
             }
 
-            public void Refresh() {
-                // retrieve saved spell info
-                SetSpell(0, spells[0]);
-                SetSpell(1, spells[0]);
-            }
-
             public void SetSpell(int slot, Spell spell) {
                 switch (slot) {
                     case 0:
@@ -86,6 +80,8 @@ namespace PartyNamespace {
             }
 
             void Update() {
+                if (laurie.party.partyLeader != PartyLeader.Laurie) return;
+                
                 switch (laurie.primarySpellElement) {
                     case PrimarySpellElement.Arcane:
                         primaryElement = Elements.Arcane;
