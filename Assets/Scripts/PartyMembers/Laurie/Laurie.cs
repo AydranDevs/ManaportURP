@@ -182,7 +182,7 @@ namespace PartyNamespace {
                 if (type == "points") {
                     xp += amount;
                 }else if (type == "levels") {
-                    xpLevel += amount;
+                    xpLevel += (int)amount;
                 }else {
                     Debug.Log("Error! incorrect xp type given. (Laurie.cs)");
                     return;
@@ -199,7 +199,7 @@ namespace PartyNamespace {
             }
 
             private void Update() {
-                if (hitPoints.value <= 0f) {
+                if (hitPoints.Empty()) {
                     Die();
                     return;
                 }

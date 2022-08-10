@@ -47,7 +47,7 @@ MonoBehaviour:
       - umbrellaOpenedEvent
       values: 00000000
   controlDriver:
-    name: showera
+    name: openUmbrella
     autoIncrement: 1
     percentageBased: 0
     guid: 9d9961e7-be42-4841-994b-e1af7902a9cc

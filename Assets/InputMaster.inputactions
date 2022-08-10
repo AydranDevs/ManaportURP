@@ -116,6 +116,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "caea9ad2-34ec-4337-b62a-148017668843",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -314,6 +322,17 @@
                     "processors": "",
                     "groups": "KeyboardAndMouse",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4b9390f2-1cfc-4b7b-926d-10a81b0e2cc3",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardAndMouse",
+                    "action": "Continue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

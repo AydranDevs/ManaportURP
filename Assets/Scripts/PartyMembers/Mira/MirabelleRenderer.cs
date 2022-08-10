@@ -50,9 +50,6 @@ namespace PartyNamespace {
                     () => { 
                         mirabelle.state = State.Movement;
                         mirabelle.umbrellaState = UmbrellaState.UmbrellaOpened;
-                        mirabelle.healing.openingUmbrella = false;
-                        mirabelle.healing.umbrellaOpened = true;
-
                         hasUmbrella = 1;
 
                         if (OnOpenUmbrella != null) OnOpenUmbrella();
@@ -64,8 +61,6 @@ namespace PartyNamespace {
                     () => { 
                         mirabelle.state = State.Movement;
                         mirabelle.umbrellaState = UmbrellaState.UmbrellaClosed;
-                        mirabelle.healing.closingUmbrella = false;
-                        mirabelle.healing.umbrellaClosed = true;
 
                         hasUmbrella = 0;
 
@@ -75,7 +70,6 @@ namespace PartyNamespace {
             }
 
             private void Update() {
-                
                 RenderUpdate();
             }
 
@@ -85,19 +79,13 @@ namespace PartyNamespace {
                 if (mirabelle.state == State.Movement) {
                     state = 0;
                 }else if (mirabelle.state == State.Umbrella) {
-                    if (mirabelle.healing.openingUmbrella) {
+                    if (mirabelle.umbrellaState == UmbrellaState.OpeningUmbrella) {
                         abilityState = 1;
-                    }else if (mirabelle.healing.closingUmbrella) {
+                    }else if (mirabelle.umbrellaState == UmbrellaState.ClosingUmbrella) {
                         abilityState = 0;
                     }
-                    
-                    
                     state = 1;
                 }
-
-
-                
-                
 
                 if (mirabelleController.movementDirection.Equals(new Vector2(0, 1))) { // north 
                         facingState = 0; // north

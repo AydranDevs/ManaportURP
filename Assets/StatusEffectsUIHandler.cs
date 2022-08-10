@@ -82,7 +82,7 @@ public class StatusEffectsUIHandler : MonoBehaviour {
         int i = 0;
         foreach (var m in mem.statuses) {
             statusViews.Add(Instantiate(statusPrefab, this.transform));
-            statusViews[i].GetComponent<StatusEffectPreviewUIHandler>().buffType = m.buffType;
+            // statusViews[i].GetComponent<StatusEffectPreviewUIHandler>().buffType = m.buffType;
             i++;
         }
     }

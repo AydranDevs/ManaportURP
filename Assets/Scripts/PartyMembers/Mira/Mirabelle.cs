@@ -10,10 +10,7 @@ namespace PartyNamespace {
         public enum AbilityState { None, AuxilaryMovement, Healing, Buffing }
         public enum AuxilaryMovementType { Spindash, BlinkDash, Pounce }
 
-        public enum HealingEffect { Showera, Spray }
-        public enum HealingType { Rejuvenating, Warming, Comforting, Caring, Loving }
-        public enum BuffEffect { Showera, Spray }
-        public enum BuffType { Strengthening, Healing, Swiftening, Defending, PyroWarming, CryoChilling, ToxiSickening, VoltAmplifying }
+        public enum HealingType { Showera, Spray }
 
         public enum State { Movement, Umbrella }
         public enum UmbrellaState {  OpeningUmbrella, UmbrellaOpened, ClosingUmbrella, UmbrellaClosed }
@@ -82,11 +79,8 @@ namespace PartyNamespace {
             // Abilities
             public AbilityState abilityState = AbilityState.None;
             
-            public HealingEffect healingEffect = HealingEffect.Showera;
-            public HealingType healingType = HealingType.Rejuvenating;
-
-            public BuffEffect buffEffect = BuffEffect.Showera;
-            public BuffType buffType = BuffType.Strengthening; 
+            public HealingType healingType = HealingType.Showera;
+            public PartyBuffs HealingEffect = PartyBuffs.Rejuvenated;
 
             public State state = State.Movement;
             public UmbrellaState umbrellaState = UmbrellaState.UmbrellaClosed;
@@ -135,7 +129,7 @@ namespace PartyNamespace {
                 if (type == "points") {
                     xp += amount;
                 }else if (type == "levels") {
-                    xpLevel += amount;
+                    xpLevel += (int)amount;
                 }else {
                     Debug.Log("Error! incorrect xp type given. (Mirabelle.cs)");
                     return;
@@ -151,7 +145,7 @@ namespace PartyNamespace {
             }
         
             private void Update() {
-                if (hitPoints.value <= 0f) {
+                if (hitPoints.Empty()) {
                     Die();
                     return;
                 }

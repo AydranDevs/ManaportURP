@@ -32,36 +32,36 @@ namespace PartyNamespace {
     }
     
     [System.Serializable]
-    public struct BuffParticles {
+    public struct StatusEffectParticles {
         public GameObject rejuvenatedBuffParticles;
     }
 
     public class PartyMember : MonoBehaviour {
         public PartyMemberState partyMemberState;
-        public BuffParticles buffParticles;
+        public StatusEffectParticles statusEffectParticles;
+        [SerializeField] private List<GameObject> _statusEffectParticles;
 
-        public List<Buff> buffs;
+        public List<Buff> statusEffects;
+
+        // experience point values
+        public int xpLevel;
+        public float xpMax;
+        public float xp;
 
         // health point values
         public float hitPointsMax = 20f;
         public Stat hitPoints;
 
-        // experience point values
-        public float xpLevel;
-        public float xpMax;
-        public float xp;
-
         public Stat attackDamage;
         public Stat attackSpeed;
 
-
         public void Start() {
             ManaBehaviour.OnUpdate += Update;
+            statusEffects = new List<Buff>();
+            _statusEffectParticles = new List<GameObject>();
 
             InitStats();
             MaxHP();
-
-            buffs = new List<Buff>();
         }
 
         private void InitStats() {
@@ -75,33 +75,54 @@ namespace PartyNamespace {
             hitPoints.Max();
         }
 
-        public void AddBuff(StatusEffect effect, int power, float duration) {
-            var buffToAdd = new Buff(effect, power, duration);
+        public void AddStatusEffect(StatusEffect effect, int power, float duration) {
+            var stEf = new Buff(effect, power, duration);
 
-            for (int i = 0; i < buffs.Count; i++) {
-                if (buffs[i].effect == buffToAdd.effect) {
-                    buffs[i].duration = duration;
-                    return;
+            if (StatusEffectsContains(stEf)) {
+                for (int i = 0; i < statusEffects.Count; i++) {
+                    if (statusEffects[i].effect.buffType == stEf.effect.buffType) {
+                        statusEffects[i].ResetTime();
+                        stEf = null;
+                        return;
+                    }
                 }
+            }else {
+                stEf.active = true;
+                stEf.Init(this);
+                statusEffects.Add(stEf);
             }
-
-            buffs.Add(buffToAdd);
-            buffToAdd.active = true;
-            buffToAdd.Init(this);
-            StatusEffectsUIHandler.Instance.AddStatus(this.gameObject, buffToAdd);
         }
 
         void Update() {
-            foreach (var buff in buffs) {
-                if (buff.active == false) {
-                    StatusEffectsUIHandler.Instance.RemoveStatus(this.gameObject, buff);
-                    buffs.Remove(buff);
-                }
+            // remove all statuses that arent active
+            if (statusEffects.Count >= 0 && statusEffects != null) {
+                statusEffects.RemoveAll(status => !status.active);
             }
         }
 
-        public GameObject SummonParticles(GameObject go, Transform parent) {
-            return Instantiate(go, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity, parent);
+        private bool StatusEffectsContains(Buff effect) {
+            bool b = false;
+
+            for (int i = 0; i < statusEffects.Count; i++) {
+                if (statusEffects[i].effect.buffType == effect.effect.buffType) {
+                    b = true;
+                    return b;
+                }
+            }
+
+            return b;
+        }
+
+        public void SummonParticles(GameObject g) {
+            var go = GameObject.Instantiate(g, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity, transform);
+            _statusEffectParticles.Add(go);
+        }
+
+        public void StopParticles(GameObject g) {
+            if (_statusEffectParticles.Contains(g)) {
+                int i = _statusEffectParticles.IndexOf(g);
+                Destroy(_statusEffectParticles[i]);
+            }
         }
     }
 }

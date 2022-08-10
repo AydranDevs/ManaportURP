@@ -7,6 +7,7 @@ namespace Manapotion.Status {
     /*
     class for managing a stat's info
     */
+    [System.Serializable]
     public class Stat {
         public PartyStats id;
         public float maxValue;
@@ -40,6 +41,10 @@ namespace Manapotion.Status {
 
         public void SetMaxValue(float num) {
             maxValue = num;
+        }
+
+        public bool Empty() {
+            return value == 0f;
         }
     }
 }

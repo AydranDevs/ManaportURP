@@ -7,6 +7,8 @@ public class MainUIHandler : MonoBehaviour
 {
     public static MainUIHandler Instance;
 
+    [SerializeField] private DimmerHandler dimmer;
+
     private bool statsHidden = false;
     private bool invHidden = false;
 
@@ -27,10 +29,10 @@ public class MainUIHandler : MonoBehaviour
     public void GameStateChanged(object sender, GameStateManager.OnGameStateChangedArgs e) {
         if (GameStateManager.Instance.state != GameState.Main) {
             HideStats();
-            DimmerHandler.Instance.FadeIn();
+            dimmer.FadeIn();
         }else {
             if (statsHidden) ShowStats();
-            DimmerHandler.Instance.FadeOut();
+            dimmer.FadeOut();
         }
     }
 }

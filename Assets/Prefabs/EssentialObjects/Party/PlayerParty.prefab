@@ -46,10 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 0
   delay: 0
-  range: 0
+  range: 10
   cooldown: 0
-  rate: 0
-  heal: 0
+  heal: 1
   spellId: 
   icons:
     rejuvenating: {fileID: 21300000, guid: 7f2f22630238fef44bd395112230673c, type: 3}
@@ -60,9 +59,7 @@ MonoBehaviour:
   coolingDown: 0
   cooldownTime: 0
   particles:
-    rejuvenatingBeam: {fileID: 0}
-  _type: 
-  targetsInRange: []
+    rejuvenatingBeam: {fileID: 1834610958131189290, guid: 9ea356910d1fa8a43b3599629da7afd3, type: 3}
 --- !u!114 &265180062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,7 +76,6 @@ MonoBehaviour:
   delay: 0
   range: 0
   cooldown: 0
-  rate: 0
   heal: 0
   spellId: 
   icons:
@@ -168,90 +164,6 @@ MonoBehaviour:
   isDashing: 0
   reconstructedMovement: {x: 0, y: 0}
   sprintDuration: 0
---- !u!1 &790790686599392545
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1816724149678847808}
-  - component: {fileID: 6325346444437832267}
-  - component: {fileID: 831457611804762880}
-  m_Layer: 8
-  m_Name: Buffs
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1816724149678847808
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790790686599392545}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4087469919965045361}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6325346444437832267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790790686599392545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e64f28e76d4357419ea8e44310b7f13, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  cooldown: 0
-  spellId: 
-  icons:
-    strengthening: {fileID: 0}
-    healing: {fileID: 0}
-    swiftening: {fileID: 0}
-    defending: {fileID: 0}
-    pyroWarming: {fileID: 0}
-    cryoChilling: {fileID: 0}
-    toxiSickening: {fileID: 0}
-    voltAmplifying: {fileID: 0}
-  coolingDown: 0
-  cooldownTime: 0
---- !u!114 &831457611804762880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790790686599392545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5d43e8096e433f418058c1bf2b82aa6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  cooldown: 0
-  spellId: 
-  icons:
-    strengthening: {fileID: 0}
-    healing: {fileID: 0}
-    swiftening: {fileID: 0}
-    defending: {fileID: 0}
-    pyroWarming: {fileID: 0}
-    cryoChilling: {fileID: 0}
-    toxiSickening: {fileID: 0}
-    voltAmplifying: {fileID: 0}
-  coolingDown: 0
-  cooldownTime: 0
 --- !u!1 &4653062472834927639
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,19 +329,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4653062473524273192}
         m_TargetAssemblyTypeName: PartyNamespace.LaurieNamespace.LauriePlayerInput,
-          Assembly-CSharp
-        m_MethodName: OnSecondary
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 323739659032081781}
-        m_TargetAssemblyTypeName: PartyNamespace.MirabelleNamespace.MirabellePlayerInput,
           Assembly-CSharp
         m_MethodName: OnSecondary
         m_Mode: 0
@@ -931,7 +830,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 102038
+  m_InstanceId: 455812
 --- !u!1 &4653062473373116180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +933,7 @@ MonoBehaviour:
   - {x: -0.4, y: -0.8, z: 0}
   m_ShapePathHash: 937172865
   m_Mesh: {fileID: 0}
-  m_InstanceId: 102054
+  m_InstanceId: 455828
 --- !u!1 &4653062473510949495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +990,7 @@ MonoBehaviour:
   - {x: -0.4399349, y: -0.81787723, z: 0}
   m_ShapePathHash: 1207389597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 102058
+  m_InstanceId: 455832
 --- !u!1 &4653062473524273189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  root: {fileID: 11400000, guid: 492b3fe39369e384e8691e22e4e99785, type: 2}
+  root: {fileID: 11400000, guid: 14c2b6124566cc843abff5674e2ac3f9, type: 2}
   renderer: {fileID: 4653062474118148109}
   fps: 12
   temporaryDrivers: []
@@ -1637,7 +1536,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474263521409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102, y: 4, z: 0}
+  m_LocalPosition: {x: 101.66, y: 1.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4653062473524273194}
@@ -1661,11 +1560,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMemberState: 0
-  hitPointsMax: 20
-  hitPoints: 0
+  statusEffectParticles:
+    rejuvenatedBuffParticles: {fileID: 11400000, guid: 2cd4811d9f01c554299c7754f2980866, type: 2}
+  statusEffects: []
   xpLevel: 0
   xpMax: 0
   xp: 0
+  hitPointsMax: 20
+  hitPoints:
+    id: 0
+    maxValue: 0
+    value: 0
+  attackDamage:
+    id: 0
+    maxValue: 0
+    value: 0
+  attackSpeed:
+    id: 0
+    maxValue: 0
+    value: 0
   stabilityMax: 1
   stability: 1
   stressMax: 1
@@ -1950,11 +1863,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMemberState: 0
-  hitPointsMax: 20
-  hitPoints: 0
+  statusEffectParticles:
+    rejuvenatedBuffParticles: {fileID: 11400000, guid: 2cd4811d9f01c554299c7754f2980866, type: 2}
+  statusEffects: []
   xpLevel: 0
   xpMax: 0
   xp: 0
+  hitPointsMax: 20
+  hitPoints:
+    id: 0
+    maxValue: 0
+    value: 0
+  attackDamage:
+    id: 0
+    maxValue: 0
+    value: 0
+  attackSpeed:
+    id: 0
+    maxValue: 0
+    value: 0
   stabilityMax: 1
   stability: 1
   stressMax: 1
@@ -1981,11 +1908,10 @@ MonoBehaviour:
   sprintModifier: 1.75
   skidThreshold: 8
   abilityState: 0
-  healingEffect: 0
   healingType: 0
-  buffEffect: 0
-  buffType: 0
+  HealingEffect: 0
   state: 0
+  umbrellaState: 3
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   party: {fileID: 0}
@@ -2080,7 +2006,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4653062474753859898}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 106, y: 4, z: 0}
+  m_LocalPosition: {x: 106.25, y: 2.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4653062473991981257}
@@ -2102,11 +2028,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partyMemberState: 0
-  hitPointsMax: 20
-  hitPoints: 0
+  statusEffectParticles:
+    rejuvenatedBuffParticles: {fileID: 11400000, guid: 2cd4811d9f01c554299c7754f2980866, type: 2}
+  statusEffects: []
   xpLevel: 0
   xpMax: 0
   xp: 0
+  hitPointsMax: 20
+  hitPoints:
+    id: 0
+    maxValue: 0
+    value: 0
+  attackDamage:
+    id: 0
+    maxValue: 0
+    value: 0
+  attackSpeed:
+    id: 0
+    maxValue: 0
+    value: 0
   stabilityMax: 1
   stability: 1
   stressMax: 1
@@ -2355,7 +2295,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 265180060}
-  - {fileID: 1816724149678847808}
   m_Father: {fileID: 4653062474530352094}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2372,8 +2311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healingAbility: {fileID: 0}
-  buffAbility: {fileID: 0}
   heals: []
-  buffs: []
   healingAbilityType: rejuvenating
-  buffAbilityEffect: strengthening
+  openingUmbrella: 0
+  umbrellaOpened: 0
+  closingUmbrella: 0
+  umbrellaClosed: 1

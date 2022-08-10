@@ -7,19 +7,26 @@ using Manapotion.ManaBehaviour;
 
 namespace Manapotion.StatusEffects {
     public class RejuvenatedBuff : StatusEffect {
-        public PartyBuffs buff = PartyBuffs.Rejuvenated;
         private float timeMax = 5f;
         private float time;
 
         private float healthRegen = 2f;
         private GameObject particles;
+        private PartyMember _afflictedMember;
+
+        public RejuvenatedBuff() {
+            buffType = PartyBuffs.Rejuvenated;
+        }
 
         public override void OnStart(PartyMember afflictedMember) {
+            _afflictedMember = afflictedMember;
             statsAffected = new List<Stat>();
             statsAffected.Add(afflictedMember.hitPoints);
 
-            particles = afflictedMember.SummonParticles(afflictedMember.buffParticles.rejuvenatedBuffParticles, afflictedMember.transform);
+            _afflictedMember.SummonParticles(_afflictedMember.statusEffectParticles.rejuvenatedBuffParticles);
             time = timeMax;
+
+            Debug.Log(afflictedMember);
         }
 
         public override void OnTick(float deltaTime) {
@@ -31,8 +38,7 @@ namespace Manapotion.StatusEffects {
         }
     
         public override void OnEnd() {
-            particles.GetComponent<ParticleSystem>().Stop();
-            Manapotion.ManaBehaviour.ManaBehaviour.DestroyObject(particles, 6f);
+            _afflictedMember.StopParticles(_afflictedMember.statusEffectParticles.rejuvenatedBuffParticles);
         }
     }
 }

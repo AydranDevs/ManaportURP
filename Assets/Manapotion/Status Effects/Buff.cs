@@ -8,14 +8,13 @@ namespace Manapotion.StatusEffects {
     
     [System.Serializable]
     public class Buff {
-        public PartyBuffs buffType;
         public StatusEffect effect;
         public int power = 1;
         public float duration;
+        public float time;
 
         public bool active { get; set; }
 
-        [SerializeField] public float time { get; private set; }
 
         public Buff(StatusEffect effect, int power, float duration) {
             this.effect = effect;
@@ -44,6 +43,10 @@ namespace Manapotion.StatusEffects {
                 active = false;
                 effect.OnEnd();
             }
+        }
+
+        public void ResetTime() {
+            time = duration;
         }
     }
 }

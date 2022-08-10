@@ -3,26 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class DimmerHandler : MonoBehaviour
-{
-    public static DimmerHandler Instance;
+public class DimmerHandler : MonoBehaviour {
     private CanvasGroup canvasGroup;
 
+    [SerializeField] private bool startAtAlphaZero = true;
+    [SerializeField] private float fadeInTime = 0.3f;
+    [SerializeField] private float fadeOutTime = 0.3f; 
+
     private void Start() {
-        Instance = this;
         canvasGroup = gameObject.GetComponent<CanvasGroup>();
-        canvasGroup.alpha = 0;
+
+        if (startAtAlphaZero) {
+            canvasGroup.alpha = 0;
+        }else {
+            canvasGroup.alpha = 1;
+        }
     }
 
     public void FadeIn() {
-        Debug.Log("dimmer activated");
         LTDescr tweenObject;
-        tweenObject = LeanTween.alphaCanvas(canvasGroup, 1, 0.3f);
+        tweenObject = LeanTween.alphaCanvas(canvasGroup, 1, fadeInTime);
+        Debug.Log("dimmer activated");
     }
 
     public void FadeOut() {
-        Debug.Log("dimmer deactivated");
         LTDescr tweenObject;
-        tweenObject = LeanTween.alphaCanvas(canvasGroup, 0, 0.3f);
+        tweenObject = LeanTween.alphaCanvas(canvasGroup, 0, fadeOutTime);
+        Debug.Log("dimmer deactivated");
     }
 }

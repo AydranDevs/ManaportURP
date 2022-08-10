@@ -129,6 +129,14 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Continue"",
+                    ""type"": ""Button"",
+                    ""id"": ""caea9ad2-34ec-4337-b62a-148017668843"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -329,6 +337,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b9390f2-1cfc-4b7b-926d-10a81b0e2cc3"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KeyboardAndMouse"",
+                    ""action"": ""Continue"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -368,6 +387,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_ToggleEquip = m_Player.FindAction("ToggleEquip", throwIfNotFound: true);
         m_Player_ToggleBeastiary = m_Player.FindAction("ToggleBeastiary", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_Continue = m_Player.FindAction("Continue", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -431,6 +451,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_ToggleEquip;
     private readonly InputAction m_Player_ToggleBeastiary;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_Continue;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -449,6 +470,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @ToggleEquip => m_Wrapper.m_Player_ToggleEquip;
         public InputAction @ToggleBeastiary => m_Wrapper.m_Player_ToggleBeastiary;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @Continue => m_Wrapper.m_Player_Continue;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -500,6 +522,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Continue.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnContinue;
+                @Continue.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnContinue;
+                @Continue.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnContinue;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -546,6 +571,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @Continue.started += instance.OnContinue;
+                @Continue.performed += instance.OnContinue;
+                @Continue.canceled += instance.OnContinue;
             }
         }
     }
@@ -575,5 +603,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnToggleEquip(InputAction.CallbackContext context);
         void OnToggleBeastiary(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnContinue(InputAction.CallbackContext context);
     }
 }
