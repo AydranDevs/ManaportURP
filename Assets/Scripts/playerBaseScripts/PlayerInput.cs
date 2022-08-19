@@ -8,7 +8,6 @@ public class PlayerInput : MonoBehaviour {
     private void Start() {
         gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
     }
-   
     
     public void OnMove(InputAction.CallbackContext context) {
         provider.inputState.movementDirection = context.ReadValue<Vector2>();

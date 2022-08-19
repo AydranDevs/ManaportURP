@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PartyNamespace;
+using Manapotion;
+using Manapotion.PartySystem;
 using Manapotion.Status;
-using Manapotion.ManaBehaviour;
 
 namespace Manapotion.StatusEffects {
     public class ComfortableBuff : StatusEffect {
@@ -18,8 +18,8 @@ namespace Manapotion.StatusEffects {
 
         public override void OnStart(PartyMember afflictedMember) {
             statsAffected = new List<Stat>();
-            statsAffected.Add(afflictedMember.attackDamage);
-            statsAffected.Add(afflictedMember.attackSpeed);
+            statsAffected.Add(afflictedMember.stats.attackDamage);
+            statsAffected.Add(afflictedMember.stats.attackSpeed);
             
             _attackDamage = statsAffected[0];
             _attackSpeed = statsAffected[1];

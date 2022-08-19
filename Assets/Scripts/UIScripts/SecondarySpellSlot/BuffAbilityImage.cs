@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using PartyNamespace.MirabelleNamespace;
+using Manapotion.PartySystem;
 
 public class BuffAbilityImage : MonoBehaviour {
     public Image image;

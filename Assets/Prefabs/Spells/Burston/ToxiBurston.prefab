@@ -9645,7 +9645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076952640063043624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.28, y: 1.14, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1076952639945136582}
@@ -9665,11 +9665,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601d432fa31e80f4f9a904471834bb9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPf: {fileID: 1314508669413792943, guid: 1da40370a8fd5624492bbc05ef4259a2, type: 3}
+  thisSpellProjectile: {fileID: 0}
+  rigidbody: {fileID: 0}
+  collider: {fileID: 0}
+  corePs: {fileID: 0}
+  trailPs: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
   speed: 15
   lifetime: 3
   damage: 4
+  explosionPf: {fileID: 1314508669413792943, guid: 1da40370a8fd5624492bbc05ef4259a2, type: 3}
 --- !u!50 &2166844470780892829
 Rigidbody2D:
   serializedVersion: 4

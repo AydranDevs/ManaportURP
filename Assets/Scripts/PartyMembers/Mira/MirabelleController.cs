@@ -2,116 +2,117 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PartyNamespace {
-    namespace MirabelleNamespace {
-        public class MirabelleController : MonoBehaviour {
-            [SerializeField] private InputProvider provider;
+namespace Manapotion.PartySystem.MirabelleCharacter
+{
+    public class MirabelleController : CharacterController
+    {
+        private Mirabelle _mirabelle;
+
+        private MirabellePartyInput _partyInput;
+        private MirabellePlayerInput _playerInput;
+
+        public MirabelleController(Mirabelle mirabelle)
+        {
+            _mirabelle = mirabelle;
             
-            private Mirabelle mirabelle;
-            private GameStateManager gameManager;
-            
-            public Vector2 movementDirection;
-            [SerializeField] private float movementSp;
-            [SerializeField] private bool _isSprinting;
-            [SerializeField] private bool isDashing;
+            rb = _mirabelle.GetComponent<Rigidbody2D>();
+            gameManager = GameStateManager.Instance;
 
+            _partyInput = new MirabellePartyInput(_mirabelle);
+            _playerInput = new MirabellePlayerInput(_mirabelle);
 
-            private Vector2 position;
-            
-            private Vector2 resultPosition;
-            private Vector2 targetPosition;
-            private Vector2 initialPosition;
-            private Vector2 targetDelta;
-            private Vector2 actualDelta;
+            provider = _mirabelle.inputProvider;
 
-            private float angle;
-            public Vector2 reconstructedMovement;
-            private Rigidbody2D rb;
+            provider.OnPrimary += OnPrimary_PrimaryCast;
+            provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
 
-            public float sprintDuration;
+            Party.OnPartyLeaderChanged += () =>
+            {
+                if (Party.Instance.previousLeader == _mirabelle.gameObject)
+                {
+                    movementDirection = Vector2.zero; 
+                }
+            };
+        }
 
-            private void Start() {
-                mirabelle = GetComponentInParent<Mirabelle>();
-                rb = GetComponentInParent<Rigidbody2D>();
-                gameManager = GameStateManager.Instance;
+        public void Update()
+        {
+            _partyInput.Update();
+            movementDirection = provider.inputState.movementDirection;
+            _isSprinting = provider.inputState.isSprinting;
 
-                provider.OnPrimary += OnPrimary_PrimaryCast;
-                provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+            if (_mirabelle.umbrellaState == UmbrellaState.OpeningUmbrella || _mirabelle.umbrellaState == UmbrellaState.ClosingUmbrella) { movementDirection = new Vector2(0, 0); }
+            if (_mirabelle.umbrellaState == UmbrellaState.UmbrellaOpened) 
+            {
+                _isSprinting = false;
             }
 
-            private void Update() {
-                movementDirection = provider.inputState.movementDirection;
-                _isSprinting = provider.inputState.isSprinting;
+            Move(Time.fixedDeltaTime);
+        }
 
-                if (mirabelle.umbrellaState == UmbrellaState.OpeningUmbrella || mirabelle.umbrellaState == UmbrellaState.ClosingUmbrella) { movementDirection = new Vector2(0, 0); }
-                if (mirabelle.umbrellaState == UmbrellaState.UmbrellaOpened) { _isSprinting = false; }
-
-                Move(Time.fixedDeltaTime);
+        private void Move(float d)
+        {
+            if (gameManager.state != GameState.Main) 
+            {
+                return;
+            }
+            
+            if (movementDirection.Equals(new Vector2(0, 0)))
+            {
+                _mirabelle.movementState = MovementState.Idle;
+                sprintDuration = 0f;
+                isDashing = false;
+                return;
             }
 
-            private void Move(float d) {
-                if (gameManager.state != GameState.Main) return;
-                
-                if (movementDirection.Equals(new Vector2(0, 0))) {
-                    mirabelle.movementState = MovementState.Idle;
-                    sprintDuration = 0f;
+            if (_isSprinting)
+            {
+                if (sprintDuration >= _mirabelle.dashThreshold)
+                {
+                    _mirabelle.movementState = MovementState.Dash;
+                    isDashing = true;
+                    movementSp = _mirabelle.stats.walkSp.value * _mirabelle.stats.dashMod.value;
+                }
+                else
+                {
+                    _mirabelle.movementState = MovementState.Sprint;
+                    movementSp = _mirabelle.stats.walkSp.value * _mirabelle.stats.sprintMod.value;
                     isDashing = false;
-                    return;
                 }
-
-                if (_isSprinting) {
-                    if (sprintDuration >= 7f) {
-                        mirabelle.movementState = MovementState.Dash;
-                        isDashing = true;
-                        movementSp = mirabelle.dashSp;
-                    }else {
-                        mirabelle.movementState = MovementState.Sprint;
-                        movementSp = mirabelle.sprintSp;
-                        isDashing = false;
-                    }
-                    sprintDuration += Time.deltaTime;
-                }else {
-                    mirabelle.movementState = MovementState.Walk;
-                    movementSp = mirabelle.walkSp;
-                    sprintDuration = 0f;
-                }
-
-                position = mirabelle.gameObject.transform.position;
-                position = PixelPerfectClamp(position, 16f);
-
-                angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
-
-                reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
-                reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
-                
-                rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d));
-                resultPosition = transform.position;
-
-                targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d);
-
-                targetDelta = targetPosition - initialPosition;
-                actualDelta = resultPosition - initialPosition;
-
-                initialPosition = transform.position;
+                sprintDuration += Time.deltaTime;
+            }
+            else
+            {
+                _mirabelle.movementState = MovementState.Walk;
+                movementSp = _mirabelle.stats.walkSp.value;
+                sprintDuration = 0f;
             }
 
-            public void OnPrimary_PrimaryCast() {
-                mirabelle.healing.Heal();
-            }
+            position = _mirabelle.gameObject.transform.position;
 
-            public void OnAuxMove_AuxillaryMovement() {
-                //abilities.AuxMove();
-            }
+            angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
+
+            reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
             
-            private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {
+            rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d));
+            resultPosition = _mirabelle.transform.position;
 
-                Vector2 vectorInPixels = new Vector2(
-                    Mathf.RoundToInt(moveVector.x * pixelsPerUnit),
-                    Mathf.RoundToInt(moveVector.y * pixelsPerUnit)
-                );
-                
-                return vectorInPixels / pixelsPerUnit;
-            }
+            targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d);
+
+            targetDelta = targetPosition - initialPosition;
+            actualDelta = resultPosition - initialPosition;
+
+            initialPosition = _mirabelle.transform.position;
+        }
+
+        public void OnPrimary_PrimaryCast()
+        {
+            _mirabelle.mirabelleHealing.Heal();
+        }
+
+        public void OnAuxMove_AuxillaryMovement()
+        {
+            //abilities.AuxMove();
         }
     }
 }

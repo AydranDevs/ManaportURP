@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Manapotion.ManaBehaviour;
-using PartyNamespace;
+using Manapotion;
+using Manapotion.PartySystem;
 
-namespace Manapotion.StatusEffects {
-    
+namespace Manapotion.StatusEffects
+{    
     [System.Serializable]
-    public class Buff {
+    public class Buff
+    {
         public StatusEffect effect;
         public int power = 1;
         public float duration;
@@ -15,37 +16,45 @@ namespace Manapotion.StatusEffects {
 
         public bool active { get; set; }
 
-
-        public Buff(StatusEffect effect, int power, float duration) {
+        public Buff(StatusEffect effect, int power, float duration)
+        {
             this.effect = effect;
             this.power = power;
             this.duration = duration;
 
             time = duration;
  
-            Manapotion.ManaBehaviour.ManaBehaviour.OnUpdate += Update;
+            ManaBehaviour.OnUpdate += Update;
         }
         
-        ~Buff() {
-            Manapotion.ManaBehaviour.ManaBehaviour.OnUpdate -= Update;
+        ~Buff()
+        {
+            ManaBehaviour.OnUpdate -= Update;
         }
         
-        public void Init(PartyMember member) {
+        public void Init(PartyMember member)
+        {
             effect.OnStart(member);
         }
 
-        void Update() {
-            if (!active) return;
+        void Update()
+        {
+            if (!active)
+            {
+                return;
+            }
 
             time -= Time.deltaTime;
             effect.OnTick(Time.deltaTime);
-            if (time <= 0f) {
+            if (time <= 0f)
+            {
                 active = false;
                 effect.OnEnd();
             }
         }
 
-        public void ResetTime() {
+        public void ResetTime()
+        {
             time = duration;
         }
     }

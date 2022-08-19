@@ -1,111 +1,147 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Manapotion.Pathfinding;
+using Manapotion.AStarPathfinding;
 
-namespace PartyNamespace {
-    namespace LaurieNamespace {
-        public class LauriePartyInput : MonoBehaviour {
-            private const int FRAMES_TO_CALC_PATH = 50;
-            private int frames = 0;
+namespace Manapotion.PartySystem.LaurieCharacter
+{
+    public class LauriePartyInput
+    {
+        private const int FRAMES_TO_CALC_PATH = 50;
+        private int _frames = 0;
 
+        private Party _party;
+        private Laurie _laurie;
+        private GameStateManager _gameStateManager;
+        private InputProvider _provider;
 
-            private Party party;
-            private Laurie laurie;
-            private Pathfinding pathfinding;
-            private GameStateManager gameStateManager;
-            [SerializeField] private InputProvider provider;
+        private GameObject _leader;
+        private Transform _leaderTransform;
 
-            private GameObject leader;
-            private Transform leaderTransform;
+        private WorldGrid _grid;
+        private List<WorldTile> _path;
+        private bool _goalReached = false;
 
-            private WorldGrid grid;
-            private List<WorldTile> path;
-            private bool goalReached = false;
+        public LauriePartyInput(Laurie laurie)
+        {
+            _laurie = laurie;
 
-            private void Start() {
-                laurie = GetComponentInParent<Laurie>();
-                party = laurie.party;
-                gameStateManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameStateManager>();
-                grid = GameObject.FindGameObjectWithTag("WorldGrid").GetComponent<WorldGrid>();
+            _party = _laurie.party;
+            _gameStateManager = GameStateManager.Instance;
+            _provider = _laurie.inputProvider;
 
-                path = new List<WorldTile>();
-                pathfinding = new Pathfinding();
+            _grid = GameObject.FindGameObjectWithTag("WorldGrid").GetComponent<WorldGrid>();
+
+            _path = new List<WorldTile>();
+        }
+
+        public void Update()
+        {
+            _frames++;
+            if (_frames == FRAMES_TO_CALC_PATH)
+            {
+                RecalcPath();
+                _frames = 0;
             }
 
-            private void Update() {
-                frames++;
-                if (frames == FRAMES_TO_CALC_PATH) {
-                    RecalcPath();
-                    frames = 0;
-                }
+            if (_party.partyLeader == PartyLeader.Laurie)
+            {
+                return;
+            }
+            
+            _leader = _party.members[(int)_party.partyLeader];
+            _leaderTransform = _leader.transform;
 
-                if (party.partyLeader == PartyLeader.Laurie) { return; }
-                
-                leader = party.members[(int)party.partyLeader];
-                leaderTransform = leader.transform;
+            if (_path != null && _path.Count > 0) 
+            {
+                PathfindingUpdate();
+            }
+        }
 
-                if (path != null && path.Count > 0) {
-                    PathfindingUpdate();
-                }
+
+        int pathIndex = 0;
+        private void RecalcPath()
+        {
+            if (_party.partyLeader == PartyLeader.Laurie)
+            {
+                return;
+            }
+            
+            _path = Pathfinding.FindPath(_grid, _laurie.transform.position, _leaderTransform.position);
+            _goalReached = false;
+            pathIndex = 0;
+        }
+
+        // runs when path isnt null
+        private void PathfindingUpdate() 
+        {
+            if (_goalReached)
+            {
+                return;
+            }
+            
+            if (Vector2.Distance(_laurie.transform.position, _leaderTransform.position) > _party.maxDistance)
+            {
+                _provider.inputState.isSprinting = true;
+            }
+            else
+            {
+                _provider.inputState.isSprinting = false;
             }
 
 
-            int pathIndex = 0;
-            private void RecalcPath() {
-                if (party.partyLeader == PartyLeader.Laurie) { return; }
-                
-                path = Pathfinding.FindPath_Static(grid, laurie.transform.position, leaderTransform.position);
-                goalReached = false;
-                pathIndex = 0;
+
+            // runs while the char is not at the target
+            if (_grid.WorldPositionToTile(_laurie.transform.position) != _path[pathIndex])
+            {
+                MoveToTile(_path[pathIndex]);
+                return;
             }
 
-            // runs when path isnt null
-            private void PathfindingUpdate() {
-                if (goalReached) { return; }
-                // Debug.Log(string.Format("current path: path from Point A at ({0}, {1}) to Point B at ({2}, {3})", path[0].gridX, path[0].gridY, path[path.Count - 1].gridX, path[path.Count - 1].gridY));
-                if (Vector2.Distance(laurie.transform.position, leaderTransform.position) > party.maxDistance) {
-                    provider.inputState.isSprinting = true;
-                }else {
-                    provider.inputState.isSprinting = false;
-                }
+            if (pathIndex == _path.Count - 1)
+            {
+                _provider.inputState.movementDirection = Vector2.zero;
+                _goalReached = true;
+            }
+            else
+            {
+                pathIndex++;
+                _goalReached = false;
+            }
+        }
 
+        private void MoveToTile(WorldTile tile)
+        {
+            WorldTile currentTile = _grid.WorldPositionToTile(_laurie.transform.position);
 
-
-                // runs while the char is not at the target
-                if (grid.WorldPositionToTile(laurie.transform.position) != path[pathIndex]) {
-                    MoveToTile(path[pathIndex]);
-                    return;
-                }
-
-                if (pathIndex == path.Count - 1) {
-                    provider.inputState.movementDirection = Vector2.zero;
-                    goalReached = true;
-                }else {
-                    pathIndex++;
-                    goalReached = false;
-                }
+            if (currentTile == tile)
+            {
+                return;
             }
 
-            private void MoveToTile(WorldTile tile) {
-                WorldTile currentTile = grid.WorldPositionToTile(laurie.transform.position);
+            if (currentTile.gridX > tile.gridX)
+            {
+                _provider.inputState.movementDirection.x = -1;
+            }
+            else if (currentTile.gridX < tile.gridX) 
+            {
+                _provider.inputState.movementDirection.x = 1;
+            }
+            else
+            {
+                _provider.inputState.movementDirection.x = 0;
+            }
 
-                if (currentTile == tile) return;
-
-                if (currentTile.gridX > tile.gridX) {
-                    provider.inputState.movementDirection.x = -1;
-                }else if (currentTile.gridX < tile.gridX) {
-                    provider.inputState.movementDirection.x = 1;
-                }else {
-                    provider.inputState.movementDirection.x = 0;
-                }
-
-                if (currentTile.gridY > tile.gridY) {
-                    provider.inputState.movementDirection.y = -1;
-                }else if (currentTile.gridY < tile.gridY) {
-                    provider.inputState.movementDirection.y = 1;
-                }else {
-                    provider.inputState.movementDirection.y = 0;
-                }
+            if (currentTile.gridY > tile.gridY) 
+            {
+                _provider.inputState.movementDirection.y = -1;
+            }
+            else if (currentTile.gridY < tile.gridY) 
+            {
+                _provider.inputState.movementDirection.y = 1;
+            }
+            else
+            {
+                _provider.inputState.movementDirection.y = 0;
             }
         }
     }

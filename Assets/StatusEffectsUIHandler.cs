@@ -2,9 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PartyNamespace;
+using Manapotion;
+using Manapotion.PartySystem;
 using Manapotion.StatusEffects;
-using Manapotion.ManaBehaviour;
 
 public class StatusEffectsUIHandler : MonoBehaviour {
     [HideInInspector] public static StatusEffectsUIHandler Instance;
@@ -44,7 +44,7 @@ public class StatusEffectsUIHandler : MonoBehaviour {
 
     private void Start() {
         Party.OnPartyLeaderChanged += RefreshView;
-        Manapotion.ManaBehaviour.ManaBehaviour.OnUpdate += Update;
+        ManaBehaviour.OnUpdate += Update;
         statusViews = new List<GameObject>();
         members = new List<MemberStatusEffectsUI>();
         

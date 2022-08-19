@@ -2,32 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ToxiBurston : MonoBehaviour {
-    private Rigidbody2D rb;
-    private CircleCollider2D collider;
-    private ParticleSystem corePs;
-    private ParticleSystem trailPs;
-
+public class ToxiBurston : SpellProjectile {
     public GameObject explosionPf;
     private GameObject explosion;
-
-    private GameObject thisBurston;
-
-    public Vector3 direction;
-    public float speed = 10;
-    public float lifetime = 3;
-    public float damage;
 
     private bool damageDealt = false;
     private bool hit = false;
 
     void Start() {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<CircleCollider2D>();
 
-        thisBurston = this.gameObject;
-        corePs = thisBurston.transform.GetChild(0).GetComponent<ParticleSystem>();
-        trailPs = thisBurston.transform.GetChild(1).GetComponent<ParticleSystem>();
+        thisSpellProjectile = this.gameObject;
+        corePs = thisSpellProjectile.transform.GetChild(0).GetComponent<ParticleSystem>();
+        trailPs = thisSpellProjectile.transform.GetChild(1).GetComponent<ParticleSystem>();
 
         StartCoroutine(StopParticles());
         StartCoroutine(DestroySpell());
@@ -35,8 +23,8 @@ public class ToxiBurston : MonoBehaviour {
 
     void Update() {
         if (direction != null) {
-            transform.position = transform.position + (direction * speed * Time.deltaTime);
-            
+            var d = direction.normalized * speed * Time.deltaTime;
+            transform.position = transform.position + d;   
         }
     }
 

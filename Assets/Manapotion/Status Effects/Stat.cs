@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PartyNamespace;
+using Manapotion.PartySystem;
 
 namespace Manapotion.Status {
     /*

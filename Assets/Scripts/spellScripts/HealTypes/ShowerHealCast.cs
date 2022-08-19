@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using PartyNamespace;
-using PartyNamespace.MirabelleNamespace;
+using Manapotion.PartySystem;
+using Manapotion.PartySystem.MirabelleCharacter;
 using Manapotion.StatusEffects;
 
 public class ShowerHealCast : HealingAbility {

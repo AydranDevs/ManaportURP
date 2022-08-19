@@ -19,7 +19,7 @@ public class BurstonCast : Spell {
             if (element == "pyro") {
                 if (pyroBurston) {
                     GameObject go = Instantiate(pyroBurston, transform.position, new Quaternion());
-                    var orb = go.GetComponent<PyroBurston>();
+                    var orb = go.GetComponent<SpellProjectile>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
                     speed = orb.speed;
@@ -28,7 +28,7 @@ public class BurstonCast : Spell {
             }else if (element == "cryo") {
                 if (cryoBurston) {
                     GameObject go = Instantiate(cryoBurston, transform.position, new Quaternion());
-                    var orb = go.GetComponent<CryoBurston>();
+                    var orb = go.GetComponent<SpellProjectile>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
                     speed = orb.speed;
@@ -37,7 +37,7 @@ public class BurstonCast : Spell {
             }else if (element == "toxi") {
                 if (toxiBurston) {
                     GameObject go = Instantiate(toxiBurston, transform.position, new Quaternion());
-                    var orb = go.GetComponent<ToxiBurston>();
+                    var orb = go.GetComponent<SpellProjectile>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
                     speed = orb.speed;
@@ -46,7 +46,7 @@ public class BurstonCast : Spell {
             }else if (element == "volt") {
                 if (voltBurston) {
                     GameObject go = Instantiate(voltBurston, transform.position, new Quaternion());
-                    var orb = go.GetComponent<VoltBurston>();
+                    var orb = go.GetComponent<SpellProjectile>();
                     orb.direction = direction;
                     orb.lifetime = lifetime;
                     speed = orb.speed;
@@ -55,7 +55,7 @@ public class BurstonCast : Spell {
             }else {
                 if (burston) {
                     GameObject go = Instantiate(burston, transform.position, new Quaternion());
-                    var orb = go.GetComponent<Burston>();
+                    var orb = go.GetComponent<SpellProjectile>();
                     orb.damage = damage;
                     orb.direction = direction;
                     orb.lifetime = lifetime;

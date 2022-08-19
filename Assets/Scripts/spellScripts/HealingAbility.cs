@@ -1,6 +1,6 @@
 using System;
 using UnityEngine;
-using PartyNamespace;
+using Manapotion.PartySystem;
 using Manapotion.StatusEffects;
 
 [Serializable]

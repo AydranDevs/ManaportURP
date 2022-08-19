@@ -20,17 +20,24 @@ namespace Manapotion.MainMenu {
     public class MainMenuManager : MonoBehaviour {
         public static MainMenuManager Instance = null;
 
+        [Header("Video")]
         [SerializeField] private VideoClip[] introSplashes;
         [SerializeField] private VideoPlayer videoPlayer;
-
         [SerializeField] private PlayableDirector playableDirector;
 
-        [SerializeField] private DimmerHandler blackScreen;
+        [Header("GameObjects")]
         [SerializeField] private GameObject devSplash;
+        [SerializeField] private GameObject startPrompt;
+        
+        [Header("Dimmers")]
+        [SerializeField] private DimmerHandler blackScreen;
+        [SerializeField] private DimmerHandler titleScreen;
+        [SerializeField] private DimmerHandler mainMenu;
 
         public MainMenuState mainMenuState { get; private set; }
 
-        [SerializeField] private GameObject startPrompt;
+        private bool canSkipIntro = false;
+        private bool atTitle = false;
 
         private void Awake() {
             if (Instance == null) {
@@ -54,12 +61,6 @@ namespace Manapotion.MainMenu {
             yield return new WaitForSeconds(2f);
             blackScreen.FadeOut();
             videoPlayer.Play();
-            // StartCoroutine(WaitToPlay());
-        }
-
-        IEnumerator WaitToPlay() {
-            yield return new WaitForSeconds(2f);
-            videoPlayer.Play();
         }
 
         public void Init() {
@@ -70,8 +71,13 @@ namespace Manapotion.MainMenu {
         public void StartPressed(InputAction.CallbackContext context) {
             if (!context.started) return;
 
-            mainMenuState = MainMenuState.Start_Pressed;
-            StartCoroutine(WaitToMoveToMainMenu());
+            if (canSkipIntro) {
+                playableDirector.time = 24.5;
+            }else if (atTitle) {
+                mainMenuState = MainMenuState.Start_Pressed;
+                StartCoroutine(WaitToMoveToMainMenu());
+            }
+
         }
 
         private float startPromptTimer = 0.5f;
@@ -80,9 +86,12 @@ namespace Manapotion.MainMenu {
             if (mainMenuState == MainMenuState.Inactive) {
                 if (videoPlayer.isPaused) {
                     devSplash.SetActive(true);
+                    canSkipIntro = true;
                     playableDirector.Play();
                 }
             }else if (mainMenuState == MainMenuState.Start) {
+                canSkipIntro = false;
+                atTitle = true;
                 startPromptTimer -= Time.deltaTime;
 
                 if (startPromptTimer <= 0f) {
@@ -103,6 +112,10 @@ namespace Manapotion.MainMenu {
             yield return new WaitForSeconds(1f);
             mainMenuState = MainMenuState.Main_Menu;
             startPrompt.SetActive(false);
+
+            titleScreen.FadeOut();
+            yield return new WaitForSeconds(1f);
+            mainMenu.FadeIn();
         }
     }
 }

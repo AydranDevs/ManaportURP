@@ -35,7 +35,8 @@ public class Automa : MonoBehaviour {
 
     void Update() {
         if (direction != null) {
-            transform.position = transform.position + (direction * speed * Time.deltaTime);
+            var d = direction.normalized * speed * Time.deltaTime;
+            transform.position = transform.position + d;   
         }
     }
 

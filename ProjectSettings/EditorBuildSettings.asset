@@ -33,4 +33,4 @@ EditorBuildSettings:
     path: Assets/Scenes/MainGame/Manaport/ManaportValley2.unity
     guid: ace3db239a031c642b97f1daff71e585
   m_configObjects:
-    com.unity.input.settings: {fileID: 11400000, guid: 7a1204003aee0124ab16e2129e44bb72, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 59544eb5a6e04634197f09ac4c9069b4, type: 2}

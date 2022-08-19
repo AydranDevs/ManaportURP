@@ -2,34 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VoltBurston : MonoBehaviour {
-    private Rigidbody2D rb;
-    private CircleCollider2D collider;
-    private ParticleSystem corePs;
+public class VoltBurston : SpellProjectile {
     private ParticleSystem lightningPs;
-    private ParticleSystem trailPs;
 
     public GameObject explosionPf;
     private GameObject explosion;
 
     private GameObject thisBurston;
 
-    public Vector3 direction;
-    public float speed = 10;
-    public float lifetime = 3;
-    public float damage;
-
     private bool damageDealt = false;
     private bool hit = false;
 
     void Start() {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<CircleCollider2D>();
 
-        thisBurston = this.gameObject;
-        corePs = thisBurston.transform.GetChild(0).GetComponent<ParticleSystem>();
-        lightningPs = thisBurston.transform.GetChild(1).GetComponent<ParticleSystem>();
-        trailPs = thisBurston.transform.GetChild(2).GetComponent<ParticleSystem>();
+        thisSpellProjectile = this.gameObject;
+        corePs = thisSpellProjectile.transform.GetChild(0).GetComponent<ParticleSystem>();
+        lightningPs = thisSpellProjectile.transform.GetChild(1).GetComponent<ParticleSystem>();
+        trailPs = thisSpellProjectile.transform.GetChild(2).GetComponent<ParticleSystem>();
 
         StartCoroutine(StopParticles());
         StartCoroutine(DestroySpell());
@@ -37,8 +28,8 @@ public class VoltBurston : MonoBehaviour {
 
     void Update() {
         if (direction != null) {
-            transform.position = transform.position + (direction * speed * Time.deltaTime);
-            
+            var d = direction.normalized * speed * Time.deltaTime;
+            transform.position = transform.position + d;   
         }
     }
 

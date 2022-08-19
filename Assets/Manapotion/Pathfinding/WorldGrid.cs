@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Manapotion.Pathfinding {
+namespace Manapotion.AStarPathfinding
+{
     /*
     Class for collecting all ChunkGrids into one large WorldGrid for pathfinding and such.
     */
-    public class WorldGrid : MonoBehaviour {
+    public class WorldGrid : MonoBehaviour
+    {
         private static WorldGrid Instance;
         public List<SetTileAtPosToUnwalkable> tileModifiers;
 
@@ -22,7 +24,8 @@ namespace Manapotion.Pathfinding {
         public WorldTile[,] sortedTiles; // Sorted 2d array of tiles, may contain null entries
         public int gridBoundX = 1000, gridBoundY = 1000; // used for  checking if boundary is reached during scan, preventing stack overflow error when adding cells to the unsortedTiles list
         
-        private void Awake() {
+        private void Awake()
+        {
             gridBoundX = 1000;
             gridBoundY = 1000;
 
@@ -41,69 +44,92 @@ namespace Manapotion.Pathfinding {
 
         }
     
-        private void SortTiles() {
-            foreach (var tile in unsortedTiles) {
-                if (sortedTiles[tile.gridX, tile.gridY] == null) {
+        private void SortTiles()
+        {
+            foreach (var tile in unsortedTiles)
+            {
+                if (sortedTiles[tile.gridX, tile.gridY] == null)
+                {
                     sortedTiles[tile.gridX, tile.gridY] = tile;
                 }
             }
 
-            for (int x = 0; x < gridBoundX; x++) {
-                for (int y = 0; y < gridBoundY; y++) { 
-                    if (sortedTiles[x, y] != null) {
+            for (int x = 0; x < gridBoundX; x++)
+            {
+                for (int y = 0; y < gridBoundY; y++)
+                { 
+                    if (sortedTiles[x, y] != null)
+                    {
                         sortedTiles[x, y].neighbours = GetNeighbours(x, y, gridBoundX, gridBoundY);
                     }
                 }
             }
         }
 
-        public List<WorldTile> GetNeighbours(int x, int y, int width, int height) {
+        public List<WorldTile> GetNeighbours(int x, int y, int width, int height)
+        {
             List<WorldTile> myNeighbours = new List<WorldTile>();
 
-            if (x < width - 1) {
-                if (sortedTiles[x + 1, y]  != null) { // right
+            if (x < width - 1)
+            {
+                if (sortedTiles[x + 1, y]  != null)
+                { // right
                     WorldTile rightTile = sortedTiles[x + 1, y];
                     myNeighbours.Add(rightTile);
                 }
 
-                if (y > 0) {
-                    if (sortedTiles[x + 1, y - 1]  != null) { // down right
+                if (y > 0)
+                {
+                    if (sortedTiles[x + 1, y - 1]  != null)
+                    { // down right
                         WorldTile downRightTile = sortedTiles[x + 1, y - 1];
                         myNeighbours.Add(downRightTile);
                     }
                 }
             }
-            if (y > 0) {
-                if (sortedTiles[x, y - 1]  != null) { // down
+            if (y > 0)
+            {
+                if (sortedTiles[x, y - 1]  != null)
+                { // down
                     WorldTile downTile = sortedTiles[x, y - 1];
                     myNeighbours.Add(downTile);
                 }
-                if (x > 0) {
-                    if (sortedTiles[x - 1, y - 1]  != null) { // down left
+                if (x > 0)
+                {
+                    if (sortedTiles[x - 1, y - 1]  != null)
+                    { // down left
                         WorldTile downLeftTile = sortedTiles[x - 1, y - 1];
                         myNeighbours.Add(downLeftTile);
                     }
                 }
             }
-            if (x > 0) {
-                if (sortedTiles[x - 1, y]  != null) { // left
+            if (x > 0)
+            {
+                if (sortedTiles[x - 1, y]  != null)
+                { // left
                     WorldTile leftTile = sortedTiles[x - 1, y];
                     myNeighbours.Add(leftTile);
                 }
-                if (y < height - 1) {
-                    if (sortedTiles[x - 1, y + 1]  != null) { // up left
+                if (y < height - 1)
+                {
+                    if (sortedTiles[x - 1, y + 1]  != null)
+                    { // up left
                         WorldTile upLeftTile = sortedTiles[x - 1, y + 1];
                         myNeighbours.Add(upLeftTile);
                     }
                 }
             }
-            if (y < height - 1) {
-                if (sortedTiles[x, y + 1]  != null) { // up
+            if (y < height - 1)
+            {
+                if (sortedTiles[x, y + 1]  != null)
+                { // up
                     WorldTile upTile = sortedTiles[x, y + 1];
                     myNeighbours.Add(upTile);
                 }
-                if (x < width - 1) {
-                    if (sortedTiles[x + 1, y + 1]  != null) { // up right
+                if (x < width - 1)
+                {
+                    if (sortedTiles[x + 1, y + 1]  != null)
+                    { // up right
                         WorldTile upRightTile = sortedTiles[x + 1, y + 1];
                         myNeighbours.Add(upRightTile);
                     }
@@ -113,12 +139,15 @@ namespace Manapotion.Pathfinding {
             return myNeighbours;
         }
 
-        public WorldTile WorldPositionToTile(Vector3 worldPosition) {
+        public WorldTile WorldPositionToTile(Vector3 worldPosition)
+        {
             return sortedTiles[(int)worldPosition.x, (int)worldPosition.y];
         }
 
-        private void AddTilesToWorld(List<WorldTile> tiles, string chunkId) {
-            foreach (var tile in tiles) {
+        private void AddTilesToWorld(List<WorldTile> tiles, string chunkId)
+        {
+            foreach (var tile in tiles)
+            {
                 unsortedTiles.Add(tile);
             }
             chunkIds.Add(chunkId);
@@ -127,7 +156,8 @@ namespace Manapotion.Pathfinding {
             SortTiles();
         }
 
-        private bool IsChunkLoaded(string chunkId) {
+        private bool IsChunkLoaded(string chunkId)
+        {
             if (chunkIds.Contains(chunkId)) {
                 return true;
             }else {
@@ -135,11 +165,13 @@ namespace Manapotion.Pathfinding {
             }
         }
 
-        public static void AddTilesToWorld_Static(List<WorldTile> tiles, string chunkId) {
+        public static void AddTilesToWorld_Static(List<WorldTile> tiles, string chunkId)
+        {
             Instance.AddTilesToWorld(tiles, chunkId);
         }
 
-        public static bool IsChunkLoaded_Static(string chunkId) {
+        public static bool IsChunkLoaded_Static(string chunkId)
+        {
             return Instance.IsChunkLoaded(chunkId);
         }
     }

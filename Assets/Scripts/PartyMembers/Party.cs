@@ -2,15 +2,22 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace PartyNamespace {
-
+namespace Manapotion.PartySystem
+{
     public enum PartyMemberState { CurrentLeader, PreviousLeader, OldestLeader }
     public enum PartyLeader { Laurie, Mirabelle, Winsley }
 
-    public class Party : MonoBehaviour {
+    public class Party : MonoBehaviour
+    {
         public static Party Instance;
 
         public static Action OnPartyLeaderChanged;
+
+        [SerializeField] private InputActionAsset _controls;
+        private InputActionMap _inputActionMap;
+
+        private InputAction _nextLeader;
+        private InputAction _previousLeader;
         
         public PartyLeader partyLeader;
         public GameObject previousLeader;
@@ -22,26 +29,53 @@ namespace PartyNamespace {
 
         public float maxDistance;
 
-        private void Awake() {
+        private void Awake()
+        {
             Instance = this;
         }
 
-        private void Start() {
+        private void Start()
+        {
             cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PartyCam>();
             cam.target = members[0].transform;
             partyLeader = PartyLeader.Laurie;
             previousLeader = members[1];
             oldestLeader = members[2];
+
+            _inputActionMap = _controls.FindActionMap("Player");
+            CreateInputAction(NextPartyMember, _nextLeader, "Next");
+            CreateInputAction(PreviousPartyMember, _previousLeader, "Previous");
         }
 
-        public void NextPartyMember(InputAction.CallbackContext context) {
-            if (!context.started) return;
+        private void CreateInputAction(Action<InputAction.CallbackContext> subscriber, InputAction action, string actionName)
+        {
+            action = _inputActionMap.FindAction(actionName);
+            action.Enable();
+            action.started += subscriber;
+            action.performed += subscriber;
+            action.canceled += subscriber;
+        }
+
+        public void NextPartyMember(InputAction.CallbackContext context)
+        {
+            if (GameStateManager.Instance.state != GameState.Main)
+            {
+                return;
+            }
+            if (!context.started)
+            {
+                return;
+            }
+
             int index = (int)partyLeader;
 
             index++;
-            if (index > 2) {
+            if (index > 2)
+            {
                 index = 0;
-            }else if (index < 0) {
+            }
+            else if (index < 0)
+            {
                 index = 2;
             }
 
@@ -52,14 +86,26 @@ namespace PartyNamespace {
             PartyLeaderChanged();
         }
 
-        public void PreviousPartyMember(InputAction.CallbackContext context) {
-            if (!context.started) return;
+        public void PreviousPartyMember(InputAction.CallbackContext context)
+        {
+            if (GameStateManager.Instance.state != GameState.Main)
+            {
+                return;
+            }
+            if (!context.started)
+            {
+                return;
+            }
+            
             int index = (int)partyLeader;
 
             index--;
-            if (index > 2) {
+            if (index > 2)
+            {
                 index = 0;
-            }else if (index < 0) {
+            }
+            else if (index < 0)
+            {
                 index = 2;
             }
 
@@ -70,38 +116,56 @@ namespace PartyNamespace {
             PartyLeaderChanged();
         }
 
-        private void PartyLeaderChanged() {
-            foreach (var member in members) {
+        private void PartyLeaderChanged()
+        {
+            foreach (var member in members)
+            {
                 PartyMember partyMember = member.GetComponent<PartyMember>();
-                if (member == members[(int)partyLeader]) {
+                if (member == members[(int)partyLeader])
+                {
                     partyMember.partyMemberState = PartyMemberState.CurrentLeader; 
-                } else if (member == previousLeader) {
+                }
+                else if (member == previousLeader)
+                {
                     partyMember.partyMemberState = PartyMemberState.PreviousLeader; 
-                } else { 
+                }
+                else
+                { 
                     partyMember.partyMemberState = PartyMemberState.OldestLeader;
                 }
             }
 
-            if (OnPartyLeaderChanged != null) { OnPartyLeaderChanged(); }
+            if (OnPartyLeaderChanged != null)
+            {
+                OnPartyLeaderChanged();
+            }
         }
 
-        private PartyMember StaticReturner_GetCurrentLeader() {
-            foreach (var member in members) {
+        private PartyMember StaticReturner_GetCurrentLeader()
+        {
+            foreach (var member in members)
+            {
                 var pm = member.GetComponent<PartyMember>();
-                if (pm.partyMemberState == PartyMemberState.CurrentLeader) {
+                if (pm.partyMemberState == PartyMemberState.CurrentLeader) 
+                {
                     return pm;
                 }
             }
+
             return members[0].GetComponent<PartyMember>();
         }
 
-        public static PartyMember GetCurrentLeader() {
+        public static PartyMember GetCurrentLeader()
+        {
             return Instance.StaticReturner_GetCurrentLeader();
         }
 
-        private void Update() {
-            foreach (GameObject member in members) {
-                if (member != members[(int)partyLeader] && member != previousLeader) {
+        private void Update()
+        {
+            foreach (GameObject member in members)
+            {
+                if (member != members[(int)partyLeader] && member != previousLeader)
+                {
                     oldestLeader = member;
                 }
             }

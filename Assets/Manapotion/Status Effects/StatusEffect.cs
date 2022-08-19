@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Manapotion.Status;
-using PartyNamespace;
+using Manapotion.PartySystem;
 
 namespace Manapotion.StatusEffects {
     /*

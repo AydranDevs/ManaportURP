@@ -1,125 +1,136 @@
 using UnityEngine;
 
-namespace PartyNamespace {
-    namespace LaurieNamespace {
-        public class LaurieController : MonoBehaviour {
-            [SerializeField] private InputProvider provider;
+namespace Manapotion.PartySystem.LaurieCharacter
+{
+    public class LaurieController : CharacterController
+    {
+        private Laurie _laurie;
+        private LaurieCasting _casting;
+        private LaurieAbilities _abilities;
+
+        private LauriePartyInput _partyInput;
+        private LauriePlayerInput _playerInput;
+
+        public LaurieController(Laurie laurie)
+        {
+            _laurie = laurie;
             
-            private Laurie laurie;
-            private LaurieCasting casting;
-            private LaurieAbilities abilities;
-            private GameStateManager gameManager;
-
-            public Vector2 movementDirection;
-            [SerializeField] private float movementSp;
-            [SerializeField] private bool _isSprinting;
-            [SerializeField] private bool isDashing;
-
-
-            private Vector2 position;
+            rb = _laurie.GetComponent<Rigidbody2D>();
+            gameManager = GameStateManager.Instance;
             
-            private Vector2 resultPosition;
-            private Vector2 targetPosition;
-            private Vector2 initialPosition;
-            private Vector2 targetDelta;
-            private Vector2 actualDelta;
+            _casting = _laurie.laurieCasting;
+            _abilities = _laurie.laurieAbilities;
 
-            private float angle;
-            public Vector2 reconstructedMovement;
-            private Rigidbody2D rb;
+            _partyInput = new LauriePartyInput(_laurie);
+            _playerInput = new LauriePlayerInput(_laurie);
 
-            public float sprintDuration;
+            provider = _laurie.inputProvider;
 
-            private void Start() {
-                laurie = GetComponentInParent<Laurie>();
-                gameManager = GameStateManager.Instance;
-                rb = GetComponentInParent<Rigidbody2D>();
+            provider.OnPrimary += OnPrimary_PrimaryCast;
+            provider.OnSecondary += OnSecondary_SecondaryCast;
+            provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
 
-                casting = laurie.casting;
-                abilities = laurie.abilities;
+            Party.OnPartyLeaderChanged += () => 
+            {
+                if (Party.Instance.previousLeader == _laurie.gameObject) 
+                {
+                    movementDirection = Vector2.zero; 
+                }
+            };
+        }
 
-                provider.OnPrimary += OnPrimary_PrimaryCast;
-                provider.OnSecondary += OnSecondary_SecondaryCast;
-                provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+        public void Update()
+        {
+            _partyInput.Update();
+            movementDirection = provider.inputState.movementDirection;
+            _isSprinting = provider.inputState.isSprinting;
+
+            Move(Time.fixedDeltaTime);
+        }
+
+        private void Move(float d)
+        {
+            if (gameManager.state != GameState.Main)
+            {
+                return;
             }
 
-            private void Update() {
-                movementDirection = provider.inputState.movementDirection;
-                _isSprinting = provider.inputState.isSprinting;
-
-                Move(Time.fixedDeltaTime);
+            if (movementDirection.Equals(Vector2.zero)) 
+            {
+                _laurie.movementState = MovementState.Idle;
+                sprintDuration = 0f;
+                isDashing = false;
+                return;
             }
 
-            private void Move(float d) {
-                if (gameManager.state != GameState.Main) return;
-
-                if (movementDirection.Equals(new Vector2(0, 0))) {
-                    laurie.movementState = MovementState.Idle;
-                    sprintDuration = 0f;
+            if (_isSprinting)
+            {
+                if (sprintDuration >= _laurie.dashThreshold) 
+                {
+                    _laurie.movementState = MovementState.Dash;
+                    isDashing = true;
+                    movementSp = _laurie.stats.walkSp.value * _laurie.stats.dashMod.value;
+                }
+                else
+                {
+                    _laurie.movementState = MovementState.Sprint;
+                    movementSp = _laurie.stats.walkSp.value * _laurie.stats.sprintMod.value;
                     isDashing = false;
-                    return;
                 }
-
-                if (_isSprinting) {
-                    if (sprintDuration >= 7f) {
-                        laurie.movementState = MovementState.Dash;
-                        isDashing = true;
-                        movementSp = laurie.dashSp;
-                    }else {
-                        laurie.movementState = MovementState.Sprint;
-                        movementSp = laurie.sprintSp;
-                        isDashing = false;
-                    }
-                    sprintDuration += Time.deltaTime;
-                }else {
-                    laurie.movementState = MovementState.Walk;
-                    movementSp = laurie.walkSp;
-                    sprintDuration = 0f;
-                }
-
-                position = laurie.gameObject.transform.position;
-                position = PixelPerfectClamp(position, 16f);
-
-                angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
-
-                reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
-                // reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
-                
-                rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d));
-                resultPosition = transform.position;
-
-                targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d);
-
-                targetDelta = targetPosition - initialPosition;
-                actualDelta = resultPosition - initialPosition;
-
-                initialPosition = transform.position;
+                sprintDuration += Time.deltaTime;
+            }
+            else
+            {
+                _laurie.movementState = MovementState.Walk;
+                movementSp = _laurie.stats.walkSp.value;
+                sprintDuration = 0f;
             }
 
-            public void OnPrimary_PrimaryCast() {
-                if (gameManager.state != GameState.Main) return;
-                casting.PrimaryCast();
-            }
+            position = _laurie.gameObject.transform.position;
 
-            public void OnSecondary_SecondaryCast() {
-                if (gameManager.state != GameState.Main) return;
-                casting.SecondaryCast();
-            }
+            angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
 
-            public void OnAuxMove_AuxillaryMovement() {
-                if (gameManager.state != GameState.Main) return;
-                abilities.AuxMove();
-            }
+            reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
             
-            private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {
+            rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d));
+            resultPosition = _laurie.transform.position;
 
-                Vector2 vectorInPixels = new Vector2(
-                    Mathf.RoundToInt(moveVector.x * pixelsPerUnit),
-                    Mathf.RoundToInt(moveVector.y * pixelsPerUnit)
-                );
-                
-                return vectorInPixels / pixelsPerUnit;
+            targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d);
+
+            targetDelta = targetPosition - initialPosition;
+            actualDelta = resultPosition - initialPosition;
+
+            initialPosition = _laurie.transform.position;
+        }
+
+        public void OnPrimary_PrimaryCast() 
+        {
+            if (gameManager.state != GameState.Main)
+            {
+                return;
             }
+
+            _casting.PrimaryCast();
+        }
+
+        public void OnSecondary_SecondaryCast() 
+        {
+            if (gameManager.state != GameState.Main)
+            {
+                return;
+            }
+
+            _casting.SecondaryCast();
+        }
+
+        public void OnAuxMove_AuxillaryMovement() 
+        {
+            if (gameManager.state != GameState.Main)
+            {
+                return;
+            }
+
+            _abilities.AuxMove();
         }
     }
 }

@@ -2,121 +2,117 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PartyNamespace {
-    namespace WinsleyNamespace {
-        public class WinsleyController : MonoBehaviour {
-            [SerializeField] private InputProvider provider;
+namespace Manapotion.PartySystem.WinsleyCharacter
+{
+    public class WinsleyController : CharacterController
+    {
+        private Winsley _winsley;
+
+        private WinsleyPartyInput _partyInput;
+        private WinsleyPlayerInput _playerInput;
+
+        public WinsleyController(Winsley winsley)
+        {
+            _winsley = winsley;
             
-            private Winsley winsley;
-            private GameStateManager gameManager;
+            rb = _winsley.GetComponent<Rigidbody2D>();
+            gameManager = GameStateManager.Instance;
+
+            _partyInput = new WinsleyPartyInput(_winsley);
+            _playerInput = new WinsleyPlayerInput(_winsley);
+
+            provider = _winsley.inputProvider;
+
+            provider.OnPrimary += OnPrimary_PrimaryCast;
+            provider.OnSecondary += OnSecondary_SecondaryCast;
+            provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+
+            Party.OnPartyLeaderChanged += () =>
+            {
+                if (Party.Instance.previousLeader == _winsley.gameObject)
+                {
+                    movementDirection = Vector2.zero; 
+                }
+            };
+        }
+
+        public void Update()
+        {
+            movementDirection = provider.inputState.movementDirection;
+            _isSprinting = provider.inputState.isSprinting;
+            _partyInput.Update();
             
-            public Vector2 movementDirection;
-            [SerializeField] private float movementSp;
-            [SerializeField] private bool _isSprinting;
-            [SerializeField] private bool isDashing;
+            Move(Time.fixedDeltaTime);
+        }
 
-
-            private Vector2 position;
-            
-            private Vector2 resultPosition;
-            private Vector2 targetPosition;
-            private Vector2 initialPosition;
-            private Vector2 targetDelta;
-            private Vector2 actualDelta;
-
-            private float angle;
-            public Vector2 reconstructedMovement;
-            private Rigidbody2D rb;
-
-            public float sprintDuration;
-
-            private void Start() {
-                winsley = GetComponentInParent<Winsley>();
-                rb = GetComponentInParent<Rigidbody2D>();
-                gameManager = GameStateManager.Instance;
-
-                //casting = laurie.casting;
-                //abilities = laurie.abilities;
-
-                provider.OnPrimary += OnPrimary_PrimaryCast;
-                provider.OnSecondary += OnSecondary_SecondaryCast;
-                provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+        private void Move(float d)
+        {
+            if (gameManager.state != GameState.Main)
+            {
+                return;
             }
 
-            private void Update() {
-                movementDirection = provider.inputState.movementDirection;
-                _isSprinting = provider.inputState.isSprinting;
-
-                Move(Time.fixedDeltaTime);
+            if (movementDirection.Equals(new Vector2(0, 0)))
+            {
+                _winsley.movementState = MovementState.Idle;
+                sprintDuration = 0f;
+                isDashing = false;
+                return;
             }
 
-            private void Move(float d) {
-                if (gameManager.state != GameState.Main) return;
-
-                if (movementDirection.Equals(new Vector2(0, 0))) {
-                    winsley.movementState = MovementState.Idle;
-                    sprintDuration = 0f;
+            if (_isSprinting)
+            {
+                if (sprintDuration >= _winsley.dashThreshold)
+                {
+                    _winsley.movementState = MovementState.Dash;
+                    isDashing = true;
+                    movementSp = _winsley.stats.walkSp.value * _winsley.stats.dashMod.value;
+                }
+                else
+                {
+                    _winsley.movementState = MovementState.Sprint;
+                    movementSp = _winsley.stats.walkSp.value * _winsley.stats.sprintMod.value;
                     isDashing = false;
-                    return;
                 }
-
-                if (_isSprinting) {
-                    if (sprintDuration >= 7f) {
-                        winsley.movementState = MovementState.Dash;
-                        isDashing = true;
-                        movementSp = winsley.dashSp;
-                    }else {
-                        winsley.movementState = MovementState.Sprint;
-                        movementSp = winsley.sprintSp;
-                        isDashing = false;
-                    }
-                    sprintDuration += Time.deltaTime;
-                }else {
-                    winsley.movementState = MovementState.Walk;
-                    movementSp = winsley.walkSp;
-                    sprintDuration = 0f;
-                }
-
-                position = winsley.gameObject.transform.position;
-                position = PixelPerfectClamp(position, 16f);
-
-                angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
-
-                reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
-                reconstructedMovement = PixelPerfectClamp(reconstructedMovement, 16f);
-                
-                rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d));
-                resultPosition = transform.position;
-
-                targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d);
-
-                targetDelta = targetPosition - initialPosition;
-                actualDelta = resultPosition - initialPosition;
-
-                initialPosition = transform.position;
+                sprintDuration += Time.deltaTime;
+            }
+            else
+            {
+                _winsley.movementState = MovementState.Walk;
+                movementSp = _winsley.stats.walkSp.value;
+                sprintDuration = 0f;
             }
 
-            public void OnPrimary_PrimaryCast() {
-                //casting.PrimaryCast();
-            }
+            position = _winsley.transform.position;
 
-            public void OnSecondary_SecondaryCast() {
-                //casting.SecondaryCast();
-            }
+            angle = (float)(Mathf.Atan2(movementDirection.y, movementDirection.x));
 
-            public void OnAuxMove_AuxillaryMovement() {
-                //abilities.AuxMove();
-            }
+            reconstructedMovement = new Vector2(Mathf.Cos(angle) * movementSp, Mathf.Sin(angle) * movementSp);
             
-            private Vector2 PixelPerfectClamp(Vector2 moveVector, float pixelsPerUnit) {
+            rb.MovePosition(new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d));
+            resultPosition = _winsley.transform.position;
 
-                Vector2 vectorInPixels = new Vector2(
-                    Mathf.RoundToInt(moveVector.x * pixelsPerUnit),
-                    Mathf.RoundToInt(moveVector.y * pixelsPerUnit)
-                );
-                
-                return vectorInPixels / pixelsPerUnit;
-            }
+            targetPosition = new Vector2(position.x, position.y) + ((reconstructedMovement * movementSp) * d);
+
+            targetDelta = targetPosition - initialPosition;
+            actualDelta = resultPosition - initialPosition;
+
+            initialPosition = _winsley.transform.position;
+        }
+
+        public void OnPrimary_PrimaryCast()
+        {
+            //casting.PrimaryCast();
+        }
+
+        public void OnSecondary_SecondaryCast()
+        {
+            //casting.SecondaryCast();
+        }
+
+        public void OnAuxMove_AuxillaryMovement()
+        {
+            //abilities.AuxMove();
         }
     }
 }

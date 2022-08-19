@@ -3,76 +3,88 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PartyNamespace {
-    namespace MirabelleNamespace {
-        public class MirabelleHealing : MonoBehaviour {
-            private GameStateManager gameStateManager;
-            private HealingAbilityImage healingImage;
-            private Mirabelle mirabelle;
+namespace Manapotion.PartySystem.MirabelleCharacter
+{
+    public class MirabelleHealing : MonoBehaviour
+    {
+        private GameStateManager _gameManager;
+        private HealingAbilityImage _healingImage;
+        private Mirabelle _mirabelle;
 
-            private GameObject cursor;
+        private GameObject _cursor;
 
-            public HealingAbility healingAbility;
-            public HealingAbility[] heals;
+        public HealingAbility healingAbility;
+        public HealingAbility[] heals;
 
-            public string healingAbilityType = HealingTypes.Rejuvenating;
+        public string healingAbilityType = HealingTypes.Rejuvenating;
 
-            bool abilitiesFound;
+        bool abilitiesFound;
 
-            public bool openingUmbrella = false;
-            public bool umbrellaOpened = false;
-            public bool closingUmbrella = false;
-            public bool umbrellaClosed = true;
+        public bool openingUmbrella = false;
+        public bool umbrellaOpened = false;
+        public bool closingUmbrella = false;
+        public bool umbrellaClosed = true;
 
-            private void Start() {
-                gameStateManager = GameStateManager.Instance;
-                healingImage = GameObject.FindGameObjectWithTag("PrimaryIcon").GetComponent<HealingAbilityImage>();
-                mirabelle = GetComponentInParent<Mirabelle>();
-                cursor = GameObject.FindGameObjectWithTag("Cursor");
+        public MirabelleHealing(Mirabelle mirabelle)
+        {
+            _mirabelle = mirabelle;
 
-                heals = GetComponentsInChildren<HealingAbility>();
+            _gameManager = GameStateManager.Instance;
+            _healingImage = GameObject.FindGameObjectWithTag("PrimaryIcon").GetComponent<HealingAbilityImage>();
+            _cursor = GameObject.FindGameObjectWithTag("Cursor");
 
-                SetHeal(heals[(int)mirabelle.HealingEffect]);
+            heals = _mirabelle.GetComponentsInChildren<HealingAbility>();
+
+            SetHeal(heals[(int)_mirabelle.HealingEffect]);
+        }
+
+        private void SetHeal(HealingAbility heal)
+        {
+            healingAbility = heal;
+
+            switch (healingAbilityType)
+            {
+                case HealingTypes.Rejuvenating:
+                    _healingImage.SetIcon(healingAbility.icons.rejuvenating);
+                    break;
+                case HealingTypes.Warming:
+                    _healingImage.SetIcon(healingAbility.icons.warming);
+                    break;
+                case HealingTypes.Comforting:
+                    _healingImage.SetIcon(healingAbility.icons.comforting);
+                    break;
+                case HealingTypes.Caring:
+                    _healingImage.SetIcon(healingAbility.icons.caring);
+                    break;
+                case HealingTypes.Loving:
+                    _healingImage.SetIcon(healingAbility.icons.loving);
+                    break;
+            }
+        }
+
+        // Opens mirabelle's umbrella and prepares for healing party members
+        public void Heal()
+        {
+            if (healingAbility == null) 
+            {
+                return;
             }
 
-            private void SetHeal(HealingAbility heal) {
-                healingAbility = heal;
 
-                switch (healingAbilityType) {
-                    case HealingTypes.Rejuvenating:
-                        healingImage.SetIcon(healingAbility.icons.rejuvenating);
-                        break;
-                    case HealingTypes.Warming:
-                        healingImage.SetIcon(healingAbility.icons.warming);
-                        break;
-                    case HealingTypes.Comforting:
-                        healingImage.SetIcon(healingAbility.icons.comforting);
-                        break;
-                    case HealingTypes.Caring:
-                        healingImage.SetIcon(healingAbility.icons.caring);
-                        break;
-                    case HealingTypes.Loving:
-                        healingImage.SetIcon(healingAbility.icons.loving);
-                        break;
+            if (_mirabelle.umbrellaState == UmbrellaState.UmbrellaClosed)
+            {
+                if (!healingAbility.coolingDown)
+                {
+                    _mirabelle.state = State.Umbrella;
+                    _mirabelle.umbrellaState = UmbrellaState.OpeningUmbrella;
+                    healingAbility.Cast(healingAbilityType);
                 }
             }
-
-            // Opens mirabelle's umbrella and prepares for healing party members
-            public void Heal() {
-                if (healingAbility == null) return;
-
-
-                if (mirabelle.umbrellaState == UmbrellaState.UmbrellaClosed) {
-                    if (!healingAbility.coolingDown) {
-                        mirabelle.state = State.Umbrella;
-                        mirabelle.umbrellaState = UmbrellaState.OpeningUmbrella;
-                        healingAbility.Cast(healingAbilityType);
-                    }
-                }else if (mirabelle.umbrellaState == UmbrellaState.UmbrellaOpened) {
-                    mirabelle.state = State.Umbrella;
-                    mirabelle.umbrellaState = UmbrellaState.ClosingUmbrella;
-                    healingAbility.Uncast();
-                }
+            else if (_mirabelle.umbrellaState == UmbrellaState.UmbrellaOpened)
+            {
+                _mirabelle.state = State.Umbrella;
+                _mirabelle.umbrellaState = UmbrellaState.ClosingUmbrella;
+                healingAbility.Uncast();
             }
         }
     }

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace Manapotion.Pathfinding {
-
-    public class ChunkGrid : MonoBehaviour {
+namespace Manapotion.AStarPathfinding
+{
+    public class ChunkGrid : MonoBehaviour
+    {
         private Grid grid;
         public Tilemap floor;
         public List<Tilemap> unwalkableLayers;
@@ -20,11 +21,15 @@ namespace Manapotion.Pathfinding {
         public WorldTile[,] sortedTiles; // Sorted 2d array of tiles, may contain null entries
         [HideInInspector] public int gridBoundX = 0, gridBoundY = 0; // used for  checking if boundary is reached during scan, preventing stack overflow error when adding cells to the unsortedTiles list
         
-        private void Start() {
+        private void Start()
+        {
             chunkX = (int)transform.position.x / 100;
             chunkY = (int)transform.position.y / 100;
 
-            if (WorldGrid.IsChunkLoaded_Static(this.gameObject.name)) return;
+            if (WorldGrid.IsChunkLoaded_Static(this.gameObject.name))
+            {
+                return;
+            }
             
             grid = GetComponent<Grid>();
 
@@ -36,22 +41,30 @@ namespace Manapotion.Pathfinding {
             WorldGrid.AddTilesToWorld_Static(unsortedTiles, this.gameObject.name);
         }
 
-        private void CreateGrid() {
+        private void CreateGrid()
+        {
             int gridX = 0, gridY = 0; // used to ensure we arent hitting the boundary of the scan area
             bool foundTileOnLastPass = false;
             unsortedTiles = new List<WorldTile>();
 
             // loop through every tile according to grid position
-            for (int x = scanStartX; x < scanFinishX; x++) {
-                for (int y = scanStartY; y < scanFinishY; y++) {
+            for (int x = scanStartX; x < scanFinishX; x++)
+            {
+                for (int y = scanStartY; y < scanFinishY; y++)
+                {
                     TileBase tile = floor.GetTile(new Vector3Int(x, y, 0));
-                    if (tile != null) {
+                    if (tile != null)
+                    {
                         bool foundObstacle = false;
 
                         // for each unwalkable layer, check if the tile occupies an unwalkable space, if so, we've found an obstacle
-                        foreach (Tilemap unwalkableLayer in unwalkableLayers) {
+                        foreach (Tilemap unwalkableLayer in unwalkableLayers)
+                        {
                             TileBase tile2 = unwalkableLayer.GetTile(new Vector3Int(x, y, 0));
-                            if (tile2 != null) { foundObstacle = true; }
+                            if (tile2 != null)
+                            {
+                                foundObstacle = true;
+                            }
                         }
 
                         Vector3 worldPos = new Vector3(x + 0.5f + grid.transform.position.x, y + 0.5f + grid.transform.position.y, 0);
@@ -61,10 +74,13 @@ namespace Manapotion.Pathfinding {
                         worldTile.cellY = cellPos.y;
 
                         // set a tile as walkable or not if foundObstacle is equal to true
-                        if (!foundObstacle) {
+                        if (!foundObstacle)
+                        {
                             foundTileOnLastPass = true;
                             worldTile.walkable = true;
-                        } else {
+                        }
+                        else
+                        {
                             foundTileOnLastPass = true;
                             worldTile.walkable = false;
                         }
@@ -72,17 +88,20 @@ namespace Manapotion.Pathfinding {
                         unsortedTiles.Add(worldTile);
 
                         gridY++;
-                        if (gridX > gridBoundX) {
+                        if (gridX > gridBoundX)
+                        {
                             gridBoundX = gridX;
                         }
-                        if (gridY > gridBoundY) {
+                        if (gridY > gridBoundY)
+                        {
                             gridBoundY = gridY;
                         }
                     }
 
                 }
                 
-                if (foundTileOnLastPass) {
+                if (foundTileOnLastPass)
+                {
                     gridX++;
                     gridY = 0;
                     foundTileOnLastPass = false;
