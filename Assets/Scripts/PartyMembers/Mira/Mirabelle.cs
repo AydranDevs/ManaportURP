@@ -4,15 +4,15 @@ using UnityEngine.InputSystem;
 
 namespace Manapotion.PartySystem.MirabelleCharacter
 {
-    public enum HealingType { Showera, Spray }
+    public enum HealingType { Shower, Spray }
     public enum UmbrellaState {  OpeningUmbrella, UmbrellaOpened, ClosingUmbrella, UmbrellaClosed }
 
     public enum State { Movement, Umbrella }
 
     public class Mirabelle : PartyMember
     {   
-        public HealingType healingType = HealingType.Showera;
-        public PartyBuffs HealingEffect = PartyBuffs.Rejuvenated;
+        public HealingType healingType = HealingType.Shower;
+        public PartyBuffs healingEffect = PartyBuffs.Rejuvenated;
         public UmbrellaState umbrellaState = UmbrellaState.UmbrellaClosed;
 
         public State state = State.Movement;
@@ -57,13 +57,15 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             }
             mirabelleController.Update();
             mirabelleRenderer.Update();
+            mirabelleHealing.Update();
             
             UpdateHealthBar();
         }
 
         private void UpdateHealthBar()
         {
-            healthBar.SetHealth(stats.hitPoints.value);
+            // TODO: fix this
+            // healthBar.SetHealth(stats.hitPoints.value);
         }
 
         public override void SetPartyMaxDistance()

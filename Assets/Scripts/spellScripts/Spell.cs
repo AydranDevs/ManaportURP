@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 
 [Serializable]
-public struct SpellSpriteIcons {
+public struct SpellSpriteIcons
+{
     public Sprite arcane;
     public Sprite pyro;
     public Sprite cryo;
@@ -10,12 +11,14 @@ public struct SpellSpriteIcons {
     public Sprite volt;
 }
 
-public abstract class Spell : MonoBehaviour {
+public abstract class Spell : MonoBehaviour
+{
     public int cost;
     public float cooldown;
     public int damage;
     public string spellId;
     public SpellSpriteIcons icons;
+    public Sprite icon;
 
     public bool coolingDown = false;
     public float cooldownTime;

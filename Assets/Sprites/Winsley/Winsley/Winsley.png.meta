@@ -158,6 +158,42 @@ TextureImporter:
   - first:
       213: -408847289422981801
     second: Winsley47
+  - first:
+      213: 1047947997555711230
+    second: Winsley48
+  - first:
+      213: -1953080640272948469
+    second: Winsley49
+  - first:
+      213: 7484278024091690637
+    second: Winsley50
+  - first:
+      213: -7608588113794005055
+    second: Winsley51
+  - first:
+      213: -8528457851212412651
+    second: Winsley52
+  - first:
+      213: -4821716524299540108
+    second: Winsley53
+  - first:
+      213: -4772436766838768084
+    second: Winsley54
+  - first:
+      213: -4828290651912764102
+    second: Winsley55
+  - first:
+      213: 2126319830077987116
+    second: Winsley56
+  - first:
+      213: 7377075894990373794
+    second: Winsley57
+  - first:
+      213: 2920863218596017274
+    second: Winsley58
+  - first:
+      213: 7002175960908502907
+    second: Winsley59
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -239,7 +275,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -260,7 +296,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 67
-        y: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -281,7 +317,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 133
-        y: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -302,7 +338,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 199
-        y: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -323,7 +359,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 265
-        y: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -344,7 +380,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 331
-        y: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -365,7 +401,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 397
-        y: 397
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -385,8 +421,8 @@ TextureImporter:
       name: Winsley07
       rect:
         serializedVersion: 2
-        x: 1
-        y: 331
+        x: 463
+        y: 463
         width: 64
         height: 64
       alignment: 0
@@ -406,8 +442,8 @@ TextureImporter:
       name: Winsley08
       rect:
         serializedVersion: 2
-        x: 67
-        y: 331
+        x: 1
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -427,8 +463,8 @@ TextureImporter:
       name: Winsley09
       rect:
         serializedVersion: 2
-        x: 133
-        y: 331
+        x: 67
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -448,8 +484,8 @@ TextureImporter:
       name: Winsley10
       rect:
         serializedVersion: 2
-        x: 199
-        y: 331
+        x: 133
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -469,8 +505,8 @@ TextureImporter:
       name: Winsley11
       rect:
         serializedVersion: 2
-        x: 265
-        y: 331
+        x: 199
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -490,8 +526,8 @@ TextureImporter:
       name: Winsley12
       rect:
         serializedVersion: 2
-        x: 331
-        y: 331
+        x: 265
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -511,8 +547,8 @@ TextureImporter:
       name: Winsley13
       rect:
         serializedVersion: 2
-        x: 397
-        y: 331
+        x: 331
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -532,8 +568,8 @@ TextureImporter:
       name: Winsley14
       rect:
         serializedVersion: 2
-        x: 1
-        y: 265
+        x: 397
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -553,8 +589,8 @@ TextureImporter:
       name: Winsley15
       rect:
         serializedVersion: 2
-        x: 67
-        y: 265
+        x: 463
+        y: 397
         width: 64
         height: 64
       alignment: 0
@@ -574,8 +610,8 @@ TextureImporter:
       name: Winsley16
       rect:
         serializedVersion: 2
-        x: 133
-        y: 265
+        x: 1
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -595,8 +631,8 @@ TextureImporter:
       name: Winsley17
       rect:
         serializedVersion: 2
-        x: 199
-        y: 265
+        x: 67
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -616,8 +652,8 @@ TextureImporter:
       name: Winsley18
       rect:
         serializedVersion: 2
-        x: 265
-        y: 265
+        x: 133
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -637,8 +673,8 @@ TextureImporter:
       name: Winsley19
       rect:
         serializedVersion: 2
-        x: 331
-        y: 265
+        x: 199
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -658,8 +694,8 @@ TextureImporter:
       name: Winsley20
       rect:
         serializedVersion: 2
-        x: 397
-        y: 265
+        x: 265
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -679,8 +715,8 @@ TextureImporter:
       name: Winsley21
       rect:
         serializedVersion: 2
-        x: 1
-        y: 199
+        x: 331
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -700,8 +736,8 @@ TextureImporter:
       name: Winsley22
       rect:
         serializedVersion: 2
-        x: 67
-        y: 199
+        x: 397
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -721,8 +757,8 @@ TextureImporter:
       name: Winsley23
       rect:
         serializedVersion: 2
-        x: 133
-        y: 199
+        x: 463
+        y: 331
         width: 64
         height: 64
       alignment: 0
@@ -742,8 +778,8 @@ TextureImporter:
       name: Winsley24
       rect:
         serializedVersion: 2
-        x: 199
-        y: 199
+        x: 1
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -763,8 +799,8 @@ TextureImporter:
       name: Winsley25
       rect:
         serializedVersion: 2
-        x: 265
-        y: 199
+        x: 67
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -784,8 +820,8 @@ TextureImporter:
       name: Winsley26
       rect:
         serializedVersion: 2
-        x: 331
-        y: 199
+        x: 133
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -805,8 +841,8 @@ TextureImporter:
       name: Winsley27
       rect:
         serializedVersion: 2
-        x: 397
-        y: 199
+        x: 199
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -826,8 +862,8 @@ TextureImporter:
       name: Winsley28
       rect:
         serializedVersion: 2
-        x: 1
-        y: 133
+        x: 265
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -847,8 +883,8 @@ TextureImporter:
       name: Winsley29
       rect:
         serializedVersion: 2
-        x: 67
-        y: 133
+        x: 331
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -868,8 +904,8 @@ TextureImporter:
       name: Winsley30
       rect:
         serializedVersion: 2
-        x: 133
-        y: 133
+        x: 397
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -889,8 +925,8 @@ TextureImporter:
       name: Winsley31
       rect:
         serializedVersion: 2
-        x: 199
-        y: 133
+        x: 463
+        y: 265
         width: 64
         height: 64
       alignment: 0
@@ -910,8 +946,8 @@ TextureImporter:
       name: Winsley32
       rect:
         serializedVersion: 2
-        x: 265
-        y: 133
+        x: 1
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -931,8 +967,8 @@ TextureImporter:
       name: Winsley33
       rect:
         serializedVersion: 2
-        x: 331
-        y: 133
+        x: 67
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -952,8 +988,8 @@ TextureImporter:
       name: Winsley34
       rect:
         serializedVersion: 2
-        x: 397
-        y: 133
+        x: 133
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -973,8 +1009,8 @@ TextureImporter:
       name: Winsley35
       rect:
         serializedVersion: 2
-        x: 1
-        y: 67
+        x: 199
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -994,8 +1030,8 @@ TextureImporter:
       name: Winsley36
       rect:
         serializedVersion: 2
-        x: 67
-        y: 67
+        x: 265
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1015,8 +1051,8 @@ TextureImporter:
       name: Winsley37
       rect:
         serializedVersion: 2
-        x: 133
-        y: 67
+        x: 331
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1036,8 +1072,8 @@ TextureImporter:
       name: Winsley38
       rect:
         serializedVersion: 2
-        x: 199
-        y: 67
+        x: 397
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1057,8 +1093,8 @@ TextureImporter:
       name: Winsley39
       rect:
         serializedVersion: 2
-        x: 265
-        y: 67
+        x: 463
+        y: 199
         width: 64
         height: 64
       alignment: 0
@@ -1078,8 +1114,8 @@ TextureImporter:
       name: Winsley40
       rect:
         serializedVersion: 2
-        x: 331
-        y: 67
+        x: 1
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1099,8 +1135,8 @@ TextureImporter:
       name: Winsley41
       rect:
         serializedVersion: 2
-        x: 397
-        y: 67
+        x: 67
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1120,8 +1156,8 @@ TextureImporter:
       name: Winsley42
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
+        x: 133
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1141,8 +1177,8 @@ TextureImporter:
       name: Winsley43
       rect:
         serializedVersion: 2
-        x: 67
-        y: 1
+        x: 199
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1162,8 +1198,8 @@ TextureImporter:
       name: Winsley44
       rect:
         serializedVersion: 2
-        x: 133
-        y: 1
+        x: 265
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1183,8 +1219,8 @@ TextureImporter:
       name: Winsley45
       rect:
         serializedVersion: 2
-        x: 199
-        y: 1
+        x: 331
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1204,8 +1240,8 @@ TextureImporter:
       name: Winsley46
       rect:
         serializedVersion: 2
-        x: 265
-        y: 1
+        x: 397
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1225,8 +1261,8 @@ TextureImporter:
       name: Winsley47
       rect:
         serializedVersion: 2
-        x: 331
-        y: 1
+        x: 463
+        y: 133
         width: 64
         height: 64
       alignment: 0
@@ -1238,6 +1274,258 @@ TextureImporter:
       bones: []
       spriteID: 755df827e8b735af0800000000000000
       internalID: -408847289422981801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcd369c62f0b8e00800000000000000
+      internalID: 1047947997555711230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley49
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03a6da618345e4e0800000000000000
+      internalID: -1953080640272948469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley50
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d866f32a53f7dd760800000000000000
+      internalID: 7484278024091690637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley51
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c78c0b2c6dd86690800000000000000
+      internalID: -7608588113794005055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley52
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519c79025c4d4a980800000000000000
+      internalID: -8528457851212412651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley53
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479ae712e52d51db0800000000000000
+      internalID: -4821716524299540108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley54
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ebf87cb06e4cdb0800000000000000
+      internalID: -4772436766838768084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley55
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 67
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a358664cb377efcb0800000000000000
+      internalID: -4828290651912764102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley56
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29daa6ae94328d10800000000000000
+      internalID: 2126319830077987116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley57
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a38ff9e073a06660800000000000000
+      internalID: 7377075894990373794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley58
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a747be53f9df88820800000000000000
+      internalID: 2920863218596017274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winsley59
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 1
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b771bb4ffe9bc2160800000000000000
+      internalID: 7002175960908502907
       vertices: []
       indices: 
       edges: []

@@ -10,9 +10,6 @@ namespace Manapotion.PartySystem.WinsleyCharacter
     {
         public State state = State.Movement;
 
-        public HealthBarScript healthBar;
-        public ManaBarScript manaBar;
-
         public Party party;
 
         public WinsleyController winsleyController { get; private set; }
@@ -32,10 +29,6 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             
             winsleyController = new WinsleyController(this);
             winsleyRenderer = new WinsleyRenderer(this);
-
-            healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
-            
-            healthBar.SetMaxHealth(stats.hitPoints.maxValue);
         }
     
         private void Update()
@@ -48,13 +41,6 @@ namespace Manapotion.PartySystem.WinsleyCharacter
 
             winsleyController.Update();
             winsleyRenderer.Update();
-            
-            UpdateHealthBar();
-        }
-
-        private void UpdateHealthBar()
-        {
-            healthBar.SetHealth(stats.hitPoints.value);
         }
 
         public override void SetPartyMaxDistance()

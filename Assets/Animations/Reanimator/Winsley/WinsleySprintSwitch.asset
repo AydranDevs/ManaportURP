@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: WinsleyMovmentSwitch
+  m_Name: WinsleySprintSwitch
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 11400000, guid: 62233a7c4c2ed124cb7d88ac20b09de5, type: 2}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 93b73f8897b5f8646b008a1b9c7c7f6e, type: 2}
-  - {fileID: 11400000, guid: 55ea96ea8f169c34db582ead65f861b9, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 15f8716fdaffea842a5aaeaec56793ed, type: 2}
+  - {fileID: 11400000, guid: f178927bca7066d4cade92ebee9e5145, type: 2}
+  - {fileID: 11400000, guid: 38f1539138add7b45bc5d2bc5ed4dec9, type: 2}
+  - {fileID: 11400000, guid: 0f0cdf1b11918af4a96408e52f7858b6, type: 2}
   controlDriver:
-    name: movementState
-    autoIncrement: 0
+    name: facingState
+    autoIncrement: 1
     percentageBased: 0
-    guid: 33a81f5a-2005-4ffd-9685-e581c2ed6cc0
+    guid: 95a82ddd-ff66-403c-a1f8-87d4c2a6a191
   drivers:
     keys: []
     values: 

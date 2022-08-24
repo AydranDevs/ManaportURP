@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: WinsleySprintSouth
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -782895127229157398, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -664519685722434103, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -5796176790150226583, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -2719374568427007514, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -6599025408935240363, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -4089169966786331273, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: sprint
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 41625315-f06c-4763-b171-9784f036a4de
+  drivers:
+    keys: []
+    values: 

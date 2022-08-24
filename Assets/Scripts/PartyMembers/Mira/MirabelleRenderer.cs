@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Manapotion.PartySystem.MirabelleCharacter
 {
-    public class MirabelleRenderer : MonoBehaviour
+    public class MirabelleRenderer
     {
         public static Action OnOpenUmbrella;
         public static Action OnCloseUmbrella;

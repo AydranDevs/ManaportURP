@@ -11,6 +11,7 @@ public class BlasteurCast : Spell {
     public float lifetime;
 
     private void Start() {
+        spellId = "blasteur";
         cooldownTime = cooldown;
     }
 

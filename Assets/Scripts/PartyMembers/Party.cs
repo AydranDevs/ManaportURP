@@ -160,6 +160,11 @@ namespace Manapotion.PartySystem
             return Instance.StaticReturner_GetCurrentLeader();
         }
 
+        public static int GetPartyMemberIndex(PartyMember pm)
+        {
+            return Array.IndexOf(Instance.members, pm.gameObject);
+        }
+
         private void Update()
         {
             foreach (GameObject member in members)

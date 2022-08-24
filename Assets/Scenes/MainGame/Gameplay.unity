@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8572122 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5936142891225822623, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8572124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 2
+    m_Right: 2
+    m_Top: 12
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 1
+  m_ReverseArrangement: 0
 --- !u!114 &128739640 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 543097411010206139, guid: 2f4c937e46389294a808fd9833e68923, type: 3}
@@ -715,6 +746,11 @@ GameObject:
 --- !u!212 &1270217102 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 9021589581451771932, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1326695183 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5936142890611279070, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
   m_PrefabInstance: {fileID: 4003902396956327380}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347676427
@@ -1520,6 +1556,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5936142892487484519, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6772275945057033491, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1727,6 +1767,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dabe38e84294e0b4ead8b47c5906e1cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilityIconSprites:
+    ArcaneBurston: {fileID: 21300000, guid: 28c28aa9306cc544996c4f9c0f80ad95, type: 3}
+    ArcaneBlasteur: {fileID: 21300000, guid: b063fad6cce70a941a111385753cb39d, type: 3}
+    ArcaneAutoma: {fileID: 21300000, guid: af018d1b3dfd4904ebb30a3ac2a87422, type: 3}
+    PyroBurston: {fileID: 21300000, guid: 143fc4b5e17e838448995cfa8bb73d3e, type: 3}
+    PyroBlasteur: {fileID: 21300000, guid: fe7a796a0f31ed4449cb430c93c08093, type: 3}
+    PyroAutoma: {fileID: 21300000, guid: d21da55bf33162743814f9077ec14eee, type: 3}
+    CryoBurston: {fileID: 21300000, guid: 8d6f042110cedfb439e920cb4806da3b, type: 3}
+    CryoBlasteur: {fileID: 21300000, guid: 25f930b32569939419639fe8dfbb0052, type: 3}
+    CryoAutoma: {fileID: 21300000, guid: 15c287a2a71f6e543a476d2c3b8100f1, type: 3}
+    ToxiBurston: {fileID: 21300000, guid: 7aee94d4476ebb749b748ce12b5be318, type: 3}
+    ToxiBlasteur: {fileID: 21300000, guid: c4a09e5670f1ac541ab8287877123ff0, type: 3}
+    ToxiAutoma: {fileID: 21300000, guid: f356bc7355e6ed64a99bb0b42ca7c0a1, type: 3}
+    VoltBurston: {fileID: 21300000, guid: 983ebac9b87e2914784d2b3762ca5b3b, type: 3}
+    VoltBlasteur: {fileID: 21300000, guid: 02dea11ee452f1b4ca4797260444d43d, type: 3}
+    VoltAutoma: {fileID: 21300000, guid: 75b8ec19e146b5e4b8c0620f085d7cf7, type: 3}
+    RejuvenatingShower: {fileID: 21300000, guid: 7f2f22630238fef44bd395112230673c, type: 3}
+    ComfortingShower: {fileID: 21300000, guid: 247b2c2aff8ac644a96b1e48b4895abd, type: 3}
+    CaringShower: {fileID: 21300000, guid: 6c5b5e7a0a639a343b7f0f54a5df482a, type: 3}
+    LovingShower: {fileID: 21300000, guid: b7c676265aca5b04f89886a8025c9071, type: 3}
+    EmpoweringShower: {fileID: 21300000, guid: 947abe72d5372204bbcdc556fe28bf10, type: 3}
+    SociableShower: {fileID: 21300000, guid: 9a14b63147edec54d87eaa51da64b892, type: 3}
+    SwifteningShower: {fileID: 21300000, guid: e89c7b089b04fa24280745fe9c1e062c, type: 3}
+    TougheningShower: {fileID: 21300000, guid: 279bbb80af5b21f46b9d279500559d30, type: 3}
+    PyroUP: {fileID: 21300000, guid: d3378bd04846c3949aecb2e6b09c3b59, type: 3}
+    CryoUP: {fileID: 21300000, guid: c9db4c917a9de134b8fbf416c671820b, type: 3}
+    ToxiUP: {fileID: 21300000, guid: a81d950b9c6e1f147bf3ff08cb929279, type: 3}
+    VoltUP: {fileID: 21300000, guid: 962b8b443b81f424ebe019f31807cfc0, type: 3}
+  abilityIconParent: {fileID: 8572122}
+  statusBarParent: {fileID: 1326695183}
+  abilityIconPrefab: {fileID: 1571027153730341013, guid: 8d205678d259bd54e91c61970581723f, type: 3}
+  healthBarPrefab: {fileID: 5269152939941276983, guid: f057eebd84c280b4c9939c588fd15afc, type: 3}
+  manaBarPrefab: {fileID: 6528918400022114051, guid: 3656f8f0ff2d13c4b887af42c58d30ee, type: 3}
 --- !u!1001 &6994656409146243213
 PrefabInstance:
   m_ObjectHideFlags: 0

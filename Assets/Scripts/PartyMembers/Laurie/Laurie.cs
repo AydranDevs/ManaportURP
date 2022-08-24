@@ -35,10 +35,6 @@ namespace Manapotion.PartySystem.LaurieCharacter
         public State state = State.Movement;
 
         [HideInInspector]
-        public HealthBarScript healthBar;
-        [HideInInspector]
-        public ManaBarScript manaBar;
-        [HideInInspector]
         public Party party;
         
         public LaurieController laurieController { get; private set; }
@@ -71,14 +67,8 @@ namespace Manapotion.PartySystem.LaurieCharacter
             laurieController = new LaurieController(this);
             laurieRenderer = new LaurieRenderer(this);
 
-            healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
-            manaBar = GameObject.FindGameObjectWithTag("ManaBar").GetComponent<ManaBarScript>();
-
             MaxMP();
             manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
-
-            healthBar.SetMaxHealth(stats.hitPoints.maxValue);
-            manaBar.SetMaxMana(stats.manaPoints.maxValue);
 
             // formation = new PartyFormation(5);
             // formation.formationPositions.Add(Party.Instance.previousLeader.GetComponent<PartyMember>(), new Vector2Int(-1, 1));
@@ -121,9 +111,6 @@ namespace Manapotion.PartySystem.LaurieCharacter
             laurieAbilities.Update(); 
             laurieRenderer.Update();
             laurieController.Update();
-
-            UpdateHealthBar();
-            UpdateManaBar();
             
             if (manaRegenCoolingDown)
             {
@@ -146,11 +133,6 @@ namespace Manapotion.PartySystem.LaurieCharacter
             stats.hitPoints.value -= damage;
         }
         
-        private void UpdateHealthBar()
-        {
-            healthBar.SetHealth(stats.hitPoints.value);
-        }
-        
         public void UseMana(float amount)
         {
             stats.manaPoints.value -= amount;
@@ -161,11 +143,6 @@ namespace Manapotion.PartySystem.LaurieCharacter
         public float ManaPointsAfterUse(float amount)
         {
             return stats.manaPoints.value - amount;
-        }
-        
-        private void UpdateManaBar()
-        {
-            manaBar.SetMana(stats.manaPoints.value);
         }
      
         public void Die()

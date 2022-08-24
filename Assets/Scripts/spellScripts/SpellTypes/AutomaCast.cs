@@ -14,6 +14,7 @@ public class AutomaCast : Spell {
     private string thisElement;
 
     private void Start() {
+        spellId = "automa";
         cooldownTime = cooldown;
     }
 

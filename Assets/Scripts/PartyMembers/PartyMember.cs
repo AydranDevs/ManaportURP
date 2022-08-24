@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,9 @@ namespace Manapotion.PartySystem
     public enum MovementState { Idle, Push, Walk, Sprint, Dash, Skid, AuxilaryMovement }
     public enum DirectionState { North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest }
     public enum FacingState { North, East, South, West }
+
+    public enum AbilityState { None, AuxilaryMovement, SpellcastPrimary, SpellcastSecondary }
+    public enum AuxilaryMovementType { Spindash, BlinkDash, Pounce }
 
     public enum PartyStats 
     {
@@ -62,6 +66,41 @@ namespace Manapotion.PartySystem
 
     public abstract class PartyMember : MonoBehaviour
     {
+        #region Events
+        public static event EventHandler<OnAbilityChangedEventArgs> OnAbilityChanged;
+        public class OnAbilityChangedEventArgs : EventArgs
+        {
+            public int index;
+            public Sprite sprite;
+        }
+        public static event EventHandler<OnCoolingDownEventArgs> OnCoolingDown;
+        public class OnCoolingDownEventArgs : EventArgs
+        {
+            public int index;
+            public float cooldownTime;
+            public float cooldown;
+        }
+        public static event EventHandler<OnAbilityLockChangedEventArgs> OnAbilityLockChanged;
+        public class OnAbilityLockChangedEventArgs : EventArgs
+        {
+            public int index;
+            public bool isLocked;
+        }
+
+        public static event EventHandler<OnUpdateHealthBarEventArgs> OnUpdateHealthBar;
+        public class OnUpdateHealthBarEventArgs : EventArgs
+        {
+            public float health;
+            public float maxHealth;
+        }
+        public static event EventHandler<OnUpdateManaBarEventArgs> OnUpdateManaBar;
+        public class OnUpdateManaBarEventArgs : EventArgs
+        {
+            public float mana;
+            public float maxMana;
+        }
+        #endregion
+
         public PartyFormation formation;
 
         public PartyMemberState partyMemberState;
@@ -77,6 +116,8 @@ namespace Manapotion.PartySystem
         public FacingState facingState = FacingState.South;
         public float dashThreshold = 8f; 
 
+
+        #region Stats
         [System.Serializable]
         public class Stats
         {
@@ -198,6 +239,7 @@ namespace Manapotion.PartySystem
             }
         }
         public Stats stats = new Stats();
+        #endregion
 
         public void Start()
         {
@@ -210,6 +252,58 @@ namespace Manapotion.PartySystem
             PartyLeaderCheck();
         }
 
+        #region Update Ability Icons
+        public void UpdateAbilityIcons(int i, Sprite sp)
+        {
+            OnAbilityChanged?.Invoke(this, new OnAbilityChangedEventArgs
+            {
+                index = i,
+                sprite = sp
+            });
+        }
+
+        public void UpdateAbilityIconCooldown(int i, float cooldownTime, float cooldown)
+        {
+            OnCoolingDown?.Invoke(this, new OnCoolingDownEventArgs
+            {
+                index = i,
+                
+                cooldownTime = cooldownTime,
+                cooldown = cooldown
+            });
+        }
+
+        public void UpdateAbilityIconLock(int i, bool locked)
+        {
+            OnAbilityLockChanged?.Invoke(this, new OnAbilityLockChangedEventArgs
+            {
+                index = i,
+                isLocked = locked
+            });
+        }
+        #endregion
+        
+        #region Update Status Bars
+        private void UpdateHealthBar(float health, float maxHealth)
+        {
+            OnUpdateHealthBar?.Invoke(this, new OnUpdateHealthBarEventArgs
+            {
+                health = health,
+                maxHealth = maxHealth
+            });
+        }
+
+        private void UpdateManaBar(float mana, float maxMana)
+        {
+            OnUpdateManaBar?.Invoke(this, new OnUpdateManaBarEventArgs
+            {
+                mana = mana,
+                maxMana = maxMana
+            });
+        }
+        #endregion
+
+        #region Status
         public void Damage(float damage)
         {
             stats.hitPoints.value -= damage;
@@ -218,26 +312,6 @@ namespace Manapotion.PartySystem
         public void Die()
         {
             Destroy(gameObject);
-        }
-
-        public abstract void SetPartyMaxDistance();
-
-        private void PartyLeaderCheck()
-        {
-            if (partyMemberState == PartyMemberState.CurrentLeader) 
-            {
-                gameObject.tag = "PlayerPartyLeader";
-                SetPartyMaxDistance();
-            }
-            else
-            {
-                gameObject.tag = "PlayerPartyMember";
-            }
-        }
-        
-        public Vector3 GetPosition()
-        {
-            return transform.position;
         }
 
         public void MaxHP()
@@ -295,17 +369,6 @@ namespace Manapotion.PartySystem
             }
         }
 
-        void Update()
-        {
-            // remove all statuses that arent active
-            if (statusEffects.Count >= 0 && statusEffects != null)
-            {
-                statusEffects.RemoveAll(status => !status.active);
-            }
-
-            PartyLeaderCheck();
-        }
-
         private bool StatusEffectsContains(Buff effect)
         {
             bool b = false;
@@ -321,6 +384,42 @@ namespace Manapotion.PartySystem
 
             return b;
         }
+        #endregion
+
+        void Update()
+        {
+            // remove all statuses that arent active
+            if (statusEffects.Count >= 0 && statusEffects != null)
+            {
+                statusEffects.RemoveAll(status => !status.active);
+            }
+
+            PartyLeaderCheck();
+            if (partyMemberState != PartyMemberState.CurrentLeader)
+            {
+                return;
+            }
+
+            UpdateHealthBar(stats.hitPoints.value, stats.hitPoints.maxValue);
+            UpdateManaBar(stats.manaPoints.value, stats.manaPoints.maxValue);
+        }
+
+        #region Party
+        public abstract void SetPartyMaxDistance();
+
+        private void PartyLeaderCheck()
+        {
+            if (partyMemberState == PartyMemberState.CurrentLeader) 
+            {
+                gameObject.tag = "PlayerPartyLeader";
+                SetPartyMaxDistance();
+            }
+            else
+            {
+                gameObject.tag = "PlayerPartyMember";
+            }
+        }
+        #endregion
 
         public void SummonParticles(GameObject g)
         {
@@ -334,6 +433,11 @@ namespace Manapotion.PartySystem
                 int i = _statusEffectParticles.IndexOf(g);
                 Destroy(_statusEffectParticles[i]);
             }
+        }
+        
+        public Vector3 GetPosition()
+        {
+            return transform.position;
         }
     }
 }

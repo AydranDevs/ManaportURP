@@ -4,7 +4,7 @@ using Manapotion.AStarPathfinding;
 
 namespace Manapotion.PartySystem.MirabelleCharacter
 {
-    public class MirabellePartyInput : MonoBehaviour
+    public class MirabellePartyInput
     {
         private const int FRAMES_TO_CALC_PATH = 50;
         private int _frames = 0;

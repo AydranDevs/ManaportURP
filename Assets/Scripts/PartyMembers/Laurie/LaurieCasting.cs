@@ -1,12 +1,11 @@
 using UnityEngine;
+using Manapotion.UI;
 
 namespace Manapotion.PartySystem.LaurieCharacter 
 {
     public class LaurieCasting
     {
         private GameStateManager _gameStateManager;
-        private PrimarySpellImage _primarySpellImage;
-        private SecondarySpellImage _secondarySpellImage;
         private Laurie _laurie;
         
         private GameObject _cursor;
@@ -20,16 +19,18 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
         bool spellsFound;
 
+        AbilityIconSprites sprites;
+
         public LaurieCasting(Laurie laurie)
         {
             _laurie = laurie;
 
             _gameStateManager = GameStateManager.Instance;
-            _primarySpellImage = GameObject.FindGameObjectWithTag("PrimaryIcon").GetComponent<PrimarySpellImage>();
-            _secondarySpellImage = GameObject.FindGameObjectWithTag("SecondaryIcon").GetComponent<SecondarySpellImage>();
             _cursor = GameObject.FindGameObjectWithTag("Cursor");
 
             spells = _laurie.GetComponentsInChildren<Spell>();
+
+            sprites = MainUIManager.Instance.abilityIconSprites;
 
             SetSpell(0, spells[0]);
             SetSpell(1, spells[0]);
@@ -45,19 +46,79 @@ namespace Manapotion.PartySystem.LaurieCharacter
                     switch (primaryElement) 
                     {
                         case Elements.Arcane:
-                            _primarySpellImage.SetIcon(primarySpell.icons.arcane);
+                            if (primarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ArcaneBurston);
+                            }
+                            else if (primarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ArcaneBlasteur);
+                            }
+                            else if (primarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ArcaneAutoma);
+                            }
+
                             break;
                         case Elements.Pyro:
-                            _primarySpellImage.SetIcon(primarySpell.icons.pyro);
+                            if (primarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.PyroBurston);
+                            }
+                            else if (primarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.PyroBlasteur);
+                            }
+                            else if (primarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.PyroAutoma);
+                            }
+
                             break;
                         case Elements.Cryo:
-                            _primarySpellImage.SetIcon(primarySpell.icons.cryo);
+                            if (primarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.CryoBurston);
+                            }
+                            else if (primarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.CryoBlasteur);
+                            }
+                            else if (primarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.CryoAutoma);
+                            }
+
                             break;
                         case Elements.Toxi:
-                            _primarySpellImage.SetIcon(primarySpell.icons.toxi);
+                            if (primarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ToxiBurston);
+                            }
+                            else if (primarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ToxiBlasteur);
+                            }
+                            else if (primarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ToxiAutoma);
+                            }
+
                             break;
                         case Elements.Volt:
-                            _primarySpellImage.SetIcon(primarySpell.icons.volt);
+                            if (primarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.VoltBurston);
+                            }
+                            else if (primarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.VoltBlasteur);
+                            }
+                            else if (primarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.VoltAutoma);
+                            }
+
                             break;
                     }
                     break;
@@ -67,19 +128,79 @@ namespace Manapotion.PartySystem.LaurieCharacter
                     switch (secondaryElement) 
                     {
                         case Elements.Arcane:
-                            _secondarySpellImage.SetIcon(secondarySpell.icons.arcane);
+                            if (secondarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ArcaneBurston);
+                            }
+                            else if (secondarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ArcaneBlasteur);
+                            }
+                            else if (secondarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ArcaneAutoma);
+                            }
+
                             break;
                         case Elements.Pyro:
-                            _secondarySpellImage.SetIcon(secondarySpell.icons.pyro);
+                            if (secondarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.PyroBurston);
+                            }
+                            else if (secondarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.PyroBlasteur);
+                            }
+                            else if (secondarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.PyroAutoma);
+                            }
+
                             break;
                         case Elements.Cryo:
-                            _secondarySpellImage.SetIcon(secondarySpell.icons.cryo);
+                            if (secondarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.CryoBurston);
+                            }
+                            else if (secondarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.CryoBlasteur);
+                            }
+                            else if (secondarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.CryoAutoma);
+                            }
+
                             break;
                         case Elements.Toxi:
-                            _secondarySpellImage.SetIcon(secondarySpell.icons.toxi);
+                            if (secondarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ToxiBurston);
+                            }
+                            else if (secondarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ToxiBlasteur);
+                            }
+                            else if (secondarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.ToxiAutoma);
+                            }
+
                             break;
                         case Elements.Volt:
-                            _secondarySpellImage.SetIcon(secondarySpell.icons.volt);
+                            if (secondarySpell.spellId == "burston")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.VoltBurston);
+                            }
+                            else if (secondarySpell.spellId == "blasteur")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.VoltBlasteur);
+                            }
+                            else if (secondarySpell.spellId == "automa")
+                            {
+                                _laurie.UpdateAbilityIcons(slot, sprites.VoltAutoma);
+                            }
+
                             break;
                     }
                     break;
@@ -88,7 +209,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
         public void Update() 
         {
-            if (_laurie.party.partyLeader != PartyLeader.Laurie) 
+            if (_laurie.partyMemberState != PartyMemberState.CurrentLeader) 
             {
                 return;
             }
@@ -263,23 +384,23 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
             if (_laurie.ManaPointsAfterUse(primarySpell.cost) >= 0f) 
             {
-                _primarySpellImage.UpdateSpellLock(true);
+                _laurie.UpdateAbilityIconLock(0, true);
             }
             else 
             {
-                _primarySpellImage.UpdateSpellLock(false);
+                _laurie.UpdateAbilityIconLock(0, false);
             }
             if (_laurie.ManaPointsAfterUse(secondarySpell.cost) >= 0f)
             {
-                _secondarySpellImage.UpdateSpellLock(true);
+                _laurie.UpdateAbilityIconLock(1, true);
             }
             else
             {
-                _secondarySpellImage.UpdateSpellLock(false);
+                _laurie.UpdateAbilityIconLock(1, false);
             }
 
-            _primarySpellImage.UpdateCooldown(primarySpell.cooldownTime, primarySpell.cooldown);
-            _secondarySpellImage.UpdateCooldown(secondarySpell.cooldownTime, secondarySpell.cooldown);
+            _laurie.UpdateAbilityIconCooldown(0, primarySpell.cooldownTime, primarySpell.cooldown);
+            _laurie.UpdateAbilityIconCooldown(1, secondarySpell.cooldownTime, secondarySpell.cooldown);
         }
 
         public void PrimaryCast() 

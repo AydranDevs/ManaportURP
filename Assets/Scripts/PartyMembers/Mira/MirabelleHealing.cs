@@ -1,11 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.UI;
 
 namespace Manapotion.PartySystem.MirabelleCharacter
 {
-    public class MirabelleHealing : MonoBehaviour
+    public class MirabelleHealing
     {
         private GameStateManager _gameManager;
         private HealingAbilityImage _healingImage;
@@ -20,46 +18,74 @@ namespace Manapotion.PartySystem.MirabelleCharacter
 
         bool abilitiesFound;
 
-        public bool openingUmbrella = false;
-        public bool umbrellaOpened = false;
-        public bool closingUmbrella = false;
-        public bool umbrellaClosed = true;
+        AbilityIconSprites sprites;
 
         public MirabelleHealing(Mirabelle mirabelle)
         {
             _mirabelle = mirabelle;
 
             _gameManager = GameStateManager.Instance;
-            _healingImage = GameObject.FindGameObjectWithTag("PrimaryIcon").GetComponent<HealingAbilityImage>();
             _cursor = GameObject.FindGameObjectWithTag("Cursor");
 
             heals = _mirabelle.GetComponentsInChildren<HealingAbility>();
 
-            SetHeal(heals[(int)_mirabelle.HealingEffect]);
+            sprites = MainUIManager.Instance.abilityIconSprites;
+
+            SetHeal(heals[(int)_mirabelle.healingEffect]);
         }
 
         private void SetHeal(HealingAbility heal)
         {
             healingAbility = heal;
 
-            switch (healingAbilityType)
+            switch (_mirabelle.healingEffect)
             {
-                case HealingTypes.Rejuvenating:
-                    _healingImage.SetIcon(healingAbility.icons.rejuvenating);
+                case PartyBuffs.Rejuvenated:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.RejuvenatingShower);
                     break;
-                case HealingTypes.Warming:
-                    _healingImage.SetIcon(healingAbility.icons.warming);
+                case PartyBuffs.Comfortable:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.ComfortingShower);
                     break;
-                case HealingTypes.Comforting:
-                    _healingImage.SetIcon(healingAbility.icons.comforting);
+                case PartyBuffs.Cared_For:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.CaringShower);
                     break;
-                case HealingTypes.Caring:
-                    _healingImage.SetIcon(healingAbility.icons.caring);
+                case PartyBuffs.Loved:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.LovingShower);
                     break;
-                case HealingTypes.Loving:
-                    _healingImage.SetIcon(healingAbility.icons.loving);
+                case PartyBuffs.Empowered:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.EmpoweringShower);
+                    break;
+                case PartyBuffs.Sociable:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.SociableShower);
+                    break;
+                case PartyBuffs.Nimble:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.SwifteningShower);
+                    break;
+                case PartyBuffs.Toughened:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.TougheningShower);
+                    break;
+                case PartyBuffs.Pyro_UP:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.PyroUP);
+                    break;
+                case PartyBuffs.Cryo_UP:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.CryoUP);
+                    break;
+                case PartyBuffs.Toxi_UP:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.ToxiUP);
+                    break;
+                case PartyBuffs.Volt_UP:
+                    _mirabelle.UpdateAbilityIcons(0, sprites.VoltUP);
                     break;
             }
+        }
+
+        public void Update() {
+            if (_mirabelle.partyMemberState != PartyMemberState.CurrentLeader) 
+            {
+                return;
+            }
+
+            SetHeal(heals[(int)_mirabelle.healingType]);
         }
 
         // Opens mirabelle's umbrella and prepares for healing party members

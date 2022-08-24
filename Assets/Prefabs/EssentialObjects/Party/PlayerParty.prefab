@@ -544,6 +544,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 676582d2-5d0b-42d2-bc4e-fc13852eea3e
     m_ActionName: Player/Interact[/Keyboard/f]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: caea9ad2-34ec-4337-b62a-148017668843
+    m_ActionName: Player/Continue[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: KeyboardAndMouse
   m_DefaultActionMap: Player
@@ -561,6 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7dcbb2ec691a448b6b92eea2652be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _controls: {fileID: 0}
   partyLeader: 0
   previousLeader: {fileID: 0}
   oldestLeader: {fileID: 0}
@@ -763,24 +768,92 @@ MonoBehaviour:
     rejuvenatedBuffParticles: {fileID: 11400000, guid: 2cd4811d9f01c554299c7754f2980866, type: 2}
   _statusEffectParticles: []
   statusEffects: []
-  xpLevel: 0
-  experiencePoints:
-    id: 0
-    maxValue: 0
-    value: 0
-  hitPoints:
-    id: 0
-    maxValue: 0
-    value: 0
-  attackDamage:
-    id: 0
-    maxValue: 0
-    value: 0
-  attackSpeed:
-    id: 0
-    maxValue: 0
-    value: 0
+  movementState: 0
+  directionState: 4
+  facingState: 2
+  dashThreshold: 8
   stats:
+    statArray:
+    - id: 2
+      maxValue: 100
+      value: 0
+    - id: 0
+      maxValue: 20
+      value: 20
+    - id: 3
+      maxValue: 999
+      value: 2
+    - id: 4
+      maxValue: 999
+      value: 1
+    - id: 15
+      maxValue: 1
+      value: 0
+    - id: 1
+      maxValue: 5
+      value: 5
+    - id: 16
+      maxValue: 999
+      value: 0.5
+    - id: 14
+      maxValue: 999
+      value: 1.5
+    - id: 13
+      maxValue: 999
+      value: 1.5
+    - id: 12
+      maxValue: 999
+      value: 1.35
+    - id: 11
+      maxValue: 999
+      value: 2
+    - id: 20
+      maxValue: 999
+      value: 2
+    - id: 17
+      maxValue: 5
+      value: 0
+    - id: 18
+      maxValue: 3
+      value: 0
+    - id: 19
+      maxValue: 4
+      value: 0
+    - id: 10
+      maxValue: 1
+      value: 0
+    - id: 5
+      maxValue: 1
+      value: 0
+    - id: 6
+      maxValue: 1
+      value: 0
+    - id: 7
+      maxValue: 1
+      value: 0
+    - id: 8
+      maxValue: 1
+      value: 0
+    - id: 9
+      maxValue: 1
+      value: 0
+    xpLevel: 0
+    experiencePoints:
+      id: 2
+      maxValue: 100
+      value: 0
+    hitPoints:
+      id: 0
+      maxValue: 20
+      value: 20
+    attackDamage:
+      id: 3
+      maxValue: 999
+      value: 2
+    attackSpeed:
+      id: 4
+      maxValue: 999
+      value: 1
     stabilityPoints:
       id: 15
       maxValue: 1
@@ -842,11 +915,6 @@ MonoBehaviour:
     - id: 9
       maxValue: 1
       value: 0
-  movementState: 0
-  directionState: 4
-  facingState: 2
-  sprintModifier: 1.75
-  skidThreshold: 8
   abilityState: 0
   auxilaryMovementType: 0
   primarySpellType: 2
@@ -1085,58 +1153,161 @@ MonoBehaviour:
     rejuvenatedBuffParticles: {fileID: 11400000, guid: 2cd4811d9f01c554299c7754f2980866, type: 2}
   _statusEffectParticles: []
   statusEffects: []
-  xpLevel: 0
-  experiencePoints:
-    id: 0
-    maxValue: 0
-    value: 0
-  hitPoints:
-    id: 0
-    maxValue: 0
-    value: 0
-  attackDamage:
-    id: 0
-    maxValue: 0
-    value: 0
-  attackSpeed:
-    id: 0
-    maxValue: 0
-    value: 0
-  stabilityMax: 1
-  stability: 1
-  stressMax: 1
-  stress: 0
-  pushSp: 0
-  dashSp: 0
-  sprintSp: 0
-  walkSp: 0
-  sprintMod: 0
-  dashMod: 0
-  stressRes: 0.5
-  pyroRes: 0
-  cryoRes: 0
-  boltRes: 0
-  toxiRes: 0
-  arcaneRes: 0
-  isOnFire: 0
-  isFreezing: 0
-  isZapped: 0
-  isPoisoned: 0
   movementState: 0
   directionState: 4
   facingState: 2
-  sprintModifier: 1.75
-  skidThreshold: 8
-  abilityState: 0
+  dashThreshold: 8
+  stats:
+    statArray:
+    - id: 2
+      maxValue: 100
+      value: 0
+    - id: 0
+      maxValue: 20
+      value: 20
+    - id: 3
+      maxValue: 999
+      value: 2
+    - id: 4
+      maxValue: 999
+      value: 1
+    - id: 15
+      maxValue: 1
+      value: 0
+    - id: 1
+      maxValue: 5
+      value: 5
+    - id: 16
+      maxValue: 999
+      value: 0.5
+    - id: 14
+      maxValue: 999
+      value: 1.5
+    - id: 13
+      maxValue: 999
+      value: 1.5
+    - id: 12
+      maxValue: 999
+      value: 1.35
+    - id: 11
+      maxValue: 999
+      value: 2
+    - id: 20
+      maxValue: 999
+      value: 2
+    - id: 17
+      maxValue: 5
+      value: 0
+    - id: 18
+      maxValue: 3
+      value: 0
+    - id: 19
+      maxValue: 4
+      value: 0
+    - id: 10
+      maxValue: 1
+      value: 0
+    - id: 5
+      maxValue: 1
+      value: 0
+    - id: 6
+      maxValue: 1
+      value: 0
+    - id: 7
+      maxValue: 1
+      value: 0
+    - id: 8
+      maxValue: 1
+      value: 0
+    - id: 9
+      maxValue: 1
+      value: 0
+    xpLevel: 0
+    experiencePoints:
+      id: 2
+      maxValue: 100
+      value: 0
+    hitPoints:
+      id: 0
+      maxValue: 20
+      value: 20
+    attackDamage:
+      id: 3
+      maxValue: 999
+      value: 2
+    attackSpeed:
+      id: 4
+      maxValue: 999
+      value: 1
+    stabilityPoints:
+      id: 15
+      maxValue: 1
+      value: 0
+    manaPoints:
+      id: 1
+      maxValue: 5
+      value: 5
+    manaPointsRegen:
+      id: 16
+      maxValue: 999
+      value: 0.5
+    pushSp:
+      id: 14
+      maxValue: 999
+      value: 1.5
+    dashMod:
+      id: 13
+      maxValue: 999
+      value: 1.5
+    sprintMod:
+      id: 12
+      maxValue: 999
+      value: 1.35
+    walkSp:
+      id: 11
+      maxValue: 999
+      value: 2
+    abilityCooldownLimit:
+      id: 20
+      maxValue: 999
+      value: 2
+    abilityDistances:
+    - id: 17
+      maxValue: 5
+      value: 0
+    - id: 18
+      maxValue: 3
+      value: 0
+    - id: 19
+      maxValue: 4
+      value: 0
+    resistances:
+    - id: 10
+      maxValue: 1
+      value: 0
+    - id: 5
+      maxValue: 1
+      value: 0
+    - id: 6
+      maxValue: 1
+      value: 0
+    - id: 7
+      maxValue: 1
+      value: 0
+    - id: 8
+      maxValue: 1
+      value: 0
+    - id: 9
+      maxValue: 1
+      value: 0
   healingType: 0
   HealingEffect: 0
-  state: 0
   umbrellaState: 3
+  state: 0
   healthBar: {fileID: 0}
-  manaBar: {fileID: 0}
   party: {fileID: 0}
-  miraRenderer: {fileID: 0}
-  healing: {fileID: 0}
+  inputProvider: {fileID: 0}
+  controls: {fileID: 0}
 --- !u!50 &4653062474530352095
 Rigidbody2D:
   serializedVersion: 4
@@ -1360,32 +1531,159 @@ MonoBehaviour:
     rejuvenatedBuffParticles: {fileID: 11400000, guid: 2cd4811d9f01c554299c7754f2980866, type: 2}
   _statusEffectParticles: []
   statusEffects: []
-  xpLevel: 0
-  experiencePoints:
-    id: 0
-    maxValue: 0
-    value: 0
-  hitPoints:
-    id: 0
-    maxValue: 0
-    value: 0
-  attackDamage:
-    id: 0
-    maxValue: 0
-    value: 0
-  attackSpeed:
-    id: 0
-    maxValue: 0
-    value: 0
   movementState: 0
   directionState: 4
   facingState: 2
-  sprintModifier: 1.75
-  skidThreshold: 8
+  dashThreshold: 8
+  stats:
+    statArray:
+    - id: 2
+      maxValue: 100
+      value: 0
+    - id: 0
+      maxValue: 20
+      value: 20
+    - id: 3
+      maxValue: 999
+      value: 2
+    - id: 4
+      maxValue: 999
+      value: 1
+    - id: 15
+      maxValue: 1
+      value: 0
+    - id: 1
+      maxValue: 5
+      value: 5
+    - id: 16
+      maxValue: 999
+      value: 0.5
+    - id: 14
+      maxValue: 999
+      value: 1.5
+    - id: 13
+      maxValue: 999
+      value: 1.5
+    - id: 12
+      maxValue: 999
+      value: 1.35
+    - id: 11
+      maxValue: 999
+      value: 2
+    - id: 20
+      maxValue: 999
+      value: 2
+    - id: 17
+      maxValue: 5
+      value: 0
+    - id: 18
+      maxValue: 3
+      value: 0
+    - id: 19
+      maxValue: 4
+      value: 0
+    - id: 10
+      maxValue: 1
+      value: 0
+    - id: 5
+      maxValue: 1
+      value: 0
+    - id: 6
+      maxValue: 1
+      value: 0
+    - id: 7
+      maxValue: 1
+      value: 0
+    - id: 8
+      maxValue: 1
+      value: 0
+    - id: 9
+      maxValue: 1
+      value: 0
+    xpLevel: 0
+    experiencePoints:
+      id: 2
+      maxValue: 100
+      value: 0
+    hitPoints:
+      id: 0
+      maxValue: 20
+      value: 20
+    attackDamage:
+      id: 3
+      maxValue: 999
+      value: 2
+    attackSpeed:
+      id: 4
+      maxValue: 999
+      value: 1
+    stabilityPoints:
+      id: 15
+      maxValue: 1
+      value: 0
+    manaPoints:
+      id: 1
+      maxValue: 5
+      value: 5
+    manaPointsRegen:
+      id: 16
+      maxValue: 999
+      value: 0.5
+    pushSp:
+      id: 14
+      maxValue: 999
+      value: 1.5
+    dashMod:
+      id: 13
+      maxValue: 999
+      value: 1.5
+    sprintMod:
+      id: 12
+      maxValue: 999
+      value: 1.35
+    walkSp:
+      id: 11
+      maxValue: 999
+      value: 2
+    abilityCooldownLimit:
+      id: 20
+      maxValue: 999
+      value: 2
+    abilityDistances:
+    - id: 17
+      maxValue: 5
+      value: 0
+    - id: 18
+      maxValue: 3
+      value: 0
+    - id: 19
+      maxValue: 4
+      value: 0
+    resistances:
+    - id: 10
+      maxValue: 1
+      value: 0
+    - id: 5
+      maxValue: 1
+      value: 0
+    - id: 6
+      maxValue: 1
+      value: 0
+    - id: 7
+      maxValue: 1
+      value: 0
+    - id: 8
+      maxValue: 1
+      value: 0
+    - id: 9
+      maxValue: 1
+      value: 0
   state: 0
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
   party: {fileID: 0}
+  inputProvider: {fileID: 0}
+  controls: {fileID: 0}
 --- !u!50 &4653062474753859897
 Rigidbody2D:
   serializedVersion: 4
