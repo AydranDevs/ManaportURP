@@ -37,7 +37,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
         }
 
         public void SetSpell(int slot, Spell spell) 
-        {
+        {   
             switch (slot) 
             {
                 case 0:

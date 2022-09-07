@@ -2,24 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.PartySystem;
 
-namespace Inventory {
-    
+namespace Manapotion.PartySystem.Inventory
+{
+    public class PartyInventory
+    {
+        private Party _party;
+        
+        public Bag bag { get; private set; }
+        public Equipment equipment { get; private set; }
+        public Beastiary Beastiary { get; private set; }
 
-    public class PartyInventory : MonoBehaviour {
-        public static PartyInventory Instance;
-    
-
-        public Bag bag;
-        public Equipment equipment;
-        public Beastiary Beastiary;
-
-        private void Awake() {
-            Instance = this;
-        }
-
-        private void Start() {
-            bag = new Bag();
+        public PartyInventory(Party party)
+        {
+            bag = new Bag(_party);
         }
     }
 }

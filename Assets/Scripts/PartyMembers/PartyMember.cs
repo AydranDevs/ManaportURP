@@ -5,6 +5,7 @@ using UnityEngine;
 using Manapotion;
 using Manapotion.StatusEffects;
 using Manapotion.Status;
+using Manapotion.Equipables;
 
 namespace Manapotion.PartySystem
 {
@@ -116,6 +117,9 @@ namespace Manapotion.PartySystem
         public FacingState facingState = FacingState.South;
         public float dashThreshold = 8f; 
 
+        public PartyEquipable weapon;
+        public PartyEquipable armour;
+        public PartyEquipable vanity;
 
         #region Stats
         [System.Serializable]
@@ -386,6 +390,24 @@ namespace Manapotion.PartySystem
         }
         #endregion
 
+        #region Equip
+        public void Equip(PartyEquipable equipable)
+        {
+            if (equipable.equipableType == EquipableType.Weapon)
+            {
+                weapon = equipable;
+            }
+            else if (equipable.equipableType == EquipableType.Armour)
+            {
+                armour = equipable;
+            }
+            else
+            {
+                vanity = equipable;
+            }
+        }
+        #endregion
+
         void Update()
         {
             // remove all statuses that arent active
@@ -421,6 +443,7 @@ namespace Manapotion.PartySystem
         }
         #endregion
 
+        #region Particles
         public void SummonParticles(GameObject g)
         {
             var go = GameObject.Instantiate(g, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity, transform);
@@ -434,6 +457,7 @@ namespace Manapotion.PartySystem
                 Destroy(_statusEffectParticles[i]);
             }
         }
+        #endregion
         
         public Vector3 GetPosition()
         {

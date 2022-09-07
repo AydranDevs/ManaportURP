@@ -3,6 +3,8 @@ using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using Manapotion.PartySystem;
 using Manapotion.Status;
 
@@ -48,18 +50,22 @@ namespace Manapotion.UI
     public class MainUIManager : MonoBehaviour
     {
         public static MainUIManager Instance;
+        public bool invOpen = false;
 
         private Party _party;
 
         public StatusUIManager statusUIManager { get; private set; }
+        public InventoryUIManager inventoryUIManager { get; private set; }
     
         public CharacterUIHandle[] handles { get; private set; }
         private Dictionary<int, Action> _handleDict;
 
         public PartyMember currentLeader { get; private set; }
 
+        [Header("Status")]
         public AbilityIconSprites abilityIconSprites;
 
+        public GameObject statusParent;
         public GameObject abilityIconParent;
         public GameObject statusBarParent;
 
@@ -67,15 +73,63 @@ namespace Manapotion.UI
         public GameObject healthBarPrefab;
         public GameObject manaBarPrefab;
 
+        [Header("Input")]
+        [SerializeField]
+        private InputActionAsset _controls;
+        private InputActionMap _inputActionMap;
+
+        private InputAction _toggleBag;
+        private InputAction _toggleEquip;
+        private InputAction _toggleBeastiary;
+
+        public DimmerHandler dimmer;
+
+        [Header("Inventory")]
+        public GameObject bagUIObject;
+        public GameObject leftEquipUIObject;
+        public GameObject rightEquipUIObject;
+        public GameObject beastiaryUIObject;
+
+        public ItemIcon[] itemIcons; //= new ItemIcon[(int)ItemID.MAXCOUNT];
+
+        public Image emptyImage;
+
+        public GameObject consumableSlot;
+        public GameObject ingredientSlot;
+        public GameObject materialSlot;
+
+        public GameObject bagSlotParent;
+
         private void Awake() {
             Instance = this;
+            
+            statusUIManager = new StatusUIManager(this);
+            inventoryUIManager = new InventoryUIManager(this);
+
+            _inputActionMap = _controls.FindActionMap("Player");
+
+            CreateInputAction(OnToggleInv, _toggleBag, "ToggleBag");
+            CreateInputAction(OnToggleInv, _toggleEquip, "ToggleEquip");
+            CreateInputAction(OnToggleInv, _toggleBeastiary, "ToggleBeastiary");
+        }
+
+        private void CreateInputAction(Action<InputAction.CallbackContext> subscriber, InputAction action, string actionName)
+        {
+            action = _inputActionMap.FindAction(actionName);
+            action.Enable();
+            action.started += subscriber;
+            action.performed += subscriber;
+            action.canceled += subscriber;
         }
 
         private void Start()
         {
+            GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged_GameStateChanged;
             _party = Party.Instance;
 
-            statusUIManager = new StatusUIManager(this);
+            CreateInputAction(inventoryUIManager.OnToggleBag, _toggleBag, "ToggleBag");
+            CreateInputAction(inventoryUIManager.OnToggleEquip, _toggleEquip, "ToggleEquip");
+            CreateInputAction(inventoryUIManager.OnToggleBeastiary, _toggleBeastiary, "ToggleBeastiary");
 
             handles = new CharacterUIHandle[_party.members.Count()];
             for (int i = 0; i < _party.members.Count(); i++)
@@ -100,6 +154,35 @@ namespace Manapotion.UI
             }
         }
 
+        #region Inv
+        public void OnToggleInv(InputAction.CallbackContext context)
+        {
+            if (!context.started)
+            {
+                return;
+            }
+
+            invOpen = true;
+            GameStateManager.Instance.ChangeGameState(GameState.Inv);
+        }
+
+        public void OnGameStateChanged_GameStateChanged(object sender, GameStateManager.OnGameStateChangedArgs e)
+        {
+            if (e.newState == GameState.Inv)
+            {
+                dimmer.FadeIn();
+                statusUIManager.Hide();
+                inventoryUIManager.bagUI.Refresh();
+            }
+            else
+            {
+                dimmer.FadeOut();
+                statusUIManager.Show();
+            }
+        }
+        #endregion
+
+        #region Handle Char UI
         private void HandleLaurieUI()
         {
             if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
@@ -123,6 +206,7 @@ namespace Manapotion.UI
                 currentLeader = Party.GetCurrentLeader();
             }
         }
+        #endregion
     }
     
     public class CharacterUIHandle

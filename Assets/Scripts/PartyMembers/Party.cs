@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Manapotion.PartySystem.Inventory;
 
 namespace Manapotion.PartySystem
 {
@@ -29,6 +30,8 @@ namespace Manapotion.PartySystem
 
         public float maxDistance;
 
+        public PartyInventory partyInventory { get; private set; }
+
         private void Awake()
         {
             Instance = this;
@@ -36,6 +39,8 @@ namespace Manapotion.PartySystem
 
         private void Start()
         {
+            partyInventory = new PartyInventory(this);
+            
             cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PartyCam>();
             cam.target = members[0].transform;
             partyLeader = PartyLeader.Laurie;

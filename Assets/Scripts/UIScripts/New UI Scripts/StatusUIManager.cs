@@ -27,6 +27,8 @@ namespace Manapotion.UI
 
         public AbilityIcon[] abilityIcons { get; private set; }
         public StatusBar[] statusBars { get; private set; }
+
+        public bool isHidden { get; private set; }
         
         public StatusUIManager(MainUIManager main)
         {
@@ -140,6 +142,24 @@ namespace Manapotion.UI
         {
             statusBars[1].fill.maxValue = maxMana;
             statusBars[1].fill.value = mana;
+        }
+        #endregion
+    
+        #region Show/Hide Status
+        public void Hide()
+        {
+            isHidden = true;
+            LTDescr tweenObject;
+            tweenObject = LeanTween.move(_main.statusParent.GetComponent<RectTransform>(), new Vector3(-70, 0, 0), 0.3f);
+            tweenObject.setEase(LeanTweenType.easeOutQuad);
+        }
+
+        public void Show()
+        {
+            isHidden = false;
+            LTDescr tweenObject;
+            tweenObject = LeanTween.move(_main.statusParent.GetComponent<RectTransform>(), new Vector3(0, 0, 0), 0.3f);
+            tweenObject.setEase(LeanTweenType.easeOutQuad);
         }
         #endregion
     }

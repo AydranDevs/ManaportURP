@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class InvSlotUIHandler : MonoBehaviour {
+public class BagSlotUIHandler : MonoBehaviour {
     public Image item;
     public TextMeshProUGUI number;
 }

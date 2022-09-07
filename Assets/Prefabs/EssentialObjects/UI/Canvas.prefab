@@ -84,7 +84,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 640014575}
-  - component: {fileID: 298492503355462431}
   m_Layer: 5
   m_Name: Bag
   m_TagString: Untagged
@@ -114,18 +113,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &298492503355462431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 640014574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 345672160c729aa49af976c75386df8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1157100388
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +416,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5556845210405434295}
-  - component: {fileID: 2311841990826501415}
   m_Layer: 5
   m_Name: MainUI
   m_TagString: Untagged
@@ -458,19 +444,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2311841990826501415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 79452237721077506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8eb8220cb47c8242ac87d6f9754d6ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dimmer: {fileID: 0}
 --- !u!1 &367014680633931466
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +732,6 @@ GameObject:
   - component: {fileID: 7830873789043008419}
   - component: {fileID: 41406424268797179}
   - component: {fileID: 2851655457095022895}
-  - component: {fileID: 4091960214770113934}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -826,97 +798,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &4091960214770113934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2273534317863429183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8446e676f9a2d4247ab1b14934816e73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emptyImage: {fileID: 4445752338807825072}
-  consumableSlot: {fileID: 2033497730161841991, guid: 8bb102a7b55ce9c42afccbd4658872d6, type: 3}
-  ingredientSlot: {fileID: 334433304461513998, guid: 7a9ab30a2ee88f543bed63d02ee42db5, type: 3}
-  materialSlot: {fileID: 0}
-  slotsFilled: 000000000000000000000000
-  slots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  itemIcons:
-  - {fileID: 11400000, guid: 6908dac425e49b84384f8efe96cd517b, type: 2}
-  - {fileID: 11400000, guid: aac62e9e1a0f22c49b43f20a13b66903, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &2579874671408141751
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +807,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7331766214877491104}
-  - component: {fileID: 98290647}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -955,18 +835,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 68.26401, y: 91.916}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &98290647
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579874671408141751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 250de0e04e0bdbb4facb994450371c25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3367542371991669518
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +844,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2489255449201813992}
-  - component: {fileID: 1463577216518305718}
   m_Layer: 5
   m_Name: Beastiary
   m_TagString: Untagged
@@ -1004,18 +871,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1463577216518305718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3367542371991669518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a9331c4971d1f74d97d9f36c4de3c03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4178089694409258360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,7 +880,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6335257721037343437}
-  - component: {fileID: 8535769214096339832}
   m_Layer: 5
   m_Name: Inventory
   m_TagString: Untagged
@@ -1055,26 +909,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8535769214096339832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4178089694409258360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bb50b19c2e13ae46b7cc5231321c0c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bag: {fileID: 640014574}
-  equipment: {fileID: 8100334754543779955}
-  beastiary: {fileID: 3367542371991669518}
-  invBagOpen: 0
-  invEquipOpen: 0
-  invBeastiaryOpen: 0
-  filledBagSlots: 0
-  gameManager: {fileID: 0}
 --- !u!1 &4322413170346671347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,7 +1740,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8694826067698126969}
-  - component: {fileID: 5645194167582929884}
   m_Layer: 5
   m_Name: Equipment
   m_TagString: Untagged
@@ -1934,15 +1767,3 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5645194167582929884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8100334754543779955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e735521eb2b64664b8df6a37b0b4ab4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -42,10 +42,6 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             mirabelleController = new MirabelleController(this);
             mirabelleRenderer = new MirabelleRenderer(this);
             mirabelleHealing = new MirabelleHealing(this);
-
-            healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBarScript>();
-            
-            healthBar.SetMaxHealth(stats.hitPoints.maxValue);
         }
     
         private void Update()
@@ -58,14 +54,6 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             mirabelleController.Update();
             mirabelleRenderer.Update();
             mirabelleHealing.Update();
-            
-            UpdateHealthBar();
-        }
-
-        private void UpdateHealthBar()
-        {
-            // TODO: fix this
-            // healthBar.SetHealth(stats.hitPoints.value);
         }
 
         public override void SetPartyMaxDistance()

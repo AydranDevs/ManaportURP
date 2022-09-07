@@ -12,7 +12,10 @@ public class GameStateManager : MonoBehaviour {
     // we will change this when opening a menu, loading, etc
     public GameState state = GameState.Main;
     public event EventHandler<OnGameStateChangedArgs> OnGameStateChanged;
-    public class OnGameStateChangedArgs : EventArgs { }
+    public class OnGameStateChangedArgs : EventArgs
+    {
+        public GameState newState;
+    }
     
     public ChunkDetails currentChunk { get; private set; }
     public ChunkDetails previousChunk { get; private set; }
@@ -35,7 +38,10 @@ public class GameStateManager : MonoBehaviour {
 
     public void ChangeGameState(GameState gameState) {
         state = gameState;
-        OnGameStateChanged?.Invoke(this, new OnGameStateChangedArgs { });
+        OnGameStateChanged?.Invoke(this, new OnGameStateChangedArgs
+        {
+            newState = this.state
+        });
     }
 
     public void ChangeCursor(Texture2D cursor) {

@@ -3,18 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Inventory;
+using Manapotion.PartySystem.Inventory;
+using Manapotion.PartySystem;
+using Manapotion.UI;
 
-public enum ItemCategory 
+public class BagSlotsUIHandler : MonoBehaviour
 {
-    CONSUMABLE,
-    INGREDIENT,
-    MATERIAL
-}
-
-public class InvSlotsUIHandler : MonoBehaviour
-{
-    public static InvSlotsUIHandler Instance;
+    public static BagSlotsUIHandler Instance;
 
     public Image emptyImage;
 
@@ -44,17 +39,17 @@ public class InvSlotsUIHandler : MonoBehaviour
 
     public void Refresh() {
         for (int i = 0; i < (int)ItemID.MAXCOUNT; i++) {
-            string itemId = PartyInventory.Instance.bag.slots[i].itemId.ToString();
+            string itemId = Party.Instance.partyInventory.bag.slots[i].itemId.ToString();
             string[] properties = itemId.Split('_');
             ItemCategory category = (ItemCategory)Enum.Parse(typeof(ItemCategory), properties[0]);
             
-            if (PartyInventory.Instance.bag.slots[i].quantity > 0 && slotsFilled[i] == false) {
+            if (Party.Instance.partyInventory.bag.slots[i].quantity > 0 && slotsFilled[i] == false) {
                 AddSlot(category, itemId, i);
                 slotsFilled[i] = true;
             }
 
-            if (slots[i].GetComponent<InvSlotUIHandler>().number.text != null) {
-                slots[i].GetComponent<InvSlotUIHandler>().number.text = PartyInventory.Instance.bag.slots[i].quantity.ToString();
+            if (slots[i].GetComponent<BagSlotUIHandler>().number.text != null) {
+                slots[i].GetComponent<BagSlotUIHandler>().number.text = Party.Instance.partyInventory.bag.slots[i].quantity.ToString();
             }
         }
 
@@ -84,6 +79,6 @@ public class InvSlotsUIHandler : MonoBehaviour
             RectTransform slotTransform = slot.GetComponent<RectTransform>();
         }
 
-        slots[i].GetComponent<InvSlotUIHandler>().item.sprite = itemIcons[i].Icon;
+        slots[i].GetComponent<BagSlotUIHandler>().item.sprite = itemIcons[i].Icon;
     }
 }

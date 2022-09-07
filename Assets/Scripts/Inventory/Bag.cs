@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
+using Manapotion.UI;
 
-namespace Inventory {
+namespace Manapotion.PartySystem.Inventory {
     
     public enum ItemID 
     { 
@@ -48,26 +49,31 @@ namespace Inventory {
     public class Bag {
         public BagSlot[] slots = new BagSlot[(int)ItemID.MAXCOUNT];
 
-        public Bag() {
+        private Party _party;
+
+        public Bag(Party party) {
+            _party = party;
+
             // initialize bag slots
             for (int i = 0; i < (int)ItemID.MAXCOUNT; i++) {
                 slots[i] = new BagSlot((ItemID)i, 0);
                 
             }
 
-            // retrieve saved inventory contents here
+            // retrieve saved bags contents here
             // ...
             
-            // Update inventory ui with filled bag slots 
+            // Update bag ui with filled bag slots 
             // this will ALWAYS HAPPEN AFTER RETRIEVING SAVED INVENTORY!!!
-            InventoryUIHandler.Instance.filledBagSlots = GetFilledBagSlots();
+            MainUIManager.Instance.inventoryUIManager.bagUI.filledBagSlots = GetFilledBagSlots();
         }
 
         public void AddItem(ItemID itemId, int quantity) {
+            Debug.Log(string.Format("{0} {1}s added to party bag", quantity, itemId));
             foreach (var slot in slots) {
                 if (slot.itemId == itemId) {
                     slot.quantity += quantity;
-                    InventoryUIHandler.Instance.filledBagSlots = GetFilledBagSlots();
+                    MainUIManager.Instance.inventoryUIManager.bagUI.filledBagSlots = GetFilledBagSlots();
                     break;
                 }
             }
@@ -77,7 +83,7 @@ namespace Inventory {
             foreach (var slot in slots) {
                 if (slot.itemId == itemId) {
                     slot.quantity -= quantity;
-                    InventoryUIHandler.Instance.filledBagSlots = GetFilledBagSlots();
+                    MainUIManager.Instance.inventoryUIManager.bagUI.filledBagSlots = GetFilledBagSlots();
                     break;
                 }
             }

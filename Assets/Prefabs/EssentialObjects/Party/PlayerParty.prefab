@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 4653062473120931619}
   - component: {fileID: 4653062473120931617}
   - component: {fileID: 4653062473120931616}
-  - component: {fileID: 1766890477}
   m_Layer: 0
   m_Name: PlayerParty
   m_TagString: Untagged
@@ -574,18 +573,6 @@ MonoBehaviour:
   - {fileID: 4653062474530352088}
   - {fileID: 4653062474753859898}
   maxDistance: 0
---- !u!114 &1766890477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4653062473120931618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6ee567e09a3f954599105467386f392, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4653062474072816918
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,6 +628,7 @@ MonoBehaviour:
     cryo: {fileID: 21300000, guid: 8d6f042110cedfb439e920cb4806da3b, type: 3}
     toxi: {fileID: 21300000, guid: 7aee94d4476ebb749b748ce12b5be318, type: 3}
     volt: {fileID: 21300000, guid: 983ebac9b87e2914784d2b3762ca5b3b, type: 3}
+  icon: {fileID: 0}
   coolingDown: 0
   cooldownTime: 0
   burston: {fileID: 8509226589283875488, guid: 18ec5ea9b96498d47a1b718c2c380f1d, type: 3}
@@ -672,6 +660,7 @@ MonoBehaviour:
     cryo: {fileID: 21300000, guid: 25f930b32569939419639fe8dfbb0052, type: 3}
     toxi: {fileID: 21300000, guid: c4a09e5670f1ac541ab8287877123ff0, type: 3}
     volt: {fileID: 21300000, guid: 02dea11ee452f1b4ca4797260444d43d, type: 3}
+  icon: {fileID: 0}
   coolingDown: 0
   cooldownTime: 0
   blasteur: {fileID: 6213410681897852948, guid: 02eddc6bfbb491d4d8cb4c1241087b29, type: 3}
@@ -703,6 +692,7 @@ MonoBehaviour:
     cryo: {fileID: 21300000, guid: 15c287a2a71f6e543a476d2c3b8100f1, type: 3}
     toxi: {fileID: 21300000, guid: f356bc7355e6ed64a99bb0b42ca7c0a1, type: 3}
     volt: {fileID: 21300000, guid: 75b8ec19e146b5e4b8c0620f085d7cf7, type: 3}
+  icon: {fileID: 0}
   coolingDown: 0
   cooldownTime: 0
   automa: {fileID: 5044041582067445021, guid: cee63864710c1c14587d8bfe3eca3553, type: 3}
@@ -922,8 +912,6 @@ MonoBehaviour:
   secondarySpellType: 2
   secondarySpellElement: 0
   state: 0
-  healthBar: {fileID: 0}
-  manaBar: {fileID: 0}
   party: {fileID: 0}
   inputProvider: {fileID: 0}
   controls: {fileID: 0}
@@ -1301,7 +1289,7 @@ MonoBehaviour:
       maxValue: 1
       value: 0
   healingType: 0
-  HealingEffect: 0
+  healingEffect: 0
   umbrellaState: 3
   state: 0
   healthBar: {fileID: 0}
@@ -1679,8 +1667,6 @@ MonoBehaviour:
       maxValue: 1
       value: 0
   state: 0
-  healthBar: {fileID: 0}
-  manaBar: {fileID: 0}
   party: {fileID: 0}
   inputProvider: {fileID: 0}
   controls: {fileID: 0}

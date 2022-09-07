@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Inventory {
-    public class BagSlot {
+namespace Manapotion.PartySystem.Inventory {
+public class BagSlot {
         public ItemID itemId;
         public Sprite itemIcon;
         public int quantity = 0;
