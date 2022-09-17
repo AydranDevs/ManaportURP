@@ -1,6 +1,5 @@
 using System;
 using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,7 +48,7 @@ namespace Manapotion.UI
 
     public class MainUIManager : MonoBehaviour
     {
-        public static MainUIManager Instance;
+        public static MainUIManager Instance { get; private set; }
         public bool invOpen = false;
 
         private Party _party;
@@ -98,11 +97,17 @@ namespace Manapotion.UI
         public GameObject ingredientSlot;
         public GameObject materialSlot;
 
-        public GameObject bagSlotParent;
+        public GameObject weaponSlot;
+        public GameObject armourSlot;
+        public GameObject vanitySlot;
 
-        private void Awake() {
+        public GameObject bagSlotParent;
+        public GameObject equipmentSlotParent;
+
+        private void Awake()
+        {
             Instance = this;
-            
+
             statusUIManager = new StatusUIManager(this);
             inventoryUIManager = new InventoryUIManager(this);
 
@@ -156,13 +161,18 @@ namespace Manapotion.UI
 
         #region Inv
         public void OnToggleInv(InputAction.CallbackContext context)
-        {
+        {   
             if (!context.started)
             {
                 return;
             }
 
             invOpen = true;
+            
+            inventoryUIManager.equipUI.Refresh();
+            inventoryUIManager.bagUI.Refresh();
+            inventoryUIManager.beastiaryUI.Refresh();
+
             GameStateManager.Instance.ChangeGameState(GameState.Inv);
         }
 

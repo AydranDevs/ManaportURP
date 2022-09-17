@@ -13,6 +13,7 @@ namespace Manapotion.PartySystem
         public static Party Instance;
 
         public static Action OnPartyLeaderChanged;
+        public bool overrideCanSwitchLeaders { get; private set; } = false;
 
         [SerializeField] private InputActionAsset _controls;
         private InputActionMap _inputActionMap;
@@ -63,7 +64,7 @@ namespace Manapotion.PartySystem
 
         public void NextPartyMember(InputAction.CallbackContext context)
         {
-            if (GameStateManager.Instance.state != GameState.Main)
+            if (GameStateManager.Instance.state != GameState.Main && !overrideCanSwitchLeaders)
             {
                 return;
             }
@@ -93,7 +94,7 @@ namespace Manapotion.PartySystem
 
         public void PreviousPartyMember(InputAction.CallbackContext context)
         {
-            if (GameStateManager.Instance.state != GameState.Main)
+            if (GameStateManager.Instance.state != GameState.Main && !overrideCanSwitchLeaders)
             {
                 return;
             }
@@ -160,9 +161,19 @@ namespace Manapotion.PartySystem
             return members[0].GetComponent<PartyMember>();
         }
 
+        private PartyMember StaticReturner_GetMember(int i)
+        {
+            return members[i].GetComponent<PartyMember>();
+        }
+
         public static PartyMember GetCurrentLeader()
         {
             return Instance.StaticReturner_GetCurrentLeader();
+        }
+
+        public static PartyMember GetMember(int i)
+        {
+            return Instance.StaticReturner_GetMember(i);
         }
 
         public static int GetPartyMemberIndex(PartyMember pm)
@@ -179,6 +190,11 @@ namespace Manapotion.PartySystem
                     oldestLeader = member;
                 }
             }
+        }
+
+        public static void SetLeaderChangeOverride(bool b)
+        {
+            Instance.overrideCanSwitchLeaders = b;
         }
     }
 }

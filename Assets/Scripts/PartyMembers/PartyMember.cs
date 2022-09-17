@@ -117,9 +117,9 @@ namespace Manapotion.PartySystem
         public FacingState facingState = FacingState.South;
         public float dashThreshold = 8f; 
 
-        public PartyEquipable weapon;
-        public PartyEquipable armour;
-        public PartyEquipable vanity;
+        public EquipableData weapon;
+        public EquipableData armour;
+        public EquipableData vanity;
 
         #region Stats
         [System.Serializable]
@@ -391,19 +391,49 @@ namespace Manapotion.PartySystem
         #endregion
 
         #region Equip
-        public void Equip(PartyEquipable equipable)
+        public void Equip(int i, EquipableData equipable)
         {
-            if (equipable.equipableType == EquipableType.Weapon)
+            if (i == 0)
             {
                 weapon = equipable;
+                weapon.OnEquip();
             }
-            else if (equipable.equipableType == EquipableType.Armour)
+            else if (i == 1)
             {
                 armour = equipable;
+                armour.OnEquip();
+            }
+            else if (i == 2)
+            {
+                vanity = equipable;
+                vanity.OnEquip();
             }
             else
             {
-                vanity = equipable;
+                throw new Exception("No Equipable found with id " + i);
+            }
+        }
+
+        public void Unequip(int i)
+        {
+            if (i == 0)
+            {
+                weapon.OnUnequip();
+                weapon = null;
+            }
+            else if (i == 1)
+            {
+                armour.OnUnequip();
+                armour = null;
+            }
+            else if (i == 2)
+            {
+                vanity.OnUnequip();
+                vanity = null;
+            }
+            else
+            {
+                throw new Exception("No Equipable found with id " + i);
             }
         }
         #endregion

@@ -2,7 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PartyCam : MonoBehaviour {
+public enum CamZoomState { ZoomingIn, ZoomedIn, ZoomingOut, ZoomedOut }
+
+public class PartyCam : MonoBehaviour
+{
+    public CamZoomState camZoomState = CamZoomState.ZoomedOut;
+
+    private const float DEFAULT_CAMERA_SIZE = 7.3125f;
+
     public float speed = 1f;
     public Transform target;
     private Vector3 _target;
@@ -15,6 +22,7 @@ public class PartyCam : MonoBehaviour {
 
     void Start() {
         cam = GetComponent<Camera>();
+        cam.orthographicSize = DEFAULT_CAMERA_SIZE;
 
         StartCoroutine(Transition());
     }
@@ -33,6 +41,24 @@ public class PartyCam : MonoBehaviour {
 
             transform.position = slerped;
         }
+
+        if (camZoomState == CamZoomState.ZoomingIn)
+            {
+                Camera.main.orthographicSize = Mathf.MoveTowards(Camera.main.orthographicSize, 2f, 20f * Time.deltaTime);
+                if (Camera.main.orthographicSize == 2f)
+                {
+                    camZoomState = CamZoomState.ZoomedIn;
+                }
+            }
+
+            if (camZoomState == CamZoomState.ZoomingOut)
+            {
+                Camera.main.orthographicSize = Mathf.MoveTowards(Camera.main.orthographicSize, DEFAULT_CAMERA_SIZE, 20f * Time.deltaTime);
+                if (Camera.main.orthographicSize == DEFAULT_CAMERA_SIZE)
+                {
+                    camZoomState = CamZoomState.ZoomedOut;
+                }
+            }
     }
 
     public void PartyLeaderChanged() {

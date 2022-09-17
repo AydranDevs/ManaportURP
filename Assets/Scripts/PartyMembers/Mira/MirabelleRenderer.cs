@@ -79,7 +79,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
         {
             if (_gameManager.state != GameState.Main) 
             {
-                return;
+                facingState = 2;
             }
 
             if (_mirabelle.state == State.Movement)

@@ -33,7 +33,10 @@ namespace Manapotion.PartySystem.WinsleyCharacter
         
         public void Update()
         {
-            if (_gameManager.state != GameState.Main) return;
+            if (_gameManager.state != GameState.Main)
+            {
+                facingState = 2;
+            }
 
             if (_winsleyController.movementDirection.Equals(new Vector2(0, 1)))
             { // north 

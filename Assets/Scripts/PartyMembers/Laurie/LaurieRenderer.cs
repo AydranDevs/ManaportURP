@@ -33,7 +33,10 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
         public void Update() 
         {
-            if (_gameManager.state != GameState.Main) return;
+            if (_gameManager.state != GameState.Main)
+            {
+                facingState = 2;
+            }
             
             if (_laurieController.movementDirection.Equals(new Vector2(0, 1))) 
             { // north 

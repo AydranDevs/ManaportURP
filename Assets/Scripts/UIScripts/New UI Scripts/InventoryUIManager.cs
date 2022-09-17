@@ -28,8 +28,16 @@ namespace Manapotion.UI
             beastiaryUI.attachedObjects = new GameObject[] { _main.beastiaryUIObject }; 
         }
 
-        public void OnToggleBag(InputAction.CallbackContext context) {
-            if (!context.started) return;
+        public void OnToggleBag(InputAction.CallbackContext context)
+        {
+            if (equipUI.hiding || equipUI.showing || beastiaryUI.hiding || beastiaryUI.showing)
+            {
+                return;
+            }
+            if (!context.started)
+            {
+                return;
+            }
 
             if (inventoryState != InventoryState.Bag)
             {
@@ -52,7 +60,14 @@ namespace Manapotion.UI
         }
 
         public void OnToggleEquip(InputAction.CallbackContext context) {
-            if (!context.started) return;
+            if (bagUI.hiding || bagUI.showing || beastiaryUI.hiding || beastiaryUI.showing)
+            {
+                return;
+            }
+            if (!context.started)
+            {
+                return;
+            }
 
             if (inventoryState != InventoryState.Equip)
             {
@@ -75,7 +90,14 @@ namespace Manapotion.UI
         }
 
         public void OnToggleBeastiary(InputAction.CallbackContext context) {
-            if (!context.started) return;
+            if (bagUI.hiding || bagUI.showing || equipUI.hiding || equipUI.showing)
+            {
+                return;
+            }
+            if (!context.started)
+            {
+                return;
+            }
 
             if (inventoryState != InventoryState.Beastiary)
             {

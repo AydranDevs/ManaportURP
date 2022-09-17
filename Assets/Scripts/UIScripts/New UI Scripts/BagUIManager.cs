@@ -11,20 +11,21 @@ namespace Manapotion.UI
     {
         CONSUMABLE,
         INGREDIENT,
-        MATERIAL
+        MATERIAL,
+        WEAPON,
+        ARMOUR,
+        VANITY
     }
 
     public class BagUIManager : InventoryUIBase
     {
-        private MainUIManager _main;
-
         public bool[] slotsFilled;
         public int filledBagSlots = 0;
         public GameObject[] slots;
 
         public BagUIManager(MainUIManager main)
         {
-            _main = main;
+            this.main = main;
 
             slotsFilled = new bool[(int)ItemID.MAXCOUNT];
             slots = new GameObject[(int)ItemID.MAXCOUNT];
@@ -33,10 +34,10 @@ namespace Manapotion.UI
             for (int i = 0; i < slotsFilled.Length; i++) {
                 slotsFilled[i] = false; 
             }
-            _main.emptyImage.gameObject.SetActive(true);
+            this.main.emptyImage.gameObject.SetActive(true);
         }
 
-        public void Refresh()
+        public override void Refresh()
         {
             for (int i = 0; i < (int)ItemID.MAXCOUNT; i++)
             {
@@ -69,36 +70,41 @@ namespace Manapotion.UI
             
             if (num == 0)
             {
-                _main.emptyImage.gameObject.SetActive(true);
+                this.main.emptyImage.gameObject.SetActive(true);
             }
             else
             {
-                _main.emptyImage.gameObject.SetActive(false);
+                this.main.emptyImage.gameObject.SetActive(false);
             }
         }
 
         public void AddSlot(ItemCategory category, string name, int i)
         {
+            if (category == ItemCategory.WEAPON || category == ItemCategory.ARMOUR)
+            {
+                return;
+            }
+
             if (category == ItemCategory.CONSUMABLE)
             {
-                GameObject slot = MainUIManager.Instantiate(_main.consumableSlot, _main.bagSlotParent.transform);
+                GameObject slot = MainUIManager.Instantiate(this.main.consumableSlot, this.main.bagSlotParent.transform);
                 slots[i] = slot;
                 slots[i].name = name;
             }
             else if (category == ItemCategory.INGREDIENT)
             {
-                GameObject slot = MainUIManager.Instantiate(_main.ingredientSlot, _main.bagSlotParent.transform);
+                GameObject slot = MainUIManager.Instantiate(this.main.ingredientSlot, this.main.bagSlotParent.transform);
                 slots[i] = slot;
                 slots[i].name = name;
             }
             else if (category == ItemCategory.MATERIAL)
             {
-                GameObject slot = MainUIManager.Instantiate(_main.materialSlot, _main.bagSlotParent.transform);
+                GameObject slot = MainUIManager.Instantiate(this.main.materialSlot, this.main.bagSlotParent.transform);
                 slots[i] = slot;
                 slots[i].name = name;
             }
 
-            slots[i].GetComponent<BagSlotUIHandler>().item.sprite = _main.itemIcons[i].Icon;
+            // slots[i].GetComponent<BagSlotUIHandler>().item.sprite = this.main.itemIcons[i].Icon;
         }
     }
 }
