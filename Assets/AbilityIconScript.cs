@@ -1,25 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Manapotion.UI;
 
-public class ManaBarScript : MonoBehaviour
+public class AbilityIconScript : MonoBehaviour
 {
-    public Slider slider;
-    
-    bool tooltipShown = false; 
-
-    public void SetMaxMana(float maxMana)
-    {
-        slider.maxValue = maxMana;
-    }
-
-    public void SetMana(float mana)
-    {
-        slider.value = mana;
-    }
-
+    private bool tooltipShown;
     // update tooltip
     private void Update()
     {
@@ -28,7 +14,8 @@ public class ManaBarScript : MonoBehaviour
             return;
         }
 
-        ContextMenuHandler.SetTitle(string.Format("Mana: {0}/{1}", slider.value, slider.maxValue));
+        ContextMenuHandler.SetTitle(string.Format("primary spell"));
+        ContextMenuHandler.SetSubtitle("ye");
     }
 
     public void ShowTooltip()

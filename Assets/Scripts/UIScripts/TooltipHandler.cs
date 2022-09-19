@@ -12,12 +12,14 @@ public class TooltipHandler : MonoBehaviour
     public TextMeshProUGUI tooltip;
     public RectTransform background;
     
-    private void Awake() {
+    private void Awake()
+    {
         Instance = this;
         HideTooltip();
     }
 
-    public void OnMouseMove(InputAction.CallbackContext context) {
+    public void OnMouseMove(InputAction.CallbackContext context)
+    {
         transform.position = context.ReadValue<Vector2>();
     }
 
@@ -28,7 +30,8 @@ public class TooltipHandler : MonoBehaviour
         background.sizeDelta = bgSize;
     }
 
-    private void ShowTooltip(string tooltipText) {
+    private void ShowTooltip(string tooltipText)
+    {
         gameObject.SetActive(true);
 
         tooltip.text = tooltipText;
@@ -37,11 +40,13 @@ public class TooltipHandler : MonoBehaviour
         background.sizeDelta = bgSize;
     }
 
-    private void HideTooltip() {
+    private void HideTooltip()
+    {
         gameObject.SetActive(false);
     }
 
-    private void EnableInspectCursor() {
+    private void EnableInspectCursor()
+    {
         GameStateManager.Instance.ChangeCursor(GameStateManager.Instance.inspectCursor);
     }
 

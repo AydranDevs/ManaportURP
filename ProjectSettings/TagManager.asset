@@ -20,6 +20,7 @@ TagManager:
   - ChunkGrid
   - PlayerPartyLeader
   - ChunkLoader
+  - MainCanvas
   layers:
   - Default
   - TransparentFX
