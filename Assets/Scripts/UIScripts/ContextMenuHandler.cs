@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using CodeMonkey.Utils;
 using TMPro;
 
 namespace Manapotion.UI
@@ -23,6 +24,13 @@ namespace Manapotion.UI
         public Action[] optionEvents { get; private set; }
 
         [SerializeField]
+        private Transform optionsContainer;
+        [SerializeField]
+        private Transform optionTemplate;
+        [field: SerializeField]
+        public List<ContextMenuOption> optionsList { get; private set; }
+
+        [SerializeField]
         private RectTransform canvasTransform;
         private RectTransform myRectTransform;
         [SerializeField]
@@ -34,7 +42,8 @@ namespace Manapotion.UI
         [SerializeField]
         private RectTransform background;
 
-        private const float TEXT_PADDING = 3f;
+        private const float TEXT_PADDING_LEFT = 3f;
+        private const float TEXT_PADDING_TOP = 3f;
 
         private Vector2 _topRightCorner;
         private const float BOUNDS_X = 416f, BOUNDS_Y = 234f;
@@ -49,6 +58,12 @@ namespace Manapotion.UI
         private RectTransform _rtTitle;
         private RectTransform _rtSubtitle;
         private RectTransform _rtBody;
+
+        private bool _needToRecalcRTTitleYPos = false;
+        private bool _needToRecalcRTSubtitleYPos = false;
+        private bool _needToRecalcRTBodyYPos = false;
+
+        private bool _needToRecalcOptionsPos = false;
         
         void Awake()
         {
@@ -60,6 +75,8 @@ namespace Manapotion.UI
             {
                 Destroy(this);
             }
+
+            optionsList = new List<ContextMenuOption>();
             myRectTransform = GetComponent<RectTransform>();
 
             _rtTitle = _title.GetComponent<RectTransform>();
@@ -67,13 +84,211 @@ namespace Manapotion.UI
             _rtBody = _body.GetComponent<RectTransform>();
 
             Hide();
-
-            SetTitle("Training Spelltome");
-            // SetSubtitle("a Spelltome gifted to students of MUAA");
-            // SetBody("- +50 ATK \n- +120 DEF \n- +20 INTL \n- +999 FLRTXT");
         }
 
         private void Update()
+        {
+            if (contextMenuType == ContextMenuType.Tooltip)
+            {
+                myRectTransform.position = Mouse.current.position.ReadValue();
+            }
+            
+            _topRightCorner = new Vector2(myRectTransform.anchoredPosition.x + GetWidth(), myRectTransform.anchoredPosition.y + GetHeight());
+            if (_topRightCorner.x >= BOUNDS_X)
+            {
+                float delta = _topRightCorner.x - BOUNDS_X;
+                myRectTransform.anchoredPosition = new Vector2(myRectTransform.anchoredPosition.x - delta, myRectTransform.anchoredPosition.y);
+            }
+            if (_topRightCorner.y >= BOUNDS_Y)
+            {
+                float delta = _topRightCorner.y - BOUNDS_Y;
+                myRectTransform.anchoredPosition = new Vector2(myRectTransform.anchoredPosition.x, myRectTransform.anchoredPosition.y - delta);
+            }
+        }
+
+    #region Static Methods
+        public static void Clear()
+        {
+            Instance.title = "";
+            Instance.subtitle = "";
+            Instance.body = "";
+            Instance.optionsList = new List<ContextMenuOption>();
+            foreach (Transform child in Instance.optionsContainer)
+            {
+                Destroy(child.gameObject);
+            }
+
+            Instance.SetTitleText(Instance.title);
+            Instance._needToRecalcRTTitleYPos = true;
+            Instance.SetSubtitleText(Instance.subtitle);
+            Instance._needToRecalcRTSubtitleYPos = true;
+            Instance.SetBodyText(Instance.body);
+            Instance._needToRecalcRTBodyYPos = true;
+
+            Instance.Format();
+        }
+        
+        /// <summary>
+        /// Set the title of the tooltip or context menu object.
+        /// </summary>
+        /// <param name="s">String to set as the title.</param>
+        public static void SetTitle(string s)
+        {
+            Instance.title = s;
+            Instance.SetTitleText(Instance.title);
+        }
+
+        /// <summary>
+        /// Set the title of the tooltip or context menu object.
+        /// </summary>
+        /// <param name="s">String to set as the title.</param>
+        /// <param name="labelsToOverride">Array that translates to which labels to set to null.</param>
+        public static void SetTitle(string s, bool[] labelsToOverride)
+        {
+            if (labelsToOverride[0])
+            {
+                Instance.title = "";
+                Instance.SetTitleText("");
+            }
+            if (labelsToOverride[1])
+            {
+                Instance.subtitle = "";
+                Instance.SetSubtitleText("");
+            }
+            if (labelsToOverride[2])
+            {
+                Instance.body = "";
+                Instance.SetBodyText("");
+            }
+            Instance.title = s;
+            Instance.SetTitleText(Instance.title);
+        }
+
+        /// <summary>
+        /// Set the subtitle of the tooltip or context menu object.
+        /// </summary>
+        /// <param name="s">String to set as the subtitle.</param>
+        public static void SetSubtitle(string s)
+        {
+            Instance.subtitle = s;
+            Instance.SetSubtitleText(Instance.subtitle);
+        }
+
+        /// <summary>
+        /// Set the subtitle of the tooltip or context menu object.
+        /// </summary>
+        /// <param name="s">String to set as the subtitle.</param>
+        /// <param name="labelsToOverride">Array that translates to which labels to set to null.</param>
+        public static void SetSubtitle(string s, bool[] labelsToOverride)
+        {
+            if (labelsToOverride[0])
+            {
+                Instance.title = "";
+                Instance.SetTitleText("");
+            }
+            if (labelsToOverride[1])
+            {
+                Instance.subtitle = "";
+                Instance.SetSubtitleText("");
+            }
+            if (labelsToOverride[2])
+            {
+                Instance.body = "";
+                Instance.SetBodyText("");
+            }
+            Instance.subtitle = s;
+            Instance.SetSubtitleText(Instance.subtitle);
+        }
+
+        /// <summary>
+        /// Set the body of the tooltip or context menu object.
+        /// </summary>
+        /// <param name="s">String to set as the body.</param>
+        public static void SetBody(string s)
+        {
+            Instance.body = s;
+            Instance.SetBodyText(Instance.body);
+        }
+
+        /// <summary>
+        /// Set the body of the tooltip or context menu object.
+        /// </summary>
+        /// <param name="s">String to set as the body.</param>
+        /// <param name="labelsToOverride">Array that translates to which labels to set to null.</param>
+        public static void SetBody(string s, bool[] labelsToOverride)
+        {
+            if (labelsToOverride[0])
+            {
+                Instance.title = "";
+                Instance.SetTitleText("");
+            }
+            if (labelsToOverride[1])
+            {
+                Instance.subtitle = "";
+                Instance.SetSubtitleText("");
+            }
+            if (labelsToOverride[2])
+            {
+                Instance.body = "";
+                Instance.SetBodyText("");
+            }
+            Instance.body = s;
+            Instance.SetBodyText(Instance.body);
+        }
+
+        public static void AddOption(string optionName, Action funcToCallOnClick)
+        {
+            Instance.optionsList.Add(new ContextMenuOption { name = optionName, funcOnClick = funcToCallOnClick });
+
+            foreach (Transform child in Instance.optionsContainer)
+            {
+                if (child != Instance.optionTemplate)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+
+            foreach (var option in Instance.optionsList)
+            {
+                option.myOptionGameObject = Instantiate(Instance.optionTemplate, Instance.optionsContainer);
+                option.myOptionGameObject.Find("Text").GetComponent<TextMeshProUGUI>().SetText(option.name);
+                option.myOptionGameObject.GetComponent<Button_UI>().ClickFunc += option.funcOnClick;
+                option.myOptionGameObject.gameObject.SetActive(true);
+            }
+        }
+
+        /// <summary>
+        /// Show the context menu or tooltip
+        /// </summary>
+        /// <param name="cmt"> the type of meny for the menu to operate as </param>
+        public static void Show(ContextMenuType cmt)
+        {
+            Clear();
+            Instance.GetComponent<Image>().enabled = true;
+            Instance._title.enabled = true;
+            Instance._subtitle.enabled = true;
+            Instance._body.enabled = true;
+            Instance.contextMenuType = cmt;
+
+            if (cmt == ContextMenuType.ContextMenu)
+            {
+                Instance.Show_ContextMenu();
+            }
+            else if (cmt == ContextMenuType.Tooltip)
+            {
+                Instance.Show_Tooltip();
+            }
+        }
+        public static void Hide()
+        {
+            Instance.GetComponent<Image>().enabled = false;
+            Instance._title.enabled = false;
+            Instance._subtitle.enabled = false;
+            Instance._body.enabled = false;
+        }
+    #endregion
+
+        public void Show_ContextMenu()
         {
             myRectTransform.position = Mouse.current.position.ReadValue();
             _topRightCorner = new Vector2(myRectTransform.anchoredPosition.x + GetWidth(), myRectTransform.anchoredPosition.y + GetHeight());
@@ -89,91 +304,31 @@ namespace Manapotion.UI
             }
         }
 
-    #region Static Methods
-        public static void SetTitle(string s)
+        public void Show_Tooltip()
         {
-            Instance.title = s;
-            Instance.SetTitleText(Instance.title);
-        }
-        public static void SetSubtitle(string s)
-        {
-            Instance.subtitle = s;
-            Instance.SetSubtitleText(Instance.subtitle);
-        }
-        public static void SetBody(string s)
-        {
-            Instance.body = s;
-            Instance.SetBodyText(Instance.body);
-        }
 
-        public static void SetOptionsAmount(int i)
-        {
-            Instance.options = new string[i];
-            Instance.optionEvents = new Action[i];
         }
-        public static void SetOptionTitle(int i, string s)
-        {
-            Instance.options[i] = s;
-        }
-
-        public static void Show(ContextMenuType cmt)
-        {
-            Instance.GetComponent<Image>().enabled = true;
-            Instance._title.enabled = true;
-            Instance._subtitle.enabled = true;
-            Instance._body.enabled = true;
-            Instance.contextMenuType = cmt; 
-        }
-        public static void Hide()
-        {
-            Instance.GetComponent<Image>().enabled = false;
-            Instance._title.enabled = false;
-            Instance._subtitle.enabled = false;
-            Instance._body.enabled = false;
-        }
-    #endregion
 
         public void SetTitleText(string s)
         {
             _title.text = s;
-            // if (_title.preferredWidth > _subtitle.preferredWidth || _title.preferredWidth > _body.preferredWidth)
-            // {
-            //     bgSize = new Vector2(_title.preferredWidth + textPadding * 2, background.sizeDelta.y);
-            // }
-            // else
-            // {
-            //     bgSize = new Vector2(background.sizeDelta.x, background.sizeDelta.y);
-            // }
-            // background.sizeDelta = bgSize;
+            _needToRecalcRTTitleYPos = true;
+            _needToRecalcRTSubtitleYPos = true;
+            _needToRecalcRTBodyYPos = true;
             Format();
             
         }
         public void SetSubtitleText(string s)
         {
             _subtitle.text = s;
-            // if (_subtitle.preferredWidth > _title.preferredWidth || _subtitle.preferredWidth > _body.preferredWidth)
-            // {
-            //     bgSize = new Vector2(_subtitle.preferredWidth + textPadding * 2, background.sizeDelta.y + _subtitle.preferredHeight);
-            // }
-            // else
-            // {
-            //     bgSize = new Vector2(background.sizeDelta.x, background.sizeDelta.y + _subtitle.preferredHeight);
-            // }
-            // background.sizeDelta = bgSize;
+            _needToRecalcRTSubtitleYPos = true;
+            _needToRecalcRTBodyYPos = true;
             Format();
         }
         public void SetBodyText(string s)
         {
             _body.text = s;
-            // if (_body.preferredWidth > _title.preferredWidth || _body.preferredWidth > _subtitle.preferredWidth)
-            // {
-            //     bgSize = new Vector2(_body.preferredWidth + textPadding * 2, background.sizeDelta.y + _body.preferredHeight);
-            // }
-            // else
-            // {
-            //     bgSize = new Vector2(background.sizeDelta.x, background.sizeDelta.y + _body.preferredHeight);
-            // }
-            // background.sizeDelta = bgSize;
+            _needToRecalcRTBodyYPos = true;
             Format();
         }
 
@@ -182,18 +337,10 @@ namespace Manapotion.UI
             _titlePreferredValues = _title.GetPreferredValues(_title.text, float.PositiveInfinity, float.PositiveInfinity);
             _subtitlePreferredValues = _subtitle.GetPreferredValues(_subtitle.text, float.PositiveInfinity, float.PositiveInfinity);
             _bodyPreferredValues = _body.GetPreferredValues(_body.text, float.PositiveInfinity, float.PositiveInfinity);
-            
-            SetTextSizeDelta(_rtTitle, _titlePreferredValues.x + TEXT_PADDING * 2, _titlePreferredValues.y + TEXT_PADDING * 2);
-            SetTextSizeDelta(_rtSubtitle, _subtitlePreferredValues.x + TEXT_PADDING * 2, _subtitlePreferredValues.y + TEXT_PADDING * 2);
-            SetTextSizeDelta(_rtBody, _bodyPreferredValues.x + TEXT_PADDING * 2, _bodyPreferredValues.y + TEXT_PADDING * 2);
 
-            _rtSubtitle.anchoredPosition = new Vector2(_rtSubtitle.anchoredPosition.x, GetHeight() - (_rtTitle.rect.height + TEXT_PADDING));
-            _rtBody.anchoredPosition = new Vector2(_rtBody.anchoredPosition.x, GetHeight() - (_rtTitle.rect.height + _rtSubtitle.rect.height - TEXT_PADDING * 2));
-
-            var width = Math.Max(Math.Max(_titlePreferredValues.x, _subtitlePreferredValues.x), _bodyPreferredValues.x) + TEXT_PADDING * 2;
-            var height = _titlePreferredValues.y + _subtitlePreferredValues.y +_bodyPreferredValues.y + TEXT_PADDING * 2;
-            
-            background.sizeDelta = new Vector2(width, height);
+            SetTextSizeDelta(_rtTitle, _titlePreferredValues.x, _titlePreferredValues.y);
+            SetTextSizeDelta(_rtSubtitle, _subtitlePreferredValues.x, _subtitlePreferredValues.y);
+            SetTextSizeDelta(_rtBody, _bodyPreferredValues.x, _bodyPreferredValues.y);
         }
 
         private float GetWidth()
@@ -208,8 +355,16 @@ namespace Manapotion.UI
 
         private void SetTextSizeDelta(RectTransform rt, float width, float height)
         {
-            rt.sizeDelta = new Vector2(width + TEXT_PADDING * 2, height + TEXT_PADDING * 2);
+            rt.sizeDelta = new Vector2(width, height);
         }
+    }
+
+    [Serializable]
+    public class ContextMenuOption
+    {
+        public string name;
+        public Transform myOptionGameObject; 
+        public Action funcOnClick;
     }
 }
 

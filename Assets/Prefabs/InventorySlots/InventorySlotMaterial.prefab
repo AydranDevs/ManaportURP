@@ -281,6 +281,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 2536574451380970661}
   number: {fileID: 771713951774884995}
+  button: {fileID: 4297476189655475090}
+  clickCtrl: {fileID: 1004317651731407881}
 --- !u!114 &4297476189655475090
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -33,6 +33,7 @@ public class ManaBarScript : MonoBehaviour
 
     public void ShowTooltip()
     {
+        ContextMenuHandler.Clear();
         ContextMenuHandler.Show(ContextMenuType.Tooltip);
         tooltipShown = true;
     }
@@ -40,6 +41,7 @@ public class ManaBarScript : MonoBehaviour
     public void HideTooltip()
     {
         ContextMenuHandler.Hide();
+        ContextMenuHandler.Clear();
         tooltipShown = false;
     }
 }

@@ -35,7 +35,7 @@ public class PartyCam : MonoBehaviour
             Vector2 pos = transform.position;
             Vector2 targetpos = target.position;
 
-            Vector3 slerped = Vector3.Slerp(pos, targetpos, 100 * speed);
+            Vector3 slerped = Vector3.Slerp(pos, targetpos, speed);
 
             slerped.z = transform.position.z;
 

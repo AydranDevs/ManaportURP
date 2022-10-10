@@ -382,6 +382,102 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6772275945057033491}
     m_Modifications:
+    - target: {fileID: 147844752640974508, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2f2fa82122ee7484c8c38e4194e0ea4a, type: 3}
+    - target: {fileID: 187665014473832796, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598345862458117606, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598345862458117606, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784491771011048429, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784491771011048429, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597817146399275508, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597817146399275508, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597817146399275508, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3597817146399275508, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193028208806128156, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193028208806128156, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4193028208806128156, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756016254758404888, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756016254758404888, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756016254758404888, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4756016254758404888, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307483286243186502, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307483286243186502, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307483286243186502, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307483286243186502, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382357008522303126, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382357008522303126, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382357008522303126, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7345883942263019330, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -470,6 +566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7830873789043008419, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
 --- !u!224 &5936142891282291573 stripped
@@ -477,17 +577,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7345883942263019330, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
   m_PrefabInstance: {fileID: 4003902397276621879}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4003902396155954722 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1328810517, guid: decf24074942bc54abcfffc85589c7ea, type: 3}
-  m_PrefabInstance: {fileID: 4003902397276621879}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0dddb32f7f146549aec9e9112e92905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4003902397945656244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -576,6 +665,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3849691a6d8aa5d48b6b6bdfa0de01a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4359342858520289036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7524851597461062041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d2b92b26ff93464586b3431f7e1b16c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pfWorldItem: {fileID: 2941297421733109811, guid: 98d206b3029cefd449d370b2c7ca073a, type: 3}
+  manaport_consumable_restore_mana_potion_I: {fileID: 5298750316631022228, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_restore_mana_potion_II: {fileID: 4595906159454040636, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_restore_mana_potion_III: {fileID: 1135405753809042382, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_restore_health_potion_I: {fileID: -3795659468133479769, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_restore_health_potion_II: {fileID: 1765830118759133150, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_restore_health_potion_III: {fileID: 1784255428413383761, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_regen_mana_potion_I: {fileID: 7432234526956688553, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_regen_mana_potion_II: {fileID: 2131945292702552379, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_regen_mana_potion_III: {fileID: -8099056382765276484, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_regen_health_potion_I: {fileID: 6878926080379421449, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_regen_health_potion_II: {fileID: 1477812522656612620, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_regen_health_potion_III: {fileID: -860261559389539929, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_pyro_potion_I: {fileID: 5314807560924293543, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_pyro_potion_II: {fileID: -333680048466858584, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_pyro_potion_III: {fileID: 769557138486306256, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_cryo_potion_I: {fileID: 4332093801455743536, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_cryo_potion_II: {fileID: 8288747000277331393, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_cryo_potion_III: {fileID: -1920152298423478790, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_toxi_potion_I: {fileID: 234050629558846932, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_toxi_potion_II: {fileID: -1517066504927752681, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_toxi_potion_III: {fileID: -4602613467441342073, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_volt_potion_I: {fileID: -6324864393911828603, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_volt_potion_II: {fileID: -4232181490359771850, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_boost_volt_potion_III: {fileID: -7446489979668266445, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_invincibility_potion_I: {fileID: 2020623198386257799, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_invincibility_potion_II: {fileID: -6688276169069031271, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_invincibility_potion_III: {fileID: -5188544162018308876, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_absorption_potion_I: {fileID: -7298556294864163552, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_absorption_potion_II: {fileID: 4640799173369310354, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_absorption_potion_III: {fileID: 7418584078625445489, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_rage_potion_I: {fileID: -3073640775193264740, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_rage_potion_II: {fileID: 373132221763214131, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_rage_potion_III: {fileID: -5980536742875508567, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_weapon_training_tome: {fileID: -2762939190412709202, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_weapon_azure_parasol: {fileID: 3800551299826472200, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_weapon_garden_shear: {fileID: -5468086047929262327, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_armour_violet_robes: {fileID: -3752972813148428779, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_armour_timid_raincoat: {fileID: -1737505443841594477, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_armour_sunbeaten_overalls: {fileID: 4352561648089386878, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_vanity_gold_ring_hat: {fileID: 8096957359625422690, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_vanity_cutesy_blue_rainboots: {fileID: 772778925202903010, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_vanity_scarlet_rings: {fileID: 6255745539233519750, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
 --- !u!1001 &4003902398027658624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -646,7 +790,7 @@ PrefabInstance:
     - target: {fileID: 4653062473120931617, guid: aa0d95ca39478444e8dbde5a2040b78e, type: 3}
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 4003902396155954722}
+      objectReference: {fileID: 0}
     - target: {fileID: 4653062473120931617, guid: aa0d95ca39478444e8dbde5a2040b78e, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 

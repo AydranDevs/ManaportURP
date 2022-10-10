@@ -91,7 +91,7 @@ namespace Inventory
             // set Game State to inventory
             if (invBagOpen || invEquipOpen || invBeastiaryOpen) {
                 gameManager.ChangeGameState(GameState.Inv);
-                BagSlotsUIHandler.Instance.Refresh();
+                // BagSlotsUIHandler.Instance.Refresh();
             }else {
                 gameManager.ChangeGameState(GameState.Main);
                 

@@ -20,6 +20,7 @@ public class AbilityIconScript : MonoBehaviour
 
     public void ShowTooltip()
     {
+        ContextMenuHandler.Clear();
         ContextMenuHandler.Show(ContextMenuType.Tooltip);
         tooltipShown = true;
     }
@@ -27,6 +28,7 @@ public class AbilityIconScript : MonoBehaviour
     public void HideTooltip()
     {
         ContextMenuHandler.Hide();
+        ContextMenuHandler.Clear();
         tooltipShown = false;
     }
 }

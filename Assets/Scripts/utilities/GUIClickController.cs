@@ -15,17 +15,14 @@
                 if (eventData.button == PointerEventData.InputButton.Left)
                 {
                     onLeft.Invoke();
-                    Debug.Log("left click");
                 }
                 else if (eventData.button == PointerEventData.InputButton.Right)
                 {
                     onRight.Invoke();
-                    Debug.Log("right click");
                 }
                 else if (eventData.button == PointerEventData.InputButton.Middle)
                 {
                     onMiddle.Invoke();
-                    Debug.Log("middle click");
                 }
             }
         }

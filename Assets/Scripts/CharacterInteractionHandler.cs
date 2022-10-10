@@ -14,9 +14,9 @@ public class CharacterInteractionHandler : MonoBehaviour {
     }
     
     public void AddToInventory(string itemId) {
-        string[] properties = itemId.Split('-');
-        ItemID id = (ItemID)Enum.Parse(typeof(ItemID), properties[0]);
-        Party.Instance.partyInventory.bag.AddItem(id, 1);
+        // string[] properties = itemId.Split('-');
+        // ItemID id = (ItemID)Enum.Parse(typeof(ItemID), properties[0]);
+        // Party.Instance.partyInventory.bag.AddItem(id, 1);
     }
 
     public void OnInteract(InputAction.CallbackContext context) {

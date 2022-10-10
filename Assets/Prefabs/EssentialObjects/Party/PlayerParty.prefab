@@ -564,6 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f7dcbb2ec691a448b6b92eea2652be6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bagScriptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}
   _controls: {fileID: 0}
   partyLeader: 0
   previousLeader: {fileID: 0}
@@ -762,6 +763,15 @@ MonoBehaviour:
   directionState: 4
   facingState: 2
   dashThreshold: 8
+  weapon:
+    name: 
+    lore: 
+  armour:
+    name: 
+    lore: 
+  vanity:
+    name: 
+    lore: 
   stats:
     statArray:
     - id: 2
@@ -1145,6 +1155,15 @@ MonoBehaviour:
   directionState: 4
   facingState: 2
   dashThreshold: 8
+  weapon:
+    name: 
+    lore: 
+  armour:
+    name: 
+    lore: 
+  vanity:
+    name: 
+    lore: 
   stats:
     statArray:
     - id: 2
@@ -1523,6 +1542,15 @@ MonoBehaviour:
   directionState: 4
   facingState: 2
   dashThreshold: 8
+  weapon:
+    name: 
+    lore: 
+  armour:
+    name: 
+    lore: 
+  vanity:
+    name: 
+    lore: 
   stats:
     statArray:
     - id: 2

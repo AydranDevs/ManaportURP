@@ -19,7 +19,7 @@ namespace Manapotion.UI
         {
             _main = main;
 
-            bagUI = new BagUIManager(_main); 
+            bagUI = new BagUIManager(); 
             equipUI = new EquipUIManager(_main); 
             beastiaryUI = new InventoryUIBase();
 

@@ -15,6 +15,8 @@ namespace Manapotion.PartySystem
         public static Action OnPartyLeaderChanged;
         public bool overrideCanSwitchLeaders { get; private set; } = false;
 
+        public BagScriptableObject bagScriptableObject;
+
         [SerializeField] private InputActionAsset _controls;
         private InputActionMap _inputActionMap;
 
