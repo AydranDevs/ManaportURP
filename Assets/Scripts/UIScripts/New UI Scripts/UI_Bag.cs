@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Manapotion.UI;
+using Manapotion.PartySystem;
 
 public class UI_Bag : MonoBehaviour
 {
@@ -82,15 +83,21 @@ public class UI_Bag : MonoBehaviour
                 ContextMenuHandler.Show(ContextMenuType.ContextMenu);
 
                 ContextMenuHandler.SetTitle(item.GetMetadata().name);
-                ContextMenuHandler.SetSubtitle(item.GetMetadata().lore);
-                ContextMenuHandler.SetBody(item.GetMetadata().category);
+                ContextMenuHandler.SetSubtitle(item.GetMetadata().category);
+                ContextMenuHandler.SetBody(item.GetMetadata().lore);
 
-                ContextMenuHandler.AddOption("Equip", () => {
-                    Debug.Log("Equip");
-                });
-                ContextMenuHandler.AddOption("Drop", () => {
-                    Debug.Log("Drop");
-                });
+                if (item.GetMetadata().equipable)
+                {
+                    ContextMenuHandler.AddOption("Equip", () => {
+                        Debug.Log("Equip");
+                    });
+                }
+                else
+                {
+                    ContextMenuHandler.AddOption("Use", () => {
+                        _bagScriptableObject.UseItem(item, Party.GetPartyMemberIndex(Party.GetCurrentLeader()));
+                    });
+                }
             });
 
             handle.item.sprite = item.GetMetadata().sprite;

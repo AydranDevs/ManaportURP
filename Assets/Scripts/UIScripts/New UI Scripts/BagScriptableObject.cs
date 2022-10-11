@@ -9,12 +9,13 @@ public class BagScriptableObject : ScriptableObject
     [field: SerializeField]
     public List<Item> itemList { get; private set; }
 
-    [System.NonSerialized]
+    [NonSerialized]
     public UnityEvent bagItemListChangedEvent;
+    [NonSerialized]
+    public UnityEvent bagItemUsedEvent;
 
     private void OnEnable()
     {
-        Debug.Log("On Enable");
         itemList = new List<Item>();
         if (bagItemListChangedEvent == null)
         {
@@ -45,6 +46,11 @@ public class BagScriptableObject : ScriptableObject
             itemList.Add(item);
         }
         bagItemListChangedEvent.Invoke();
+    }
+
+    public void UseItem(Item item, int i)
+    {
+        item.GetMetadata().UseEvent(i);
     }
 
     public List<Item> GetItemList()

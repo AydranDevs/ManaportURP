@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -144,6 +144,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2966005463619299616, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
   m_PrefabInstance: {fileID: 4003902396956327380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &203258325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3097221827548145463, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203258320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb000fc5192da94daf97af13f81617b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &203258326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +181,51 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &203258327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203258320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 203258325}
+          m_TargetAssemblyTypeName: Manapotion.UI.ContextMenuHandler, Assembly-CSharp
+          m_MethodName: ChangeMouseInBoundsState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 203258325}
+          m_TargetAssemblyTypeName: Manapotion.UI.ContextMenuHandler, Assembly-CSharp
+          m_MethodName: ChangeMouseInBoundsState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &544307574 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 543097411010206139, guid: 2f4c937e46389294a808fd9833e68923, type: 3}
@@ -1061,6 +1117,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 205334563608414365, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 468017731739989443, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1076,6 +1136,10 @@ PrefabInstance:
     - target: {fileID: 468017731739989443, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 700794067978813918, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 840835291317199853, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1115,6 +1179,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981812159280768555, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573312326764273644, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2128326550903913135, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -1181,12 +1249,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3155967101343848710, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3410194463480000474, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3410194463480000474, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410194463480000474, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3506215854366786546, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -1209,6 +1285,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2f2fa82122ee7484c8c38e4194e0ea4a, type: 3}
+    - target: {fileID: 3863516736956404379, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3863516736956404379, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.8
@@ -1252,6 +1332,10 @@ PrefabInstance:
     - target: {fileID: 6524065666409991411, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574237569747349396, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00038909912
       objectReference: {fileID: 0}
     - target: {fileID: 6772275945057033491, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_RootOrder

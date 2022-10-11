@@ -59,11 +59,8 @@ namespace Manapotion.UI
         private RectTransform _rtSubtitle;
         private RectTransform _rtBody;
 
-        private bool _needToRecalcRTTitleYPos = false;
-        private bool _needToRecalcRTSubtitleYPos = false;
-        private bool _needToRecalcRTBodyYPos = false;
-
-        private bool _needToRecalcOptionsPos = false;
+        private bool isActive = false;
+        private bool mouseInBounds = false;
         
         void Awake()
         {
@@ -88,6 +85,16 @@ namespace Manapotion.UI
 
         private void Update()
         {
+            if ((Mouse.current.leftButton.isPressed || Mouse.current.rightButton.isPressed) && !mouseInBounds)
+            {
+                if (isActive)
+                {
+                    Clear();
+                    Hide();
+                }
+                return;
+            }
+
             if (contextMenuType == ContextMenuType.Tooltip)
             {
                 myRectTransform.position = Mouse.current.position.ReadValue();
@@ -106,6 +113,11 @@ namespace Manapotion.UI
             }
         }
 
+        public void ChangeMouseInBoundsState(bool b)
+        {
+            mouseInBounds = b;
+        }
+
     #region Static Methods
         public static void Clear()
         {
@@ -119,11 +131,8 @@ namespace Manapotion.UI
             }
 
             Instance.SetTitleText(Instance.title);
-            Instance._needToRecalcRTTitleYPos = true;
             Instance.SetSubtitleText(Instance.subtitle);
-            Instance._needToRecalcRTSubtitleYPos = true;
             Instance.SetBodyText(Instance.body);
-            Instance._needToRecalcRTBodyYPos = true;
 
             Instance.Format();
         }
@@ -264,6 +273,7 @@ namespace Manapotion.UI
         public static void Show(ContextMenuType cmt)
         {
             Clear();
+            Instance.isActive = true;
             Instance.GetComponent<Image>().enabled = true;
             Instance._title.enabled = true;
             Instance._subtitle.enabled = true;
@@ -281,6 +291,7 @@ namespace Manapotion.UI
         }
         public static void Hide()
         {
+            Instance.isActive = false;
             Instance.GetComponent<Image>().enabled = false;
             Instance._title.enabled = false;
             Instance._subtitle.enabled = false;
@@ -290,6 +301,7 @@ namespace Manapotion.UI
 
         public void Show_ContextMenu()
         {
+            GetComponent<Image>().raycastTarget = true;
             myRectTransform.position = Mouse.current.position.ReadValue();
             _topRightCorner = new Vector2(myRectTransform.anchoredPosition.x + GetWidth(), myRectTransform.anchoredPosition.y + GetHeight());
             if (_topRightCorner.x >= BOUNDS_X)
@@ -306,29 +318,23 @@ namespace Manapotion.UI
 
         public void Show_Tooltip()
         {
-
+            GetComponent<Image>().raycastTarget = false;
         }
 
         public void SetTitleText(string s)
         {
             _title.text = s;
-            _needToRecalcRTTitleYPos = true;
-            _needToRecalcRTSubtitleYPos = true;
-            _needToRecalcRTBodyYPos = true;
             Format();
             
         }
         public void SetSubtitleText(string s)
         {
             _subtitle.text = s;
-            _needToRecalcRTSubtitleYPos = true;
-            _needToRecalcRTBodyYPos = true;
             Format();
         }
         public void SetBodyText(string s)
         {
             _body.text = s;
-            _needToRecalcRTBodyYPos = true;
             Format();
         }
 
