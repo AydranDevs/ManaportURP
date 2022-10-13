@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Manapotion.PartySystem;
+using Manapotion.Equipables;
 
 public struct ItemMetadata
 {
@@ -13,8 +14,8 @@ public struct ItemMetadata
     public bool equipable;
 
     public Action<int> UseEvent;
-    public Action EquipEvent;
-    public Action UnequipEvent;
+    public Action<int> EquipEvent;
+    public Action<int> UnequipEvent;
 }
 
 public class ItemMetadataManager
@@ -168,7 +169,12 @@ public class ItemMetadataManager
         lore = "Increases the mana regeneration rate.",
 
         stackable = true,
-        equipable = false
+        equipable = false,
+
+        UseEvent = (int charID) =>
+        {
+            Party.GetMember(charID).stats.manaPointsRegenRate.value += 1f;
+        }
     };
     public ItemMetadata manaport_consumable_regen_mana_potion_II = new ItemMetadata
     {
@@ -178,7 +184,12 @@ public class ItemMetadataManager
         lore = "Increases the mana regeneration rate.",
         
         stackable = true,
-        equipable = false
+        equipable = false,
+
+        UseEvent = (int charID) =>
+        {
+            Party.GetMember(charID).stats.manaPointsRegenRate.value += 0.5f;
+        }
     };
     public ItemMetadata manaport_consumable_regen_mana_potion_III = new ItemMetadata
     {
@@ -188,7 +199,12 @@ public class ItemMetadataManager
         lore = "Increases the mana regeneration rate.",
 
         stackable = true,
-        equipable = false
+        equipable = false,
+
+        UseEvent = (int charID) =>
+        {
+            Party.GetMember(charID).stats.manaPointsRegenRate.value += 0.2f;
+        }
     };
     public ItemMetadata manaport_consumable_regen_health_potion_I = new ItemMetadata
     {
@@ -198,7 +214,14 @@ public class ItemMetadataManager
         lore = "Increases the health regeneration rate.",
 
         stackable = true,
-        equipable = false
+        equipable = false,
+
+        UseEvent = (int charID) =>
+        {
+            
+            Party.GetMember(charID).stats.hitPointsRegenAmount.value += 1f;
+            Party.GetMember(charID).stats.hitPointsRegenRate.value += 1f;
+        }
     };
     public ItemMetadata manaport_consumable_regen_health_potion_II = new ItemMetadata
     {
@@ -208,7 +231,14 @@ public class ItemMetadataManager
         lore = "Increases the health regeneration rate.",
 
         stackable = true,
-        equipable = false
+        equipable = false,
+
+        UseEvent = (int charID) =>
+        {
+            
+            Party.GetMember(charID).stats.hitPointsRegenAmount.value += 2f;
+            Party.GetMember(charID).stats.hitPointsRegenRate.value += 0.5f;
+        }
     };
     public ItemMetadata manaport_consumable_regen_health_potion_III = new ItemMetadata
     {
@@ -218,7 +248,14 @@ public class ItemMetadataManager
         lore = "Increases the health regeneration rate.",
 
         stackable = true,
-        equipable = false
+        equipable = false,
+
+        UseEvent = (int charID) =>
+        {
+            
+            Party.GetMember(charID).stats.hitPointsRegenAmount.value += 4f;
+            Party.GetMember(charID).stats.hitPointsRegenRate.value += 0.2f;
+        }
     };
     public ItemMetadata manaport_consumable_boost_pyro_potion_I = new ItemMetadata
     {
@@ -438,7 +475,12 @@ public class ItemMetadataManager
         lore = "a Spelltome issued by Manaport Upper Arcane Academy students for use in training.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_weapon_training_tome });
+        }
     };
     public ItemMetadata manaport_weapon_azure_parasol = new ItemMetadata
     {
@@ -448,7 +490,12 @@ public class ItemMetadataManager
         lore = "A Parasol handmade by Mirabelle's father. The last gift she got from him.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_weapon_azure_parasol });
+        }
     };
     public ItemMetadata manaport_weapon_garden_shear = new ItemMetadata
     {
@@ -458,7 +505,12 @@ public class ItemMetadataManager
         lore = "What was once an old, rusty pair of garden shears is now an old, rusty blade.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_weapon_garden_shear });
+        }
     };
     public ItemMetadata manaport_armour_violet_robes = new ItemMetadata
     {
@@ -468,7 +520,12 @@ public class ItemMetadataManager
         lore = "A modified academy uniform. Laurie's favourite shade of purple.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_armour_violet_robes });
+        }
     };
     public ItemMetadata manaport_armour_timid_raincoat = new ItemMetadata
     {
@@ -478,7 +535,12 @@ public class ItemMetadataManager
         lore = "It used to be yellow. It rains so much in the mountains that the rubber has lost its colour.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_armour_timid_raincoat });
+        }
     };
     public ItemMetadata manaport_armour_sunbeaten_overalls = new ItemMetadata
     {
@@ -488,7 +550,12 @@ public class ItemMetadataManager
         lore = "It's warm to the touch, like the sun's energy had been absorbed into the fabric itself.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_armour_sunbeaten_overalls });
+        }
     };
     public ItemMetadata manaport_vanity_gold_ring_hat = new ItemMetadata
     {
@@ -498,7 +565,12 @@ public class ItemMetadataManager
         lore = "It's rare to see Laurie without this.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_vanity_gold_ring_hat });
+        }
     };
     public ItemMetadata manaport_vanity_cutesy_blue_rainboots = new ItemMetadata
     {
@@ -508,7 +580,12 @@ public class ItemMetadataManager
         lore = "Despite what they've been through, they're still as bright as ever.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_vanity_cutesy_blue_rainboots });
+        }
     };
     public ItemMetadata manaport_vanity_scarlet_rings = new ItemMetadata
     {
@@ -518,6 +595,11 @@ public class ItemMetadataManager
         lore = "Still holding a strong hue after so many years.",
 
         stackable = false,
-        equipable = true
+        equipable = true,
+
+        EquipEvent = (int charID) => 
+        {
+            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_vanity_scarlet_rings });
+        }
     };
 }

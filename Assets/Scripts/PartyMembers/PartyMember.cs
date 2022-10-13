@@ -18,8 +18,12 @@ namespace Manapotion.PartySystem
 
     public enum PartyStats 
     {
-        Health,
-        Mana,
+        HP,
+        HPRegenRate,
+        HPRegenAmount,
+        MP,
+        MPRegenRate,
+        MPRegenAmount,
         XP,
         AttackDamage,
         AttackSpeed,
@@ -34,7 +38,6 @@ namespace Manapotion.PartySystem
         DashMod,
         PushSpeed,
         Stability,
-        ManaRegen,
         SpindashDistance,
         BlinkdashDistance,
         PounceDistance,
@@ -134,6 +137,12 @@ namespace Manapotion.PartySystem
             public const float HIT_POINTS_MAX_DEFAULT = 20f;
             public Stat hitPoints;
 
+            public const float HIT_POINTS_REGEN_RATE_DEFAULT = 0f;
+            public Stat hitPointsRegenRate;
+
+            public const float HIT_POINTS_REGEN_AMOUNT_DEFAULT = 0.2f;
+            public Stat hitPointsRegenAmount;
+
             public const float ATTACK_DAMAGE_DEFAULT = 2f;
             public Stat attackDamage;
 
@@ -146,8 +155,11 @@ namespace Manapotion.PartySystem
             public const float MANA_POINTS_MAX_DEFAULT = 5f;
             public Stat manaPoints;
 
-            public const float MANA_REGEN_DEFAULT = 0.5f;
-            public Stat manaPointsRegen;
+            public const float MANA_POINTS_REGEN_RATE_DEFAULT = 2f;
+            public Stat manaPointsRegenRate;
+
+            public const float MANA_POINTS_REGEN_AMOUNT_DEFAULT = 0.5f;
+            public Stat manaPointsRegenAmount;
             
             private const float PUSH_SP_DEFAULT = 1.5f;
             public Stat pushSp;
@@ -186,15 +198,18 @@ namespace Manapotion.PartySystem
             {
                 experiencePoints = new Stat(0f, EXP_MAX_DEFAULT, PartyStats.XP);
                 
-                hitPoints = new Stat(HIT_POINTS_MAX_DEFAULT, HIT_POINTS_MAX_DEFAULT, PartyStats.Health);
+                hitPoints = new Stat(HIT_POINTS_MAX_DEFAULT, HIT_POINTS_MAX_DEFAULT, PartyStats.HP);
+                hitPointsRegenRate = new Stat(HIT_POINTS_REGEN_RATE_DEFAULT, 999f, PartyStats.HPRegenRate);
+                hitPointsRegenAmount = new Stat(HIT_POINTS_REGEN_AMOUNT_DEFAULT, 999f, PartyStats.HPRegenAmount);
+
+                manaPoints = new Stat(MANA_POINTS_MAX_DEFAULT, MANA_POINTS_MAX_DEFAULT, PartyStats.MP);
+                manaPointsRegenRate = new Stat(MANA_POINTS_REGEN_RATE_DEFAULT, 999f, PartyStats.MPRegenRate);
+                manaPointsRegenAmount = new Stat(MANA_POINTS_REGEN_AMOUNT_DEFAULT, 999f, PartyStats.MPRegenAmount);
 
                 attackDamage = new Stat(ATTACK_DAMAGE_DEFAULT, 999f, PartyStats.AttackDamage);
                 attackSpeed = new Stat(ATTACK_SPEED_DEFAULT, 999f, PartyStats.AttackSpeed);
                 
                 stabilityPoints = new Stat(0.00f, STABILITY_POINTS_MAX, PartyStats.Stability);
-
-                manaPoints = new Stat(MANA_POINTS_MAX_DEFAULT, MANA_POINTS_MAX_DEFAULT, PartyStats.Mana);
-                manaPointsRegen = new Stat(MANA_REGEN_DEFAULT, 999f, PartyStats.ManaRegen);
 
                 pushSp = new Stat(PUSH_SP_DEFAULT, 999f, PartyStats.PushSpeed);
                 dashMod = new Stat(DASH_MOD_DEFAULT, 999f, PartyStats.DashMod);
@@ -205,13 +220,16 @@ namespace Manapotion.PartySystem
 
                 statArray = new Stat[]
                 {
-                    experiencePoints,
                     hitPoints,
+                    hitPointsRegenRate,
+                    hitPointsRegenAmount,
+                    manaPoints,
+                    manaPointsRegenRate,
+                    manaPointsRegenAmount,
+                    experiencePoints,
                     attackDamage,
                     attackSpeed,
                     stabilityPoints,
-                    manaPoints,
-                    manaPointsRegen,
                     pushSp,
                     dashMod,
                     sprintMod,
@@ -391,49 +409,41 @@ namespace Manapotion.PartySystem
         #endregion
 
         #region Equip
-        public void Equip(int i, EquipableData equipable)
+        public void Equip(string cat, EquipableData equipable)
         {
-            if (i == 0)
+            if (cat == ItemCategories.Weapon)
             {
                 weapon = equipable;
                 weapon.OnEquip();
             }
-            else if (i == 1)
+            else if (cat == ItemCategories.Armour)
             {
                 armour = equipable;
                 armour.OnEquip();
             }
-            else if (i == 2)
+            else if (cat == ItemCategories.Vanity)
             {
                 vanity = equipable;
                 vanity.OnEquip();
             }
-            else
-            {
-                throw new Exception("No Equipable found with id " + i);
-            }
         }
 
-        public void Unequip(int i)
+        public void Unequip(string cat, EquipableData equipable)
         {
-            if (i == 0)
+            if (cat == ItemCategories.Weapon)
             {
                 weapon.OnUnequip();
                 weapon = null;
             }
-            else if (i == 1)
+            else if (cat == ItemCategories.Armour)
             {
                 armour.OnUnequip();
                 armour = null;
             }
-            else if (i == 2)
+            else if (cat == ItemCategories.Vanity)
             {
                 vanity.OnUnequip();
                 vanity = null;
-            }
-            else
-            {
-                throw new Exception("No Equipable found with id " + i);
             }
         }
         #endregion

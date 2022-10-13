@@ -85,7 +85,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             manaRegenTimer = manaRegenTimer - Time.deltaTime;
             if (manaRegenTimer <= 0f)
             {
-                stats.manaPoints.value += stats.manaPointsRegen.value;
+                stats.manaPoints.value += stats.manaPointsRegenAmount.value;
                 manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
             }
         }

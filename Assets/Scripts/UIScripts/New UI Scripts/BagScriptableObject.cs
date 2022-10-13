@@ -48,9 +48,34 @@ public class BagScriptableObject : ScriptableObject
         bagItemListChangedEvent.Invoke();
     }
 
+    public void RemoveItem(Item item)
+    {
+        foreach (Item it in itemList)
+        {
+            if (it.itemID == item.itemID)
+            {
+                it.amount -= item.amount;
+                if (it.amount == 0)
+                {
+                    itemList.Remove(it);
+                }
+                
+                bagItemListChangedEvent.Invoke();
+                return;
+            }
+        }
+    }
+
     public void UseItem(Item item, int i)
     {
         item.GetMetadata().UseEvent(i);
+        RemoveItem(item);
+    }
+
+    public void EquipItem(Item item, int i)
+    {
+        item.GetMetadata().EquipEvent(i);
+        RemoveItem(item);
     }
 
     public List<Item> GetItemList()

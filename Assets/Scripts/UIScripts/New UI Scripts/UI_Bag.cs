@@ -88,14 +88,16 @@ public class UI_Bag : MonoBehaviour
 
                 if (item.GetMetadata().equipable)
                 {
-                    ContextMenuHandler.AddOption("Equip", () => {
-                        Debug.Log("Equip");
+                    ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetCurrentLeader().gameObject.name), () => {
+                        _bagScriptableObject.EquipItem(item, Party.GetPartyMemberIndex(Party.GetCurrentLeader()));
+                        ContextMenuHandler.Hide();
                     });
                 }
                 else
                 {
-                    ContextMenuHandler.AddOption("Use", () => {
+                    ContextMenuHandler.AddOption(string.Format("Use <size=75%><alpha=#44>(on {0}?)", Party.GetCurrentLeader().gameObject.name), () => {
                         _bagScriptableObject.UseItem(item, Party.GetPartyMemberIndex(Party.GetCurrentLeader()));
+                        ContextMenuHandler.Hide();
                     });
                 }
             });

@@ -1,10 +1,11 @@
+using UnityEngine;
+
 namespace Manapotion.Equipables
 {   
     [System.Serializable]
     public class EquipableData
     {
-        public string name;
-        public string lore;
+        public ItemID equipableID;
         
         public EquipableStat[] stats = new EquipableStat[]
         {
@@ -19,7 +20,11 @@ namespace Manapotion.Equipables
 
         public bool equipped { get; private set; } = false;
 
-        public virtual void OnEquip() { equipped = true; }
+        public virtual void OnEquip()
+        {
+            equipped = true;
+            Debug.Log("equipped " + equipableID);
+        }
         public virtual void WhileEquipped() { }
         public virtual void OnUnequip() { equipped = false; }
 

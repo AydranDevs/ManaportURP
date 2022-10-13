@@ -124,11 +124,11 @@ namespace Manapotion.UI
             Instance.title = "";
             Instance.subtitle = "";
             Instance.body = "";
-            Instance.optionsList = new List<ContextMenuOption>();
-            foreach (Transform child in Instance.optionsContainer)
+            foreach (RectTransform child in Instance.optionsContainer)
             {
                 Destroy(child.gameObject);
             }
+            Instance.optionsList = new List<ContextMenuOption>();
 
             Instance.SetTitleText(Instance.title);
             Instance.SetSubtitleText(Instance.subtitle);
@@ -296,6 +296,10 @@ namespace Manapotion.UI
             Instance._title.enabled = false;
             Instance._subtitle.enabled = false;
             Instance._body.enabled = false;
+            foreach (RectTransform child in Instance.optionsContainer)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     #endregion
 
