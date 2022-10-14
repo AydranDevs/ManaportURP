@@ -44,6 +44,13 @@ public class UI_Equipment : MonoBehaviour
     Action ArmourSlotRightClick;
     Action WeaponSlotRightClick;
 
+    Action VanitySlotHover;
+    Action VanitySlotHoverOut;
+    Action ArmourSlotHover;
+    Action ArmourSlotHoverOut;
+    Action WeaponSlotHover;
+    Action WeaponSlotHoverOut;
+
     [SerializeField]
     private CharEquipment _laurieEquipment;
     [SerializeField]
@@ -235,15 +242,67 @@ public class UI_Equipment : MonoBehaviour
             });
         };
 
+        VanitySlotHover = delegate()
+        {
+            ContextMenuHandler.Show(ContextMenuType.Tooltip);
+            
+            ContextMenuHandler.SetTitle(ce.vanity.GetMetadata().name);
+            ContextMenuHandler.SetSubtitle(ce.vanity.GetMetadata().category);
+            ContextMenuHandler.SetBody(ce.vanity.GetMetadata().lore);
+        };
+        ArmourSlotHover = delegate()
+        {
+            ContextMenuHandler.Show(ContextMenuType.Tooltip);
+            
+            ContextMenuHandler.SetTitle(ce.armour.GetMetadata().name);
+            ContextMenuHandler.SetSubtitle(ce.armour.GetMetadata().category);
+            ContextMenuHandler.SetBody(ce.armour.GetMetadata().lore);
+        };
+        WeaponSlotHover = delegate()
+        {
+            Debug.Log(ce.weapon);
+            ContextMenuHandler.Show(ContextMenuType.Tooltip);
+            
+            ContextMenuHandler.SetTitle(ce.weapon.GetMetadata().name);
+            ContextMenuHandler.SetSubtitle(ce.weapon.GetMetadata().category);
+            ContextMenuHandler.SetBody(ce.weapon.GetMetadata().lore);
+        };
+
         if (ce.vanity.itemID != ItemID.manaport_nothing)
         {
             _vanitySlot.GetComponent<Button_UI>().MouseRightClickFunc += VanitySlotRightClick;
+            _vanitySlot.GetComponent<Button_UI>().MouseOverOnceFunc += VanitySlotHover;
+            _vanitySlot.GetComponent<Button_UI>().MouseOutOnceFunc += () => {
+                ContextMenuHandler.Hide();
+            };
         }
         else
         {
-            _vanitySlot.GetComponent<Button_UI>().MouseRightClickFunc -= VanitySlotRightClick;
+            _vanitySlot.GetComponent<Button_UI>().MouseRightClickFunc = null;
         }
-        _armourSlot.GetComponent<Button_UI>().MouseRightClickFunc += ArmourSlotRightClick;
-        _weaponSlot.GetComponent<Button_UI>().MouseRightClickFunc += WeaponSlotRightClick;
+        if (ce.vanity.itemID != ItemID.manaport_nothing)
+        {
+            _armourSlot.GetComponent<Button_UI>().MouseRightClickFunc += ArmourSlotRightClick;
+            _vanitySlot.GetComponent<Button_UI>().MouseOverOnceFunc += ArmourSlotHover;
+            _vanitySlot.GetComponent<Button_UI>().MouseOutOnceFunc += () => {
+                ContextMenuHandler.Hide();
+            };
+        }
+        else 
+        {
+            _armourSlot.GetComponent<Button_UI>().MouseRightClickFunc = null;
+        }
+        if (ce.weapon.itemID != ItemID.manaport_nothing)
+        {
+            _weaponSlot.GetComponent<Button_UI>().MouseRightClickFunc += WeaponSlotRightClick;
+            _vanitySlot.GetComponent<Button_UI>().MouseOverFunc += WeaponSlotHover;
+            _vanitySlot.GetComponent<Button_UI>().MouseOutOnceTooltipFunc += () => {
+                ContextMenuHandler.Hide();
+            };
+        }
+        else
+        {
+            _weaponSlot.GetComponent<Button_UI>().MouseRightClickFunc = null;
+        }
     }
 }
