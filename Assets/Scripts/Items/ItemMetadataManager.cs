@@ -22,6 +22,20 @@ public class ItemMetadataManager
 {
     public ItemMetadata GetMetaData(ItemID id)
     {
+        if (id == ItemID.manaport_nothing)
+        {
+            return new ItemMetadata
+            {
+                sprite = null,
+                name = null,
+                category = null,
+                lore = null,
+
+                stackable = false,
+                equipable = false,
+            };
+        }
+
         switch (id)
         {
             default:

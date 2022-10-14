@@ -28,7 +28,7 @@ public class World_Item : MonoBehaviour
     public void SetItem(Item item)
     {
         _item = item;
-        spriteRenderer.sprite = _item.GetSprite();
+        spriteRenderer.sprite = _item.GetMetadata().sprite;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

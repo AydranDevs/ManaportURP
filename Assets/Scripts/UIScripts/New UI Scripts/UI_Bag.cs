@@ -10,6 +10,13 @@ public class UI_Bag : MonoBehaviour
     private BagScriptableObject _bagScriptableObject;
 
     [SerializeField]
+    private EquipmentScriptableObject _laurieEquipmentScriptableObject;
+    [SerializeField]
+    private EquipmentScriptableObject _mirabelleEquipmentScriptableObject;
+    [SerializeField]
+    private EquipmentScriptableObject _winsleyEquipmentScriptableObject;
+
+    [SerializeField]
     private Transform bagItemSlotContainer;
     [SerializeField]
     private Transform equipableItemSlotContainer;

@@ -226,6 +226,63 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &536628782 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5186620163249097796, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &536628784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 536628782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d18cdf863b173458ee4e93b9b3ac54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bagScriptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}
+  _laurieEquipmentScriptableObject: {fileID: 11400000, guid: f3fcbbf518c0ad44cb30c0fb2955bb63, type: 2}
+  _mirabelleEquipmentScriptableObject: {fileID: 11400000, guid: f3e3690b0e46c29468291d9c07840e36, type: 2}
+  _winsleyEquipmentScriptableObject: {fileID: 11400000, guid: 7777adf2fb3f09449b27cffbf9309b0a, type: 2}
+  _weaponSlot: {fileID: 774235111}
+  _weaponSlotSprite: {fileID: 21300000, guid: 103eebc0c3bdd954a8fbca09a925d981, type: 3}
+  _armourSlot: {fileID: 1360179068}
+  _armourSlotSprite: {fileID: 21300000, guid: 1a3fbc7bea874224799b59410c9e6d8d, type: 3}
+  _vanitySlot: {fileID: 1838396500}
+  _vanitySlotSprite: {fileID: 21300000, guid: 178b00da257480d44bee45479b06d49f, type: 3}
+  _laurieEquipment:
+    weapon:
+      itemID: 0
+      amount: 0
+    armour:
+      itemID: 0
+      amount: 0
+    vanity:
+      itemID: 0
+      amount: 0
+  _mirabelleEquipment:
+    weapon:
+      itemID: 0
+      amount: 0
+    armour:
+      itemID: 0
+      amount: 0
+    vanity:
+      itemID: 0
+      amount: 0
+  _winsleyEquipment:
+    weapon:
+      itemID: 0
+      amount: 0
+    armour:
+      itemID: 0
+      amount: 0
+    vanity:
+      itemID: 0
+      amount: 0
 --- !u!114 &544307574 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 543097411010206139, guid: 2f4c937e46389294a808fd9833e68923, type: 3}
@@ -322,6 +379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bagScriptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}
+  _laurieEquipmentScriptableObject: {fileID: 11400000, guid: f3fcbbf518c0ad44cb30c0fb2955bb63, type: 2}
+  _mirabelleEquipmentScriptableObject: {fileID: 11400000, guid: f3e3690b0e46c29468291d9c07840e36, type: 2}
+  _winsleyEquipmentScriptableObject: {fileID: 11400000, guid: 7777adf2fb3f09449b27cffbf9309b0a, type: 2}
   bagItemSlotContainer: {fileID: 830249067}
   equipableItemSlotContainer: {fileID: 632210826}
   consumableItemSlotPrefab: {fileID: 2033497730161841991, guid: 8bb102a7b55ce9c42afccbd4658872d6, type: 3}
@@ -331,6 +391,37 @@ MonoBehaviour:
   weaponItemSlotPrefab: {fileID: 4728440663275031739, guid: ae97d2db2a3851640ad98813e14ccc50, type: 3}
   vanityItemSlotPrefab: {fileID: 7268332523169804792, guid: f308ab383bbfebe479cef5cdb0a33761, type: 3}
   <itemList>k__BackingField: []
+--- !u!1 &774235110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3420981646773538130, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &774235111 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8471406764399120175, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &774235114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774235110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602f74cbbbd80034b96f88091a8e7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBehaviourType: 0
+  hoverBehaviour_Color_Enter: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Color_Exit: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Image: {fileID: 0}
+  hoverBehaviour_Sprite_Exit: {fileID: 0}
+  hoverBehaviour_Sprite_Enter: {fileID: 0}
+  hoverBehaviour_Move: 0
+  hoverBehaviour_Move_Amount: {x: 0, y: 0}
+  triggerMouseOutFuncOnClick: 0
 --- !u!1 &809301653 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3656246548323621786, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -651,6 +742,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1360179067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7231697841325979349, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1360179068 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 9094825838919752561, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1360179071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360179067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602f74cbbbd80034b96f88091a8e7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBehaviourType: 0
+  hoverBehaviour_Color_Enter: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Color_Exit: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Image: {fileID: 0}
+  hoverBehaviour_Sprite_Exit: {fileID: 0}
+  hoverBehaviour_Sprite_Enter: {fileID: 0}
+  hoverBehaviour_Move: 0
+  hoverBehaviour_Move_Amount: {x: 0, y: 0}
+  triggerMouseOutFuncOnClick: 0
 --- !u!1 &1482182728
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +884,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f4c937e46389294a808fd9833e68923, type: 3}
+--- !u!1 &1838396499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1833929071242641562, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1838396500 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 468017731739989443, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1838396503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838396499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602f74cbbbd80034b96f88091a8e7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBehaviourType: 0
+  hoverBehaviour_Color_Enter: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Color_Exit: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Image: {fileID: 0}
+  hoverBehaviour_Sprite_Exit: {fileID: 0}
+  hoverBehaviour_Sprite_Enter: {fileID: 0}
+  hoverBehaviour_Move: 0
+  hoverBehaviour_Move_Amount: {x: 0, y: 0}
+  triggerMouseOutFuncOnClick: 0
 --- !u!114 &1935176732 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 543097411010206139, guid: 2f4c937e46389294a808fd9833e68923, type: 3}
@@ -1121,6 +1274,10 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 259023262165976642, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_Name
+      value: WeaponImage
+      objectReference: {fileID: 0}
     - target: {fileID: 468017731739989443, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1164,6 +1321,10 @@ PrefabInstance:
     - target: {fileID: 840835291317199853, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 973347550477793641, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_Name
+      value: VanityImage
       objectReference: {fileID: 0}
     - target: {fileID: 981022159510947451, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_RaycastTarget
@@ -1264,6 +1425,10 @@ PrefabInstance:
     - target: {fileID: 3410194463480000474, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3423509036803922041, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 5.88
       objectReference: {fileID: 0}
     - target: {fileID: 3506215854366786546, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_IsActive
@@ -1468,6 +1633,10 @@ PrefabInstance:
     - target: {fileID: 9094825838919752561, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106262028468254300, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_Name
+      value: ArmourImage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}

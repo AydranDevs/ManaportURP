@@ -19,7 +19,6 @@ namespace Manapotion.PartySystem.Inventory
             _bagScriptableObject = _party.bagScriptableObject;
 
             _bagScriptableObject.AddAllItems();
-            //_bagScriptableObject.AddItem(new Item { itemID = ItemID.manaport_consumable_restore_mana_potion_I, amount = 999});
 
             _bagScriptableObject.bagItemListChangedEvent.Invoke();
         }

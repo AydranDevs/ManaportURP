@@ -23,7 +23,6 @@ namespace Manapotion.Equipables
         public virtual void OnEquip()
         {
             equipped = true;
-            Debug.Log("equipped " + equipableID);
         }
         public virtual void WhileEquipped() { }
         public virtual void OnUnequip() { equipped = false; }
