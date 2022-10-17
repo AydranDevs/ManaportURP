@@ -128,6 +128,18 @@ TextureImporter:
   - first:
       213: 6255745539233519750
     second: Items41
+  - first:
+      213: -6233350318467442094
+    second: Items42
+  - first:
+      213: 7601638224699147962
+    second: Items43
+  - first:
+      213: -8065132261945307533
+    second: Items44
+  - first:
+      213: 1608186642866579482
+    second: Items45
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1082,6 +1094,90 @@ TextureImporter:
       bones: []
       spriteID: 6889f3f6c6fd0d650800000000000000
       internalID: 6255745539233519750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Items42
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a1e2b39e0be79a0800000000000000
+      internalID: -6233350318467442094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Items43
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6493ea0b17e7960800000000000000
+      internalID: 7601638224699147962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Items44
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e053c40f4e21090800000000000000
+      internalID: -8065132261945307533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Items45
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a18279c2b3d615610800000000000000
+      internalID: 1608186642866579482
       vertices: []
       indices: 
       edges: []

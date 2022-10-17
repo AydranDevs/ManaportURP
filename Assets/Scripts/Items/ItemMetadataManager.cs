@@ -11,6 +11,8 @@ public struct ItemMetadata
     public string lore;
 
     public bool stackable;
+
+    public EquipableData equipableData;
     public bool equipable;
 
     public Action<int> UseEvent;
@@ -81,7 +83,10 @@ public class ItemMetadataManager
             case ItemID.manaport_vanity_gold_ring_hat:                  return manaport_vanity_gold_ring_hat;
             case ItemID.manaport_vanity_cutesy_blue_rainboots:          return manaport_vanity_cutesy_blue_rainboots;
             case ItemID.manaport_vanity_scarlet_rings:                  return manaport_vanity_scarlet_rings;
-
+            case ItemID.manaport_spellstone_pyromancing_stone:          return manaport_spellstone_pyromancing_stone;
+            case ItemID.manaport_spellstone_cryomancing_stone:          return manaport_spellstone_cryomancing_stone;
+            case ItemID.manaport_spellstone_toximancing_stone:          return manaport_spellstone_toximancing_stone;
+            case ItemID.manaport_spellstone_voltmancing_stone:          return manaport_spellstone_voltmancing_stone;
         }
     }
 
@@ -491,9 +496,21 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_weapon_training_tome });
+            equipableID = ItemID.manaport_weapon_training_tome,
+            charIDsThatCanEquip = new int[] { 0 },
+            spellstones = new Item[2],
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(5f, EquipableStats.AttackDamage),
+                new EquipableStat(1f, EquipableStats.AttackSpeed),
+                new EquipableStat(0.02f, EquipableStats.CriticalChance),
+                new EquipableStat(1.2f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(0f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_weapon_azure_parasol = new ItemMetadata
@@ -506,9 +523,20 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_weapon_azure_parasol });
+            equipableID = ItemID.manaport_weapon_azure_parasol,
+            charIDsThatCanEquip = new int[] { 1 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(5f, EquipableStats.AttackDamage),
+                new EquipableStat(1f, EquipableStats.AttackSpeed),
+                new EquipableStat(0.02f, EquipableStats.CriticalChance),
+                new EquipableStat(1.2f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(0f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_weapon_garden_shear = new ItemMetadata
@@ -521,9 +549,20 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_weapon_garden_shear });
+            equipableID = ItemID.manaport_weapon_garden_shear,
+            charIDsThatCanEquip = new int[] { 2 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(4f, EquipableStats.AttackDamage),
+                new EquipableStat(3f, EquipableStats.AttackSpeed),
+                new EquipableStat(0.02f, EquipableStats.CriticalChance),
+                new EquipableStat(1.2f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(0f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_armour_violet_robes = new ItemMetadata
@@ -536,9 +575,20 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_armour_violet_robes });
+            equipableID = ItemID.manaport_armour_violet_robes,
+            charIDsThatCanEquip = new int[] { 0 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(0f, EquipableStats.AttackDamage),
+                new EquipableStat(0f, EquipableStats.AttackSpeed),
+                new EquipableStat(0f, EquipableStats.CriticalChance),
+                new EquipableStat(0f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(1f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_armour_timid_raincoat = new ItemMetadata
@@ -551,9 +601,20 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_armour_timid_raincoat });
+            equipableID = ItemID.manaport_armour_timid_raincoat,
+            charIDsThatCanEquip = new int[] { 1 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(0f, EquipableStats.AttackDamage),
+                new EquipableStat(0f, EquipableStats.AttackSpeed),
+                new EquipableStat(0f, EquipableStats.CriticalChance),
+                new EquipableStat(0f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(1f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_armour_sunbeaten_overalls = new ItemMetadata
@@ -566,9 +627,20 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_armour_sunbeaten_overalls });
+            equipableID = ItemID.manaport_armour_sunbeaten_overalls,
+            charIDsThatCanEquip = new int[] { 2 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(0f, EquipableStats.AttackDamage),
+                new EquipableStat(0f, EquipableStats.AttackSpeed),
+                new EquipableStat(0f, EquipableStats.CriticalChance),
+                new EquipableStat(0f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(1f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_vanity_gold_ring_hat = new ItemMetadata
@@ -581,9 +653,20 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_vanity_gold_ring_hat });
+            equipableID = ItemID.manaport_vanity_gold_ring_hat,
+            charIDsThatCanEquip = new int[] { 0 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(0f, EquipableStats.AttackDamage),
+                new EquipableStat(0f, EquipableStats.AttackSpeed),
+                new EquipableStat(0f, EquipableStats.CriticalChance),
+                new EquipableStat(0f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(0f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_vanity_cutesy_blue_rainboots = new ItemMetadata
@@ -596,9 +679,20 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_vanity_cutesy_blue_rainboots });
+            equipableID = ItemID.manaport_vanity_cutesy_blue_rainboots,
+            charIDsThatCanEquip = new int[] { 1 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(0f, EquipableStats.AttackDamage),
+                new EquipableStat(0f, EquipableStats.AttackSpeed),
+                new EquipableStat(0f, EquipableStats.CriticalChance),
+                new EquipableStat(0f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(1f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
     };
     public ItemMetadata manaport_vanity_scarlet_rings = new ItemMetadata
@@ -611,9 +705,60 @@ public class ItemMetadataManager
         stackable = false,
         equipable = true,
 
-        EquipEvent = (int charID) => 
+        equipableData = new EquipableData
         {
-            Party.GetMember(charID).Equip(ItemCategories.Weapon, new EquipableData { equipableID = ItemID.manaport_vanity_scarlet_rings });
+            equipableID = ItemID.manaport_vanity_scarlet_rings,
+            charIDsThatCanEquip = new int[] { 2 },
+            stats = new EquipableStat[]
+            {
+                new EquipableStat(0f, EquipableStats.AttackDamage),
+                new EquipableStat(0f, EquipableStats.AttackSpeed),
+                new EquipableStat(0f, EquipableStats.CriticalChance),
+                new EquipableStat(0f, EquipableStats.CriticalStrike),
+                
+                new EquipableStat(1f, EquipableStats.Defense),
+                new EquipableStat(0f, EquipableStats.KnockbackResistance)
+            }
         }
+    };
+    public ItemMetadata manaport_spellstone_pyromancing_stone = new ItemMetadata
+    {
+        sprite = ItemAssets.Instance.manaport_spellstone_pyromancing_stone,
+        name = "Pyrossidiana",
+        category = ItemCategories.Spellstone,
+        lore = "A powerful combination of nature and runeic experimentation.",
+
+        stackable = false,
+        equipable = true
+    };
+    public ItemMetadata manaport_spellstone_cryomancing_stone = new ItemMetadata
+    {
+        sprite = ItemAssets.Instance.manaport_spellstone_cryomancing_stone,
+        name = "Polardesium",
+        category = ItemCategories.Spellstone,
+        lore = "A powerful combination of nature and runeic experimentation.",
+
+        stackable = false,
+        equipable = true
+    };
+    public ItemMetadata manaport_spellstone_toximancing_stone = new ItemMetadata
+    {
+        sprite = ItemAssets.Instance.manaport_spellstone_toximancing_stone,
+        name = "Virugalena",
+        category = ItemCategories.Spellstone,
+        lore = "A powerful combination of nature and runeic experimentation.",
+
+        stackable = false,
+        equipable = true
+    };
+    public ItemMetadata manaport_spellstone_voltmancing_stone = new ItemMetadata
+    {
+        sprite = ItemAssets.Instance.manaport_spellstone_voltmancing_stone,
+        name = "Voltavoletta",
+        category = ItemCategories.Spellstone,
+        lore = "A powerful combination of nature and runeic experimentation.",
+
+        stackable = false,
+        equipable = true
     };
 }

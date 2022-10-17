@@ -20,6 +20,8 @@ public class UI_Bag : MonoBehaviour
     private Transform bagItemSlotContainer;
     [SerializeField]
     private Transform equipableItemSlotContainer;
+    [SerializeField]
+    private Transform spellStoneItemSlotContainer;
     
     [SerializeField]
     private GameObject consumableItemSlotPrefab;
@@ -33,6 +35,8 @@ public class UI_Bag : MonoBehaviour
     private GameObject weaponItemSlotPrefab;
     [SerializeField]
     private GameObject vanityItemSlotPrefab;
+    [SerializeField]
+    private GameObject spellStoneItemSlotPrefab;
     
 
     [field: SerializeField]
@@ -52,6 +56,10 @@ public class UI_Bag : MonoBehaviour
             Destroy(child.gameObject);
         }
         foreach (Transform child in equipableItemSlotContainer)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in spellStoneItemSlotContainer)
         {
             Destroy(child.gameObject);
         }
@@ -79,11 +87,16 @@ public class UI_Bag : MonoBehaviour
             {
                 go = Instantiate(weaponItemSlotPrefab, equipableItemSlotContainer);
             }
-            else
+            else if (item.GetMetadata().category == ItemCategories.Vanity)
             {
                 go = Instantiate(vanityItemSlotPrefab, equipableItemSlotContainer);
             }
+            else
+            {
+                go = Instantiate(spellStoneItemSlotPrefab, spellStoneItemSlotContainer);
+            }
 
+            // On right click of an item, open the context menu.
             var handle = go.GetComponent<BagSlotUIHandler>();
             handle.clickCtrl.onRight.AddListener(() =>
             {
@@ -95,10 +108,58 @@ public class UI_Bag : MonoBehaviour
 
                 if (item.GetMetadata().equipable)
                 {
-                    ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetCurrentLeader().gameObject.name), () => {
-                        _bagScriptableObject.EquipItem(item, Party.GetPartyMemberIndex(Party.GetCurrentLeader()));
-                        ContextMenuHandler.Hide();
-                    });
+                    #region Check if item has equipment restrictions
+                    bool foundCharIDThatCanEquip = false;
+                    foreach (var i in item.GetMetadata().equipableData.charIDsThatCanEquip)
+                    {
+                        if (i == 0)
+                        {
+                            foundCharIDThatCanEquip = true;
+                            ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(0).gameObject.name), () => {
+                                _laurieEquipmentScriptableObject.EquipItem(item);
+                                ContextMenuHandler.Hide();
+                            });
+                            break;
+                        }
+                        else if (i == 1)
+                        {
+                            foundCharIDThatCanEquip = true;
+                            ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(1).gameObject.name), () => {
+                                _mirabelleEquipmentScriptableObject.EquipItem(item);
+                                ContextMenuHandler.Hide();
+                            });
+                            break;
+                        }
+                        else if (i == 2)
+                        {
+                            foundCharIDThatCanEquip = true;
+                            ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(2).gameObject.name), () => {
+                                _winsleyEquipmentScriptableObject.EquipItem(item);
+                                ContextMenuHandler.Hide();
+                            });
+                            break;
+                        }
+                    }
+                    
+                    if (!foundCharIDThatCanEquip)
+                    {
+                        ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetCurrentLeader().gameObject.name), () => {
+                            if (Party.GetPartyMemberIndex(Party.GetCurrentLeader()) == 2)
+                            {
+                                _winsleyEquipmentScriptableObject.EquipItem(item);
+                            }
+                            else if (Party.GetPartyMemberIndex(Party.GetCurrentLeader()) == 1)
+                            {
+                                _mirabelleEquipmentScriptableObject.EquipItem(item);
+                            }
+                            else
+                            {
+                                _laurieEquipmentScriptableObject.EquipItem(item);
+                            }
+                            ContextMenuHandler.Hide();
+                        });
+                    }
+                    #endregion
                 }
                 else
                 {

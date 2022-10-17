@@ -65,5 +65,9 @@ public class ItemAssets : MonoBehaviour
         manaport_armour_sunbeaten_overalls,
         manaport_vanity_gold_ring_hat,
         manaport_vanity_cutesy_blue_rainboots,
-        manaport_vanity_scarlet_rings;
+        manaport_vanity_scarlet_rings,
+        manaport_spellstone_pyromancing_stone,
+        manaport_spellstone_cryomancing_stone,
+        manaport_spellstone_toximancing_stone,
+        manaport_spellstone_voltmancing_stone;
 }

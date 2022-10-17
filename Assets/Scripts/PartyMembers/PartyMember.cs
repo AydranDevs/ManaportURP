@@ -120,6 +120,9 @@ namespace Manapotion.PartySystem
         public FacingState facingState = FacingState.South;
         public float dashThreshold = 8f; 
 
+        [field: SerializeField]
+        public EquipmentScriptableObject equipmentScriptableObject { get; private set; }
+
         public EquipableData weapon;
         public EquipableData armour;
         public EquipableData vanity;

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Manapotion.PartySystem;
 
 [CreateAssetMenu]
 public class BagScriptableObject : ScriptableObject
@@ -13,8 +14,6 @@ public class BagScriptableObject : ScriptableObject
     public UnityEvent bagItemListChangedEvent;
     [NonSerialized]
     public UnityEvent bagItemUsedEvent;
-    [NonSerialized]
-    public UnityEvent<Item, int> bagItemEquippedEvent;
 
     private void OnEnable()
     {
@@ -26,10 +25,6 @@ public class BagScriptableObject : ScriptableObject
         if (bagItemUsedEvent == null)
         {
             bagItemUsedEvent = new UnityEvent();
-        }
-        if (bagItemEquippedEvent == null)
-        {
-            bagItemEquippedEvent = new UnityEvent<Item, int>();
         }
     }
 
@@ -97,18 +92,6 @@ public class BagScriptableObject : ScriptableObject
         item.GetMetadata().UseEvent(i);
         RemoveItem(item);
         bagItemUsedEvent.Invoke();
-    }
-
-    public void EquipItem(Item item, int i)
-    {
-        if (item.itemID == ItemID.manaport_nothing)
-        {
-            return;
-        }
-
-        item.GetMetadata().EquipEvent(i);
-        bagItemEquippedEvent.Invoke(item, i);
-        RemoveItem(item);
     }
 
     public List<Item> GetItemList()

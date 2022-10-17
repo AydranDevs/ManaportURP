@@ -7,8 +7,8 @@ namespace Manapotion.UI
         public GameObject[] attachedObjects;
         public bool active = false;
 
-        public bool hiding { get; private set; } = false;
-        public bool showing { get; private set; } = false;
+        public bool hiding { get; set; } = false;
+        public bool showing { get; set; } = false;
 
         public MainUIManager main;
 

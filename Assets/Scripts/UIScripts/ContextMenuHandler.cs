@@ -60,6 +60,7 @@ namespace Manapotion.UI
         private RectTransform _rtBody;
 
         private bool isActive = false;
+        public bool contextMenuOpen { get; private set; } = false;
         private bool mouseInBounds = false;
         
         void Awake()
@@ -279,6 +280,10 @@ namespace Manapotion.UI
             Instance._subtitle.enabled = true;
             Instance._body.enabled = true;
             Instance.contextMenuType = cmt;
+            if (Instance.contextMenuOpen)
+            {
+                return;
+            }
 
             if (cmt == ContextMenuType.ContextMenu)
             {
@@ -291,6 +296,7 @@ namespace Manapotion.UI
         }
         public static void Hide()
         {
+            Instance.contextMenuOpen = false;
             Instance.isActive = false;
             Instance.GetComponent<Image>().enabled = false;
             Instance._title.enabled = false;
@@ -318,6 +324,7 @@ namespace Manapotion.UI
                 float delta = _topRightCorner.y - BOUNDS_Y;
                 myRectTransform.anchoredPosition = new Vector2(myRectTransform.anchoredPosition.x, myRectTransform.anchoredPosition.y - delta);
             }
+            contextMenuOpen = true;
         }
 
         public void Show_Tooltip()

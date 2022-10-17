@@ -1,7 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using Manapotion.PartySystem.Inventory;
+using Manapotion.UI;
 
 namespace Manapotion.PartySystem
 {
@@ -13,9 +15,16 @@ namespace Manapotion.PartySystem
         public static Party Instance;
 
         public static Action OnPartyLeaderChanged;
+        [NonSerialized]
+        public static UnityEvent<PartyMember> OnPartyLeaderChangedEvent;
+
         public bool overrideCanSwitchLeaders { get; private set; } = false;
 
         public BagScriptableObject bagScriptableObject;
+
+        public EquipmentScriptableObject laurieEquipmentScriptableObject;
+        public EquipmentScriptableObject mirabelleEquipmentScriptableObject;
+        public EquipmentScriptableObject winsleyEquipmentScriptableObject;
 
         [SerializeField] private InputActionAsset _controls;
         private InputActionMap _inputActionMap;
@@ -38,11 +47,16 @@ namespace Manapotion.PartySystem
         private void Awake()
         {
             Instance = this;
+            if (OnPartyLeaderChangedEvent == null)
+            {
+                OnPartyLeaderChangedEvent = new UnityEvent<PartyMember>();
+            }
         }
 
         private void Start()
         {
             partyInventory = new PartyInventory(this);
+            // bagScriptableObject.bagItemEquippedEvent.AddListener(partyInventory.EquipItemToMember);
             
             cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PartyCam>();
             cam.target = members[0].transform;
@@ -66,11 +80,15 @@ namespace Manapotion.PartySystem
 
         public void NextPartyMember(InputAction.CallbackContext context)
         {
+            if (!context.started)
+            {
+                return;
+            }
             if (GameStateManager.Instance.state != GameState.Main && !overrideCanSwitchLeaders)
             {
                 return;
             }
-            if (!context.started)
+            if (ContextMenuHandler.Instance.contextMenuOpen)
             {
                 return;
             }
@@ -96,11 +114,15 @@ namespace Manapotion.PartySystem
 
         public void PreviousPartyMember(InputAction.CallbackContext context)
         {
+            if (!context.started)
+            {
+                return;
+            }
             if (GameStateManager.Instance.state != GameState.Main && !overrideCanSwitchLeaders)
             {
                 return;
             }
-            if (!context.started)
+            if (ContextMenuHandler.Instance.contextMenuOpen)
             {
                 return;
             }
@@ -146,6 +168,10 @@ namespace Manapotion.PartySystem
             if (OnPartyLeaderChanged != null)
             {
                 OnPartyLeaderChanged();
+            }
+            if (OnPartyLeaderChangedEvent != null)
+            {
+                OnPartyLeaderChangedEvent.Invoke(GetCurrentLeader());
             }
         }
 
