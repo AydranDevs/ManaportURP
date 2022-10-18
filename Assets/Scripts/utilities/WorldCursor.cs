@@ -10,10 +10,6 @@ public class WorldCursor : MonoBehaviour
     private InputActionMap _inputActionMap;
 
     private InputAction _mouseMovement;
-
-    private bool primaryFire = true;
-    private bool secondaryFire = false;
-
     Vector2 cursorPos;
     
     void Start()

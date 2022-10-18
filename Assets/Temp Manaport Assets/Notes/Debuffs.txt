@@ -1,0 +1,29 @@
+[Debuffs]
+
+Debuffs are status effects that laurie will eventually be inflicted by.
+
+Debuffs have special effects that affect the sprite and player attributes such as increasing movment speed.
+
+Fire ('Im Burning!')
+	Movement speed slightly increased
+	attack speed slightly increased
+	DEF reduced
+	SPECIAL: You cannot stand still while burning, you are forced to run in whatever direction you're facing.
+Ice ('It's Cold!)
+	Movement speed decreased
+	attack speed decreased
+	DEF increased
+	SPECIAL: Moving while frozen will increase the debuff duration up to 2 seconds.
+Zap ('Bzzt!')
+	Movement speed increased 
+	attack speed decreased
+	ATK increased
+	SPECIAL: Attack damage is amplified while zapped, but attack speed is decreased significantly.
+Poison
+	Movement speed decreased
+	attack speed decreased
+	MANA increased
+	SPECIAL: Your health is drained over time, but your mana is uneffected. use this to your advantage.
+	
+If ribbons equipped grant resistance to a certain debuff, then the resistance effects both the negative and positive effects of
+said debuff.

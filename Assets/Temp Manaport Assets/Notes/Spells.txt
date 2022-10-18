@@ -1,0 +1,105 @@
+Spells
+
+	Spell Name: Burston
+		Description: Shoots a neutral status mana ball in the direction of which laurie is facing.
+		Stats: 3 damage/hit
+			5 damage/crit
+			no base status chance.
+	Spell Name: Automa
+		Description: Shoots 3 neutral status mana balls/sec in the direction of which laurie is facing.
+		Stats: 2 damage/hit
+		3 damage/crit
+		no base status chance.
+	Spell Name: Blasteur
+		Description: Shoots 3 neutral status mana balls in a shotgun spread pattern in the direction laurie is facing.
+			This spread continues for 8.5 tiles then fades away. Note that the pellets of the spread do not have fallof.
+		Stats: 4 damage/hit
+			7 damage/crit
+			no base status chance.
+			
+	Spell Name: Pyro-Burston
+		Description: Shoots a fire status mana ball in the direction of which laurie is facing.
+		Stats: 4 damage/hit
+			7 damage/crit
+			base 2% status chance.
+	Spell Name: Pyro-Automa
+		Description: Shoots 3 fire status mana balls/sec in the direction of which laurie is facing.
+		Stats: 3 damage/hit
+			6 damage/crit
+			base 1% status chance.
+	Spell Name: Pyro-Blasteur
+		Description: Shoots 3 fire status mana balls in a shotgun spread pattern in the direction laurie is facing.
+			This spread continues for 8.5 tiles then fades away. Note that the pellets of the spread do not have fallof.
+		Stats: 6 damage/hit
+			9 damage/crit
+			base 2.5% status chance.
+			
+	Spell Name: Cryo-Burston
+		Description: Shoots a ice status mana ball in the direction of which laurie is facing.
+		Stats: 4 damage/hit
+			7 damage/crit
+			base 2% status chance.
+	Spell Name: Cryo-Automa
+		Description: Shoots 3 ice status mana balls/sec in the direction of which laurie is facing.
+		Stats: 3 damage/hit
+			6 damage/crit
+			base 1% status chance.
+	Spell Name: Cryo-Blasteur
+		Description: Shoots 3 ice status mana balls in a shotgun spread pattern in the direction laurie is facing.
+			This spread continues for 8.5 tiles then fades away. Note that the pellets of the spread do not have fallof.
+		Stats: 6 damage/hit
+			9 damage/crit
+			base 2.5% status chance.
+			
+	Spell Name: Toxi-Burston
+		Description: Shoots a poison status mana ball in the direction of which laurie is facing.
+		Stats: 4 damage/hit
+			7 damage/crit
+			base 2% status chance.
+	Spell Name: Toxi-Automa
+		Description: Shoots 3 poison status mana balls/sec in the direction of which laurie is facing.
+		Stats: 3 damage/hit
+			6 damage/crit
+			base 1% status chance.
+	Spell Name: Toxi-Blasteur
+		Description: Shoots 3 poison status mana balls in a shotgun spread pattern in the direction laurie is facing.
+			This spread continues for 8.5 tiles then fades away. Note that the pellets of the spread do not have fallof.
+		Stats: 6 damage/hit
+			9 damage/crit
+			base 2.5% status chance.
+			
+	Spell Name: Bolt-Burston
+		Description: Shoots a shock status mana ball in the direction of which laurie is facing.
+		Stats: 4 damage/hit
+			7 damage/crit
+			base 2% status chance.
+	Spell Name: Bolt-Automa
+		Description: Shoots 3 shock status mana balls/sec in the direction of which laurie is facing.
+		Stats: 3 damage/hit
+			6 damage/crit
+			base 1% status chance.
+	Spell Name: Bolt-Blasteur
+		Description: Shoots 3 shock status mana balls in a shotgun spread pattern in the direction laurie is facing.
+			This spread continues for 8.5 tiles then fades away. Note that the pellets of the spread do not have fallof.
+		Stats: 6 damage/hit
+			9 damage/crit
+			base 2.5% status chance.
+			
+	Spell Name: 'Splodon
+		Description: An upgraded version of Burston. 
+			On impact mana balls explode after a short delay and deal 1/4 of the damage dealt originally. (even a crit)
+		Stats: 10 damage/hit
+			15 damage/crit
+			base 5% status chance.
+	Spell Name: Automata
+		Description: An upgraded version of  Automa.
+			Every successful hit increases fire rate by 1% up to a 20% boost.
+		Stats: 8 damage/hit
+			13 damage/crit
+			base 3.5% status chance.
+	Spell Name: Blastoronne
+		Description: An upgraded version of Blasteur.
+			Upon every pellet impact, the spread becomes thinner.
+		Stats: 15 damage/hit
+			18 damage/crit
+			base 5.75% status chance.

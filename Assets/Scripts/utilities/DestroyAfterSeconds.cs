@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DestroyAfterSeconds : MonoBehaviour {
     [SerializeField] private float seconds;
-    [SerializeField] private ParticleSystem particleSystem;
+    [SerializeField] private ParticleSystem ps;
 
     void Start() {
-        if (particleSystem) {
+        if (ps) {
             StartCoroutine(DestroyParticleSystem());
         }
         
@@ -21,7 +21,7 @@ public class DestroyAfterSeconds : MonoBehaviour {
 
     IEnumerator DestroyParticleSystem() {
         yield return new WaitForSeconds(seconds);
-        particleSystem.Stop();
+        ps.Stop();
     }
 
     private void DestroyAfterParticleSystemStopped() {

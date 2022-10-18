@@ -1,0 +1,1320 @@
+fileFormatVersion: 2
+guid: c5cbfff2bfbe6a247abb5802213a852d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3131424702763494585
+    second: LaurieSpin00
+  - first:
+      213: 7161777997090442860
+    second: LaurieSpin01
+  - first:
+      213: -1267102513189185048
+    second: LaurieSpin02
+  - first:
+      213: 5028251749423846959
+    second: LaurieSpin03
+  - first:
+      213: 320420490739975488
+    second: LaurieSpin04
+  - first:
+      213: 957790839518771572
+    second: LaurieSpin05
+  - first:
+      213: -9086115109415673533
+    second: LaurieSpin06
+  - first:
+      213: -8753409659719096886
+    second: LaurieSpin07
+  - first:
+      213: -3467138306626235364
+    second: LaurieSpin08
+  - first:
+      213: 784480401941524971
+    second: LaurieSpin09
+  - first:
+      213: -5897485293035554215
+    second: LaurieSpin10
+  - first:
+      213: 5643427368678455143
+    second: LaurieSpin11
+  - first:
+      213: 1757558096614781927
+    second: LaurieSpin12
+  - first:
+      213: -3207779163713102020
+    second: LaurieSpin13
+  - first:
+      213: 8457971681040113850
+    second: LaurieSpin14
+  - first:
+      213: 6862940958521866084
+    second: LaurieSpin15
+  - first:
+      213: 2618191027081384881
+    second: LaurieSpin16
+  - first:
+      213: 9099361657843216092
+    second: LaurieSpin17
+  - first:
+      213: -110946019841743119
+    second: LaurieSpin18
+  - first:
+      213: -1455742756544244593
+    second: LaurieSpin19
+  - first:
+      213: -1697837272168462602
+    second: LaurieSpin20
+  - first:
+      213: 4071428716056326426
+    second: LaurieSpin21
+  - first:
+      213: -7294058260010799905
+    second: LaurieSpin22
+  - first:
+      213: -1151102904170158962
+    second: LaurieSpin23
+  - first:
+      213: 5253990575444839945
+    second: LaurieSpin24
+  - first:
+      213: -5282931207969493934
+    second: LaurieSpin25
+  - first:
+      213: -6148297657513719698
+    second: LaurieSpin26
+  - first:
+      213: 2245563345302238800
+    second: LaurieSpin27
+  - first:
+      213: -1176378360511530438
+    second: LaurieSpin28
+  - first:
+      213: 4773732750882249471
+    second: LaurieSpin29
+  - first:
+      213: -588585191033880473
+    second: LaurieSpin30
+  - first:
+      213: 1680313577393588686
+    second: LaurieSpin31
+  - first:
+      213: 3930942760796757999
+    second: LaurieSpin32
+  - first:
+      213: 4195048569014708810
+    second: LaurieSpin33
+  - first:
+      213: -4056578895868568959
+    second: LaurieSpin34
+  - first:
+      213: 6377851646949129863
+    second: LaurieSpin35
+  - first:
+      213: -5732507756170566789
+    second: LaurieSpin36
+  - first:
+      213: 9069716432831348927
+    second: LaurieSpin37
+  - first:
+      213: -3757582571385531053
+    second: LaurieSpin38
+  - first:
+      213: 1032769861647750226
+    second: LaurieSpin39
+  - first:
+      213: 2739689272851072890
+    second: LaurieSpin40
+  - first:
+      213: 2398912158262656203
+    second: LaurieSpin41
+  - first:
+      213: 7556134856755035441
+    second: LaurieSpin42
+  - first:
+      213: -9058367707136073866
+    second: LaurieSpin43
+  - first:
+      213: -6854938395353671907
+    second: LaurieSpin44
+  - first:
+      213: 8200862937381846347
+    second: LaurieSpin45
+  - first:
+      213: 2716737798385082446
+    second: LaurieSpin46
+  - first:
+      213: -5366378540010608633
+    second: LaurieSpin47
+  - first:
+      213: 7000805775697333988
+    second: LaurieSpin48
+  - first:
+      213: 3177789824971353732
+    second: LaurieSpin49
+  - first:
+      213: 3515337389023536370
+    second: LaurieSpin50
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LaurieSpin00
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bce9191d2e057b20800000000000000
+      internalID: 3131424702763494585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin01
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ec8c4c42fb36360800000000000000
+      internalID: 7161777997090442860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin02
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e99a574af85a6ee0800000000000000
+      internalID: -1267102513189185048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin03
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2615a54350f7c540800000000000000
+      internalID: 5028251749423846959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin04
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04500591dbc527400800000000000000
+      internalID: 320420490739975488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin05
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 479b3a6a1b1ca4d00800000000000000
+      internalID: 957790839518771572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin06
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34128f2c272a7e180800000000000000
+      internalID: -9086115109415673533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin07
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 253
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac568f2ca44a58680800000000000000
+      internalID: -8753409659719096886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c14d46e641042efc0800000000000000
+      internalID: -3467138306626235364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin09
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1fafae4c803ea00800000000000000
+      internalID: 784480401941524971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin10
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a76884f5ce72ea0800000000000000
+      internalID: -5897485293035554215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin11
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 767fbc9aa4b715e40800000000000000
+      internalID: 5643427368678455143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin12
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e3f5d4e6c9146810800000000000000
+      internalID: 1757558096614781927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin13
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3f1bfc98ddab73d0800000000000000
+      internalID: -3207779163713102020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin14
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab0a5b08e60c06570800000000000000
+      internalID: 8457971681040113850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin15
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 211
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 467bc2bb0701e3f50800000000000000
+      internalID: 6862940958521866084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b31d4b0edea55420800000000000000
+      internalID: 2618191027081384881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin17
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdeed82a73d674e70800000000000000
+      internalID: 9099361657843216092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin18
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6e61ace27d57ef0800000000000000
+      internalID: -110946019841743119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin19
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8415dffca92ccbe0800000000000000
+      internalID: -1455742756544244593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin20
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f60bf91ff11078e0800000000000000
+      internalID: -1697837272168462602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin21
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11bcdc88de908830800000000000000
+      internalID: 4071428716056326426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin22
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc6d0978ac46ca90800000000000000
+      internalID: -7294058260010799905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin23
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 169
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e846409e1067600f0800000000000000
+      internalID: -1151102904170158962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ec3ae679ce9e840800000000000000
+      internalID: 5253990575444839945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin25
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c27287e024fa6b0800000000000000
+      internalID: -5282931207969493934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin26
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6847860bdbdcaaa0800000000000000
+      internalID: -6148297657513719698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin27
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 056b06d07f7d92f10800000000000000
+      internalID: 2245563345302238800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin28
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3af0442d1aacafe0800000000000000
+      internalID: -1176378360511530438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin29
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa1cf405a4bf3240800000000000000
+      internalID: 4773732750882249471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin30
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 760ce5023ece4d7f0800000000000000
+      internalID: -588585191033880473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin31
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 127
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec98fc3cb4ca15710800000000000000
+      internalID: 1680313577393588686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fef1fa92d938d8630800000000000000
+      internalID: 3930942760796757999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin33
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ae1ab727ec73a30800000000000000
+      internalID: 4195048569014708810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin34
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18a5864acf224b7c0800000000000000
+      internalID: -4056578895868568959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin35
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78efa86184ea28850800000000000000
+      internalID: 6377851646949129863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin36
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b732841619a0270b0800000000000000
+      internalID: -5732507756170566789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin37
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb08f60da0b1edd70800000000000000
+      internalID: 9069716432831348927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin38
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355dd525f826adbc0800000000000000
+      internalID: -3757582571385531053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin39
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 85
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2545e32a7b2255e00800000000000000
+      internalID: 1032769861647750226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin40
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a778c3fc0e4550620800000000000000
+      internalID: 2739689272851072890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin41
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc7c90e5e5aa4120800000000000000
+      internalID: 2398912158262656203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin42
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13db4db3e98ccd860800000000000000
+      internalID: 7556134856755035441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin43
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fd84b40963a4280800000000000000
+      internalID: -9058367707136073866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin44
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1712c339dd5ed0a0800000000000000
+      internalID: -6854938395353671907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin45
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dbf4a34615fc170800000000000000
+      internalID: 8200862937381846347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin46
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40ae9c32aac3b520800000000000000
+      internalID: 2716737798385082446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin47
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 43
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7086360762bc685b0800000000000000
+      internalID: -5366378540010608633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ee41f9d2cbd72160800000000000000
+      internalID: 7000805775697333988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin49
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ea4485207c91c20800000000000000
+      internalID: 3177789824971353732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LaurieSpin50
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4a562fabcf8c030800000000000000
+      internalID: 3515337389023536370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

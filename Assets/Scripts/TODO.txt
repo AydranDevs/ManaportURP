@@ -1,0 +1,7 @@
+TODO:
+
+Fix DebugController.cs. Shouldn't be using old Player class.
+Fix PuzzleBox.cs. Shouldn't be using old Player class.
+Fix PuzzleBox.cs. "light" hides inherited member Component.light.
+Fix LegumelBolt.cs. Shouldn't be using old Player class.
+Fix LegumelBolt.cs. "collider" hides inherited member Component.collider.

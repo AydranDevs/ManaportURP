@@ -1,0 +1,64 @@
+[Ribbons]
+
+Colored ribbons are craftable, but only the primary colours, Red, Yellow and Blue.
+
+in order to craft the other 9, you mix these colours together.
+
+Red + Yellow = Orange
+Red + Blue = Purple
+Yellow + Blue = Green
+
+The secondary colours of ribbons have stronger stats than the primary colours.
+
+Red + White Fabric = Pink
+Blue + White Fabric = Sky Blue
+White fabric + <Insert Rare Item Here> = White Ribbon  (Strongest ribbon)
+Blue + Green = Cyan
+Red + Green = Brown
+Green + Yellow = Lime Green]]
+
+Tossup colours have special stats that reflect its parts. tossup ribbons combine items, fabrics, and existing ribbons
+to create special ribbons that can be used for specific actions such as increase ATK, DEF, etc.
+
+Primary Ribbbon Stats
+
+Red
+	Increased ATK
+	Increased chance to inflict "Fire" status effect (if equipped on current weapon)
+	Increased Defense to "Fire" Status effect
+Yellow
+	Increased DEF
+	Increased chance to inflict "Zap" status effect (if equipped on current weapon)
+	Increased Defense to "Zap" status effect
+Blue
+	Increased MANA
+	Increased chance to inflict "Freeze" status effect (if equipped on current weapon)
+	Increased Defense to "Freeze" status effect
+
+Secondary Ribbon Stats
+
+Orange
+	Increased DEF
+	Increased ATK
+	Increased chance to inflict "Fire" or "Zap" status effect (if equipped on current weapon)
+	Increased ATK when burning or zapped
+Purple
+	Increased DEF
+	Increased ATK
+	Increased chance to inflict "Freeze" or "Zap" status effect (if equipped on current weapon)
+	Increased SPD when Frozen or zapped
+Green
+	Increased MANA
+	Increased ATK
+	Increased chance to inflict "Poison" or "Freeze" status effect (if equipped on current weapon)
+	Increased SPD when frozen or poisoned
+	
+Tossup Ribbon Stats will be decided once we get to that point.
+REMINDER: Tossup Ribbon Stats are a mix of its parts' stats.
+
+White
+	Increased MANA
+	Increased ATK
+	Increased DEF
+	Increased chance to inflict every status effect
+	Increased Defense to whatever status effect equipped on current weapon (if any)
