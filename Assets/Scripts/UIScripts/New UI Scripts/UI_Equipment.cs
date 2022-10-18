@@ -22,9 +22,7 @@ public class UI_Equipment : MonoBehaviour
     [SerializeField]
     private GameObject upgradeEquipmentUIObject;
     private bool upgradeEquipmentMenuOpen = false;
-    public UI_UpgradeEquipment uiUpgradeEquipment;
-    [SerializeField]
-    private DimmerHandler uiUpgradeEquipmentDimmer;
+    private UI_UpgradeEquipment _uiUpgradeEquipment;
 
     [SerializeField]
     private Transform _weaponSlot;
@@ -71,8 +69,8 @@ public class UI_Equipment : MonoBehaviour
             SetEquipmentSlotData(pm.equipmentScriptableObject);
         });
 
-        uiUpgradeEquipment = new UI_UpgradeEquipment();
-        uiUpgradeEquipment.attachedObjects = new GameObject[] { upgradeEquipmentUIObject };
+        _uiUpgradeEquipment = new UI_UpgradeEquipment();
+        _uiUpgradeEquipment.attachedObjects = new GameObject[] { upgradeEquipmentUIObject };
     }
 
     private void Start() {
@@ -129,10 +127,7 @@ public class UI_Equipment : MonoBehaviour
 
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.vanity.equipableID + " !!!");
-                uiUpgradeEquipment.Show();
-                uiUpgradeEquipmentDimmer.FadeIn();
-                InventoryUIManager.equipmentClosedEvent.AddListener(uiUpgradeEquipment.Hide);
-                InventoryUIManager.equipmentClosedEvent.AddListener(uiUpgradeEquipmentDimmer.FadeOut);
+                _uiUpgradeEquipment.Show();
                 ContextMenuHandler.Hide();
             });
         };
@@ -148,6 +143,7 @@ public class UI_Equipment : MonoBehaviour
             // Add the option to unequip the equipable
             ContextMenuHandler.AddOption("Un-Equip", () => {
                 equipmentScriptable.UnequipEquipable(equipmentScriptable.armour);
+                _uiUpgradeEquipment.Show();
                 ContextMenuHandler.Hide();
 
                 if (unequipSoundClip != null || audioSource != null)
@@ -159,10 +155,7 @@ public class UI_Equipment : MonoBehaviour
 
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.armour.equipableID + " !!!");
-                uiUpgradeEquipment.Show();
-                uiUpgradeEquipmentDimmer.FadeIn();
-                InventoryUIManager.equipmentClosedEvent.AddListener(uiUpgradeEquipment.Hide);
-                InventoryUIManager.equipmentClosedEvent.AddListener(uiUpgradeEquipmentDimmer.FadeOut);
+                _uiUpgradeEquipment.Show();
                 ContextMenuHandler.Hide();
             });
         };
@@ -190,10 +183,7 @@ public class UI_Equipment : MonoBehaviour
 
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.weapon.equipableID + " !!!");
-                uiUpgradeEquipment.Show();
-                uiUpgradeEquipmentDimmer.FadeIn();
-                InventoryUIManager.equipmentClosedEvent.AddListener(uiUpgradeEquipment.Hide);
-                InventoryUIManager.equipmentClosedEvent.AddListener(uiUpgradeEquipmentDimmer.FadeOut);
+                _uiUpgradeEquipment.Show();
                 ContextMenuHandler.Hide();
             });
         };
