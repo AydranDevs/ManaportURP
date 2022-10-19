@@ -23,6 +23,8 @@ public class UI_Equipment : MonoBehaviour
     private GameObject upgradeEquipmentUIObject;
     // private bool upgradeEquipmentMenuOpen = false;
     private UI_UpgradeEquipment _uiUpgradeEquipment;
+    [SerializeField]
+    private DimmerHandler _uiUpgradeEquipmentDimmer;
 
     [SerializeField]
     private Transform _weaponSlot;
@@ -128,6 +130,7 @@ public class UI_Equipment : MonoBehaviour
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.vanity.equipableID + " !!!");
                 _uiUpgradeEquipment.Show();
+                _uiUpgradeEquipmentDimmer.FadeIn();
                 ContextMenuHandler.Hide();
             });
         };
@@ -156,6 +159,7 @@ public class UI_Equipment : MonoBehaviour
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.armour.equipableID + " !!!");
                 _uiUpgradeEquipment.Show();
+                _uiUpgradeEquipmentDimmer.FadeIn();
                 ContextMenuHandler.Hide();
             });
         };
@@ -184,6 +188,7 @@ public class UI_Equipment : MonoBehaviour
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.weapon.equipableID + " !!!");
                 _uiUpgradeEquipment.Show();
+                _uiUpgradeEquipmentDimmer.FadeIn();
                 ContextMenuHandler.Hide();
             });
         };
