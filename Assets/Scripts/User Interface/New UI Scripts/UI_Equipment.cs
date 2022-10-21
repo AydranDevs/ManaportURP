@@ -9,6 +9,9 @@ using CodeMonkey.Utils;
 
 public class UI_Equipment : MonoBehaviour
 {
+    public enum EquipmentMenuState { Equip, Upgrade }
+    public EquipmentMenuState equipmentMenuState { get; private set; } = EquipmentMenuState.Equip;
+
     [field: SerializeField]
     private BagScriptableObject _bagScriptableObject;
     
@@ -20,11 +23,9 @@ public class UI_Equipment : MonoBehaviour
     private EquipmentScriptableObject _winsleyEquipmentScriptableObject;
 
     [SerializeField]
-    private GameObject upgradeEquipmentUIObject;
-    // private bool upgradeEquipmentMenuOpen = false;
-    private UI_UpgradeEquipment _uiUpgradeEquipment;
+    private GameObject _spellstonesSRGameObject;
     [SerializeField]
-    private DimmerHandler _uiUpgradeEquipmentDimmer;
+    private GameObject _equipmentSRGameObject;
 
     [SerializeField]
     private Transform _weaponSlot;
@@ -70,9 +71,6 @@ public class UI_Equipment : MonoBehaviour
         Party.OnPartyLeaderChangedEvent.AddListener((PartyMember pm) => {
             SetEquipmentSlotData(pm.equipmentScriptableObject);
         });
-
-        _uiUpgradeEquipment = new UI_UpgradeEquipment();
-        _uiUpgradeEquipment.attachedObjects = new GameObject[] { upgradeEquipmentUIObject };
     }
 
     private void Start() {
@@ -129,8 +127,7 @@ public class UI_Equipment : MonoBehaviour
 
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.vanity.equipableID + " !!!");
-                _uiUpgradeEquipment.Show();
-                _uiUpgradeEquipmentDimmer.FadeIn();
+                UpgradeState();
                 ContextMenuHandler.Hide();
             });
         };
@@ -146,7 +143,6 @@ public class UI_Equipment : MonoBehaviour
             // Add the option to unequip the equipable
             ContextMenuHandler.AddOption("Un-Equip", () => {
                 equipmentScriptable.UnequipEquipable(equipmentScriptable.armour);
-                _uiUpgradeEquipment.Show();
                 ContextMenuHandler.Hide();
 
                 if (unequipSoundClip != null || audioSource != null)
@@ -158,8 +154,7 @@ public class UI_Equipment : MonoBehaviour
 
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.armour.equipableID + " !!!");
-                _uiUpgradeEquipment.Show();
-                _uiUpgradeEquipmentDimmer.FadeIn();
+                UpgradeState();
                 ContextMenuHandler.Hide();
             });
         };
@@ -187,8 +182,7 @@ public class UI_Equipment : MonoBehaviour
 
             ContextMenuHandler.AddOption("Upgrade", () => {
                 Debug.Log("Upgrading " + equipmentScriptable.weapon.equipableID + " !!!");
-                _uiUpgradeEquipment.Show();
-                _uiUpgradeEquipmentDimmer.FadeIn();
+                UpgradeState();
                 ContextMenuHandler.Hide();
             });
         };
@@ -275,5 +269,16 @@ public class UI_Equipment : MonoBehaviour
             _weaponSlot.GetComponent<Button_UI>().MouseOverFunc = null;
             _weaponSlot.GetComponent<Button_UI>().MouseOutOnceFunc = null;
         }
+    }
+
+    private void UpgradeState()
+    {
+        LTDescr upgradeTwOb;
+        upgradeTwOb = LeanTween.moveLocal(_spellstonesSRGameObject, new Vector3(0f, 0f, 0f), 0.3f);
+        upgradeTwOb.setEase(LeanTweenType.easeOutQuad);
+
+        LTDescr equipmentTwOb;
+        equipmentTwOb = LeanTween.moveLocal(_equipmentSRGameObject, new Vector3(150f, 0f, 0f), 0.3f);
+        equipmentTwOb.setEase(LeanTweenType.easeOutQuad);
     }
 }
