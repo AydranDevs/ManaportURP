@@ -193,7 +193,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 723543656831481271}
   m_Father: {fileID: 4003902397916632280}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1693,17 +1694,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3640982092408158973}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 668611051947579479}
-  m_Father: {fileID: 4003902397916632280}
-  m_RootOrder: 1
+  - {fileID: 7214163773094239197}
+  m_Father: {fileID: 7328650011791437510}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -307, y: 0}
+  m_AnchoredPosition: {x: -12.927246, y: 0}
   m_SizeDelta: {x: 136.0449, y: 224.2072}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1188210830459369174
@@ -2073,18 +2075,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3997112894264704642}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9016559581413530273}
   - {fileID: 2444568011508271207}
-  m_Father: {fileID: 4003902397916632280}
-  m_RootOrder: 2
+  m_Father: {fileID: 723543656831481271}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -291.55, y: -0.0001955}
+  m_AnchoredPosition: {x: 15.450012, y: -0.0001955}
   m_SizeDelta: {x: 166.95, y: 224.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &719070801247276548
@@ -2340,8 +2342,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7328650011791437510}
-  - {fileID: 723543656831481271}
-  - {fileID: 7214163773094239197}
   m_Father: {fileID: 6952400385465730810}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3164,6 +3164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   invOpen: 0
+  uI_Equipment: {fileID: 0}
+  uI_Bag: {fileID: 0}
+  uI_Beastiary: {fileID: 0}
   abilityIconSprites:
     ArcaneBurston: {fileID: 21300000, guid: 28c28aa9306cc544996c4f9c0f80ad95, type: 3}
     ArcaneBlasteur: {fileID: 21300000, guid: b063fad6cce70a941a111385753cb39d, type: 3}

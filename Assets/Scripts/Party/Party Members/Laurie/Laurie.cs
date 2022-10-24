@@ -14,7 +14,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
     
     public enum State { Movement, Attack, AuxMove }
         
-    public class Laurie : PartyMember
+    public class Laurie : PartyMember_Mage
     {
         private static Laurie Instance;
         

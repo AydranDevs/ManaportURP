@@ -1,9 +1,3 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
-using Manapotion.UI;
-using Manapotion.PartySystem;
-
 namespace Manapotion.PartySystem.Inventory
 {    
     public class Bag
@@ -17,8 +11,6 @@ namespace Manapotion.PartySystem.Inventory
             _party = party;
 
             _bagScriptableObject = _party.bagScriptableObject;
-
-            _bagScriptableObject.AddAllItems();
 
             _bagScriptableObject.bagItemListChangedEvent.Invoke();
         }

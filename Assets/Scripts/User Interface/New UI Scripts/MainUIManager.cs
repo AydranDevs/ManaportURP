@@ -55,6 +55,10 @@ namespace Manapotion.UI
 
         public StatusUIManager statusUIManager { get; private set; }
         public InventoryUIManager inventoryUIManager { get; private set; }
+
+        public UI_Equipment uI_Equipment;
+        public UI_Bag uI_Bag;
+        public UI_Beastiary uI_Beastiary;
     
         public CharacterUIHandle[] handles { get; private set; }
         private Dictionary<int, Action> _handleDict;
@@ -166,10 +170,6 @@ namespace Manapotion.UI
             }
 
             invOpen = true;
-            
-            inventoryUIManager.equipUI.Refresh();
-            inventoryUIManager.bagUI.Refresh();
-            inventoryUIManager.beastiaryUI.Refresh();
 
             GameStateManager.Instance.ChangeGameState(GameState.Inv);
         }
@@ -178,13 +178,11 @@ namespace Manapotion.UI
         {
             if (e.newState == GameState.Inv)
             {
-                dimmer.FadeIn();
                 statusUIManager.Hide();
-                inventoryUIManager.bagUI.Refresh();
+                // inventoryUIManager.bagUI.Refresh();
             }
             else
             {
-                dimmer.FadeOut();
                 statusUIManager.Show();
             }
         }
@@ -228,7 +226,7 @@ namespace Manapotion.UI
             member = Party.Instance.members[id].GetComponent<PartyMember>();
         }
 
-        public Stat GetStat(PartyStats stat)
+        public Stat GetStat(StatID stat)
         {
             return member.stats.FindStat(stat);
         }

@@ -66,12 +66,12 @@ namespace Manapotion.PartySystem.WinsleyCharacter
                 {
                     _winsley.movementState = MovementState.Dash;
                     isDashing = true;
-                    movementSp = _winsley.stats.walkSp.value * _winsley.stats.dashMod.value;
+                    movementSp = _winsley.stats.manaport_stat_base_walk_speed.value * _winsley.stats.manaport_stat_base_dash_modifier.value;
                 }
                 else
                 {
                     _winsley.movementState = MovementState.Sprint;
-                    movementSp = _winsley.stats.walkSp.value * _winsley.stats.sprintMod.value;
+                    movementSp = _winsley.stats.manaport_stat_base_walk_speed.value * _winsley.stats.manaport_stat_base_sprint_modifier.value;
                     isDashing = false;
                 }
                 sprintDuration += Time.deltaTime;
@@ -79,7 +79,7 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             else
             {
                 _winsley.movementState = MovementState.Walk;
-                movementSp = _winsley.stats.walkSp.value;
+                movementSp = _winsley.stats.manaport_stat_base_walk_speed.value;
                 sprintDuration = 0f;
             }
 

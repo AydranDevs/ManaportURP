@@ -102,7 +102,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) => 
         {
-            Party.GetMember(charID).stats.manaPoints.value += 2f;
+            // Party.GetMember(charID).stats.manaPoints.value += 2f;
         } 
     };
     public ItemMetadata manaport_consumable_restore_mana_potion_II = new ItemMetadata
@@ -117,7 +117,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) => 
         {
-            Party.GetMember(charID).stats.manaPoints.value += 4f;
+            // Party.GetMember(charID).stats.manaPoints.value += 4f;
         } 
     };
     public ItemMetadata manaport_consumable_restore_mana_potion_III = new ItemMetadata
@@ -132,7 +132,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) => 
         {
-            Party.GetMember(charID).stats.manaPoints.value += 10f;
+            // Party.GetMember(charID).stats.manaPoints.value += 10f;
         } 
     };
     public ItemMetadata manaport_consumable_restore_health_potion_I = new ItemMetadata
@@ -147,7 +147,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) => 
         {
-            Party.GetMember(charID).stats.hitPoints.value += 2f;
+            // Party.GetMember(charID).stats.hitPoints.value += 2f;
         } 
     };
     public ItemMetadata manaport_consumable_restore_health_potion_II = new ItemMetadata
@@ -162,7 +162,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) => 
         {
-            Party.GetMember(charID).stats.hitPoints.value += 5f;
+            // Party.GetMember(charID).stats.hitPoints.value += 5f;
         } 
     };
     public ItemMetadata manaport_consumable_restore_health_potion_III = new ItemMetadata
@@ -177,7 +177,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) => 
         {
-            Party.GetMember(charID).stats.hitPoints.value += 10f;
+            // Party.GetMember(charID).stats.hitPoints.value += 10f;
         } 
     };
     public ItemMetadata manaport_consumable_regen_mana_potion_I = new ItemMetadata
@@ -192,7 +192,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) =>
         {
-            Party.GetMember(charID).stats.manaPointsRegenRate.value += 1f;
+            // Party.GetMember(charID).stats.manaPointsRegenRate.value += 1f;
         }
     };
     public ItemMetadata manaport_consumable_regen_mana_potion_II = new ItemMetadata
@@ -207,7 +207,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) =>
         {
-            Party.GetMember(charID).stats.manaPointsRegenRate.value += 0.5f;
+            // Party.GetMember(charID).stats.manaPointsRegenRate.value += 0.5f;
         }
     };
     public ItemMetadata manaport_consumable_regen_mana_potion_III = new ItemMetadata
@@ -222,7 +222,7 @@ public class ItemMetadataManager
 
         UseEvent = (int charID) =>
         {
-            Party.GetMember(charID).stats.manaPointsRegenRate.value += 0.2f;
+            // Party.GetMember(charID).stats.manaPointsRegenRate.value += 0.2f;
         }
     };
     public ItemMetadata manaport_consumable_regen_health_potion_I = new ItemMetadata
@@ -238,8 +238,8 @@ public class ItemMetadataManager
         UseEvent = (int charID) =>
         {
             
-            Party.GetMember(charID).stats.hitPointsRegenAmount.value += 1f;
-            Party.GetMember(charID).stats.hitPointsRegenRate.value += 1f;
+            // Party.GetMember(charID).stats.hitPointsRegenAmount.value += 1f;
+            // Party.GetMember(charID).stats.hitPointsRegenRate.value += 1f;
         }
     };
     public ItemMetadata manaport_consumable_regen_health_potion_II = new ItemMetadata
@@ -255,8 +255,8 @@ public class ItemMetadataManager
         UseEvent = (int charID) =>
         {
             
-            Party.GetMember(charID).stats.hitPointsRegenAmount.value += 2f;
-            Party.GetMember(charID).stats.hitPointsRegenRate.value += 0.5f;
+            // Party.GetMember(charID).stats.hitPointsRegenAmount.value += 2f;
+            // Party.GetMember(charID).stats.hitPointsRegenRate.value += 0.5f;
         }
     };
     public ItemMetadata manaport_consumable_regen_health_potion_III = new ItemMetadata
@@ -272,8 +272,8 @@ public class ItemMetadataManager
         UseEvent = (int charID) =>
         {
             
-            Party.GetMember(charID).stats.hitPointsRegenAmount.value += 4f;
-            Party.GetMember(charID).stats.hitPointsRegenRate.value += 0.2f;
+            // Party.GetMember(charID).stats.hitPointsRegenAmount.value += 4f;
+            // Party.GetMember(charID).stats.hitPointsRegenRate.value += 0.2f;
         }
     };
     public ItemMetadata manaport_consumable_boost_pyro_potion_I = new ItemMetadata

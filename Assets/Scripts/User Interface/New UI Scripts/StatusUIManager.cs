@@ -46,7 +46,7 @@ namespace Manapotion.UI
             PartyMember.OnAbilityLockChanged += OnAbilityLockChanged_SetLockState;
 
             PartyMember.OnUpdateHealthBar += OnUpdateHealthBar_UpdateHealthBar;
-            PartyMember.OnUpdateManaBar += OnUpdateManaBar_UpdateManaBar;
+            PartyMember_Mage.OnUpdateManaBar += OnUpdateManaBar_UpdateManaBar;
         }
 
         #region Init
@@ -134,7 +134,7 @@ namespace Manapotion.UI
             statusBars[0].fill.value = health;
         }
 
-        public void OnUpdateManaBar_UpdateManaBar(object sender, PartyMember.OnUpdateManaBarEventArgs e)
+        public void OnUpdateManaBar_UpdateManaBar(object sender, PartyMember_Mage.OnUpdateManaBarEventArgs e)
         {
             UpdateManaBar(e.mana, e.maxMana);
         }

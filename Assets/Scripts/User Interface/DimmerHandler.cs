@@ -29,13 +29,11 @@ public class DimmerHandler : MonoBehaviour
     {
         LTDescr tweenObject;
         tweenObject = LeanTween.alphaCanvas(canvasGroup, 1, fadeInTime);
-        Debug.Log("dimmer activated");
     }
 
     public void FadeOut()
     {
         LTDescr tweenObject;
         tweenObject = LeanTween.alphaCanvas(canvasGroup, 0, fadeOutTime);
-        Debug.Log("dimmer deactivated");
     }
 }

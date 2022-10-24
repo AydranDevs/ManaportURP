@@ -15,11 +15,18 @@ MonoBehaviour:
   <charID>k__BackingField: 0
   weapon:
     equipableID: 34
-    charIDsThatCanEquip: 
+    charIDsThatCanEquip: 00000000
+    spellstones:
+    - itemID: 0
+      amount: 0
+    - itemID: 0
+      amount: 0
   armour:
     equipableID: 37
-    charIDsThatCanEquip: 
+    charIDsThatCanEquip: 00000000
+    spellstones: []
   vanity:
     equipableID: 40
-    charIDsThatCanEquip: 
+    charIDsThatCanEquip: 00000000
+    spellstones: []
   partyBagSciptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}

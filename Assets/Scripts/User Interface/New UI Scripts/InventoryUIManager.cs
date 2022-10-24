@@ -11,26 +11,27 @@ namespace Manapotion.UI
 
         public InventoryState inventoryState = InventoryState.None;
 
-        public BagUIManager bagUI;
-        public EquipUIManager equipUI;
-        public InventoryUIBase beastiaryUI;
+        public UI_Bag _uI_Bag;
+        private UI_Equipment _uI_Equipment;
+        public UI_Beastiary _uI_Beastiary;
 
         public InventoryUIManager(MainUIManager main)
         {
             _main = main;
 
-            bagUI = new BagUIManager(); 
-            equipUI = new EquipUIManager(_main); 
-            beastiaryUI = new InventoryUIBase();
-
-            bagUI.attachedObjects = new GameObject[] { _main.bagUIObject };
-            equipUI.attachedObjects = new GameObject[] { _main.leftEquipUIObject, _main.rightEquipUIObject };
-            beastiaryUI.attachedObjects = new GameObject[] { _main.beastiaryUIObject }; 
+            _uI_Bag = _main.uI_Bag;
+            _uI_Equipment = _main.uI_Equipment;
+            _uI_Beastiary = _main.uI_Beastiary;
         }
 
         public void OnToggleBag(InputAction.CallbackContext context)
         {
-            if (equipUI.hiding || equipUI.showing || beastiaryUI.hiding || beastiaryUI.showing)
+            if (_uI_Equipment.uiState == UIState.Hiding || 
+                _uI_Equipment.uiState == UIState.Showing || 
+                _uI_Bag.uiState == UIState.Hiding || 
+                _uI_Bag.uiState == UIState.Showing || 
+                _uI_Beastiary.uiState == UIState.Hiding || 
+                _uI_Beastiary.uiState == UIState.Showing)
             {
                 return;
             }
@@ -42,14 +43,14 @@ namespace Manapotion.UI
             if (inventoryState != InventoryState.Bag)
             {
                 inventoryState = InventoryState.Bag;
-                bagUI.Show();
-                equipUI.Hide();
-                beastiaryUI.Hide();
+                _uI_Bag.Show();
+                _uI_Equipment.Hide();
+                _uI_Beastiary.Hide();
             }
             else
             {
                 inventoryState = InventoryState.None;
-                bagUI.Hide();
+                _uI_Bag.Hide();
             }
             
             if (AllUIsAreClosed())
@@ -60,7 +61,12 @@ namespace Manapotion.UI
         }
 
         public void OnToggleEquip(InputAction.CallbackContext context) {
-            if (bagUI.hiding || bagUI.showing || beastiaryUI.hiding || beastiaryUI.showing)
+            if (_uI_Equipment.uiState == UIState.Hiding || 
+                _uI_Equipment.uiState == UIState.Showing || 
+                _uI_Bag.uiState == UIState.Hiding || 
+                _uI_Bag.uiState == UIState.Showing || 
+                _uI_Beastiary.uiState == UIState.Hiding || 
+                _uI_Beastiary.uiState == UIState.Showing)
             {
                 return;
             }
@@ -72,14 +78,14 @@ namespace Manapotion.UI
             if (inventoryState != InventoryState.Equip)
             {
                 inventoryState = InventoryState.Equip;
-                equipUI.Show();
-                bagUI.Hide();
-                beastiaryUI.Hide();
+                _uI_Equipment.Show();
+                _uI_Bag.Hide();
+                _uI_Beastiary.Hide();
             }
             else
             {
                 inventoryState = InventoryState.None;
-                equipUI.Hide();
+                _uI_Equipment.Hide();
             }
             
             if (AllUIsAreClosed())
@@ -90,7 +96,12 @@ namespace Manapotion.UI
         }
 
         public void OnToggleBeastiary(InputAction.CallbackContext context) {
-            if (bagUI.hiding || bagUI.showing || equipUI.hiding || equipUI.showing)
+            if (_uI_Equipment.uiState == UIState.Hiding || 
+                _uI_Equipment.uiState == UIState.Showing || 
+                _uI_Bag.uiState == UIState.Hiding || 
+                _uI_Bag.uiState == UIState.Showing || 
+                _uI_Beastiary.uiState == UIState.Hiding || 
+                _uI_Beastiary.uiState == UIState.Showing)
             {
                 return;
             }
@@ -102,14 +113,14 @@ namespace Manapotion.UI
             if (inventoryState != InventoryState.Beastiary)
             {
                 inventoryState = InventoryState.Beastiary;
-                beastiaryUI.Show();
-                bagUI.Hide();
-                equipUI.Hide();
+                _uI_Beastiary.Show();
+                _uI_Bag.Hide();
+                _uI_Equipment.Hide();
             }
             else
             {
                 inventoryState = InventoryState.None;
-                beastiaryUI.Hide();
+                _uI_Beastiary.Hide();
             }
 
             if (AllUIsAreClosed())
@@ -121,7 +132,16 @@ namespace Manapotion.UI
 
         private bool AllUIsAreClosed()
         {
-            return !bagUI.active && !equipUI.active && !beastiaryUI.active;
+            if ((_uI_Bag.uiState == UIState.Hidden || _uI_Bag.uiState == UIState.Hiding)  &&
+                (_uI_Equipment.uiState == UIState.Hidden || _uI_Equipment.uiState == UIState.Hiding) &&
+                (_uI_Beastiary.uiState == UIState.Hidden || _uI_Beastiary.uiState == UIState.Hiding))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

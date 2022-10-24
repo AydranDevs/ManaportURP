@@ -51,7 +51,6 @@ public class EquipmentScriptableObject : ScriptableObject
         {
             if (i == charID)
             {
-                Debug.Log("char can equip");
                 // if item in slot is equipped, swap the two.
                 if (weapon.equipableID != ItemID.manaport_nothing && iC == ItemCategories.Weapon)
                 {

@@ -23,7 +23,7 @@ namespace Manapotion.PartySystem.Inventory
 
         public void EquipItemToMember(Item item, int charId)
         {
-            Party.GetMember(charId).Equip(item.GetMetadata().category, item.GetMetadata().equipableData);
+            // Party.GetMember(charId).Equip(item.GetMetadata().category, item.GetMetadata().equipableData);
         }
     }
 }

@@ -15,9 +15,6 @@ namespace Manapotion.UI
 
         private PartyMember _chosenMember;
 
-        // public BagSlot[] equipment = new BagSlot[(int)ItemID.MAXCOUNT];
-        // public GameObject[] slots = new GameObject[(int)ItemID.MAXCOUNT];
-
         public EquipUIManager(MainUIManager main)
         {
             this.main = main;

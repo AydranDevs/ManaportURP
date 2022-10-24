@@ -33,12 +33,6 @@ namespace Manapotion.PartySystem.WinsleyCharacter
     
         private void Update()
         {
-            if (stats.hitPoints.Empty())
-            {
-                Die();
-                return;
-            }
-
             winsleyController.Update();
             winsleyRenderer.Update();
         }
