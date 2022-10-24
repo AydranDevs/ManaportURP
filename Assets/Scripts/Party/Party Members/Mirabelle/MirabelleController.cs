@@ -71,12 +71,12 @@ namespace Manapotion.PartySystem.MirabelleCharacter
                 {
                     _mirabelle.movementState = MovementState.Dash;
                     isDashing = true;
-                    movementSp = _mirabelle.stats.walkSp.value * _mirabelle.stats.dashMod.value;
+                    movementSp = _mirabelle.stats.manaport_stat_base_walk_speed.value * _mirabelle.stats.manaport_stat_base_dash_modifier.value;
                 }
                 else
                 {
                     _mirabelle.movementState = MovementState.Sprint;
-                    movementSp = _mirabelle.stats.walkSp.value * _mirabelle.stats.sprintMod.value;
+                    movementSp = _mirabelle.stats.manaport_stat_base_walk_speed.value * _mirabelle.stats.manaport_stat_base_sprint_modifier.value;
                     isDashing = false;
                 }
                 sprintDuration += Time.deltaTime;
@@ -84,7 +84,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             else
             {
                 _mirabelle.movementState = MovementState.Walk;
-                movementSp = _mirabelle.stats.walkSp.value;
+                movementSp = _mirabelle.stats.manaport_stat_base_walk_speed.value;
                 sprintDuration = 0f;
             }
 

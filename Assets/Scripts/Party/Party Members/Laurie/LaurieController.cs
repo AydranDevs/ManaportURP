@@ -69,12 +69,12 @@ namespace Manapotion.PartySystem.LaurieCharacter
                 {
                     _laurie.movementState = MovementState.Dash;
                     isDashing = true;
-                    movementSp = _laurie.stats.walkSp.value * _laurie.stats.dashMod.value;
+                    movementSp = _laurie.stats.manaport_stat_base_walk_speed.value * _laurie.stats.manaport_stat_base_dash_modifier.value;
                 }
                 else
                 {
                     _laurie.movementState = MovementState.Sprint;
-                    movementSp = _laurie.stats.walkSp.value * _laurie.stats.sprintMod.value;
+                    movementSp = _laurie.stats.manaport_stat_base_walk_speed.value * _laurie.stats.manaport_stat_base_sprint_modifier.value;
                     isDashing = false;
                 }
                 sprintDuration += Time.deltaTime;
@@ -82,7 +82,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             else
             {
                 _laurie.movementState = MovementState.Walk;
-                movementSp = _laurie.stats.walkSp.value;
+                movementSp = _laurie.stats.manaport_stat_base_walk_speed.value;
                 sprintDuration = 0f;
             }
 

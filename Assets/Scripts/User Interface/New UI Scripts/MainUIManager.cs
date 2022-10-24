@@ -228,7 +228,7 @@ namespace Manapotion.UI
 
         public Stat GetStat(StatID stat)
         {
-            return member.stats.FindStat(stat);
+            return member.FindStat(stat);
         }
     }
 }

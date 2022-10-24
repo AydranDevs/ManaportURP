@@ -44,13 +44,6 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
         public InputProvider inputProvider;
         public InputActionAsset controls;
-
-        public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
-        public float manaRegenCooldown;
-        public bool manaRegenCoolingDown = false;
-        
-        public const float MANA_REGEN_TIMER_DEFAULT = 1f;
-        private float manaRegenTimer;
         
         private void Awake()
         {
@@ -67,28 +60,27 @@ namespace Manapotion.PartySystem.LaurieCharacter
             laurieController = new LaurieController(this);
             laurieRenderer = new LaurieRenderer(this);
 
-            MaxMP();
-            manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
+            // MaxMP();
 
             // formation = new PartyFormation(5);
             // formation.formationPositions.Add(Party.Instance.previousLeader.GetComponent<PartyMember>(), new Vector2Int(-1, 1));
             // formation.formationPositions.Add(Party.Instance.oldestLeader.GetComponent<PartyMember>(), new Vector2Int(1, 1));
         }
 
-        public void MaxMP()
-        {
-            stats.manaPoints.Max();
-        }
+        // public void MaxMP()
+        // {
+        //     stats.manaPoints.Max();
+        // }
         
-        public void RegenMP()
-        {
-            manaRegenTimer = manaRegenTimer - Time.deltaTime;
-            if (manaRegenTimer <= 0f)
-            {
-                stats.manaPoints.value += stats.manaPointsRegenAmount.value;
-                manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
-            }
-        }
+        // public void RegenMP()
+        // {
+        //     manaRegenTimer = manaRegenTimer - Time.deltaTime;
+        //     if (manaRegenTimer <= 0f)
+        //     {
+        //         stats.manaPoints.value += stats.manaPointsRegenAmount.value;
+        //         manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
+        //     }
+        // }
         
         private void CoolDownManaRegen()
         {
@@ -101,43 +93,31 @@ namespace Manapotion.PartySystem.LaurieCharacter
         
         private void Update()
         {
-            if (stats.hitPoints.Empty())
-            {
-                Die();
-                return;
-            }
+            // if (stats.hitPoints.Empty())
+            // {
+            //     Die();
+            //     return;
+            // }
 
             laurieCasting.Update(); 
             laurieAbilities.Update(); 
             laurieRenderer.Update();
             laurieController.Update();
             
-            if (manaRegenCoolingDown)
-            {
-                CoolDownManaRegen();
-            }
+            // if (manaRegenCoolingDown)
+            // {
+            //     CoolDownManaRegen();
+            // }
 
-            if (!manaRegenCoolingDown && stats.manaPoints.value < stats.manaPoints.maxValue)
-            {
-                RegenMP();
-            }
+            // if (!manaRegenCoolingDown && stats.manaPoints.value < stats.manaPoints.maxValue)
+            // {
+            //     RegenMP();
+            // }
         }
 
         public override void SetPartyMaxDistance()
         {
             party.maxDistance = 4f;
-        }
-        
-        public void UseMana(float amount)
-        {
-            stats.manaPoints.value -= amount;
-            manaRegenCoolingDown = true;
-            manaRegenCooldown = MANA_REGEN_COOLDOWN_DEFUALT;
-        }
-        
-        public float ManaPointsAfterUse(float amount)
-        {
-            return stats.manaPoints.value - amount;
         }
 
         public static string GetPrimarySpellInfo()

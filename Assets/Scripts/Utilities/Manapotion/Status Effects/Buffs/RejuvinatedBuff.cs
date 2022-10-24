@@ -25,7 +25,7 @@ namespace Manapotion.StatusEffects
         {
             _afflictedMember = afflictedMember;
             statsAffected = new List<Stat>();
-            statsAffected.Add(afflictedMember.stats.hitPoints);
+            statsAffected.Add(afflictedMember.stats.manaport_stat_hitpoints);
 
             _afflictedMember.SummonParticles(_afflictedMember.statusEffectParticles.rejuvenatedBuffParticles);
             time = timeMax;

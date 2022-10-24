@@ -46,11 +46,6 @@ namespace Manapotion.PartySystem.MirabelleCharacter
     
         private void Update()
         {
-            if (stats.hitPoints.Empty())
-            {
-                Die();
-                return;
-            }
             mirabelleController.Update();
             mirabelleRenderer.Update();
             mirabelleHealing.Update();

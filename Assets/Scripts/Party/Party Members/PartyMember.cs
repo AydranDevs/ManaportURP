@@ -124,6 +124,44 @@ namespace Manapotion.PartySystem
             public Stat manaport_stat_ability_cooldown;
         }
         public StatsStruct stats { get; protected set; }
+        public Stat FindStat(StatID id)
+        {
+            switch (id)
+            {
+                default:
+                case StatID.manaport_stat_hitpoints:                return stats.manaport_stat_hitpoints;
+                case StatID.manaport_stat_max_hitpoints:            return stats.manaport_stat_max_hitpoints;
+                case StatID.manaport_stat_hitpoints_regen_rate:     return stats.manaport_stat_hitpoints_regen_rate;
+                case StatID.manaport_stat_hitpoints_regen_amount:   return stats.manaport_stat_hitpoints_regen_amount;
+                case StatID.manaport_stat_manapoints:               return stats.manaport_stat_manapoints;
+                case StatID.manaport_stat_max_manapoints:           return stats.manaport_stat_max_manapoints;
+                case StatID.manaport_stat_manapoints_regen_rate:    return stats.manaport_stat_manapoints_regen_rate;
+                case StatID.manaport_stat_manapoints_regen_amount:  return stats.manaport_stat_manapoints_regen_amount;
+                case StatID.manaport_stat_experience_points:        return stats.manaport_stat_experience_points;
+                case StatID.manaport_stat_max_experience_points:    return stats.manaport_stat_max_experience_points;
+                case StatID.manaport_stat_experience_level:         return stats.manaport_stat_experience_level;
+                case StatID.manaport_stat_base_magical_damage:      return stats.manaport_stat_base_magical_damage;
+                case StatID.manaport_stat_base_magical_speed:       return stats.manaport_stat_base_magical_speed;
+                case StatID.manaport_stat_base_healing_rate:        return stats.manaport_stat_base_healing_rate;
+                case StatID.manaport_stat_base_healing_amount:      return stats.manaport_stat_base_healing_amount;
+                case StatID.manaport_stat_base_physical_damage:     return stats.manaport_stat_base_physical_damage;
+                case StatID.manaport_stat_base_physical_speed:      return stats.manaport_stat_base_physical_speed;
+                case StatID.manaport_stat_base_defence:             return stats.manaport_stat_base_defence;
+                case StatID.manaport_stat_base_pyro_resistance:     return stats.manaport_stat_base_pyro_resistance;
+                case StatID.manaport_stat_base_cryo_resistance:     return stats.manaport_stat_base_cryo_resistance;
+                case StatID.manaport_stat_base_toxi_resistance:     return stats.manaport_stat_base_toxi_resistance;
+                case StatID.manaport_stat_base_volt_resistance:     return stats.manaport_stat_base_volt_resistance;
+                case StatID.manaport_stat_base_arcane_resistance:   return stats.manaport_stat_base_arcane_resistance;
+                case StatID.manaport_stat_base_stress_resistance:   return stats.manaport_stat_base_stress_resistance;
+                case StatID.manaport_stat_base_stability:           return stats.manaport_stat_base_stability;
+                case StatID.manaport_stat_base_push_speed:          return stats.manaport_stat_base_push_speed;
+                case StatID.manaport_stat_base_walk_speed:          return stats.manaport_stat_base_walk_speed;
+                case StatID.manaport_stat_base_sprint_modifier:     return stats.manaport_stat_base_sprint_modifier;
+                case StatID.manaport_stat_base_dash_modifier:       return stats.manaport_stat_base_dash_modifier;
+                case StatID.manaport_stat_ability_distance:         return stats.manaport_stat_ability_distance;
+                case StatID.manaport_stat_ability_cooldown:         return stats.manaport_stat_ability_cooldown;
+            }
+        }
 
         public void Init()
         {

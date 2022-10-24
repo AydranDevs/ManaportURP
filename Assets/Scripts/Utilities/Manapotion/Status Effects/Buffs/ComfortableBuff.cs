@@ -18,8 +18,8 @@ namespace Manapotion.StatusEffects {
 
         public override void OnStart(PartyMember afflictedMember) {
             statsAffected = new List<Stat>();
-            statsAffected.Add(afflictedMember.stats.attackDamage);
-            statsAffected.Add(afflictedMember.stats.attackSpeed);
+            // statsAffected.Add(afflictedMember.stats.manaport_);
+            // statsAffected.Add(afflictedMember.stats.attackSpeed);
             
             _attackDamage = statsAffected[0];
             _attackSpeed = statsAffected[1];

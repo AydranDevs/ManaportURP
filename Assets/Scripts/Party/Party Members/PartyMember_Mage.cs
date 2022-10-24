@@ -11,9 +11,21 @@ namespace Manapotion.PartySystem
             public float maxMana;
         }
 
+        public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
+        public float manaRegenCooldown;
+        public bool manaRegenCoolingDown = false;
+        
+        public const float MANA_REGEN_TIMER_DEFAULT = 1f;
+        private float manaRegenTimer;
+
+        void Start()
+        {
+            manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
+        }
+
         void Update()
         {
-            UpdateManaBar(stats.manaPoints.value, stats.manaPoints.maxValue);
+            UpdateManaBar(stats.manaport_stat_manapoints.value, stats.manaport_stat_max_manapoints.value);
         }
 
         private void UpdateManaBar(float mana, float maxMana)
@@ -23,6 +35,18 @@ namespace Manapotion.PartySystem
                 mana = mana,
                 maxMana = maxMana
             });
+        }
+
+        public void UseMana(float amount)
+        {
+            stats.manaport_stat_manapoints.value -= amount;
+            manaRegenCoolingDown = true;
+            manaRegenCooldown = MANA_REGEN_COOLDOWN_DEFUALT;
+        }
+        
+        public float ManaPointsAfterUse(float amount)
+        {
+            return stats.manaport_stat_manapoints.value - amount;
         }
     }
 }
