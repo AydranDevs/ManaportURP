@@ -225,11 +225,6 @@ namespace Manapotion.UI
             memberId = id;
             member = Party.Instance.members[id].GetComponent<PartyMember>();
         }
-
-        public Stat GetStat(StatID stat)
-        {
-            return member.FindStat(stat);
-        }
     }
 }
 

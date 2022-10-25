@@ -51,68 +51,20 @@ namespace Manapotion.PartySystem.LaurieCharacter
             party = GetComponentInParent<Party>();
         }
 
-        private void Start()
+        protected override void Initialize()
         {
-            base.Init();
-
             laurieCasting = new LaurieCasting(this);
             laurieAbilities = new LaurieAbilities(this);
             laurieController = new LaurieController(this);
             laurieRenderer = new LaurieRenderer(this);
-
-            // MaxMP();
-
-            // formation = new PartyFormation(5);
-            // formation.formationPositions.Add(Party.Instance.previousLeader.GetComponent<PartyMember>(), new Vector2Int(-1, 1));
-            // formation.formationPositions.Add(Party.Instance.oldestLeader.GetComponent<PartyMember>(), new Vector2Int(1, 1));
-        }
-
-        // public void MaxMP()
-        // {
-        //     stats.manaPoints.Max();
-        // }
-        
-        // public void RegenMP()
-        // {
-        //     manaRegenTimer = manaRegenTimer - Time.deltaTime;
-        //     if (manaRegenTimer <= 0f)
-        //     {
-        //         stats.manaPoints.value += stats.manaPointsRegenAmount.value;
-        //         manaRegenTimer = MANA_REGEN_TIMER_DEFAULT;
-        //     }
-        // }
-        
-        private void CoolDownManaRegen()
-        {
-            manaRegenCooldown = manaRegenCooldown - Time.deltaTime;
-            if (manaRegenCooldown <= 0f)
-            {
-                manaRegenCoolingDown = false;
-            }
         }
         
         private void Update()
         {
-            // if (stats.hitPoints.Empty())
-            // {
-            //     Die();
-            //     return;
-            // }
-
             laurieCasting.Update(); 
             laurieAbilities.Update(); 
             laurieRenderer.Update();
             laurieController.Update();
-            
-            // if (manaRegenCoolingDown)
-            // {
-            //     CoolDownManaRegen();
-            // }
-
-            // if (!manaRegenCoolingDown && stats.manaPoints.value < stats.manaPoints.maxValue)
-            // {
-            //     RegenMP();
-            // }
         }
 
         public override void SetPartyMaxDistance()

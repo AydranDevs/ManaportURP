@@ -35,10 +35,8 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             party = GetComponentInParent<Party>();
         }
 
-        private void Start()
-        {
-            base.Init();
-            
+        protected override void Initialize()
+        {   
             mirabelleController = new MirabelleController(this);
             mirabelleRenderer = new MirabelleRenderer(this);
             mirabelleHealing = new MirabelleHealing(this);

@@ -23,10 +23,8 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             party = GetComponentInParent<Party>();   
         }
 
-        private void Start()
-        {
-            base.Init();
-            
+        protected override void Initialize()
+        {   
             winsleyController = new WinsleyController(this);
             winsleyRenderer = new WinsleyRenderer(this);
         }
