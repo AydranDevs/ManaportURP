@@ -34,10 +34,5 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             winsleyController.Update();
             winsleyRenderer.Update();
         }
-
-        public override void SetPartyMaxDistance()
-        {
-            party.maxDistance = 5f;
-        }
     }
 }

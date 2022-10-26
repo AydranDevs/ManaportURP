@@ -98,6 +98,8 @@ namespace Manapotion.PartySystem
 
         public void Start()
         {
+            ManaBehaviour.OnUpdate += Update;
+
             statusEffects = new List<Buff>();
             _statusEffectParticles = new List<GameObject>();
 
@@ -261,18 +263,16 @@ namespace Manapotion.PartySystem
                 return;
             }
 
+            Debug.Log("updating health basr lool letsscogo " + gameObject.name);
             UpdateHealthBar(stats.manaport_stat_hitpoints.value, stats.manaport_stat_max_hitpoints.value);
         }
 
         #region Party
-        public virtual void SetPartyMaxDistance() { }
-
         private void PartyLeaderCheck()
         {
             if (partyMemberState == PartyMemberState.CurrentLeader) 
             {
                 gameObject.tag = "PlayerPartyLeader";
-                SetPartyMaxDistance();
             }
             else
             {

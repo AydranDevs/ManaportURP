@@ -5,7 +5,7 @@ namespace Manapotion
 {    
     public class ManaBehaviour : MonoBehaviour
     {
-        private static ManaBehaviour instance = null;
+        public static ManaBehaviour instance = null;
         
         public static Action OnStart;
         public static Action OnUpdate;

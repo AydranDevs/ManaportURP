@@ -5,7 +5,7 @@ using Manapotion.PartySystem;
 
 namespace Manapotion.UI
 {
-    public struct AbilityIcon
+    public struct AbilityIconData
     {
         public GameObject abilityGameObject;
 
@@ -14,7 +14,7 @@ namespace Manapotion.UI
         public Image abilityLock;
     }
 
-    public struct StatusBar
+    public struct StatusBarData
     {
         public GameObject statusBarGameObject;
 
@@ -25,8 +25,8 @@ namespace Manapotion.UI
     {
         private MainUIManager _main;
 
-        public AbilityIcon[] abilityIcons { get; private set; }
-        public StatusBar[] statusBars { get; private set; }
+        public AbilityIconData[] abilityIcons { get; private set; }
+        public StatusBarData[] statusBars { get; private set; }
 
         public bool isHidden { get; private set; }
         
@@ -35,10 +35,10 @@ namespace Manapotion.UI
             _main = main;
 
             // NOTE: maybe there can be more than 2 abilities per char?
-            abilityIcons = new AbilityIcon[2];
+            abilityIcons = new AbilityIconData[2];
             InitAbilityIcons();
 
-            statusBars = new StatusBar[2];
+            statusBars = new StatusBarData[2];
             InitStatusBars();
 
             PartyMember.OnAbilityChanged += OnAbilityChanged_SetIconImage;

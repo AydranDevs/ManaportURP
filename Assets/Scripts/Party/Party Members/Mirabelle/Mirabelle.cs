@@ -48,10 +48,5 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             mirabelleRenderer.Update();
             mirabelleHealing.Update();
         }
-
-        public override void SetPartyMaxDistance()
-        {
-            party.maxDistance = 3f;
-        }
     }
 }

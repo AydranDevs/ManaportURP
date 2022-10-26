@@ -67,11 +67,6 @@ namespace Manapotion.PartySystem.LaurieCharacter
             laurieController.Update();
         }
 
-        public override void SetPartyMaxDistance()
-        {
-            party.maxDistance = 4f;
-        }
-
         public static string GetPrimarySpellInfo()
         {
             string spell = Instance.primarySpellElement.ToString() + " " + Instance.primarySpellType.ToString();

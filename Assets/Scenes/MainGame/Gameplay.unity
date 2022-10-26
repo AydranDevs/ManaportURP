@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1691,6 +1691,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: VanityImage
       objectReference: {fileID: 0}
+    - target: {fileID: 980810845406834760, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: fps
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 981022159510947451, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -2047,20 +2051,124 @@ PrefabInstance:
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 7777adf2fb3f09449b27cffbf9309b0a, type: 2}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.value
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_dash_modifier.value
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.value
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_dash_modifier.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: f3e3690b0e46c29468291d9c07840e36, type: 2}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.value
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_dash_modifier.value
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.value
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_dash_modifier.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: f3fcbbf518c0ad44cb30c0fb2955bb63, type: 2}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_hitpoints.value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_manapoints.value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.value
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_max_manapoints.value
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.value
-      value: 2
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_max_manapoints.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_dash_modifier.value
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.value
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_dash_modifier.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_manapoints_regen_rate.value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_manapoints_regen_amount.value
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_manapoints_regen_rate.maxValue
+      value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: <stats>k__BackingField.manaport_stat_manapoints_regen_amount.maxValue
       value: 99999
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456905702048, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -2075,6 +2183,10 @@ PrefabInstance:
       propertyPath: mirabelleEquipmentScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: f3e3690b0e46c29468291d9c07840e36, type: 2}
+    - target: {fileID: 8745159326125926232, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: fps
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8822730152298438277, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_Sprite
       value: 
