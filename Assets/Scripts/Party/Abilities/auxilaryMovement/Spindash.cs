@@ -47,7 +47,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
                     spinDashParActive = true;
                 }
-                float range = laurie.stats.manaport_stat_ability_distance.value;
+                float range = laurie.stats.manaport_stat_ability_distance.GetValue();
                 dashTarget = laurie.transform.position + (Vector3)controller.reconstructedMovement * range;
 
                 time -= Time.deltaTime;
@@ -62,8 +62,8 @@ namespace Manapotion.PartySystem.LaurieCharacter
                     laurie.movementState = MovementState.Idle;
                 
                     laurieAbilities.abilitiesAvailable = false;
-                    laurieAbilities.abilityCooldown = laurie.stats.manaport_stat_ability_cooldown.value;
-                    time = laurie.stats.manaport_stat_ability_distance.value * 0.1f;
+                    laurieAbilities.abilityCooldown = laurie.stats.manaport_stat_ability_cooldown.GetValue();
+                    time = laurie.stats.manaport_stat_ability_distance.GetValue() * 0.1f;
 
                     if (OnSpinDashEnd != null)
                     {

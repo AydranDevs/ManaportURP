@@ -21,7 +21,7 @@ namespace Manapotion.PartySystem
         private float _manaRegenTimer;
 
         private void Awake() {
-            _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.value;
+            _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.GetValue();
         }
         
         protected override void Initialize()
@@ -35,12 +35,12 @@ namespace Manapotion.PartySystem
             {
                 CoolDownManaRegen();
             }
-            if (!manaRegenCoolingDown && stats.manaport_stat_manapoints.value < stats.manaport_stat_manapoints.maxValue)
+            if (!manaRegenCoolingDown && stats.manaport_stat_manapoints.GetValue() < stats.manaport_stat_manapoints.GetValue())
             {
                 RegenMP();
             }
 
-            UpdateManaBar(stats.manaport_stat_manapoints.value, stats.manaport_stat_max_manapoints.value);
+            UpdateManaBar(stats.manaport_stat_manapoints.GetValue(), stats.manaport_stat_max_manapoints.GetValue());
         }
 
         private void UpdateManaBar(float mana, float maxMana)
@@ -62,8 +62,8 @@ namespace Manapotion.PartySystem
             _manaRegenTimer = _manaRegenTimer - Time.deltaTime;
             if (_manaRegenTimer <= 0f)
             {
-                stats.manaport_stat_manapoints.value += stats.manaport_stat_manapoints_regen_amount.value;
-                _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.value;
+                stats.manaport_stat_manapoints.SetValue(stats.manaport_stat_manapoints.GetValue() + stats.manaport_stat_manapoints_regen_amount.GetValue());
+                _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.GetValue();
             }
         }
 
@@ -79,14 +79,14 @@ namespace Manapotion.PartySystem
 
         public void UseMana(float amount)
         {
-            stats.manaport_stat_manapoints.value -= amount;
+            stats.manaport_stat_manapoints.SetValue(stats.manaport_stat_manapoints.GetValue() - amount);
             manaRegenCoolingDown = true;
             manaRegenCooldown = MANA_REGEN_COOLDOWN_DEFUALT;
         }
         
         public float ManaPointsAfterUse(float amount)
         {
-            return stats.manaport_stat_manapoints.value - amount;
+            return stats.manaport_stat_manapoints.GetValue() - amount;
         }
     }
 }

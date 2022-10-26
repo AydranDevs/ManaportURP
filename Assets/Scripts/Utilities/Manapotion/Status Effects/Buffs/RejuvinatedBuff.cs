@@ -38,7 +38,7 @@ namespace Manapotion.StatusEffects
             time = time - deltaTime;
             if (time <= 0f)
             {
-                statsAffected[0].value += healthRegen;
+                statsAffected[0].SetValue(statsAffected[0].GetValue() + healthRegen);
                 time = timeMax;
             }
         }

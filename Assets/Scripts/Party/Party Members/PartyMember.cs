@@ -91,14 +91,14 @@ namespace Manapotion.PartySystem
 
         [field: SerializeField]
         public PartyMemberStats stats { get; protected set; }
-
-        private void Awake() {
-            stats = new PartyMemberStats();
-        }
-
+        
         public void Start()
         {
             ManaBehaviour.OnUpdate += Update;
+
+            stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
+            stats.manaport_stat_manapoints.SetMaxValue(stats.manaport_stat_max_manapoints.GetValue());
+            stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_max_experience_points.GetValue());
 
             statusEffects = new List<Buff>();
             _statusEffectParticles = new List<GameObject>();
@@ -162,7 +162,7 @@ namespace Manapotion.PartySystem
         #region Status
         public void Damage(float damage)
         {
-            stats.manaport_stat_hitpoints.value -= damage;
+            stats.manaport_stat_hitpoints.SetValue(stats.manaport_stat_hitpoints.GetValue() - damage);
         }
 
         public void Die()
@@ -179,11 +179,11 @@ namespace Manapotion.PartySystem
         {
             if (type == "points")
             {
-                stats.manaport_stat_experience_points.value += amount;
+                stats.manaport_stat_experience_points.SetValue(stats.manaport_stat_experience_points.GetValue() + amount);
             }
             else if (type == "levels")
             {
-                stats.manaport_stat_experience_level.value += (int)amount;
+                stats.manaport_stat_experience_level.SetValue(stats.manaport_stat_experience_level.GetValue() + (int)amount);
             }
             else 
             {
@@ -194,12 +194,12 @@ namespace Manapotion.PartySystem
 
         public void LevelUp()
         {
-            stats.manaport_stat_experience_points.value = 0f;
-            stats.manaport_stat_experience_level.value += 1.0f;
-            stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_experience_level.maxValue * 2);
+            stats.manaport_stat_experience_points.SetValue(0f);
+            stats.manaport_stat_experience_level.SetValue(stats.manaport_stat_experience_level.GetValue() + 1f);
+            stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_experience_level.GetMaxValue() * 2);
 
-            stats.manaport_stat_max_hitpoints.value += 2f;
-            stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.value);
+            stats.manaport_stat_max_hitpoints.SetValue(stats.manaport_stat_max_hitpoints.GetValue() + 2f);
+            stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
         }
 
         public void AddStatusEffect(StatusEffect effect, int power, float duration)
@@ -247,8 +247,8 @@ namespace Manapotion.PartySystem
         {
             if (stats.manaport_stat_hitpoints.Empty())
             {
-                Die();
-                return;
+                // Die();
+                // return;
             }
             
             // remove all statuses that arent active
@@ -264,7 +264,7 @@ namespace Manapotion.PartySystem
             }
 
             Debug.Log("updating health basr lool letsscogo " + gameObject.name);
-            UpdateHealthBar(stats.manaport_stat_hitpoints.value, stats.manaport_stat_max_hitpoints.value);
+            UpdateHealthBar(stats.manaport_stat_hitpoints.GetValue(), stats.manaport_stat_max_hitpoints.GetValue());
         }
 
         #region Party

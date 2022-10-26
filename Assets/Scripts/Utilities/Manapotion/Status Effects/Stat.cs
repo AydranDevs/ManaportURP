@@ -45,9 +45,10 @@ namespace Manapotion.Status {
     */
     [System.Serializable]
     public class Stat {
-        // public StatID id;
-        public float maxValue;
-        public float value;
+        [SerializeField]
+        private float maxValue;
+        [SerializeField]
+        private float value;
 
         // public Stat(StatID id) {
         //     this.id = id;
@@ -78,6 +79,11 @@ namespace Manapotion.Status {
         public float GetMaxValue()
         {
             return maxValue;
+        }
+
+        public void SetValue(float num)
+        {
+            value = num;
         }
 
         public void SetMaxValue(float num)

@@ -23,8 +23,8 @@ namespace Manapotion.StatusEffects {
             
             _attackDamage = statsAffected[0];
             _attackSpeed = statsAffected[1];
-            baseAttackDamage = _attackDamage.value;
-            baseAttackSpeed = _attackSpeed.value;
+            baseAttackDamage = _attackDamage.GetValue();
+            baseAttackSpeed = _attackSpeed.GetValue();
         }
 
         public override void OnTick(float deltaTime) {

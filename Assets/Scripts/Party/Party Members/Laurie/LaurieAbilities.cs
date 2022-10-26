@@ -17,7 +17,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             _laurie = laurie;
             // spindash = GetComponent<Spindash>();
 
-            abilityCooldown = _laurie.stats.manaport_stat_ability_cooldown.value; // Sets cooldown time to whatever CooldownLimit is set to
+            abilityCooldown = _laurie.stats.manaport_stat_ability_cooldown.GetValue(); // Sets cooldown time to whatever CooldownLimit is set to
         }
 
         public void Update()
@@ -27,7 +27,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             if (abilityCooldown <= 0f) 
             {
                 abilitiesAvailable = true;
-                abilityCooldown = _laurie.stats.manaport_stat_ability_cooldown.value;  
+                abilityCooldown = _laurie.stats.manaport_stat_ability_cooldown.GetValue();  
             }
             else
             {
