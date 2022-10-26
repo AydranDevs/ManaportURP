@@ -48,51 +48,51 @@ public class SecondarySpellImage : MonoBehaviour
     {
         if (!tooltipShown) return;
 
-        if (!spellLock.enabled)
-        {
-            TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo());
-        }
-        else
-        {
-            TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo() + " (Not enough mana!)");
-        }
+        // if (!spellLock.enabled)
+        // {
+        //     TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo());
+        // }
+        // else
+        // {
+        //     TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo() + " (Not enough mana!)");
+        // }
 
-        if (!cooldown.enabled)
-        {
-            TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo());
-        }
-        else
-        {
-            TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo() + " (cooling down...)");
-        }
+        // if (!cooldown.enabled)
+        // {
+        //     TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo());
+        // }
+        // else
+        // {
+        //     TooltipHandler.UpdateTooltip_Static(Laurie.GetSecondarySpellInfo() + " (cooling down...)");
+        // }
     }
 
     public void ShowTooltip()
     {
-        if (!spellLock.enabled)
-        {
-            TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo());
-        }
-        else
-        {
-            TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo() + " (Not enough mana!)");
-        }
+        // if (!spellLock.enabled)
+        // {
+        //     TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo());
+        // }
+        // else
+        // {
+        //     TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo() + " (Not enough mana!)");
+        // }
 
-        if (!cooldown.enabled)
-        {
-            TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo());
-        }
-        else
-        {
-            TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo() + " (cooling down...)");
-        }
+        // if (!cooldown.enabled)
+        // {
+        //     TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo());
+        // }
+        // else
+        // {
+        //     TooltipHandler.ShowTooltip_Static(Laurie.GetSecondarySpellInfo() + " (cooling down...)");
+        // }
 
-        tooltipShown = true;
+        // tooltipShown = true;
     }
 
     public void HideTooltip()
     {
-        TooltipHandler.HideTooltip_Static();
-        tooltipShown = false;
+        // TooltipHandler.HideTooltip_Static();
+        // tooltipShown = false;
     }
 }
