@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Manapotion.PartySystem.LaurieCharacter
 {   
@@ -41,9 +40,6 @@ namespace Manapotion.PartySystem.LaurieCharacter
         public LaurieCasting laurieCasting { get; private set; }
         public LaurieAbilities laurieAbilities { get; private set; }
         public LaurieRenderer laurieRenderer { get; private set; }
-
-        public InputProvider inputProvider;
-        public InputActionAsset controls;
         
         private void Awake()
         {
@@ -51,7 +47,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             party = GetComponentInParent<Party>();
         }
 
-        protected override void Initialize()
+        protected override void InitMember()
         {
             laurieCasting = new LaurieCasting(this);
             laurieAbilities = new LaurieAbilities(this);

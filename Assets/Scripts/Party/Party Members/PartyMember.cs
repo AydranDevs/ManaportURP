@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using Manapotion;
 using Manapotion.StatusEffects;
 using Manapotion.Status;
@@ -40,7 +41,7 @@ namespace Manapotion.PartySystem
         public GameObject rejuvenatedBuffParticles;
     }
 
-    public class PartyMember : MonoBehaviour
+    public abstract class PartyMember : MonoBehaviour
     {
         #region Events
         public static event EventHandler<OnAbilityChangedEventArgs> OnAbilityChanged;
@@ -71,6 +72,9 @@ namespace Manapotion.PartySystem
         }
         #endregion
 
+        public InputProvider inputProvider;
+        public InputActionAsset controls;
+        
         public PartyFormation formation;
 
         public PartyMemberState partyMemberState;
@@ -92,27 +96,26 @@ namespace Manapotion.PartySystem
         [field: SerializeField]
         public PartyMemberStats stats { get; protected set; }
         
-        public void Start()
+        private void Start()
         {
             ManaBehaviour.OnUpdate += Update;
 
             stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
             stats.manaport_stat_manapoints.SetMaxValue(stats.manaport_stat_max_manapoints.GetValue());
+            stats.manaport_stat_staminapoints.SetMaxValue(stats.manaport_stat_max_staminapoints.GetValue());
+            stats.manaport_stat_remedypoints.SetMaxValue(stats.manaport_stat_max_remedypoints.GetValue());
             stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_max_experience_points.GetValue());
 
             statusEffects = new List<Buff>();
             _statusEffectParticles = new List<GameObject>();
-
+            
             MaxHP();
-
             PartyLeaderCheck();
-            Initialize();
+            
+            Init();
         }
 
-        /// <summary>
-        /// Runs after Start() runs in grandparent class PartyMember 
-        /// </summary>
-        protected virtual void Initialize()
+        protected virtual void Init()
         {
 
         }
@@ -263,7 +266,6 @@ namespace Manapotion.PartySystem
                 return;
             }
 
-            Debug.Log("updating health basr lool letsscogo " + gameObject.name);
             UpdateHealthBar(stats.manaport_stat_hitpoints.GetValue(), stats.manaport_stat_max_hitpoints.GetValue());
         }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.UI;
 
 public class Legumel : Creature {
     public GameObject[] targets;
@@ -9,7 +10,7 @@ public class Legumel : Creature {
     public LegumelAttacking legumelAttacking;
     public LegumelSearch legumelSearch;
 
-    public HealthBarScript healthBar;
+    public StatusBar healthBar;
     public Canvas canvas;
     public SpriteRenderer spriteRenderer;
     public GameObject deathParticles;
@@ -26,7 +27,7 @@ public class Legumel : Creature {
         legumelSearch = GetComponent<LegumelSearch>();
 
         hitPoints = hitPointsMax;
-        healthBar.SetMaxHealth(hitPointsMax);
+        healthBar.SetMaxValue(hitPointsMax);
 
         Creature.creatureList.Add(this);
     }
@@ -59,6 +60,6 @@ public class Legumel : Creature {
     }
 
     private void UpdateHealthBar() {
-        healthBar.SetHealth(hitPoints);
+        healthBar.SetValue(hitPoints);
     }
 }

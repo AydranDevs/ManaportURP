@@ -75,6 +75,8 @@ namespace Manapotion.UI
         public GameObject abilityIconPrefab;
         public GameObject healthBarPrefab;
         public GameObject manaBarPrefab;
+        public GameObject staminaBarPrefab;
+        public GameObject remedyBarPrefab;
 
         [Header("Input")]
         [SerializeField]
@@ -194,6 +196,7 @@ namespace Manapotion.UI
             if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
             {
                 currentLeader = Party.GetCurrentLeader();
+                statusUIManager.SetManaBar();
             }
         }
 
@@ -202,6 +205,7 @@ namespace Manapotion.UI
             if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
             {
                 currentLeader = Party.GetCurrentLeader();
+                statusUIManager.SetRemedyBar();
             }
         }
 
@@ -210,6 +214,7 @@ namespace Manapotion.UI
             if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
             {
                 currentLeader = Party.GetCurrentLeader();
+                statusUIManager.SetStaminaBar();
             }
         }
         #endregion

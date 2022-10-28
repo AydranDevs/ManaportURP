@@ -11,14 +11,14 @@ namespace Manapotion.UI
 
         bool tooltipShown = false; 
 
-        public void SetMaxHealth(float maxHealth)
+        public void SetMaxValue(float value)
         {
-            slider.maxValue = maxHealth;
+            slider.maxValue = value;
         }
 
-        public void SetHealth(float health)
+        public void SetValue(float value)
         {
-            slider.value = health;
+            slider.value = value;
         }
 
         // update tooltip
@@ -29,7 +29,7 @@ namespace Manapotion.UI
                 return;
             }
 
-            ContextMenuHandler.SetTitle(string.Format("Health: {0}/{1}", slider.value, slider.maxValue));
+            ContextMenuHandler.SetTitle(string.Format("{0}/{1}", slider.value, slider.maxValue));
         }
 
         public void ShowTooltip()

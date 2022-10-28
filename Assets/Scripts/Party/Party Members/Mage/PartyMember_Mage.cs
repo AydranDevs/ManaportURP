@@ -19,14 +19,20 @@ namespace Manapotion.PartySystem
 
         // internal regen timer (based on mana regeration rate stat)
         private float _manaRegenTimer;
-
-        private void Awake() {
-            _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.GetValue();
-        }
         
-        protected override void Initialize()
+        protected override void Init()
         {
+            ManaBehaviour.OnUpdate += Update;
+
+            _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.GetValue();
             MaxMP();
+
+            InitMember();
+        }
+
+        protected virtual void InitMember()
+        {
+
         }
 
         void Update()
@@ -35,20 +41,27 @@ namespace Manapotion.PartySystem
             {
                 CoolDownManaRegen();
             }
-            if (!manaRegenCoolingDown && stats.manaport_stat_manapoints.GetValue() < stats.manaport_stat_manapoints.GetValue())
+            if (!manaRegenCoolingDown && stats.manaport_stat_manapoints.GetValue() < stats.manaport_stat_max_manapoints.GetValue())
             {
                 RegenMP();
             }
 
+            if (partyMemberState != PartyMemberState.CurrentLeader)
+            {
+                return;
+            }
+
+            // anything that updates UI should go below this.
+
             UpdateManaBar(stats.manaport_stat_manapoints.GetValue(), stats.manaport_stat_max_manapoints.GetValue());
         }
 
-        private void UpdateManaBar(float mana, float maxMana)
+        private void UpdateManaBar(float value, float maxValue)
         {
             OnUpdateManaBar?.Invoke(this, new OnUpdateManaBarEventArgs
             {
-                mana = mana,
-                maxMana = maxMana
+                mana = value,
+                maxMana = maxValue
             });
         }
 

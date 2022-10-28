@@ -5,14 +5,28 @@ namespace Manapotion.PartySystem
     [System.Serializable]
     public class PartyMemberStats
     {
+        #region HP
         public Stat manaport_stat_hitpoints;
         public Stat manaport_stat_max_hitpoints;
         public Stat manaport_stat_hitpoints_regen_rate;
         public Stat manaport_stat_hitpoints_regen_amount;
+        #endregion
+        #region MP
         public Stat manaport_stat_manapoints;
         public Stat manaport_stat_max_manapoints;
         public Stat manaport_stat_manapoints_regen_rate;
         public Stat manaport_stat_manapoints_regen_amount;
+        #endregion
+        #region SP
+        public Stat manaport_stat_staminapoints;
+        public Stat manaport_stat_max_staminapoints;
+        public Stat manaport_stat_staminapoints_regen_rate;
+        public Stat manaport_stat_staminapoints_regen_amount;
+        #endregion
+        #region RP
+        public Stat manaport_stat_remedypoints;
+        public Stat manaport_stat_max_remedypoints;
+        #endregion
         public Stat manaport_stat_experience_points;
         public Stat manaport_stat_max_experience_points;
         public Stat manaport_stat_experience_level;

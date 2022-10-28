@@ -18,7 +18,7 @@ namespace Manapotion.UI
     {
         public GameObject statusBarGameObject;
 
-        public Slider fill;
+        public StatusBar statusBar;
     }
 
     public class StatusUIManager
@@ -47,6 +47,8 @@ namespace Manapotion.UI
 
             PartyMember.OnUpdateHealthBar += OnUpdateHealthBar_UpdateHealthBar;
             PartyMember_Mage.OnUpdateManaBar += OnUpdateManaBar_UpdateManaBar;
+            PartyMember_Fighter.OnUpdateStaminaBar += OnUpdateStaminaBar_UpdateStaminaBar;
+            PartyMember_Healer.OnUpdateRemedyBar += OnUpdateRemedyBar_UpdateRemedyBar;
         }
 
         #region Init
@@ -69,7 +71,7 @@ namespace Manapotion.UI
 
             for (int i = 0; i < statusBars.Length; i++)
             {
-                statusBars[i].fill = statusBars[i].statusBarGameObject.transform.GetComponent<Slider>();
+                statusBars[i].statusBar = statusBars[i].statusBarGameObject.GetComponent<StatusBar>();
             }
         }
         #endregion
@@ -124,24 +126,49 @@ namespace Manapotion.UI
         #endregion
     
         #region Set Status Bar Values
+        public void SetStaminaBar()
+        {
+            GameObject.Destroy(statusBars[1].statusBarGameObject);
+            statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.staminaBarPrefab, _main.statusBarParent.transform);
+            statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
+        }
+        public void SetManaBar()
+        {
+            GameObject.Destroy(statusBars[1].statusBarGameObject);
+            statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.manaBarPrefab, _main.statusBarParent.transform);
+            statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
+        }
+        public void SetRemedyBar()
+        {
+            GameObject.Destroy(statusBars[1].statusBarGameObject);
+            statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.remedyBarPrefab, _main.statusBarParent.transform);
+            statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
+        }
+
         public void OnUpdateHealthBar_UpdateHealthBar(object sender, PartyMember.OnUpdateHealthBarEventArgs e)
         {
-            UpdateHealthBar(e.health, e.maxHealth);
-        }
-        private void UpdateHealthBar(float health, float maxHealth)
-        {
-            statusBars[0].fill.maxValue = maxHealth;
-            statusBars[0].fill.value = health;
+            SetBarData(0, e.health, e.maxHealth);
         }
 
         public void OnUpdateManaBar_UpdateManaBar(object sender, PartyMember_Mage.OnUpdateManaBarEventArgs e)
         {
-            UpdateManaBar(e.mana, e.maxMana);
+            SetBarData(1, e.mana, e.maxMana);
         }
-        private void UpdateManaBar(float mana, float maxMana)
+
+        public void OnUpdateStaminaBar_UpdateStaminaBar(object sender, PartyMember_Fighter.OnUpdateStaminaBarEventArgs e)
         {
-            statusBars[1].fill.maxValue = maxMana;
-            statusBars[1].fill.value = mana;
+            SetBarData(1, e.stamina, e.maxStamina);
+        }
+
+        public void OnUpdateRemedyBar_UpdateRemedyBar(object sender, PartyMember_Healer.OnUpdateRemedyBarEventArgs e)
+        {
+            SetBarData(1, e.remedy, e.maxRemedy);
+        }
+
+        private void SetBarData(int i, float value, float maxValue)
+        {
+            statusBars[i].statusBar.SetMaxValue(maxValue);
+            statusBars[i].statusBar.SetValue(value);
         }
         #endregion
     

@@ -9,7 +9,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
 
     public enum State { Movement, Umbrella }
 
-    public class Mirabelle : PartyMember
+    public class Mirabelle : PartyMember_Healer
     {   
         public HealingType healingType = HealingType.Shower;
         public PartyBuffs healingEffect = PartyBuffs.Rejuvenated;
@@ -18,25 +18,18 @@ namespace Manapotion.PartySystem.MirabelleCharacter
         public State state = State.Movement;
 
         [HideInInspector]
-        public HealthBarScript healthBar;
-
-        [HideInInspector]
         public Party party;
 
         public MirabelleController mirabelleController { get; private set; }
         public MirabelleRenderer mirabelleRenderer { get; private set; }
         public MirabelleHealing mirabelleHealing { get; private set; }
-
-        public InputProvider inputProvider;
-        public InputActionAsset controls;
-
         private void Awake()
         {
             party = GetComponentInParent<Party>();
         }
 
-        protected override void Initialize()
-        {   
+        protected override void InitMember()
+        {         
             mirabelleController = new MirabelleController(this);
             mirabelleRenderer = new MirabelleRenderer(this);
             mirabelleHealing = new MirabelleHealing(this);
