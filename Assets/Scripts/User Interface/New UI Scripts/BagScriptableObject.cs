@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Manapotion.PartySystem;
+using Manapotion.Items;
 
 [CreateAssetMenu]
 public class BagScriptableObject : ScriptableObject
@@ -14,6 +15,8 @@ public class BagScriptableObject : ScriptableObject
     public UnityEvent bagItemListChangedEvent;
     [NonSerialized]
     public UnityEvent bagItemUsedEvent;
+
+    public ItemScriptableObject testItemScriptableObject;
 
     private void OnEnable()
     {
@@ -30,18 +33,18 @@ public class BagScriptableObject : ScriptableObject
 
     public void AddItem(Item item)
     {
-        Item itemToAdd = new Item { itemID = item.itemID, amount = item.amount };
-        if (itemToAdd.itemID == ItemID.manaport_nothing)
+        Item itemToAdd = new Item { itemScriptableObject = item.itemScriptableObject, amount = item.amount };
+        if (itemToAdd.itemScriptableObject == null)
         {
             return;
         }
 
-        if (itemToAdd.GetMetadata().stackable)
+        if (itemToAdd.itemScriptableObject.stackable)
         {
             bool itemAlreadyInBag = false;
             foreach (Item it in itemList)
             {
-                if (it.itemID == itemToAdd.itemID)
+                if (it.itemScriptableObject == itemToAdd.itemScriptableObject)
                 {
                     it.amount += itemToAdd.amount;
                     itemAlreadyInBag = true;
@@ -54,6 +57,7 @@ public class BagScriptableObject : ScriptableObject
         }
         else
         {
+            Debug.Log("unstackable object(s) added to inventory (" + item.amount + " " + item.ToString() + "s.)");
             itemList.Add(itemToAdd);
         }
         bagItemListChangedEvent.Invoke();
@@ -61,14 +65,14 @@ public class BagScriptableObject : ScriptableObject
 
     public void RemoveItem(Item item)
     {
-        if (item.itemID == ItemID.manaport_nothing)
+        if (item.itemScriptableObject == null)
         {
             return;
         }
 
         foreach (Item it in itemList)
         {
-            if (it.itemID == item.itemID)
+            if (it.itemScriptableObject == item.itemScriptableObject)
             {
                 it.amount -= 1;
                 if (it.amount == 0)
@@ -84,12 +88,12 @@ public class BagScriptableObject : ScriptableObject
 
     public void UseItem(Item item, int i)
     {
-        if (item.itemID == ItemID.manaport_nothing)
+        if (item.itemScriptableObject == null)
         {
             return;
         }
 
-        item.GetMetadata().UseEvent(i);
+        // item.itemScriptableObject.UseEvent(i);
         RemoveItem(item);
         bagItemUsedEvent.Invoke();
     }
@@ -97,18 +101,5 @@ public class BagScriptableObject : ScriptableObject
     public List<Item> GetItemList()
     {
         return itemList;
-    }
-
-    public void AddAllItems()
-    {
-        foreach (ItemID id in Enum.GetValues(typeof(ItemID)))
-        {
-            if (id == ItemID.manaport_nothing)
-            {
-                continue;
-            }
-
-            AddItem( new Item { itemID = id, amount = 1 });
-        }
     }
 }

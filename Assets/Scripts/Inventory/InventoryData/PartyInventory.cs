@@ -20,10 +20,5 @@ namespace Manapotion.PartySystem.Inventory
             _party = party;
             bag = new Bag(_party);
         }
-
-        public void EquipItemToMember(Item item, int charId)
-        {
-            // Party.GetMember(charId).Equip(item.GetMetadata().category, item.GetMetadata().equipableData);
-        }
     }
 }

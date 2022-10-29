@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.Items;
 
 public class World_ItemSpawner : MonoBehaviour
 {

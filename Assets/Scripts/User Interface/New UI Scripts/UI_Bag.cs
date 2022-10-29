@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Manapotion.UI;
 using Manapotion.PartySystem;
+using Manapotion.Items;
 
 namespace Manapotion.UI
 {
@@ -94,27 +95,27 @@ namespace Manapotion.UI
             foreach (var item in _bagScriptableObject.GetItemList())
             {
                 GameObject go;
-                if (item.GetMetadata().category == ItemCategories.Consumable)
+                if (item.itemScriptableObject.itemCategory == Items.ItemCategory.Consumable)
                 {
                     go = Instantiate(consumableItemSlotPrefab, bagItemSlotContainer);
                 }
-                else if (item.GetMetadata().category == ItemCategories.Ingredient)
+                else if (item.itemScriptableObject.itemCategory == Items.ItemCategory.Ingredient)
                 {
                     go = Instantiate(ingredientItemSlotPrefab, bagItemSlotContainer);
                 }
-                else if (item.GetMetadata().category == ItemCategories.Material)
+                else if (item.itemScriptableObject.itemCategory == Items.ItemCategory.Material)
                 {
                     go = Instantiate(materialItemSlotPrefab, bagItemSlotContainer);
                 }
-                else if (item.GetMetadata().category == ItemCategories.Armour)
+                else if (item.itemScriptableObject.itemCategory == Items.ItemCategory.Armour)
                 {
                     go = Instantiate(armourItemSlotPrefab, equipableItemSlotContainer);
                 }
-                else if (item.GetMetadata().category == ItemCategories.Weapon)
+                else if (item.itemScriptableObject.itemCategory == Items.ItemCategory.Weapon)
                 {
                     go = Instantiate(weaponItemSlotPrefab, equipableItemSlotContainer);
                 }
-                else if (item.GetMetadata().category == ItemCategories.Vanity)
+                else if (item.itemScriptableObject.itemCategory == Items.ItemCategory.Vanity)
                 {
                     go = Instantiate(vanityItemSlotPrefab, equipableItemSlotContainer);
                 }
@@ -129,21 +130,21 @@ namespace Manapotion.UI
                 {
                     ContextMenuHandler.Show(ContextMenuType.ContextMenu);
 
-                    ContextMenuHandler.SetTitle(item.GetMetadata().name);
-                    ContextMenuHandler.SetSubtitle(item.GetMetadata().category);
-                    ContextMenuHandler.SetBody(item.GetMetadata().lore);
+                    ContextMenuHandler.SetTitle(item.ToString());
+                    ContextMenuHandler.SetSubtitle(item.itemScriptableObject.itemCategory.ToString());
+                    ContextMenuHandler.SetBody(item.itemScriptableObject.itemDescription);
 
-                    if (item.GetMetadata().equipable)
+                    if (item.itemScriptableObject.equipable)
                     {
                         #region Check if item has equipment restrictions
                         bool foundCharIDThatCanEquip = false;
-                        foreach (var i in item.GetMetadata().equipableData.charIDsThatCanEquip)
+                        foreach (var i in item.itemScriptableObject.charIDsThatCanEquip)
                         {
                             if (i == 0)
                             {
                                 foundCharIDThatCanEquip = true;
                                 ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(0).gameObject.name), () => {
-                                    _laurieEquipmentScriptableObject.EquipItem(item);
+                                    // _laurieEquipmentScriptableObject.EquipItem(item);
                                     ContextMenuHandler.Hide();
                                 });
                                 break;
@@ -152,7 +153,7 @@ namespace Manapotion.UI
                             {
                                 foundCharIDThatCanEquip = true;
                                 ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(1).gameObject.name), () => {
-                                    _mirabelleEquipmentScriptableObject.EquipItem(item);
+                                    // _mirabelleEquipmentScriptableObject.EquipItem(item);
                                     ContextMenuHandler.Hide();
                                 });
                                 break;
@@ -161,7 +162,7 @@ namespace Manapotion.UI
                             {
                                 foundCharIDThatCanEquip = true;
                                 ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(2).gameObject.name), () => {
-                                    _winsleyEquipmentScriptableObject.EquipItem(item);
+                                    // _winsleyEquipmentScriptableObject.EquipItem(item);
                                     ContextMenuHandler.Hide();
                                 });
                                 break;
@@ -173,15 +174,15 @@ namespace Manapotion.UI
                             ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetCurrentLeader().gameObject.name), () => {
                                 if (Party.GetPartyMemberIndex(Party.GetCurrentLeader()) == 2)
                                 {
-                                    _winsleyEquipmentScriptableObject.EquipItem(item);
+                                    // _winsleyEquipmentScriptableObject.EquipItem(item);
                                 }
                                 else if (Party.GetPartyMemberIndex(Party.GetCurrentLeader()) == 1)
                                 {
-                                    _mirabelleEquipmentScriptableObject.EquipItem(item);
+                                    // _mirabelleEquipmentScriptableObject.EquipItem(item);
                                 }
                                 else
                                 {
-                                    _laurieEquipmentScriptableObject.EquipItem(item);
+                                    // _laurieEquipmentScriptableObject.EquipItem(item);
                                 }
                                 ContextMenuHandler.Hide();
                             });
@@ -197,7 +198,7 @@ namespace Manapotion.UI
                     }
                 });
 
-                handle.item.sprite = item.GetMetadata().sprite;
+                handle.item.sprite = item.itemScriptableObject.itemSprite;
                 if (item.amount > 1)
                 {
                     handle.number.SetText(item.amount.ToString());

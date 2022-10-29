@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.Items;
 
 public class World_Item : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class World_Item : MonoBehaviour
     public void SetItem(Item item)
     {
         _item = item;
-        spriteRenderer.sprite = _item.GetMetadata().sprite;
+        spriteRenderer.sprite = _item.GetSprite();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

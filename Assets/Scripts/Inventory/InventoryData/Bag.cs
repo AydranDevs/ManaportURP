@@ -1,3 +1,5 @@
+using Manapotion.Items;
+
 namespace Manapotion.PartySystem.Inventory
 {    
     public class Bag

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Manapotion.Equipables;
 using Manapotion.PartySystem;
+using Manapotion.Items;
 
 [CreateAssetMenu]
 public class EquipmentScriptableObject : ScriptableObject
@@ -11,14 +12,14 @@ public class EquipmentScriptableObject : ScriptableObject
     [NonSerialized]
     public UnityEvent<EquipmentScriptableObject> bagItemEquippedEvent;
     [NonSerialized]
-    public UnityEvent<EquipableData, int> equipableUnequippedEvent;
+    public UnityEvent<Item, int> equipableUnequippedEvent;
 
     [field: SerializeField]
     public int charID { get; private set; }
 
-    public EquipableData weapon;
-    public EquipableData armour;
-    public EquipableData vanity;
+    public Item weapon;
+    public Item armour;
+    public Item vanity;
 
     public BagScriptableObject partyBagSciptableObject;
 
@@ -30,7 +31,7 @@ public class EquipmentScriptableObject : ScriptableObject
         }
         if (equipableUnequippedEvent == null)
         {
-            equipableUnequippedEvent = new UnityEvent<EquipableData, int>();
+            equipableUnequippedEvent = new UnityEvent<Item, int>();
         }
     }
 
@@ -40,43 +41,44 @@ public class EquipmentScriptableObject : ScriptableObject
     /// <param name="item">item to equip</param>
     public void EquipItem(Item item)
     {
-        if (item.itemID == ItemID.manaport_nothing || item.GetMetadata().equipableData == null)
+        if (item.itemScriptableObject == null || item.itemScriptableObject.equipable == false)
         {
             return;
         }
 
-        var iC = item.GetMetadata().category;
+        var iC = item.itemScriptableObject.itemCategory;
 
-        foreach (var i in item.GetMetadata().equipableData.charIDsThatCanEquip)
+        foreach (var i in item.itemScriptableObject.charIDsThatCanEquip)
         {
             if (i == charID)
             {
                 // if item in slot is equipped, swap the two.
-                if (weapon.equipableID != ItemID.manaport_nothing && iC == ItemCategories.Weapon)
+                if (weapon.itemScriptableObject != null && iC == ItemCategory.Weapon)
                 {
-                    UnequipEquipable(weapon);
+                    UnequipItem(weapon);
                 }
-                else if (armour.equipableID != ItemID.manaport_nothing && iC == ItemCategories.Armour)
+                else if (armour.itemScriptableObject != null && iC == ItemCategory.Armour)
                 {
-                    UnequipEquipable(armour);
+                    UnequipItem(armour);
                 }
-                else if (vanity.equipableID != ItemID.manaport_nothing && iC == ItemCategories.Vanity)
+                else if (vanity.itemScriptableObject != null && iC == ItemCategory.Vanity)
                 {
-                    UnequipEquipable(vanity);
+                    UnequipItem(vanity);
                 }
                 
-                if (iC == ItemCategories.Weapon)
+                if (iC == ItemCategory.Weapon)
                 {
-                    weapon = item.GetMetadata().equipableData;
+                    // weapon = item.itemScriptableObject;
                 }
-                else if (iC == ItemCategories.Armour)
+                else if (iC == ItemCategory.Armour)
                 {
-                    armour = item.GetMetadata().equipableData;
+                    // armour = item.itemScriptableObject;
                 }
                 else
                 {
-                    vanity = item.GetMetadata().equipableData;
+                    // vanity = item.item.itemScriptableObject;
                 }
+                Debug.Log("equipped: " + item.ToString());
                 
                 break;
             }
@@ -88,33 +90,33 @@ public class EquipmentScriptableObject : ScriptableObject
 
 
     /// <summary>
-    /// Unequip an equipable
+    /// Unequip an item
     /// </summary>
-    /// <param name="equipableData"></param>
-    public void UnequipEquipable(EquipableData equipableData)
+    /// <param name="item"></param>
+    public void UnequipItem(Item item)
     {
-        if (equipableData.equipableID == ItemID.manaport_nothing)
+        if (item.itemScriptableObject == null)
         {
             return;
         }
 
-        Debug.Log("Unequipping " + equipableData.equipableID + " from charID: " + charID);
+        Debug.Log("Unequipping " + item.ToString() + " from charID: " + charID);
 
-        var iC = equipableData.GetItemIDMetaData().category;
-        if (iC == ItemCategories.Weapon)
+        var iC = item.itemScriptableObject.itemCategory;
+        if (iC == ItemCategory.Weapon)
         {
-            weapon = new EquipableData { equipableID = ItemID.manaport_nothing };
+            weapon = new Item { itemScriptableObject = item.itemScriptableObject };
         }
-        else if (iC == ItemCategories.Armour)
+        else if (iC == ItemCategory.Armour)
         {
-            armour = new EquipableData { equipableID = ItemID.manaport_nothing };
+            armour = new Item { itemScriptableObject = item.itemScriptableObject };
         }
         else
         {
-            vanity = new EquipableData { equipableID = ItemID.manaport_nothing };
+            vanity = new Item { itemScriptableObject = item.itemScriptableObject };
         }
 
-        equipableUnequippedEvent.Invoke(equipableData, charID);
-        partyBagSciptableObject.AddItem(new Item { itemID = equipableData.equipableID, amount = 1});
+        equipableUnequippedEvent.Invoke(item, charID);
+        partyBagSciptableObject.AddItem(new Item { itemScriptableObject = item.itemScriptableObject, amount = 1});
     }
 }

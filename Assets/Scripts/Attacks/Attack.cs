@@ -24,8 +24,7 @@ namespace Manapotion.Attacking
         public Attack(PartyMember partyMember)
         {
             _member = partyMember;
-            weapon = _member.equipmentScriptableObject.weapon;
-            Debug.Log(weapon.equipableID);
+            // weapon = _member.equipmentScriptableObject.weapon;
         }
 
         public void DoAttack()
