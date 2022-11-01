@@ -682,10 +682,10 @@ RectTransform:
   m_Father: {fileID: 6841546762504272778}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 18}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &6990725499731100050
 CanvasRenderer:
@@ -709,7 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -859,140 +859,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &2502609097571549564
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4001988913226889492}
-  - component: {fileID: 5116940866794458914}
-  - component: {fileID: 3221198305537293027}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &4001988913226889492
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2502609097571549564}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2505975752467352502}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.5, y: 0}
-  m_SizeDelta: {x: -3, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5116940866794458914
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2502609097571549564}
-  m_CullTransparentMesh: 1
---- !u!114 &3221198305537293027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2502609097571549564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: New Text
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8c161f1061c437e4296b7a5f51302ab2, type: 2}
-  m_sharedMaterial: {fileID: -3325912807761118656, guid: 8c161f1061c437e4296b7a5f51302ab2, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 6
-  m_fontSizeBase: 6
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2890624241972733960
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,6 +1075,8 @@ GameObject:
   - component: {fileID: 385511864974375271}
   - component: {fileID: 3863516736956404379}
   - component: {fileID: 2027315554639351740}
+  - component: {fileID: 2923632846666836987}
+  - component: {fileID: 8190437742806715802}
   m_Layer: 5
   m_Name: ContextMenu
   m_TagString: Untagged
@@ -1231,7 +1099,6 @@ RectTransform:
   - {fileID: 8998243676043659719}
   - {fileID: 840835291317199853}
   - {fileID: 6524065666409991411}
-  - {fileID: 2505975752467352502}
   m_Father: {fileID: 5936142891282291573}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1253,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsContainer: {fileID: 6524065666409991411}
-  optionTemplate: {fileID: 2505975752467352502}
+  optionTemplate: {fileID: 0}
   <optionsList>k__BackingField: []
   canvasTransform: {fileID: 5936142891282291573}
   _title: {fileID: 1573312326764273644}
@@ -1285,7 +1152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1300,7 +1167,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
+  m_PixelsPerUnitMultiplier: 0.8
 --- !u!114 &2027315554639351740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1315,6 +1182,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 2
+--- !u!114 &2923632846666836987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2966005463619299616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3097221827548145463}
+          m_TargetAssemblyTypeName: Manapotion.UI.ContextMenuHandler, Assembly-CSharp
+          m_MethodName: ChangeMouseInBoundsState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3097221827548145463}
+          m_TargetAssemblyTypeName: Manapotion.UI.ContextMenuHandler, Assembly-CSharp
+          m_MethodName: ChangeMouseInBoundsState
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &8190437742806715802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2966005463619299616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 3
+    m_Right: 3
+    m_Top: 3
+    m_Bottom: 3
+  m_ChildAlignment: 0
+  m_Spacing: 0.5
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &3394251670935519298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6524065666409991411}
+  - component: {fileID: 2982611855223530364}
   m_Layer: 5
   m_Name: OptionsContainer
   m_TagString: Untagged
@@ -1776,11 +1715,37 @@ RectTransform:
   m_Father: {fileID: 6841546762504272778}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 58, y: 12}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2982611855223530364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3656246548323621786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &3759769100812895153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,6 +3166,8 @@ MonoBehaviour:
   abilityIconPrefab: {fileID: 1571027153730341013, guid: 8d205678d259bd54e91c61970581723f, type: 3}
   healthBarPrefab: {fileID: 5269152939941276983, guid: f057eebd84c280b4c9939c588fd15afc, type: 3}
   manaBarPrefab: {fileID: 6528918400022114051, guid: 3656f8f0ff2d13c4b887af42c58d30ee, type: 3}
+  staminaBarPrefab: {fileID: 0}
+  remedyBarPrefab: {fileID: 0}
   _controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
   dimmer: {fileID: 4003902397310307813}
   bagUIObject: {fileID: 4003902397916632281}
@@ -3291,104 +3258,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &6308440383454722312
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2505975752467352502}
-  - component: {fileID: 5034670795305461429}
-  - component: {fileID: 8822730152298438277}
-  - component: {fileID: 3699562661944996827}
-  m_Layer: 5
-  m_Name: OptionTemplate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &2505975752467352502
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308440383454722312}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4001988913226889492}
-  m_Father: {fileID: 6841546762504272778}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 58, y: 12}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5034670795305461429
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308440383454722312}
-  m_CullTransparentMesh: 1
---- !u!114 &8822730152298438277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308440383454722312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c5500e34ee6f3894fbe579d90a93f537, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 2
---- !u!114 &3699562661944996827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6308440383454722312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 602f74cbbbd80034b96f88091a8e7c1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverBehaviourType: 3
-  hoverBehaviour_Color_Enter: {r: 0, g: 0, b: 0, a: 0}
-  hoverBehaviour_Color_Exit: {r: 0, g: 0, b: 0, a: 0}
-  hoverBehaviour_Image: {fileID: 8822730152298438277}
-  hoverBehaviour_Sprite_Exit: {fileID: 21300000, guid: c5500e34ee6f3894fbe579d90a93f537, type: 3}
-  hoverBehaviour_Sprite_Enter: {fileID: 21300000, guid: ee8d951247513484bba5ad1af2a1e5c0, type: 3}
-  hoverBehaviour_Move: 0
-  hoverBehaviour_Move_Amount: {x: 0, y: 0}
-  triggerMouseOutFuncOnClick: 0
 --- !u!1 &6553859037936208678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3720,10 +3589,10 @@ RectTransform:
   m_Father: {fileID: 6841546762504272778}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 18}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &3115195683943162905
 CanvasRenderer:
@@ -3747,7 +3616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4053,7 +3922,7 @@ GameObject:
   - component: {fileID: 7524851597461062040}
   - component: {fileID: 7524851597461062043}
   - component: {fileID: 1619520187}
-  - component: {fileID: 4359342858520289036}
+  - component: {fileID: 4557328504534224219}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -4102,7 +3971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3849691a6d8aa5d48b6b6bdfa0de01a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4359342858520289036
+--- !u!114 &4557328504534224219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4115,48 +3984,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfWorldItem: {fileID: 2941297421733109811, guid: 98d206b3029cefd449d370b2c7ca073a, type: 3}
-  manaport_consumable_restore_mana_potion_I: {fileID: 5298750316631022228, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_restore_mana_potion_II: {fileID: 4595906159454040636, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_restore_mana_potion_III: {fileID: 1135405753809042382, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_restore_health_potion_I: {fileID: -3795659468133479769, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_restore_health_potion_II: {fileID: 1765830118759133150, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_restore_health_potion_III: {fileID: 1784255428413383761, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_regen_mana_potion_I: {fileID: 7432234526956688553, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_regen_mana_potion_II: {fileID: 2131945292702552379, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_regen_mana_potion_III: {fileID: -8099056382765276484, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_regen_health_potion_I: {fileID: 6878926080379421449, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_regen_health_potion_II: {fileID: 1477812522656612620, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_regen_health_potion_III: {fileID: -860261559389539929, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_pyro_potion_I: {fileID: 5314807560924293543, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_pyro_potion_II: {fileID: -333680048466858584, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_pyro_potion_III: {fileID: 769557138486306256, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_cryo_potion_I: {fileID: 4332093801455743536, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_cryo_potion_II: {fileID: 8288747000277331393, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_cryo_potion_III: {fileID: -1920152298423478790, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_toxi_potion_I: {fileID: 234050629558846932, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_toxi_potion_II: {fileID: -1517066504927752681, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_toxi_potion_III: {fileID: -4602613467441342073, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_volt_potion_I: {fileID: -6324864393911828603, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_volt_potion_II: {fileID: -4232181490359771850, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_boost_volt_potion_III: {fileID: -7446489979668266445, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_invincibility_potion_I: {fileID: 2020623198386257799, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_invincibility_potion_II: {fileID: -6688276169069031271, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_invincibility_potion_III: {fileID: -5188544162018308876, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_absorption_potion_I: {fileID: -7298556294864163552, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_absorption_potion_II: {fileID: 4640799173369310354, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_absorption_potion_III: {fileID: 7418584078625445489, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_rage_potion_I: {fileID: -3073640775193264740, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_rage_potion_II: {fileID: 373132221763214131, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_consumable_rage_potion_III: {fileID: -5980536742875508567, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_weapon_training_tome: {fileID: -2762939190412709202, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_weapon_azure_parasol: {fileID: 3800551299826472200, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_weapon_garden_shear: {fileID: -5468086047929262327, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_armour_violet_robes: {fileID: -3752972813148428779, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_armour_timid_raincoat: {fileID: -1737505443841594477, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_armour_sunbeaten_overalls: {fileID: 4352561648089386878, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_vanity_gold_ring_hat: {fileID: 8096957359625422690, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_vanity_cutesy_blue_rainboots: {fileID: 772778925202903010, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
-  manaport_vanity_scarlet_rings: {fileID: 6255745539233519750, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+  manaport_consumable_restore_mana_potion_I: {fileID: 0}
+  manaport_consumable_restore_mana_potion_II: {fileID: 0}
+  manaport_consumable_restore_mana_potion_III: {fileID: 0}
+  manaport_consumable_restore_health_potion_I: {fileID: 0}
+  manaport_consumable_restore_health_potion_II: {fileID: 0}
+  manaport_consumable_restore_health_potion_III: {fileID: 0}
+  manaport_consumable_regen_mana_potion_I: {fileID: 0}
+  manaport_consumable_regen_mana_potion_II: {fileID: 0}
+  manaport_consumable_regen_mana_potion_III: {fileID: 0}
+  manaport_consumable_regen_health_potion_I: {fileID: 0}
+  manaport_consumable_regen_health_potion_II: {fileID: 0}
+  manaport_consumable_regen_health_potion_III: {fileID: 0}
+  manaport_consumable_boost_pyro_potion_I: {fileID: 0}
+  manaport_consumable_boost_pyro_potion_II: {fileID: 0}
+  manaport_consumable_boost_pyro_potion_III: {fileID: 0}
+  manaport_consumable_boost_cryo_potion_I: {fileID: 0}
+  manaport_consumable_boost_cryo_potion_II: {fileID: 0}
+  manaport_consumable_boost_cryo_potion_III: {fileID: 0}
+  manaport_consumable_boost_toxi_potion_I: {fileID: 0}
+  manaport_consumable_boost_toxi_potion_II: {fileID: 0}
+  manaport_consumable_boost_toxi_potion_III: {fileID: 0}
+  manaport_consumable_boost_volt_potion_I: {fileID: 0}
+  manaport_consumable_boost_volt_potion_II: {fileID: 0}
+  manaport_consumable_boost_volt_potion_III: {fileID: 0}
+  manaport_consumable_invincibility_potion_I: {fileID: 0}
+  manaport_consumable_invincibility_potion_II: {fileID: 0}
+  manaport_consumable_invincibility_potion_III: {fileID: 0}
+  manaport_consumable_absorption_potion_I: {fileID: 0}
+  manaport_consumable_absorption_potion_II: {fileID: 0}
+  manaport_consumable_absorption_potion_III: {fileID: 0}
+  manaport_consumable_rage_potion_I: {fileID: 0}
+  manaport_consumable_rage_potion_II: {fileID: 0}
+  manaport_consumable_rage_potion_III: {fileID: 0}
+  manaport_weapon_training_tome: {fileID: 0}
+  manaport_weapon_azure_parasol: {fileID: 0}
+  manaport_weapon_garden_shear: {fileID: 0}
+  manaport_armour_violet_robes: {fileID: 0}
+  manaport_armour_timid_raincoat: {fileID: 0}
+  manaport_armour_sunbeaten_overalls: {fileID: 0}
+  manaport_vanity_gold_ring_hat: {fileID: 0}
+  manaport_vanity_cutesy_blue_rainboots: {fileID: 0}
+  manaport_vanity_scarlet_rings: {fileID: 0}
   manaport_spellstone_pyromancing_stone: {fileID: 0}
   manaport_spellstone_cryomancing_stone: {fileID: 0}
   manaport_spellstone_toximancing_stone: {fileID: 0}
@@ -4193,10 +4062,10 @@ RectTransform:
   m_Father: {fileID: 6841546762504272778}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 18}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &1971487654521754177
 CanvasRenderer:
@@ -4220,7 +4089,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4510,6 +4379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d54c25111a046a4fbdf18ca534d6f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputProvider: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
+  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
   partyMemberState: 2
   statusEffectParticles:
     rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
@@ -4520,177 +4391,120 @@ MonoBehaviour:
   facingState: 2
   dashThreshold: 8
   <equipmentScriptableObject>k__BackingField: {fileID: 0}
-  weapon:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  armour:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  vanity:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  stats:
-    statArray:
-    - id: 2
-      maxValue: 100
+  <stats>k__BackingField:
+    manaport_stat_hitpoints:
+      maxValue: 0
       value: 0
-    - id: 0
-      maxValue: 20
-      value: 20
-    - id: 3
-      maxValue: 999
-      value: 2
-    - id: 4
-      maxValue: 999
-      value: 1
-    - id: 15
-      maxValue: 1
+    manaport_stat_max_hitpoints:
+      maxValue: 0
       value: 0
-    - id: 1
-      maxValue: 5
-      value: 5
-    - id: 16
-      maxValue: 999
-      value: 0.5
-    - id: 14
-      maxValue: 999
-      value: 1.5
-    - id: 13
-      maxValue: 999
-      value: 1.5
-    - id: 12
-      maxValue: 999
-      value: 1.35
-    - id: 11
-      maxValue: 999
-      value: 2
-    - id: 20
-      maxValue: 999
-      value: 2
-    - id: 17
-      maxValue: 5
+    manaport_stat_hitpoints_regen_rate:
+      maxValue: 0
       value: 0
-    - id: 18
-      maxValue: 3
+    manaport_stat_hitpoints_regen_amount:
+      maxValue: 0
       value: 0
-    - id: 19
-      maxValue: 4
+    manaport_stat_manapoints:
+      maxValue: 0
       value: 0
-    - id: 10
-      maxValue: 1
+    manaport_stat_max_manapoints:
+      maxValue: 0
       value: 0
-    - id: 5
-      maxValue: 1
+    manaport_stat_manapoints_regen_rate:
+      maxValue: 0
       value: 0
-    - id: 6
-      maxValue: 1
+    manaport_stat_manapoints_regen_amount:
+      maxValue: 0
       value: 0
-    - id: 7
-      maxValue: 1
+    manaport_stat_staminapoints:
+      maxValue: 0
       value: 0
-    - id: 8
-      maxValue: 1
+    manaport_stat_max_staminapoints:
+      maxValue: 0
       value: 0
-    - id: 9
-      maxValue: 1
+    manaport_stat_staminapoints_regen_rate:
+      maxValue: 0
       value: 0
-    xpLevel: 0
-    experiencePoints:
-      id: 2
-      maxValue: 100
+    manaport_stat_staminapoints_regen_amount:
+      maxValue: 0
       value: 0
-    hitPoints:
-      id: 0
-      maxValue: 20
-      value: 20
-    hitPointsRegenRate:
-      id: 1
-      maxValue: 999
+    manaport_stat_remedypoints:
+      maxValue: 0
       value: 0
-    hitPointsRegenAmount:
-      id: 2
-      maxValue: 999
-      value: 0.2
-    attackDamage:
-      id: 3
-      maxValue: 999
-      value: 2
-    attackSpeed:
-      id: 4
-      maxValue: 999
-      value: 1
-    stabilityPoints:
-      id: 15
-      maxValue: 1
+    manaport_stat_max_remedypoints:
+      maxValue: 0
       value: 0
-    manaPoints:
-      id: 1
-      maxValue: 5
-      value: 5
-    manaPointsRegenRate:
-      id: 4
-      maxValue: 999
-      value: 2
-    manaPointsRegenAmount:
-      id: 5
-      maxValue: 999
-      value: 0.5
-    pushSp:
-      id: 14
-      maxValue: 999
-      value: 1.5
-    dashMod:
-      id: 13
-      maxValue: 999
-      value: 1.5
-    sprintMod:
-      id: 12
-      maxValue: 999
-      value: 1.35
-    walkSp:
-      id: 11
-      maxValue: 999
-      value: 2
-    abilityCooldownLimit:
-      id: 20
-      maxValue: 999
-      value: 2
-    abilityDistances:
-    - id: 17
-      maxValue: 5
+    manaport_stat_experience_points:
+      maxValue: 0
       value: 0
-    - id: 18
-      maxValue: 3
+    manaport_stat_max_experience_points:
+      maxValue: 0
       value: 0
-    - id: 19
-      maxValue: 4
+    manaport_stat_experience_level:
+      maxValue: 0
       value: 0
-    resistances:
-    - id: 10
-      maxValue: 1
+    manaport_stat_base_magical_damage:
+      maxValue: 0
       value: 0
-    - id: 5
-      maxValue: 1
+    manaport_stat_base_magical_speed:
+      maxValue: 0
       value: 0
-    - id: 6
-      maxValue: 1
+    manaport_stat_base_healing_rate:
+      maxValue: 0
       value: 0
-    - id: 7
-      maxValue: 1
+    manaport_stat_base_healing_amount:
+      maxValue: 0
       value: 0
-    - id: 8
-      maxValue: 1
+    manaport_stat_base_physical_damage:
+      maxValue: 0
       value: 0
-    - id: 9
-      maxValue: 1
+    manaport_stat_base_physical_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_defence:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_pyro_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_cryo_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_toxi_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_volt_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_arcane_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_stress_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_stability:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_push_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_walk_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_sprint_modifier:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_dash_modifier:
+      maxValue: 0
+      value: 0
+    manaport_stat_ability_distance:
+      maxValue: 0
+      value: 0
+    manaport_stat_ability_cooldown:
+      maxValue: 0
       value: 0
   state: 0
   party: {fileID: 0}
-  inputProvider: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
-  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
 --- !u!50 &8575495455274865849
 Rigidbody2D:
   serializedVersion: 4
@@ -4910,6 +4724,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d11151db344ed4192844f1033137c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputProvider: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
+  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
   partyMemberState: 1
   statusEffectParticles:
     rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
@@ -4920,181 +4736,123 @@ MonoBehaviour:
   facingState: 2
   dashThreshold: 8
   <equipmentScriptableObject>k__BackingField: {fileID: 0}
-  weapon:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  armour:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  vanity:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  stats:
-    statArray:
-    - id: 2
-      maxValue: 100
+  <stats>k__BackingField:
+    manaport_stat_hitpoints:
+      maxValue: 0
       value: 0
-    - id: 0
-      maxValue: 20
-      value: 20
-    - id: 3
-      maxValue: 999
-      value: 2
-    - id: 4
-      maxValue: 999
-      value: 1
-    - id: 15
-      maxValue: 1
+    manaport_stat_max_hitpoints:
+      maxValue: 0
       value: 0
-    - id: 1
-      maxValue: 5
-      value: 5
-    - id: 16
-      maxValue: 999
-      value: 0.5
-    - id: 14
-      maxValue: 999
-      value: 1.5
-    - id: 13
-      maxValue: 999
-      value: 1.5
-    - id: 12
-      maxValue: 999
-      value: 1.35
-    - id: 11
-      maxValue: 999
-      value: 2
-    - id: 20
-      maxValue: 999
-      value: 2
-    - id: 17
-      maxValue: 5
+    manaport_stat_hitpoints_regen_rate:
+      maxValue: 0
       value: 0
-    - id: 18
-      maxValue: 3
+    manaport_stat_hitpoints_regen_amount:
+      maxValue: 0
       value: 0
-    - id: 19
-      maxValue: 4
+    manaport_stat_manapoints:
+      maxValue: 0
       value: 0
-    - id: 10
-      maxValue: 1
+    manaport_stat_max_manapoints:
+      maxValue: 0
       value: 0
-    - id: 5
-      maxValue: 1
+    manaport_stat_manapoints_regen_rate:
+      maxValue: 0
       value: 0
-    - id: 6
-      maxValue: 1
+    manaport_stat_manapoints_regen_amount:
+      maxValue: 0
       value: 0
-    - id: 7
-      maxValue: 1
+    manaport_stat_staminapoints:
+      maxValue: 0
       value: 0
-    - id: 8
-      maxValue: 1
+    manaport_stat_max_staminapoints:
+      maxValue: 0
       value: 0
-    - id: 9
-      maxValue: 1
+    manaport_stat_staminapoints_regen_rate:
+      maxValue: 0
       value: 0
-    xpLevel: 0
-    experiencePoints:
-      id: 2
-      maxValue: 100
+    manaport_stat_staminapoints_regen_amount:
+      maxValue: 0
       value: 0
-    hitPoints:
-      id: 0
-      maxValue: 20
-      value: 20
-    hitPointsRegenRate:
-      id: 1
-      maxValue: 999
+    manaport_stat_remedypoints:
+      maxValue: 0
       value: 0
-    hitPointsRegenAmount:
-      id: 2
-      maxValue: 999
-      value: 0.2
-    attackDamage:
-      id: 3
-      maxValue: 999
-      value: 2
-    attackSpeed:
-      id: 4
-      maxValue: 999
-      value: 1
-    stabilityPoints:
-      id: 15
-      maxValue: 1
+    manaport_stat_max_remedypoints:
+      maxValue: 0
       value: 0
-    manaPoints:
-      id: 1
-      maxValue: 5
-      value: 5
-    manaPointsRegenRate:
-      id: 4
-      maxValue: 999
-      value: 2
-    manaPointsRegenAmount:
-      id: 5
-      maxValue: 999
-      value: 0.5
-    pushSp:
-      id: 14
-      maxValue: 999
-      value: 1.5
-    dashMod:
-      id: 13
-      maxValue: 999
-      value: 1.5
-    sprintMod:
-      id: 12
-      maxValue: 999
-      value: 1.35
-    walkSp:
-      id: 11
-      maxValue: 999
-      value: 2
-    abilityCooldownLimit:
-      id: 20
-      maxValue: 999
-      value: 2
-    abilityDistances:
-    - id: 17
-      maxValue: 5
+    manaport_stat_experience_points:
+      maxValue: 0
       value: 0
-    - id: 18
-      maxValue: 3
+    manaport_stat_max_experience_points:
+      maxValue: 0
       value: 0
-    - id: 19
-      maxValue: 4
+    manaport_stat_experience_level:
+      maxValue: 0
       value: 0
-    resistances:
-    - id: 10
-      maxValue: 1
+    manaport_stat_base_magical_damage:
+      maxValue: 0
       value: 0
-    - id: 5
-      maxValue: 1
+    manaport_stat_base_magical_speed:
+      maxValue: 0
       value: 0
-    - id: 6
-      maxValue: 1
+    manaport_stat_base_healing_rate:
+      maxValue: 0
       value: 0
-    - id: 7
-      maxValue: 1
+    manaport_stat_base_healing_amount:
+      maxValue: 0
       value: 0
-    - id: 8
-      maxValue: 1
+    manaport_stat_base_physical_damage:
+      maxValue: 0
       value: 0
-    - id: 9
-      maxValue: 1
+    manaport_stat_base_physical_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_defence:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_pyro_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_cryo_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_toxi_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_volt_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_arcane_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_stress_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_stability:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_push_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_walk_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_sprint_modifier:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_dash_modifier:
+      maxValue: 0
+      value: 0
+    manaport_stat_ability_distance:
+      maxValue: 0
+      value: 0
+    manaport_stat_ability_cooldown:
+      maxValue: 0
       value: 0
   healingType: 0
   healingEffect: 0
   umbrellaState: 3
   state: 0
-  healthBar: {fileID: 0}
   party: {fileID: 0}
-  inputProvider: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
-  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
 --- !u!50 &8575495455764455007
 Rigidbody2D:
   serializedVersion: 4
@@ -5314,6 +5072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fcc9590a5ab7c44aa00f182fcd03e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputProvider: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
+  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
   partyMemberState: 0
   statusEffectParticles:
     rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
@@ -5324,173 +5084,120 @@ MonoBehaviour:
   facingState: 2
   dashThreshold: 8
   <equipmentScriptableObject>k__BackingField: {fileID: 0}
-  weapon:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  armour:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  vanity:
-    equipableID: 0
-    charIDsThatCanEquip: 
-    spellstones: []
-  stats:
-    statArray:
-    - id: 2
-      maxValue: 100
+  <stats>k__BackingField:
+    manaport_stat_hitpoints:
+      maxValue: 0
       value: 0
-    - id: 0
-      maxValue: 20
-      value: 20
-    - id: 3
-      maxValue: 999
-      value: 2
-    - id: 4
-      maxValue: 999
-      value: 1
-    - id: 15
-      maxValue: 1
+    manaport_stat_max_hitpoints:
+      maxValue: 0
       value: 0
-    - id: 1
-      maxValue: 5
-      value: 5
-    - id: 16
-      maxValue: 999
-      value: 0.5
-    - id: 14
-      maxValue: 999
-      value: 1.5
-    - id: 13
-      maxValue: 999
-      value: 1.5
-    - id: 12
-      maxValue: 999
-      value: 1.35
-    - id: 11
-      maxValue: 999
-      value: 2
-    - id: 20
-      maxValue: 999
-      value: 2
-    - id: 17
-      maxValue: 5
+    manaport_stat_hitpoints_regen_rate:
+      maxValue: 0
       value: 0
-    - id: 18
-      maxValue: 3
+    manaport_stat_hitpoints_regen_amount:
+      maxValue: 0
       value: 0
-    - id: 19
-      maxValue: 4
+    manaport_stat_manapoints:
+      maxValue: 0
       value: 0
-    - id: 10
-      maxValue: 1
+    manaport_stat_max_manapoints:
+      maxValue: 0
       value: 0
-    - id: 5
-      maxValue: 1
+    manaport_stat_manapoints_regen_rate:
+      maxValue: 0
       value: 0
-    - id: 6
-      maxValue: 1
+    manaport_stat_manapoints_regen_amount:
+      maxValue: 0
       value: 0
-    - id: 7
-      maxValue: 1
+    manaport_stat_staminapoints:
+      maxValue: 0
       value: 0
-    - id: 8
-      maxValue: 1
+    manaport_stat_max_staminapoints:
+      maxValue: 0
       value: 0
-    - id: 9
-      maxValue: 1
+    manaport_stat_staminapoints_regen_rate:
+      maxValue: 0
       value: 0
-    xpLevel: 0
-    experiencePoints:
-      id: 2
-      maxValue: 100
+    manaport_stat_staminapoints_regen_amount:
+      maxValue: 0
       value: 0
-    hitPoints:
-      id: 0
-      maxValue: 20
-      value: 20
-    hitPointsRegenRate:
-      id: 1
-      maxValue: 999
+    manaport_stat_remedypoints:
+      maxValue: 0
       value: 0
-    hitPointsRegenAmount:
-      id: 2
-      maxValue: 999
-      value: 0.2
-    attackDamage:
-      id: 3
-      maxValue: 999
-      value: 2
-    attackSpeed:
-      id: 4
-      maxValue: 999
-      value: 1
-    stabilityPoints:
-      id: 15
-      maxValue: 1
+    manaport_stat_max_remedypoints:
+      maxValue: 0
       value: 0
-    manaPoints:
-      id: 1
-      maxValue: 5
-      value: 5
-    manaPointsRegenRate:
-      id: 4
-      maxValue: 999
-      value: 2
-    manaPointsRegenAmount:
-      id: 5
-      maxValue: 999
-      value: 0.5
-    pushSp:
-      id: 14
-      maxValue: 999
-      value: 1.5
-    dashMod:
-      id: 13
-      maxValue: 999
-      value: 1.5
-    sprintMod:
-      id: 12
-      maxValue: 999
-      value: 1.35
-    walkSp:
-      id: 11
-      maxValue: 999
-      value: 2
-    abilityCooldownLimit:
-      id: 20
-      maxValue: 999
-      value: 2
-    abilityDistances:
-    - id: 17
-      maxValue: 5
+    manaport_stat_experience_points:
+      maxValue: 0
       value: 0
-    - id: 18
-      maxValue: 3
+    manaport_stat_max_experience_points:
+      maxValue: 0
       value: 0
-    - id: 19
-      maxValue: 4
+    manaport_stat_experience_level:
+      maxValue: 0
       value: 0
-    resistances:
-    - id: 10
-      maxValue: 1
+    manaport_stat_base_magical_damage:
+      maxValue: 0
       value: 0
-    - id: 5
-      maxValue: 1
+    manaport_stat_base_magical_speed:
+      maxValue: 0
       value: 0
-    - id: 6
-      maxValue: 1
+    manaport_stat_base_healing_rate:
+      maxValue: 0
       value: 0
-    - id: 7
-      maxValue: 1
+    manaport_stat_base_healing_amount:
+      maxValue: 0
       value: 0
-    - id: 8
-      maxValue: 1
+    manaport_stat_base_physical_damage:
+      maxValue: 0
       value: 0
-    - id: 9
-      maxValue: 1
+    manaport_stat_base_physical_speed:
+      maxValue: 0
       value: 0
+    manaport_stat_base_defence:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_pyro_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_cryo_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_toxi_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_volt_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_arcane_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_stress_resistance:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_stability:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_push_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_walk_speed:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_sprint_modifier:
+      maxValue: 0
+      value: 0
+    manaport_stat_base_dash_modifier:
+      maxValue: 0
+      value: 0
+    manaport_stat_ability_distance:
+      maxValue: 0
+      value: 0
+    manaport_stat_ability_cooldown:
+      maxValue: 0
+      value: 0
+  manaRegenCooldown: 0
+  manaRegenCoolingDown: 0
   abilityState: 0
   auxilaryMovementType: 0
   primarySpellType: 2
@@ -5499,10 +5206,6 @@ MonoBehaviour:
   secondarySpellElement: 0
   state: 0
   party: {fileID: 0}
-  inputProvider: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
-  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
-  manaRegenCooldown: 0
-  manaRegenCoolingDown: 0
 --- !u!50 &8575495456034430212
 Rigidbody2D:
   serializedVersion: 4

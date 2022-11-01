@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <charID>k__BackingField: 2
   weapon:
-    equipableID: 36
-    charIDsThatCanEquip: 
+    itemScriptableObject: {fileID: 0}
+    amount: 0
   armour:
-    equipableID: 39
-    charIDsThatCanEquip: 
+    itemScriptableObject: {fileID: 0}
+    amount: 0
   vanity:
-    equipableID: 42
-    charIDsThatCanEquip: 
+    itemScriptableObject: {fileID: 0}
+    amount: 0
   partyBagSciptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}

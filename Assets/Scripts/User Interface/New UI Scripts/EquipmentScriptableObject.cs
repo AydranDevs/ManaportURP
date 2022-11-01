@@ -68,15 +68,15 @@ public class EquipmentScriptableObject : ScriptableObject
                 
                 if (iC == ItemCategory.Weapon)
                 {
-                    // weapon = item.itemScriptableObject;
+                    weapon = item;
                 }
                 else if (iC == ItemCategory.Armour)
                 {
-                    // armour = item.itemScriptableObject;
+                    armour = item;
                 }
                 else
                 {
-                    // vanity = item.item.itemScriptableObject;
+                    vanity = item;
                 }
                 Debug.Log("equipped: " + item.ToString());
                 
@@ -105,15 +105,15 @@ public class EquipmentScriptableObject : ScriptableObject
         var iC = item.itemScriptableObject.itemCategory;
         if (iC == ItemCategory.Weapon)
         {
-            weapon = new Item { itemScriptableObject = item.itemScriptableObject };
+            weapon = new Item { itemScriptableObject = null, amount = 0 };
         }
         else if (iC == ItemCategory.Armour)
         {
-            armour = new Item { itemScriptableObject = item.itemScriptableObject };
+            armour = new Item { itemScriptableObject = null, amount = 0 };
         }
         else
         {
-            vanity = new Item { itemScriptableObject = item.itemScriptableObject };
+            vanity = new Item { itemScriptableObject = null, amount = 0 };
         }
 
         equipableUnequippedEvent.Invoke(item, charID);

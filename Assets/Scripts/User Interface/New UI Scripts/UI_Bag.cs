@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -136,58 +137,113 @@ namespace Manapotion.UI
 
                     if (item.itemScriptableObject.equipable)
                     {
-                        #region Check if item has equipment restrictions
-                        bool foundCharIDThatCanEquip = false;
-                        foreach (var i in item.itemScriptableObject.charIDsThatCanEquip)
+                        // check if item has equipment restrictions
+                        if (item.itemScriptableObject.charIDsThatCanEquip.Length > 0)
                         {
-                            if (i == 0)
+                            Debug.Log("this has restrictions!");
+                            
+                            // check how many characters can equip this item
+                            if (item.itemScriptableObject.charIDsThatCanEquip.Length > 1)
                             {
-                                foundCharIDThatCanEquip = true;
-                                ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(0).gameObject.name), () => {
-                                    // _laurieEquipmentScriptableObject.EquipItem(item);
-                                    ContextMenuHandler.Hide();
-                                });
-                                break;
+                                Debug.Log("more than 1 character can equip this!");
+                                // check if current party leader can equip this item
+                                var index = Array.FindIndex(item.itemScriptableObject.charIDsThatCanEquip, x => x == Party.GetPartyMemberIndex(Party.GetCurrentLeader()));
+                                if (index >= 0)
+                                {
+                                    ContextMenuHandler.AddOption(
+                                        string.Format(
+                                            "Equip <size=75%><alpha=#44>(on {0}?)",
+                                            Party.GetCurrentLeader().gameObject.name),
+                                        () => {
+                                            Party.GetCurrentLeader().equipmentScriptableObject.EquipItem(
+                                                new Item
+                                                { 
+                                                    itemScriptableObject = item.itemScriptableObject,
+                                                    amount = 1
+                                                }
+                                            );
+                                        }
+                                    );
+                                }
+                                else // if not, add option that displays which characters can equip this item.
+                                {
+                                    int num = item.itemScriptableObject.charIDsThatCanEquip.Length;
+                                    StringBuilder stringBuilder = new StringBuilder("<alpha=#44>Only ");
+                                    for (int i = 0; i < num; i++)
+                                    {
+                                        stringBuilder.Append(Party.GetMember(i).gameObject.name);
+                                        if (i == num - 1)
+                                        {
+                                            stringBuilder.Append(" can equip this.");
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            stringBuilder.Append(" and ");
+                                        }
+                                    }
+                                    ContextMenuHandler.AddOption(stringBuilder.ToString(), () => { });
+                                    ContextMenuHandler.GetOption(stringBuilder.ToString()).SetClickable(false);
+                                }
                             }
-                            else if (i == 1)
+                            else
                             {
-                                foundCharIDThatCanEquip = true;
-                                ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(1).gameObject.name), () => {
-                                    // _mirabelleEquipmentScriptableObject.EquipItem(item);
-                                    ContextMenuHandler.Hide();
-                                });
-                                break;
-                            }
-                            else if (i == 2)
-                            {
-                                foundCharIDThatCanEquip = true;
-                                ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetMember(2).gameObject.name), () => {
-                                    // _winsleyEquipmentScriptableObject.EquipItem(item);
-                                    ContextMenuHandler.Hide();
-                                });
-                                break;
+                                // check if current party leader can equip this item
+                                // index >= 0 if true
+                                var index = Array.FindIndex(item.itemScriptableObject.charIDsThatCanEquip, x => x == Party.GetPartyMemberIndex(Party.GetCurrentLeader()));
+                                if (index >= 0)
+                                {
+                                    ContextMenuHandler.AddOption(
+                                        string.Format(
+                                            "Equip <size=75%><alpha=#44>(on {0}?)",
+                                            Party.GetCurrentLeader().gameObject.name),
+                                        () => {
+                                            Party.GetCurrentLeader().equipmentScriptableObject.EquipItem(
+                                                new Item
+                                                { 
+                                                    itemScriptableObject = item.itemScriptableObject,
+                                                    amount = 1
+                                                }
+                                            );
+                                        }
+                                    );
+                                }
+                                else // if false, show greyed out option
+                                {
+                                    ContextMenuHandler.AddOption(
+                                        string.Format(
+                                            "<alpha=#44>Only {0} can equip this.",
+                                            Party.GetMember(item.itemScriptableObject.charIDsThatCanEquip[0]).gameObject.name
+                                        ),
+                                        () => { }
+                                    );
+                                    
+                                    // make the option unclickable
+                                    ContextMenuHandler.GetOption(
+                                        string.Format(
+                                            "<alpha=#44>Only {0} can equip this.",
+                                            Party.GetMember(item.itemScriptableObject.charIDsThatCanEquip[0]).gameObject.name
+                                        )
+                                    ).SetClickable(false);
+                                }
                             }
                         }
-                        
-                        if (!foundCharIDThatCanEquip)
+                        else
                         {
-                            ContextMenuHandler.AddOption(string.Format("Equip <size=75%><alpha=#44>(on {0}?)", Party.GetCurrentLeader().gameObject.name), () => {
-                                if (Party.GetPartyMemberIndex(Party.GetCurrentLeader()) == 2)
-                                {
-                                    // _winsleyEquipmentScriptableObject.EquipItem(item);
-                                }
-                                else if (Party.GetPartyMemberIndex(Party.GetCurrentLeader()) == 1)
-                                {
-                                    // _mirabelleEquipmentScriptableObject.EquipItem(item);
-                                }
-                                else
-                                {
-                                    // _laurieEquipmentScriptableObject.EquipItem(item);
-                                }
-                                ContextMenuHandler.Hide();
+                            ContextMenuHandler.AddOption(
+                                string.Format(
+                                    "Equip <size=75%><alpha=#44>(on {0}?)",
+                                    Party.GetCurrentLeader().gameObject.name),
+                                () => {
+                                    Party.GetCurrentLeader().equipmentScriptableObject.EquipItem(
+                                        new Item
+                                        { 
+                                            itemScriptableObject = item.itemScriptableObject,
+                                            amount = 1
+                                        }
+                                    );
                             });
                         }
-                        #endregion
                     }
                     else
                     {

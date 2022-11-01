@@ -172,11 +172,11 @@ namespace Manapotion.UI
             aimg.sprite = _armourSlotSprite;
             wimg.sprite = _weaponSlotSprite;
             
-            if (equipmentScriptable.vanity.itemScriptableObject.itemSprite != null)
+            if (equipmentScriptable.vanity.itemScriptableObject != null)
                 vimg.sprite = equipmentScriptable.vanity.itemScriptableObject.itemSprite;
-            if (equipmentScriptable.armour.itemScriptableObject.itemSprite != null)
+            if (equipmentScriptable.armour.itemScriptableObject != null)
                 aimg.sprite = equipmentScriptable.armour.itemScriptableObject.itemSprite;
-            if (equipmentScriptable.weapon.itemScriptableObject.itemSprite != null)
+            if (equipmentScriptable.weapon.itemScriptableObject != null)
                 wimg.sprite = equipmentScriptable.weapon.itemScriptableObject.itemSprite;
 
             VanitySlotRightClick = delegate()

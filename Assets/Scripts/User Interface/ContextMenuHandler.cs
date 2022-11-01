@@ -262,9 +262,23 @@ namespace Manapotion.UI
             {
                 option.myOptionGameObject = Instantiate(Instance.optionTemplate, Instance.optionsContainer);
                 option.myOptionGameObject.Find("Text").GetComponent<TextMeshProUGUI>().SetText(option.name);
-                option.myOptionGameObject.GetComponent<Button_UI>().ClickFunc += option.funcOnClick;
+                option.myOptionGameObject.GetComponent<Button_UI>().ClickFunc += option.OnClick;
                 option.myOptionGameObject.gameObject.SetActive(true);
             }
+        }
+
+        public static ContextMenuOption GetOption(string optionName)
+        {
+            foreach (ContextMenuOption cmo in Instance.optionsList)
+            {
+                if (cmo.name == optionName)
+                {
+                    return cmo;
+                }
+            }
+            
+            // no option with optionName found
+            return null;
         }
 
         /// <summary>
@@ -382,6 +396,35 @@ namespace Manapotion.UI
         public string name;
         public Transform myOptionGameObject; 
         public Action funcOnClick;
+
+        public bool unClickable = false;
+
+        public void OnClick()
+        {
+            if (unClickable)
+            {
+                // option unabailable
+                Debug.Log("option unavailable");
+                return;
+            }
+
+            funcOnClick();
+            ContextMenuHandler.Hide();
+        }
+
+        public void SetClickable(bool clickable)
+        {
+            if (!clickable)
+            {
+                unClickable = true;
+                myOptionGameObject.GetComponent<Button_UI>().SetHoverBehaviourType(Button_UI.HoverBehaviour.Change_Color);
+            }
+            else
+            {
+                unClickable = false;
+                myOptionGameObject.GetComponent<Button_UI>().SetHoverBehaviourType(Button_UI.HoverBehaviour.Change_Image);
+            }
+        }
     }
 }
 

@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Manapotion.Items;
 
-public class World_ItemSpawner : MonoBehaviour
+namespace Manapotion.Items
 {
-    public Item item;
-
-    void Start()
+    public class World_ItemSpawner : MonoBehaviour
     {
-        World_Item.SpawnItemWorld(transform.position, item);
-        Destroy(gameObject);
+        public Item item;
+
+        void Start()
+        {
+            World_Item.SpawnItemWorld(transform.position, item);
+            Destroy(gameObject);
+        }
     }
 }
+

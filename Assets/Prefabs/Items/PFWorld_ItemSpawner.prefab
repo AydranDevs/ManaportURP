@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    itemID: 0
+    itemScriptableObject: {fileID: 0}
     amount: 0
