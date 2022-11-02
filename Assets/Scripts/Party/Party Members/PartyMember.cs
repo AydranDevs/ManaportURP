@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Manapotion;
 using Manapotion.StatusEffects;
-using Manapotion.Status;
-using Manapotion.Equipables;
+using Manapotion.Actions;
 
 namespace Manapotion.PartySystem
 {
@@ -79,6 +78,8 @@ namespace Manapotion.PartySystem
 
         public PartyMemberState partyMemberState;
         public StatusEffectParticles statusEffectParticles;
+
+        public ActionsManagerScriptableObject actionsManagerScriptableObject;
         
         [SerializeField]
         private List<GameObject> _statusEffectParticles;
@@ -113,6 +114,7 @@ namespace Manapotion.PartySystem
             PartyLeaderCheck();
             
             Init();
+            PerformAction();
         }
 
         protected virtual void Init()
@@ -243,6 +245,16 @@ namespace Manapotion.PartySystem
             }
 
             return b;
+        }
+        #endregion
+
+        #region Actions
+        protected void PerformAction()
+        {
+            foreach (var action in actionsManagerScriptableObject.possibleActions)
+            {
+                action.PerformAction(this);
+            }
         }
         #endregion
 

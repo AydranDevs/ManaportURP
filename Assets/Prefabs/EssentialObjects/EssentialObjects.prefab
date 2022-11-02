@@ -4384,6 +4384,7 @@ MonoBehaviour:
   partyMemberState: 2
   statusEffectParticles:
     rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
+  actionsManagerScriptableObject: {fileID: 11400000, guid: d105db3fea8668c42993c88e947b9469, type: 2}
   _statusEffectParticles: []
   statusEffects: []
   movementState: 0
@@ -4729,6 +4730,7 @@ MonoBehaviour:
   partyMemberState: 1
   statusEffectParticles:
     rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
+  actionsManagerScriptableObject: {fileID: 11400000, guid: fb0ff2af540bebb4db91280513cc4626, type: 2}
   _statusEffectParticles: []
   statusEffects: []
   movementState: 0
@@ -5077,6 +5079,7 @@ MonoBehaviour:
   partyMemberState: 0
   statusEffectParticles:
     rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
+  actionsManagerScriptableObject: {fileID: 11400000, guid: 7470158a0b6858b46941e115e48060d8, type: 2}
   _statusEffectParticles: []
   statusEffects: []
   movementState: 0
