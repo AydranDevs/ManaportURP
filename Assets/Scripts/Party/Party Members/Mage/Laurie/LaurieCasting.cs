@@ -214,9 +214,9 @@ namespace Manapotion.PartySystem.LaurieCharacter
                 return;
             }
             
-            switch (_laurie.primarySpellElement) 
+            switch (_laurie.primaryActionElement) 
             {
-                case PrimarySpellElement.Arcane:
+                case PrimaryActionElement.Arcane:
                     primaryElement = Elements.Arcane;
 
                     switch (_laurie.primarySpellType) 
@@ -232,7 +232,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case PrimarySpellElement.Pyro:
+                case PrimaryActionElement.Pyro:
                     primaryElement = Elements.Pyro;
 
                     switch (_laurie.primarySpellType) 
@@ -248,7 +248,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case PrimarySpellElement.Cryo:
+                case PrimaryActionElement.Cryo:
                     primaryElement = Elements.Cryo;
 
                     switch (_laurie.primarySpellType) 
@@ -264,7 +264,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case PrimarySpellElement.Toxi:
+                case PrimaryActionElement.Toxi:
                     primaryElement = Elements.Toxi;
 
                     switch (_laurie.primarySpellType) 
@@ -280,7 +280,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case PrimarySpellElement.Volt:
+                case PrimaryActionElement.Volt:
                     primaryElement = Elements.Volt;
 
                     switch (_laurie.primarySpellType) 
@@ -298,9 +298,9 @@ namespace Manapotion.PartySystem.LaurieCharacter
                 break;   
             }
 
-            switch (_laurie.secondarySpellElement) 
+            switch (_laurie.secondaryActionElement) 
             {
-                case SecondarySpellElement.Arcane:
+                case SecondaryActionElement.Arcane:
                     secondaryElement = Elements.Arcane;
 
                     switch (_laurie.secondarySpellType) 
@@ -316,7 +316,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case SecondarySpellElement.Pyro:
+                case SecondaryActionElement.Pyro:
                     secondaryElement = Elements.Pyro;
 
                     switch (_laurie.secondarySpellType) 
@@ -332,7 +332,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case SecondarySpellElement.Cryo:
+                case SecondaryActionElement.Cryo:
                     secondaryElement = Elements.Cryo;
 
                     switch (_laurie.secondarySpellType) 
@@ -348,7 +348,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case SecondarySpellElement.Toxi:
+                case SecondaryActionElement.Toxi:
                     secondaryElement = Elements.Toxi;
 
                     switch (_laurie.secondarySpellType) 
@@ -364,7 +364,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                             break;
                     }
                 break;
-                case SecondarySpellElement.Volt:
+                case SecondaryActionElement.Volt:
                     secondaryElement = Elements.Volt;
 
                     switch (_laurie.secondarySpellType) 

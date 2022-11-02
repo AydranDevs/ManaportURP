@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace Manapotion.PartySystem
 {
+    public enum PrimarySpellType { Automa, Blasteur, Burston }
+    public enum SecondarySpellType { Automa, Blasteur, Burston }
+
     public class PartyMember_Mage : PartyMember
     {
         public static event EventHandler<OnUpdateManaBarEventArgs> OnUpdateManaBar;
@@ -11,6 +14,12 @@ namespace Manapotion.PartySystem
             public float mana;
             public float maxMana;
         }
+
+        #region Spellcasting
+        // Spellcasting
+        public PrimarySpellType primarySpellType = PrimarySpellType.Automa;
+        public SecondarySpellType secondarySpellType = SecondarySpellType.Automa;
+        #endregion
 
         // cooldown of 1s before mana starts regenerating
         public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;

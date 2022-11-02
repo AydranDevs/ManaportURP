@@ -15,6 +15,9 @@ namespace Manapotion.PartySystem
 
     public enum AbilityState { None, AuxilaryMovement, SpellcastPrimary, SpellcastSecondary }
     public enum AuxilaryMovementType { Spindash, BlinkDash, Pounce }
+
+    public enum PrimaryActionElement { Arcane, Pyro, Cryo, Toxi, Volt }
+    public enum SecondaryActionElement { Arcane, Pyro, Cryo, Toxi, Volt }
     
     public enum PartyBuffs
     {
@@ -90,6 +93,9 @@ namespace Manapotion.PartySystem
         public DirectionState directionState = DirectionState.South;
         public FacingState facingState = FacingState.South;
         public float dashThreshold = 8f; 
+
+        public PrimaryActionElement primaryActionElement = PrimaryActionElement.Arcane;
+        public SecondaryActionElement secondaryActionElement = SecondaryActionElement.Arcane;
 
         [field: SerializeField]
         public EquipmentScriptableObject equipmentScriptableObject { get; private set; }
@@ -251,10 +257,7 @@ namespace Manapotion.PartySystem
         #region Actions
         protected void PerformAction()
         {
-            foreach (var action in actionsManagerScriptableObject.possibleActions)
-            {
-                action.PerformAction(this);
-            }
+            actionsManagerScriptableObject.PerformAction("Test Attack", this);
         }
         #endregion
 

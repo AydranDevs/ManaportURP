@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Winsley_ActionsManagerScriptableObject
   m_EditorClassIdentifier: 
   possibleActions:
-  - {fileID: 11400000, guid: 9495b52909eb15a4ea8439f411a6ca84, type: 2}
+  - {fileID: 11400000, guid: b527c08360372b94db3bf53584c46e85, type: 2}

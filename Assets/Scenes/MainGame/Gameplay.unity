@@ -1943,6 +1943,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: primaryActionElement
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 7777adf2fb3f09449b27cffbf9309b0a, type: 2}
@@ -1993,6 +1997,10 @@ PrefabInstance:
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.maxValue
       value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: primaryActionElement
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
