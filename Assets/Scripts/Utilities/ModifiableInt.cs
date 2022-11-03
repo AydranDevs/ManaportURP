@@ -8,25 +8,49 @@ public interface IModifier
 }
 
 public delegate void ModifiedEvent();
+
 [System.Serializable]
 public class ModifiableInt
 {
     [SerializeField]
-    private int baseValue;
-    public int BaseValue { get { return baseValue; } set { baseValue = value; UpdateModifiedValue(); } }
+    private int _baseValue;
+    public int baseValue
+    {
+        get
+        { 
+            return _baseValue;
+        } 
+        set 
+        {
+            _baseValue = value; 
+            UpdateModifiedValue();
+        }
+    }
 
     [SerializeField]
-    private int modifiedValue;
-    public int ModifiedValue { get { return modifiedValue; } private set { modifiedValue = value; } }
+    private int _modifiedValue;
+    public int modifiedValue
+    {
+        get 
+        {
+            return _modifiedValue;
+        } 
+        private set
+        {
+            _modifiedValue = value;
+        }
+    }
 
     public List<IModifier> modifiers = new List<IModifier>();
 
     public event ModifiedEvent ValueModified;
     public ModifiableInt(ModifiedEvent method = null)
     {
-        modifiedValue = BaseValue;
+        _modifiedValue = baseValue;
         if (method != null)
+        {
             ValueModified += method;
+        }
     }
 
     public void RegsiterModEvent(ModifiedEvent method)
@@ -45,9 +69,12 @@ public class ModifiableInt
         {
             modifiers[i].AddValue(ref valueToAdd);
         }
-        ModifiedValue = baseValue + valueToAdd;
+
+        modifiedValue = _baseValue + valueToAdd;
         if (ValueModified != null)
+        {
             ValueModified.Invoke();
+        }
     }
 
     public void AddModifier(IModifier _modifier)
@@ -60,5 +87,4 @@ public class ModifiableInt
         modifiers.Remove(_modifier);
         UpdateModifiedValue();
     }
-
 }

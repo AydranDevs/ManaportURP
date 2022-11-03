@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1947,6 +1947,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: statsManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: d55f04ff16f50b54c817913eed1e3da6, type: 2}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 7777adf2fb3f09449b27cffbf9309b0a, type: 2}
@@ -2007,6 +2011,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: statsManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 148f759f2c678ac4994a45e977655ebc, type: 2}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: f3e3690b0e46c29468291d9c07840e36, type: 2}
@@ -2050,6 +2058,10 @@ PrefabInstance:
       propertyPath: damageType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: statsManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 

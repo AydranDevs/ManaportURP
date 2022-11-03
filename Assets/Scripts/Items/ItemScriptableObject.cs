@@ -1,8 +1,9 @@
 using UnityEngine;
+using Manapotion.Stats;
 
 namespace Manapotion.Items
 {
-    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/ItemScriptableObject")]
+    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/New ItemScriptableObject")]
     public class ItemScriptableObject : ScriptableObject
     {
         public ItemCategory itemCategory = ItemCategory.Consumable;
@@ -15,6 +16,6 @@ namespace Manapotion.Items
         public bool equipable;
 
         public int[] charIDsThatCanEquip;
-        // public StatManager itemStats;
+        public StatsManagerScriptableObject stats;
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 using Manapotion;
 using Manapotion.StatusEffects;
 using Manapotion.Actions;
+using Manapotion.Stats;
 
 namespace Manapotion.PartySystem
 {
@@ -84,6 +85,7 @@ namespace Manapotion.PartySystem
         public StatusEffectParticles statusEffectParticles;
 
         public ActionsManagerScriptableObject actionsManagerScriptableObject;
+        public StatsManagerScriptableObject statsManagerScriptableObject;
         
         [SerializeField]
         private List<GameObject> _statusEffectParticles;

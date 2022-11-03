@@ -10,7 +10,7 @@ namespace Manapotion.Stats
         {
             Debug.Log(
                 string.Format(
-                    "{0} was modified. Value is now {1}", stat.statID, stat.value.ModifiedValue
+                    "{0} was modified. Value is now {1}", stat.statID, stat.value.modifiedValue
                 )
             );
         }
