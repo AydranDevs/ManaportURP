@@ -13,14 +13,14 @@ namespace Manapotion.Actions
         /// <summary>
         /// Make the given member perform an action.
         /// </summary>
-        /// <param name="actionName">name of the action</param>
+        /// <param name="actionID">ID of the action</param>
         /// <param name="member">member to perform the action</param>
         /// <returns>the ActionScriptableObject that was performed</returns>
-        public ActionScriptableObject PerformAction(string actionName, PartyMember member)
+        public ActionScriptableObject PerformAction(ActionID actionID, PartyMember member)
         {
             for (int i = 0; i < possibleActions.Count; i++)
             {
-                if (possibleActions[i].action_name == actionName)
+                if (possibleActions[i].action_id == actionID)
                 {
                     ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member));
                     return possibleActions[i];
@@ -29,17 +29,27 @@ namespace Manapotion.Actions
             
             return null;
         }
-
+        
         /// <summary>
         /// Make the given member perform an action.
         /// </summary>
-        /// <param name="id">id of the action</param>
+        /// <param name="actionID">ID of the action</param>
         /// <param name="member">member to perform the action</param>
+        /// <param name="type">damage type</param>
+        /// <param name="element">action elemental type</param>
         /// <returns>the ActionScriptableObject that was performed</returns>
-        public ActionScriptableObject PerformAction(int id, PartyMember member)
+        public ActionScriptableObject PerformAction(ActionID actionID, PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
-            ManaBehaviour.instance.StartCoroutine(possibleActions[id].PerformAction(member));
-            return possibleActions[id];
+            for (int i = 0; i < possibleActions.Count; i++)
+            {
+                if (possibleActions[i].action_id == actionID)
+                {
+                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, type, element));
+                    return possibleActions[i];
+                }
+            }
+            
+            return null;
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Manapotion.PartySystem
 
     public enum PrimaryActionElement { Arcane, Pyro, Cryo, Toxi, Volt }
     public enum SecondaryActionElement { Arcane, Pyro, Cryo, Toxi, Volt }
+    public enum DamageType { Physical, Magical }
     
     public enum PartyBuffs
     {
@@ -96,6 +97,7 @@ namespace Manapotion.PartySystem
 
         public PrimaryActionElement primaryActionElement = PrimaryActionElement.Arcane;
         public SecondaryActionElement secondaryActionElement = SecondaryActionElement.Arcane;
+        public DamageType damageType;
 
         [field: SerializeField]
         public EquipmentScriptableObject equipmentScriptableObject { get; private set; }
@@ -120,7 +122,6 @@ namespace Manapotion.PartySystem
             PartyLeaderCheck();
             
             Init();
-            PerformAction();
         }
 
         protected virtual void Init()
@@ -255,9 +256,13 @@ namespace Manapotion.PartySystem
         #endregion
 
         #region Actions
-        protected void PerformAction()
+        /// <summary>
+        /// Make the member perform their Primary or Secondary action.
+        /// </summary>
+        /// <param name="action">Primary (0) or Secondary (1)</param>
+        public virtual void PerformMainAction(int action)
         {
-            actionsManagerScriptableObject.PerformAction("Test Attack", this);
+
         }
         #endregion
 

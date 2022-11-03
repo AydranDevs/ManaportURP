@@ -15,11 +15,9 @@ namespace Manapotion.PartySystem
             public float maxMana;
         }
 
-        #region Spellcasting
         // Spellcasting
         public PrimarySpellType primarySpellType = PrimarySpellType.Automa;
         public SecondarySpellType secondarySpellType = SecondarySpellType.Automa;
-        #endregion
 
         // cooldown of 1s before mana starts regenerating
         public const float MANA_REGEN_COOLDOWN_DEFUALT = 1f;
@@ -65,6 +63,7 @@ namespace Manapotion.PartySystem
             UpdateManaBar(stats.manaport_stat_manapoints.GetValue(), stats.manaport_stat_max_manapoints.GetValue());
         }
 
+        #region Mana Point Management
         private void UpdateManaBar(float value, float maxValue)
         {
             OnUpdateManaBar?.Invoke(this, new OnUpdateManaBarEventArgs
@@ -110,5 +109,32 @@ namespace Manapotion.PartySystem
         {
             return stats.manaport_stat_manapoints.GetValue() - amount;
         }
+        #endregion
+
+        #region Spellcasting
+        public override void PerformMainAction(int action)
+        {
+            if (action == 0)
+            {
+                Debug.Log("primary");
+                actionsManagerScriptableObject.PerformAction(
+                    Actions.ActionID.Burston,
+                    this,
+                    (Actions.DamageInstance.DamageInstanceType)damageType,
+                    (Actions.DamageInstance.DamageInstanceElement)primaryActionElement
+                );
+            }
+            else
+            {
+                Debug.Log("secondary");
+                actionsManagerScriptableObject.PerformAction(
+                    Actions.ActionID.Burston,
+                    this,
+                    (Actions.DamageInstance.DamageInstanceType)damageType,
+                    (Actions.DamageInstance.DamageInstanceElement)secondaryActionElement
+                );
+            }
+        }
+        #endregion
     }
 }

@@ -8,18 +8,19 @@ namespace Manapotion.Actions
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/AttackScriptableObject")]
     public class AttackScriptableObject : ActionScriptableObject
     {    
-        public override IEnumerator PerformAction(PartyMember member)
+        public override IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
-            HandleAttack(member);
+            Debug.Log("Attack '" + action_id + "' started.");
+            HandleAttack(member, type, element);
             yield break;
         }
         
-        private void HandleAttack(PartyMember member)
+        private void HandleAttack(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
             DamageInstance damage = new DamageInstance
             {
-                damageInstanceType = DamageInstance.DamageInstanceType.Physical,
-                damageInstanceElement = (DamageInstance.DamageInstanceElement)member.primaryActionElement,
+                damageInstanceType = type,
+                damageInstanceElement = element,
                 damageInstanceAmount = (float)member.GetInstanceID()
             };
             

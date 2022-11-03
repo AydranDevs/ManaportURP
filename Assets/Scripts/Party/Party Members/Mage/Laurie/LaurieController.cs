@@ -110,7 +110,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                 return;
             }
 
-            _casting.PrimaryCast();
+            _laurie.PerformMainAction(0);
         }
 
         public void OnSecondary_SecondaryCast() 
@@ -120,7 +120,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
                 return;
             }
 
-            _casting.SecondaryCast();
+            _laurie.PerformMainAction(1);
         }
 
         public void OnAuxMove_AuxillaryMovement() 
