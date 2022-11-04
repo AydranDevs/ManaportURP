@@ -45,7 +45,7 @@ namespace Manapotion.PartySystem
         public GameObject rejuvenatedBuffParticles;
     }
 
-    public abstract class PartyMember : MonoBehaviour
+    public class PartyMember : MonoBehaviour
     {
         #region Events
         public static event EventHandler<OnAbilityChangedEventArgs> OnAbilityChanged;
@@ -90,7 +90,7 @@ namespace Manapotion.PartySystem
         [SerializeField]
         private List<GameObject> _statusEffectParticles;
 
-        public List<Buff> statusEffects;
+        public List<StatusEffects.Buff> statusEffects;
 
         public MovementState movementState = MovementState.Idle;
         public DirectionState directionState = DirectionState.South;
@@ -117,7 +117,7 @@ namespace Manapotion.PartySystem
             stats.manaport_stat_remedypoints.SetMaxValue(stats.manaport_stat_max_remedypoints.GetValue());
             stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_max_experience_points.GetValue());
 
-            statusEffects = new List<Buff>();
+            statusEffects = new List<StatusEffects.Buff>();
             _statusEffectParticles = new List<GameObject>();
             
             MaxHP();
@@ -218,7 +218,7 @@ namespace Manapotion.PartySystem
 
         public void AddStatusEffect(StatusEffect effect, int power, float duration)
         {
-            var stEf = new Buff(effect, power, duration);
+            var stEf = new StatusEffects.Buff(effect, power, duration);
 
             if (StatusEffectsContains(stEf))
             {
@@ -240,7 +240,7 @@ namespace Manapotion.PartySystem
             }
         }
 
-        private bool StatusEffectsContains(Buff effect)
+        private bool StatusEffectsContains(StatusEffects.Buff effect)
         {
             bool b = false;
 

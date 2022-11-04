@@ -53,6 +53,11 @@ public class ModifiableInt
         }
     }
 
+    public void Init()
+    {
+        modifiers = new List<IModifier>();
+    }
+
     public void RegsiterModEvent(ModifiedEvent method)
     {
         ValueModified += method;

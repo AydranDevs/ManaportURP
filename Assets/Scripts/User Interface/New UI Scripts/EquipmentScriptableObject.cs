@@ -5,6 +5,7 @@ using UnityEngine.Events;
 using Manapotion.Equipables;
 using Manapotion.PartySystem;
 using Manapotion.Items;
+using Manapotion.Stats;
 
 [CreateAssetMenu]
 public class EquipmentScriptableObject : ScriptableObject
@@ -21,6 +22,8 @@ public class EquipmentScriptableObject : ScriptableObject
     public Item armour;
     public Item vanity;
 
+    private Dictionary<int, Buff> _appliedBuffs;
+
     public BagScriptableObject partyBagSciptableObject;
 
     private void OnEnable()
@@ -32,6 +35,10 @@ public class EquipmentScriptableObject : ScriptableObject
         if (equipableUnequippedEvent == null)
         {
             equipableUnequippedEvent = new UnityEvent<Item, int>();
+        }
+        if (_appliedBuffs == null)
+        {
+            _appliedBuffs = new Dictionary<int, Buff>();
         }
     }
 
@@ -83,6 +90,34 @@ public class EquipmentScriptableObject : ScriptableObject
                 break;
             }
         }
+
+        if (item.itemScriptableObject.stats != null)
+        {
+            foreach (var s in item.itemScriptableObject.stats.stats)
+            {
+                var statID = s.statID;
+                var newBuff = new Buff
+                {
+                    stat = s,
+                    value = s.value.baseValue
+                };
+                Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.AddModifier(newBuff);
+                try
+                {
+                    _appliedBuffs[Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.IndexOf(newBuff)] = newBuff;
+                }
+                catch (KeyNotFoundException)
+                {
+                    var o_value = newBuff.value;
+                    var n_newBuff = new Buff
+                    {
+                        stat = s,
+                        value = o_value + _appliedBuffs[Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.IndexOf(newBuff)].value
+                    };
+                    _appliedBuffs[Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.IndexOf(newBuff)] = n_newBuff;
+                }
+            }
+        }
         
         bagItemEquippedEvent.Invoke(this);
         partyBagSciptableObject.RemoveItem(item);   
@@ -102,6 +137,42 @@ public class EquipmentScriptableObject : ScriptableObject
 
         Debug.Log("Unequipping " + item.ToString() + " from charID: " + charID);
 
+        if (item.itemScriptableObject.stats != null)
+        {
+            foreach (var s in item.itemScriptableObject.stats.stats)
+            {
+                var statID = s.statID;
+                for(
+                    int i = 0;
+                    i < Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.Count;
+                    i++
+                )
+                {
+                    if (Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers[i] == _appliedBuffs[i])
+                    {
+                        Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.RemoveModifier(_appliedBuffs[i]);
+                        
+                        foreach (var buff in item.itemBuffs)
+                        {
+                            if (buff.stat.statID == _appliedBuffs[i].stat.statID)
+                            {
+                                if (_appliedBuffs[i].value - buff.value > 0)
+                                {
+                                    _appliedBuffs[i].value -= buff.value;
+                                    break;
+                                }
+                                else
+                                {
+                                    _appliedBuffs.Remove(i);
+                                    break;
+                                }
+                            } 
+                        }
+                    }
+                }
+            }
+        }
+
         var iC = item.itemScriptableObject.itemCategory;
         if (iC == ItemCategory.Weapon)
         {
@@ -115,6 +186,7 @@ public class EquipmentScriptableObject : ScriptableObject
         {
             vanity = new Item { itemScriptableObject = null, amount = 0 };
         }
+
 
         equipableUnequippedEvent.Invoke(item, charID);
         partyBagSciptableObject.AddItem(new Item { itemScriptableObject = item.itemScriptableObject, amount = 1});

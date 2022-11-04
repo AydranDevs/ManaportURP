@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.Stats;
 
 namespace Manapotion.Items
 {
@@ -10,6 +11,7 @@ namespace Manapotion.Items
     public class Item
     {
         public ItemScriptableObject itemScriptableObject;
+        public List<Buff> itemBuffs;
         public int amount;
 
         public Sprite GetSprite()
