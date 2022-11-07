@@ -116,20 +116,20 @@ namespace Manapotion.PartySystem
         {
             if (action == 0)
             {
-                Debug.Log("primary");
                 actionsManagerScriptableObject.PerformAction(
-                    Actions.ActionID.Burston,
+                    equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[0],
                     this,
+                    statsManagerScriptableObject.GetStat(Stats.StatID.INT),
                     (Actions.DamageInstance.DamageInstanceType)damageType,
                     (Actions.DamageInstance.DamageInstanceElement)primaryActionElement
                 );
             }
             else
             {
-                Debug.Log("secondary");
                 actionsManagerScriptableObject.PerformAction(
-                    Actions.ActionID.Burston,
+                    equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[1],
                     this,
+                    statsManagerScriptableObject.GetStat(Stats.StatID.INT),
                     (Actions.DamageInstance.DamageInstanceType)damageType,
                     (Actions.DamageInstance.DamageInstanceElement)secondaryActionElement
                 );

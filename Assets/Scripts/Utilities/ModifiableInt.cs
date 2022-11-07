@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IModifier
 {
-    void AddValue(ref int baseValue);
+    int AddValue();
 }
 
 public delegate void ModifiedEvent();
@@ -72,7 +72,7 @@ public class ModifiableInt
         var valueToAdd = 0;
         for (int i = 0; i < modifiers.Count; i++)
         {
-            modifiers[i].AddValue(ref valueToAdd);
+            valueToAdd += modifiers[i].AddValue();
         }
 
         modifiedValue = _baseValue + valueToAdd;

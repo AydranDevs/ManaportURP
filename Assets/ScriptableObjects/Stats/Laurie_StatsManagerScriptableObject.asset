@@ -12,12 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e5cb4bbf6bcdd4ba1e1e00463503f1, type: 3}
   m_Name: Laurie_StatsManagerScriptableObject
   m_EditorClassIdentifier: 
-  stats:
-  - parent: {fileID: 11400000}
-    statID: 2
-    value:
-      _baseValue: 0
-      _modifiedValue: 0
+  statArray:
   - parent: {fileID: 11400000}
     statID: 0
     value:
@@ -25,6 +20,11 @@ MonoBehaviour:
       _modifiedValue: 0
   - parent: {fileID: 11400000}
     statID: 1
+    value:
+      _baseValue: 0
+      _modifiedValue: 0
+  - parent: {fileID: 11400000}
+    statID: 2
     value:
       _baseValue: 0
       _modifiedValue: 0

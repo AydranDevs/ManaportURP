@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: Winsley_ActionsManagerScriptableObject
   m_EditorClassIdentifier: 
   possibleActions:
-  - {fileID: 11400000, guid: b527c08360372b94db3bf53584c46e85, type: 2}
+  - {fileID: 11400000, guid: f95cf9cdf8bd0944880a85f7ede911c7, type: 2}
+  - {fileID: 11400000, guid: 5d0fa1f6a3a2c484da75632e690e8dc4, type: 2}
+  - {fileID: 11400000, guid: 0d514027e531ca940938db77782fda65, type: 2}
+  - {fileID: 11400000, guid: 893fdd89a186d9c409b2bed2f74d3905, type: 2}
+  - {fileID: 11400000, guid: 3eae304463b931d44aa3fff753482371, type: 2}
+  - {fileID: 11400000, guid: 4ec49da910b69e04bae1edc00b783425, type: 2}

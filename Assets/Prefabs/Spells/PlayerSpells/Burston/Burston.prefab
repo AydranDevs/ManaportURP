@@ -4822,7 +4822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8509226589283875494}
-  - component: {fileID: 8509226589283875495}
+  - component: {fileID: 9216018371505431916}
   - component: {fileID: 7419380594374120469}
   - component: {fileID: 6855497063004867928}
   m_Layer: 3
@@ -4848,7 +4848,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8509226589283875495
+--- !u!114 &9216018371505431916
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4857,16 +4857,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8509226589283875488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeeddb214202b6f45a3203f8a0534900, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bb864f70eb9b9d4297432412de38e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  corePs: {fileID: 8509226589402946380}
-  trailPs: {fileID: 8509226588320486338}
-  explosionPf: {fileID: 4882968139817894503, guid: 8b29a9cc47c577041bd55bbbe0baf035, type: 3}
-  direction: {x: 0, y: 0, z: 0}
   speed: 10
-  lifetime: 3
-  damage: 0
+  lifetime: 10
+  particles:
+  - {fileID: 8509226589402946380}
+  - {fileID: 8509226588320486338}
 --- !u!50 &7419380594374120469
 Rigidbody2D:
   serializedVersion: 4

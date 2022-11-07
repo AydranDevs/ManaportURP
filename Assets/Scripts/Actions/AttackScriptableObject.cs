@@ -1,37 +1,53 @@
 using System.Collections;
 using UnityEngine;
 using Manapotion.PartySystem;
-
+using Manapotion.Stats;
+using Manapotion.Actions.Projectiles;
 
 namespace Manapotion.Actions
 {
-    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/AttackScriptableObject")]
+    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New AttackScriptableObject")]
     public class AttackScriptableObject : ActionScriptableObject
     {    
-        public override IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        [SerializeField]
+        public ProjectileHandlerScriptableObject projectileHandler;
+        
+        public override IEnumerator PerformAction(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
             Debug.Log("Attack '" + action_id + "' started.");
-            HandleAttack(member, type, element);
+            HandleAttack(member, stat, type, element);
             yield break;
         }
         
-        private void HandleAttack(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        // handle the attack (spawn projectiles, run animations, etc)
+        private void HandleAttack(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
-            DamageInstance damage = new DamageInstance
+            if (projectileHandler == null)
             {
-                damageInstanceType = type,
-                damageInstanceElement = element,
-                damageInstanceAmount = (float)member.statsManagerScriptableObject.stats[3].value.modifiedValue
-            };
-            
-            Debug.Log(
-                string.Format(
-                    "New DamageInstance created (Type: {0}, Element: {1}, Amount: {2}",
-                    damage.damageInstanceType,
-                    damage.damageInstanceElement,
-                    damage.damageInstanceAmount
-                )
-            );
+                // uhh put code here later
+                return;
+            }
+
+            ManaBehaviour.instance.StartCoroutine(projectileHandler.SpawnProjectile(
+                member,
+                new DamageInstance
+                {
+                    damageInstanceType = type,
+                    damageInstanceElement = element,
+                    damageInstanceAmount = (float)stat.value.modifiedValue
+                }
+            ));
+
+            // Transform projectile = Instantiate(PREFAB_projectile, member.transform.position, Quaternion.identity);
+            // projectile.GetComponent<ProjectileInstance>().Setup(
+            //     ((Vector3)member.inputProvider.GetState().targetPos - member.transform.position).normalized,
+            //     new DamageInstance
+            //     {
+            //         damageInstanceType = type,
+            //         damageInstanceElement = element,
+            //         damageInstanceAmount = (float)stat.value.modifiedValue
+            //     }
+            // );
         }
     }
 }

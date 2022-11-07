@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Manapotion.PartySystem;
+using Manapotion.Stats;
 
 namespace Manapotion.Actions
 {
-    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/ActionsManagerScriptableObject")]
+    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New ActionsManagerScriptableObject")]
     public class ActionsManagerScriptableObject : ScriptableObject
     {
         // holds every possible action that the character can use
@@ -49,6 +50,90 @@ namespace Manapotion.Actions
                 }
             }
             
+            return null;
+        }
+
+        /// <summary>
+        /// Make the given member perform an action.
+        /// </summary>
+        /// <param name="a">action scriptable object (usually from an equipped weapon)</param>
+        /// <param name="member">member to perform the action</param>
+        /// <param name="type">damage type</param>
+        /// <param name="element">action elemental type</param>
+        /// <returns>the ActionScriptableObject that was performed</returns>
+        public ActionScriptableObject PerformAction(ActionScriptableObject a, PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        {
+            if (a == null || member == null)
+            {
+                return null;
+            }
+
+            for (int i = 0; i < possibleActions.Count; i++)
+            {
+                if (possibleActions[i] == a)
+                {
+                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, type, element));
+                    return possibleActions[i];
+                }
+            }
+
+            return null;
+        }
+        
+        /// <summary>
+        /// Make the given member perform an action.
+        /// </summary>
+        /// <param name="a">action scriptable object (usually from an equipped weapon)</param>
+        /// <param name="member">member to perform the action</param>
+        /// <param name="stat">stat that the action should use</param>
+        /// <param name="type">damage type</param>
+        /// <param name="element">action elemental type</param>
+        /// <returns>the ActionScriptableObject that was performed</returns>
+        public ActionScriptableObject PerformAction(ActionScriptableObject a, PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        {
+            if (a == null || member == null)
+            {
+                return null;
+            }
+
+            for (int i = 0; i < possibleActions.Count; i++)
+            {
+                if (possibleActions[i] == a)
+                {
+                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, stat, type, element));
+                    return possibleActions[i];
+                }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Make the given member perform an action.
+        /// </summary>
+        /// <param name="a">action scriptable object (usually from an equipped weapon)</param>
+        /// <param name="member">member to perform the action</param>
+        /// <param name="afflictedPoint">the point currentValue to be affected by the ActionScriptableObject's cost value.</param>
+        /// <param name="stat">stat that the action should use</param>
+        /// <param name="type">damage type</param>
+        /// <param name="element">action elemental type</param>
+        /// <returns>the ActionScriptableObject that was performed</returns>
+        public ActionScriptableObject PerformAction(ActionScriptableObject a, PartyMember member, Utilities.ConstrainedInt afflictedPoint, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        {
+            if (a == null || member == null)
+            {
+                return null;
+            }
+
+            for (int i = 0; i < possibleActions.Count; i++)
+            {
+                if (possibleActions[i] == a)
+                {
+                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, afflictedPoint, stat, type, element));
+                    return possibleActions[i];
+                }
+            }
+
             return null;
         }
     }

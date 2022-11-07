@@ -20,3 +20,4 @@ MonoBehaviour:
   stackable: 0
   equipable: 1
   charIDsThatCanEquip: 01000000
+  stats: {fileID: 11400000, guid: 3d0ab5c480a52b64e8087d738029f5a1, type: 2}

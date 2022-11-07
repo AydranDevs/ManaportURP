@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31e5cb4bbf6bcdd4ba1e1e00463503f1, type: 3}
   m_Name: manaport_weapon_training_tome_stats
   m_EditorClassIdentifier: 
-  stats: []
+  statArray:
+  - parent: {fileID: 0}
+    statID: 3
+    value:
+      _baseValue: 5
+      _modifiedValue: 0

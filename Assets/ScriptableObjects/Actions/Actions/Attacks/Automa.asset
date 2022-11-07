@@ -15,3 +15,4 @@ MonoBehaviour:
   action_id: 2
   action_animationName: 
   action_requiredItems: []
+  projectileHandler: {fileID: 11400000, guid: 30024ade3fd470f4c9d0f6d365de33b3, type: 2}

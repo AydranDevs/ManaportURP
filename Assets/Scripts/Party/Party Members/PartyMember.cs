@@ -104,12 +104,19 @@ namespace Manapotion.PartySystem
         [field: SerializeField]
         public EquipmentScriptableObject equipmentScriptableObject { get; private set; }
 
+        public PointsManagerScriptableObject pointsManagerScriptableObject;
+
         [field: SerializeField]
         public PartyMemberStats stats { get; protected set; }
         
         private void Start()
         {
             ManaBehaviour.OnUpdate += Update;
+
+            foreach (var point in pointsManagerScriptableObject.pointsArray)
+            {
+                pointsManagerScriptableObject.InitializePoint(point, statsManagerScriptableObject);
+            }
 
             stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
             stats.manaport_stat_manapoints.SetMaxValue(stats.manaport_stat_max_manapoints.GetValue());

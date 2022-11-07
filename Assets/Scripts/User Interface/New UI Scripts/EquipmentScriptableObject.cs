@@ -22,8 +22,6 @@ public class EquipmentScriptableObject : ScriptableObject
     public Item armour;
     public Item vanity;
 
-    private Dictionary<int, Buff> _appliedBuffs;
-
     public BagScriptableObject partyBagSciptableObject;
 
     private void OnEnable()
@@ -35,10 +33,6 @@ public class EquipmentScriptableObject : ScriptableObject
         if (equipableUnequippedEvent == null)
         {
             equipableUnequippedEvent = new UnityEvent<Item, int>();
-        }
-        if (_appliedBuffs == null)
-        {
-            _appliedBuffs = new Dictionary<int, Buff>();
         }
     }
 
@@ -53,31 +47,29 @@ public class EquipmentScriptableObject : ScriptableObject
             return;
         }
 
-        var iC = item.itemScriptableObject.itemCategory;
-
         foreach (var i in item.itemScriptableObject.charIDsThatCanEquip)
         {
             if (i == charID)
             {
                 // if item in slot is equipped, swap the two.
-                if (weapon.itemScriptableObject != null && iC == ItemCategory.Weapon)
+                if (weapon.itemScriptableObject != null && item.itemScriptableObject.itemCategory == ItemCategory.Weapon)
                 {
                     UnequipItem(weapon);
                 }
-                else if (armour.itemScriptableObject != null && iC == ItemCategory.Armour)
+                else if (armour.itemScriptableObject != null && item.itemScriptableObject.itemCategory == ItemCategory.Armour)
                 {
                     UnequipItem(armour);
                 }
-                else if (vanity.itemScriptableObject != null && iC == ItemCategory.Vanity)
+                else if (vanity.itemScriptableObject != null && item.itemScriptableObject.itemCategory == ItemCategory.Vanity)
                 {
                     UnequipItem(vanity);
                 }
                 
-                if (iC == ItemCategory.Weapon)
+                if (item.itemScriptableObject.itemCategory == ItemCategory.Weapon)
                 {
                     weapon = item;
                 }
-                else if (iC == ItemCategory.Armour)
+                else if (item.itemScriptableObject.itemCategory == ItemCategory.Armour)
                 {
                     armour = item;
                 }
@@ -85,7 +77,6 @@ public class EquipmentScriptableObject : ScriptableObject
                 {
                     vanity = item;
                 }
-                Debug.Log("equipped: " + item.ToString());
                 
                 break;
             }
@@ -93,29 +84,16 @@ public class EquipmentScriptableObject : ScriptableObject
 
         if (item.itemScriptableObject.stats != null)
         {
-            foreach (var s in item.itemScriptableObject.stats.stats)
+            foreach (var s in item.itemScriptableObject.stats.statArray)
             {
                 var statID = s.statID;
-                var newBuff = new Buff
-                {
-                    stat = s,
-                    value = s.value.baseValue
-                };
-                Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.AddModifier(newBuff);
-                try
-                {
-                    _appliedBuffs[Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.IndexOf(newBuff)] = newBuff;
-                }
-                catch (KeyNotFoundException)
-                {
-                    var o_value = newBuff.value;
-                    var n_newBuff = new Buff
+                Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.AddModifier(
+                    new Buff
                     {
                         stat = s,
-                        value = o_value + _appliedBuffs[Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.IndexOf(newBuff)].value
-                    };
-                    _appliedBuffs[Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.IndexOf(newBuff)] = n_newBuff;
-                }
+                        value = s.value.baseValue
+                    }
+                );
             }
         }
         
@@ -135,50 +113,29 @@ public class EquipmentScriptableObject : ScriptableObject
             return;
         }
 
-        Debug.Log("Unequipping " + item.ToString() + " from charID: " + charID);
-
+        // if the item has stats, remove the buff(s) given to the character
         if (item.itemScriptableObject.stats != null)
         {
-            foreach (var s in item.itemScriptableObject.stats.stats)
+            foreach (var s in item.itemScriptableObject.stats.statArray)
             {
                 var statID = s.statID;
-                for(
-                    int i = 0;
-                    i < Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers.Count;
-                    i++
-                )
-                {
-                    if (Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.modifiers[i] == _appliedBuffs[i])
+                Debug.Log(Party.GetMember(charID));
+                Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.RemoveModifier(
+                    new Buff
                     {
-                        Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.RemoveModifier(_appliedBuffs[i]);
-                        
-                        foreach (var buff in item.itemBuffs)
-                        {
-                            if (buff.stat.statID == _appliedBuffs[i].stat.statID)
-                            {
-                                if (_appliedBuffs[i].value - buff.value > 0)
-                                {
-                                    _appliedBuffs[i].value -= buff.value;
-                                    break;
-                                }
-                                else
-                                {
-                                    _appliedBuffs.Remove(i);
-                                    break;
-                                }
-                            } 
-                        }
+                        stat = s,
+                        value = s.value.baseValue
                     }
-                }
+                );
             }
         }
-
-        var iC = item.itemScriptableObject.itemCategory;
-        if (iC == ItemCategory.Weapon)
+        
+        // find the correct item to unequip
+        if (item.itemScriptableObject.itemCategory == ItemCategory.Weapon)
         {
             weapon = new Item { itemScriptableObject = null, amount = 0 };
         }
-        else if (iC == ItemCategory.Armour)
+        else if (item.itemScriptableObject.itemCategory == ItemCategory.Armour)
         {
             armour = new Item { itemScriptableObject = null, amount = 0 };
         }

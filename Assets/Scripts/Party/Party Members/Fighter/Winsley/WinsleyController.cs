@@ -102,12 +102,22 @@ namespace Manapotion.PartySystem.WinsleyCharacter
 
         public void OnPrimary_PrimaryCast()
         {
-            //casting.PrimaryCast();
+            if (gameManager.state != GameState.Main)
+            {
+                return;
+            }
+
+            _winsley.PerformMainAction(0);
         }
 
         public void OnSecondary_SecondaryCast()
         {
-            //casting.SecondaryCast();
+            if (gameManager.state != GameState.Main)
+            {
+                return;
+            }
+
+            _winsley.PerformMainAction(1);
         }
 
         public void OnAuxMove_AuxillaryMovement()

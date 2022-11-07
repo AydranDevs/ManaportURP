@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PartyBag
   m_EditorClassIdentifier: 
   <itemList>k__BackingField:
-  - itemScriptableObject: {fileID: 11400000, guid: 8e56a75d68d9289448e2481cb1520a9a, type: 2}
+  - itemScriptableObject: {fileID: 11400000, guid: 6b75c94dcaa592047beb4059b7c7d016, type: 2}
     amount: 1
   testItemScriptableObject: {fileID: 11400000, guid: 7ae4cd625f37e2249a736a8764b5802e, type: 2}

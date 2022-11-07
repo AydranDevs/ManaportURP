@@ -10,7 +10,7 @@ namespace Manapotion.Stats
         public void SetParent(StatsManagerScriptableObject p)
         {
             parent = p;
-            value = new ModifiableInt(StatModified);
+            value = new ModifiableInt();
         }
         public void StatModified()
         {

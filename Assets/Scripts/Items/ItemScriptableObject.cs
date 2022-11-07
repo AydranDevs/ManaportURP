@@ -4,7 +4,7 @@ using Manapotion.Stats;
 
 namespace Manapotion.Items
 {
-    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/New ItemScriptableObject")]
+    [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Items/New ItemScriptableObject")]
     public class ItemScriptableObject : ScriptableObject
     {
         public ItemCategory itemCategory = ItemCategory.Consumable;
@@ -18,5 +18,7 @@ namespace Manapotion.Items
 
         public int[] charIDsThatCanEquip;
         public StatsManagerScriptableObject stats;
+
+        public AttacksManagerScriptableObject attacks;
     }
 }

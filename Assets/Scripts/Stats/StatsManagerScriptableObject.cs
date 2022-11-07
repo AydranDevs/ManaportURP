@@ -4,13 +4,13 @@ namespace Manapotion.Stats
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Stats/New StatsManagerScriptableObject")]
     public class StatsManagerScriptableObject : ScriptableObject
     {
-        public Stat[] stats;
+        public Stat[] statArray;
 
         public void OnEnable()
         {
-            for (int i = 0; i < stats.Length; i++)
+            for (int i = 0; i < statArray.Length; i++)
             {
-                stats[i].value.Init();
+                statArray[i].value.Init();
             }
         }
 
@@ -25,11 +25,11 @@ namespace Manapotion.Stats
 
         public Stat GetStat(StatID statID)
         {
-            for (int i = 0; i < stats.Length; i++)
+            for (int i = 0; i < statArray.Length; i++)
             {
-                if (stats[i].statID == statID)
+                if (statArray[i].statID == statID)
                 {
-                    return stats[i];
+                    return statArray[i];
                 }
             }
             

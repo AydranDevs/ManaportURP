@@ -140,12 +140,10 @@ namespace Manapotion.UI
                         // check if item has equipment restrictions
                         if (item.itemScriptableObject.charIDsThatCanEquip.Length > 0)
                         {
-                            Debug.Log("this has restrictions!");
                             
                             // check how many characters can equip this item
                             if (item.itemScriptableObject.charIDsThatCanEquip.Length > 1)
                             {
-                                Debug.Log("more than 1 character can equip this!");
                                 // check if current party leader can equip this item
                                 var index = Array.FindIndex(item.itemScriptableObject.charIDsThatCanEquip, x => x == Party.GetPartyMemberIndex(Party.GetCurrentLeader()));
                                 if (index >= 0)

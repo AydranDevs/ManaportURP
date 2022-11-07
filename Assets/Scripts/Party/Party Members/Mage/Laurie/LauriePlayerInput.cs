@@ -67,7 +67,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             } 
 
             var simpleTargetPos = context.ReadValue<Vector2>();
-            _provider.inputState.targetPos = Camera.main.WorldToScreenPoint(simpleTargetPos);
+            _provider.inputState.targetPos = Camera.main.ScreenToWorldPoint(simpleTargetPos);
         }
 
         public void OnSprint(InputAction.CallbackContext context) 

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d03cb545254a035409a63cb50825950a, type: 3}
+  m_Name: Laurie_MP
+  m_EditorClassIdentifier: 
+  pointID: 1
+  parent: {fileID: 11400000, guid: 10af1f5623318a74287a7aaf18cf60f5, type: 2}
+  value_maxValueModulator: 4
+  modulatorType: 0
+  startAtMaxValue: 1
+  value:
+    ValueChangedEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    ValueIsZeroEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    ValueIsMaxEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    _currentValue: 0
+    _maxValue: 0

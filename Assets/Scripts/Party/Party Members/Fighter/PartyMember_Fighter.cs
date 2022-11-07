@@ -61,6 +61,7 @@ namespace Manapotion.PartySystem
             UpdateStaminaBar(stats.manaport_stat_staminapoints.GetValue(), stats.manaport_stat_max_staminapoints.GetValue());
         }
 
+        #region Stamina Point Management
         private void UpdateStaminaBar(float value, float maxValue)
         {
             OnUpdateStaminaBar?.Invoke(this, new OnUpdateStaminaBarEventArgs
@@ -106,5 +107,32 @@ namespace Manapotion.PartySystem
         {
             return stats.manaport_stat_staminapoints.GetValue() - amount;
         }
+        #endregion
+
+        #region Attacking
+        public override void PerformMainAction(int action)
+        {
+            if (action == 0)
+            {
+                actionsManagerScriptableObject.PerformAction(
+                    equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[0],
+                    this,
+                    statsManagerScriptableObject.GetStat(Stats.StatID.STR),
+                    (Actions.DamageInstance.DamageInstanceType)damageType,
+                    (Actions.DamageInstance.DamageInstanceElement)primaryActionElement
+                );
+            }
+            else
+            {
+                actionsManagerScriptableObject.PerformAction(
+                    equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[1],
+                    this,
+                    statsManagerScriptableObject.GetStat(Stats.StatID.STR),
+                    (Actions.DamageInstance.DamageInstanceType)damageType,
+                    (Actions.DamageInstance.DamageInstanceElement)primaryActionElement
+                );
+            }
+        }
+        #endregion
     }
 }

@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default Character Stats Manager ScriptableObject
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 31e5cb4bbf6bcdd4ba1e1e00463503f1, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.size
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[0].parent
+    value: 
+    objectReference: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[0].statID
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[0].value._baseValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[0].value._modifiedValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[1].parent
+    value: 
+    objectReference: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[1].statID
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[1].value._baseValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[1].value._modifiedValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[2].parent
+    value: 
+    objectReference: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[2].statID
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[2].value._baseValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[2].value._modifiedValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[3].parent
+    value: 
+    objectReference: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[3].statID
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[3].value._baseValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[3].value._modifiedValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[4].parent
+    value: 
+    objectReference: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[4].statID
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[4].value._baseValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[4].value._modifiedValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[5].parent
+    value: 
+    objectReference: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[5].statID
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[5].value._baseValue
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: statArray.Array.data[5].value._modifiedValue
+    value: 0
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
