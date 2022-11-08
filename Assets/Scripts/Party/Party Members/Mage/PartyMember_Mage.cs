@@ -119,6 +119,7 @@ namespace Manapotion.PartySystem
                 actionsManagerScriptableObject.PerformAction(
                     equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[0],
                     this,
+                    pointsManagerScriptableObject.GetPoint(Stats.PointID.Manapoints).value,
                     statsManagerScriptableObject.GetStat(Stats.StatID.INT),
                     (Actions.DamageInstance.DamageInstanceType)damageType,
                     (Actions.DamageInstance.DamageInstanceElement)primaryActionElement
@@ -129,6 +130,7 @@ namespace Manapotion.PartySystem
                 actionsManagerScriptableObject.PerformAction(
                     equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[1],
                     this,
+                    pointsManagerScriptableObject.GetPoint(Stats.PointID.Manapoints).value,
                     statsManagerScriptableObject.GetStat(Stats.StatID.INT),
                     (Actions.DamageInstance.DamageInstanceType)damageType,
                     (Actions.DamageInstance.DamageInstanceElement)secondaryActionElement

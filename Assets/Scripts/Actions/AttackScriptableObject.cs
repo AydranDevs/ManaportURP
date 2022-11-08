@@ -37,17 +37,6 @@ namespace Manapotion.Actions
                     damageInstanceAmount = (float)stat.value.modifiedValue
                 }
             ));
-
-            // Transform projectile = Instantiate(PREFAB_projectile, member.transform.position, Quaternion.identity);
-            // projectile.GetComponent<ProjectileInstance>().Setup(
-            //     ((Vector3)member.inputProvider.GetState().targetPos - member.transform.position).normalized,
-            //     new DamageInstance
-            //     {
-            //         damageInstanceType = type,
-            //         damageInstanceElement = element,
-            //         damageInstanceAmount = (float)stat.value.modifiedValue
-            //     }
-            // );
         }
     }
 }

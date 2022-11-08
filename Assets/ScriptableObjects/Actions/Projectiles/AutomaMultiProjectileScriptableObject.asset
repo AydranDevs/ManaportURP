@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8d0ddd2e629d348ada1675ec077783, type: 3}
   m_Name: AutomaMultiProjectileScriptableObject
   m_EditorClassIdentifier: 
-  PREFAB_projectile: {fileID: 5044041582067445018, guid: cee63864710c1c14587d8bfe3eca3553, type: 3}
+  projectileElementPrefabsScriptableObject: {fileID: 0}
   projectileCount: 3
+  staggeredShots: 1
   fireRate_base: 0.1
   fireRate_affectorStat: 3
   fireRate_affectorFactor: 0.01
