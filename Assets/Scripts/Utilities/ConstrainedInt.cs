@@ -62,5 +62,11 @@ namespace Manapotion.Utilities
 
             ValueChangedEvent.Invoke(_currentValue, _maxValue);
         }
+
+        public bool CanSubtract(int subtrahend)
+        {
+            var cv = _currentValue;
+            return cv - subtrahend > 0;
+        }
     }
 }

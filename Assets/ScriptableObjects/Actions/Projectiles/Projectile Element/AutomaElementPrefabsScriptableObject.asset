@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d78cb921b95d141ae5fdd8bd13199f, type: 3}
+  m_Name: AutomaElementPrefabsScriptableObject
+  m_EditorClassIdentifier: 
+  PREFAB_arcaneProjectile: {fileID: 5044041582067445018, guid: cee63864710c1c14587d8bfe3eca3553, type: 3}
+  PREFAB_pyroProjectile: {fileID: 6700740985639937207, guid: a70c4fe4c3df2634b86e4343a8dc61af, type: 3}
+  PREFAB_cryoProjectile: {fileID: 6740124753434496821, guid: 091e556944b5c6e43a4fd8a95b480834, type: 3}
+  PREFAB_toxiProjectile: {fileID: 5042890343888349592, guid: 3f586f10ae8fa594ea25e3c693db52d6, type: 3}
+  PREFAB_voltProjectile: {fileID: 4928828678709623688, guid: a02cfb00c0564eb469427f9a008fc4f1, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointID: 1
   parent: {fileID: 11400000, guid: 10af1f5623318a74287a7aaf18cf60f5, type: 2}
-  value_maxValueModulator: 4
+  value_maxValueModulator: 3
   modulatorType: 0
   startAtMaxValue: 1
   value:

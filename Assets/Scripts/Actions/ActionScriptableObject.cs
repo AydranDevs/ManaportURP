@@ -13,6 +13,8 @@ namespace Manapotion.Actions
         public ActionID action_id;
         public string action_animationName;
 
+        [Header("Point Cost")]
+        public PointID costPointID;
         public int cost;
 
         public virtual IEnumerator PerformAction(PartyMember member)
@@ -26,11 +28,6 @@ namespace Manapotion.Actions
         }
 
         public virtual IEnumerator PerformAction(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
-        {
-            yield break;
-        }
-
-        public virtual IEnumerator PerformAction(PartyMember member, Utilities.ConstrainedInt afflictedPoint, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
             yield break;
         }

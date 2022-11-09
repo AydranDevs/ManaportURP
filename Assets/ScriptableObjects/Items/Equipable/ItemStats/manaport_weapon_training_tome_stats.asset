@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: manaport_weapon_training_tome_stats
   m_EditorClassIdentifier: 
   statArray:
-  - parent: {fileID: 0}
+  - parent: {fileID: 11400000}
     statID: 3
     value:
       _baseValue: 5
