@@ -117,7 +117,7 @@ namespace Manapotion.PartySystem
             if (action == 0)
             {
                 actionsManagerScriptableObject.PerformAction(
-                    equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[0],
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0],
                     this,
                     statsManagerScriptableObject.GetStat(Stats.StatID.INT),
                     (Actions.DamageInstance.DamageInstanceType)damageType,
@@ -127,7 +127,7 @@ namespace Manapotion.PartySystem
             else
             {
                 actionsManagerScriptableObject.PerformAction(
-                    equipmentScriptableObject.weapon.itemScriptableObject.attacks.attacksArray[1],
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1],
                     this,
                     statsManagerScriptableObject.GetStat(Stats.StatID.INT),
                     (Actions.DamageInstance.DamageInstanceType)damageType,

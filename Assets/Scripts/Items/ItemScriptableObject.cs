@@ -17,8 +17,9 @@ namespace Manapotion.Items
         public bool equipable;
 
         public int[] charIDsThatCanEquip;
-        public StatsManagerScriptableObject stats;
 
-        public AttacksManagerScriptableObject attacks;
+        // managers
+        public StatsManagerScriptableObject statsManagerScriptableObject;
+        public AttacksManagerScriptableObject attacksManagerScriptableObject;
     }
 }

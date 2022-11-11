@@ -5,10 +5,15 @@ using Manapotion.Stats;
 
 namespace Manapotion.Actions
 {
+    /// <summary>
+    /// Class for managing actions.
+    /// </summary>
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New ActionsManagerScriptableObject")]
     public class ActionsManagerScriptableObject : ScriptableObject
     {
-        // holds every possible action that the character can use
+        /// <summary>
+        /// Holds every action a character could possibly use.
+        /// </summary>
         public List<ActionScriptableObject> possibleActions;
 
         /// <summary>

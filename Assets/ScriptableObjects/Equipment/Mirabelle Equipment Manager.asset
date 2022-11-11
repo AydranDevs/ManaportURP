@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88230d4e0c9c4b4eb7144c8d3091c0a, type: 3}
-  m_Name: WinsleyEquipment
+  m_Script: {fileID: 11500000, guid: 1b68062ea4e613f49804a433b4072d60, type: 3}
+  m_Name: Mirabelle Equipment Manager
   m_EditorClassIdentifier: 
-  <charID>k__BackingField: 2
+  charID: 1
   weapon:
     itemScriptableObject: {fileID: 0}
     amount: 0
@@ -22,4 +22,4 @@ MonoBehaviour:
   vanity:
     itemScriptableObject: {fileID: 0}
     amount: 0
-  partyBagSciptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}
+  partyBagSciptableObject: {fileID: 0}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Manapotion.PartySystem;
-using Manapotion.UI;
+using Manapotion.Items;
 using CodeMonkey.Utils;
 
 namespace Manapotion.UI
@@ -18,11 +18,11 @@ namespace Manapotion.UI
         private BagScriptableObject _bagScriptableObject;
         
         [field: SerializeField]
-        private EquipmentScriptableObject _laurieEquipmentScriptableObject;
+        private EquipmentManagerScriptableObject _laurieEquipmentScriptableObject;
         [field: SerializeField]
-        private EquipmentScriptableObject _mirabelleEquipmentScriptableObject;
+        private EquipmentManagerScriptableObject _mirabelleEquipmentScriptableObject;
         [field: SerializeField]
-        private EquipmentScriptableObject _winsleyEquipmentScriptableObject;
+        private EquipmentManagerScriptableObject _winsleyEquipmentScriptableObject;
 
         [System.Serializable]
         private struct UISpriteSet
@@ -86,21 +86,17 @@ namespace Manapotion.UI
         private AudioSource audioSource;
 
         private void Awake() {
-            _laurieEquipmentScriptableObject.bagItemEquippedEvent.AddListener(SetEquipmentSlotData);
-            _mirabelleEquipmentScriptableObject.bagItemEquippedEvent.AddListener(SetEquipmentSlotData);
-            _winsleyEquipmentScriptableObject.bagItemEquippedEvent.AddListener(SetEquipmentSlotData);
-            
-            _laurieEquipmentScriptableObject.bagItemEquippedEvent.AddListener(PlayEquipSound);
-            _mirabelleEquipmentScriptableObject.bagItemEquippedEvent.AddListener(PlayEquipSound);
-            _winsleyEquipmentScriptableObject.bagItemEquippedEvent.AddListener(PlayEquipSound);
+            _laurieEquipmentScriptableObject.BagItemEquippedEvent += BagItemEquippedEvent_RefreshUI;
+            _mirabelleEquipmentScriptableObject.BagItemEquippedEvent += BagItemEquippedEvent_RefreshUI;
+            _winsleyEquipmentScriptableObject.BagItemEquippedEvent += BagItemEquippedEvent_RefreshUI;
             
             Party.OnPartyLeaderChangedEvent.AddListener((PartyMember pm) => {
-                SetEquipmentSlotData(pm.equipmentScriptableObject);
+                SetEquipmentSlotData(pm.equipmentManagerScriptableObject);
             });
         }
 
         private void Start() {
-            SetEquipmentSlotData(Party.GetCurrentLeader().equipmentScriptableObject);
+            SetEquipmentSlotData(Party.GetCurrentLeader().equipmentManagerScriptableObject);
 
             foreach (var img in normals)
             {
@@ -120,6 +116,13 @@ namespace Manapotion.UI
             }
         }
 
+        // subscribes to BagItemEquippedEvent
+        private void BagItemEquippedEvent_RefreshUI(object sender, EquipmentManagerScriptableObject.BagItemEquippedEventArgs e)
+        {
+            SetEquipmentSlotData(e.equipmentManagerScriptableObject);
+            PlayEquipSound();
+        }
+        
         protected override void Abstract_Show()
         {
             main.dimmer.FadeOut();
@@ -153,7 +156,7 @@ namespace Manapotion.UI
             Party.SetLeaderChangeOverride(false);
         }
 
-        private void PlayEquipSound(EquipmentScriptableObject equipmentScriptable)
+        private void PlayEquipSound()
         {
             if (equipSoundClip != null || audioSource != null)
             {
@@ -162,7 +165,7 @@ namespace Manapotion.UI
             }
         }
 
-        private void SetEquipmentSlotData(EquipmentScriptableObject equipmentScriptable)
+        private void SetEquipmentSlotData(EquipmentManagerScriptableObject equipmentManagerScriptableObject)
         {
             var vimg = _vanitySlot.Find("VanityImage").GetComponent<Image>();
             var aimg = _armourSlot.Find("ArmourImage").GetComponent<Image>();
@@ -172,26 +175,26 @@ namespace Manapotion.UI
             aimg.sprite = _armourSlotSprite;
             wimg.sprite = _weaponSlotSprite;
             
-            if (equipmentScriptable.vanity.itemScriptableObject != null)
-                vimg.sprite = equipmentScriptable.vanity.itemScriptableObject.itemSprite;
-            if (equipmentScriptable.armour.itemScriptableObject != null)
-                aimg.sprite = equipmentScriptable.armour.itemScriptableObject.itemSprite;
-            if (equipmentScriptable.weapon.itemScriptableObject != null)
-                wimg.sprite = equipmentScriptable.weapon.itemScriptableObject.itemSprite;
+            if (equipmentManagerScriptableObject?.vanity?.itemScriptableObject != null)
+                vimg.sprite = equipmentManagerScriptableObject.vanity.itemScriptableObject.itemSprite;
+            if (equipmentManagerScriptableObject?.armour?.itemScriptableObject != null)
+                aimg.sprite = equipmentManagerScriptableObject.armour.itemScriptableObject.itemSprite;
+            if (equipmentManagerScriptableObject?.weapon?.itemScriptableObject != null)
+                wimg.sprite = equipmentManagerScriptableObject.weapon.itemScriptableObject.itemSprite;
 
             VanitySlotRightClick = delegate()
             {
                 int charIDOrigin = Party.GetPartyMemberIndex(Party.GetCurrentLeader());
                 ContextMenuHandler.Show(ContextMenuType.ContextMenu);
                 
-                ContextMenuHandler.SetTitle(equipmentScriptable.vanity.ToString());
-                ContextMenuHandler.SetSubtitle(equipmentScriptable.vanity.itemScriptableObject.itemCategory.ToString());
-                ContextMenuHandler.SetBody(equipmentScriptable.vanity.itemScriptableObject.itemDescription);
+                ContextMenuHandler.SetTitle(equipmentManagerScriptableObject.vanity.ToString());
+                ContextMenuHandler.SetSubtitle(equipmentManagerScriptableObject.vanity.itemScriptableObject.itemCategory.ToString());
+                ContextMenuHandler.SetBody(equipmentManagerScriptableObject.vanity.itemScriptableObject.itemDescription);
 
                 // Add the option to unequip the equipable
                 ContextMenuHandler.AddOption("Un-Equip", () => {
-                    equipmentScriptable.UnequipItem(equipmentScriptable.vanity);
-                    SetEquipmentSlotData(equipmentScriptable);
+                    equipmentManagerScriptableObject.UnequipItem(equipmentManagerScriptableObject.vanity);
+                    SetEquipmentSlotData(equipmentManagerScriptableObject);
                     ContextMenuHandler.Hide();
 
                     if (unequipSoundClip != null || audioSource != null)
@@ -202,7 +205,7 @@ namespace Manapotion.UI
                 });
 
                 ContextMenuHandler.AddOption("Upgrade", () => {
-                    Debug.Log("Upgrading " + equipmentScriptable.vanity.ToString() + " !!!");
+                    Debug.Log("Upgrading " + equipmentManagerScriptableObject.vanity.ToString() + " !!!");
                     UpgradeState();
                     ContextMenuHandler.Hide();
                 });
@@ -212,14 +215,14 @@ namespace Manapotion.UI
                 int charIDOrigin = Party.GetPartyMemberIndex(Party.GetCurrentLeader());
                 ContextMenuHandler.Show(ContextMenuType.ContextMenu);
 
-                ContextMenuHandler.SetTitle(equipmentScriptable.armour.ToString());
-                ContextMenuHandler.SetSubtitle(equipmentScriptable.armour.itemScriptableObject.itemCategory.ToString());
-                ContextMenuHandler.SetBody(equipmentScriptable.armour.itemScriptableObject.itemDescription);
+                ContextMenuHandler.SetTitle(equipmentManagerScriptableObject.armour.ToString());
+                ContextMenuHandler.SetSubtitle(equipmentManagerScriptableObject.armour.itemScriptableObject.itemCategory.ToString());
+                ContextMenuHandler.SetBody(equipmentManagerScriptableObject.armour.itemScriptableObject.itemDescription);
 
                 // Add the option to unequip the equipable
                 ContextMenuHandler.AddOption("Un-Equip", () => {
-                    equipmentScriptable.UnequipItem(equipmentScriptable.armour);
-                    SetEquipmentSlotData(equipmentScriptable);
+                    equipmentManagerScriptableObject.UnequipItem(equipmentManagerScriptableObject.armour);
+                    SetEquipmentSlotData(equipmentManagerScriptableObject);
                     ContextMenuHandler.Hide();
 
                     if (unequipSoundClip != null || audioSource != null)
@@ -230,7 +233,7 @@ namespace Manapotion.UI
                 });
 
                 ContextMenuHandler.AddOption("Upgrade", () => {
-                    Debug.Log("Upgrading " + equipmentScriptable.armour.ToString() + " !!!");
+                    Debug.Log("Upgrading " + equipmentManagerScriptableObject.armour.ToString() + " !!!");
                     UpgradeState();
                     ContextMenuHandler.Hide();
                 });
@@ -240,14 +243,14 @@ namespace Manapotion.UI
                 int charIDOrigin = Party.GetPartyMemberIndex(Party.GetCurrentLeader());
                 ContextMenuHandler.Show(ContextMenuType.ContextMenu);
 
-                ContextMenuHandler.SetTitle(equipmentScriptable.weapon.ToString());
-                ContextMenuHandler.SetSubtitle(equipmentScriptable.weapon.itemScriptableObject.itemCategory.ToString());
-                ContextMenuHandler.SetBody(equipmentScriptable.weapon.itemScriptableObject.itemDescription);
+                ContextMenuHandler.SetTitle(equipmentManagerScriptableObject.weapon.ToString());
+                ContextMenuHandler.SetSubtitle(equipmentManagerScriptableObject.weapon.itemScriptableObject.itemCategory.ToString());
+                ContextMenuHandler.SetBody(equipmentManagerScriptableObject.weapon.itemScriptableObject.itemDescription);
 
                 // Add the option to unequip the equipable
                 ContextMenuHandler.AddOption("Un-Equip", () => {
-                    equipmentScriptable.UnequipItem(equipmentScriptable.weapon);
-                    SetEquipmentSlotData(equipmentScriptable);
+                    equipmentManagerScriptableObject.UnequipItem(equipmentManagerScriptableObject.weapon);
+                    SetEquipmentSlotData(equipmentManagerScriptableObject);
                     ContextMenuHandler.Hide();
 
                     if (unequipSoundClip != null || audioSource != null)
@@ -258,7 +261,7 @@ namespace Manapotion.UI
                 });
 
                 ContextMenuHandler.AddOption("Upgrade", () => {
-                    Debug.Log("Upgrading " + equipmentScriptable.weapon.ToString() + " !!!");
+                    Debug.Log("Upgrading " + equipmentManagerScriptableObject.weapon.ToString() + " !!!");
                     UpgradeState();
                     ContextMenuHandler.Hide();
                 });
@@ -271,8 +274,8 @@ namespace Manapotion.UI
                     ContextMenuHandler.Show(ContextMenuType.Tooltip);
                 }
                 
-                ContextMenuHandler.SetTitle(equipmentScriptable.vanity.ToString());
-                ContextMenuHandler.SetSubtitle(equipmentScriptable.vanity.itemScriptableObject.itemCategory.ToString());
+                ContextMenuHandler.SetTitle(equipmentManagerScriptableObject.vanity.ToString());
+                ContextMenuHandler.SetSubtitle(equipmentManagerScriptableObject.vanity.itemScriptableObject.itemCategory.ToString());
             };
             ArmourSlotHover = delegate()
             {
@@ -281,8 +284,8 @@ namespace Manapotion.UI
                     ContextMenuHandler.Show(ContextMenuType.Tooltip);
                 }
                 
-                ContextMenuHandler.SetTitle(equipmentScriptable.armour.ToString());
-                ContextMenuHandler.SetSubtitle(equipmentScriptable.armour.itemScriptableObject.itemCategory.ToString());
+                ContextMenuHandler.SetTitle(equipmentManagerScriptableObject.armour.ToString());
+                ContextMenuHandler.SetSubtitle(equipmentManagerScriptableObject.armour.itemScriptableObject.itemCategory.ToString());
             };
             WeaponSlotHover = delegate()
             {
@@ -291,11 +294,11 @@ namespace Manapotion.UI
                     ContextMenuHandler.Show(ContextMenuType.Tooltip);
                 }
                 
-                ContextMenuHandler.SetTitle(equipmentScriptable.weapon.ToString());
-                ContextMenuHandler.SetSubtitle(equipmentScriptable.weapon.itemScriptableObject.itemCategory.ToString());
+                ContextMenuHandler.SetTitle(equipmentManagerScriptableObject.weapon.ToString());
+                ContextMenuHandler.SetSubtitle(equipmentManagerScriptableObject.weapon.itemScriptableObject.itemCategory.ToString());
             };
 
-            if (equipmentScriptable.vanity.itemScriptableObject != null)
+            if (equipmentManagerScriptableObject?.vanity?.itemScriptableObject != null)
             {
                 _vanitySlot.GetComponent<Button_UI>().MouseRightClickFunc += VanitySlotRightClick;
                 _vanitySlot.GetComponent<Button_UI>().MouseOverFunc += VanitySlotHover;
@@ -312,7 +315,7 @@ namespace Manapotion.UI
                 _vanitySlot.GetComponent<Button_UI>().MouseOverFunc = null;
                 _vanitySlot.GetComponent<Button_UI>().MouseOutOnceFunc = null;
             }
-            if (equipmentScriptable.armour.itemScriptableObject != null)
+            if (equipmentManagerScriptableObject?.armour?.itemScriptableObject != null)
             {
                 _armourSlot.GetComponent<Button_UI>().MouseRightClickFunc += ArmourSlotRightClick;
                 _armourSlot.GetComponent<Button_UI>().MouseOverFunc += ArmourSlotHover;
@@ -329,7 +332,7 @@ namespace Manapotion.UI
                 _armourSlot.GetComponent<Button_UI>().MouseOverFunc = null;
                 _armourSlot.GetComponent<Button_UI>().MouseOutOnceFunc = null;
             }
-            if (equipmentScriptable.weapon.itemScriptableObject != null)
+            if (equipmentManagerScriptableObject?.weapon?.itemScriptableObject != null)
             {
                 _weaponSlot.GetComponent<Button_UI>().MouseRightClickFunc += WeaponSlotRightClick;
                 _weaponSlot.GetComponent<Button_UI>().MouseOverFunc += WeaponSlotHover;

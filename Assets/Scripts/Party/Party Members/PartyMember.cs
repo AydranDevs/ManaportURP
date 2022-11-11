@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Manapotion;
+using Manapotion.Items;
 using Manapotion.StatusEffects;
 using Manapotion.Actions;
 using Manapotion.Stats;
@@ -48,27 +48,27 @@ namespace Manapotion.PartySystem
     public class PartyMember : MonoBehaviour
     {
         #region Events
-        public static event EventHandler<OnAbilityChangedEventArgs> OnAbilityChanged;
+        public static event EventHandler<OnAbilityChangedEventArgs> OnAbilityChangedEvent;
         public class OnAbilityChangedEventArgs : EventArgs
         {
             public int index;
             public Sprite sprite;
         }
-        public static event EventHandler<OnCoolingDownEventArgs> OnCoolingDown;
+        public static event EventHandler<OnCoolingDownEventArgs> OnCoolingDownEvent;
         public class OnCoolingDownEventArgs : EventArgs
         {
             public int index;
             public float cooldownTime;
             public float cooldown;
         }
-        public static event EventHandler<OnAbilityLockChangedEventArgs> OnAbilityLockChanged;
+        public static event EventHandler<OnAbilityLockChangedEventArgs> OnAbilityLockChangedEvent;
         public class OnAbilityLockChangedEventArgs : EventArgs
         {
             public int index;
             public bool isLocked;
         }
 
-        public static event EventHandler<OnUpdateHealthBarEventArgs> OnUpdateHealthBar;
+        public static event EventHandler<OnUpdateHealthBarEventArgs> OnUpdateHealthBarEvent;
         public class OnUpdateHealthBarEventArgs : EventArgs
         {
             public float health;
@@ -84,8 +84,10 @@ namespace Manapotion.PartySystem
         public PartyMemberState partyMemberState;
         public StatusEffectParticles statusEffectParticles;
 
+        [Header("Manager ScriptableObjects")]
         public ActionsManagerScriptableObject actionsManagerScriptableObject;
         public StatsManagerScriptableObject statsManagerScriptableObject;
+        public EquipmentManagerScriptableObject equipmentManagerScriptableObject;
         
         [SerializeField]
         private List<GameObject> _statusEffectParticles;
@@ -102,21 +104,11 @@ namespace Manapotion.PartySystem
         public DamageType damageType;
 
         [field: SerializeField]
-        public EquipmentScriptableObject equipmentScriptableObject { get; private set; }
-
-        public PointsManagerScriptableObject pointsManagerScriptableObject;
-
-        [field: SerializeField]
         public PartyMemberStats stats { get; protected set; }
         
         private void Start()
         {
             ManaBehaviour.OnUpdate += Update;
-
-            foreach (var point in pointsManagerScriptableObject.pointsArray)
-            {
-                pointsManagerScriptableObject.InitializePoint(point, statsManagerScriptableObject);
-            }
 
             stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
             stats.manaport_stat_manapoints.SetMaxValue(stats.manaport_stat_max_manapoints.GetValue());
@@ -141,7 +133,7 @@ namespace Manapotion.PartySystem
         #region Update Ability Icons
         public void UpdateAbilityIcons(int i, Sprite sp)
         {
-            OnAbilityChanged?.Invoke(this, new OnAbilityChangedEventArgs
+            OnAbilityChangedEvent?.Invoke(this, new OnAbilityChangedEventArgs
             {
                 index = i,
                 sprite = sp
@@ -150,7 +142,7 @@ namespace Manapotion.PartySystem
 
         public void UpdateAbilityIconCooldown(int i, float cooldownTime, float cooldown)
         {
-            OnCoolingDown?.Invoke(this, new OnCoolingDownEventArgs
+            OnCoolingDownEvent?.Invoke(this, new OnCoolingDownEventArgs
             {
                 index = i,
                 
@@ -161,7 +153,7 @@ namespace Manapotion.PartySystem
 
         public void UpdateAbilityIconLock(int i, bool locked)
         {
-            OnAbilityLockChanged?.Invoke(this, new OnAbilityLockChangedEventArgs
+            OnAbilityLockChangedEvent?.Invoke(this, new OnAbilityLockChangedEventArgs
             {
                 index = i,
                 isLocked = locked
@@ -172,7 +164,7 @@ namespace Manapotion.PartySystem
         #region Update Status Bars
         private void UpdateHealthBar(float health, float maxHealth)
         {
-            OnUpdateHealthBar?.Invoke(this, new OnUpdateHealthBarEventArgs
+            OnUpdateHealthBarEvent?.Invoke(this, new OnUpdateHealthBarEventArgs
             {
                 health = health,
                 maxHealth = maxHealth

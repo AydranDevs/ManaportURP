@@ -41,11 +41,11 @@ namespace Manapotion.UI
             statusBars = new StatusBarData[2];
             InitStatusBars();
 
-            PartyMember.OnAbilityChanged += OnAbilityChanged_SetIconImage;
-            PartyMember.OnCoolingDown += OnCoolingDown_SetIconCooldown;
-            PartyMember.OnAbilityLockChanged += OnAbilityLockChanged_SetLockState;
+            PartyMember.OnAbilityChangedEvent += OnAbilityChanged_SetIconImage;
+            PartyMember.OnCoolingDownEvent += OnCoolingDown_SetIconCooldown;
+            PartyMember.OnAbilityLockChangedEvent += OnAbilityLockChanged_SetLockState;
 
-            PartyMember.OnUpdateHealthBar += OnUpdateHealthBar_UpdateHealthBar;
+            PartyMember.OnUpdateHealthBarEvent += OnUpdateHealthBar_UpdateHealthBar;
             PartyMember_Mage.OnUpdateManaBar += OnUpdateManaBar_UpdateManaBar;
             PartyMember_Fighter.OnUpdateStaminaBar += OnUpdateStaminaBar_UpdateStaminaBar;
             PartyMember_Healer.OnUpdateRemedyBar += OnUpdateRemedyBar_UpdateRemedyBar;

@@ -1,5 +1,8 @@
 namespace Manapotion.Actions
 {
+    /// <summary>
+    /// Enum that holds all Action IDs
+    /// </summary>
     public enum ActionID
     {
         Burston,

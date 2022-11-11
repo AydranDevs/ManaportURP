@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -242,9 +242,9 @@ MonoBehaviour:
   - {fileID: 185920693}
   main: {fileID: 608878302}
   _bagScriptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}
-  _laurieEquipmentScriptableObject: {fileID: 11400000, guid: f3fcbbf518c0ad44cb30c0fb2955bb63, type: 2}
-  _mirabelleEquipmentScriptableObject: {fileID: 11400000, guid: f3e3690b0e46c29468291d9c07840e36, type: 2}
-  _winsleyEquipmentScriptableObject: {fileID: 11400000, guid: 7777adf2fb3f09449b27cffbf9309b0a, type: 2}
+  _laurieEquipmentScriptableObject: {fileID: 11400000, guid: 961a349f64a343f4f9e2110a9b571d61, type: 2}
+  _mirabelleEquipmentScriptableObject: {fileID: 11400000, guid: 2c336bd7f2f86a4439b0c6f7cba0b83f, type: 2}
+  _winsleyEquipmentScriptableObject: {fileID: 11400000, guid: 8cce2686ff410834cbdbee1210de9a77, type: 2}
   _metalSpriteSet:
     normal: {fileID: 21300000, guid: c5500e34ee6f3894fbe579d90a93f537, type: 3}
     light: {fileID: 21300000, guid: ee8d951247513484bba5ad1af2a1e5c0, type: 3}
@@ -1955,6 +1955,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6a7bf6940676c6c42b56a26ac988d51d, type: 2}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: equipmentManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cce2686ff410834cbdbee1210de9a77, type: 2}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: 7777adf2fb3f09449b27cffbf9309b0a, type: 2}
@@ -2023,6 +2027,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f5249bb5fe0f09943a0e93344fd1e006, type: 2}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: equipmentManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 2c336bd7f2f86a4439b0c6f7cba0b83f, type: 2}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
       objectReference: {fileID: 11400000, guid: f3e3690b0e46c29468291d9c07840e36, type: 2}
@@ -2074,6 +2082,10 @@ PrefabInstance:
       propertyPath: pointsManagerScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: 10af1f5623318a74287a7aaf18cf60f5, type: 2}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: equipmentManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 961a349f64a343f4f9e2110a9b571d61, type: 2}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 

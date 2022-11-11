@@ -22,9 +22,9 @@ namespace Manapotion.PartySystem
 
         public BagScriptableObject bagScriptableObject;
 
-        public EquipmentScriptableObject laurieEquipmentScriptableObject;
-        public EquipmentScriptableObject mirabelleEquipmentScriptableObject;
-        public EquipmentScriptableObject winsleyEquipmentScriptableObject;
+        // public EquipmentManagerScriptableObject laurieEquipmentScriptableObject;
+        // public EquipmentManagerScriptableObject mirabelleEquipmentScriptableObject;
+        // public EquipmentManagerScriptableObject winsleyEquipmentScriptableObject;
 
         [SerializeField] private InputActionAsset _controls;
         private InputActionMap _inputActionMap;

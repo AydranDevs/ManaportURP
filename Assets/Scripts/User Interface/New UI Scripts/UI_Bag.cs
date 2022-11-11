@@ -15,11 +15,11 @@ namespace Manapotion.UI
         private BagScriptableObject _bagScriptableObject;
 
         [SerializeField]
-        private EquipmentScriptableObject _laurieEquipmentScriptableObject;
+        private EquipmentManagerScriptableObject _laurieEquipmentScriptableObject;
         [SerializeField]
-        private EquipmentScriptableObject _mirabelleEquipmentScriptableObject;
+        private EquipmentManagerScriptableObject _mirabelleEquipmentScriptableObject;
         [SerializeField]
-        private EquipmentScriptableObject _winsleyEquipmentScriptableObject;
+        private EquipmentManagerScriptableObject _winsleyEquipmentScriptableObject;
 
         [SerializeField]
         private Transform bagItemSlotContainer;
@@ -153,7 +153,7 @@ namespace Manapotion.UI
                                             "Equip <size=75%><alpha=#44>(on {0}?)",
                                             Party.GetCurrentLeader().gameObject.name),
                                         () => {
-                                            Party.GetCurrentLeader().equipmentScriptableObject.EquipItem(
+                                            Party.GetCurrentLeader().equipmentManagerScriptableObject.EquipItem(
                                                 new Item
                                                 { 
                                                     itemScriptableObject = item.itemScriptableObject,
@@ -196,7 +196,7 @@ namespace Manapotion.UI
                                             "Equip <size=75%><alpha=#44>(on {0}?)",
                                             Party.GetCurrentLeader().gameObject.name),
                                         () => {
-                                            Party.GetCurrentLeader().equipmentScriptableObject.EquipItem(
+                                            Party.GetCurrentLeader().equipmentManagerScriptableObject.EquipItem(
                                                 new Item
                                                 { 
                                                     itemScriptableObject = item.itemScriptableObject,
@@ -233,7 +233,7 @@ namespace Manapotion.UI
                                     "Equip <size=75%><alpha=#44>(on {0}?)",
                                     Party.GetCurrentLeader().gameObject.name),
                                 () => {
-                                    Party.GetCurrentLeader().equipmentScriptableObject.EquipItem(
+                                    Party.GetCurrentLeader().equipmentManagerScriptableObject.EquipItem(
                                         new Item
                                         { 
                                             itemScriptableObject = item.itemScriptableObject,
