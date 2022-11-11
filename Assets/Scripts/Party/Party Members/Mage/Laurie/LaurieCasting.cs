@@ -405,42 +405,42 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
         public void PrimaryCast() 
         {
-            if (primarySpell != null) 
-            {
-                var direction = (_cursor.transform.position - _laurie.transform.position).normalized;
-                if (_laurie.ManaPointsAfterUse(primarySpell.cost) >= 0f) 
-                {
-                    if (!primarySpell.coolingDown) 
-                    {
-                        _laurie.UseMana(primarySpell.cost);
-                        primarySpell.Cast(direction, primaryElement);
-                    }
-                }
-                else
-                {
-                    // no more mana :(
-                }
-            }
+            // if (primarySpell != null) 
+            // {
+            //     var direction = (_cursor.transform.position - _laurie.transform.position).normalized;
+            //     if (_laurie.ManaPointsAfterUse(primarySpell.cost) >= 0f) 
+            //     {
+            //         if (!primarySpell.coolingDown) 
+            //         {
+            //             _laurie.UseMana(primarySpell.cost);
+            //             primarySpell.Cast(direction, primaryElement);
+            //         }
+            //     }
+            //     else
+            //     {
+            //         // no more mana :(
+            //     }
+            // }
         }
 
         public void SecondaryCast() 
         {
-            if (secondarySpell != null) 
-            {
-                var direction = (_cursor.transform.position - _laurie.transform.position).normalized;
-                if (_laurie.ManaPointsAfterUse(secondarySpell.cost) >= 0f)
-                {
-                    if (!secondarySpell.coolingDown) 
-                    {
-                        _laurie.UseMana(secondarySpell.cost);
-                        secondarySpell.Cast(direction, secondaryElement);
-                    }
-                }
-                else
-                {
-                    // no more mana :(
-                }
-            }
+        //     if (secondarySpell != null) 
+        //     {
+        //         var direction = (_cursor.transform.position - _laurie.transform.position).normalized;
+        //         if (_laurie.ManaPointsAfterUse(secondarySpell.cost) >= 0f)
+        //         {
+        //             if (!secondarySpell.coolingDown) 
+        //             {
+        //                 _laurie.UseMana(secondarySpell.cost);
+        //                 secondarySpell.Cast(direction, secondaryElement);
+        //             }
+        //         }
+        //         else
+        //         {
+        //             // no more mana :(
+        //         }
+        //     }
         }
     }
 }

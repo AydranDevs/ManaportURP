@@ -10,17 +10,14 @@ namespace Manapotion.Stats
         {
             for (int i = 0; i < statArray.Length; i++)
             {
-                statArray[i].value.Init();
+                statArray[i].Init();
+                statArray[i].OnStatModifiedEvent += StatModified;
             }
         }
 
-        public void StatModified(Stat stat)
+        public void StatModified(object sender, Stat.OnStatModifiedEventArgs e)
         {
-            Debug.Log(
-                string.Format(
-                    "{0} was modified. Value is now {1}", stat.statID, stat.value.modifiedValue
-                )
-            );
+            Debug.Log($"{e.statID} stat modified! base: {e.baseValue}, mod: {e.modifiedValue}");
         }
 
         public Stat GetStat(StatID statID)

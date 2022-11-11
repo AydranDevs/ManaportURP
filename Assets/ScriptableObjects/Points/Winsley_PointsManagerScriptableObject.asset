@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de250aae8df5b714ca39f2c3b09ba229, type: 3}
   m_Name: Winsley_PointsManagerScriptableObject
   m_EditorClassIdentifier: 
-  pointsArray: []
+  statsManagerScriptableObject: {fileID: 0}
+  pointsArray:
+  - {fileID: 11400000, guid: a014cdfd838ac1848ab0dc109ed10541, type: 2}
+  - {fileID: 11400000, guid: 9cf5a685388d0bf41b5ba7761efe20a3, type: 2}

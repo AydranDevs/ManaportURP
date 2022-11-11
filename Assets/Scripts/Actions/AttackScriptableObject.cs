@@ -14,7 +14,13 @@ namespace Manapotion.Actions
         
         public override IEnumerator PerformAction(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
-            Debug.Log("Attack '" + action_id + "' started.");
+            if (!member.pointsManagerScriptableObject.GetPointScriptableObject(costPointID).value.CanSubtract(cost))
+            {
+                // not enough points to use this attack
+                yield break;
+            }
+            
+            InvokeActionPerformedEvent();
             HandleAttack(member, stat, type, element);
             yield break;
         }

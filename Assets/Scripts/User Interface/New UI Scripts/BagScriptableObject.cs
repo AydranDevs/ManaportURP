@@ -57,7 +57,6 @@ public class BagScriptableObject : ScriptableObject
         }
         else
         {
-            Debug.Log("unstackable object(s) added to inventory (" + item.amount + " " + item.ToString() + "s.)");
             itemList.Add(itemToAdd);
         }
         bagItemListChangedEvent.Invoke();

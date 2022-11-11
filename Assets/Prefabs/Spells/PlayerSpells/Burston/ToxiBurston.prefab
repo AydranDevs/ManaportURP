@@ -9627,9 +9627,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1076952640063043630}
-  - component: {fileID: 8698311654378295136}
   - component: {fileID: 2166844470780892829}
   - component: {fileID: 2866361419082829776}
+  - component: {fileID: 6999408287240424166}
   m_Layer: 3
   m_Name: ToxiBurston
   m_TagString: Untagged
@@ -9653,28 +9653,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8698311654378295136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076952640063043624}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 601d432fa31e80f4f9a904471834bb9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisSpellProjectile: {fileID: 0}
-  rigidbody: {fileID: 0}
-  collider: {fileID: 0}
-  corePs: {fileID: 0}
-  trailPs: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
-  speed: 15
-  lifetime: 3
-  damage: 4
-  explosionPf: {fileID: 1314508669413792943, guid: 1da40370a8fd5624492bbc05ef4259a2, type: 3}
 --- !u!50 &2166844470780892829
 Rigidbody2D:
   serializedVersion: 4
@@ -9712,3 +9690,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15
+--- !u!114 &6999408287240424166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1076952640063043624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb864f70eb9b9d4297432412de38e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifetime: 10
+  particles:
+  - {fileID: 3827230215333883670}
+  - {fileID: 8664815774952684813}

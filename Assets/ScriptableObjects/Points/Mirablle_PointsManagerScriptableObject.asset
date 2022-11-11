@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de250aae8df5b714ca39f2c3b09ba229, type: 3}
   m_Name: Mirablle_PointsManagerScriptableObject
   m_EditorClassIdentifier: 
-  pointsArray: []
+  statsManagerScriptableObject: {fileID: 0}
+  pointsArray:
+  - {fileID: 11400000, guid: 6f91891bf754265468c71e9005ca51ad, type: 2}
+  - {fileID: 11400000, guid: 487b7969f7590bf46ba64b1bb01d36ea, type: 2}

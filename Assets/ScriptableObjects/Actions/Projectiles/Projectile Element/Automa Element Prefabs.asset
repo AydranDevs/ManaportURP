@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13d78cb921b95d141ae5fdd8bd13199f, type: 3}
-  m_Name: AutomaElementPrefabsScriptableObject
+  m_Name: Automa Element Prefabs
   m_EditorClassIdentifier: 
   PREFAB_arcaneProjectile: {fileID: 5044041582067445018, guid: cee63864710c1c14587d8bfe3eca3553, type: 3}
   PREFAB_pyroProjectile: {fileID: 6700740985639937207, guid: a70c4fe4c3df2634b86e4343a8dc61af, type: 3}

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using Manapotion.Attacking;
+using Manapotion.Stats;
 
 namespace Manapotion.PartySystem
 {
@@ -96,16 +97,23 @@ namespace Manapotion.PartySystem
             }
         }
 
-        public void UseStamina(float amount)
+        public void UseStamina(int amount)
         {
-            stats.manaport_stat_staminapoints.SetValue(stats.manaport_stat_staminapoints.GetValue() - amount);
+            if (!pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints).value.CanSubtract(amount))
+            {
+                // not enough stamina
+                return;
+            }
+
+            pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints).value.currentValue -= amount;
             _staminaRegenCoolingDown = true;
             _staminaRegenCooldown = STAMINA_REGEN_COOLDOWN_DEFUALT;
         }
 
-        public float StaminaPointsAfterUse(float amount)
+        public float StaminaPointsAfterUse(int amount)
         {
-            return stats.manaport_stat_staminapoints.GetValue() - amount;
+            var pt = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints);
+            return pt.value.currentValue - amount;
         }
         #endregion
 

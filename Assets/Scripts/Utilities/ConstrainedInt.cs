@@ -43,7 +43,8 @@ namespace Manapotion.Utilities
             } 
             set
             {
-                _maxValue = value;
+                this._maxValue = value;
+                MaxValueChanged();
             }
         }
 
@@ -63,10 +64,18 @@ namespace Manapotion.Utilities
             ValueChangedEvent.Invoke(_currentValue, _maxValue);
         }
 
+        public void MaxValueChanged()
+        {
+            if (_currentValue > _maxValue)
+            {
+                _currentValue = _maxValue;
+            }
+        }
+
         public bool CanSubtract(int subtrahend)
         {
             var cv = _currentValue;
-            return cv - subtrahend > 0;
+            return cv - subtrahend >= 0;
         }
     }
 }

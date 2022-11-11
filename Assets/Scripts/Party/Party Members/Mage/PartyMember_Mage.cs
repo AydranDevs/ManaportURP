@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using Manapotion.Stats;
+using Manapotion.Actions;
 
 namespace Manapotion.PartySystem
 {
@@ -30,8 +32,12 @@ namespace Manapotion.PartySystem
         protected override void Init()
         {
             ManaBehaviour.OnUpdate += Update;
+            for (int i = 0; i < actionsManagerScriptableObject.possibleActions.Count; i++)
+            {
+                actionsManagerScriptableObject.possibleActions[i].OnActionPerformedEvent += OnActionPerformedEvent_ActionPerformed;
+            }
 
-            _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.GetValue();
+            _manaRegenTimer = 2f;
             MaxMP();
 
             InitMember();
@@ -42,13 +48,21 @@ namespace Manapotion.PartySystem
 
         }
 
+        public void OnActionPerformedEvent_ActionPerformed(object sender, ActionScriptableObject.OnActionPerformedEventArgs e)
+        {
+            if (e.costPointID == PointID.Manapoints && e.cost > 0)
+            {
+                UseMana(e.cost);
+            }
+        }
+
         void Update()
         {
             if (manaRegenCoolingDown)
             {
                 CoolDownManaRegen();
             }
-            if (!manaRegenCoolingDown && stats.manaport_stat_manapoints.GetValue() < stats.manaport_stat_max_manapoints.GetValue())
+            if (!manaRegenCoolingDown && pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints).value.currentValue < pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints).value.maxValue)
             {
                 RegenMP();
             }
@@ -60,7 +74,7 @@ namespace Manapotion.PartySystem
 
             // anything that updates UI should go below this.
 
-            UpdateManaBar(stats.manaport_stat_manapoints.GetValue(), stats.manaport_stat_max_manapoints.GetValue());
+            UpdateManaBar(pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints).value.currentValue, pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints).value.maxValue);
         }
 
         #region Mana Point Management
@@ -75,7 +89,8 @@ namespace Manapotion.PartySystem
 
         public void MaxMP()
         {
-            stats.manaport_stat_manapoints.Max();
+            var pt = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints);
+            pt.value.currentValue = pt.value.maxValue;
         }
         
         public void RegenMP()
@@ -83,8 +98,9 @@ namespace Manapotion.PartySystem
             _manaRegenTimer = _manaRegenTimer - Time.deltaTime;
             if (_manaRegenTimer <= 0f)
             {
-                stats.manaport_stat_manapoints.SetValue(stats.manaport_stat_manapoints.GetValue() + stats.manaport_stat_manapoints_regen_amount.GetValue());
-                _manaRegenTimer = stats.manaport_stat_manapoints_regen_rate.GetValue();
+                var pt = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints);
+                pt.SetValue(pt.value.currentValue + 1);
+                _manaRegenTimer = 2f;
             }
         }
 
@@ -98,16 +114,23 @@ namespace Manapotion.PartySystem
             }
         }
 
-        public void UseMana(float amount)
+        public void UseMana(int amount)
         {
-            stats.manaport_stat_manapoints.SetValue(stats.manaport_stat_manapoints.GetValue() - amount);
+            if (!pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints).value.CanSubtract(amount))
+            {
+                // not enough mana
+                return;
+            }
+
+            pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints).value.currentValue -= amount;
             manaRegenCoolingDown = true;
             manaRegenCooldown = MANA_REGEN_COOLDOWN_DEFUALT;
         }
         
-        public float ManaPointsAfterUse(float amount)
+        public float ManaPointsAfterUse(int amount)
         {
-            return stats.manaport_stat_manapoints.GetValue() - amount;
+            var pt = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Manapoints);
+            return pt.value.currentValue - amount;
         }
         #endregion
 

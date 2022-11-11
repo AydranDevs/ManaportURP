@@ -9627,9 +9627,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 442811730796009265}
-  - component: {fileID: 442811730796009224}
   - component: {fileID: 1640745972188494210}
   - component: {fileID: 3391325771448033487}
+  - component: {fileID: 3497331904846108777}
   m_Layer: 3
   m_Name: PyroBurston
   m_TagString: Untagged
@@ -9650,33 +9650,9 @@ Transform:
   m_Children:
   - {fileID: 442811729610341995}
   - {fileID: 442811730674972377}
-  - {fileID: 7014943999653019436}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &442811730796009224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 442811730796009271}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4971230f26be0d441bede46a814b78f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisSpellProjectile: {fileID: 0}
-  rigidbody: {fileID: 0}
-  collider: {fileID: 0}
-  corePs: {fileID: 0}
-  trailPs: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
-  speed: 15
-  lifetime: 3
-  damage: 4
-  light: {fileID: 6776874307458506915}
-  explosionPf: {fileID: 1995552136442058437, guid: 3bae008d487a5a14bb32f2e1053a8935, type: 3}
 --- !u!50 &1640745972188494210
 Rigidbody2D:
   serializedVersion: 4
@@ -9714,75 +9690,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15
---- !u!1 &6776874307458506915
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7014943999653019436}
-  - component: {fileID: 8527744906246268553}
-  m_Layer: 3
-  m_Name: Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7014943999653019436
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776874307458506915}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 442811730796009265}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8527744906246268553
+--- !u!114 &3497331904846108777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6776874307458506915}
+  m_GameObject: {fileID: 442811730796009271}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bb864f70eb9b9d4297432412de38e6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.65
-  m_Color: {r: 1, g: 0.62812304, b: 0.13679248, a: 1}
-  m_Intensity: 3
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000003fd030c5d1f0b2e4058dbb50017aa2da
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 1
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1.5
-  m_PointLightDistance: 3
-  m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  speed: 10
+  lifetime: 10
+  particles:
+  - {fileID: 1514116275085423700}
+  - {fileID: 1684097138738509850}

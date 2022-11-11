@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27442ec7a7587334097e1514b4855ab0, type: 3}
   m_Name: BurstonProjectileHandlerScriptableObject
   m_EditorClassIdentifier: 
-  PREFAB_projectile: {fileID: 8509226589283875494, guid: 18ec5ea9b96498d47a1b718c2c380f1d, type: 3}
+  projectileElementPrefabsScriptableObject: {fileID: 11400000, guid: b815d9020e31950409c7494ecf6023d7, type: 2}

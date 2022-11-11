@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statArray:
   - parent: {fileID: 11400000}
-    statID: 3
+    statID: 4
     value:
-      _baseValue: 2
+      _baseValue: 3
       _modifiedValue: 0
   - parent: {fileID: 11400000}
     statID: 2

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d03cb545254a035409a63cb50825950a, type: 3}
-  m_Name: Laurie_MP
+  m_Name: Mirabelle_RP
   m_EditorClassIdentifier: 
-  pointID: 1
-  parent: {fileID: 11400000, guid: 10af1f5623318a74287a7aaf18cf60f5, type: 2}
+  pointID: 2
+  parent: {fileID: 11400000, guid: f5249bb5fe0f09943a0e93344fd1e006, type: 2}
   value_maxValueModulator: 4
-  startAtMaxValue: 1
+  startAtMaxValue: 0
   value:
     ValueChangedEvent:
       m_PersistentCalls:
@@ -26,5 +26,5 @@ MonoBehaviour:
     ValueIsMaxEvent:
       m_PersistentCalls:
         m_Calls: []
-    _currentValue: 3
-    _maxValue: 3
+    _currentValue: 0
+    _maxValue: 0

@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2339452479426438410}
-  - component: {fileID: 5612126547489721753}
   - component: {fileID: 3501355789469404089}
   - component: {fileID: 667132652690592500}
+  - component: {fileID: 5590829422327808390}
   m_Layer: 3
   m_Name: VoltBurston
   m_TagString: Untagged
@@ -36,28 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5612126547489721753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2339452479426438412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0382008c72f0be24db964ac02258011d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisSpellProjectile: {fileID: 0}
-  rigidbody: {fileID: 0}
-  collider: {fileID: 0}
-  corePs: {fileID: 0}
-  trailPs: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
-  speed: 15
-  lifetime: 3
-  damage: 4
-  explosionPf: {fileID: 7701944941160674439, guid: 288ff411d1863634a986e041af60524d, type: 3}
 --- !u!50 &3501355789469404089
 Rigidbody2D:
   serializedVersion: 4
@@ -95,6 +73,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.15
+--- !u!114 &5590829422327808390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2339452479426438412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb864f70eb9b9d4297432412de38e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifetime: 10
+  particles:
+  - {fileID: 4534154044142914854}
+  - {fileID: 8650504870373278901}
+  - {fileID: 4516516844846096881}
 --- !u!1 &2339452479544460515
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,6 +88,7 @@ namespace Manapotion.PartySystem
         public ActionsManagerScriptableObject actionsManagerScriptableObject;
         public StatsManagerScriptableObject statsManagerScriptableObject;
         public EquipmentManagerScriptableObject equipmentManagerScriptableObject;
+        public PointsManagerScriptableObject pointsManagerScriptableObject;
         
         [SerializeField]
         private List<GameObject> _statusEffectParticles;
@@ -108,7 +109,14 @@ namespace Manapotion.PartySystem
         
         private void Start()
         {
+            // Update isnt called here so we use ManaBehaviour
             ManaBehaviour.OnUpdate += Update;
+
+            // subscribe to every stat value's modified event
+            for (int i = 0; i < statsManagerScriptableObject.statArray.Length; i++)
+            {
+                statsManagerScriptableObject.statArray[i].OnStatModifiedEvent += OnStatModifiedEvent_RefreshPoints;
+            }
 
             stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
             stats.manaport_stat_manapoints.SetMaxValue(stats.manaport_stat_max_manapoints.GetValue());
@@ -254,6 +262,14 @@ namespace Manapotion.PartySystem
 
             return b;
         }
+
+        /// <summary>
+        /// called when a stat is modified
+        /// </summary>
+        public void OnStatModifiedEvent_RefreshPoints(object sender, Stat.OnStatModifiedEventArgs e)
+        {
+            pointsManagerScriptableObject.RefreshPoints();
+        }
         #endregion
 
         #region Actions
@@ -269,7 +285,7 @@ namespace Manapotion.PartySystem
 
         void Update()
         {
-            if (stats.manaport_stat_hitpoints.Empty())
+            if (pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.currentValue <= 0)
             {
                 // Die();
                 // return;
@@ -287,7 +303,10 @@ namespace Manapotion.PartySystem
                 return;
             }
 
-            UpdateHealthBar(stats.manaport_stat_hitpoints.GetValue(), stats.manaport_stat_max_hitpoints.GetValue());
+            UpdateHealthBar(
+                pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.currentValue,
+                pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.maxValue
+            );
         }
 
         #region Party

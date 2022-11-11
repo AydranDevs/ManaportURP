@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5a161d0790c8fc4f9d8206d74061ae1, type: 3}
-  m_Name: Laurie_ActionsManagerScriptableObject
+  m_Name: Laurie Actions Manager
   m_EditorClassIdentifier: 
   possibleActions:
   - {fileID: 11400000, guid: 202a5c23bf352b44bafb0e148f0d2c51, type: 2}

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d78cb921b95d141ae5fdd8bd13199f, type: 3}
+  m_Name: Burston Element Prefabs
+  m_EditorClassIdentifier: 
+  PREFAB_arcaneProjectile: {fileID: 8509226589283875494, guid: 18ec5ea9b96498d47a1b718c2c380f1d, type: 3}
+  PREFAB_pyroProjectile: {fileID: 442811730796009265, guid: a166abad35502314093aea3fee900061, type: 3}
+  PREFAB_cryoProjectile: {fileID: 4052920604075934687, guid: 3f7f372f0e354e042a456ab0d047f0c4, type: 3}
+  PREFAB_toxiProjectile: {fileID: 1076952640063043630, guid: f50c6750faf65e842b866a4a6226dd2c, type: 3}
+  PREFAB_voltProjectile: {fileID: 2339452479426438410, guid: 310536f2ac0c63449b5fba3dbce915cc, type: 3}

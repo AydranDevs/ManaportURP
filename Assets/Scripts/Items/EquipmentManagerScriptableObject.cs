@@ -132,7 +132,6 @@ namespace Manapotion.Items
                 foreach (var s in item.itemScriptableObject.statsManagerScriptableObject.statArray)
                 {
                     var statID = s.statID;
-                    Debug.Log(Party.GetMember(charID));
                     Party.GetMember(charID).statsManagerScriptableObject.GetStat(statID).value.RemoveModifier(
                         new Buff
                         {

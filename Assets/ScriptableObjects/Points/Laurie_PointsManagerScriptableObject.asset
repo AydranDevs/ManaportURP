@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de250aae8df5b714ca39f2c3b09ba229, type: 3}
   m_Name: Laurie_PointsManagerScriptableObject
   m_EditorClassIdentifier: 
+  statsManagerScriptableObject: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
   pointsArray:
   - {fileID: 11400000, guid: 8e70ca7a7082d2b49a649da252bf17bb, type: 2}
   - {fileID: 11400000, guid: 807052f108f744141a6195a0e10d0b20, type: 2}
