@@ -21,13 +21,13 @@ MonoBehaviour:
   - parent: {fileID: 11400000}
     statID: 1
     value:
-      _baseValue: 0
-      _modifiedValue: 0
+      _baseValue: 1
+      _modifiedValue: 50
   - parent: {fileID: 11400000}
     statID: 2
     value:
       _baseValue: 0
-      _modifiedValue: 0
+      _modifiedValue: 5
   - parent: {fileID: 11400000}
     statID: 3
     value:
@@ -37,7 +37,7 @@ MonoBehaviour:
     statID: 4
     value:
       _baseValue: 0
-      _modifiedValue: 0
+      _modifiedValue: 3
   - parent: {fileID: 11400000}
     statID: 5
     value:

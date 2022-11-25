@@ -19,8 +19,10 @@ namespace Manapotion.Actions
                 // not enough points to use this attack
                 yield break;
             }
+
             
             InvokeActionPerformedEvent();
+            Debug.Log($"Attack {this.action_id} started. (member: {member})");
             HandleAttack(member, stat, type, element);
             yield break;
         }

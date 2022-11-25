@@ -1,15 +1,16 @@
 using UnityEngine;
+using Manapotion.Utilities;
 
 namespace Manapotion.PartySystem.LaurieCharacter
 {
     public class LaurieController : CharacterController
     {
         private Laurie _laurie;
-        private LaurieCasting _casting;
+        // private LaurieCasting _casting;
         private LaurieAbilities _abilities;
 
-        private LauriePartyInput _partyInput;
-        private LauriePlayerInput _playerInput;
+        // private LauriePartyInput _partyInput;
+        // private LauriePlayerInput _playerInput;
 
         public LaurieController(Laurie laurie)
         {
@@ -18,17 +19,17 @@ namespace Manapotion.PartySystem.LaurieCharacter
             rb = _laurie.GetComponent<Rigidbody2D>();
             gameManager = GameStateManager.Instance;
             
-            _casting = _laurie.laurieCasting;
+            // _casting = _laurie.laurieCasting;
             _abilities = _laurie.laurieAbilities;
 
-            _partyInput = new LauriePartyInput(_laurie);
-            _playerInput = new LauriePlayerInput(_laurie);
+            // _partyInput = new LauriePartyInput(_laurie);
+            // _playerInput = new LauriePlayerInput(_laurie);
 
             provider = _laurie.inputProvider;
 
             provider.OnPrimary += OnPrimary_PrimaryCast;
             provider.OnSecondary += OnSecondary_SecondaryCast;
-            provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+            provider.OnAux += OnAuxMove_AuxillaryMovement;
 
             Party.OnPartyLeaderChanged += () => 
             {
@@ -41,7 +42,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
         public void Update()
         {
-            _partyInput.Update();
+            // _partyInput.Update();
             movementDirection = provider.inputState.movementDirection;
             _isSprinting = provider.inputState.isSprinting;
 
@@ -69,12 +70,12 @@ namespace Manapotion.PartySystem.LaurieCharacter
                 {
                     _laurie.movementState = MovementState.Dash;
                     isDashing = true;
-                    movementSp = _laurie.stats.manaport_stat_base_walk_speed.GetValue() * _laurie.stats.manaport_stat_base_dash_modifier.GetValue();
+                    movementSp = ManaMath.DexCalc_MoveSp(_laurie.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_DshMod(_laurie.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                 }
                 else
                 {
                     _laurie.movementState = MovementState.Sprint;
-                    movementSp = _laurie.stats.manaport_stat_base_walk_speed.GetValue() * _laurie.stats.manaport_stat_base_sprint_modifier.GetValue();
+                    movementSp = ManaMath.DexCalc_MoveSp(_laurie.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_SprMod(_laurie.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                     isDashing = false;
                 }
                 sprintDuration += Time.deltaTime;
@@ -82,7 +83,8 @@ namespace Manapotion.PartySystem.LaurieCharacter
             else
             {
                 _laurie.movementState = MovementState.Walk;
-                movementSp = _laurie.stats.manaport_stat_base_walk_speed.GetValue();
+                movementSp = ManaMath.DexCalc_MoveSp(_laurie.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
+                Debug.Log(movementSp);
                 sprintDuration = 0f;
             }
 

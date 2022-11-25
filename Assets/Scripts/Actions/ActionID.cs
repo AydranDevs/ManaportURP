@@ -17,6 +17,6 @@ namespace Manapotion.Actions
         Baffergique,
         Lestrezille_Principelle,
         Piquretta_Principelle,
-        Baffergique_Princielle,
+        Baffergique_Principelle,
     }
 }

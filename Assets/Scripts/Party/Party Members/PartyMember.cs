@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using Manapotion.Items;
 using Manapotion.StatusEffects;
 using Manapotion.Actions;
 using Manapotion.Stats;
+using Manapotion.Input;
 
 namespace Manapotion.PartySystem
 {
@@ -76,6 +78,8 @@ namespace Manapotion.PartySystem
         }
         #endregion
 
+        [Header("Input")]
+        public CharacterInput characterInput;
         public InputProvider inputProvider;
         public InputActionAsset controls;
         
@@ -104,25 +108,21 @@ namespace Manapotion.PartySystem
         public SecondaryActionElement secondaryActionElement = SecondaryActionElement.Arcane;
         public DamageType damageType;
 
-        [field: SerializeField]
-        public PartyMemberStats stats { get; protected set; }
+        // [field: SerializeField]
+        // public PartyMemberStats stats { get; protected set; }
         
         private void Start()
         {
             // Update isnt called here so we use ManaBehaviour
             ManaBehaviour.OnUpdate += Update;
 
+            characterInput.Init(this);
+
             // subscribe to every stat value's modified event
             for (int i = 0; i < statsManagerScriptableObject.statArray.Length; i++)
             {
                 statsManagerScriptableObject.statArray[i].OnStatModifiedEvent += OnStatModifiedEvent_RefreshPoints;
             }
-
-            stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
-            stats.manaport_stat_manapoints.SetMaxValue(stats.manaport_stat_max_manapoints.GetValue());
-            stats.manaport_stat_staminapoints.SetMaxValue(stats.manaport_stat_max_staminapoints.GetValue());
-            stats.manaport_stat_remedypoints.SetMaxValue(stats.manaport_stat_max_remedypoints.GetValue());
-            stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_max_experience_points.GetValue());
 
             statusEffects = new List<StatusEffects.Buff>();
             _statusEffectParticles = new List<GameObject>();
@@ -183,7 +183,7 @@ namespace Manapotion.PartySystem
         #region Status
         public void Damage(float damage)
         {
-            stats.manaport_stat_hitpoints.SetValue(stats.manaport_stat_hitpoints.GetValue() - damage);
+            // stats.manaport_stat_hitpoints.SetValue(stats.manaport_stat_hitpoints.GetValue() - damage);
         }
 
         public void Die()
@@ -193,18 +193,20 @@ namespace Manapotion.PartySystem
 
         public void MaxHP()
         {
-            stats.manaport_stat_hitpoints.Max();
+            pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.currentValue = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.maxValue;
         }
 
-        public void AddXP(string type, float amount)
+        public void AddXP(string type, int amount)
         {
             if (type == "points")
             {
-                stats.manaport_stat_experience_points.SetValue(stats.manaport_stat_experience_points.GetValue() + amount);
+                pointsManagerScriptableObject.GetPointScriptableObject(PointID.Experiencepoints).value.currentValue += amount;
+                // stats.manaport_stat_experience_points.SetValue(stats.manaport_stat_experience_points.GetValue() + amount);
             }
             else if (type == "levels")
             {
-                stats.manaport_stat_experience_level.SetValue(stats.manaport_stat_experience_level.GetValue() + (int)amount);
+                // uhhh put code here later
+                // stats.manaport_stat_experience_level.SetValue(stats.manaport_stat_experience_level.GetValue() + (int)amount);
             }
             else 
             {
@@ -215,12 +217,12 @@ namespace Manapotion.PartySystem
 
         public void LevelUp()
         {
-            stats.manaport_stat_experience_points.SetValue(0f);
-            stats.manaport_stat_experience_level.SetValue(stats.manaport_stat_experience_level.GetValue() + 1f);
-            stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_experience_level.GetMaxValue() * 2);
+            // stats.manaport_stat_experience_points.SetValue(0f);
+            // stats.manaport_stat_experience_level.SetValue(stats.manaport_stat_experience_level.GetValue() + 1f);
+            // stats.manaport_stat_experience_points.SetMaxValue(stats.manaport_stat_experience_level.GetMaxValue() * 2);
 
-            stats.manaport_stat_max_hitpoints.SetValue(stats.manaport_stat_max_hitpoints.GetValue() + 2f);
-            stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
+            // stats.manaport_stat_max_hitpoints.SetValue(stats.manaport_stat_max_hitpoints.GetValue() + 2f);
+            // stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
         }
 
         public void AddStatusEffect(StatusEffect effect, int power, float duration)

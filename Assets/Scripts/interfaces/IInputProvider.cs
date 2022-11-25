@@ -12,7 +12,7 @@ public struct InputState {
 public interface IInputProvider {
     public event Action OnPrimary;
     public event Action OnSecondary;
-    public event Action OnAuxMove;
+    public event Action OnAux;
 
     public InputState GetState();
 }

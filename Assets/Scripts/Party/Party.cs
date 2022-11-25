@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using Manapotion.PartySystem.Inventory;
 using Manapotion.UI;
+using Manapotion.Utilities;
 
 namespace Manapotion.PartySystem
 {
@@ -22,21 +23,17 @@ namespace Manapotion.PartySystem
 
         public BagScriptableObject bagScriptableObject;
 
-        // public EquipmentManagerScriptableObject laurieEquipmentScriptableObject;
-        // public EquipmentManagerScriptableObject mirabelleEquipmentScriptableObject;
-        // public EquipmentManagerScriptableObject winsleyEquipmentScriptableObject;
-
         [SerializeField] private InputActionAsset _controls;
         private InputActionMap _inputActionMap;
 
         private InputAction _nextLeader;
         private InputAction _previousLeader;
         
-        public PartyLeader partyLeader;
-        public GameObject previousLeader;
-        public GameObject oldestLeader;
+        public PartyMember partyLeader;
+        public PartyMember previousLeader;
+        public PartyMember oldestLeader;
 
-        public GameObject[] members;
+        public PartyMember[] members;
 
         private PartyCam cam;
 
@@ -60,22 +57,18 @@ namespace Manapotion.PartySystem
             
             cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PartyCam>();
             cam.target = members[0].transform;
-            partyLeader = PartyLeader.Laurie;
+            partyLeader = members[0];
             previousLeader = members[1];
             oldestLeader = members[2];
 
-            _inputActionMap = _controls.FindActionMap("Player");
-            CreateInputAction(NextPartyMember, _nextLeader, "Next");
-            CreateInputAction(PreviousPartyMember, _previousLeader, "Previous");
-        }
+            foreach (var member in members)
+            {
+                member.characterInput.SetLeader(partyLeader.transform);
+            }
 
-        private void CreateInputAction(Action<InputAction.CallbackContext> subscriber, InputAction action, string actionName)
-        {
-            action = _inputActionMap.FindAction(actionName);
-            action.Enable();
-            action.started += subscriber;
-            action.performed += subscriber;
-            action.canceled += subscriber;
+            _inputActionMap = _controls.FindActionMap("Player");
+            UtilitiesClass.CreateInputAction(_inputActionMap, NextPartyMember, _nextLeader, "Next");
+            UtilitiesClass.CreateInputAction(_inputActionMap, PreviousPartyMember, _previousLeader, "Previous");
         }
 
         public void NextPartyMember(InputAction.CallbackContext context)
@@ -93,7 +86,7 @@ namespace Manapotion.PartySystem
                 return;
             }
 
-            int index = (int)partyLeader;
+            int index = Array.IndexOf(members, partyLeader);
 
             index++;
             if (index > 2)
@@ -105,8 +98,8 @@ namespace Manapotion.PartySystem
                 index = 2;
             }
 
-            previousLeader = members[(int)partyLeader];
-            partyLeader = (PartyLeader)index;
+            previousLeader = partyLeader;
+            partyLeader = members[index];
             cam.target = members[index].transform;
             cam.PartyLeaderChanged();
             PartyLeaderChanged();
@@ -127,7 +120,7 @@ namespace Manapotion.PartySystem
                 return;
             }
             
-            int index = (int)partyLeader;
+            int index = Array.IndexOf(members, partyLeader);
 
             index--;
             if (index > 2)
@@ -139,8 +132,8 @@ namespace Manapotion.PartySystem
                 index = 2;
             }
 
-            previousLeader = members[(int)partyLeader];
-            partyLeader = (PartyLeader)index;
+            previousLeader = partyLeader;
+            partyLeader = members[index];
             cam.target = members[index].transform;
             cam.PartyLeaderChanged();
             PartyLeaderChanged();
@@ -148,20 +141,25 @@ namespace Manapotion.PartySystem
 
         private void PartyLeaderChanged()
         {
+            // make every member but the leader an AI controlled member
             foreach (var member in members)
             {
-                PartyMember partyMember = member.GetComponent<PartyMember>();
-                if (member == members[(int)partyLeader])
+                if (member == partyLeader)
                 {
-                    partyMember.partyMemberState = PartyMemberState.CurrentLeader; 
+                    member.partyMemberState = PartyMemberState.CurrentLeader; 
+                    member.characterInput.controlType = Input.CharacterInput.ControlType.Player;
                 }
                 else if (member == previousLeader)
                 {
-                    partyMember.partyMemberState = PartyMemberState.PreviousLeader; 
+                    member.partyMemberState = PartyMemberState.PreviousLeader;
+                    member.characterInput.controlType = Input.CharacterInput.ControlType.AI;
+                    member.characterInput.SetLeader(partyLeader.transform);
                 }
                 else
                 { 
-                    partyMember.partyMemberState = PartyMemberState.OldestLeader;
+                    member.partyMemberState = PartyMemberState.OldestLeader;
+                    member.characterInput.controlType = Input.CharacterInput.ControlType.AI;
+                    member.characterInput.SetLeader(partyLeader.transform);
                 }
             }
 
@@ -206,14 +204,14 @@ namespace Manapotion.PartySystem
 
         public static int GetPartyMemberIndex(PartyMember pm)
         {
-            return Array.IndexOf(Instance.members, pm.gameObject);
+            return Array.IndexOf(Instance.members, pm);
         }
 
         private void Update()
         {
-            foreach (GameObject member in members)
+            foreach (var member in members)
             {
-                if (member != members[(int)partyLeader] && member != previousLeader)
+                if (member != partyLeader && member != previousLeader)
                 {
                     oldestLeader = member;
                 }

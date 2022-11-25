@@ -20,8 +20,8 @@ namespace Manapotion.PartySystem.LaurieCharacter
         [HideInInspector]
         public Party party;
         
+        // public LaurieCasting laurieCasting { get; private set; }
         public LaurieController laurieController { get; private set; }
-        public LaurieCasting laurieCasting { get; private set; }
         public LaurieAbilities laurieAbilities { get; private set; }
         public LaurieRenderer laurieRenderer { get; private set; }
         
@@ -33,7 +33,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
         protected override void InitMember()
         {
-            laurieCasting = new LaurieCasting(this);
+            // laurieCasting = new LaurieCasting(this);
             laurieAbilities = new LaurieAbilities(this);
             laurieController = new LaurieController(this);
             laurieRenderer = new LaurieRenderer(this);
@@ -41,7 +41,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
         
         private void Update()
         {
-            laurieCasting.Update(); 
+            // laurieCasting.Update(); 
             laurieAbilities.Update(); 
             laurieRenderer.Update();
             laurieController.Update();

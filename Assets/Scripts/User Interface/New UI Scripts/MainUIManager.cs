@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using Manapotion.PartySystem;
-using Manapotion.Status;
+using Manapotion.Utilities;
 
 namespace Manapotion.UI
 {
@@ -117,18 +117,9 @@ namespace Manapotion.UI
 
             _inputActionMap = _controls.FindActionMap("Player");
 
-            CreateInputAction(OnToggleInv, _toggleBag, "ToggleBag");
-            CreateInputAction(OnToggleInv, _toggleEquip, "ToggleEquip");
-            CreateInputAction(OnToggleInv, _toggleBeastiary, "ToggleBeastiary");
-        }
-
-        private void CreateInputAction(Action<InputAction.CallbackContext> subscriber, InputAction action, string actionName)
-        {
-            action = _inputActionMap.FindAction(actionName);
-            action.Enable();
-            action.started += subscriber;
-            action.performed += subscriber;
-            action.canceled += subscriber;
+            UtilitiesClass.CreateInputAction(_inputActionMap, OnToggleInv, _toggleBag, "ToggleBag");
+            UtilitiesClass.CreateInputAction(_inputActionMap, OnToggleInv, _toggleEquip, "ToggleEquip");
+            UtilitiesClass.CreateInputAction(_inputActionMap, OnToggleInv, _toggleBeastiary, "ToggleBeastiary");
         }
 
         private void Start()
@@ -136,9 +127,9 @@ namespace Manapotion.UI
             GameStateManager.Instance.OnGameStateChanged += OnGameStateChanged_GameStateChanged;
             _party = Party.Instance;
 
-            CreateInputAction(inventoryUIManager.OnToggleBag, _toggleBag, "ToggleBag");
-            CreateInputAction(inventoryUIManager.OnToggleEquip, _toggleEquip, "ToggleEquip");
-            CreateInputAction(inventoryUIManager.OnToggleBeastiary, _toggleBeastiary, "ToggleBeastiary");
+            UtilitiesClass.CreateInputAction(_inputActionMap, inventoryUIManager.OnToggleBag, _toggleBag, "ToggleBag");
+            UtilitiesClass.CreateInputAction(_inputActionMap, inventoryUIManager.OnToggleEquip, _toggleEquip, "ToggleEquip");
+            UtilitiesClass.CreateInputAction(_inputActionMap, inventoryUIManager.OnToggleBeastiary, _toggleBeastiary, "ToggleBeastiary");
 
             handles = new CharacterUIHandle[_party.members.Count()];
             for (int i = 0; i < _party.members.Count(); i++)

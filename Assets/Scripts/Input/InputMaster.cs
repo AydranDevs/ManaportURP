@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/InputMaster.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/InputMaster.inputactions'
 
 using System;
 using System.Collections;
@@ -19,7 +19,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
             ""id"": ""7ceba62f-8fa7-4f72-b700-f64ccf70d8fc"",
             ""actions"": [
                 {
-                    ""name"": ""PrimaryCast"",
+                    ""name"": ""PrimaryAction"",
                     ""type"": ""Button"",
                     ""id"": ""db59fda0-763a-4b46-97b2-6c6e3bbf05a1"",
                     ""expectedControlType"": ""Button"",
@@ -27,7 +27,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""SecondaryCast"",
+                    ""name"": ""SecondaryAction"",
                     ""type"": ""Button"",
                     ""id"": ""4c2a6f0b-809e-46d4-bfaf-8a136d67f382"",
                     ""expectedControlType"": ""Button"",
@@ -43,7 +43,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""AuxilaryMovement"",
+                    ""name"": ""AuxilaryAction"",
                     ""type"": ""Button"",
                     ""id"": ""60a112de-bf57-4626-80ea-51c6e98184a8"",
                     ""expectedControlType"": ""Button"",
@@ -147,7 +147,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardAndMouse"",
-                    ""action"": ""PrimaryCast"",
+                    ""action"": ""PrimaryAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -158,7 +158,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardAndMouse"",
-                    ""action"": ""SecondaryCast"",
+                    ""action"": ""SecondaryAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -224,7 +224,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KeyboardAndMouse"",
-                    ""action"": ""AuxilaryMovement"",
+                    ""action"": ""AuxilaryAction"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -373,10 +373,10 @@ public class @InputMaster : IInputActionCollection, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_PrimaryCast = m_Player.FindAction("PrimaryCast", throwIfNotFound: true);
-        m_Player_SecondaryCast = m_Player.FindAction("SecondaryCast", throwIfNotFound: true);
+        m_Player_PrimaryAction = m_Player.FindAction("PrimaryAction", throwIfNotFound: true);
+        m_Player_SecondaryAction = m_Player.FindAction("SecondaryAction", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
-        m_Player_AuxilaryMovement = m_Player.FindAction("AuxilaryMovement", throwIfNotFound: true);
+        m_Player_AuxilaryAction = m_Player.FindAction("AuxilaryAction", throwIfNotFound: true);
         m_Player_MousePosition = m_Player.FindAction("MousePosition", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_ToggleDebug = m_Player.FindAction("ToggleDebug", throwIfNotFound: true);
@@ -437,10 +437,10 @@ public class @InputMaster : IInputActionCollection, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_PrimaryCast;
-    private readonly InputAction m_Player_SecondaryCast;
+    private readonly InputAction m_Player_PrimaryAction;
+    private readonly InputAction m_Player_SecondaryAction;
     private readonly InputAction m_Player_Movement;
-    private readonly InputAction m_Player_AuxilaryMovement;
+    private readonly InputAction m_Player_AuxilaryAction;
     private readonly InputAction m_Player_MousePosition;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_ToggleDebug;
@@ -456,10 +456,10 @@ public class @InputMaster : IInputActionCollection, IDisposable
     {
         private @InputMaster m_Wrapper;
         public PlayerActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @PrimaryCast => m_Wrapper.m_Player_PrimaryCast;
-        public InputAction @SecondaryCast => m_Wrapper.m_Player_SecondaryCast;
+        public InputAction @PrimaryAction => m_Wrapper.m_Player_PrimaryAction;
+        public InputAction @SecondaryAction => m_Wrapper.m_Player_SecondaryAction;
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
-        public InputAction @AuxilaryMovement => m_Wrapper.m_Player_AuxilaryMovement;
+        public InputAction @AuxilaryAction => m_Wrapper.m_Player_AuxilaryAction;
         public InputAction @MousePosition => m_Wrapper.m_Player_MousePosition;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @ToggleDebug => m_Wrapper.m_Player_ToggleDebug;
@@ -480,18 +480,18 @@ public class @InputMaster : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @PrimaryCast.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryCast;
-                @PrimaryCast.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryCast;
-                @PrimaryCast.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryCast;
-                @SecondaryCast.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryCast;
-                @SecondaryCast.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryCast;
-                @SecondaryCast.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryCast;
+                @PrimaryAction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryAction;
+                @PrimaryAction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryAction;
+                @PrimaryAction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPrimaryAction;
+                @SecondaryAction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryAction;
+                @SecondaryAction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryAction;
+                @SecondaryAction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSecondaryAction;
                 @Movement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMovement;
-                @AuxilaryMovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAuxilaryMovement;
-                @AuxilaryMovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAuxilaryMovement;
-                @AuxilaryMovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAuxilaryMovement;
+                @AuxilaryAction.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAuxilaryAction;
+                @AuxilaryAction.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAuxilaryAction;
+                @AuxilaryAction.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAuxilaryAction;
                 @MousePosition.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
                 @MousePosition.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
                 @MousePosition.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnMousePosition;
@@ -529,18 +529,18 @@ public class @InputMaster : IInputActionCollection, IDisposable
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @PrimaryCast.started += instance.OnPrimaryCast;
-                @PrimaryCast.performed += instance.OnPrimaryCast;
-                @PrimaryCast.canceled += instance.OnPrimaryCast;
-                @SecondaryCast.started += instance.OnSecondaryCast;
-                @SecondaryCast.performed += instance.OnSecondaryCast;
-                @SecondaryCast.canceled += instance.OnSecondaryCast;
+                @PrimaryAction.started += instance.OnPrimaryAction;
+                @PrimaryAction.performed += instance.OnPrimaryAction;
+                @PrimaryAction.canceled += instance.OnPrimaryAction;
+                @SecondaryAction.started += instance.OnSecondaryAction;
+                @SecondaryAction.performed += instance.OnSecondaryAction;
+                @SecondaryAction.canceled += instance.OnSecondaryAction;
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
-                @AuxilaryMovement.started += instance.OnAuxilaryMovement;
-                @AuxilaryMovement.performed += instance.OnAuxilaryMovement;
-                @AuxilaryMovement.canceled += instance.OnAuxilaryMovement;
+                @AuxilaryAction.started += instance.OnAuxilaryAction;
+                @AuxilaryAction.performed += instance.OnAuxilaryAction;
+                @AuxilaryAction.canceled += instance.OnAuxilaryAction;
                 @MousePosition.started += instance.OnMousePosition;
                 @MousePosition.performed += instance.OnMousePosition;
                 @MousePosition.canceled += instance.OnMousePosition;
@@ -589,10 +589,10 @@ public class @InputMaster : IInputActionCollection, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnPrimaryCast(InputAction.CallbackContext context);
-        void OnSecondaryCast(InputAction.CallbackContext context);
+        void OnPrimaryAction(InputAction.CallbackContext context);
+        void OnSecondaryAction(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
-        void OnAuxilaryMovement(InputAction.CallbackContext context);
+        void OnAuxilaryAction(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnToggleDebug(InputAction.CallbackContext context);

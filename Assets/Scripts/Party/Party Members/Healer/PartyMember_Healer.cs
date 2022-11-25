@@ -33,7 +33,7 @@ namespace Manapotion.PartySystem
 
             // anything that updates UI should go below this.
 
-            UpdateRemedyBar(stats.manaport_stat_remedypoints.GetValue(), stats.manaport_stat_max_remedypoints.GetValue());
+            UpdateRemedyBar(pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.currentValue, pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.maxValue);
         }
 
         private void UpdateRemedyBar(float value, float maxValue)
@@ -47,7 +47,7 @@ namespace Manapotion.PartySystem
         
         public void MaxRP()
         {
-            stats.manaport_stat_remedypoints.Max();
+            pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.currentValue = pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.maxValue;
         }
     }
 }

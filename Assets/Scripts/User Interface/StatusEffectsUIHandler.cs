@@ -17,10 +17,10 @@ public class StatusEffectsUIHandler : MonoBehaviour {
 
     [System.Serializable]
     private class MemberStatusEffectsUI {
-        public GameObject member;
+        public PartyMember member;
         public List<Buff> statuses;
 
-        public MemberStatusEffectsUI(GameObject member) {
+        public MemberStatusEffectsUI(PartyMember member) {
             this.member = member;
 
             statuses = new List<Buff>();

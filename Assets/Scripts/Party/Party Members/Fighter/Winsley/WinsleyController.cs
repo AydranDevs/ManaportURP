@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.Utilities;
 
 namespace Manapotion.PartySystem.WinsleyCharacter
 {
@@ -8,8 +9,8 @@ namespace Manapotion.PartySystem.WinsleyCharacter
     {
         private Winsley _winsley;
 
-        private WinsleyPartyInput _partyInput;
-        private WinsleyPlayerInput _playerInput;
+        // private WinsleyPartyInput _partyInput;
+        // private WinsleyPlayerInput _playerInput;
 
         public WinsleyController(Winsley winsley)
         {
@@ -18,14 +19,14 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             rb = _winsley.GetComponent<Rigidbody2D>();
             gameManager = GameStateManager.Instance;
 
-            _partyInput = new WinsleyPartyInput(_winsley);
-            _playerInput = new WinsleyPlayerInput(_winsley);
+            // _partyInput = new WinsleyPartyInput(_winsley);
+            // _playerInput = new WinsleyPlayerInput(_winsley);
 
             provider = _winsley.inputProvider;
 
             provider.OnPrimary += OnPrimary_PrimaryCast;
             provider.OnSecondary += OnSecondary_SecondaryCast;
-            provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+            provider.OnAux += OnAuxMove_AuxillaryMovement;
 
             Party.OnPartyLeaderChanged += () =>
             {
@@ -40,7 +41,7 @@ namespace Manapotion.PartySystem.WinsleyCharacter
         {
             movementDirection = provider.inputState.movementDirection;
             _isSprinting = provider.inputState.isSprinting;
-            _partyInput.Update();
+            // _partyInput.Update();
             
             Move(Time.fixedDeltaTime);
         }
@@ -66,12 +67,12 @@ namespace Manapotion.PartySystem.WinsleyCharacter
                 {
                     _winsley.movementState = MovementState.Dash;
                     isDashing = true;
-                    movementSp = _winsley.stats.manaport_stat_base_walk_speed.GetValue() * _winsley.stats.manaport_stat_base_dash_modifier.GetValue();
+                    movementSp = ManaMath.DexCalc_MoveSp(_winsley.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_DshMod(_winsley.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                 }
                 else
                 {
                     _winsley.movementState = MovementState.Sprint;
-                    movementSp = _winsley.stats.manaport_stat_base_walk_speed.GetValue() * _winsley.stats.manaport_stat_base_sprint_modifier.GetValue();
+                    movementSp = ManaMath.DexCalc_MoveSp(_winsley.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_SprMod(_winsley.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                     isDashing = false;
                 }
                 sprintDuration += Time.deltaTime;
@@ -79,7 +80,7 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             else
             {
                 _winsley.movementState = MovementState.Walk;
-                movementSp = _winsley.stats.manaport_stat_base_walk_speed.GetValue();
+                movementSp = ManaMath.DexCalc_MoveSp(_winsley.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                 sprintDuration = 0f;
             }
 

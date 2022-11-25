@@ -7,7 +7,7 @@ public class InputProvider : ScriptableObject, IInputProvider {
     
     public event Action OnPrimary;
     public event Action OnSecondary;
-    public event Action OnAuxMove;
+    public event Action OnAux;
 
     public InputState GetState() {
         return inputState;
@@ -27,10 +27,10 @@ public class InputProvider : ScriptableObject, IInputProvider {
         OnSecondary?.Invoke();
     }
 
-    public void InvokeAuxMove() {
-        AuxMove();
+    public void InvokeAux() {
+        Aux();
     }
-    protected virtual void AuxMove() {
-        OnAuxMove?.Invoke();
+    protected virtual void Aux() {
+        OnAux?.Invoke();
     }
 }

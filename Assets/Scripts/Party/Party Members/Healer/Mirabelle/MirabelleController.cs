@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.Utilities;
 
 namespace Manapotion.PartySystem.MirabelleCharacter
 {
@@ -8,8 +9,8 @@ namespace Manapotion.PartySystem.MirabelleCharacter
     {
         private Mirabelle _mirabelle;
 
-        private MirabellePartyInput _partyInput;
-        private MirabellePlayerInput _playerInput;
+        // private MirabellePartyInput _partyInput;
+        // private MirabellePlayerInput _playerInput;
 
         public MirabelleController(Mirabelle mirabelle)
         {
@@ -18,13 +19,13 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             rb = _mirabelle.GetComponent<Rigidbody2D>();
             gameManager = GameStateManager.Instance;
 
-            _partyInput = new MirabellePartyInput(_mirabelle);
-            _playerInput = new MirabellePlayerInput(_mirabelle);
+            // _partyInput = new MirabellePartyInput(_mirabelle);
+            // _playerInput = new MirabellePlayerInput(_mirabelle);
 
             provider = _mirabelle.inputProvider;
 
             provider.OnPrimary += OnPrimary_PrimaryCast;
-            provider.OnAuxMove += OnAuxMove_AuxillaryMovement;
+            provider.OnAux += OnAuxMove_AuxillaryMovement;
 
             Party.OnPartyLeaderChanged += () =>
             {
@@ -37,7 +38,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
 
         public void Update()
         {
-            _partyInput.Update();
+            // _partyInput.Update();
             movementDirection = provider.inputState.movementDirection;
             _isSprinting = provider.inputState.isSprinting;
 
@@ -71,12 +72,12 @@ namespace Manapotion.PartySystem.MirabelleCharacter
                 {
                     _mirabelle.movementState = MovementState.Dash;
                     isDashing = true;
-                    movementSp = _mirabelle.stats.manaport_stat_base_walk_speed.GetValue() * _mirabelle.stats.manaport_stat_base_dash_modifier.GetValue();
+                    movementSp = ManaMath.DexCalc_MoveSp(_mirabelle.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_DshMod(_mirabelle.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                 }
                 else
                 {
                     _mirabelle.movementState = MovementState.Sprint;
-                    movementSp = _mirabelle.stats.manaport_stat_base_walk_speed.GetValue() * _mirabelle.stats.manaport_stat_base_sprint_modifier.GetValue();
+                    movementSp = ManaMath.DexCalc_MoveSp(_mirabelle.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_SprMod(_mirabelle.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);;
                     isDashing = false;
                 }
                 sprintDuration += Time.deltaTime;
@@ -84,7 +85,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             else
             {
                 _mirabelle.movementState = MovementState.Walk;
-                movementSp = _mirabelle.stats.manaport_stat_base_walk_speed.GetValue();
+                movementSp = ManaMath.DexCalc_MoveSp(_mirabelle.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                 sprintDuration = 0f;
             }
 

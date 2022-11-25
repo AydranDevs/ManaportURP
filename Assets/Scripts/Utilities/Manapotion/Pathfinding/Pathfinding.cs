@@ -19,9 +19,13 @@ namespace Manapotion.AStarPathfinding
         private static List<WorldTile> closedList;
 
         public static List<WorldTile> FindPath(WorldGrid grid, Vector3 startPosition, Vector3 endPosition) {
-            WorldTile startTile = grid.WorldPositionToTile(startPosition);
             WorldTile endTile = grid.WorldPositionToTile(endPosition);
-            // Debug.Log(string.Format("calculating path from ({0}, {1}) to ({2}, {3})", startTile.gridX, startTile.gridY, endTile.gridX, endTile.gridY));
+            if (!endTile.walkable)
+            {
+                Debug.LogWarning("Pathfinding terminated. Cannot create path to a non-walkable tile.");
+                return null;
+            }
+            WorldTile startTile = grid.WorldPositionToTile(startPosition);
 
             openList = new List<WorldTile>();
             closedList = new List<WorldTile>();

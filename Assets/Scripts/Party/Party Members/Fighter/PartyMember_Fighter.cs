@@ -14,8 +14,6 @@ namespace Manapotion.PartySystem
             public float maxStamina;
         }
 
-        public Attack attack;
-
         // cooldown of 1s before stamina starts regenerating
         private const float STAMINA_REGEN_COOLDOWN_DEFUALT = 1f;
         private float _staminaRegenCooldown;
@@ -28,10 +26,10 @@ namespace Manapotion.PartySystem
         {
             ManaBehaviour.OnUpdate += Update;
 
-            _staminaRegenTimer = stats.manaport_stat_staminapoints_regen_rate.GetValue();
+            _staminaRegenTimer = 2f;
             MaxSP();
 
-            attack = new Attack(this);
+            // attack = new Attack(this);
 
             InitMember();
         }
@@ -47,7 +45,7 @@ namespace Manapotion.PartySystem
             {
                 CoolDownStaminaRegen();
             }
-            if (!_staminaRegenCoolingDown && stats.manaport_stat_staminapoints.GetValue() < stats.manaport_stat_max_staminapoints.GetValue())
+            if (!_staminaRegenCoolingDown && pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints).value.currentValue < pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints).value.maxValue)
             {
                 RegenSP();
             }
@@ -59,7 +57,7 @@ namespace Manapotion.PartySystem
 
             // anything that updates UI should go below this.
 
-            UpdateStaminaBar(stats.manaport_stat_staminapoints.GetValue(), stats.manaport_stat_max_staminapoints.GetValue());
+            UpdateStaminaBar(pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints).value.currentValue, pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints).value.maxValue);
         }
 
         #region Stamina Point Management
@@ -74,7 +72,8 @@ namespace Manapotion.PartySystem
         
         public void MaxSP()
         {
-            stats.manaport_stat_staminapoints.Max();
+            var pt = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints);
+            pt.value.currentValue = pt.value.maxValue;
         }
 
         private void RegenSP()
@@ -82,8 +81,9 @@ namespace Manapotion.PartySystem
             _staminaRegenTimer = _staminaRegenTimer - Time.deltaTime;
             if (_staminaRegenTimer <= 0f)
             {
-                stats.manaport_stat_staminapoints.SetValue(stats.manaport_stat_staminapoints.GetValue() + stats.manaport_stat_staminapoints_regen_amount.GetValue());
-                _staminaRegenTimer = stats.manaport_stat_staminapoints_regen_rate.GetValue();
+                var pt = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Staminapoints);
+                pt.SetValue(pt.value.currentValue + 1);
+                _staminaRegenTimer = 2f;
             }
         }
         

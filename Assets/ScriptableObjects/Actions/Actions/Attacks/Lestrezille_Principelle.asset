@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   action_id: 9
   action_animationName: 
-  action_requiredItems: []
+  costPointID: 3
+  cost: 0
+  projectileHandler: {fileID: 0}
