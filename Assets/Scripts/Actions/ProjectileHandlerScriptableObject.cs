@@ -14,7 +14,7 @@ namespace Manapotion.Actions.Projectiles
         {
             Transform projectile = Instantiate(projectileElementPrefabsScriptableObject.GetElementProjectilePrefab((ElementID)damageInstance.damageInstanceElement), member.transform.position, Quaternion.identity).transform;
             projectile.GetComponent<ProjectileInstance>().Setup(
-                ((Vector3)member.inputProvider.GetState().targetPos - member.transform.position).normalized,
+                ((Vector3)member.characterInput.GetInputProvider().GetState().targetPos - member.transform.position).normalized,
                 damageInstance
             );
             yield return null;

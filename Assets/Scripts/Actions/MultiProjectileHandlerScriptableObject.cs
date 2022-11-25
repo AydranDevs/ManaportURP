@@ -25,7 +25,7 @@ namespace Manapotion.Actions.Projectiles
             for (int i = 0; i < projectileCount; i++)
             {
                 Transform projectile = Instantiate(projectileElementPrefabsScriptableObject.GetElementProjectilePrefab((ElementID)damageInstance.damageInstanceElement), member.transform.position, Quaternion.identity).transform;
-                Vector3 direction = ((Vector3)member.inputProvider.GetState().targetPos - member.transform.position).normalized;
+                Vector3 direction = ((Vector3)member.characterInput.GetInputProvider().GetState().targetPos - member.transform.position).normalized;
                 
                 float rand = UnityEngine.Random.Range(projectileDeviation.x, projectileDeviation.y);
 

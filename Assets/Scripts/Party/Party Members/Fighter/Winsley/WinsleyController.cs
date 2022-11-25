@@ -22,7 +22,7 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             // _partyInput = new WinsleyPartyInput(_winsley);
             // _playerInput = new WinsleyPlayerInput(_winsley);
 
-            provider = _winsley.inputProvider;
+            provider = _winsley.characterInput.GetInputProvider();
 
             provider.OnPrimary += OnPrimary_PrimaryCast;
             provider.OnSecondary += OnSecondary_SecondaryCast;

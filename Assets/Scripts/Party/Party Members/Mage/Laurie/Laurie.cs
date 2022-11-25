@@ -35,7 +35,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
         {
             // laurieCasting = new LaurieCasting(this);
             laurieAbilities = new LaurieAbilities(this);
-            laurieController = new LaurieController(this);
+            // laurieController = new LaurieController(this);
             laurieRenderer = new LaurieRenderer(this);
         }
         
@@ -44,7 +44,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             // laurieCasting.Update(); 
             laurieAbilities.Update(); 
             laurieRenderer.Update();
-            laurieController.Update();
+            // laurieController.Update();
         }
     }
 }

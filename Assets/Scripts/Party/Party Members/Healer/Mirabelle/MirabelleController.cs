@@ -22,7 +22,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             // _partyInput = new MirabellePartyInput(_mirabelle);
             // _playerInput = new MirabellePlayerInput(_mirabelle);
 
-            provider = _mirabelle.inputProvider;
+            provider = _mirabelle.characterInput.GetInputProvider();
 
             provider.OnPrimary += OnPrimary_PrimaryCast;
             provider.OnAux += OnAuxMove_AuxillaryMovement;

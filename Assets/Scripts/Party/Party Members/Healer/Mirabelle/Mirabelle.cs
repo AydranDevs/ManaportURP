@@ -30,14 +30,14 @@ namespace Manapotion.PartySystem.MirabelleCharacter
 
         protected override void InitMember()
         {         
-            mirabelleController = new MirabelleController(this);
+            // mirabelleController = new MirabelleController(this);
             mirabelleRenderer = new MirabelleRenderer(this);
             mirabelleHealing = new MirabelleHealing(this);
         }
     
         private void Update()
         {
-            mirabelleController.Update();
+            // mirabelleController.Update();
             mirabelleRenderer.Update();
             mirabelleHealing.Update();
         }

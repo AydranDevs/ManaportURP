@@ -15,4 +15,4 @@ MonoBehaviour:
   inputState:
     movementDirection: {x: 0, y: 0}
     isSprinting: 0
-    targetPos: {x: 0, y: 0}
+    targetPos: {x: 101.31188, y: 4.3236775}

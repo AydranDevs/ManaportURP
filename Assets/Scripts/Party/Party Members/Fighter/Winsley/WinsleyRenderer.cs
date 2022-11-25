@@ -14,7 +14,7 @@ namespace Manapotion.PartySystem.WinsleyCharacter
 
         private Reanimator _reanimator;
         private Winsley _winsley;
-        private WinsleyController _winsleyController;
+        // private WinsleyController _winsleyController;
         private GameStateManager _gameManager;
 
         private int facingState;
@@ -24,7 +24,7 @@ namespace Manapotion.PartySystem.WinsleyCharacter
             _winsley = winsley;
 
             _reanimator = _winsley.GetComponent<Reanimator>();
-            _winsleyController = winsley.winsleyController;
+            // _winsleyController = winsley.winsleyController;
             _gameManager = GameStateManager.Instance;
 
             facingState = 2;
@@ -38,35 +38,35 @@ namespace Manapotion.PartySystem.WinsleyCharacter
                 facingState = 2;
             }
 
-            if (_winsleyController.movementDirection.Equals(new Vector2(0, 1)))
+            if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, 1)))
             { // north 
                 facingState = 0; // north
             }
-            else if (_winsleyController.movementDirection.Equals(new Vector2(1, 1)))
+            else if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 1)))
             { // northeast
                 facingState = 0; 
             }
-            else if (_winsleyController.movementDirection.Equals(new Vector2(1, 0)))
+            else if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 0)))
             { // east
                 facingState = 1; // east
             }
-            else if (_winsleyController.movementDirection.Equals(new Vector2(1, -1)))
+            else if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, -1)))
             { // southeast
                 facingState = 1;
             }
-            else if (_winsleyController.movementDirection.Equals(new Vector2(0, -1)))
+            else if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, -1)))
             { // south
                 facingState = 2; // south
             }
-            else if (_winsleyController.movementDirection.Equals(new Vector2(-1, -1)))
+            else if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, -1)))
             { // southwest
                 facingState = 2;
             }
-            else if (_winsleyController.movementDirection.Equals(new Vector2(-1, 0)))
+            else if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 0)))
             { // west
                 facingState = 3; // west
             }
-            else if (_winsleyController.movementDirection.Equals(new Vector2(-1, 1)))
+            else if (_winsley.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 1)))
             { // northwest
                 facingState = 3;
             }

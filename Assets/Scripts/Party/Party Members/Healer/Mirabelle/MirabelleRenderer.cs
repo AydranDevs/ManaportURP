@@ -21,7 +21,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
 
         private Reanimator _reanimator;
         private Mirabelle _mirabelle;
-        private MirabelleController _mirabelleController;
+        // private MirabelleController _mirabelleController;
         private MirabelleHealing _mirabelleHealing;
         private GameStateManager _gameManager;
 
@@ -35,7 +35,7 @@ namespace Manapotion.PartySystem.MirabelleCharacter
             _mirabelle = mirabelle;
 
             _reanimator = _mirabelle.GetComponent<Reanimator>();
-            _mirabelleController = _mirabelle.mirabelleController;
+            // S_mirabelleController = _mirabelle.mirabelleController;
             _mirabelleHealing = _mirabelle.mirabelleHealing;
             _gameManager = GameStateManager.Instance;
 
@@ -97,35 +97,35 @@ namespace Manapotion.PartySystem.MirabelleCharacter
                 state = 1;
             }
 
-            if (_mirabelleController.movementDirection.Equals(new Vector2(0, 1)))
+            if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, 1)))
             { // north 
                 facingState = 0; // north
             }
-            else if (_mirabelleController.movementDirection.Equals(new Vector2(1, 1)))
+            else if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 1)))
             { // northeast
                 facingState = 0; 
             }
-            else if (_mirabelleController.movementDirection.Equals(new Vector2(1, 0)))
+            else if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 0)))
             { // east
                 facingState = 1; // east
             }
-            else if (_mirabelleController.movementDirection.Equals(new Vector2(1, -1)))
+            else if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, -1)))
             { // southeast
                 facingState = 1;
             }
-            else if (_mirabelleController.movementDirection.Equals(new Vector2(0, -1)))
+            else if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, -1)))
             { // south
                 facingState = 2; // south
             }
-            else if (_mirabelleController.movementDirection.Equals(new Vector2(-1, -1)))
+            else if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, -1)))
             { // southwest
                 facingState = 2;
             }
-            else if (_mirabelleController.movementDirection.Equals(new Vector2(-1, 0)))
+            else if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 0)))
             { // west
                 facingState = 3; // west
             }
-            else if (_mirabelleController.movementDirection.Equals(new Vector2(-1, 1)))
+            else if (_mirabelle.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 1)))
             { // northwest
                 facingState = 3;
             }

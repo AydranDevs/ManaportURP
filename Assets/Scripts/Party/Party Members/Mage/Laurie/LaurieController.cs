@@ -25,7 +25,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
             // _partyInput = new LauriePartyInput(_laurie);
             // _playerInput = new LauriePlayerInput(_laurie);
 
-            provider = _laurie.inputProvider;
+            provider = _laurie.characterInput.GetInputProvider();
 
             provider.OnPrimary += OnPrimary_PrimaryCast;
             provider.OnSecondary += OnSecondary_SecondaryCast;
@@ -33,7 +33,7 @@ namespace Manapotion.PartySystem.LaurieCharacter
 
             Party.OnPartyLeaderChanged += () => 
             {
-                if (Party.Instance.previousLeader == _laurie.gameObject) 
+                if (Party.Instance.previousLeader == _laurie) 
                 {
                     movementDirection = Vector2.zero; 
                 }

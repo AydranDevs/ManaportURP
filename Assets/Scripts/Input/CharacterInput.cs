@@ -19,11 +19,8 @@ namespace Manapotion.Input
 
         private PartyMember _member;
 
-        [Header("Input")]
         [SerializeField]
         private InputProvider _inputProvider;
-        
-        [Header("Player")]
         [SerializeField]
         private InputActionAsset _inputActionAsset;
         private InputActionMap _inputActionMap;
@@ -49,7 +46,6 @@ namespace Manapotion.Input
             ManaBehaviour.OnUpdate += Update;
 
             _member = member;
-            _inputProvider = member.inputProvider;
 
             // Set up for Player control
             _inputActionMap = _inputActionAsset.FindActionMap("Player");
@@ -66,8 +62,6 @@ namespace Manapotion.Input
 
         public void Update()
         {
-            _frames++;
-            
             if (controlType == ControlType.Player)
             {
                 return;
@@ -141,12 +135,20 @@ namespace Manapotion.Input
             {
                 return;
             }
+            if (!context.started)
+            {
+                return;
+            }
 
             _inputProvider.InvokePrimary();
         }
         public void PlayerSecondary(InputAction.CallbackContext context)
         {
             if (controlType == ControlType.AI)
+            {
+                return;
+            }
+            if (!context.started)
             {
                 return;
             }
@@ -159,6 +161,10 @@ namespace Manapotion.Input
             {
                 return;
             }
+            if (!context.started)
+            {
+                return;
+            }
 
             _inputProvider.InvokeAux();
         }
@@ -168,11 +174,61 @@ namespace Manapotion.Input
         int pathIndex = 0;
         private void AIUpdate(AIControlMode aIControlMode)
         {
+            _frames++;
             if (_frames >= FRAMES_TO_CALC_PATH)
             {
                 RecalculatePath();
                 _frames = 0;
             }
+
+            // as long as there is a path, follow it
+            if (_path != null && _path.Count > 0)
+            {
+                if (_goalReached)
+                {
+                    return;
+                }
+
+                if (Vector2.Distance(_member.transform.position, _leader.position) > Party.Instance.maxDistance)
+                {
+                    UpdateInputState(
+                        new InputState
+                        {
+                            movementDirection = _inputProvider.GetState().movementDirection,
+                            isSprinting = true,
+                            targetPos = _inputProvider.GetState().targetPos
+                        }
+                    );
+                }
+                else
+                {
+                    UpdateInputState(
+                        new InputState
+                        {
+                            movementDirection = _inputProvider.GetState().movementDirection,
+                            isSprinting = false,
+                            targetPos = _inputProvider.GetState().targetPos
+                        }
+                    );
+                }
+
+                if (_grid.WorldPositionToTile(_member.transform.position) != _path[pathIndex])
+                {
+                    MoveToTile(_path[pathIndex]);
+                    return;
+                }
+                if (pathIndex == _path.Count - 1)
+                {
+                    _inputProvider.inputState.movementDirection = Vector2.zero;
+                    _goalReached = true;
+                }
+                else
+                {
+                    pathIndex++;
+                    _goalReached = false;
+                }
+            }
+
         }
 
         private void RecalculatePath()
@@ -280,6 +336,11 @@ namespace Manapotion.Input
         public void SetLeader(Transform leader)
         {
             _leader = leader;
+        }
+    
+        public InputProvider GetInputProvider()
+        {
+            return _inputProvider;
         }
     }
 }

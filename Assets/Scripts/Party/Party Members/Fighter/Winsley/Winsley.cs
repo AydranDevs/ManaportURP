@@ -22,13 +22,13 @@ namespace Manapotion.PartySystem.WinsleyCharacter
 
         protected override void InitMember()
         {   
-            winsleyController = new WinsleyController(this);
+            // winsleyController = new WinsleyController(this);
             winsleyRenderer = new WinsleyRenderer(this);
         }
     
         private void Update()
         {
-            winsleyController.Update();
+            // winsleyController.Update();
             winsleyRenderer.Update();
         }
     }

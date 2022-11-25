@@ -78,10 +78,8 @@ namespace Manapotion.PartySystem
         }
         #endregion
 
-        [Header("Input")]
         public CharacterInput characterInput;
-        public InputProvider inputProvider;
-        public InputActionAsset controls;
+        public Manapotion.Input.CharacterController characterController;
         
         public PartyFormation formation;
 
@@ -117,6 +115,7 @@ namespace Manapotion.PartySystem
             ManaBehaviour.OnUpdate += Update;
 
             characterInput.Init(this);
+            characterController.Init(this);
 
             // subscribe to every stat value's modified event
             for (int i = 0; i < statsManagerScriptableObject.statArray.Length; i++)

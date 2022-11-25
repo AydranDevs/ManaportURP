@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -143,6 +143,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 980411631426214721, guid: 2f4c937e46389294a808fd9833e68923, type: 3}
   m_PrefabInstance: {fileID: 1523696791}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &153191638 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8575495455764455007, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &185920693 stripped
 RectTransform:
@@ -528,6 +533,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &959414228 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8575495456034430212, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &977662521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1031,6 +1041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f4c937e46389294a808fd9833e68923, type: 3}
+--- !u!50 &1556177720 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8575495455274865849, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1623052373 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1813633393185900345, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -1808,6 +1823,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6a7bf6940676c6c42b56a26ac988d51d, type: 2}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController._rigidbody
+      value: 
+      objectReference: {fileID: 1556177720}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: _characterController._rigidbody
+      value: 
+      objectReference: {fileID: 1556177720}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._inputActionAsset
       value: 
       objectReference: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
@@ -1819,6 +1842,14 @@ PrefabInstance:
       propertyPath: characterRendererScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: a61e3069721d8d14ea0df53518e6c41d, type: 2}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController._inputProvider
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: _characterController._inputProvider
+      value: 
+      objectReference: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
@@ -1892,6 +1923,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f5249bb5fe0f09943a0e93344fd1e006, type: 2}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController._rigidbody
+      value: 
+      objectReference: {fileID: 153191638}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: _characterController._rigidbody
+      value: 
+      objectReference: {fileID: 153191638}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._inputActionAsset
       value: 
       objectReference: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
@@ -1903,6 +1942,14 @@ PrefabInstance:
       propertyPath: characterRendererScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: 78067c42f4df0d24191882d9de2348ea, type: 2}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController._inputProvider
+      value: 
+      objectReference: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: _characterController._inputProvider
+      value: 
+      objectReference: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <equipmentScriptableObject>k__BackingField
       value: 
@@ -1964,6 +2011,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 10af1f5623318a74287a7aaf18cf60f5, type: 2}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController._rigidbody
+      value: 
+      objectReference: {fileID: 959414228}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: _characterController._rigidbody
+      value: 
+      objectReference: {fileID: 959414228}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._inputActionAsset
       value: 
       objectReference: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
@@ -1976,9 +2031,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f81007c2a333e7840bf1733ef877048d, type: 2}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController._inputProvider
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._inputActionMapName
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: _characterController._inputProvider
+      value: 
+      objectReference: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._inputActionMap.m_Id
       value: 47af5b8a-40ae-4cc0-bc31-d783c2c688ac
