@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Aarthificial.Reanimation;
 using Manapotion.PartySystem;
 using Manapotion.Actions;
@@ -76,7 +78,7 @@ namespace Manapotion.Rendering
             }
 
             _reanimator.Set(Drivers.FACING_STATE, ((int)_member.facingState));
-            _reanimator.Set(Drivers.MOVEMENT_STATE, (int)_member.movementState);
+            _reanimator.Set(Drivers.MOVEMENT_STATE, ((int)_member.movementState));
         }
 
         public void OnActionPerformedEvent_UpdateDriver(object sender, ActionScriptableObject.OnActionPerformedEventArgs e)
@@ -86,13 +88,13 @@ namespace Manapotion.Rendering
                 _reanimator.Set(e.actionPerformed_driverSetsArray[i].driverName, e.actionPerformed_driverSetsArray[i].set);
                 if (e.actionPerformed_driverSetsArray[i].watchDriver != "")
                 {
-                    Debug.Log(e.actionPerformed_driverSetsArray[i].watchDriver);
-                    _reanimator.AddListener(
-                        e.actionPerformed_driverSetsArray[i].watchDriver,
-                        () => {
-                            Debug.Log(e.actionPerformed_driverSetsArray[i].watchDriver);
-                        }
-                    );
+                    var onCompleteDriver = e.actionPerformed_driverSetsArray[i].onComplete_driverName;
+                    var onCompleteSet = e.actionPerformed_driverSetsArray[i].onComplete_set;
+
+                    _reanimator.AddListener(e.actionPerformed_driverSetsArray[i].watchDriver, () => 
+                    {
+                        _reanimator.Set(onCompleteDriver, onCompleteSet);
+                    });
                 }
            }
         }
@@ -102,6 +104,16 @@ namespace Manapotion.Rendering
             for (int i = 0; i < e.actionConcluded_driverSetsArray.Length; i++)
             {
                 _reanimator.Set(e.actionConcluded_driverSetsArray[i].driverName, e.actionConcluded_driverSetsArray[i].set);
+                if (e.actionConcluded_driverSetsArray[i].watchDriver != "")
+                {
+                    var onCompleteDriver = e.actionConcluded_driverSetsArray[i].onComplete_driverName;
+                    var onCompleteSet = e.actionConcluded_driverSetsArray[i].onComplete_set;
+
+                    _reanimator.AddListener(e.actionConcluded_driverSetsArray[i].watchDriver, () => 
+                    {
+                        _reanimator.Set(onCompleteDriver, onCompleteSet);
+                    });
+                }
             }
         }
     }

@@ -13,6 +13,9 @@ namespace Manapotion.Input
         [SerializeField]
         private Rigidbody2D _rigidbody;
 
+        [SerializeField]
+        private CharacterControllerRestriction _characterControllerRestriction;
+
         private float _movementSp;
 
         private Vector2 _position;
@@ -69,9 +72,9 @@ namespace Manapotion.Input
                 return;
             }
 
-            if (_inputProvider.GetState().isSprinting)
+            if (_inputProvider.GetState().isSprinting && _characterControllerRestriction.canSprint)
             {
-                if (_sprintDuration >= _member.dashThreshold) 
+                if (_sprintDuration >= _member.dashThreshold && _characterControllerRestriction.canDash) 
                 {
                     _member.movementState = MovementState.Dash;
                     _member.characterInput.UpdateInputState(
@@ -103,9 +106,12 @@ namespace Manapotion.Input
             }
             else
             {
-                _member.movementState = MovementState.Walk;
-                _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
-                _sprintDuration = 0f;
+                if (_characterControllerRestriction.canWalk)
+                {
+                    _member.movementState = MovementState.Walk;
+                    _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
+                    _sprintDuration = 0f;
+                }
             }
 
             _angle = (float)(Mathf.Atan2(_inputProvider.GetState().movementDirection.y, _inputProvider.GetState().movementDirection.x));
@@ -129,6 +135,10 @@ namespace Manapotion.Input
             {
                 return;
             }
+            if (!_characterControllerRestriction.canUsePrimary)
+            {
+                return;
+            }
 
             _member.PerformMainAction(0);
         }
@@ -139,6 +149,10 @@ namespace Manapotion.Input
             {
                 return;
             }
+            if (!_characterControllerRestriction.canUseSecondary)
+            {
+                return;
+            }
 
             _member.PerformMainAction(1);
         }
@@ -146,6 +160,10 @@ namespace Manapotion.Input
         public void OnAux()
         {
             if (GameStateManager.Instance.state != GameState.Main)
+            {
+                return;
+            }
+            if (!_characterControllerRestriction.canUseAux)
             {
                 return;
             }

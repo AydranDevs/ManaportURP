@@ -17,15 +17,20 @@ MonoBehaviour:
   actionPerformed_driverSetsArray:
   - driverName: state
     set: 1
-    watchDriver: umbrellaOpenedEvent
-    onComplete_driverName: hasUmbrella
-    onComplete_set: 1
+    watchDriver: 
+    onComplete_driverName: 
+    onComplete_set: 0
   - driverName: abilityState
     set: 0
     watchDriver: 
     onComplete_driverName: 
     onComplete_set: 0
   actionConcluded_driverSetsArray:
+  - driverName: state
+    set: 1
+    watchDriver: 
+    onComplete_driverName: 
+    onComplete_set: 0
   - driverName: abilityState
     set: 1
     watchDriver: 

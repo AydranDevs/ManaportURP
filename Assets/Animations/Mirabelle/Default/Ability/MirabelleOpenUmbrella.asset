@@ -44,8 +44,10 @@ MonoBehaviour:
   - sprite: {fileID: -7480220130949403333, guid: f173386dbce4c114bb72d46952d8295a, type: 3}
     drivers:
       keys:
+      - state
+      - hasUmbrella
       - umbrellaOpenedEvent
-      values: 00000000
+      values: 000000000100000000000000
   controlDriver:
     name: openUmbrella
     autoIncrement: 1
