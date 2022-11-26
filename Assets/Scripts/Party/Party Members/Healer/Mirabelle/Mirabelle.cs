@@ -20,9 +20,10 @@ namespace Manapotion.PartySystem.MirabelleCharacter
         [HideInInspector]
         public Party party;
 
-        public MirabelleController mirabelleController { get; private set; }
-        public MirabelleRenderer mirabelleRenderer { get; private set; }
-        public MirabelleHealing mirabelleHealing { get; private set; }
+        // public MirabelleController mirabelleController { get; private set; }
+        // public MirabelleRenderer mirabelleRenderer { get; private set; }
+        // public MirabelleHealing mirabelleHealing { get; private set; }
+        
         private void Awake()
         {
             party = GetComponentInParent<Party>();
@@ -31,15 +32,15 @@ namespace Manapotion.PartySystem.MirabelleCharacter
         protected override void InitMember()
         {         
             // mirabelleController = new MirabelleController(this);
-            mirabelleRenderer = new MirabelleRenderer(this);
-            mirabelleHealing = new MirabelleHealing(this);
+            // mirabelleRenderer = new MirabelleRenderer(this);
+            // mirabelleHealing = new MirabelleHealing(this);
         }
     
         private void Update()
         {
             // mirabelleController.Update();
-            mirabelleRenderer.Update();
-            mirabelleHealing.Update();
+            // mirabelleRenderer.Update();
+            // mirabelleHealing.Update();
         }
     }
 }

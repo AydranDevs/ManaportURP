@@ -9,6 +9,7 @@ using Manapotion.StatusEffects;
 using Manapotion.Actions;
 using Manapotion.Stats;
 using Manapotion.Input;
+using Manapotion.Rendering;
 
 namespace Manapotion.PartySystem
 {
@@ -78,8 +79,9 @@ namespace Manapotion.PartySystem
         }
         #endregion
 
-        public CharacterInput characterInput;
-        public Manapotion.Input.CharacterController characterController;
+        public Input.CharacterInput characterInput;
+        public Input.CharacterController characterController;
+        public CharacterRenderer characterRenderer;
         
         public PartyFormation formation;
 
@@ -116,6 +118,7 @@ namespace Manapotion.PartySystem
 
             characterInput.Init(this);
             characterController.Init(this);
+            characterRenderer.Init(this);
 
             // subscribe to every stat value's modified event
             for (int i = 0; i < statsManagerScriptableObject.statArray.Length; i++)

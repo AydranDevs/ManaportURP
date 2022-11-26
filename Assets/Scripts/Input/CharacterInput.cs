@@ -83,6 +83,7 @@ namespace Manapotion.Input
                 {
                     movementDirection = context.ReadValue<Vector2>(),
                     isSprinting = _inputProvider.GetState().isSprinting,
+                    isDashing = _inputProvider.GetState().isDashing,
                     targetPos = _inputProvider.GetState().targetPos
                 }
             );
@@ -102,6 +103,7 @@ namespace Manapotion.Input
                 {
                     movementDirection = _inputProvider.GetState().movementDirection,
                     isSprinting = _inputProvider.GetState().isSprinting,
+                    isDashing = _inputProvider.GetState().isDashing,
                     targetPos = Camera.main.ScreenToWorldPoint(simpleTargetPos)
                 }
             );
@@ -125,6 +127,7 @@ namespace Manapotion.Input
                 {
                     movementDirection = _inputProvider.GetState().movementDirection,
                     isSprinting = sprint,
+                    isDashing = _inputProvider.GetState().isDashing,
                     targetPos =_inputProvider.GetState().targetPos
                 }
             );
@@ -196,6 +199,7 @@ namespace Manapotion.Input
                         {
                             movementDirection = _inputProvider.GetState().movementDirection,
                             isSprinting = true,
+                            isDashing = _inputProvider.GetState().isDashing,
                             targetPos = _inputProvider.GetState().targetPos
                         }
                     );
@@ -207,6 +211,7 @@ namespace Manapotion.Input
                         {
                             movementDirection = _inputProvider.GetState().movementDirection,
                             isSprinting = false,
+                            isDashing = _inputProvider.GetState().isDashing,
                             targetPos = _inputProvider.GetState().targetPos
                         }
                     );
@@ -252,6 +257,7 @@ namespace Manapotion.Input
                         {
                             movementDirection = _inputProvider.GetState().movementDirection,
                             isSprinting = true,
+                            isDashing = _inputProvider.GetState().isDashing,
                             targetPos = _inputProvider.GetState().targetPos
                         }
                     );
@@ -263,6 +269,7 @@ namespace Manapotion.Input
                         {
                             movementDirection = _inputProvider.GetState().movementDirection,
                             isSprinting = false,
+                            isDashing = _inputProvider.GetState().isDashing,
                             targetPos = _inputProvider.GetState().targetPos
                         }
                     );
@@ -299,31 +306,43 @@ namespace Manapotion.Input
                 return;
             }
 
+            int x = 0, y = 0;
+
             if (currentTile.gridX > tile.gridX)
             {
-                _inputProvider.inputState.movementDirection.x = -1;
+                x = -1;
             }
             else if (currentTile.gridX < tile.gridX) 
             {
-                _inputProvider.inputState.movementDirection.x = 1;
+                x = 1;
             }
-            else
-            {
-                _inputProvider.inputState.movementDirection.x = 0;
-            }
+            // else
+            // {
+            //     _inputProvider.inputState.movementDirection.x = 0;
+            // }
 
             if (currentTile.gridY > tile.gridY) 
             {
-                _inputProvider.inputState.movementDirection.y = -1;
+                y = -1;
             }
             else if (currentTile.gridY < tile.gridY) 
             {
-                _inputProvider.inputState.movementDirection.y = 1;
+                y = 1;
             }
-            else
-            {
-                _inputProvider.inputState.movementDirection.y = 0;
-            }
+            // else
+            // {
+            //     _inputProvider.inputState.movementDirection.y = 0;
+            // }
+
+            UpdateInputState(
+                new InputState
+                {
+                    movementDirection = new Vector2(x, y),
+                    isSprinting = _inputProvider.GetState().isSprinting,
+                    isDashing = _inputProvider.GetState().isDashing,
+                    targetPos = _inputProvider.GetState().targetPos
+                }
+            );
         }
         #endregion
 

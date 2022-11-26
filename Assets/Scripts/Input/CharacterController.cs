@@ -13,10 +13,7 @@ namespace Manapotion.Input
         [SerializeField]
         private Rigidbody2D _rigidbody;
 
-        // public Vector2 movementDirection;
         private float _movementSp;
-        // public bool _isSprinting;
-        private bool _isDashing;
 
         private Vector2 _position;
 
@@ -50,7 +47,7 @@ namespace Manapotion.Input
                 return;
             }
 
-            Move(Time.deltaTime);
+            Move(Time.fixedDeltaTime);
         }
 
         private void Move(float deltaTime)
@@ -60,7 +57,15 @@ namespace Manapotion.Input
             {
                 _member.movementState = MovementState.Idle;
                 _sprintDuration = 0f;
-                _isDashing = false;
+                _member.characterInput.UpdateInputState(
+                    new InputState
+                    {
+                        movementDirection = _inputProvider.GetState().movementDirection,
+                        isSprinting = _inputProvider.GetState().isSprinting,
+                        isDashing = false,
+                        targetPos = _inputProvider.GetState().targetPos
+                    }
+                );
                 return;
             }
 
@@ -69,14 +74,30 @@ namespace Manapotion.Input
                 if (_sprintDuration >= _member.dashThreshold) 
                 {
                     _member.movementState = MovementState.Dash;
-                    _isDashing = true;
+                    _member.characterInput.UpdateInputState(
+                        new InputState
+                        {
+                            movementDirection = _inputProvider.GetState().movementDirection,
+                            isSprinting = _inputProvider.GetState().isSprinting,
+                            isDashing = true,
+                            targetPos = _inputProvider.GetState().targetPos
+                        }
+                    );
                     _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_DshMod(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                 }
                 else
                 {
                     _member.movementState = MovementState.Sprint;
                     _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_SprMod(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
-                    _isDashing = false;
+                    _member.characterInput.UpdateInputState(
+                        new InputState
+                        {
+                            movementDirection = _inputProvider.GetState().movementDirection,
+                            isSprinting = _inputProvider.GetState().isSprinting,
+                            isDashing = false,
+                            targetPos = _inputProvider.GetState().targetPos
+                        }
+                    );
                 }
                 _sprintDuration += deltaTime;
             }
@@ -86,8 +107,6 @@ namespace Manapotion.Input
                 _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                 _sprintDuration = 0f;
             }
-
-            Debug.Log(_movementSp);
 
             _angle = (float)(Mathf.Atan2(_inputProvider.GetState().movementDirection.y, _inputProvider.GetState().movementDirection.x));
 

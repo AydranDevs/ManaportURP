@@ -21,9 +21,9 @@ namespace Manapotion.PartySystem.LaurieCharacter
         public Party party;
         
         // public LaurieCasting laurieCasting { get; private set; }
-        public LaurieController laurieController { get; private set; }
-        public LaurieAbilities laurieAbilities { get; private set; }
-        public LaurieRenderer laurieRenderer { get; private set; }
+        // public LaurieController laurieController { get; private set; }
+        // public LaurieAbilities laurieAbilities { get; private set; }
+        // public LaurieRenderer laurieRenderer { get; private set; }
         
         private void Awake()
         {
@@ -34,16 +34,16 @@ namespace Manapotion.PartySystem.LaurieCharacter
         protected override void InitMember()
         {
             // laurieCasting = new LaurieCasting(this);
-            laurieAbilities = new LaurieAbilities(this);
+            // laurieAbilities = new LaurieAbilities(this);
             // laurieController = new LaurieController(this);
-            laurieRenderer = new LaurieRenderer(this);
+            // laurieRenderer = new LaurieRenderer(this);
         }
         
         private void Update()
         {
             // laurieCasting.Update(); 
-            laurieAbilities.Update(); 
-            laurieRenderer.Update();
+            // laurieAbilities.Update(); 
+            // laurieRenderer.Update();
             // laurieController.Update();
         }
     }

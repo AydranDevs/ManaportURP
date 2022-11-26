@@ -12,8 +12,8 @@ namespace Manapotion.PartySystem.WinsleyCharacter
 
         public Party party;
 
-        public WinsleyController winsleyController { get; private set; }
-        public WinsleyRenderer winsleyRenderer { get; private set; }
+        // public WinsleyController winsleyController { get; private set; }
+        // public WinsleyRenderer winsleyRenderer { get; private set; }
 
         private void Awake()
         {
@@ -23,13 +23,13 @@ namespace Manapotion.PartySystem.WinsleyCharacter
         protected override void InitMember()
         {   
             // winsleyController = new WinsleyController(this);
-            winsleyRenderer = new WinsleyRenderer(this);
+            // winsleyRenderer = new WinsleyRenderer(this);
         }
     
         private void Update()
         {
             // winsleyController.Update();
-            winsleyRenderer.Update();
+            // winsleyRenderer.Update();
         }
     }
 }

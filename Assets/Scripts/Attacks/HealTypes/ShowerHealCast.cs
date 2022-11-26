@@ -20,7 +20,7 @@ public class ShowerHealCast : HealingAbility {
             targets.Add(m.GetComponent<PartyMember>());
         }
 
-        MirabelleRenderer.OnOpenUmbrella += UmbrellaOpened;
+        // MirabelleRenderer.OnOpenUmbrella += UmbrellaOpened;
     }
 
     private void UmbrellaOpened() {

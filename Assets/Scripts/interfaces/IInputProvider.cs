@@ -5,6 +5,7 @@ using UnityEngine;
 public struct InputState {
     public Vector2 movementDirection;
     public bool isSprinting;
+    public bool isDashing;
 
     public Vector2 targetPos;
 }

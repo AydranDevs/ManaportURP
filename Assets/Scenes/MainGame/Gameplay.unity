@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -410,6 +410,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 700794067978813918, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
   m_PrefabInstance: {fileID: 4003902396956327380}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &707551929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8745159326125926232, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &722838956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4003902397916632281, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -698,6 +709,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d90f06b4514206d458128319f8be5650, type: 3}
+--- !u!114 &1080159851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 980810845406834760, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1170396365
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,6 +889,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fcc9590a5ab7c44aa00f182fcd03e69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1410856929 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 261502481456835768, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+  m_PrefabInstance: {fileID: 4003902396956327380}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1478434430 stripped
@@ -1819,6 +1852,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterRenderer._reanimator
+      value: 
+      objectReference: {fileID: 1080159851}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: pointsManagerScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: 6a7bf6940676c6c42b56a26ac988d51d, type: 2}
@@ -1919,6 +1956,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterRenderer._reanimator
+      value: 
+      objectReference: {fileID: 1410856929}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: pointsManagerScriptableObject
       value: 
       objectReference: {fileID: 11400000, guid: f5249bb5fe0f09943a0e93344fd1e006, type: 2}
@@ -2006,6 +2047,10 @@ PrefabInstance:
       propertyPath: characterInput._inputProvider
       value: 
       objectReference: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterRenderer._reanimator
+      value: 
+      objectReference: {fileID: 707551929}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: pointsManagerScriptableObject
       value: 
