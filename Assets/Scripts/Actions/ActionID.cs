@@ -11,6 +11,8 @@ namespace Manapotion.Actions
         Burston_Prime,
         Blasteur_Prime,
         Automa_Prime,
+
+        Charge_Remedy,
         
         Lestrezille,
         Piquretta,

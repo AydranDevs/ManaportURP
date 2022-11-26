@@ -49,5 +49,23 @@ namespace Manapotion.PartySystem
         {
             pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.currentValue = pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.maxValue;
         }
+
+        public override void PerformMainAction(int action)
+        {
+            if (action == 0)
+            {
+                actionsManagerScriptableObject.PerformAction(
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].action_id,
+                    this
+                );
+            }
+            else
+            {
+                actionsManagerScriptableObject.PerformAction(
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].action_id,
+                    this
+                );
+            }
+        }
     }
 }

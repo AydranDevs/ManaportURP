@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a161d0790c8fc4f9d8206d74061ae1, type: 3}
-  m_Name: Mirabelle Actions Manager
+  m_Script: {fileID: 11500000, guid: 83520c34387f0304c87cb733c896b0ff, type: 3}
+  m_Name: manaport_weapon_azure_parasol_attacks
   m_EditorClassIdentifier: 
-  possibleActions:
+  attacksArray:
   - {fileID: 11400000, guid: 8dad408ce377537438250fe2ccb61076, type: 2}
