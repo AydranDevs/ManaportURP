@@ -26,7 +26,7 @@ namespace Manapotion.PartySystem
 
         void Update()
         {
-            if (partyMemberState != PartyMemberState.CurrentLeader)
+            if (Party.Instance.partyLeader != this)
             {
                 return;
             }

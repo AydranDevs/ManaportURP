@@ -50,7 +50,7 @@ namespace Manapotion.PartySystem
                 RegenSP();
             }
 
-            if (partyMemberState != PartyMemberState.CurrentLeader)
+            if (Party.Instance.partyLeader != this)
             {
                 return;
             }

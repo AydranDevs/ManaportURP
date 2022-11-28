@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Aarthificial.Reanimation;
 using Manapotion.PartySystem;
 using Manapotion.Actions;
+using Manapotion.Input;
 using UnityEngine;
 
 namespace Manapotion.Rendering
@@ -41,44 +42,44 @@ namespace Manapotion.Rendering
         {
             if (GameStateManager.Instance.state != GameState.Main)
             {
-                _member.facingState = FacingState.South;
+                _member.characterController.facingState = FacingState.South;
             }
 
             if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, 1))) 
             { // north 
-                _member.facingState = FacingState.North; // north
+                _member.characterController.facingState = FacingState.North; // north
             }
             else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 1)))
             { // northeast
-                _member.facingState = FacingState.North; 
+                _member.characterController.facingState = FacingState.North; 
             }
             else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 0)))
             { // east
-                _member.facingState = FacingState.East; // east
+                _member.characterController.facingState = FacingState.East; // east
             }
             else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, -1)))
             { // southeast
-                _member.facingState = FacingState.East;
+                _member.characterController.facingState = FacingState.East;
             }
             else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, -1)))
             { // south
-                _member.facingState = FacingState.South; // south
+                _member.characterController.facingState = FacingState.South; // south
             }
             else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, -1))) 
             { // southwest
-                _member.facingState = FacingState.South;
+                _member.characterController.facingState = FacingState.South;
             }
             else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 0)))
             { // west
-                _member.facingState = FacingState.West; // west
+                _member.characterController.facingState = FacingState.West; // west
             }
             else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 1))) 
             { // northwest
-                _member.facingState = FacingState.West;
+                _member.characterController.facingState = FacingState.West;
             }
 
-            _reanimator.Set(Drivers.FACING_STATE, ((int)_member.facingState));
-            _reanimator.Set(Drivers.MOVEMENT_STATE, ((int)_member.movementState));
+            _reanimator.Set(Drivers.FACING_STATE, ((int)_member.characterController.facingState));
+            _reanimator.Set(Drivers.MOVEMENT_STATE, ((int)_member.characterController.movementState));
         }
 
         public void OnActionPerformedEvent_UpdateDriver(object sender, ActionScriptableObject.OnActionPerformedEventArgs e)
@@ -115,6 +116,11 @@ namespace Manapotion.Rendering
                     });
                 }
             }
+        }
+
+        public Reanimator GetReanimator()
+        {
+            return this._reanimator;
         }
     }
 }

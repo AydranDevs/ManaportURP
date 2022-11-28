@@ -55,10 +55,9 @@ public class StatusEffectsUIHandler : MonoBehaviour {
 
     private void RefreshView() {
         foreach (var mem in Party.Instance.members) {
-            var pm = mem.GetComponent<PartyMember>();
-            if (pm.partyMemberState == PartyMemberState.CurrentLeader) {
+            if (Party.Instance.partyLeader == mem) {
                 foreach (var mseu in members) {
-                    if (mseu.member == pm.gameObject) {
+                    if (mseu.member == mem.gameObject) {
                         RemoveAllStatuses();
                         currentMember = mseu;
                         ShowStatuses(mseu);

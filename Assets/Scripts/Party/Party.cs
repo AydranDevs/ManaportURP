@@ -145,19 +145,16 @@ namespace Manapotion.PartySystem
             foreach (var member in members)
             {
                 if (member == partyLeader)
-                {
-                    member.partyMemberState = PartyMemberState.CurrentLeader; 
+                { 
                     member.characterInput.controlType = Input.CharacterInput.ControlType.Player;
                 }
                 else if (member == previousLeader)
                 {
-                    member.partyMemberState = PartyMemberState.PreviousLeader;
                     member.characterInput.controlType = Input.CharacterInput.ControlType.AI;
                     member.characterInput.SetLeader(partyLeader.transform);
                 }
                 else
-                { 
-                    member.partyMemberState = PartyMemberState.OldestLeader;
+                {
                     member.characterInput.controlType = Input.CharacterInput.ControlType.AI;
                     member.characterInput.SetLeader(partyLeader.transform);
                 }
@@ -175,16 +172,7 @@ namespace Manapotion.PartySystem
 
         private PartyMember StaticReturner_GetCurrentLeader()
         {
-            foreach (var member in members)
-            {
-                var pm = member.GetComponent<PartyMember>();
-                if (pm.partyMemberState == PartyMemberState.CurrentLeader) 
-                {
-                    return pm;
-                }
-            }
-
-            return members[0].GetComponent<PartyMember>();
+            return partyLeader;
         }
 
         private PartyMember StaticReturner_GetMember(int i)

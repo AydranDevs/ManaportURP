@@ -13,9 +13,15 @@ namespace Manapotion.Input
     {
         public enum ControlType { AI, Player }
         public ControlType controlType = ControlType.AI;
-        public enum AIControlMode { FollowTheLeader }
+        public enum AIControlMode { FollowTheLeader, Patrol }
         public AIControlMode aIControlMode = AIControlMode.FollowTheLeader;
         private Transform _leader;
+        [SerializeField]
+        private int _patrolRange = 7;
+        [field: SerializeField]
+        private int MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT;
+        [field: SerializeField]
+        private int MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT;
 
         private PartyMember _member;
 
@@ -33,7 +39,10 @@ namespace Manapotion.Input
         private InputAction _aux;
 
         // Calculate a new path every 50 frames
-        private const int FRAMES_TO_CALC_PATH = 50;
+        private const int FRAMES_TO_CALC_PATH_TO_LEADER = 50;
+        private int _currentFrameTimerToCalcPathToPatrolPoint;
+        private Vector3 _patrolPoint;
+    
         private int _frames = 0;
 
         private WorldGrid _grid;
@@ -58,6 +67,11 @@ namespace Manapotion.Input
             UtilitiesClass.CreateInputAction(_inputActionMap, PlayerPrimary, _primary, "PrimaryAction");
             UtilitiesClass.CreateInputAction(_inputActionMap, PlayerSecondary, _secondary, "SecondaryAction");
             UtilitiesClass.CreateInputAction(_inputActionMap, PlayerAuxillary, _aux, "AuxilaryAction");
+
+            // if (aIControlMode == AIControlMode.Patrol)
+            // {
+            //     Patrol();
+            // }
         }
 
         public void Update()
@@ -178,9 +192,15 @@ namespace Manapotion.Input
         private void AIUpdate(AIControlMode aIControlMode)
         {
             _frames++;
-            if (_frames >= FRAMES_TO_CALC_PATH)
+            if (_frames >= FRAMES_TO_CALC_PATH_TO_LEADER && aIControlMode == AIControlMode.FollowTheLeader)
             {
-                RecalculatePath();
+                RecalculatePath(_leader.position);
+                _frames = 0;
+            }
+            else if (_frames >= _currentFrameTimerToCalcPathToPatrolPoint && aIControlMode == AIControlMode.Patrol)
+            {
+                Patrol();
+                RecalculatePath(_patrolPoint);
                 _frames = 0;
             }
 
@@ -192,31 +212,36 @@ namespace Manapotion.Input
                     return;
                 }
 
-                if (Vector2.Distance(_member.transform.position, _leader.position) > Party.Instance.maxDistance)
+                // if too far away from leader, sprint.
+                if (aIControlMode == AIControlMode.FollowTheLeader)
                 {
-                    UpdateInputState(
-                        new InputState
-                        {
-                            movementDirection = _inputProvider.GetState().movementDirection,
-                            isSprinting = true,
-                            isDashing = _inputProvider.GetState().isDashing,
-                            targetPos = _inputProvider.GetState().targetPos
-                        }
-                    );
-                }
-                else
-                {
-                    UpdateInputState(
-                        new InputState
-                        {
-                            movementDirection = _inputProvider.GetState().movementDirection,
-                            isSprinting = false,
-                            isDashing = _inputProvider.GetState().isDashing,
-                            targetPos = _inputProvider.GetState().targetPos
-                        }
-                    );
+                    if (Vector2.Distance(_member.transform.position, _leader.position) > Party.Instance.maxDistance)
+                    {
+                        UpdateInputState(
+                            new InputState
+                            {
+                                movementDirection = _inputProvider.GetState().movementDirection,
+                                isSprinting = true,
+                                isDashing = _inputProvider.GetState().isDashing,
+                                targetPos = _inputProvider.GetState().targetPos
+                            }
+                        );
+                    }
+                    else
+                    {
+                        UpdateInputState(
+                            new InputState
+                            {
+                                movementDirection = _inputProvider.GetState().movementDirection,
+                                isSprinting = false,
+                                isDashing = _inputProvider.GetState().isDashing,
+                                targetPos = _inputProvider.GetState().targetPos
+                            }
+                        );
+                    }
                 }
 
+                // moving to tiles
                 if (_grid.WorldPositionToTile(_member.transform.position) != _path[pathIndex])
                 {
                     MoveToTile(_path[pathIndex]);
@@ -236,9 +261,9 @@ namespace Manapotion.Input
 
         }
 
-        private void RecalculatePath()
+        private void RecalculatePath(Vector3 targetPos)
         {   
-            _path = Pathfinding.FindPath(_grid, _member.transform.position, _leader.position);
+            _path = Pathfinding.FindPath(_grid, _member.transform.position, targetPos);
             
             _goalReached = false;
             pathIndex = 0;
@@ -350,6 +375,19 @@ namespace Manapotion.Input
         {
             _inputProvider.inputState = inputState;
             return _inputProvider.GetState();
+        }
+
+        public void Patrol()
+        {
+            _currentFrameTimerToCalcPathToPatrolPoint = UnityEngine.Random.Range(MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT, MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT);
+            _patrolPoint = GetNewPatrolPoint();
+        }
+
+        public Vector3 GetNewPatrolPoint()
+        {
+            int x = (int)UnityEngine.Random.Range(((int)_grid.WorldPositionToTile(_member.transform.position).worldPos.x - _patrolRange), ((int)_grid.WorldPositionToTile(_member.transform.position).worldPos.x + _patrolRange));
+            int y = (int)UnityEngine.Random.Range(((int)_grid.WorldPositionToTile(_member.transform.position).worldPos.y - _patrolRange), ((int)_grid.WorldPositionToTile(_member.transform.position).worldPos.y + _patrolRange));
+            return _grid.WorldPositionToTile(new Vector3(x, y, 0)).worldPos;
         }
     
         public void SetLeader(Transform leader)

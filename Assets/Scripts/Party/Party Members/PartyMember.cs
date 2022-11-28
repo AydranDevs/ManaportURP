@@ -13,13 +13,6 @@ using Manapotion.Rendering;
 
 namespace Manapotion.PartySystem
 {
-    public enum MovementState { Idle, Push, Walk, Sprint, Dash, Skid, AuxilaryMovement }
-    public enum DirectionState { North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest }
-    public enum FacingState { North, East, South, West }
-
-    public enum AbilityState { None, AuxilaryMovement, SpellcastPrimary, SpellcastSecondary }
-    public enum AuxilaryMovementType { Spindash, BlinkDash, Pounce }
-
     public enum PrimaryActionElement { Arcane, Pyro, Cryo, Toxi, Volt }
     public enum SecondaryActionElement { Arcane, Pyro, Cryo, Toxi, Volt }
     public enum DamageType { Physical, Magical }
@@ -79,13 +72,10 @@ namespace Manapotion.PartySystem
         }
         #endregion
 
-        public Input.CharacterInput characterInput;
+        public CharacterInput characterInput;
         public Input.CharacterController characterController;
         public CharacterRenderer characterRenderer;
-        
-        public PartyFormation formation;
 
-        public PartyMemberState partyMemberState;
         public StatusEffectParticles statusEffectParticles;
 
         [Header("Manager ScriptableObjects")]
@@ -98,11 +88,6 @@ namespace Manapotion.PartySystem
         private List<GameObject> _statusEffectParticles;
 
         public List<StatusEffects.Buff> statusEffects;
-
-        public MovementState movementState = MovementState.Idle;
-        public DirectionState directionState = DirectionState.South;
-        public FacingState facingState = FacingState.South;
-        public float dashThreshold = 8f; 
 
         public PrimaryActionElement primaryActionElement = PrimaryActionElement.Arcane;
         public SecondaryActionElement secondaryActionElement = SecondaryActionElement.Arcane;
@@ -302,7 +287,7 @@ namespace Manapotion.PartySystem
             }
 
             PartyLeaderCheck();
-            if (partyMemberState != PartyMemberState.CurrentLeader)
+            if (Party.Instance.partyLeader != this)
             {
                 return;
             }
@@ -316,7 +301,7 @@ namespace Manapotion.PartySystem
         #region Party
         private void PartyLeaderCheck()
         {
-            if (partyMemberState == PartyMemberState.CurrentLeader) 
+            if (Party.Instance.partyLeader == this) 
             {
                 gameObject.tag = "PlayerPartyLeader";
             }

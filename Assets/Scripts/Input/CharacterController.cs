@@ -1,9 +1,14 @@
 using Manapotion.PartySystem;
 using Manapotion.Utilities;
+using Manapotion.Actions;
 using UnityEngine;
 
 namespace Manapotion.Input
 {
+    public enum MovementState { Idle, Push, Walk, Sprint, Dash, Skid, AuxilaryMovement }
+    public enum DirectionState { North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest }
+    public enum FacingState { North, East, South, West }
+
     [System.Serializable]
     public class CharacterController
     {
@@ -13,8 +18,12 @@ namespace Manapotion.Input
         [SerializeField]
         private Rigidbody2D _rigidbody;
 
-        [SerializeField]
-        private CharacterControllerRestriction _characterControllerRestriction;
+        public MovementState movementState = MovementState.Idle;
+        public DirectionState directionState = DirectionState.South;
+        public FacingState facingState = FacingState.South;
+        public float dashThreshold = 8f; 
+
+        public CharacterControllerRestriction characterControllerRestriction = CharacterControllerRestriction.NoRestrictions;
 
         private float _movementSp;
 
@@ -38,6 +47,12 @@ namespace Manapotion.Input
 
             _member = member;
 
+            foreach (var action in _member.actionsManagerScriptableObject.possibleActions)
+            {
+                action.OnActionPerformedRestrictingMovementEvent += OnActionPerformedRestrictingMovementEvent_AddDriverListener;
+                action.OnActionConcludedRestrictingMovementEvent += OnActionConcludedRestrictingMovementEvent_AddDriverListener; 
+            }
+
             _inputProvider.OnPrimary += OnPrimary;
             _inputProvider.OnSecondary += OnSecondary;
             _inputProvider.OnAux += OnAux;
@@ -53,12 +68,13 @@ namespace Manapotion.Input
             Move(Time.fixedDeltaTime);
         }
 
+        #region Controlled by InputProvider
         private void Move(float deltaTime)
         {
             // If not moving, member is idle
             if (_inputProvider.GetState().movementDirection.Equals(Vector2.zero)) 
             {
-                _member.movementState = MovementState.Idle;
+                movementState = MovementState.Idle;
                 _sprintDuration = 0f;
                 _member.characterInput.UpdateInputState(
                     new InputState
@@ -72,11 +88,16 @@ namespace Manapotion.Input
                 return;
             }
 
-            if (_inputProvider.GetState().isSprinting && _characterControllerRestriction.canSprint)
+            if (!characterControllerRestriction.canWalk)
             {
-                if (_sprintDuration >= _member.dashThreshold && _characterControllerRestriction.canDash) 
+                return;
+            }
+
+            if (_inputProvider.GetState().isSprinting && characterControllerRestriction.canSprint)
+            {
+                if (_sprintDuration >= dashThreshold && characterControllerRestriction.canDash) 
                 {
-                    _member.movementState = MovementState.Dash;
+                    movementState = MovementState.Dash;
                     _member.characterInput.UpdateInputState(
                         new InputState
                         {
@@ -90,7 +111,7 @@ namespace Manapotion.Input
                 }
                 else
                 {
-                    _member.movementState = MovementState.Sprint;
+                    movementState = MovementState.Sprint;
                     _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue) * ManaMath.DexCalc_SprMod(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                     _member.characterInput.UpdateInputState(
                         new InputState
@@ -106,9 +127,9 @@ namespace Manapotion.Input
             }
             else
             {
-                if (_characterControllerRestriction.canWalk)
+                if (characterControllerRestriction.canWalk)
                 {
-                    _member.movementState = MovementState.Walk;
+                    movementState = MovementState.Walk;
                     _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                     _sprintDuration = 0f;
                 }
@@ -135,7 +156,7 @@ namespace Manapotion.Input
             {
                 return;
             }
-            if (!_characterControllerRestriction.canUsePrimary)
+            if (!characterControllerRestriction.canUsePrimary)
             {
                 return;
             }
@@ -149,7 +170,7 @@ namespace Manapotion.Input
             {
                 return;
             }
-            if (!_characterControllerRestriction.canUseSecondary)
+            if (!characterControllerRestriction.canUseSecondary)
             {
                 return;
             }
@@ -163,12 +184,33 @@ namespace Manapotion.Input
             {
                 return;
             }
-            if (!_characterControllerRestriction.canUseAux)
+            if (!characterControllerRestriction.canUseAux)
             {
                 return;
             }
 
             // _abilities.AuxMove();
+        }
+        #endregion
+
+        public void OnActionPerformedRestrictingMovementEvent_AddDriverListener(object sender, ActionScriptableObject.OnActionPerformedRestrictingMovementEventArgs e)
+        {
+            // when the watch driver event is called, grant control back to the character.
+            _member.characterRenderer.GetReanimator().AddListener(e.watchDriver, () =>
+                {
+                    characterControllerRestriction = e.restrictionsToApply;
+                }
+            );
+        }
+
+        public void OnActionConcludedRestrictingMovementEvent_AddDriverListener(object sender, ActionScriptableObject.OnActionConcludedRestrictingMovementEventArgs e)
+        {
+            // when the watch driver event is called, grant control back to the character.
+            _member.characterRenderer.GetReanimator().AddListener(e.watchDriver, () =>
+                {
+                    characterControllerRestriction = CharacterControllerRestriction.NoRestrictions;
+                }
+            );
         }
     }
 }

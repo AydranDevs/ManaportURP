@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1501,7 +1501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 700794067978813918, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 707142207230929813, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1509,7 +1509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 707142207230929813, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 840835291317199853, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1725,7 +1725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574237569747349396, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 6772275945057033491, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_RootOrder
@@ -1839,9 +1839,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865848, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 106.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865848, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.6100025
+      objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: primaryActionElement
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput._patrolRange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.aIControlMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: statsManagerScriptableObject
@@ -1896,6 +1912,14 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.value
       value: 20
       objectReference: {fileID: 0}
@@ -1906,6 +1930,18 @@ PrefabInstance:
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.value
       value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canDash
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canIdle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canWalk
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.maxValue
@@ -1926,6 +1962,14 @@ PrefabInstance:
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_staminapoints.value
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canSprint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUseAux
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_dash_modifier.value
@@ -1956,12 +2000,20 @@ PrefabInstance:
       value: 99999
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUsePrimary
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterController._characterControllerRestriction.canUsePrimary
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_sprint_modifier.maxValue
       value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUseSecondary
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterController._characterControllerRestriction.canUseSecondary
@@ -1974,6 +2026,14 @@ PrefabInstance:
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: primaryActionElement
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput._patrolRange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.aIControlMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: statsManagerScriptableObject
@@ -2028,12 +2088,32 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.value
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.value
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canDash
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canIdle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canWalk
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.maxValue
@@ -2049,6 +2129,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterController._characterControllerRestriction.canWalk
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canSprint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUseAux
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -2076,6 +2164,10 @@ PrefabInstance:
       value: 99999
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUsePrimary
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterController._characterControllerRestriction.canUsePrimary
       value: 1
       objectReference: {fileID: 0}
@@ -2084,8 +2176,28 @@ PrefabInstance:
       value: 99999
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUseSecondary
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455001, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterController._characterControllerRestriction.canUseSecondary
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455006, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 104.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495455764455006, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.560007
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430214, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 101.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430214, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.42
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: damageType
@@ -2094,6 +2206,14 @@ PrefabInstance:
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput.controlType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput._patrolRange
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.aIControlMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: statsManagerScriptableObject
@@ -2176,6 +2296,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.value
       value: 15
       objectReference: {fileID: 0}
@@ -2186,6 +2314,18 @@ PrefabInstance:
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_base_walk_speed.value
       value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canDash
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canIdle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canWalk
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_hitpoints.maxValue
@@ -2210,6 +2350,14 @@ PrefabInstance:
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_max_manapoints.maxValue
       value: 99999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canSprint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUseAux
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._inputActionMap.m_Bindings.Array.data[0].m_Id
@@ -2260,6 +2408,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUsePrimary
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._inputActionMap.m_Bindings.Array.data[0].m_Action
       value: New action
       objectReference: {fileID: 0}
@@ -2278,6 +2430,10 @@ PrefabInstance:
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: TestUnityEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.characterControllerRestriction.canUseSecondary
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: <stats>k__BackingField.manaport_stat_manapoints_regen_rate.maxValue
