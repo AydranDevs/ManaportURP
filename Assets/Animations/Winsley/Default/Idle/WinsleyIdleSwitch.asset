@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: LaurieIdleSwitch
+  m_Name: WinsleyIdleSwitch
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 11400000, guid: 99923cf6387381544b0906de91b6a217, type: 2}
-  - {fileID: 11400000, guid: 124eae1078ffb3c448c6090eda3761b4, type: 2}
-  - {fileID: 11400000, guid: f154b40f303b18142b8a4243da34c39d, type: 2}
-  - {fileID: 11400000, guid: 3abd51430b4070c43bdecdd7592a1eb7, type: 2}
+  - {fileID: 11400000, guid: 049a315c6938a5044a6a26fe0e909c3d, type: 2}
+  - {fileID: 11400000, guid: 07dc3d4a82a07d44389bbbf4a890c12f, type: 2}
+  - {fileID: 11400000, guid: a22a0a5e93590f748bf8d2bf06190aed, type: 2}
+  - {fileID: 11400000, guid: 278452f9bc27572489bdac0e9c8c5935, type: 2}
   controlDriver:
     name: facingState
     autoIncrement: 0
     percentageBased: 0
-    guid: 4efef1ee-9fde-4a76-bb4e-8ce047be43e2
+    guid: 6b3640a9-1bb6-4968-a6f2-49dbbd01ac56
   drivers:
     keys: []
     values: 

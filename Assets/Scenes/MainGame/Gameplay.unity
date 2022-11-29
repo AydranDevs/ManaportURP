@@ -1841,11 +1841,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865848, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 106.86
+      value: 162.4
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865848, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6100025
+      value: 35.25
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: primaryActionElement
@@ -2185,19 +2185,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455006, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.61
+      value: 160.15
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455006, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.560007
+      value: 35.200005
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430214, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 101.8
+      value: 157.34
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430214, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.42
+      value: 35.059998
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: damageType
@@ -2205,7 +2205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput.controlType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput._patrolRange
@@ -2213,7 +2213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterInput.aIControlMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: statsManagerScriptableObject

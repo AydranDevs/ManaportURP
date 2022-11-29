@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: LaurieIdleSwitch
+  m_Name: WinsleyAbilitySwitch
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 11400000, guid: 99923cf6387381544b0906de91b6a217, type: 2}
-  - {fileID: 11400000, guid: 124eae1078ffb3c448c6090eda3761b4, type: 2}
-  - {fileID: 11400000, guid: f154b40f303b18142b8a4243da34c39d, type: 2}
-  - {fileID: 11400000, guid: 3abd51430b4070c43bdecdd7592a1eb7, type: 2}
+  - {fileID: 11400000, guid: b80ac52a08a49af4786a48497e3aa439, type: 2}
+  - {fileID: 11400000, guid: ae2db8be08be3f942a9d6aa8fb88937b, type: 2}
   controlDriver:
-    name: facingState
+    name: abilityState
     autoIncrement: 0
     percentageBased: 0
-    guid: 4efef1ee-9fde-4a76-bb4e-8ce047be43e2
+    guid: a9f26213-1966-4b6a-9d86-045fdd626536
   drivers:
     keys: []
     values: 

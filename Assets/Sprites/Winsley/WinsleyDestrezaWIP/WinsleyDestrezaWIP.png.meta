@@ -1,223 +1,163 @@
 fileFormatVersion: 2
-guid: 47374ec72d817e04da22b65bdf5b8971
+guid: f63078e953000374c9ca9c4090cf103c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3099410668643503317
-    second: WinsleyPiquretta00
+      213: 4530970783223791122
+    second: WinsleyDestrezaWIP00
   - first:
-      213: 1454537498426399120
-    second: WinsleyPiquretta01
+      213: 2095232227704277651
+    second: WinsleyDestrezaWIP01
   - first:
-      213: 3695593229914405724
-    second: WinsleyPiquretta02
+      213: -30368034887793080
+    second: WinsleyDestrezaWIP02
   - first:
-      213: 5505132854066727826
-    second: WinsleyPiquretta03
+      213: 8791905492732960555
+    second: WinsleyDestrezaWIP03
   - first:
-      213: 5047651927172520096
-    second: WinsleyPiquretta04
+      213: 7660341811770188929
+    second: WinsleyDestrezaWIP04
   - first:
-      213: -5384990823791247902
-    second: WinsleyPiquretta05
+      213: -86760383943173937
+    second: WinsleyDestrezaWIP05
   - first:
-      213: -352136203395642153
-    second: WinsleyPiquretta06
+      213: -3545863961452435904
+    second: WinsleyDestrezaWIP06
   - first:
-      213: 8972817463085155835
-    second: WinsleyPiquretta07
+      213: 6930834032262034638
+    second: WinsleyDestrezaWIP07
   - first:
-      213: 7426703219464183732
-    second: WinsleyPiquretta08
+      213: -3580927742617402571
+    second: WinsleyDestrezaWIP08
   - first:
-      213: 2926465687850189998
-    second: WinsleyPiquretta09
+      213: -8653266112477123836
+    second: WinsleyDestrezaWIP09
   - first:
-      213: 3654613328165421331
-    second: WinsleyPiquretta10
+      213: -3051476146643117078
+    second: WinsleyDestrezaWIP10
   - first:
-      213: -2451279558052052834
-    second: WinsleyPiquretta11
+      213: -8109249284621084136
+    second: WinsleyDestrezaWIP11
   - first:
-      213: -4621395237886162658
-    second: WinsleyPiquretta12
+      213: -568135583398834767
+    second: WinsleyDestrezaWIP12
   - first:
-      213: -1692454323141990060
-    second: WinsleyPiquretta13
+      213: -1568715185162236991
+    second: WinsleyDestrezaWIP13
   - first:
-      213: -8151314262405120063
-    second: WinsleyPiquretta14
+      213: 4724058751483740127
+    second: WinsleyDestrezaWIP14
   - first:
-      213: -8383887055867157787
-    second: WinsleyPiquretta15
+      213: -2893184308073947857
+    second: WinsleyDestrezaWIP15
   - first:
-      213: 2648274327681155623
-    second: WinsleyPiquretta16
+      213: 8306445668492134165
+    second: WinsleyDestrezaWIP16
   - first:
-      213: -1451006490610157023
-    second: WinsleyPiquretta17
+      213: 4271874791866594902
+    second: WinsleyDestrezaWIP17
   - first:
-      213: 4672791178741664616
-    second: WinsleyPiquretta18
+      213: -8065114309909043603
+    second: WinsleyDestrezaWIP18
   - first:
-      213: -8506020228418805105
-    second: WinsleyPiquretta19
+      213: -4653346066466882022
+    second: WinsleyDestrezaWIP19
   - first:
-      213: -4839909174733408972
-    second: WinsleyPiquretta20
+      213: 3711079148758061409
+    second: WinsleyDestrezaWIP20
   - first:
-      213: -7594199538153010411
-    second: WinsleyPiquretta21
+      213: -3044017961515343465
+    second: WinsleyDestrezaWIP21
   - first:
-      213: 7994116116598676149
-    second: WinsleyPiquretta22
+      213: -6317400931443526630
+    second: WinsleyDestrezaWIP22
   - first:
-      213: -53156616531981247
-    second: WinsleyPiquretta23
+      213: 4965024979027389156
+    second: WinsleyDestrezaWIP23
   - first:
-      213: -1979359299187023359
-    second: WinsleyPiquretta24
+      213: 256736712638791769
+    second: WinsleyDestrezaWIP24
   - first:
-      213: 2195730603521323989
-    second: WinsleyPiquretta25
+      213: 1492240713858809077
+    second: WinsleyDestrezaWIP25
   - first:
-      213: 5674765355043561102
-    second: WinsleyPiquretta26
+      213: 7441508296072657327
+    second: WinsleyDestrezaWIP26
   - first:
-      213: -3067053948896245208
-    second: WinsleyPiquretta27
+      213: -3051942525139259720
+    second: WinsleyDestrezaWIP27
   - first:
-      213: -3730023287646145551
-    second: WinsleyPiquretta28
+      213: 3817151401439480295
+    second: WinsleyDestrezaWIP28
   - first:
-      213: -5398355575884944286
-    second: WinsleyPiquretta29
+      213: -3882616771634076267
+    second: WinsleyDestrezaWIP29
   - first:
-      213: -2955996656865957719
-    second: WinsleyPiquretta30
+      213: -8216234225982070432
+    second: WinsleyDestrezaWIP30
   - first:
-      213: 8662590817385852590
-    second: WinsleyPiquretta31
+      213: -103524979480873878
+    second: WinsleyDestrezaWIP31
   - first:
-      213: -2935252052211699699
-    second: WinsleyPiquretta32
+      213: 6011781661932668058
+    second: WinsleyDestrezaWIP32
   - first:
-      213: -3612333299554466116
-    second: WinsleyPiquretta33
+      213: 133032769906845995
+    second: WinsleyDestrezaWIP33
   - first:
-      213: -5268734790721283623
-    second: WinsleyPiquretta34
+      213: 3510944625486604004
+    second: WinsleyDestrezaWIP34
   - first:
-      213: -6268578714795315063
-    second: WinsleyPiquretta35
+      213: -2270070358845113140
+    second: WinsleyDestrezaWIP35
   - first:
-      213: 4193756698654282723
-    second: WinsleyPiquretta36
+      213: -6014563930960375407
+    second: WinsleyDestrezaWIP36
   - first:
-      213: 4509255581884831741
-    second: WinsleyPiquretta37
+      213: 1198492933059288758
+    second: WinsleyDestrezaWIP37
   - first:
-      213: 4100907583489137313
-    second: WinsleyPiquretta38
+      213: 8463928284999880585
+    second: WinsleyDestrezaWIP38
   - first:
-      213: -7004170544287399482
-    second: WinsleyPiquretta39
+      213: 2014624955405311517
+    second: WinsleyDestrezaWIP39
   - first:
-      213: -1523806274526096251
-    second: WinsleyPiquretta40
+      213: -164760996430410132
+    second: WinsleyDestrezaWIP40
   - first:
-      213: 2999429406052810787
-    second: WinsleyPiquretta41
+      213: -7100471545264863620
+    second: WinsleyDestrezaWIP41
   - first:
-      213: 7061183702705420322
-    second: WinsleyPiquretta42
+      213: 7223726680532993940
+    second: WinsleyDestrezaWIP42
   - first:
-      213: -4931569429080323369
-    second: WinsleyPiquretta43
+      213: 3300060276235240903
+    second: WinsleyDestrezaWIP43
   - first:
-      213: -868538166805284203
-    second: WinsleyPiquretta44
+      213: -6510948811447789433
+    second: WinsleyDestrezaWIP44
   - first:
-      213: 4516656596088660387
-    second: WinsleyPiquretta45
+      213: 8927651171701929329
+    second: WinsleyDestrezaWIP45
   - first:
-      213: 5753393789748826669
-    second: WinsleyPiquretta46
+      213: 803599714378272238
+    second: WinsleyDestrezaWIP46
   - first:
-      213: 6312629791598408310
-    second: WinsleyPiquretta47
+      213: 666533376863303859
+    second: WinsleyDestrezaWIP47
   - first:
-      213: -8871790642627724995
-    second: WinsleyPiquretta48
+      213: 3988803283856273506
+    second: WinsleyDestrezaWIP48
   - first:
-      213: -4181370986211161753
-    second: WinsleyPiquretta49
+      213: -7653333080746462389
+    second: WinsleyDestrezaWIP49
   - first:
-      213: 3202080554310944172
-    second: WinsleyPiquretta50
+      213: -8301239730947650339
+    second: WinsleyDestrezaWIP50
   - first:
-      213: -1711927601793997748
-    second: WinsleyPiquretta51
-  - first:
-      213: 4749949825322614006
-    second: WinsleyPiquretta52
-  - first:
-      213: 2800978378496528862
-    second: WinsleyPiquretta53
-  - first:
-      213: 150851570545598286
-    second: WinsleyPiquretta54
-  - first:
-      213: 1751186593623638370
-    second: WinsleyPiquretta55
-  - first:
-      213: 8168319436998092054
-    second: WinsleyPiquretta56
-  - first:
-      213: 8390265108317588402
-    second: WinsleyPiquretta57
-  - first:
-      213: -6952570135200001172
-    second: WinsleyPiquretta58
-  - first:
-      213: -5815291707337891623
-    second: WinsleyPiquretta59
-  - first:
-      213: -5362564785576677590
-    second: WinsleyPiquretta60
-  - first:
-      213: -2645804426283063082
-    second: WinsleyPiquretta61
-  - first:
-      213: -640720545579894788
-    second: WinsleyPiquretta62
-  - first:
-      213: 5556306860909064656
-    second: WinsleyPiquretta63
-  - first:
-      213: -6543676617948497
-    second: WinsleyPiquretta64
-  - first:
-      213: -6193740126437891298
-    second: WinsleyPiquretta65
-  - first:
-      213: -5567287405450000320
-    second: WinsleyPiquretta66
-  - first:
-      213: -4659312898697090710
-    second: WinsleyPiquretta67
-  - first:
-      213: -8375560664972119970
-    second: WinsleyPiquretta68
-  - first:
-      213: -1759483118276625488
-    second: WinsleyPiquretta69
-  - first:
-      213: -1180792263170492067
-    second: WinsleyPiquretta70
-  - first:
-      213: -206286743567294638
-    second: WinsleyPiquretta71
+      213: -5598502038588242002
+    second: WinsleyDestrezaWIP51
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -295,196 +235,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WinsleyPiquretta00
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5dc4d8de491530b20800000000000000
-      internalID: 3099410668643503317
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta01
-      rect:
-        serializedVersion: 2
-        x: 67
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 099d03af52e8f2410800000000000000
-      internalID: 1454537498426399120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta02
-      rect:
-        serializedVersion: 2
-        x: 133
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c5bf2676672694330800000000000000
-      internalID: 3695593229914405724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta03
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29bcaffc929266c40800000000000000
-      internalID: 5505132854066727826
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta04
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0a81fe42facdc0640800000000000000
-      internalID: 5047651927172520096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta05
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ed3f2d606ba445b0800000000000000
-      internalID: -5384990823791247902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta06
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7dc4c0c1df5fc1bf0800000000000000
-      internalID: -352136203395642153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta07
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bf5cc9151f9d58c70800000000000000
-      internalID: 8972817463085155835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta08
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 529
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4bf9960da33f01760800000000000000
-      internalID: 7426703219464183732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta09
+      name: WinsleyDestrezaWIP00
       rect:
         serializedVersion: 2
         x: 1
@@ -498,14 +249,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea40eabb905ec9820800000000000000
-      internalID: 2926465687850189998
+      spriteID: 21e3ab5dbed31ee30800000000000000
+      internalID: 4530970783223791122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta10
+      name: WinsleyDestrezaWIP01
       rect:
         serializedVersion: 2
         x: 67
@@ -519,14 +270,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 31145b0857bc7b230800000000000000
-      internalID: 3654613328165421331
+      spriteID: 39a834e2c92c31d10800000000000000
+      internalID: 2095232227704277651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta11
+      name: WinsleyDestrezaWIP02
       rect:
         serializedVersion: 2
         x: 133
@@ -540,14 +291,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e908129ba3e4bfdd0800000000000000
-      internalID: -2451279558052052834
+      spriteID: 8468cf3ee6c149ff0800000000000000
+      internalID: -30368034887793080
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta12
+      name: WinsleyDestrezaWIP03
       rect:
         serializedVersion: 2
         x: 199
@@ -561,14 +312,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e190d1f24818ddfb0800000000000000
-      internalID: -4621395237886162658
+      spriteID: b2f5721d67f130a70800000000000000
+      internalID: 8791905492732960555
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta13
+      name: WinsleyDestrezaWIP04
       rect:
         serializedVersion: 2
         x: 265
@@ -582,14 +333,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4592c8692c13388e0800000000000000
-      internalID: -1692454323141990060
+      spriteID: 18462a4aa400f4a60800000000000000
+      internalID: 7660341811770188929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta14
+      name: WinsleyDestrezaWIP05
       rect:
         serializedVersion: 2
         x: 331
@@ -603,14 +354,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cf74c8add6b0ee80800000000000000
-      internalID: -8151314262405120063
+      spriteID: fc89d76f3e3cbcef0800000000000000
+      internalID: -86760383943173937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta15
+      name: WinsleyDestrezaWIP06
       rect:
         serializedVersion: 2
         x: 397
@@ -624,14 +375,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5e2ea06742376ab80800000000000000
-      internalID: -8383887055867157787
+      spriteID: 046a4cb838f8acec0800000000000000
+      internalID: -3545863961452435904
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta16
+      name: WinsleyDestrezaWIP07
       rect:
         serializedVersion: 2
         x: 463
@@ -645,35 +396,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 722c839487f80c420800000000000000
-      internalID: 2648274327681155623
+      spriteID: ec4ba2ac4d44f2060800000000000000
+      internalID: 6930834032262034638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta17
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 463
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12a3568d84dfcdbe0800000000000000
-      internalID: -1451006490610157023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta18
+      name: WinsleyDestrezaWIP08
       rect:
         serializedVersion: 2
         x: 1
@@ -687,14 +417,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86bc97ec1d619d040800000000000000
-      internalID: 4672791178741664616
+      spriteID: 533c2fec03dfd4ec0800000000000000
+      internalID: -3580927742617402571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta19
+      name: WinsleyDestrezaWIP09
       rect:
         serializedVersion: 2
         x: 67
@@ -708,14 +438,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f826fc84bab84f980800000000000000
-      internalID: -8506020228418805105
+      spriteID: 40b20e2515c69e780800000000000000
+      internalID: -8653266112477123836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta20
+      name: WinsleyDestrezaWIP10
       rect:
         serializedVersion: 2
         x: 133
@@ -729,14 +459,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4357cde9f3035dcb0800000000000000
-      internalID: -4839909174733408972
+      spriteID: aeb52ceac9af6a5d0800000000000000
+      internalID: -3051476146643117078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta21
+      name: WinsleyDestrezaWIP11
       rect:
         serializedVersion: 2
         x: 199
@@ -750,14 +480,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51b44fe71cbfb9690800000000000000
-      internalID: -7594199538153010411
+      spriteID: 81ad1138db8267f80800000000000000
+      internalID: -8109249284621084136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta22
+      name: WinsleyDestrezaWIP12
       rect:
         serializedVersion: 2
         x: 265
@@ -771,14 +501,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5bad61fd04ec0fe60800000000000000
-      internalID: 7994116116598676149
+      spriteID: 1bdc04f62b39d18f0800000000000000
+      internalID: -568135583398834767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta23
+      name: WinsleyDestrezaWIP13
       rect:
         serializedVersion: 2
         x: 331
@@ -792,14 +522,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14c4622c656234ff0800000000000000
-      internalID: -53156616531981247
+      spriteID: 1cbc4aab9ddca3ae0800000000000000
+      internalID: -1568715185162236991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta24
+      name: WinsleyDestrezaWIP14
       rect:
         serializedVersion: 2
         x: 397
@@ -813,14 +543,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10267195437e784e0800000000000000
-      internalID: -1979359299187023359
+      spriteID: fdf7344c76a3f8140800000000000000
+      internalID: 4724058751483740127
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta25
+      name: WinsleyDestrezaWIP15
       rect:
         serializedVersion: 2
         x: 463
@@ -834,35 +564,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5d3b755b95dc87e10800000000000000
-      internalID: 2195730603521323989
+      spriteID: f2d9487533859d7d0800000000000000
+      internalID: -2893184308073947857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta26
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 397
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e8e90133601d0ce40800000000000000
-      internalID: 5674765355043561102
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta27
+      name: WinsleyDestrezaWIP16
       rect:
         serializedVersion: 2
         x: 1
@@ -876,14 +585,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82a8415fea2af65d0800000000000000
-      internalID: -3067053948896245208
+      spriteID: 5174e88735c664370800000000000000
+      internalID: 8306445668492134165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta28
+      name: WinsleyDestrezaWIP17
       rect:
         serializedVersion: 2
         x: 67
@@ -897,14 +606,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f3bae7159b4c3cc0800000000000000
-      internalID: -3730023287646145551
+      spriteID: 65677266d7fb84b30800000000000000
+      internalID: 4271874791866594902
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta29
+      name: WinsleyDestrezaWIP18
       rect:
         serializedVersion: 2
         x: 133
@@ -918,14 +627,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 26ce02894303515b0800000000000000
-      internalID: -5398355575884944286
+      spriteID: d66a3f41445f21090800000000000000
+      internalID: -8065114309909043603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta30
+      name: WinsleyDestrezaWIP19
       rect:
         serializedVersion: 2
         x: 199
@@ -939,14 +648,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a8234eb3b03af6d0800000000000000
-      internalID: -2955996656865957719
+      spriteID: a1eb743386efb6fb0800000000000000
+      internalID: -4653346066466882022
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta31
+      name: WinsleyDestrezaWIP20
       rect:
         serializedVersion: 2
         x: 265
@@ -960,14 +669,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eae28d8b374b73870800000000000000
-      internalID: 8662590817385852590
+      spriteID: 161551bd2d6608330800000000000000
+      internalID: 3711079148758061409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta32
+      name: WinsleyDestrezaWIP21
       rect:
         serializedVersion: 2
         x: 331
@@ -981,14 +690,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d007fa56fc3e347d0800000000000000
-      internalID: -2935252052211699699
+      spriteID: 79128f9bac971c5d0800000000000000
+      internalID: -3044017961515343465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta33
+      name: WinsleyDestrezaWIP22
       rect:
         serializedVersion: 2
         x: 397
@@ -1002,14 +711,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cb6cdb5c00a6eddc0800000000000000
-      internalID: -3612333299554466116
+      spriteID: a143699e2551458a0800000000000000
+      internalID: -6317400931443526630
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta34
+      name: WinsleyDestrezaWIP23
       rect:
         serializedVersion: 2
         x: 463
@@ -1023,35 +732,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d9d05f6f91b1e6b0800000000000000
-      internalID: -5268734790721283623
+      spriteID: 4ea6edf99ef47e440800000000000000
+      internalID: 4965024979027389156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta35
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 331
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 980fc0a0fd88109a0800000000000000
-      internalID: -6268578714795315063
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta36
+      name: WinsleyDestrezaWIP24
       rect:
         serializedVersion: 2
         x: 1
@@ -1065,14 +753,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3e314b97f77333a30800000000000000
-      internalID: 4193756698654282723
+      spriteID: 95003ad0eac109300800000000000000
+      internalID: 256736712638791769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta37
+      name: WinsleyDestrezaWIP25
       rect:
         serializedVersion: 2
         x: 67
@@ -1086,14 +774,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df751b78f08149e30800000000000000
-      internalID: 4509255581884831741
+      spriteID: 5fcfde4e50185b410800000000000000
+      internalID: 1492240713858809077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta38
+      name: WinsleyDestrezaWIP26
       rect:
         serializedVersion: 2
         x: 133
@@ -1107,14 +795,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1aa539a38b959e830800000000000000
-      internalID: 4100907583489137313
+      spriteID: fa978845e5c854760800000000000000
+      internalID: 7441508296072657327
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta39
+      name: WinsleyDestrezaWIP27
       rect:
         serializedVersion: 2
         x: 199
@@ -1128,14 +816,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6c1ce79efff2cce90800000000000000
-      internalID: -7004170544287399482
+      spriteID: 8be6a2a717255a5d0800000000000000
+      internalID: -3051942525139259720
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta40
+      name: WinsleyDestrezaWIP28
       rect:
         serializedVersion: 2
         x: 265
@@ -1149,14 +837,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5845c5c444a5adae0800000000000000
-      internalID: -1523806274526096251
+      spriteID: 7e94fa8b9fe39f430800000000000000
+      internalID: 3817151401439480295
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta41
+      name: WinsleyDestrezaWIP29
       rect:
         serializedVersion: 2
         x: 331
@@ -1170,14 +858,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 32083a4372d10a920800000000000000
-      internalID: 2999429406052810787
+      spriteID: 595e6cffd9c2e1ac0800000000000000
+      internalID: -3882616771634076267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta42
+      name: WinsleyDestrezaWIP30
       rect:
         serializedVersion: 2
         x: 397
@@ -1191,14 +879,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 228b8857a2d5ef160800000000000000
-      internalID: 7061183702705420322
+      spriteID: 061aee0c0821afd80800000000000000
+      internalID: -8216234225982070432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta43
+      name: WinsleyDestrezaWIP31
       rect:
         serializedVersion: 2
         x: 463
@@ -1212,35 +900,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7dacd7a9bbb8f8bb0800000000000000
-      internalID: -4931569429080323369
+      spriteID: a64b9a46494309ef0800000000000000
+      internalID: -103524979480873878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta44
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 265
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 59ab3b5932552f3f0800000000000000
-      internalID: -868538166805284203
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta45
+      name: WinsleyDestrezaWIP32
       rect:
         serializedVersion: 2
         x: 1
@@ -1254,14 +921,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a12a4e6e336eae30800000000000000
-      internalID: 4516656596088660387
+      spriteID: a9444bad1932e6350800000000000000
+      internalID: 6011781661932668058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta46
+      name: WinsleyDestrezaWIP33
       rect:
         serializedVersion: 2
         x: 67
@@ -1275,14 +942,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d22dae24b2928df40800000000000000
-      internalID: 5753393789748826669
+      spriteID: b29a8c17990a8d100800000000000000
+      internalID: 133032769906845995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta47
+      name: WinsleyDestrezaWIP34
       rect:
         serializedVersion: 2
         x: 133
@@ -1296,14 +963,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 67275c68957fa9750800000000000000
-      internalID: 6312629791598408310
+      spriteID: 4e6223cf88169b030800000000000000
+      internalID: 3510944625486604004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta48
+      name: WinsleyDestrezaWIP35
       rect:
         serializedVersion: 2
         x: 199
@@ -1317,14 +984,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d393a805a6111e480800000000000000
-      internalID: -8871790642627724995
+      spriteID: cccb4e539071f70e0800000000000000
+      internalID: -2270070358845113140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta49
+      name: WinsleyDestrezaWIP36
       rect:
         serializedVersion: 2
         x: 265
@@ -1338,14 +1005,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 76942cced39c8f5c0800000000000000
-      internalID: -4181370986211161753
+      spriteID: 191da38a8f9f78ca0800000000000000
+      internalID: -6014563930960375407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta50
+      name: WinsleyDestrezaWIP37
       rect:
         serializedVersion: 2
         x: 331
@@ -1359,14 +1026,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca5c3ed7c43107c20800000000000000
-      internalID: 3202080554310944172
+      spriteID: 6be90d409f6e1a010800000000000000
+      internalID: 1198492933059288758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta51
+      name: WinsleyDestrezaWIP38
       rect:
         serializedVersion: 2
         x: 397
@@ -1380,14 +1047,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c44e1e59ae20e38e0800000000000000
-      internalID: -1711927601793997748
+      spriteID: 98f8ccf6ee9e57570800000000000000
+      internalID: 8463928284999880585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta52
+      name: WinsleyDestrezaWIP39
       rect:
         serializedVersion: 2
         x: 463
@@ -1401,35 +1068,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fc784723363be140800000000000000
-      internalID: 4749949825322614006
+      spriteID: d1e129619b265fb10800000000000000
+      internalID: 2014624955405311517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta53
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 199
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed1d5d9bef21fd620800000000000000
-      internalID: 2800978378496528862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta54
+      name: WinsleyDestrezaWIP40
       rect:
         serializedVersion: 2
         x: 1
@@ -1443,14 +1089,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4f1e2444bee71200800000000000000
-      internalID: 150851570545598286
+      spriteID: c6e0de62fb6a6bdf0800000000000000
+      internalID: -164760996430410132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta55
+      name: WinsleyDestrezaWIP41
       rect:
         serializedVersion: 2
         x: 67
@@ -1464,14 +1110,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2610d50cde67d4810800000000000000
-      internalID: 1751186593623638370
+      spriteID: c7608bedfbe067d90800000000000000
+      internalID: -7100471545264863620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta56
+      name: WinsleyDestrezaWIP42
       rect:
         serializedVersion: 2
         x: 133
@@ -1485,14 +1131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 615a0361043bb5170800000000000000
-      internalID: 8168319436998092054
+      spriteID: 4974eab9425df3460800000000000000
+      internalID: 7223726680532993940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta57
+      name: WinsleyDestrezaWIP43
       rect:
         serializedVersion: 2
         x: 199
@@ -1506,14 +1152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2bbcf9899a5307470800000000000000
-      internalID: 8390265108317588402
+      spriteID: 7c50166365b2ccd20800000000000000
+      internalID: 3300060276235240903
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta58
+      name: WinsleyDestrezaWIP44
       rect:
         serializedVersion: 2
         x: 265
@@ -1527,14 +1173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c631a6f5c42838f90800000000000000
-      internalID: -6952570135200001172
+      spriteID: 78817ee6d8674a5a0800000000000000
+      internalID: -6510948811447789433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta59
+      name: WinsleyDestrezaWIP45
       rect:
         serializedVersion: 2
         x: 331
@@ -1548,14 +1194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9d0a9deb00feb4fa0800000000000000
-      internalID: -5815291707337891623
+      spriteID: 175b4ef907365eb70800000000000000
+      internalID: 8927651171701929329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta60
+      name: WinsleyDestrezaWIP46
       rect:
         serializedVersion: 2
         x: 397
@@ -1569,14 +1215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a2feea65db75495b0800000000000000
-      internalID: -5362564785576677590
+      spriteID: eed4f1dbea5f62b00800000000000000
+      internalID: 803599714378272238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta61
+      name: WinsleyDestrezaWIP47
       rect:
         serializedVersion: 2
         x: 463
@@ -1590,35 +1236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6d8ed3274e6384bd0800000000000000
-      internalID: -2645804426283063082
+      spriteID: 3b8f0e62390004900800000000000000
+      internalID: 666533376863303859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta62
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 133
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf77a68fe04bb17f0800000000000000
-      internalID: -640720545579894788
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta63
+      name: WinsleyDestrezaWIP48
       rect:
         serializedVersion: 2
         x: 1
@@ -1632,14 +1257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d1fc83c6a7fb1d40800000000000000
-      internalID: 5556306860909064656
+      spriteID: 2603a2df3731b5730800000000000000
+      internalID: 3988803283856273506
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta64
+      name: WinsleyDestrezaWIP49
       rect:
         serializedVersion: 2
         x: 67
@@ -1653,14 +1278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fa289af8f80c8eff0800000000000000
-      internalID: -6543676617948497
+      spriteID: b437c56bc16e9c590800000000000000
+      internalID: -7653333080746462389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta65
+      name: WinsleyDestrezaWIP50
       rect:
         serializedVersion: 2
         x: 133
@@ -1674,14 +1299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e13269cbb2a6b0aa0800000000000000
-      internalID: -6193740126437891298
+      spriteID: ddc818152721ccc80800000000000000
+      internalID: -8301239730947650339
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WinsleyPiquretta66
+      name: WinsleyDestrezaWIP51
       rect:
         serializedVersion: 2
         x: 199
@@ -1695,113 +1320,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 04885abf9950db2b0800000000000000
-      internalID: -5567287405450000320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta67
-      rect:
-        serializedVersion: 2
-        x: 265
-        y: 67
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a69a3cfca9bc65fb0800000000000000
-      internalID: -4659312898697090710
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta68
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 67
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e503a9963f704cb80800000000000000
-      internalID: -8375560664972119970
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta69
-      rect:
-        serializedVersion: 2
-        x: 397
-        y: 67
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0bb33d21d6f0597e0800000000000000
-      internalID: -1759483118276625488
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta70
-      rect:
-        serializedVersion: 2
-        x: 463
-        y: 67
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d59713851bbfc9fe0800000000000000
-      internalID: -1180792263170492067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WinsleyPiquretta71
-      rect:
-        serializedVersion: 2
-        x: 529
-        y: 67
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25f9cc7bc4f132df0800000000000000
-      internalID: -206286743567294638
+      spriteID: ea7c5abde002e42b0800000000000000
+      internalID: -5598502038588242002
       vertices: []
       indices: 
       edges: []
