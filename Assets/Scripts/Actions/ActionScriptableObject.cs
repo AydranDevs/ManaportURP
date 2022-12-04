@@ -5,6 +5,8 @@ using Manapotion.PartySystem;
 using Manapotion.Input;
 using Manapotion.Stats;
 using Manapotion.Rendering;
+using Manapotion.Actions.Projectiles;
+using Manapotion.Actions.Targets;
 
 namespace Manapotion.Actions
 {
@@ -41,28 +43,42 @@ namespace Manapotion.Actions
             public CharacterControllerRestriction restrictionsToApply;
         }
         
+        public ProjectileHandlerScriptableObject projectileHandler;
+        public TargetDefinitionScriptableObject targetDefinition;
+        
         /// <summary>
         /// This action's ID.
         /// </summary>
+        [Tooltip("The ID/Name of the action.")]
         public ActionID action_id;
         
         /// <summary>
         /// Require the action to be toggled on and off.
         /// </summary>
         [Header("Toggled Action Options")]
+        [Tooltip("If true, the action will need to be performed again to turn it off.")]
         public bool isToggled = false;
         private bool _isActive = false;
-        public bool performed_willRestrictMovementUntilDriverEvent = false;
-        public string performed_unrestrictDriverEventWatch;
-        [SerializeField]
-        private CharacterControllerRestriction _restrictionsUntilDriverEvent;
-        [SerializeField]
-        private CharacterControllerRestriction _restrictionsWhileActive;
 
-        public bool concluded_willRestrictMovementUntilDriverEvent = false;
-        public string concluded_unrestrictDriverEventWatch;
+        [Tooltip("If true, this action will apply Restrictions Applied After Performed Until Driver to the member until driverToWatchToUnrestrictAfterPerformed's callbacks are made.")]
+        public bool whenPerformedWillRestrictUntilEvent = false;
+        [Tooltip("The name of the driver that when invoked will apply _restrictionsWhileActive to the member that performed this action.")]
+        public string driverToWatchToUnrestrictAfterPerformed;
+        [SerializeField]
+        private CharacterControllerRestriction _restrictionsAppliedAfterPerformedUntilDriver;
+        [SerializeField]
+        private CharacterControllerRestriction _restrictionsAppliedWhileActive;
+        [SerializeField]
+        private CharacterControllerRestriction _restrictionsAppliedAfterConcludedUntilDriver;
 
+        [Tooltip("If true, this action will apply Restrictions Applied After Concluded Until Driver to the member until driverToWatchToUnrestrictAfterConcluded's callbacks are made.")]
+        public bool whenConcludedWillRestrictUntilEvent = false;
+        [Tooltip("The name of the driver that when invoked will unrestrict the member that performed this action.")]
+        public string driverToWatchToUnrestrictAfterConcluded;
+
+        [Tooltip("When this action is performed, this action will set Reanimator drivers to those listed here.")]
         public DriverSet[] actionPerformed_driverSetsArray;
+        [Tooltip("When this action is concluded, this action will set Reanimator drivers to those listed here.")]
         public DriverSet[] actionConcluded_driverSetsArray;
 
         [Header("Point Cost")]
@@ -86,29 +102,55 @@ namespace Manapotion.Actions
                 else
                 {
                     _isActive = true;
-                    if (performed_willRestrictMovementUntilDriverEvent)
+                    if (whenPerformedWillRestrictUntilEvent)
                     {
-                        member.characterController.characterControllerRestriction = _restrictionsUntilDriverEvent;
+                        member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
                         OnActionPerformedRestrictingMovementEvent?.Invoke(
                             this,
                             new OnActionPerformedRestrictingMovementEventArgs
                             {
                                 action_id = this.action_id,
-                                watchDriver = this.performed_unrestrictDriverEventWatch,
-                                restrictionsToApply = _restrictionsWhileActive
+                                watchDriver = this.driverToWatchToUnrestrictAfterPerformed,
+                                restrictionsToApply = _restrictionsAppliedWhileActive
                             }
                         );
                     }
                 }
             }
-            member.characterController.characterControllerRestriction = _restrictionsUntilDriverEvent;
+            member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
             InvokeActionPerformedEvent();
             yield break;
         }
 
         public virtual IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
-            Debug.Log($"Action {this.action_id} started. (member: {member})");
+            if (isToggled)
+            {
+                if (_isActive)
+                {
+                    ConcludeAction(member);
+                    yield break;
+                }
+                else
+                {
+                    _isActive = true;
+                    if (whenPerformedWillRestrictUntilEvent)
+                    {
+                        member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
+                        OnActionPerformedRestrictingMovementEvent?.Invoke(
+                            this,
+                            new OnActionPerformedRestrictingMovementEventArgs
+                            {
+                                action_id = this.action_id,
+                                watchDriver = this.driverToWatchToUnrestrictAfterPerformed,
+                                restrictionsToApply = _restrictionsAppliedWhileActive
+                            }
+                        );
+                    }
+                }
+            }
+            member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
+            InvokeActionPerformedEvent();
             yield break;
         }
 
@@ -140,15 +182,15 @@ namespace Manapotion.Actions
                 return;
             }
             _isActive = false;
-            if (concluded_willRestrictMovementUntilDriverEvent)
+            if (whenConcludedWillRestrictUntilEvent)
             {
-                member.characterController.characterControllerRestriction = _restrictionsUntilDriverEvent;
+                member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
                 OnActionConcludedRestrictingMovementEvent?.Invoke(
                     this,
                     new OnActionConcludedRestrictingMovementEventArgs
                     {
                         action_id = this.action_id,
-                        watchDriver = this.concluded_unrestrictDriverEventWatch,
+                        watchDriver = this.driverToWatchToUnrestrictAfterConcluded,
                         restrictionsToApply = CharacterControllerRestriction.NoRestrictions
                     }
                 );

@@ -12,8 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974b54c185a300548a15a1838641a030, type: 3}
   m_Name: Baffergique_Principelle
   m_EditorClassIdentifier: 
-  action_id: 11
-  action_animationName: 
+  action_id: 13
+  isToggled: 0
+  whenPerformedWillRestrictUntilEvent: 0
+  driverToWatchToUnrestrictAfterPerformed: 
+  _restrictionsAppliedAfterPerformedUntilDriver:
+    canIdle: 0
+    canWalk: 0
+    canSprint: 0
+    canDash: 0
+    canUsePrimary: 0
+    canUseSecondary: 0
+    canUseAux: 0
+  _restrictionsAppliedWhileActive:
+    canIdle: 0
+    canWalk: 0
+    canSprint: 0
+    canDash: 0
+    canUsePrimary: 0
+    canUseSecondary: 0
+    canUseAux: 0
+  _restrictionsAppliedAfterConcludedUntilDriver:
+    canIdle: 0
+    canWalk: 0
+    canSprint: 0
+    canDash: 0
+    canUsePrimary: 0
+    canUseSecondary: 0
+    canUseAux: 0
+  whenConcludedWillRestrictUntilEvent: 0
+  driverToWatchToUnrestrictAfterConcluded: 
+  actionPerformed_driverSetsArray: []
+  actionConcluded_driverSetsArray: []
   costPointID: 3
   cost: 0
   projectileHandler: {fileID: 0}

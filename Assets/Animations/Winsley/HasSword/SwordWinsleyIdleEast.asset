@@ -10,33 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
-  m_Name: WinsleyRaiseSwordEast
+  m_Name: SwordWinsleyIdleEast
   m_EditorClassIdentifier: 
   cels:
-  - sprite: {fileID: 803599714378272238, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
-    drivers:
-      keys: []
-      values: 
-  - sprite: {fileID: 666533376863303859, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
-    drivers:
-      keys: []
-      values: 
   - sprite: {fileID: 3988803283856273506, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 3988803283856273506, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
-    drivers:
-      keys:
-      - swordRaisedEvent
-      - state
-      - hasSword
-      values: 000000000000000001000000
   controlDriver:
-    name: raiseSword
+    name: idle
     autoIncrement: 1
     percentageBased: 0
-    guid: b8909360-c758-4c7b-8d2e-a049704c8841
+    guid: efe9099e-23bd-4dac-ab42-a428037722e6
   drivers:
     keys: []
     values: 

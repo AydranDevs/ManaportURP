@@ -13,6 +13,7 @@ namespace Manapotion.Actions
         Automa_Prime,
 
         Charge_Remedy,
+        Dance_De_Destreza,
         
         Lestrezille,
         Piquretta,

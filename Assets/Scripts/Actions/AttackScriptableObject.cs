@@ -2,16 +2,12 @@ using System.Collections;
 using UnityEngine;
 using Manapotion.PartySystem;
 using Manapotion.Stats;
-using Manapotion.Actions.Projectiles;
 
 namespace Manapotion.Actions
 {
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New AttackScriptableObject")]
     public class AttackScriptableObject : ActionScriptableObject
     {    
-        [SerializeField]
-        public ProjectileHandlerScriptableObject projectileHandler;
-        
         public override IEnumerator PerformAction(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
             if (!member.pointsManagerScriptableObject.GetPointScriptableObject(costPointID).value.CanSubtract(cost))

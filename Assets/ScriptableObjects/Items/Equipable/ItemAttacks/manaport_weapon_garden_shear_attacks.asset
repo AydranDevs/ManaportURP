@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: manaport_weapon_garden_shear_attacks
   m_EditorClassIdentifier: 
   attacksArray:
-  - {fileID: 11400000, guid: 3eae304463b931d44aa3fff753482371, type: 2}
+  - {fileID: 11400000, guid: 0d514027e531ca940938db77782fda65, type: 2}
+  - {fileID: 11400000, guid: b3635a1bd52f4ff44908d639a7cf46ac, type: 2}

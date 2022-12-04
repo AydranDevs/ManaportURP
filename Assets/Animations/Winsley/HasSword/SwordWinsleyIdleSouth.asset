@@ -9,17 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: WinsleyOverrideRootSwitch
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: SwordWinsleyIdleSouth
   m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 11400000, guid: c9e3ab6646f38414eb8c2c56f6082c57, type: 2}
-  - {fileID: 11400000, guid: 664e051b1b453084aaeb16d9eed77661, type: 2}
+  cels:
+  - sprite: {fileID: 6930834032262034638, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+    drivers:
+      keys: []
+      values: 
   controlDriver:
-    name: hasSword
-    autoIncrement: 0
+    name: idle
+    autoIncrement: 1
     percentageBased: 0
-    guid: 4fb15b76-ab4e-41f8-bdf3-fe9e4034c2d5
+    guid: 786b2623-b3d1-42cf-9996-a6693fa40dca
   drivers:
     keys: []
     values: 

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
-  m_Name: WinsleyRaiseSwordNorth
+  m_Name: WinsleyLowerSwordNorth
   m_EditorClassIdentifier: 
   cels:
-  - sprite: {fileID: 1492240713858809077, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+  - sprite: {fileID: 3817151401439480295, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 7441508296072657327, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+  - sprite: {fileID: 3817151401439480295, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
     drivers:
       keys: []
       values: 
@@ -25,18 +25,19 @@ MonoBehaviour:
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 3817151401439480295, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+  - sprite: {fileID: 7441508296072657327, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
     drivers:
       keys:
-      - swordRaisedEvent
       - hasSword
+      - abilityState
       - state
-      values: 000000000100000000000000
+      - swordLoweredEvent
+      values: 00000000000000000000000000000000
   controlDriver:
-    name: raiseSword
+    name: lowerSword
     autoIncrement: 1
     percentageBased: 0
-    guid: ce28673a-dfe7-4f8b-8f46-96bfcc29266a
+    guid: a96e22dd-d413-481a-a596-14e06ee04f31
   drivers:
     keys: []
     values: 

@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: WinsleyRaiseSwordSwitch
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 11400000, guid: af83ac09d4825584382564d87dbf5847, type: 2}
+  - {fileID: 11400000, guid: e0fe2504a3bb4644ead48da2bc8f2d83, type: 2}
+  - {fileID: 11400000, guid: 046d7ef0fa9539a439635dd9390dcbd7, type: 2}
+  - {fileID: 11400000, guid: 3db14f0605e032e4580a73125de066aa, type: 2}
   controlDriver:
     name: facingState
     autoIncrement: 0

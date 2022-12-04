@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be19956832124e7fa78f325c15e8f32f, type: 3}
+  m_Name: WinsleySwordOverride
+  m_EditorClassIdentifier: 
+  next: {fileID: 11400000, guid: c9e3ab6646f38414eb8c2c56f6082c57, type: 2}
+  overrides:
+  - fromNode: {fileID: 11400000, guid: 07dc3d4a82a07d44389bbbf4a890c12f, type: 2}
+    toNode: {fileID: 11400000, guid: e9332542de6efac4abbec16f4e5d172d, type: 2}
+  - fromNode: {fileID: 11400000, guid: 049a315c6938a5044a6a26fe0e909c3d, type: 2}
+    toNode: {fileID: 11400000, guid: 2be895aa8fce05146932f115adab3430, type: 2}
+  - fromNode: {fileID: 11400000, guid: a22a0a5e93590f748bf8d2bf06190aed, type: 2}
+    toNode: {fileID: 11400000, guid: d2f852890409b8645a51fac6f839e690, type: 2}
+  - fromNode: {fileID: 11400000, guid: 278452f9bc27572489bdac0e9c8c5935, type: 2}
+    toNode: {fileID: 11400000, guid: 6b767ac5db8bac247963b6d264aa48e2, type: 2}
