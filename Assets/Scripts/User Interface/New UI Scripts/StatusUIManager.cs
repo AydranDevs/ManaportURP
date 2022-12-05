@@ -46,9 +46,7 @@ namespace Manapotion.UI
             PartyMember.OnAbilityLockChangedEvent += OnAbilityLockChanged_SetLockState;
 
             PartyMember.OnUpdateHealthBarEvent += OnUpdateHealthBar_UpdateHealthBar;
-            PartyMember_Mage.OnUpdateManaBar += OnUpdateManaBar_UpdateManaBar;
-            PartyMember_Fighter.OnUpdateStaminaBar += OnUpdateStaminaBar_UpdateStaminaBar;
-            PartyMember_Healer.OnUpdateRemedyBar += OnUpdateRemedyBar_UpdateRemedyBar;
+            PartyMember.OnUpdateActionBarEvent += OnUpdateActionBar_SetActionBar;
         }
 
         #region Init
@@ -126,43 +124,34 @@ namespace Manapotion.UI
         #endregion
     
         #region Set Status Bar Values
-        public void SetStaminaBar()
+        public void OnUpdateActionBar_SetActionBar(object sender, PartyMember.OnUpdateActionBarEventArgs e)
         {
-            GameObject.Destroy(statusBars[1].statusBarGameObject);
-            statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.staminaBarPrefab, _main.statusBarParent.transform);
-            statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
-        }
-        public void SetManaBar()
-        {
-            GameObject.Destroy(statusBars[1].statusBarGameObject);
-            statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.manaBarPrefab, _main.statusBarParent.transform);
-            statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
-        }
-        public void SetRemedyBar()
-        {
-            GameObject.Destroy(statusBars[1].statusBarGameObject);
-            statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.remedyBarPrefab, _main.statusBarParent.transform);
-            statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
+            // instantiate the correct action bar
+            switch (e.actionPoints)
+            {
+                case Stats.PointID.Manapoints:
+                    GameObject.Destroy(statusBars[1].statusBarGameObject);
+                    statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.manaBarPrefab, _main.statusBarParent.transform);
+                    statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
+                    break;
+                case Stats.PointID.Remedypoints:
+                    GameObject.Destroy(statusBars[1].statusBarGameObject);
+                    statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.remedyBarPrefab, _main.statusBarParent.transform);
+                    statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
+                    break;
+                case Stats.PointID.Staminapoints:
+                    GameObject.Destroy(statusBars[1].statusBarGameObject);
+                    statusBars[1].statusBarGameObject = GameObject.Instantiate(_main.staminaBarPrefab, _main.statusBarParent.transform);
+                    statusBars[1].statusBar = statusBars[1].statusBarGameObject.GetComponent<StatusBar>();
+                    break;
+            }
+
+            SetBarData(1, e.currentValue, e.maxValue);
         }
 
         public void OnUpdateHealthBar_UpdateHealthBar(object sender, PartyMember.OnUpdateHealthBarEventArgs e)
         {
-            SetBarData(0, e.health, e.maxHealth);
-        }
-
-        public void OnUpdateManaBar_UpdateManaBar(object sender, PartyMember_Mage.OnUpdateManaBarEventArgs e)
-        {
-            SetBarData(1, e.mana, e.maxMana);
-        }
-
-        public void OnUpdateStaminaBar_UpdateStaminaBar(object sender, PartyMember_Fighter.OnUpdateStaminaBarEventArgs e)
-        {
-            SetBarData(1, e.stamina, e.maxStamina);
-        }
-
-        public void OnUpdateRemedyBar_UpdateRemedyBar(object sender, PartyMember_Healer.OnUpdateRemedyBarEventArgs e)
-        {
-            SetBarData(1, e.remedy, e.maxRemedy);
+            SetBarData(0, e.currentValue, e.maxValue);
         }
 
         private void SetBarData(int i, float value, float maxValue)

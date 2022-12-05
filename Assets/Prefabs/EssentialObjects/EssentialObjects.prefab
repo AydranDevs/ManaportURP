@@ -2315,92 +2315,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &4003902398099334683
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4003902398099334684}
-  - component: {fileID: 4003902398099334685}
-  - component: {fileID: 4003902398099334686}
-  m_Layer: 8
-  m_Name: Heals
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4003902398099334684
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4003902398099334683}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8575495455764455006}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4003902398099334685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4003902398099334683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a86380cf03e759c498536cca99b73c6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  delay: 0
-  range: 10
-  cooldown: 0
-  heal: 1
-  spellId: 
-  icons:
-    rejuvenating: {fileID: 21300000, guid: 7f2f22630238fef44bd395112230673c, type: 3}
-    warming: {fileID: 21300000, guid: 085c67d4f1b190c48a0463ecff029104, type: 3}
-    comforting: {fileID: 21300000, guid: 247b2c2aff8ac644a96b1e48b4895abd, type: 3}
-    caring: {fileID: 21300000, guid: 6c5b5e7a0a639a343b7f0f54a5df482a, type: 3}
-    loving: {fileID: 21300000, guid: b7c676265aca5b04f89886a8025c9071, type: 3}
-  coolingDown: 0
-  cooldownTime: 0
-  particles:
-    rejuvenatingBeam: {fileID: 1834610958131189290, guid: 9ea356910d1fa8a43b3599629da7afd3, type: 3}
---- !u!114 &4003902398099334686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4003902398099334683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58cfa3662b88aa648a4cd13ba9526318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  delay: 0
-  range: 0
-  cooldown: 0
-  heal: 0
-  spellId: 
-  icons:
-    rejuvenating: {fileID: 21300000, guid: fc88fa40e95473e44b80edab60836730, type: 3}
-    warming: {fileID: 21300000, guid: 81d923449ce9f5a4fa68949b3e4eb317, type: 3}
-    comforting: {fileID: 21300000, guid: c57226f9bcc3c9c46938c4a008dfa66c, type: 3}
-    caring: {fileID: 21300000, guid: 2c2900cc33d85424e826c2f12e6472db, type: 3}
-    loving: {fileID: 21300000, guid: c1ee69dd82f9895459f497f7f29feec9, type: 3}
-  coolingDown: 0
-  cooldownTime: 0
 --- !u!1 &4706400962956312194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,52 +3898,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pfWorldItem: {fileID: 2941297421733109811, guid: 98d206b3029cefd449d370b2c7ca073a, type: 3}
-  manaport_consumable_restore_mana_potion_I: {fileID: 0}
-  manaport_consumable_restore_mana_potion_II: {fileID: 0}
-  manaport_consumable_restore_mana_potion_III: {fileID: 0}
-  manaport_consumable_restore_health_potion_I: {fileID: 0}
-  manaport_consumable_restore_health_potion_II: {fileID: 0}
-  manaport_consumable_restore_health_potion_III: {fileID: 0}
-  manaport_consumable_regen_mana_potion_I: {fileID: 0}
-  manaport_consumable_regen_mana_potion_II: {fileID: 0}
-  manaport_consumable_regen_mana_potion_III: {fileID: 0}
-  manaport_consumable_regen_health_potion_I: {fileID: 0}
-  manaport_consumable_regen_health_potion_II: {fileID: 0}
-  manaport_consumable_regen_health_potion_III: {fileID: 0}
-  manaport_consumable_boost_pyro_potion_I: {fileID: 0}
-  manaport_consumable_boost_pyro_potion_II: {fileID: 0}
-  manaport_consumable_boost_pyro_potion_III: {fileID: 0}
-  manaport_consumable_boost_cryo_potion_I: {fileID: 0}
-  manaport_consumable_boost_cryo_potion_II: {fileID: 0}
-  manaport_consumable_boost_cryo_potion_III: {fileID: 0}
-  manaport_consumable_boost_toxi_potion_I: {fileID: 0}
-  manaport_consumable_boost_toxi_potion_II: {fileID: 0}
-  manaport_consumable_boost_toxi_potion_III: {fileID: 0}
-  manaport_consumable_boost_volt_potion_I: {fileID: 0}
-  manaport_consumable_boost_volt_potion_II: {fileID: 0}
-  manaport_consumable_boost_volt_potion_III: {fileID: 0}
-  manaport_consumable_invincibility_potion_I: {fileID: 0}
-  manaport_consumable_invincibility_potion_II: {fileID: 0}
-  manaport_consumable_invincibility_potion_III: {fileID: 0}
-  manaport_consumable_absorption_potion_I: {fileID: 0}
-  manaport_consumable_absorption_potion_II: {fileID: 0}
-  manaport_consumable_absorption_potion_III: {fileID: 0}
-  manaport_consumable_rage_potion_I: {fileID: 0}
-  manaport_consumable_rage_potion_II: {fileID: 0}
-  manaport_consumable_rage_potion_III: {fileID: 0}
-  manaport_weapon_training_tome: {fileID: 0}
-  manaport_weapon_azure_parasol: {fileID: 0}
-  manaport_weapon_garden_shear: {fileID: 0}
-  manaport_armour_violet_robes: {fileID: 0}
-  manaport_armour_timid_raincoat: {fileID: 0}
-  manaport_armour_sunbeaten_overalls: {fileID: 0}
-  manaport_vanity_gold_ring_hat: {fileID: 0}
-  manaport_vanity_cutesy_blue_rainboots: {fileID: 0}
-  manaport_vanity_scarlet_rings: {fileID: 0}
-  manaport_spellstone_pyromancing_stone: {fileID: 0}
-  manaport_spellstone_cryomancing_stone: {fileID: 0}
-  manaport_spellstone_toximancing_stone: {fileID: 0}
-  manaport_spellstone_voltmancing_stone: {fileID: 0}
 --- !u!1 &7962150300829840766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4338,7 +4206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8575495455274865848}
-  - component: {fileID: 8575495455274865851}
+  - component: {fileID: 6822457150433077822}
   - component: {fileID: 8575495455274865849}
   - component: {fileID: 7389459463756044762}
   - component: {fileID: 4502961927276222975}
@@ -4367,7 +4235,7 @@ Transform:
   m_Father: {fileID: 8575495456905702051}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8575495455274865851
+--- !u!114 &6822457150433077822
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4376,136 +4244,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 8575495455274865850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d54c25111a046a4fbdf18ca534d6f59, type: 3}
+  m_Script: {fileID: 11500000, guid: ddebb7334c954bd4691df4c604d35652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputProvider: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
-  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
-  partyMemberState: 2
-  statusEffectParticles:
-    rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
+  characterInput:
+    controlType: 0
+    aIControlMode: 0
+    _patrolRange: 7
+    MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT: 0
+    MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT: 0
+    _inputProvider: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
+    _inputActionAsset: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
+  characterController:
+    _inputProvider: {fileID: 11400000, guid: 0ea105353004c7544a28b96e361ae6fa, type: 2}
+    _rigidbody: {fileID: 8575495455274865849}
+    movementState: 0
+    directionState: 4
+    facingState: 2
+    dashThreshold: 8
+    characterControllerRestriction:
+      canIdle: 1
+      canWalk: 1
+      canSprint: 1
+      canDash: 1
+      canUsePrimary: 1
+      canUseSecondary: 1
+      canUseAux: 1
+  characterRenderer:
+    _reanimator: {fileID: 980810845406834760}
   actionsManagerScriptableObject: {fileID: 11400000, guid: d105db3fea8668c42993c88e947b9469, type: 2}
-  _statusEffectParticles: []
-  statusEffects: []
-  movementState: 0
-  directionState: 4
-  facingState: 2
-  dashThreshold: 8
-  <equipmentScriptableObject>k__BackingField: {fileID: 0}
-  <stats>k__BackingField:
-    manaport_stat_hitpoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_hitpoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_hitpoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_hitpoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_manapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_staminapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_remedypoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_remedypoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_experience_points:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_experience_points:
-      maxValue: 0
-      value: 0
-    manaport_stat_experience_level:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_magical_damage:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_magical_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_healing_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_healing_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_physical_damage:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_physical_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_defence:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_pyro_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_cryo_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_toxi_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_volt_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_arcane_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_stress_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_stability:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_push_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_walk_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_sprint_modifier:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_dash_modifier:
-      maxValue: 0
-      value: 0
-    manaport_stat_ability_distance:
-      maxValue: 0
-      value: 0
-    manaport_stat_ability_cooldown:
-      maxValue: 0
-      value: 0
-  state: 0
-  party: {fileID: 0}
+  statsManagerScriptableObject: {fileID: 11400000, guid: d55f04ff16f50b54c817913eed1e3da6, type: 2}
+  equipmentManagerScriptableObject: {fileID: 11400000, guid: 8cce2686ff410834cbdbee1210de9a77, type: 2}
+  pointsManagerScriptableObject: {fileID: 11400000, guid: 6a7bf6940676c6c42b56a26ac988d51d, type: 2}
+  actionPoints: 3
+  _actionPointsRegenCooldown: 0
+  actionPointsRegenCoolingDown: 0
+  actionPointsRegenerating: 0
+  primaryActionElement: 0
+  secondaryActionElement: 0
+  damageType: 0
 --- !u!50 &8575495455274865849
 Rigidbody2D:
   serializedVersion: 4
@@ -4683,7 +4460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8575495455764455006}
-  - component: {fileID: 8575495455764455001}
+  - component: {fileID: 5518079813858214591}
   - component: {fileID: 8575495455764455007}
   - component: {fileID: 4872550218272703226}
   - component: {fileID: 3232384822119704504}
@@ -4708,12 +4485,11 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 104, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4003902398099334684}
+  m_Children: []
   m_Father: {fileID: 8575495456905702051}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8575495455764455001
+--- !u!114 &5518079813858214591
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4722,139 +4498,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 8575495455764455000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0d11151db344ed4192844f1033137c3, type: 3}
+  m_Script: {fileID: 11500000, guid: ddebb7334c954bd4691df4c604d35652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputProvider: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
-  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
-  partyMemberState: 1
-  statusEffectParticles:
-    rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
+  characterInput:
+    controlType: 0
+    aIControlMode: 0
+    _patrolRange: 7
+    MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT: 0
+    MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT: 0
+    _inputProvider: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
+    _inputActionAsset: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
+  characterController:
+    _inputProvider: {fileID: 11400000, guid: a8e857de2515400449f758644e0a2e4b, type: 2}
+    _rigidbody: {fileID: 8575495455764455007}
+    movementState: 0
+    directionState: 4
+    facingState: 2
+    dashThreshold: 8
+    characterControllerRestriction:
+      canIdle: 1
+      canWalk: 1
+      canSprint: 1
+      canDash: 1
+      canUsePrimary: 1
+      canUseSecondary: 1
+      canUseAux: 1
+  characterRenderer:
+    _reanimator: {fileID: 261502481456835768}
   actionsManagerScriptableObject: {fileID: 11400000, guid: fb0ff2af540bebb4db91280513cc4626, type: 2}
-  _statusEffectParticles: []
-  statusEffects: []
-  movementState: 0
-  directionState: 4
-  facingState: 2
-  dashThreshold: 8
-  <equipmentScriptableObject>k__BackingField: {fileID: 0}
-  <stats>k__BackingField:
-    manaport_stat_hitpoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_hitpoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_hitpoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_hitpoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_manapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_staminapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_remedypoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_remedypoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_experience_points:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_experience_points:
-      maxValue: 0
-      value: 0
-    manaport_stat_experience_level:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_magical_damage:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_magical_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_healing_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_healing_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_physical_damage:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_physical_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_defence:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_pyro_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_cryo_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_toxi_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_volt_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_arcane_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_stress_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_stability:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_push_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_walk_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_sprint_modifier:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_dash_modifier:
-      maxValue: 0
-      value: 0
-    manaport_stat_ability_distance:
-      maxValue: 0
-      value: 0
-    manaport_stat_ability_cooldown:
-      maxValue: 0
-      value: 0
-  healingType: 0
-  healingEffect: 0
-  umbrellaState: 3
-  state: 0
-  party: {fileID: 0}
+  statsManagerScriptableObject: {fileID: 11400000, guid: 148f759f2c678ac4994a45e977655ebc, type: 2}
+  equipmentManagerScriptableObject: {fileID: 11400000, guid: 2c336bd7f2f86a4439b0c6f7cba0b83f, type: 2}
+  pointsManagerScriptableObject: {fileID: 11400000, guid: f5249bb5fe0f09943a0e93344fd1e006, type: 2}
+  actionPoints: 2
+  _actionPointsRegenCooldown: 0
+  actionPointsRegenCoolingDown: 0
+  actionPointsRegenerating: 0
+  primaryActionElement: 0
+  secondaryActionElement: 0
+  damageType: 0
 --- !u!50 &8575495455764455007
 Rigidbody2D:
   serializedVersion: 4
@@ -5032,7 +4714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8575495456034430214}
-  - component: {fileID: 8575495456034430215}
+  - component: {fileID: 4536639332912630902}
   - component: {fileID: 8575495456034430212}
   - component: {fileID: 2057648410357845881}
   - component: {fileID: 4003902396679703930}
@@ -5057,12 +4739,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 101.19, y: 1.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 8575495456221202583}
+  m_Children: []
   m_Father: {fileID: 8575495456905702051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8575495456034430215
+--- !u!114 &4536639332912630902
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5071,144 +4752,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 8575495456034430209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fcc9590a5ab7c44aa00f182fcd03e69, type: 3}
+  m_Script: {fileID: 11500000, guid: ddebb7334c954bd4691df4c604d35652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputProvider: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
-  controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
-  partyMemberState: 0
-  statusEffectParticles:
-    rejuvenatedBuffParticles: {fileID: 6152692259731231991, guid: 0a82182f8eed49a41aca4959915955f7, type: 3}
+  characterInput:
+    controlType: 1
+    aIControlMode: 0
+    _patrolRange: 7
+    MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT: 0
+    MIN_FRAMES_TO_CALC_PATH_TO_PATROL_POINT: 0
+    _inputProvider: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
+    _inputActionAsset: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
+  characterController:
+    _inputProvider: {fileID: 11400000, guid: 2fbcf8769aea3794e8e9d946fec6bb2e, type: 2}
+    _rigidbody: {fileID: 8575495456034430212}
+    movementState: 0
+    directionState: 4
+    facingState: 2
+    dashThreshold: 8
+    characterControllerRestriction:
+      canIdle: 1
+      canWalk: 1
+      canSprint: 1
+      canDash: 1
+      canUsePrimary: 1
+      canUseSecondary: 1
+      canUseAux: 1
+  characterRenderer:
+    _reanimator: {fileID: 8745159326125926232}
   actionsManagerScriptableObject: {fileID: 11400000, guid: 7470158a0b6858b46941e115e48060d8, type: 2}
-  _statusEffectParticles: []
-  statusEffects: []
-  movementState: 0
-  directionState: 4
-  facingState: 2
-  dashThreshold: 8
-  <equipmentScriptableObject>k__BackingField: {fileID: 0}
-  <stats>k__BackingField:
-    manaport_stat_hitpoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_hitpoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_hitpoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_hitpoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_manapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_manapoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_staminapoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints_regen_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_staminapoints_regen_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_remedypoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_remedypoints:
-      maxValue: 0
-      value: 0
-    manaport_stat_experience_points:
-      maxValue: 0
-      value: 0
-    manaport_stat_max_experience_points:
-      maxValue: 0
-      value: 0
-    manaport_stat_experience_level:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_magical_damage:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_magical_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_healing_rate:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_healing_amount:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_physical_damage:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_physical_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_defence:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_pyro_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_cryo_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_toxi_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_volt_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_arcane_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_stress_resistance:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_stability:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_push_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_walk_speed:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_sprint_modifier:
-      maxValue: 0
-      value: 0
-    manaport_stat_base_dash_modifier:
-      maxValue: 0
-      value: 0
-    manaport_stat_ability_distance:
-      maxValue: 0
-      value: 0
-    manaport_stat_ability_cooldown:
-      maxValue: 0
-      value: 0
-  manaRegenCooldown: 0
-  manaRegenCoolingDown: 0
-  abilityState: 0
-  auxilaryMovementType: 0
-  primarySpellType: 2
-  primarySpellElement: 0
-  secondarySpellType: 2
-  secondarySpellElement: 0
-  state: 0
-  party: {fileID: 0}
+  statsManagerScriptableObject: {fileID: 11400000, guid: fd3ee30dacb1ce34485efdd6f3972a9f, type: 2}
+  equipmentManagerScriptableObject: {fileID: 11400000, guid: 961a349f64a343f4f9e2110a9b571d61, type: 2}
+  pointsManagerScriptableObject: {fileID: 11400000, guid: 10af1f5623318a74287a7aaf18cf60f5, type: 2}
+  actionPoints: 1
+  _actionPointsRegenCooldown: 5
+  actionPointsRegenCoolingDown: 0
+  actionPointsRegenerating: 0
+  primaryActionElement: 0
+  secondaryActionElement: 0
+  damageType: 1
 --- !u!50 &8575495456034430212
 Rigidbody2D:
   serializedVersion: 4
@@ -5377,135 +4959,6 @@ MonoBehaviour:
   renderer: {fileID: 8612458892052796228}
   fps: 12
   temporaryDrivers: []
---- !u!1 &8575495456221202582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8575495456221202583}
-  - component: {fileID: 8575495456221202586}
-  - component: {fileID: 8575495456221202581}
-  - component: {fileID: 8575495456221202580}
-  m_Layer: 8
-  m_Name: Spells
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8575495456221202583
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8575495456221202582}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 8575495456034430214}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8575495456221202586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8575495456221202582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f5c9cc2e8379d419f2344ffc3ef617, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 1
-  cooldown: 0.4
-  damage: 3
-  spellId: spell_burston
-  icons:
-    arcane: {fileID: 21300000, guid: 28c28aa9306cc544996c4f9c0f80ad95, type: 3}
-    pyro: {fileID: 21300000, guid: 143fc4b5e17e838448995cfa8bb73d3e, type: 3}
-    cryo: {fileID: 21300000, guid: 8d6f042110cedfb439e920cb4806da3b, type: 3}
-    toxi: {fileID: 21300000, guid: 7aee94d4476ebb749b748ce12b5be318, type: 3}
-    volt: {fileID: 21300000, guid: 983ebac9b87e2914784d2b3762ca5b3b, type: 3}
-  icon: {fileID: 0}
-  coolingDown: 0
-  cooldownTime: 0
-  burston: {fileID: 8509226589283875488, guid: 18ec5ea9b96498d47a1b718c2c380f1d, type: 3}
-  pyroBurston: {fileID: 442811730796009271, guid: a166abad35502314093aea3fee900061, type: 3}
-  cryoBurston: {fileID: 4052920604075934681, guid: 3f7f372f0e354e042a456ab0d047f0c4, type: 3}
-  toxiBurston: {fileID: 1076952640063043624, guid: f50c6750faf65e842b866a4a6226dd2c, type: 3}
-  voltBurston: {fileID: 2339452479426438412, guid: 310536f2ac0c63449b5fba3dbce915cc, type: 3}
-  speed: 10
-  lifetime: 3
---- !u!114 &8575495456221202581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8575495456221202582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 010d01d86ebd73847ae9f0dffcf46a6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 1
-  cooldown: 0.9
-  damage: 4
-  spellId: spell_blasteur
-  icons:
-    arcane: {fileID: 21300000, guid: b063fad6cce70a941a111385753cb39d, type: 3}
-    pyro: {fileID: 21300000, guid: fe7a796a0f31ed4449cb430c93c08093, type: 3}
-    cryo: {fileID: 21300000, guid: 25f930b32569939419639fe8dfbb0052, type: 3}
-    toxi: {fileID: 21300000, guid: c4a09e5670f1ac541ab8287877123ff0, type: 3}
-    volt: {fileID: 21300000, guid: 02dea11ee452f1b4ca4797260444d43d, type: 3}
-  icon: {fileID: 0}
-  coolingDown: 0
-  cooldownTime: 0
-  blasteur: {fileID: 6213410681897852948, guid: 02eddc6bfbb491d4d8cb4c1241087b29, type: 3}
-  pyroBlasteur: {fileID: 2305402969185800511, guid: d65f5c77a6014994893b4be03d2a1bb4, type: 3}
-  cryoBlasteur: {fileID: 3654743371908635121, guid: d20dbe0c7ec886d4487db151f0219c63, type: 3}
-  toxiBlasteur: {fileID: 6958861180970386994, guid: 21f006d79010f6644b5cf83f140d4893, type: 3}
-  voltBlasteur: {fileID: 3285871824011285555, guid: 475ccbd29026fbd4e9eed23d2995a631, type: 3}
-  speed: 7.5
-  lifetime: 3
---- !u!114 &8575495456221202580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8575495456221202582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6abff250c0acff84ebfb0d5205e5c6c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 1
-  cooldown: 0.7
-  damage: 2
-  spellId: spell_automa
-  icons:
-    arcane: {fileID: 21300000, guid: af018d1b3dfd4904ebb30a3ac2a87422, type: 3}
-    pyro: {fileID: 21300000, guid: d21da55bf33162743814f9077ec14eee, type: 3}
-    cryo: {fileID: 21300000, guid: 15c287a2a71f6e543a476d2c3b8100f1, type: 3}
-    toxi: {fileID: 21300000, guid: f356bc7355e6ed64a99bb0b42ca7c0a1, type: 3}
-    volt: {fileID: 21300000, guid: 75b8ec19e146b5e4b8c0620f085d7cf7, type: 3}
-  icon: {fileID: 0}
-  coolingDown: 0
-  cooldownTime: 0
-  automa: {fileID: 5044041582067445021, guid: cee63864710c1c14587d8bfe3eca3553, type: 3}
-  pyroAutoma: {fileID: 6700740985639937200, guid: a70c4fe4c3df2634b86e4343a8dc61af, type: 3}
-  cryoAutoma: {fileID: 6740124753434496818, guid: 091e556944b5c6e43a4fd8a95b480834, type: 3}
-  toxiAutoma: {fileID: 5042890343888349599, guid: 3f586f10ae8fa594ea25e3c693db52d6, type: 3}
-  voltAutoma: {fileID: 4928828678709623695, guid: a02cfb00c0564eb469427f9a008fc4f1, type: 3}
-  speed: 10
-  lifetime: 2
 --- !u!1 &8575495456905702050
 GameObject:
   m_ObjectHideFlags: 0
@@ -5985,11 +5438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bagScriptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}
-  laurieEquipmentScriptableObject: {fileID: 0}
-  mirabelleEquipmentScriptableObject: {fileID: 0}
-  winsleyEquipmentScriptableObject: {fileID: 0}
   _controls: {fileID: -944628639613478452, guid: 018c91a10bc24ed4ea86f525655f82be, type: 3}
-  partyLeader: 0
+  partyLeader: {fileID: 0}
   previousLeader: {fileID: 8575495455764455000}
   oldestLeader: {fileID: 8575495455274865850}
   members:

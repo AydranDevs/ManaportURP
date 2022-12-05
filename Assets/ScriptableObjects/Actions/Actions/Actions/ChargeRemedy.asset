@@ -12,28 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453f0c9933b68347bdccd7f476d7bb8, type: 3}
   m_Name: ChargeRemedy
   m_EditorClassIdentifier: 
+  projectileHandler: {fileID: 0}
+  targetHandler: {fileID: 0}
   action_id: 6
   isToggled: 1
-  performed_willRestrictMovementUntilDriverEvent: 1
-  performed_unrestrictDriverEventWatch: umbrellaOpenedEvent
-  _restrictionsUntilDriverEvent:
+  whenPerformedWillRestrictUntilEvent: 1
+  driverToWatchToUnrestrictAfterPerformed: umbrellaOpenedEvent
+  _restrictionsAppliedAfterPerformedUntilDriver:
     canIdle: 1
     canWalk: 0
-    canSprint: 0
-    canDash: 0
-    canUsePrimary: 0
-    canUseSecondary: 0
-    canUseAux: 0
-  _restrictionsWhileActive:
-    canIdle: 1
-    canWalk: 1
     canSprint: 0
     canDash: 0
     canUsePrimary: 1
     canUseSecondary: 0
     canUseAux: 0
-  concluded_willRestrictMovementUntilDriverEvent: 1
-  concluded_unrestrictDriverEventWatch: umbrellaClosedEvent
+  _restrictionsAppliedWhileActive:
+    canIdle: 1
+    canWalk: 1
+    canSprint: 0
+    canDash: 0
+    canUsePrimary: 1
+    canUseSecondary: 1
+    canUseAux: 0
+  _restrictionsAppliedAfterConcludedUntilDriver:
+    canIdle: 1
+    canWalk: 0
+    canSprint: 0
+    canDash: 0
+    canUsePrimary: 0
+    canUseSecondary: 1
+    canUseAux: 0
+  whenConcludedWillRestrictUntilEvent: 1
+  driverToWatchToUnrestrictAfterConcluded: umbrellaClosedEvent
   actionPerformed_driverSetsArray:
   - driverName: state
     set: 1
@@ -58,3 +68,4 @@ MonoBehaviour:
     onComplete_set: 0
   costPointID: 2
   cost: 0
+  modifierStatID: 4

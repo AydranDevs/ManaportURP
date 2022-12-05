@@ -5,67 +5,6 @@ namespace Manapotion.PartySystem
 {
     public class PartyMember_Healer : PartyMember
     {
-        public static event EventHandler<OnUpdateRemedyBarEventArgs> OnUpdateRemedyBar;
-        public class OnUpdateRemedyBarEventArgs : EventArgs
-        {
-            public float remedy;
-            public float maxRemedy;
-        }
-
-        protected override void Init()
-        {
-            ManaBehaviour.OnUpdate += Update;
-
-            InitMember();
-        }
-
-        protected virtual void InitMember()
-        {
-
-        }
-
-        void Update()
-        {
-            if (Party.Instance.partyLeader != this)
-            {
-                return;
-            }
-
-            // anything that updates UI should go below this.
-
-            UpdateRemedyBar(pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.currentValue, pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.maxValue);
-        }
-
-        private void UpdateRemedyBar(float value, float maxValue)
-        {
-            OnUpdateRemedyBar?.Invoke(this, new OnUpdateRemedyBarEventArgs
-            {
-                remedy = value,
-                maxRemedy = maxValue
-            });
-        }
         
-        public void MaxRP()
-        {
-            pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.currentValue = pointsManagerScriptableObject.GetPointScriptableObject(Stats.PointID.Remedypoints).value.maxValue;
-        }
-
-        public override void PerformMainAction(int action)
-        {
-            if (action == 0)
-            {
-                actionsManagerScriptableObject.PerformAction(
-                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].action_id,
-                    this
-                );
-            }
-            else
-            {
-                actionsManagerScriptableObject.PerformAction(
-                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].action_id,
-                    this
-                );
-            }
-        }
     }
 }

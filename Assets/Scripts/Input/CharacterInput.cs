@@ -37,6 +37,8 @@ namespace Manapotion.Input
         private InputAction _primary;
         private InputAction _secondary;
         private InputAction _aux;
+        private InputAction _next;
+        private InputAction _previous;
 
         // Calculate a new path every 50 frames
         private const int FRAMES_TO_CALC_PATH_TO_LEADER = 50;
@@ -68,10 +70,8 @@ namespace Manapotion.Input
             UtilitiesClass.CreateInputAction(_inputActionMap, PlayerSecondary, _secondary, "SecondaryAction");
             UtilitiesClass.CreateInputAction(_inputActionMap, PlayerAuxillary, _aux, "AuxilaryAction");
 
-            // if (aIControlMode == AIControlMode.Patrol)
-            // {
-            //     Patrol();
-            // }
+            UtilitiesClass.CreateInputAction(_inputActionMap, PlayerNext, _next, "Next");
+            UtilitiesClass.CreateInputAction(_inputActionMap, PlayerPrevious, _previous, "Previous");
         }
 
         public void Update()
@@ -184,6 +184,33 @@ namespace Manapotion.Input
             }
 
             _inputProvider.InvokeAux();
+        }
+        
+        public void PlayerNext(InputAction.CallbackContext context)
+        {
+            if (controlType == ControlType.AI)
+            {
+                return;
+            }
+            if (!context.started)
+            {
+                return;
+            }
+
+            _inputProvider.InvokeNext();
+        }
+        public void PlayerPrevious(InputAction.CallbackContext context)
+        {
+            if (controlType == ControlType.AI)
+            {
+                return;
+            }
+            if (!context.started)
+            {
+                return;
+            }
+
+            _inputProvider.InvokePrevious();
         }
         #endregion
         

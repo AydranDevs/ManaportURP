@@ -203,6 +203,21 @@ namespace Manapotion.PartySystem
                 {
                     oldestLeader = member;
                 }
+
+                if (member == partyLeader)
+                {
+                    if (member.characterTargeting != null)
+                    {
+                        if (member.characterTargeting.isTargeting)
+                        {
+                            overrideCanSwitchLeaders = false;
+                        }
+                        else
+                        {
+                            overrideCanSwitchLeaders = true;
+                        }
+                    }
+                }
             }
         }
 

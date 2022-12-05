@@ -13,7 +13,7 @@ namespace Manapotion.Utilities
         public static float DexCalc_MoveSp(int dex)
         {
             var slope = 0.008f * dex;
-            var yInt = 1.6f;
+            var yInt = 2f;
             return slope + yInt;
         }
 
@@ -25,7 +25,7 @@ namespace Manapotion.Utilities
         public static float DexCalc_SprMod(int dex)
         {
             var slope = 0.007f * dex;
-            var yInt = 1.15f;
+            var yInt = 1.3f;
             return slope + yInt;
         }
 
@@ -37,7 +37,7 @@ namespace Manapotion.Utilities
         public static float DexCalc_DshMod(int dex)
         {
             var slope = 0.007f * dex;
-            var yInt = 1.15f;
+            var yInt = 1.4f;
             return slope + yInt;
         }
     }

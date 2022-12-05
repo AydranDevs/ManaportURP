@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f94e6a8b9644ff14b816456c9da4093d, type: 3}
   m_Name: DanceDeDestreza TargetDefinition
   m_EditorClassIdentifier: 
+  enemiesInRange:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  isTargeting: 1
+  currentlyTargetedEnemy: {fileID: 0}

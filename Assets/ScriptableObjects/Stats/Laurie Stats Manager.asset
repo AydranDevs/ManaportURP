@@ -32,7 +32,7 @@ MonoBehaviour:
     statID: 3
     value:
       _baseValue: 0
-      _modifiedValue: 0
+      _modifiedValue: 5
   - parent: {fileID: 11400000}
     statID: 4
     value:

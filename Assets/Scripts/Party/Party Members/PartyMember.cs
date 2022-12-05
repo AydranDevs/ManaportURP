@@ -1,12 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.InputSystem;
 using Manapotion.Items;
-using Manapotion.StatusEffects;
 using Manapotion.Actions;
+using Manapotion.Actions.Targets;
 using Manapotion.Stats;
 using Manapotion.Input;
 using Manapotion.Rendering;
@@ -67,27 +63,47 @@ namespace Manapotion.PartySystem
         public static event EventHandler<OnUpdateHealthBarEventArgs> OnUpdateHealthBarEvent;
         public class OnUpdateHealthBarEventArgs : EventArgs
         {
-            public float health;
-            public float maxHealth;
+            public float currentValue;
+            public float maxValue;
+        }
+        public static event EventHandler<OnUpdateActionBarEventArgs> OnUpdateActionBarEvent;
+        public class OnUpdateActionBarEventArgs : EventArgs
+        {
+            public PointID actionPoints;
+
+            public float currentValue;
+            public float maxValue;
         }
         #endregion
 
         public CharacterInput characterInput;
         public Input.CharacterController characterController;
         public CharacterRenderer characterRenderer;
+        public CharacterTargeting characterTargeting;
 
-        public StatusEffectParticles statusEffectParticles;
+        // public StatusEffectParticles statusEffectParticles;
 
         [Header("Manager ScriptableObjects")]
         public ActionsManagerScriptableObject actionsManagerScriptableObject;
         public StatsManagerScriptableObject statsManagerScriptableObject;
         public EquipmentManagerScriptableObject equipmentManagerScriptableObject;
         public PointsManagerScriptableObject pointsManagerScriptableObject;
-        
-        [SerializeField]
-        private List<GameObject> _statusEffectParticles;
 
-        public List<StatusEffects.Buff> statusEffects;
+        [Header("Action")]
+        [Tooltip("The type of points that the character uses when they perform an attack or action.")]
+        public PointID actionPoints;
+
+        // cooldown before mana starts regenerating
+        [SerializeField]
+        private float _actionPointsRegenCooldown;
+        // true if currently waiting to regen
+        public bool actionPointsRegenCoolingDown = false;
+        public bool actionPointsRegenerating = false;
+
+        // internal regen cooldown timer
+        private float _actionPointsRegenCooldownTimer;
+        // internal regen timer
+        private float _actionPointsRegenTimer;
 
         public PrimaryActionElement primaryActionElement = PrimaryActionElement.Arcane;
         public SecondaryActionElement secondaryActionElement = SecondaryActionElement.Arcane;
@@ -110,22 +126,18 @@ namespace Manapotion.PartySystem
             {
                 statsManagerScriptableObject.statArray[i].OnStatModifiedEvent += OnStatModifiedEvent_RefreshPoints;
             }
-
-            statusEffects = new List<StatusEffects.Buff>();
-            _statusEffectParticles = new List<GameObject>();
+            for (int i = 0; i < actionsManagerScriptableObject.possibleActions.Count; i++)
+            {
+                actionsManagerScriptableObject.possibleActions[i].OnActionPerformedEvent += OnActionPerformedEvent_UseActionPoints;
+            }
             
-            MaxHP();
+            // max out all status points
+            pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.currentValue = int.MaxValue;
+            pointsManagerScriptableObject.GetPointScriptableObject(actionPoints).value.currentValue = int.MaxValue;
             PartyLeaderCheck();
-            
-            Init();
         }
 
-        protected virtual void Init()
-        {
-
-        }
-
-        #region Update Ability Icons
+        #region Update Action Icons
         public void UpdateAbilityIcons(int i, Sprite sp)
         {
             OnAbilityChangedEvent?.Invoke(this, new OnAbilityChangedEventArgs
@@ -157,12 +169,22 @@ namespace Manapotion.PartySystem
         #endregion
         
         #region Update Status Bars
-        private void UpdateHealthBar(float health, float maxHealth)
+        private void UpdateHealthBar(float currentValue, float maxValue)
         {
             OnUpdateHealthBarEvent?.Invoke(this, new OnUpdateHealthBarEventArgs
             {
-                health = health,
-                maxHealth = maxHealth
+                currentValue = currentValue,
+                maxValue = maxValue
+            });
+        }
+
+        private void UpdateActionBar(float currentValue, float maxValue)
+        {
+            OnUpdateActionBarEvent?.Invoke(this, new OnUpdateActionBarEventArgs
+            {
+                actionPoints = actionPoints,
+                currentValue = currentValue,
+                maxValue = maxValue
             });
         }
         #endregion
@@ -176,11 +198,6 @@ namespace Manapotion.PartySystem
         public void Die()
         {
             Destroy(gameObject);
-        }
-
-        public void MaxHP()
-        {
-            pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.currentValue = pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.maxValue;
         }
 
         public void AddXP(string type, int amount)
@@ -212,45 +229,45 @@ namespace Manapotion.PartySystem
             // stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
         }
 
-        public void AddStatusEffect(StatusEffect effect, int power, float duration)
-        {
-            var stEf = new StatusEffects.Buff(effect, power, duration);
+        // public void AddStatusEffect(StatusEffect effect, int power, float duration)
+        // {
+        //     var stEf = new StatusEffects.Buff(effect, power, duration);
 
-            if (StatusEffectsContains(stEf))
-            {
-                for (int i = 0; i < statusEffects.Count; i++)
-                {
-                    if (statusEffects[i].effect.buffType == stEf.effect.buffType)
-                    {
-                        statusEffects[i].ResetTime();
-                        stEf = null;
-                        return;
-                    }
-                }
-            }
-            else
-            {
-                stEf.active = true;
-                stEf.Init(this);
-                statusEffects.Add(stEf);
-            }
-        }
+        //     if (StatusEffectsContains(stEf))
+        //     {
+        //         for (int i = 0; i < statusEffects.Count; i++)
+        //         {
+        //             if (statusEffects[i].effect.buffType == stEf.effect.buffType)
+        //             {
+        //                 statusEffects[i].ResetTime();
+        //                 stEf = null;
+        //                 return;
+        //             }
+        //         }
+        //     }
+        //     else
+        //     {
+        //         stEf.active = true;
+        //         stEf.Init(this);
+        //         statusEffects.Add(stEf);
+        //     }
+        // }
 
-        private bool StatusEffectsContains(StatusEffects.Buff effect)
-        {
-            bool b = false;
+        // private bool StatusEffectsContains(StatusEffects.Buff effect)
+        // {
+        //     bool b = false;
 
-            for (int i = 0; i < statusEffects.Count; i++)
-            {
-                if (statusEffects[i].effect.buffType == effect.effect.buffType)
-                {
-                    b = true;
-                    return b;
-                }
-            }
+        //     for (int i = 0; i < statusEffects.Count; i++)
+        //     {
+        //         if (statusEffects[i].effect.buffType == effect.effect.buffType)
+        //         {
+        //             b = true;
+        //             return b;
+        //         }
+        //     }
 
-            return b;
-        }
+        //     return b;
+        // }
 
         /// <summary>
         /// called when a stat is modified
@@ -258,6 +275,25 @@ namespace Manapotion.PartySystem
         public void OnStatModifiedEvent_RefreshPoints(object sender, Stat.OnStatModifiedEventArgs e)
         {
             pointsManagerScriptableObject.RefreshPoints();
+        }
+        
+        public void UseActionPoints(int amount)
+        {
+            if (!pointsManagerScriptableObject.GetPointScriptableObject(actionPoints).value.CanSubtract(amount))
+            {
+                // not enough action points... Maybe play a sound later
+                return;
+            }
+
+            pointsManagerScriptableObject.GetPointScriptableObject(actionPoints).value.currentValue -= amount;
+            actionPointsRegenCoolingDown = true;
+            _actionPointsRegenCooldownTimer = _actionPointsRegenCooldown;
+        }
+
+        public float ActionPointsAfterUse(int amount)
+        {
+            var pt = pointsManagerScriptableObject.GetPointScriptableObject(actionPoints);
+            return pt.value.currentValue - amount;
         }
         #endregion
 
@@ -268,7 +304,28 @@ namespace Manapotion.PartySystem
         /// <param name="action">Primary (0) or Secondary (1)</param>
         public virtual void PerformMainAction(int action)
         {
+            if (action == 0)
+            {
+                actionsManagerScriptableObject.PerformAction(equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].action_id,
+                                                             this,
+                                                             (Actions.DamageInstance.DamageInstanceType)damageType,
+                                                             (Actions.DamageInstance.DamageInstanceElement)primaryActionElement);
+            }
+            else
+            {
+                actionsManagerScriptableObject.PerformAction(equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].action_id,
+                                                             this,
+                                                             (Actions.DamageInstance.DamageInstanceType)damageType,
+                                                             (Actions.DamageInstance.DamageInstanceElement)secondaryActionElement);
+            }
+        }
 
+        public void OnActionPerformedEvent_UseActionPoints(object sender, ActionScriptableObject.OnActionPerformedEventArgs e)
+        {
+            if (e.costPointID == actionPoints && e.cost > 0)
+            {
+                UseActionPoints(e.cost);
+            }
         }
         #endregion
 
@@ -279,12 +336,35 @@ namespace Manapotion.PartySystem
                 // Die();
                 // return;
             }
-            
-            // remove all statuses that arent active
-            if (statusEffects.Count >= 0 && statusEffects != null)
+
+            // if currently waiting to regenerate, count down from _actionPointsRegenCooldown
+            if (actionPointsRegenCoolingDown)
             {
-                statusEffects.RemoveAll(status => !status.active);
+                Debug.Log("cooling down regen ");
+                _actionPointsRegenCooldownTimer -= Time.deltaTime;
+                if (_actionPointsRegenCooldownTimer <= 0f)
+                {
+                    actionPointsRegenCoolingDown = false;
+                    _actionPointsRegenCooldownTimer = _actionPointsRegenCooldown;
+                }
             }
+            // else, if actionPoints isn't at it's max value, regenerate
+            else if (pointsManagerScriptableObject.GetPointScriptableObject(actionPoints).value.currentValue < pointsManagerScriptableObject.GetPointScriptableObject(actionPoints).value.maxValue)
+            {
+                _actionPointsRegenTimer -= Time.deltaTime;
+                if (_actionPointsRegenTimer <= 0f)
+                {
+                    var pt = pointsManagerScriptableObject.GetPointScriptableObject(actionPoints);
+                    pt.SetValue(pt.value.currentValue + 1);
+                    _actionPointsRegenTimer = 2f;
+                }
+            }
+            
+            // // remove all statuses that arent active
+            // if (statusEffects.Count >= 0 && statusEffects != null)
+            // {
+            //     statusEffects.RemoveAll(status => !status.active);
+            // }
 
             PartyLeaderCheck();
             if (Party.Instance.partyLeader != this)
@@ -295,6 +375,11 @@ namespace Manapotion.PartySystem
             UpdateHealthBar(
                 pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.currentValue,
                 pointsManagerScriptableObject.GetPointScriptableObject(PointID.Hitpoints).value.maxValue
+            );
+
+            UpdateActionBar(
+                pointsManagerScriptableObject.GetPointScriptableObject(actionPoints).value.currentValue,
+                pointsManagerScriptableObject.GetPointScriptableObject(actionPoints).value.maxValue
             );
         }
 
@@ -313,19 +398,19 @@ namespace Manapotion.PartySystem
         #endregion
 
         #region Particles
-        public void SummonParticles(GameObject g)
-        {
-            var go = GameObject.Instantiate(g, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity, transform);
-            _statusEffectParticles.Add(go);
-        }
+        // public void SummonParticles(GameObject g)
+        // {
+        //     var go = GameObject.Instantiate(g, new Vector3(transform.position.x, transform.position.y - 1, transform.position.z), Quaternion.identity, transform);
+        //     _statusEffectParticles.Add(go);
+        // }
 
-        public void StopParticles(GameObject g)
-        {
-            if (_statusEffectParticles.Contains(g)) {
-                int i = _statusEffectParticles.IndexOf(g);
-                Destroy(_statusEffectParticles[i]);
-            }
-        }
+        // public void StopParticles(GameObject g)
+        // {
+        //     if (_statusEffectParticles.Contains(g)) {
+        //         int i = _statusEffectParticles.IndexOf(g);
+        //         Destroy(_statusEffectParticles[i]);
+        //     }
+        // }
         #endregion
         
         public Vector3 GetPosition()

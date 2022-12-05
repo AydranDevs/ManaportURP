@@ -65,7 +65,7 @@ namespace Manapotion.Input
                 return;
             }
 
-            Move(Time.fixedDeltaTime);
+            Move(Time.deltaTime);
         }
 
         #region Controlled by InputProvider
@@ -190,6 +190,25 @@ namespace Manapotion.Input
             }
 
             // _abilities.AuxMove();
+        }
+
+        public void OnNext()
+        {
+            if (GameStateManager.Instance.state != GameState.Main)
+            {
+                return;
+            }
+            
+            _member.characterTargeting.NextTarget();
+        }
+        public void OnPrevious()
+        {
+            if (GameStateManager.Instance.state != GameState.Main)
+            {
+                return;
+            }
+            
+            _member.characterTargeting.PreviousTarget();
         }
         #endregion
 

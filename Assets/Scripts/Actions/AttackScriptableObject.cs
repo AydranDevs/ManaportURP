@@ -8,23 +8,22 @@ namespace Manapotion.Actions
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New AttackScriptableObject")]
     public class AttackScriptableObject : ActionScriptableObject
     {    
-        public override IEnumerator PerformAction(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        public override IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
             if (!member.pointsManagerScriptableObject.GetPointScriptableObject(costPointID).value.CanSubtract(cost))
             {
                 // not enough points to use this attack
                 yield break;
             }
-
             
             InvokeActionPerformedEvent();
             Debug.Log($"Attack {this.action_id} started. (member: {member})");
-            HandleAttack(member, stat, type, element);
+            HandleAttack(member, type, element);
             yield break;
         }
         
         // handle the attack (spawn projectiles, run animations, etc)
-        private void HandleAttack(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        private void HandleAttack(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
             if (projectileHandler == null)
             {
@@ -38,7 +37,7 @@ namespace Manapotion.Actions
                 {
                     damageInstanceType = type,
                     damageInstanceElement = element,
-                    damageInstanceAmount = (float)stat.value.modifiedValue
+                    damageInstanceAmount = (float)member.statsManagerScriptableObject.GetStat(modifierStatID).value.modifiedValue
                 }
             ));
         }

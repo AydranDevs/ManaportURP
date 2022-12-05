@@ -9,6 +9,9 @@ public class InputProvider : ScriptableObject, IInputProvider {
     public event Action OnSecondary;
     public event Action OnAux;
 
+    public event Action OnNext;
+    public event Action OnPrevious;
+
     public InputState GetState() {
         return inputState;
     }
@@ -32,5 +35,18 @@ public class InputProvider : ScriptableObject, IInputProvider {
     }
     protected virtual void Aux() {
         OnAux?.Invoke();
+    }
+    
+    public void InvokeNext() {
+        Next();
+    }
+    protected virtual void Next() {
+        OnNext?.Invoke();
+    }
+    public void InvokePrevious() {
+        Previous();
+    }
+    protected virtual void Previous() {
+        OnPrevious?.Invoke();
     }
 }

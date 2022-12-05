@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: DanceDeDestreza
   m_EditorClassIdentifier: 
   projectileHandler: {fileID: 0}
-  targetDefinition: {fileID: 11400000, guid: f36e76a13fa91fa438165379b91bed61, type: 2}
+  targetHandler: {fileID: 0}
   action_id: 7
   isToggled: 1
+  startsTargeting: 1
   whenPerformedWillRestrictUntilEvent: 1
   driverToWatchToUnrestrictAfterPerformed: swordRaisedEvent
   _restrictionsAppliedAfterPerformedUntilDriver:
@@ -68,3 +69,4 @@ MonoBehaviour:
     onComplete_set: 0
   costPointID: 3
   cost: 0
+  modifierStatID: 0

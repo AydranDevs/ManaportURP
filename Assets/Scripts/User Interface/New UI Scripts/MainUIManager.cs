@@ -61,7 +61,7 @@ namespace Manapotion.UI
         public UI_Beastiary uI_Beastiary;
     
         public CharacterUIHandle[] handles { get; private set; }
-        private Dictionary<int, Action> _handleDict;
+        // private Dictionary<int, Action> _handleDict;
 
         public PartyMember currentLeader { get; private set; }
 
@@ -136,22 +136,22 @@ namespace Manapotion.UI
             {
                 handles[i] = new CharacterUIHandle(i);
             }
-            _handleDict = new Dictionary<int, Action>();
+            // _handleDict = new Dictionary<int, Action>();
 
-            _handleDict.Add(0, HandleLaurieUI);
-            _handleDict.Add(1, HandleMirabelleUI);
-            _handleDict.Add(2, HandleWinsleyUI);
+            // _handleDict.Add(0, HandleLaurieUI);
+            // _handleDict.Add(1, HandleMirabelleUI);
+            // _handleDict.Add(2, HandleWinsleyUI);
 
             currentLeader = Party.GetCurrentLeader();
         }
 
         private void Update()
         {
-            Action action = _handleDict[Party.GetPartyMemberIndex(Party.GetCurrentLeader())];
-            if (action != null)
-            {
-                action();
-            }
+            // Action action = _handleDict[Party.GetPartyMemberIndex(Party.GetCurrentLeader())];
+            // if (action != null)
+            // {
+            //     action();
+            // }
         }
 
         #region Inv
@@ -181,34 +181,34 @@ namespace Manapotion.UI
         }
         #endregion
 
-        #region Handle Char UI
-        private void HandleLaurieUI()
-        {
-            if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
-            {
-                currentLeader = Party.GetCurrentLeader();
-                statusUIManager.SetManaBar();
-            }
-        }
+        // #region Handle Char UI
+        // private void HandleLaurieUI()
+        // {
+        //     if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
+        //     {
+        //         currentLeader = Party.GetCurrentLeader();
+        //         statusUIManager.SetManaBar();
+        //     }
+        // }
 
-        private void HandleMirabelleUI()
-        {
-            if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
-            {
-                currentLeader = Party.GetCurrentLeader();
-                statusUIManager.SetRemedyBar();
-            }
-        }
+        // private void HandleMirabelleUI()
+        // {
+        //     if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
+        //     {
+        //         currentLeader = Party.GetCurrentLeader();
+        //         statusUIManager.SetRemedyBar();
+        //     }
+        // }
 
-        private void HandleWinsleyUI()
-        {
-            if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
-            {
-                currentLeader = Party.GetCurrentLeader();
-                statusUIManager.SetStaminaBar();
-            }
-        }
-        #endregion
+        // private void HandleWinsleyUI()
+        // {
+        //     if (Party.GetCurrentLeader().gameObject != currentLeader.gameObject)
+        //     {
+        //         currentLeader = Party.GetCurrentLeader();
+        //         statusUIManager.SetStaminaBar();
+        //     }
+        // }
+        // #endregion
     }
     
     public class CharacterUIHandle

@@ -27,7 +27,7 @@ namespace Manapotion.StatusEffects
             statsAffected = new List<Stat>();
             // statsAffected.Add(afflictedMember.stats.manaport_stat_hitpoints);
 
-            _afflictedMember.SummonParticles(_afflictedMember.statusEffectParticles.rejuvenatedBuffParticles);
+            // _afflictedMember.SummonParticles(_afflictedMember.statusEffectParticles.rejuvenatedBuffParticles);
             time = timeMax;
 
             Debug.Log(afflictedMember);
@@ -45,7 +45,7 @@ namespace Manapotion.StatusEffects
     
         public override void OnEnd()
         {
-            _afflictedMember.StopParticles(_afflictedMember.statusEffectParticles.rejuvenatedBuffParticles);
+            // _afflictedMember.StopParticles(_afflictedMember.statusEffectParticles.rejuvenatedBuffParticles);
         }
     }
 }

@@ -44,7 +44,7 @@ namespace Manapotion.Actions
         }
         
         public ProjectileHandlerScriptableObject projectileHandler;
-        public TargetDefinitionScriptableObject targetDefinition;
+        public TargetHandlerScriptableObject targetHandler;
         
         /// <summary>
         /// This action's ID.
@@ -58,6 +58,8 @@ namespace Manapotion.Actions
         [Header("Toggled Action Options")]
         [Tooltip("If true, the action will need to be performed again to turn it off.")]
         public bool isToggled = false;
+        [Tooltip("If this and isToggled are true, this action will make the character begin and stop targeting.")]
+        public bool startsTargeting = false;
         private bool _isActive = false;
 
         [Tooltip("If true, this action will apply Restrictions Applied After Performed Until Driver to the member until driverToWatchToUnrestrictAfterPerformed's callbacks are made.")]
@@ -65,11 +67,11 @@ namespace Manapotion.Actions
         [Tooltip("The name of the driver that when invoked will apply _restrictionsWhileActive to the member that performed this action.")]
         public string driverToWatchToUnrestrictAfterPerformed;
         [SerializeField]
-        private CharacterControllerRestriction _restrictionsAppliedAfterPerformedUntilDriver;
+        private CharacterControllerRestriction _restrictionsAppliedAfterPerformedUntilDriver = CharacterControllerRestriction.NoRestrictions;
         [SerializeField]
-        private CharacterControllerRestriction _restrictionsAppliedWhileActive;
+        private CharacterControllerRestriction _restrictionsAppliedWhileActive = CharacterControllerRestriction.NoRestrictions;
         [SerializeField]
-        private CharacterControllerRestriction _restrictionsAppliedAfterConcludedUntilDriver;
+        private CharacterControllerRestriction _restrictionsAppliedAfterConcludedUntilDriver = CharacterControllerRestriction.NoRestrictions;
 
         [Tooltip("If true, this action will apply Restrictions Applied After Concluded Until Driver to the member until driverToWatchToUnrestrictAfterConcluded's callbacks are made.")]
         public bool whenConcludedWillRestrictUntilEvent = false;
@@ -84,6 +86,9 @@ namespace Manapotion.Actions
         [Header("Point Cost")]
         public PointID costPointID;
         public int cost;
+
+        [Tooltip("The stat whose modified value will be used when calculating the damage this action with inflict.")]
+        public StatID modifierStatID;
 
         /// <summary>
         /// Perform this action.
@@ -102,6 +107,10 @@ namespace Manapotion.Actions
                 else
                 {
                     _isActive = true;
+                    if (startsTargeting)
+                    {
+                        member.characterTargeting.isTargeting = true;
+                    }
                     if (whenPerformedWillRestrictUntilEvent)
                     {
                         member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
@@ -122,6 +131,13 @@ namespace Manapotion.Actions
             yield break;
         }
 
+        /// <summary>
+        /// Perform this action.
+        /// </summary>
+        /// <param name="member">Member to perform the action</param>
+        /// <param name="type">Type of damage this action will inflict</param>
+        /// <param name="element">Element type that this action will use</param>
+        /// <returns>IEnumerator (Coroutine)</returns>
         public virtual IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
             if (isToggled)
@@ -134,6 +150,10 @@ namespace Manapotion.Actions
                 else
                 {
                     _isActive = true;
+                    if (startsTargeting)
+                    {
+                        member.characterTargeting.isTargeting = true;
+                    }
                     if (whenPerformedWillRestrictUntilEvent)
                     {
                         member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
@@ -151,12 +171,6 @@ namespace Manapotion.Actions
             }
             member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
             InvokeActionPerformedEvent();
-            yield break;
-        }
-
-        public virtual IEnumerator PerformAction(PartyMember member, Stat stat, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
-        {
-            Debug.Log($"Action {this.action_id} started. (member: {member})");
             yield break;
         }
 
@@ -182,6 +196,11 @@ namespace Manapotion.Actions
                 return;
             }
             _isActive = false;
+
+            if (startsTargeting)
+            {
+                member.characterTargeting.isTargeting = false;
+            }
             if (whenConcludedWillRestrictUntilEvent)
             {
                 member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
