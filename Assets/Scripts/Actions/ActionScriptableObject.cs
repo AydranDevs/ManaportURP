@@ -43,8 +43,10 @@ namespace Manapotion.Actions
             public CharacterControllerRestriction restrictionsToApply;
         }
         
+        [Tooltip("The action that is required to be active for this one to be performed.")]
+        public ActionScriptableObject requiredAction;
         public ProjectileHandlerScriptableObject projectileHandler;
-        public TargetHandlerScriptableObject targetHandler;
+        public TargetDefinition targetDefinition;
         
         /// <summary>
         /// This action's ID.
@@ -60,7 +62,7 @@ namespace Manapotion.Actions
         public bool isToggled = false;
         [Tooltip("If this and isToggled are true, this action will make the character begin and stop targeting.")]
         public bool startsTargeting = false;
-        private bool _isActive = false;
+        public bool isActive { get; private set; } = false;
 
         [Tooltip("If true, this action will apply Restrictions Applied After Performed Until Driver to the member until driverToWatchToUnrestrictAfterPerformed's callbacks are made.")]
         public bool whenPerformedWillRestrictUntilEvent = false;
@@ -97,16 +99,22 @@ namespace Manapotion.Actions
         /// <returns>IEnumerator (Coroutine)</returns>
         public virtual IEnumerator PerformAction(PartyMember member)
         {
+            // check required action to see if this one can be performed
+            if (requiredAction != null && !requiredAction.isActive)
+            {
+                yield break;
+            }
+
             if (isToggled)
             {
-                if (_isActive)
+                if (isActive)
                 {
                     ConcludeAction(member);
                     yield break;
                 }
                 else
                 {
-                    _isActive = true;
+                    isActive = true;
                     if (startsTargeting)
                     {
                         member.characterTargeting.isTargeting = true;
@@ -126,6 +134,11 @@ namespace Manapotion.Actions
                     }
                 }
             }
+            
+            foreach (var target in targetDefinition.SelectTarget(member))
+            {
+                Debug.Log(target);
+            }
             member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
             InvokeActionPerformedEvent();
             yield break;
@@ -140,16 +153,22 @@ namespace Manapotion.Actions
         /// <returns>IEnumerator (Coroutine)</returns>
         public virtual IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
+            // check required action to see if this one can be performed
+            if (requiredAction != null && !requiredAction.isActive)
+            {
+                yield break;
+            }
+
             if (isToggled)
             {
-                if (_isActive)
+                if (isActive)
                 {
                     ConcludeAction(member);
                     yield break;
                 }
                 else
                 {
-                    _isActive = true;
+                    isActive = true;
                     if (startsTargeting)
                     {
                         member.characterTargeting.isTargeting = true;
@@ -168,6 +187,11 @@ namespace Manapotion.Actions
                         );
                     }
                 }
+            }
+            
+            foreach (var target in targetDefinition.SelectTarget(member))
+            {
+                Debug.Log(target);
             }
             member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
             InvokeActionPerformedEvent();
@@ -190,12 +214,12 @@ namespace Manapotion.Actions
 
         private void ConcludeAction(PartyMember member)
         {
-            if (!_isActive)
+            if (!isActive)
             {
                 Debug.LogWarning("Cannot conclude an action that hasn't been performed yet.");
                 return;
             }
-            _isActive = false;
+            isActive = false;
 
             if (startsTargeting)
             {

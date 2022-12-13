@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453f0c9933b68347bdccd7f476d7bb8, type: 3}
   m_Name: DanceDeDestreza
   m_EditorClassIdentifier: 
+  requiredAction: {fileID: 0}
   projectileHandler: {fileID: 0}
-  targetHandler: {fileID: 0}
+  targetDefinition: {fileID: 11400000, guid: 10e215e4e37167541a737a27d600a24c, type: 2}
   action_id: 7
   isToggled: 1
   startsTargeting: 1

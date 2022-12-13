@@ -40,6 +40,8 @@ namespace Manapotion.Input
 
         private float _sprintDuration;
 
+        private bool _noDiagonalMovement;
+
         public void Init(PartyMember member)
         {
             // not a monobehaviour, sub to the Update event

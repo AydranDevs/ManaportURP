@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974b54c185a300548a15a1838641a030, type: 3}
   m_Name: Piquretta
   m_EditorClassIdentifier: 
+  requiredAction: {fileID: 11400000, guid: b3635a1bd52f4ff44908d639a7cf46ac, type: 2}
+  projectileHandler: {fileID: 0}
+  targetDefinition: {fileID: 0}
   action_id: 9
   isToggled: 0
+  startsTargeting: 0
   whenPerformedWillRestrictUntilEvent: 0
   driverToWatchToUnrestrictAfterPerformed: 
   _restrictionsAppliedAfterPerformedUntilDriver:
@@ -46,4 +50,4 @@ MonoBehaviour:
   actionConcluded_driverSetsArray: []
   costPointID: 3
   cost: 0
-  projectileHandler: {fileID: 0}
+  modifierStatID: 0

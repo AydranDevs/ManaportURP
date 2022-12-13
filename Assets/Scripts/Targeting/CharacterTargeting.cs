@@ -1,18 +1,22 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.PartySystem;
 
 namespace Manapotion.Actions.Targets
 {
     public class CharacterTargeting : MonoBehaviour
     {
-        public event EventHandler<OnEnemyEnteredTargetRangeEventArgs> OnEnemyEnteredTargetRangeEvent;
-        public class OnEnemyEnteredTargetRangeEventArgs : EventArgs
+        private PartyMember _member;
+        
+        #region Target Member Variables
+        public event EventHandler<OnTargetEnteredRangeEventArgs> OnTargetEnteredRangeEvent;
+        public class OnTargetEnteredRangeEventArgs : EventArgs
         {
             public Collider2D other;
         }
-        public event EventHandler<OnEnemyExitTargetRangeEventArgs> OnEnemyExitTargetRangeEvent;
-        public class OnEnemyExitTargetRangeEventArgs : EventArgs
+        public event EventHandler<OnTargetExitRangeEventArgs> OnEnemyExitRangeEvent;
+        public class OnTargetExitRangeEventArgs : EventArgs
         {
             public Collider2D other;
         }
@@ -31,29 +35,34 @@ namespace Manapotion.Actions.Targets
         }
 
         public bool isTargeting = false;
-        public List<Enemy> enemiesInRange;
+        public List<ITargetable> targetsInRange;
 
-        public Enemy currentlyTargetedEnemy;
+        public ITargetable currentlyTargeted;
+        #endregion
 
+        private InputProvider _inputProvider;
+
+        #region Target Management
+            
         // Invoke event and add transform to list when object enters the circle collider
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!other.TryGetComponent<Enemy>(out Enemy enemy) || !isTargeting)
+            if (!other.TryGetComponent<ITargetable>(out ITargetable targetable) || !isTargeting)
             {
                 return;
             }
-            if (enemiesInRange == null)
+            if (targetsInRange == null)
             {
-                enemiesInRange = new List<Enemy>();
+                targetsInRange = new List<ITargetable>();
             }
             
-            enemiesInRange.Add(enemy);
-            if (currentlyTargetedEnemy == null)
+            targetsInRange.Add(targetable);
+            if (currentlyTargeted == null)
             {
-                currentlyTargetedEnemy = enemiesInRange[0];
+                currentlyTargeted = targetsInRange[0];
             }
 
-            OnEnemyEnteredTargetRangeEvent?.Invoke(this, new OnEnemyEnteredTargetRangeEventArgs
+            OnTargetEnteredRangeEvent?.Invoke(this, new OnTargetEnteredRangeEventArgs
             {
                 other = other
             });
@@ -61,22 +70,22 @@ namespace Manapotion.Actions.Targets
 
         // Invoke event and add transform to list when object enters the circle collider
         private void OnTriggerExit2D(Collider2D other) {
-            if (!other.TryGetComponent<Enemy>(out Enemy enemy) || !isTargeting)
+            if (!other.TryGetComponent<ITargetable>(out ITargetable ITargetable) || !isTargeting)
             {
                 return;
             }
-            if (enemiesInRange == null)
+            if (targetsInRange == null)
             {
-                enemiesInRange = new List<Enemy>();
+                targetsInRange = new List<ITargetable>();
             }
 
-            enemiesInRange.Remove(enemy);
-            if (enemiesInRange.Count == 0)
+            targetsInRange.Remove(ITargetable);
+            if (targetsInRange.Count == 0)
             {
-                currentlyTargetedEnemy = null;
+                currentlyTargeted = null;
             }
 
-            OnEnemyExitTargetRangeEvent?.Invoke(this, new OnEnemyExitTargetRangeEventArgs
+            OnEnemyExitRangeEvent?.Invoke(this, new OnTargetExitRangeEventArgs
             {
                 other = other
             });
@@ -89,7 +98,7 @@ namespace Manapotion.Actions.Targets
                 return;
             }
 
-            currentlyTargetedEnemy = enemiesInRange[enemiesInRange.IndexOf(currentlyTargetedEnemy) + 1];
+            currentlyTargeted = targetsInRange[targetsInRange.IndexOf(currentlyTargeted) + 1];
         }
         public void PreviousTarget()
         {   
@@ -98,7 +107,29 @@ namespace Manapotion.Actions.Targets
                 return;
             }
 
-            currentlyTargetedEnemy = enemiesInRange[enemiesInRange.IndexOf(currentlyTargetedEnemy) - 1];
+            currentlyTargeted = targetsInRange[targetsInRange.IndexOf(currentlyTargeted) - 1];
+        } 
+
+        public Vector2 GetCurrentTargetPosition()
+        {
+            if (currentlyTargeted == null)
+            {
+                return Vector2.zero;
+            }
+
+            currentlyTargeted.GetPosition(out Vector2 position);
+            return position;
+        }
+        #endregion
+    
+        public void Init(PartyMember member)
+        {
+            _member = member;
+        }
+
+        void Update()
+        {
+            
         }
     }
 }

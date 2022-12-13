@@ -6,6 +6,7 @@ using Manapotion.Actions.Targets;
 using Manapotion.Stats;
 using Manapotion.Input;
 using Manapotion.Rendering;
+using System.Collections.Generic;
 
 namespace Manapotion.PartySystem
 {
@@ -120,6 +121,7 @@ namespace Manapotion.PartySystem
             characterInput.Init(this);
             characterController.Init(this);
             characterRenderer.Init(this);
+            characterTargeting?.Init(this);
 
             // subscribe to every stat value's modified event
             for (int i = 0; i < statsManagerScriptableObject.statArray.Length; i++)

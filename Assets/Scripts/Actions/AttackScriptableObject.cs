@@ -10,6 +10,12 @@ namespace Manapotion.Actions
     {    
         public override IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
         {
+            // check required action to see if this one can be performed
+            if (requiredAction != null && !requiredAction.isActive)
+            {
+                yield break;
+            }
+
             if (!member.pointsManagerScriptableObject.GetPointScriptableObject(costPointID).value.CanSubtract(cost))
             {
                 // not enough points to use this attack

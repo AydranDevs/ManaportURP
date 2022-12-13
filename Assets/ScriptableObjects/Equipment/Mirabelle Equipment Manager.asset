@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   charID: 1
   weapon:
-    itemScriptableObject: {fileID: 11400000, guid: 568e7d3fb81d5f847b2000fd7cbb5ea5, type: 2}
-    amount: 1
+    itemScriptableObject: {fileID: 0}
+    amount: 0
   armour:
     itemScriptableObject: {fileID: 0}
     amount: 0
   vanity:
     itemScriptableObject: {fileID: 0}
     amount: 0
-  partyBagSciptableObject: {fileID: 0}
+  partyBagSciptableObject: {fileID: 11400000, guid: 9656b79a97a53844985353d45d612298, type: 2}

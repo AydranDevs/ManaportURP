@@ -10,17 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: WinsleyAbilitySwitch
+  m_Name: WinsleyPiqurettaSwitch
   m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 11400000, guid: b80ac52a08a49af4786a48497e3aa439, type: 2}
-  - {fileID: 11400000, guid: ae2db8be08be3f942a9d6aa8fb88937b, type: 2}
-  - {fileID: 11400000, guid: 88c64c16955da9844bb59ed0b6c3eb71, type: 2}
+  nodes: []
   controlDriver:
-    name: abilityState
+    name: facingState
     autoIncrement: 0
     percentageBased: 0
-    guid: a9f26213-1966-4b6a-9d86-045fdd626536
+    guid: adab51d7-5fa8-483f-8e8d-255772304fec
   drivers:
     keys: []
     values: 

@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: WinsleyPiqurettaWest
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: -1979359299187023359, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2195730603521323989, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 5674765355043561102, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -3067053948896245208, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -3730023287646145551, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -5398355575884944286, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys:
+      - canDropComboEvent
+      values: 00000000
+  - sprite: {fileID: -2955996656865957719, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 8662590817385852590, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -2935252052211699699, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -3612333299554466116, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -5268734790721283623, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -6268578714795315063, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 4193756698654282723, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 4509255581884831741, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 4100907583489137313, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -7004170544287399482, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys:
+      - canDropComboEvent
+      values: 00000000
+  - sprite: {fileID: -1523806274526096251, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 2999429406052810787, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 7061183702705420322, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -4931569429080323369, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -868538166805284203, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 4516656596088660387, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 5753393789748826669, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 6312629791598408310, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
+    drivers:
+      keys:
+      - canDropComboEvent
+      values: 00000000
+  controlDriver:
+    name: piquretta
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 67555a46-659a-4840-9d18-750bed83a6ff
+  drivers:
+    keys: []
+    values: 
