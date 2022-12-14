@@ -44,13 +44,13 @@ namespace Manapotion.Actions
         /// <param name="type">damage type</param>
         /// <param name="element">action elemental type</param>
         /// <returns>the ActionScriptableObject that was performed</returns>
-        public ActionScriptableObject PerformAction(ActionID actionID, PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        public ActionScriptableObject PerformAction(ActionID actionID, PartyMember member, DamageInstance damageInstance)
         {
             for (int i = 0; i < possibleActions.Count; i++)
             {
                 if (possibleActions[i].action_id == actionID)
                 {
-                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, type, element));
+                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, damageInstance));
                     return possibleActions[i];
                 }
             }
@@ -66,7 +66,7 @@ namespace Manapotion.Actions
         /// <param name="type">damage type</param>
         /// <param name="element">action elemental type</param>
         /// <returns>the ActionScriptableObject that was performed</returns>
-        public ActionScriptableObject PerformAction(ActionScriptableObject a, PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        public ActionScriptableObject PerformAction(ActionScriptableObject a, PartyMember member, DamageInstance damageInstance)
         {
             if (a == null || member == null)
             {
@@ -77,7 +77,7 @@ namespace Manapotion.Actions
             {
                 if (possibleActions[i] == a)
                 {
-                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, type, element));
+                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, damageInstance));
                     return possibleActions[i];
                 }
             }

@@ -10,16 +10,18 @@ namespace Manapotion.Actions.Targets
         private PartyMember _member;
         
         #region Target Member Variables
-        public event EventHandler<OnTargetEnteredRangeEventArgs> OnTargetEnteredRangeEvent;
-        public class OnTargetEnteredRangeEventArgs : EventArgs
+        public event EventHandler<OnNewTargetSelectedEventArgs> OnNewTargetSelected;
+        public class OnNewTargetSelectedEventArgs : EventArgs
         {
-            public Collider2D other;
+            public ITargetable newTarget;
         }
-        public event EventHandler<OnTargetExitRangeEventArgs> OnEnemyExitRangeEvent;
-        public class OnTargetExitRangeEventArgs : EventArgs
+        public event EventHandler<OnTargetChangedEventArgs> OnTargetChanged;
+        public class OnTargetChangedEventArgs : EventArgs
         {
-            public Collider2D other;
+            public ITargetable newTarget;
+            public ITargetable previousTarget;
         }
+        public event EventHandler OnTargetLost;
         
         public CircleCollider2D targetTrigger;
         public float targetRange
@@ -44,51 +46,25 @@ namespace Manapotion.Actions.Targets
 
         #region Target Management
             
-        // Invoke event and add transform to list when object enters the circle collider
-        private void OnTriggerEnter2D(Collider2D other)
+        public void SetTarget(ITargetable target)
         {
-            if (!other.TryGetComponent<ITargetable>(out ITargetable targetable) || !isTargeting)
-            {
-                return;
-            }
-            if (targetsInRange == null)
-            {
-                targetsInRange = new List<ITargetable>();
-            }
-            
-            targetsInRange.Add(targetable);
             if (currentlyTargeted == null)
             {
-                currentlyTargeted = targetsInRange[0];
+                OnNewTargetSelected?.Invoke(this, new OnNewTargetSelectedEventArgs { newTarget = target });
             }
-
-            OnTargetEnteredRangeEvent?.Invoke(this, new OnTargetEnteredRangeEventArgs
+            else
             {
-                other = other
-            });
+                OnTargetLost?.Invoke(this, EventArgs.Empty);
+            }
+            
+            OnTargetChanged?.Invoke(this, new OnTargetChangedEventArgs { newTarget = target, previousTarget = currentlyTargeted });
+            currentlyTargeted = target;
         }
 
-        // Invoke event and add transform to list when object enters the circle collider
-        private void OnTriggerExit2D(Collider2D other) {
-            if (!other.TryGetComponent<ITargetable>(out ITargetable ITargetable) || !isTargeting)
-            {
-                return;
-            }
-            if (targetsInRange == null)
-            {
-                targetsInRange = new List<ITargetable>();
-            }
-
-            targetsInRange.Remove(ITargetable);
-            if (targetsInRange.Count == 0)
-            {
-                currentlyTargeted = null;
-            }
-
-            OnEnemyExitRangeEvent?.Invoke(this, new OnTargetExitRangeEventArgs
-            {
-                other = other
-            });
+        public void DropCurrentlyTargeted()
+        {
+            currentlyTargeted = null;
+            OnTargetLost.Invoke(this, EventArgs.Empty);
         }
 
         public void NextTarget()

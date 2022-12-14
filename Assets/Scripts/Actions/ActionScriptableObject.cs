@@ -60,8 +60,6 @@ namespace Manapotion.Actions
         [Header("Toggled Action Options")]
         [Tooltip("If true, the action will need to be performed again to turn it off.")]
         public bool isToggled = false;
-        [Tooltip("If this and isToggled are true, this action will make the character begin and stop targeting.")]
-        public bool startsTargeting = false;
         public bool isActive { get; private set; } = false;
 
         [Tooltip("If true, this action will apply Restrictions Applied After Performed Until Driver to the member until driverToWatchToUnrestrictAfterPerformed's callbacks are made.")]
@@ -96,62 +94,10 @@ namespace Manapotion.Actions
         /// Perform this action.
         /// </summary>
         /// <param name="member">Member to perform the action</param>
-        /// <returns>IEnumerator (Coroutine)</returns>
-        public virtual IEnumerator PerformAction(PartyMember member)
-        {
-            // check required action to see if this one can be performed
-            if (requiredAction != null && !requiredAction.isActive)
-            {
-                yield break;
-            }
-
-            if (isToggled)
-            {
-                if (isActive)
-                {
-                    ConcludeAction(member);
-                    yield break;
-                }
-                else
-                {
-                    isActive = true;
-                    if (startsTargeting)
-                    {
-                        member.characterTargeting.isTargeting = true;
-                    }
-                    if (whenPerformedWillRestrictUntilEvent)
-                    {
-                        member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
-                        OnActionPerformedRestrictingMovementEvent?.Invoke(
-                            this,
-                            new OnActionPerformedRestrictingMovementEventArgs
-                            {
-                                action_id = this.action_id,
-                                watchDriver = this.driverToWatchToUnrestrictAfterPerformed,
-                                restrictionsToApply = _restrictionsAppliedWhileActive
-                            }
-                        );
-                    }
-                }
-            }
-            
-            foreach (var target in targetDefinition.SelectTarget(member))
-            {
-                Debug.Log(target);
-            }
-            member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
-            InvokeActionPerformedEvent();
-            yield break;
-        }
-
-        /// <summary>
-        /// Perform this action.
-        /// </summary>
-        /// <param name="member">Member to perform the action</param>
         /// <param name="type">Type of damage this action will inflict</param>
         /// <param name="element">Element type that this action will use</param>
         /// <returns>IEnumerator (Coroutine)</returns>
-        public virtual IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        public virtual IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
             // check required action to see if this one can be performed
             if (requiredAction != null && !requiredAction.isActive)
@@ -169,10 +115,6 @@ namespace Manapotion.Actions
                 else
                 {
                     isActive = true;
-                    if (startsTargeting)
-                    {
-                        member.characterTargeting.isTargeting = true;
-                    }
                     if (whenPerformedWillRestrictUntilEvent)
                     {
                         member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
@@ -188,11 +130,7 @@ namespace Manapotion.Actions
                     }
                 }
             }
-            
-            foreach (var target in targetDefinition.SelectTarget(member))
-            {
-                Debug.Log(target);
-            }
+               
             member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
             InvokeActionPerformedEvent();
             yield break;
@@ -220,11 +158,6 @@ namespace Manapotion.Actions
                 return;
             }
             isActive = false;
-
-            if (startsTargeting)
-            {
-                member.characterTargeting.isTargeting = false;
-            }
             if (whenConcludedWillRestrictUntilEvent)
             {
                 member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;

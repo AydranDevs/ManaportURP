@@ -310,15 +310,27 @@ namespace Manapotion.PartySystem
             {
                 actionsManagerScriptableObject.PerformAction(equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].action_id,
                                                              this,
-                                                             (Actions.DamageInstance.DamageInstanceType)damageType,
-                                                             (Actions.DamageInstance.DamageInstanceElement)primaryActionElement);
+                                                             new DamageInstance
+                                                             {
+                                                                damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
+                                                                damageInstanceElement = (DamageInstance.DamageInstanceElement)primaryActionElement,
+                                                                damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
+                                                                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].modifierStatID
+                                                                    ).value.modifiedValue
+                                                             });
             }
             else
             {
                 actionsManagerScriptableObject.PerformAction(equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].action_id,
                                                              this,
-                                                             (Actions.DamageInstance.DamageInstanceType)damageType,
-                                                             (Actions.DamageInstance.DamageInstanceElement)secondaryActionElement);
+                                                             new DamageInstance
+                                                             {
+                                                                damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
+                                                                damageInstanceElement = (DamageInstance.DamageInstanceElement)secondaryActionElement,
+                                                                damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
+                                                                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].modifierStatID
+                                                                    ).value.modifiedValue
+                                                             });
             }
         }
 

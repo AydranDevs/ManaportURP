@@ -8,8 +8,12 @@ namespace Manapotion.Actions
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New AttackScriptableObject")]
     public class AttackScriptableObject : ActionScriptableObject
     {    
-        public override IEnumerator PerformAction(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        public override IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
+            if (damageInstance == null)
+            {
+                yield break;
+            }
             // check required action to see if this one can be performed
             if (requiredAction != null && !requiredAction.isActive)
             {
@@ -23,13 +27,12 @@ namespace Manapotion.Actions
             }
             
             InvokeActionPerformedEvent();
-            Debug.Log($"Attack {this.action_id} started. (member: {member})");
-            HandleAttack(member, type, element);
+            HandleAttack(member, damageInstance);
             yield break;
         }
         
         // handle the attack (spawn projectiles, run animations, etc)
-        private void HandleAttack(PartyMember member, DamageInstance.DamageInstanceType type, DamageInstance.DamageInstanceElement element)
+        private void HandleAttack(PartyMember member, DamageInstance damageInstance)
         {
             if (projectileHandler == null)
             {
@@ -41,8 +44,8 @@ namespace Manapotion.Actions
                 member,
                 new DamageInstance
                 {
-                    damageInstanceType = type,
-                    damageInstanceElement = element,
+                    damageInstanceType = damageInstance.damageInstanceType,
+                    damageInstanceElement = damageInstance.damageInstanceElement,
                     damageInstanceAmount = (float)member.statsManagerScriptableObject.GetStat(modifierStatID).value.modifiedValue
                 }
             ));

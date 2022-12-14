@@ -32,7 +32,7 @@ TagManager:
   - EnemySpell
   - PartyMember
   - IgnoreSpellCollision
-  - 
+  - Targetable
   - 
   - 
   - 
