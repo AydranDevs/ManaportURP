@@ -46,7 +46,17 @@ MonoBehaviour:
     canUseAux: 0
   whenConcludedWillRestrictUntilEvent: 0
   driverToWatchToUnrestrictAfterConcluded: 
-  actionPerformed_driverSetsArray: []
+  actionPerformed_driverSetsArray:
+  - driverName: state
+    set: 1
+    watchDriver: 
+    onComplete_driverName: 
+    onComplete_set: 0
+  - driverName: abilityState
+    set: 2
+    watchDriver: 
+    onComplete_driverName: 
+    onComplete_set: 0
   actionConcluded_driverSetsArray: []
   costPointID: 3
   cost: 0
