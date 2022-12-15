@@ -201,7 +201,7 @@ namespace Manapotion.Input
                 return;
             }
             
-            _member.characterTargeting.NextTarget();
+            
         }
         public void OnPrevious()
         {
@@ -210,7 +210,7 @@ namespace Manapotion.Input
                 return;
             }
             
-            _member.characterTargeting.PreviousTarget();
+            
         }
         #endregion
 

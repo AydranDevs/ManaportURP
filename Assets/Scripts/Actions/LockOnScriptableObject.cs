@@ -8,9 +8,6 @@ namespace Manapotion.Actions
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New LockOnScriptableObject")]
     public class LockOnScriptableObject : ActionScriptableObject
     {
-        [Tooltip("The range in units that this action searches within for targets.")]
-        public float lockOnRange;
-
         public override IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
             InvokeActionPerformedEvent();
@@ -21,20 +18,43 @@ namespace Manapotion.Actions
         public void HandleTargeting(PartyMember member)
         {
             var collider2Ds = Physics2D.OverlapCircleAll(
-                (Vector2)member.transform.position,
-                lockOnRange
+                member.transform.position,
+                member.characterTargeting.lockOnRange
             );
             
-            // the first target in this list will be selected every time until there is an ability to switch targets.
+            // the *closest* target in this list will be selected every time until there is an ability to switch targets.
             // so come back to this later on.
+            ITargetable closestTarget = null;
+            ITargetable currentlyAnalyzedTarget = null;
             for (int i = 0; i < collider2Ds.Length; i++)
             {
-                if (collider2Ds[i].TryGetComponent<ITargetable>(out ITargetable target))
+                if (!collider2Ds[i].TryGetComponent<ITargetable>(out ITargetable target))
                 {
-                    member.characterTargeting?.SetTarget(target);
-                    break;
+                    continue;
                 }
+
+                currentlyAnalyzedTarget = target;
+                if (closestTarget == null)
+                {
+                    closestTarget = target;
+                    continue;
+                }
+
+                closestTarget.GetPosition(out Vector2 currentClosestTargetPos);
+                currentlyAnalyzedTarget.GetPosition(out Vector2 currentlyAnalyzedtargetPos);
+
+                var closestTargetDist = Vector2.Distance(member.transform.position, currentClosestTargetPos);
+                var currentlyAnalyzedTargetDist = Vector2.Distance(member.transform.position, currentlyAnalyzedtargetPos);
+
+                if (currentlyAnalyzedTargetDist > closestTargetDist)
+                {
+                    continue;
+                }
+
+                closestTarget = currentlyAnalyzedTarget;
             }
+            
+            member.characterTargeting?.SetTarget(closestTarget);
         }
     }
 }

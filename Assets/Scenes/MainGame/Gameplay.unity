@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -975,11 +975,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a864b8e4f6a4034f9fa2ad4aa900006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1084825542 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8575495455274865848, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
-  m_PrefabInstance: {fileID: 4003902396956327380}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1084825548 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
@@ -991,68 +986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddebb7334c954bd4691df4c604d35652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1111670748
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1111670749}
-  - component: {fileID: 1111670751}
-  - component: {fileID: 1111670750}
-  m_Layer: 8
-  m_Name: TargetingRadius
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1111670749
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111670748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1084825542}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1111670750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111670748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be765fbbc70dbe845a7689d32c5205b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTrigger: {fileID: 1111670751}
-  isTargeting: 0
---- !u!58 &1111670751
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111670748}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 6
 --- !u!1 &1170396365
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,6 +2037,30 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: speed
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: transitionCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4359342858520289036, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: manaport_spellstone_cryomancing_stone
       value: 
@@ -2211,7 +2168,11 @@ PrefabInstance:
     - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterTargeting
       value: 
-      objectReference: {fileID: 1111670750}
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterTargeting.lockOnRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6841546762504272778, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0

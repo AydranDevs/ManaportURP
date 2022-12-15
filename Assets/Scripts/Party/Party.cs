@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.Events;
 using Manapotion.PartySystem.Inventory;
 using Manapotion.UI;
+using Manapotion.PartySystem.Cam;
 using Manapotion.Utilities;
 
 namespace Manapotion.PartySystem
@@ -14,6 +15,7 @@ namespace Manapotion.PartySystem
     public class Party : MonoBehaviour
     {
         public static Party Instance;
+        private PartyCam _partyCam;
 
         public static Action OnPartyLeaderChanged;
         [NonSerialized]
@@ -35,8 +37,6 @@ namespace Manapotion.PartySystem
 
         public PartyMember[] members;
 
-        private PartyCam cam;
-
         public float maxDistance;
 
         public PartyInventory partyInventory { get; private set; }
@@ -55,11 +55,16 @@ namespace Manapotion.PartySystem
             partyInventory = new PartyInventory(this);
             // bagScriptableObject.bagItemEquippedEvent.AddListener(partyInventory.EquipItemToMember);
             
-            cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PartyCam>();
-            cam.target = members[0].transform;
             partyLeader = members[0];
             previousLeader = members[1];
             oldestLeader = members[2];
+            
+            _partyCam = GameObject.FindGameObjectWithTag("Camera").GetComponent<PartyCam>();
+            _partyCam.SetCameraState(
+                new PartyCam.CameraState {
+                    targets = new Transform[] { members[0].transform }
+                }
+            );
 
             foreach (var member in members)
             {
@@ -100,8 +105,12 @@ namespace Manapotion.PartySystem
 
             previousLeader = partyLeader;
             partyLeader = members[index];
-            cam.target = members[index].transform;
-            cam.PartyLeaderChanged();
+            _partyCam.SetCameraState(
+                new PartyCam.CameraState {
+                    targets = new Transform[] { members[index].transform }
+                }
+            );
+            // cam.PartyLeaderChanged();
             PartyLeaderChanged();
         }
 
@@ -134,8 +143,12 @@ namespace Manapotion.PartySystem
 
             previousLeader = partyLeader;
             partyLeader = members[index];
-            cam.target = members[index].transform;
-            cam.PartyLeaderChanged();
+            _partyCam.SetCameraState(
+                new PartyCam.CameraState {
+                    targets = new Transform[] { members[index].transform }
+                }
+            );
+            // cam.PartyLeaderChanged();
             PartyLeaderChanged();
         }
 
@@ -202,21 +215,6 @@ namespace Manapotion.PartySystem
                 if (member != partyLeader && member != previousLeader)
                 {
                     oldestLeader = member;
-                }
-
-                if (member == partyLeader)
-                {
-                    if (member.characterTargeting != null)
-                    {
-                        if (member.characterTargeting.isTargeting)
-                        {
-                            overrideCanSwitchLeaders = false;
-                        }
-                        else
-                        {
-                            overrideCanSwitchLeaders = true;
-                        }
-                    }
                 }
             }
         }

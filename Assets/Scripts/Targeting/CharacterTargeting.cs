@@ -5,11 +5,10 @@ using Manapotion.PartySystem;
 
 namespace Manapotion.Actions.Targets
 {
-    public class CharacterTargeting : MonoBehaviour
+    [Serializable]
+    public class CharacterTargeting
     {
-        private PartyMember _member;
-        
-        #region Target Member Variables
+        #region Events
         public event EventHandler<OnNewTargetSelectedEventArgs> OnNewTargetSelected;
         public class OnNewTargetSelectedEventArgs : EventArgs
         {
@@ -22,26 +21,12 @@ namespace Manapotion.Actions.Targets
             public ITargetable previousTarget;
         }
         public event EventHandler OnTargetLost;
-        
-        public CircleCollider2D targetTrigger;
-        public float targetRange
-        {
-            get
-            {
-                return targetTrigger.radius;
-            }
-            private set
-            {
-
-            }
-        }
-
-        public bool isTargeting = false;
-        public List<ITargetable> targetsInRange;
-
-        public ITargetable currentlyTargeted;
         #endregion
 
+        private PartyMember _member;
+        [Tooltip("The range in units that this action searches within for targets.")]
+        public float lockOnRange;
+        public ITargetable currentlyTargeted { get; private set; }
         private InputProvider _inputProvider;
 
         #region Target Management
@@ -59,6 +44,9 @@ namespace Manapotion.Actions.Targets
             
             OnTargetChanged?.Invoke(this, new OnTargetChangedEventArgs { newTarget = target, previousTarget = currentlyTargeted });
             currentlyTargeted = target;
+            
+            
+            Debug.Log(currentlyTargeted);
         }
 
         public void DropCurrentlyTargeted()
@@ -66,25 +54,6 @@ namespace Manapotion.Actions.Targets
             currentlyTargeted = null;
             OnTargetLost.Invoke(this, EventArgs.Empty);
         }
-
-        public void NextTarget()
-        {
-            if (!isTargeting)
-            {
-                return;
-            }
-
-            currentlyTargeted = targetsInRange[targetsInRange.IndexOf(currentlyTargeted) + 1];
-        }
-        public void PreviousTarget()
-        {   
-            if (!isTargeting)
-            {
-                return;
-            }
-
-            currentlyTargeted = targetsInRange[targetsInRange.IndexOf(currentlyTargeted) - 1];
-        } 
 
         public Vector2 GetCurrentTargetPosition()
         {
@@ -96,6 +65,7 @@ namespace Manapotion.Actions.Targets
             currentlyTargeted.GetPosition(out Vector2 position);
             return position;
         }
+        
         #endregion
     
         public void Init(PartyMember member)

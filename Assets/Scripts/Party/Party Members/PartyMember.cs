@@ -121,7 +121,7 @@ namespace Manapotion.PartySystem
             characterInput.Init(this);
             characterController.Init(this);
             characterRenderer.Init(this);
-            characterTargeting?.Init(this);
+            characterTargeting.Init(this);
 
             // subscribe to every stat value's modified event
             for (int i = 0; i < statsManagerScriptableObject.statArray.Length; i++)
@@ -431,5 +431,13 @@ namespace Manapotion.PartySystem
         {
             return transform.position;
         }
+
+        #if UNITY_EDITOR
+        private void OnDrawGizmosSelected() {
+            Gizmos.color = Color.green;
+            float r = characterTargeting.lockOnRange;
+            Gizmos.DrawWireSphere(transform.position, r);
+        }
+        #endif
     }
 }
