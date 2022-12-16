@@ -14,7 +14,7 @@ namespace Manapotion.PartySystem.Cam
         Hard_Cut,
         Soft_Cut,
     }
-    
+
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/New PartyCameraManagerScriptableObject")]
     public class PartyCameraManagerScriptableObject : ScriptableObject
     {
@@ -25,6 +25,8 @@ namespace Manapotion.PartySystem.Cam
         public event Action<Transform> CameraTargetBiasChanged;
 
         public List<Transform> targets;
+
+        public Transform point;
         private bool _canAddTarget = true;
         private bool _canRemoveTarget = true;
 
