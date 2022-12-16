@@ -23,12 +23,14 @@ namespace Manapotion.PartySystem.Cam
         bool transitionOver = false;
 
         public float transitionDuration = 2.5f;
+
+        void Awake() {
+            partyCameraManager.SetPartyCam(this);    
+        }
         
         void Start() {
             cam = GetComponent<Camera>();
             cam.orthographicSize = DEFAULT_CAMERA_SIZE;
-
-            StartCoroutine(Transition());
         }
 
         void Update()
@@ -52,7 +54,11 @@ namespace Manapotion.PartySystem.Cam
                 return;
             }
 
-            transform.position = partyCameraManager.targets[0].position;
+            transform.position = new Vector3(
+                partyCameraManager.targets[0].position.x,
+                partyCameraManager.targets[0].position.y,
+                -1f
+            );
         }
         private void SoftFollow_Update()
         {
@@ -63,7 +69,11 @@ namespace Manapotion.PartySystem.Cam
 
             Vector3 slerped = Vector3.Slerp(transform.position, partyCameraManager.targets[0].position, partyCameraManager.cameraSpeed);
 
-            transform.position = slerped;
+            transform.position = new Vector3(
+                slerped.x,
+                slerped.y,
+                -1f
+            );
         }
         private void HardMoveToPoint_Update()
         {
@@ -139,25 +149,5 @@ namespace Manapotion.PartySystem.Cam
         //             }
         //         }
         // }
-
-        public void PartyLeaderChanged() {
-            if (target != null) {
-                if (transitionOver) {
-                    transitionOver = false;
-                    StartCoroutine(Transition());
-                }
-            }
-        }
-
-        IEnumerator Transition() {
-            float t = 0f;
-            Vector3 startPos = transform.position;
-            while (t < 1f) {
-                t += Time.deltaTime * (Time.timeScale / transitionDuration);
-                transform.position = Vector3.Lerp(startPos, _target, t);
-                yield return 0;
-            }
-            transitionOver = true;
-        }
     }
 }

@@ -121,7 +121,7 @@ namespace Manapotion.UI
             tweenObject2.setEase(LeanTweenType.easeOutQuad);
             active = true;
 
-            Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingIn;
+            // Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingIn;
             main.dimmer.FadeOut();
             Party.SetLeaderChangeOverride(true);
         }
@@ -142,7 +142,7 @@ namespace Manapotion.UI
             tweenObject2.setEase(LeanTweenType.easeOutQuad);
             active = false;
 
-            Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingOut;
+            // Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingOut;
             main.dimmer.FadeIn();
             Party.SetLeaderChangeOverride(false);
         }

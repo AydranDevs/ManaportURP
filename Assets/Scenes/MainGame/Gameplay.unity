@@ -2042,6 +2042,10 @@ PrefabInstance:
       value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: partyCameraManager
+      value: 
+      objectReference: {fileID: 11400000, guid: f274007e95172e240b51bb0218fcfc6e, type: 2}
+    - target: {fileID: 4003902396738324278, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: transitionCurve.m_Curve.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -2077,9 +2081,17 @@ PrefabInstance:
       propertyPath: manaport_spellstone_voltmancing_stone
       value: 
       objectReference: {fileID: 1608186642866579482, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
+    - target: {fileID: 4536639332912630902, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterTargeting.lockOnRange
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4706400962956312194, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_Name
       value: EssentialObjects
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518079813858214591, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterTargeting.lockOnRange
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6354822087929747541, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_Size
@@ -2881,6 +2893,10 @@ PrefabInstance:
       propertyPath: previousLeader
       value: 
       objectReference: {fileID: 1263515340}
+    - target: {fileID: 8575495456905702048, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: _partyCameraManager
+      value: 
+      objectReference: {fileID: 11400000, guid: f274007e95172e240b51bb0218fcfc6e, type: 2}
     - target: {fileID: 8575495456905702048, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: members.Array.data[0]
       value: 

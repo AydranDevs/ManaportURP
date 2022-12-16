@@ -30,8 +30,7 @@ namespace Manapotion.PartySystem.Cam
         private bool _canAddTarget = true;
         private bool _canRemoveTarget = true;
 
-        [SerializeField]
-        private PartyCam partyCamera;
+        private PartyCam _partyCamera;
 
         public float cameraSpeed;
 
@@ -94,6 +93,12 @@ namespace Manapotion.PartySystem.Cam
             CameraTargetRemoved.Invoke();
         }
 
+        public IEnumerator SetCameraTargets(List<Transform> targets)
+        {
+            this.targets = targets;
+            yield break;
+        }
+
         public IEnumerator SetCameraTargetBias(Transform biasedTarget = null, int biasedTargetIndex = 0)
         {
             // first check if the target transform is a part of the target list of if the target index is within the target list bounds
@@ -104,12 +109,17 @@ namespace Manapotion.PartySystem.Cam
 
         public void GetCameraPosition(out Vector3 cameraPosition)
         {
-            cameraPosition = partyCamera.transform.position;
+            cameraPosition = _partyCamera.transform.position;
         }
 
         public PartyCam GetPartyCam()
         {
-            return partyCamera;
+            return _partyCamera;
+        }
+
+        public void SetPartyCam(PartyCam cam)
+        {
+            _partyCamera = cam;
         }
 
         public void SetCameraMode(CameraMode mode)

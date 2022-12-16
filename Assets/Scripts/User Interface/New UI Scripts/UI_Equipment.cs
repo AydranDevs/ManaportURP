@@ -126,7 +126,7 @@ namespace Manapotion.UI
         protected override void Abstract_Show()
         {
             main.dimmer.FadeOut();
-            Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingIn;
+            // Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingIn;
 
             LTDescr leftPanel;
             leftPanel = LeanTween.move(transforms[0], new Vector3(-30, 0, 0), 0.3f);
@@ -137,7 +137,7 @@ namespace Manapotion.UI
             rightPanel.setEase(LeanTweenType.easeOutQuad);
             rightPanel.setOnComplete(() => { uiState = UIState.Shown; });
 
-            Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingIn;
+            // Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingIn;
             Party.SetLeaderChangeOverride(true);
         }
 
@@ -152,7 +152,7 @@ namespace Manapotion.UI
             rightPanel.setEase(LeanTweenType.easeOutQuad);
             rightPanel.setOnComplete(() => { uiState = UIState.Hidden; });
 
-            Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingOut;     
+            // Camera.main.GetComponent<PartyCam>().camZoomState = CamZoomState.ZoomingOut;     
             Party.SetLeaderChangeOverride(false);
         }
 

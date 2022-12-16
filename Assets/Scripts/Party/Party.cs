@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
@@ -15,7 +16,8 @@ namespace Manapotion.PartySystem
     public class Party : MonoBehaviour
     {
         public static Party Instance;
-        private PartyCam _partyCam;
+        [SerializeField]
+        private PartyCameraManagerScriptableObject _partyCameraManager;
 
         public static Action OnPartyLeaderChanged;
         [NonSerialized]
@@ -59,12 +61,8 @@ namespace Manapotion.PartySystem
             previousLeader = members[1];
             oldestLeader = members[2];
             
-            _partyCam = GameObject.FindGameObjectWithTag("Camera").GetComponent<PartyCam>();
-            _partyCam.SetCameraState(
-                new PartyCam.CameraState {
-                    targets = new Transform[] { members[0].transform }
-                }
-            );
+            StartCoroutine(_partyCameraManager.SetCameraTargets(new List<Transform>{ members[0].transform }));
+            _partyCameraManager.SetCameraMode(CameraMode.Soft_Follow);
 
             foreach (var member in members)
             {
@@ -105,12 +103,7 @@ namespace Manapotion.PartySystem
 
             previousLeader = partyLeader;
             partyLeader = members[index];
-            _partyCam.SetCameraState(
-                new PartyCam.CameraState {
-                    targets = new Transform[] { members[index].transform }
-                }
-            );
-            // cam.PartyLeaderChanged();
+            StartCoroutine(_partyCameraManager.SetCameraTargets(new List<Transform>{ members[index].transform }));
             PartyLeaderChanged();
         }
 
@@ -143,12 +136,7 @@ namespace Manapotion.PartySystem
 
             previousLeader = partyLeader;
             partyLeader = members[index];
-            _partyCam.SetCameraState(
-                new PartyCam.CameraState {
-                    targets = new Transform[] { members[index].transform }
-                }
-            );
-            // cam.PartyLeaderChanged();
+            StartCoroutine(_partyCameraManager.SetCameraTargets(new List<Transform>{ members[index].transform }));
             PartyLeaderChanged();
         }
 
