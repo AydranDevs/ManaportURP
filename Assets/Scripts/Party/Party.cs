@@ -61,7 +61,7 @@ namespace Manapotion.PartySystem
             previousLeader = members[1];
             oldestLeader = members[2];
             
-            StartCoroutine(_partyCameraManager.SetCameraTargets(new List<Transform>{ members[0].transform }));
+            StartCoroutine(_partyCameraManager.SetCameraTargets(new List<Transform>{ members[0].transform, members[1].transform, members[2].transform, }));
             _partyCameraManager.SetCameraMode(CameraMode.Soft_Follow);
 
             foreach (var member in members)

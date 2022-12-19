@@ -2082,16 +2082,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1608186642866579482, guid: 4d15a618a445c784080bbcd070b600b4, type: 3}
     - target: {fileID: 4536639332912630902, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.aIControlMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536639332912630902, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterTargeting.lockOnRange
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536639332912630902, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4706400962956312194, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_Name
       value: EssentialObjects
       objectReference: {fileID: 0}
     - target: {fileID: 5518079813858214591, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.aIControlMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518079813858214591, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterTargeting.lockOnRange
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5518079813858214591, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6354822087929747541, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_Size
@@ -2182,8 +2198,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.aIControlMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterTargeting.lockOnRange
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterInput.MAX_FRAMES_TO_CALC_PATH_TO_PATROL_POINT
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6841546762504272778, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2255,11 +2279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865848, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 182.29
+      value: 171.74
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865848, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.339996
+      value: 46.45
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455274865851, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: primaryActionElement
@@ -2599,19 +2623,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455006, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 180.04
+      value: 170.13
       objectReference: {fileID: 0}
     - target: {fileID: 8575495455764455006, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.29
+      value: 44.1
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430214, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 177.23
+      value: 167.95
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430214, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.149994
+      value: 47.77
       objectReference: {fileID: 0}
     - target: {fileID: 8575495456034430215, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: damageType

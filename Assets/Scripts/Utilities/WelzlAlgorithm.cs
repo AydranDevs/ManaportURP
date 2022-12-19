@@ -4,26 +4,14 @@ using UnityEngine;
 
 namespace Manapotion.Utilities
 {
-    public class WelzlAlgorithm
+    public static class WelzlAlgorithm
     {
-        private struct Circle
-        {
-            public Vector2 center;
-            public float radius;
-
-            public Circle(Vector2 center, float radius)
-            {
-                this.center = center;
-                this.radius = radius;
-            }
-        }
-
-        private bool IsInsideCirlce(Circle circle, Vector2 point)
+        private static bool IsInsideCircle(Circle circle, Vector2 point)
         {
             return Vector2.Distance(circle.center, point) <= circle.radius;
         }
 
-        private Vector2 GetCircleCenter(Vector2 b, Vector2 c)
+        private static Vector2 GetCircleCenter(Vector2 b, Vector2 c)
         {
             float B = b.x * b.x + b.y * b.y;
             float C = c.x * c.x + c.y * c.y;
@@ -32,7 +20,7 @@ namespace Manapotion.Utilities
             return new Vector2 ((c.y * B - b.y * C) / (2 * D), (b.x * C - c.x * B) / (2 * D));
         }
 
-        private Circle CircleFrom(Vector2 A, Vector2 B, Vector2 C)
+        private static Circle CircleFrom(Vector2 A, Vector2 B, Vector2 C)
         {
             Vector2 I = GetCircleCenter(
                 new Vector2(
@@ -55,7 +43,7 @@ namespace Manapotion.Utilities
             );
         }
 
-        private Circle CircleFrom(Vector2 A, Vector2 B)
+        private static Circle CircleFrom(Vector2 A, Vector2 B)
         {
             // Set the center to be the midpoint of A and B
             Vector2 C = new Vector2((A.x + B.x) / 2f, (A.y + B.y) / 2f);
@@ -68,14 +56,14 @@ namespace Manapotion.Utilities
             );
         }
     
-        private bool IsValidCircle(Circle c, Vector2[] P)
+        private static bool IsValidCircle(Circle circle, List<Vector2> pointsList)
         {
             // Iterating through all the points
             // to check  whether the points
             // lie inside the circle or not
-            foreach (var p in P)
+            foreach (var point in pointsList)
             {
-                if (!IsInsideCirlce(c, p))
+                if (!IsInsideCircle(circle, point))
                 {
                     return false;
                 }
@@ -83,9 +71,10 @@ namespace Manapotion.Utilities
             return true;
         }
 
-        private Circle MinCircleTrivial(Vector2[] P)
-        {
-            if (P.Length <= 3)
+        private static Circle MinCircleTrivial(List<Vector2> pointsList)
+        {   
+            // if no points in pointsList, return a "null circle"
+            if (pointsList.Count == 0)
             {
                 return new Circle
                 (
@@ -93,26 +82,19 @@ namespace Manapotion.Utilities
                     0
                 );
             }
-            
-            if (P.Length == 0)
+            // if only one point in pointsList, return a circle with a radius of 0 and a center position equal to the point
+            else if (pointsList.Count == 1)
             {
                 return new Circle
                 (
-                    Vector2.zero,
+                    pointsList[0],
                     0
                 );
             }
-            else if (P.Length == 1)
+            // if there are two points in pointsList, return a circle created from those two points
+            else if (pointsList.Count == 2)
             {
-                return new Circle
-                (
-                    P[0],
-                    0
-                );
-            }
-            else if (P.Length == 2)
-            {
-                return CircleFrom(P[0], P[1]);
+                return CircleFrom(pointsList[0], pointsList[1]);
             }
         
             // To check if MEC can be determined
@@ -120,78 +102,69 @@ namespace Manapotion.Utilities
             for (int i = 0; i < 3; i++) {
                 for (int j = i + 1; j < 3; j++) {
         
-                    Circle c = CircleFrom(P[i], P[j]);
-                    if (IsValidCircle(c, P))
+                    Circle c = CircleFrom(pointsList[i], pointsList[j]);
+                    if (IsValidCircle(c, pointsList))
                     {
                         return c;
                     }
                 }
             }
-            return CircleFrom(P[0], P[1], P[2]);
+            return CircleFrom(pointsList[0], pointsList[1], pointsList[2]);
         }
 
-        /// <summary>
-        /// Returns the MEC using Welzl's algorithm
-        /// Takes a set of input points P and a set R
-        /// points on the circle boundary.
-        /// n represents the number of points in P
-        /// that are not yet processed.
-        /// </summary>
-        /// <param name="P"></param>
-        /// <param name="R"></param>
-        /// <param name="n"></param>
-        /// <returns></returns>
-        private Circle WelzlHelper(Vector2[] P, Vector2[] R, int n)
+        private static Circle WelzlHelper(List<Vector2> P, List<Vector2> R, int n)
         {
-            // Base case when all points processed or |R| = 3
-            if (n == 0 || R.Length == 3)
+            // if all points have been processed or R.Count == 3, return a circle from those three points.
+            if (n == 0 || R.Count == 3)
             {
                 return MinCircleTrivial(R);
             }
 
-            // Pick a random point randomly
-            int idx = UnityEngine.Random.Range(0, P.Length - 1) % n;
+            // Pick a random point
+            int idx = UnityEngine.Random.Range(0, P.Count - 1) % n;
             Vector2 p = P[idx];
 
-            // Put the picked point at the end of P
-            // since it's more efficient than
-            // deleting from the middle of the vector
-            int tmp = Array.IndexOf(P, P[n - 1]);
-            P[n - 1] = P[idx];
-            P[idx] = P[tmp];
+            // Put the picked point at the end of P
+            // since it's more efficient than
+            // deleting from the middle of the List
+            P.Remove(P[idx]);
+            P.Add(p);
 
-            // Get the MEC circle d from the
-            // set of points P - {p}
-            Circle d = WelzlHelper(P, R, n - 1);
+            // Get the Minimum Enclosing Circle d from the
+            // set of points P - {p}
+            var d = WelzlHelper(P, R, n - 1);
 
-            // If d contains p, return d
-            if (IsInsideCirlce(d, p))
-            {
+            // If d contains p, return d
+            if (IsInsideCircle(d, p)) {
                 return d;
             }
 
-            // Otherwise, must be on the boundary of the MEC
-            List<Vector2> pointList = new List<Vector2>();
-            for (int i = 0; i < 400; i++)
-            {
-                pointList.Add(R[i]);
-            }
-            R = pointList.ToArray();
+            // Otherwise, must be on the boundary of the Minimum Enclosing Circle
+            R.Add(p);
 
-            // Return the MEC for P - {p} and R U {p}
+            // Return the Minimum Enclosing Circle for P - {p} and R U {p}
             return WelzlHelper(P, R, n - 1);
         }
 
-        // Circle Welzl(Vector2[] P)
-        // {
-        //     Vector2[] P_copy = P;
-        //     System.Random rng = new System.Random();
-
-        //     // doesnt work rn lol
-        //     // var shuffledPoints = Array.Sort(P_copy, a => rng.Next()).ToList();
+        public static Circle Welzl(List<Vector2> P)
+        {
+            var P_copy = P;
+            System.Random rng = new System.Random();
             
-        //     // random_shuffle(P_copy.begin(), P_copy.end());
-        //     // return welzl_helper(P_copy, {}, P_copy.size());
-        // }
+            Shuffle(rng, P_copy);
+            return WelzlHelper(P_copy, new List<Vector2>(), P_copy.Count);
+        }
+
+        private static void Shuffle<T>(System.Random rng, List<T> list)
+        {
+            int n = list.Count;
+            while (n > 1) 
+            {
+                int k = rng.Next(n--);
+                T temp = list[n];
+                list[n] = list[k];
+                list[k] = temp;
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manapotion.Utilities;
 
 namespace Manapotion.PartySystem.Cam
 {
@@ -11,30 +12,84 @@ namespace Manapotion.PartySystem.Cam
     {
         public PartyCameraManagerScriptableObject partyCameraManager;
 
-        public CamZoomState camZoomState = CamZoomState.ZoomedOut;
+        // public CamZoomState camZoomState = CamZoomState.ZoomedOut;
 
-        private const float DEFAULT_CAMERA_SIZE = 7.3125f;
-
-        public Transform target;
-        private Vector3 _target;
+        private const float DEFAULT_MIN_CAMERA_SIZE = 7.3125f;
 
         Camera cam;
 
-        bool transitionOver = false;
 
-        public float transitionDuration = 2.5f;
+        private Vector2 _targetPosition;
+
+        private Vector2 _maxTargetPosition;
+        private Vector2 _minTargetPosition;
 
         void Awake() {
             partyCameraManager.SetPartyCam(this);    
-        }
-        
-        void Start() {
             cam = GetComponent<Camera>();
-            cam.orthographicSize = DEFAULT_CAMERA_SIZE;
+            cam.orthographicSize = DEFAULT_MIN_CAMERA_SIZE;
+        }
+
+        void CalculateTargetPosition()
+        {
+            float xSum = 0f;
+            float ySum = 0f;
+            float xAvg = 0f;
+            float yAvg = 0f;
+            for (int i = 0; i < partyCameraManager.targets.Count; i++)
+            {
+                xSum += partyCameraManager.targets[i].position.x;
+                ySum += partyCameraManager.targets[i].position.y;
+            }
+            xAvg = xSum / partyCameraManager.targets.Count;
+            yAvg = ySum / partyCameraManager.targets.Count;
+            _targetPosition = new Vector2(xAvg, yAvg);
+        }
+
+        void CalculateBoundingBox()
+        {
+            float minX = partyCameraManager.targets[0].position.x;
+            float minY = partyCameraManager.targets[0].position.y;
+            float maxX = partyCameraManager.targets[0].position.x;
+            float maxY = partyCameraManager.targets[0].position.y;
+            
+            for (int i = 0; i < partyCameraManager.targets.Count; i++)
+            {
+                minX = Mathf.Min(partyCameraManager.targets[i].position.x, minX);
+                minY = Mathf.Min(partyCameraManager.targets[i].position.y, minY);
+                maxX = Mathf.Max(partyCameraManager.targets[i].position.x, maxX);
+                maxY = Mathf.Max(partyCameraManager.targets[i].position.y, maxY);
+            }
+
+            _maxTargetPosition = new Vector2(maxX, maxY);
+            _minTargetPosition = new Vector2(minX, minY);
         }
 
         void Update()
-        {
+        {   
+            CalculateTargetPosition();
+            CalculateBoundingBox();
+            if ((_maxTargetPosition.y - _minTargetPosition.y) > DEFAULT_MIN_CAMERA_SIZE)
+            {
+                var lerped = Vector2.Lerp(
+                    new Vector2(cam.orthographicSize, 0f),
+                    new Vector2(_maxTargetPosition.y - _minTargetPosition.y, 0f),
+                    partyCameraManager.cameraSpeed
+                    );
+
+                cam.orthographicSize = lerped.x;                    
+            }
+            else
+            {
+                var lerped = Vector2.Lerp(
+                    new Vector2(cam.orthographicSize, 0f),
+                    new Vector2(DEFAULT_MIN_CAMERA_SIZE, 0f),
+                    partyCameraManager.cameraSpeed
+                    );
+
+                cam.orthographicSize = lerped.x;    
+            }
+
             switch (partyCameraManager.GetCameraMode())
             {
                 case CameraMode.Hard_Follow: HardFollow_Update(); break;
@@ -55,8 +110,8 @@ namespace Manapotion.PartySystem.Cam
             }
 
             transform.position = new Vector3(
-                partyCameraManager.targets[0].position.x,
-                partyCameraManager.targets[0].position.y,
+                _targetPosition.x,
+                _targetPosition.y,
                 -1f
             );
         }
@@ -67,7 +122,7 @@ namespace Manapotion.PartySystem.Cam
                 return;
             }
 
-            Vector3 slerped = Vector3.Slerp(transform.position, partyCameraManager.targets[0].position, partyCameraManager.cameraSpeed);
+            Vector3 slerped = Vector3.Slerp(transform.position, _targetPosition, partyCameraManager.cameraSpeed);
 
             transform.position = new Vector3(
                 slerped.x,
@@ -114,6 +169,11 @@ namespace Manapotion.PartySystem.Cam
             }
 
             throw new NotImplementedException();
+        }
+
+        private void OnDrawGizmos() {
+            Gizmos.DrawLine(transform.position, _targetPosition);
+            Gizmos.DrawLine(_minTargetPosition, _maxTargetPosition);
         }
 
         // void Update() {

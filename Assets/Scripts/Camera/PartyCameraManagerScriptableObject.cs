@@ -24,6 +24,7 @@ namespace Manapotion.PartySystem.Cam
         public event Action CameraTargetRemoved;
         public event Action<Transform> CameraTargetBiasChanged;
 
+        [NonSerialized]
         public List<Transform> targets;
 
         public Transform point;
