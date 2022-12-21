@@ -8,27 +8,25 @@ namespace Manapotion.Actions
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New AttackScriptableObject")]
     public class AttackScriptableObject : ActionScriptableObject
     {    
-        public override IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
+        protected override void HandlePerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
             if (damageInstance == null)
             {
-                yield break;
+                return;
             }
             // check required action to see if this one can be performed
             if (requiredAction != null && !requiredAction.isActive)
             {
-                yield break;
+                return;
             }
 
             if (!member.pointsManagerScriptableObject.GetPointScriptableObject(costPointID).value.CanSubtract(cost))
             {
                 // not enough points to use this attack
-                yield break;
+                return;
             }
             
-            InvokeActionPerformedEvent();
             HandleAttack(member, damageInstance);
-            yield break;
         }
         
         // handle the attack (spawn projectiles, run animations, etc)
@@ -40,7 +38,7 @@ namespace Manapotion.Actions
                 return;
             }
 
-            ManaBehaviour.instance.StartCoroutine(projectileHandler.SpawnProjectile(
+            member.StartCoroutine(projectileHandler.SpawnProjectile(
                 member,
                 new DamageInstance
                 {

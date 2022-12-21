@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Manapotion.PartySystem;
+using Manapotion.PartySystem.Cam;
 
 namespace Manapotion.Actions.Targets
 {
@@ -20,14 +21,15 @@ namespace Manapotion.Actions.Targets
             public ITargetable newTarget;
             public ITargetable previousTarget;
         }
-        public event EventHandler OnTargetLost;
+        public event Action OnTargetLost;
         #endregion
 
         private PartyMember _member;
         [Tooltip("The range in units that this action searches within for targets.")]
         public float lockOnRange;
         public ITargetable currentlyTargeted { get; private set; }
-        private InputProvider _inputProvider;
+        [SerializeField]
+        private PartyCameraManagerScriptableObject _partyCameraManager;
 
         #region Target Management
             
@@ -39,20 +41,20 @@ namespace Manapotion.Actions.Targets
             }
             else
             {
-                OnTargetLost?.Invoke(this, EventArgs.Empty);
+                OnTargetLost?.Invoke();
             }
             
             OnTargetChanged?.Invoke(this, new OnTargetChangedEventArgs { newTarget = target, previousTarget = currentlyTargeted });
+            _member.StartCoroutine(_partyCameraManager.RemoveCameraTarget(currentlyTargeted?.GetTransform()));
             currentlyTargeted = target;
-            
-            
-            Debug.Log(currentlyTargeted);
+            _member.StartCoroutine(_partyCameraManager.AddCameraTarget(currentlyTargeted.GetTransform()));
         }
 
         public void DropCurrentlyTargeted()
         {
+            _member.StartCoroutine(_partyCameraManager.RemoveCameraTarget(currentlyTargeted?.GetTransform()));
             currentlyTargeted = null;
-            OnTargetLost.Invoke(this, EventArgs.Empty);
+            OnTargetLost?.Invoke();
         }
 
         public Vector2 GetCurrentTargetPosition()
@@ -64,6 +66,34 @@ namespace Manapotion.Actions.Targets
 
             currentlyTargeted.GetPosition(out Vector2 position);
             return position;
+        }
+        
+        /// <summary>
+        /// Get the facing state int value that would make the character face the target.
+        /// </summary>
+        /// <returns></returns>
+        public int GetFacingStateToTarget()
+        {
+            Vector2 targetDir = ((Vector3)_member.characterTargeting.GetCurrentTargetPosition() - _member.transform.position).normalized;
+
+            if (targetDir.x >= .7f)
+            {
+                return (int)Input.FacingState.East;
+            }
+            else if (targetDir.x <= -.7f)
+            {
+                return (int)Input.FacingState.West;
+            }
+            else if (targetDir.y >= .7f)
+            {
+                return (int)Input.FacingState.North;
+            }
+            else if (targetDir.y <= -.7f)
+            {
+                return (int)Input.FacingState.South;
+            }
+
+            return (int)Input.FacingState.South; 
         }
         
         #endregion

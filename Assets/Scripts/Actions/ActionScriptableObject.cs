@@ -60,7 +60,7 @@ namespace Manapotion.Actions
         [Header("Toggled Action Options")]
         [Tooltip("If true, the action will need to be performed again to turn it off.")]
         public bool isToggled = false;
-        public bool isActive { get; private set; } = false;
+        public bool isActive { get; protected set; } = false;
 
         [Tooltip("If true, this action will apply Restrictions Applied After Performed Until Driver to the member until driverToWatchToUnrestrictAfterPerformed's callbacks are made.")]
         public bool whenPerformedWillRestrictUntilEvent = false;
@@ -97,7 +97,7 @@ namespace Manapotion.Actions
         /// <param name="type">Type of damage this action will inflict</param>
         /// <param name="element">Element type that this action will use</param>
         /// <returns>IEnumerator (Coroutine)</returns>
-        public virtual IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
+        public IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
             // check required action to see if this one can be performed
             if (requiredAction != null && !requiredAction.isActive)
@@ -105,35 +105,42 @@ namespace Manapotion.Actions
                 yield break;
             }
 
-            if (isToggled)
+            if (!isToggled)
             {
-                if (isActive)
-                {
-                    ConcludeAction(member);
-                    yield break;
-                }
-                else
-                {
-                    isActive = true;
-                    if (whenPerformedWillRestrictUntilEvent)
-                    {
-                        member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
-                        OnActionPerformedRestrictingMovementEvent?.Invoke(
-                            this,
-                            new OnActionPerformedRestrictingMovementEventArgs
-                            {
-                                action_id = this.action_id,
-                                watchDriver = this.driverToWatchToUnrestrictAfterPerformed,
-                                restrictionsToApply = _restrictionsAppliedWhileActive
-                            }
-                        );
-                    }
-                }
+                HandlePerformAction(member, damageInstance);
+                InvokeActionPerformedEvent();
+                yield break;
             }
-               
-            member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
+            if (isActive)
+            {
+                ConcludeAction(member);
+                yield break;
+            }
+            
+            isActive = true;
+            HandlePerformAction(member, damageInstance);
             InvokeActionPerformedEvent();
+            if (whenPerformedWillRestrictUntilEvent)
+            {
+                member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
+                OnActionPerformedRestrictingMovementEvent?.Invoke(
+                    this,
+                    new OnActionPerformedRestrictingMovementEventArgs
+                    {
+                        action_id = this.action_id,
+                        watchDriver = this.driverToWatchToUnrestrictAfterPerformed,
+                        restrictionsToApply = _restrictionsAppliedWhileActive
+                    }
+                );
+            }
+
+            member.characterController.characterControllerRestriction = _restrictionsAppliedAfterPerformedUntilDriver;
             yield break;
+        }
+
+        protected virtual void HandlePerformAction(PartyMember member, DamageInstance damageInstance = null)
+        {
+
         }
 
         protected void InvokeActionPerformedEvent()
@@ -150,13 +157,14 @@ namespace Manapotion.Actions
             );
         }
 
-        private void ConcludeAction(PartyMember member)
+        protected void ConcludeAction(PartyMember member)
         {
             if (!isActive)
             {
                 Debug.LogWarning("Cannot conclude an action that hasn't been performed yet.");
                 return;
             }
+
             isActive = false;
             if (whenConcludedWillRestrictUntilEvent)
             {
@@ -175,7 +183,13 @@ namespace Manapotion.Actions
             {
                 member.characterController.characterControllerRestriction = CharacterControllerRestriction.NoRestrictions;
             }
+            HandleConcludeAction(member);
             InvokeActionConcludedEvent();
+        }
+
+        protected virtual void HandleConcludeAction(PartyMember member)
+        {
+
         }
 
         private void InvokeActionConcludedEvent()

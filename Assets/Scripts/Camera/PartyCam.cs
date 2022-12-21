@@ -14,6 +14,7 @@ namespace Manapotion.PartySystem.Cam
 
         // public CamZoomState camZoomState = CamZoomState.ZoomedOut;
 
+        private const float SPEED_UP_TO_MEET_TARGET_THRESHOLD = 100f;
         private const float DEFAULT_MIN_CAMERA_SIZE = 7.3125f;
 
         Camera cam;
@@ -65,23 +66,23 @@ namespace Manapotion.PartySystem.Cam
             _minTargetPosition = new Vector2(minX, minY);
         }
 
-        void Update()
-        {   
-            CalculateTargetPosition();
-            CalculateBoundingBox();
-            if ((_maxTargetPosition.y - _minTargetPosition.y) > DEFAULT_MIN_CAMERA_SIZE)
-            {
-                var lerped = Vector2.Lerp(
-                    new Vector2(cam.orthographicSize, 0f),
-                    new Vector2(_maxTargetPosition.y - _minTargetPosition.y, 0f),
-                    partyCameraManager.cameraSpeed
-                    );
+        void CalculateOrthoSize()
+        {
+            var dist = Vector2.Distance(_minTargetPosition, _maxTargetPosition) / 2.5f;
 
+            var lerped = Vector2.Lerp(
+                new Vector2(cam.orthographicSize, 0f),
+                new Vector2(dist, 0f),
+                partyCameraManager.cameraSpeed
+                );
+
+            if (dist > DEFAULT_MIN_CAMERA_SIZE)
+            {
                 cam.orthographicSize = lerped.x;                    
             }
             else
             {
-                var lerped = Vector2.Lerp(
+                lerped = Vector2.Lerp(
                     new Vector2(cam.orthographicSize, 0f),
                     new Vector2(DEFAULT_MIN_CAMERA_SIZE, 0f),
                     partyCameraManager.cameraSpeed
@@ -89,6 +90,13 @@ namespace Manapotion.PartySystem.Cam
 
                 cam.orthographicSize = lerped.x;    
             }
+        }
+
+        void Update()
+        {   
+            CalculateTargetPosition();
+            CalculateBoundingBox();
+            CalculateOrthoSize();
 
             switch (partyCameraManager.GetCameraMode())
             {
@@ -122,7 +130,13 @@ namespace Manapotion.PartySystem.Cam
                 return;
             }
 
-            Vector3 slerped = Vector3.Slerp(transform.position, _targetPosition, partyCameraManager.cameraSpeed);
+            var sp = partyCameraManager.cameraSpeed;
+            var targetDist = Vector2.Distance(transform.position, _targetPosition);
+            if (targetDist >= SPEED_UP_TO_MEET_TARGET_THRESHOLD)
+            {
+                sp = partyCameraManager.cameraSpeed * 5;
+            }
+            Vector3 slerped = Vector3.Slerp(transform.position, _targetPosition, sp);
 
             transform.position = new Vector3(
                 slerped.x,

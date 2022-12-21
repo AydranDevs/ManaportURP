@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7f4e1f818bbdb54494644881af7d2a9, type: 3}
   m_Name: PartyCameraManager
   m_EditorClassIdentifier: 
-  targets:
-  - {fileID: 0}
   point: {fileID: 0}
-  cameraSpeed: 0.01
+  cameraSpeed: 0.03

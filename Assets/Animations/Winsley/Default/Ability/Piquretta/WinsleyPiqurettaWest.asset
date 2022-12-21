@@ -31,8 +31,9 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: -3730023287646145551, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - comboAttackEnd
+      values: 00000000
   - sprite: {fileID: -5398355575884944286, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
     drivers:
       keys:
@@ -72,8 +73,9 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 4100907583489137313, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - comboAttackEnd
+      values: 01000000
   - sprite: {fileID: -7004170544287399482, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
     drivers:
       keys:
@@ -105,8 +107,9 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: 5753393789748826669, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
     drivers:
-      keys: []
-      values: 
+      keys:
+      - comboAttackEnd
+      values: 02000000
   - sprite: {fileID: 6312629791598408310, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
     drivers:
       keys:

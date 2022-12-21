@@ -80,6 +80,14 @@ namespace Manapotion.Rendering
 
             _reanimator.Set(Drivers.FACING_STATE, ((int)_member.characterController.facingState));
             _reanimator.Set(Drivers.MOVEMENT_STATE, ((int)_member.characterController.movementState));
+
+            if (_member.characterTargeting.currentlyTargeted == null)
+            {
+                return;
+            }
+            
+            _member.characterController.facingState = (FacingState)_member.characterTargeting.GetFacingStateToTarget();
+            _reanimator.Set(Drivers.FACING_STATE, _member.characterTargeting.GetFacingStateToTarget());
         }
 
         public void OnActionPerformedEvent_UpdateDriver(object sender, ActionScriptableObject.OnActionPerformedEventArgs e)
@@ -87,16 +95,16 @@ namespace Manapotion.Rendering
            for (int i = 0; i < e.actionPerformed_driverSetsArray.Length; i++)
            {
                 _reanimator.Set(e.actionPerformed_driverSetsArray[i].driverName, e.actionPerformed_driverSetsArray[i].set);
-                if (e.actionPerformed_driverSetsArray[i].watchDriver != "")
-                {
-                    var onCompleteDriver = e.actionPerformed_driverSetsArray[i].onComplete_driverName;
-                    var onCompleteSet = e.actionPerformed_driverSetsArray[i].onComplete_set;
+                // if (e.actionPerformed_driverSetsArray[i].watchDriver != "")
+                // {
+                //     var onCompleteDriver = e.actionPerformed_driverSetsArray[i].onComplete_driverName;
+                //     var onCompleteSet = e.actionPerformed_driverSetsArray[i].onComplete_set;
 
-                    _reanimator.AddListener(e.actionPerformed_driverSetsArray[i].watchDriver, () => 
-                    {
-                        _reanimator.Set(onCompleteDriver, onCompleteSet);
-                    });
-                }
+                //     _reanimator.AddListener(e.actionPerformed_driverSetsArray[i].watchDriver, () => 
+                //     {
+                //         _reanimator.Set(onCompleteDriver, onCompleteSet);
+                //     });
+                // }
            }
         }
 
@@ -105,16 +113,16 @@ namespace Manapotion.Rendering
             for (int i = 0; i < e.actionConcluded_driverSetsArray.Length; i++)
             {
                 _reanimator.Set(e.actionConcluded_driverSetsArray[i].driverName, e.actionConcluded_driverSetsArray[i].set);
-                if (e.actionConcluded_driverSetsArray[i].watchDriver != "")
-                {
-                    var onCompleteDriver = e.actionConcluded_driverSetsArray[i].onComplete_driverName;
-                    var onCompleteSet = e.actionConcluded_driverSetsArray[i].onComplete_set;
+                // if (e.actionConcluded_driverSetsArray[i].watchDriver != "")
+                // {
+                //     var onCompleteDriver = e.actionConcluded_driverSetsArray[i].onComplete_driverName;
+                //     var onCompleteSet = e.actionConcluded_driverSetsArray[i].onComplete_set;
 
-                    _reanimator.AddListener(e.actionConcluded_driverSetsArray[i].watchDriver, () => 
-                    {
-                        _reanimator.Set(onCompleteDriver, onCompleteSet);
-                    });
-                }
+                //     _reanimator.AddListener(e.actionConcluded_driverSetsArray[i].watchDriver, () => 
+                //     {
+                //         _reanimator.Set(onCompleteDriver, onCompleteSet);
+                //     });
+                // }
             }
         }
 

@@ -9,55 +9,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 974b54c185a300548a15a1838641a030, type: 3}
+  m_Script: {fileID: 11500000, guid: 5da2743fab18c0b41b5fc7290f754ac5, type: 3}
   m_Name: Piquretta
   m_EditorClassIdentifier: 
-  requiredAction: {fileID: 11400000, guid: b3635a1bd52f4ff44908d639a7cf46ac, type: 2}
+  requiredAction: {fileID: 11400000, guid: d2776a8f02e8e0d4f8a157b1a31b76b1, type: 2}
   projectileHandler: {fileID: 0}
   targetDefinition: {fileID: 0}
   action_id: 9
   isToggled: 0
-  startsTargeting: 0
   whenPerformedWillRestrictUntilEvent: 0
   driverToWatchToUnrestrictAfterPerformed: 
   _restrictionsAppliedAfterPerformedUntilDriver:
-    canIdle: 0
-    canWalk: 0
-    canSprint: 0
-    canDash: 0
-    canUsePrimary: 0
-    canUseSecondary: 0
-    canUseAux: 0
+    canIdle: 1
+    canWalk: 1
+    canSprint: 1
+    canDash: 1
+    canUsePrimary: 1
+    canUseSecondary: 1
+    canUseAux: 1
   _restrictionsAppliedWhileActive:
-    canIdle: 0
-    canWalk: 0
-    canSprint: 0
-    canDash: 0
-    canUsePrimary: 0
-    canUseSecondary: 0
-    canUseAux: 0
+    canIdle: 1
+    canWalk: 1
+    canSprint: 1
+    canDash: 1
+    canUsePrimary: 1
+    canUseSecondary: 1
+    canUseAux: 1
   _restrictionsAppliedAfterConcludedUntilDriver:
-    canIdle: 0
-    canWalk: 0
-    canSprint: 0
-    canDash: 0
-    canUsePrimary: 0
-    canUseSecondary: 0
-    canUseAux: 0
+    canIdle: 1
+    canWalk: 1
+    canSprint: 1
+    canDash: 1
+    canUsePrimary: 1
+    canUseSecondary: 1
+    canUseAux: 1
   whenConcludedWillRestrictUntilEvent: 0
   driverToWatchToUnrestrictAfterConcluded: 
   actionPerformed_driverSetsArray:
   - driverName: state
     set: 1
-    watchDriver: 
-    onComplete_driverName: 
-    onComplete_set: 0
   - driverName: abilityState
     set: 2
-    watchDriver: 
-    onComplete_driverName: 
-    onComplete_set: 0
   actionConcluded_driverSetsArray: []
   costPointID: 3
   cost: 0
   modifierStatID: 0
+  attacksInCombo: 3
+  _checkingIfCanAdvanceToNextComboAttack: 1
+  _willAdvanceToNextComboAttack: 1

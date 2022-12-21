@@ -16,37 +16,45 @@ MonoBehaviour:
   projectileHandler: {fileID: 0}
   targetDefinition: {fileID: 0}
   action_id: 7
-  isToggled: 0
-  whenPerformedWillRestrictUntilEvent: 0
-  driverToWatchToUnrestrictAfterPerformed: 
+  isToggled: 1
+  whenPerformedWillRestrictUntilEvent: 1
+  driverToWatchToUnrestrictAfterPerformed: swordRaisedEvent
   _restrictionsAppliedAfterPerformedUntilDriver:
     canIdle: 1
-    canWalk: 1
-    canSprint: 1
-    canDash: 1
-    canUsePrimary: 1
+    canWalk: 0
+    canSprint: 0
+    canDash: 0
+    canUsePrimary: 0
     canUseSecondary: 1
-    canUseAux: 1
+    canUseAux: 0
   _restrictionsAppliedWhileActive:
     canIdle: 1
     canWalk: 1
-    canSprint: 1
-    canDash: 1
+    canSprint: 0
+    canDash: 0
     canUsePrimary: 1
     canUseSecondary: 1
-    canUseAux: 1
+    canUseAux: 0
   _restrictionsAppliedAfterConcludedUntilDriver:
     canIdle: 1
-    canWalk: 1
-    canSprint: 1
-    canDash: 1
-    canUsePrimary: 1
+    canWalk: 0
+    canSprint: 0
+    canDash: 0
+    canUsePrimary: 0
     canUseSecondary: 1
-    canUseAux: 1
-  whenConcludedWillRestrictUntilEvent: 0
-  driverToWatchToUnrestrictAfterConcluded: 
-  actionPerformed_driverSetsArray: []
-  actionConcluded_driverSetsArray: []
+    canUseAux: 0
+  whenConcludedWillRestrictUntilEvent: 1
+  driverToWatchToUnrestrictAfterConcluded: swordLoweredEvent
+  actionPerformed_driverSetsArray:
+  - driverName: state
+    set: 1
+  - driverName: abilityState
+    set: 0
+  actionConcluded_driverSetsArray:
+  - driverName: state
+    set: 1
+  - driverName: abilityState
+    set: 1
   costPointID: 0
   cost: 0
   modifierStatID: 0

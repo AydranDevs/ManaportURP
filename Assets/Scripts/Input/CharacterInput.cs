@@ -13,7 +13,7 @@ namespace Manapotion.Input
     {
         public enum ControlType { AI, Player }
         public ControlType controlType = ControlType.AI;
-        public enum AIControlMode { FollowTheLeader, Patrol }
+        public enum AIControlMode { Idle, FollowTheLeader, Patrol }
         public AIControlMode aIControlMode = AIControlMode.FollowTheLeader;
         private Transform _leader;
         [SerializeField]
@@ -219,6 +219,19 @@ namespace Manapotion.Input
         private void AIUpdate(AIControlMode aIControlMode)
         {
             _frames++;
+            if (aIControlMode == AIControlMode.Idle)
+            {
+                UpdateInputState(
+                    new InputState
+                    {
+                        movementDirection = Vector2.zero,
+                        isSprinting = false,
+                        isDashing = false,
+                        targetPos = _inputProvider.GetState().targetPos
+                    }
+                );
+                return;
+            }
             if (_frames >= FRAMES_TO_CALC_PATH_TO_LEADER && aIControlMode == AIControlMode.FollowTheLeader)
             {
                 RecalculatePath(_leader.position);

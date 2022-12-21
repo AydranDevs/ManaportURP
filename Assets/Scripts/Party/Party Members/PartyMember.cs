@@ -231,46 +231,6 @@ namespace Manapotion.PartySystem
             // stats.manaport_stat_hitpoints.SetMaxValue(stats.manaport_stat_max_hitpoints.GetValue());
         }
 
-        // public void AddStatusEffect(StatusEffect effect, int power, float duration)
-        // {
-        //     var stEf = new StatusEffects.Buff(effect, power, duration);
-
-        //     if (StatusEffectsContains(stEf))
-        //     {
-        //         for (int i = 0; i < statusEffects.Count; i++)
-        //         {
-        //             if (statusEffects[i].effect.buffType == stEf.effect.buffType)
-        //             {
-        //                 statusEffects[i].ResetTime();
-        //                 stEf = null;
-        //                 return;
-        //             }
-        //         }
-        //     }
-        //     else
-        //     {
-        //         stEf.active = true;
-        //         stEf.Init(this);
-        //         statusEffects.Add(stEf);
-        //     }
-        // }
-
-        // private bool StatusEffectsContains(StatusEffects.Buff effect)
-        // {
-        //     bool b = false;
-
-        //     for (int i = 0; i < statusEffects.Count; i++)
-        //     {
-        //         if (statusEffects[i].effect.buffType == effect.effect.buffType)
-        //         {
-        //             b = true;
-        //             return b;
-        //         }
-        //     }
-
-        //     return b;
-        // }
-
         /// <summary>
         /// called when a stat is modified
         /// </summary>
@@ -308,29 +268,31 @@ namespace Manapotion.PartySystem
         {
             if (action == 0)
             {
-                actionsManagerScriptableObject.PerformAction(equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].action_id,
-                                                             this,
-                                                             new DamageInstance
-                                                             {
-                                                                damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
-                                                                damageInstanceElement = (DamageInstance.DamageInstanceElement)primaryActionElement,
-                                                                damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
-                                                                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].modifierStatID
-                                                                    ).value.modifiedValue
-                                                             });
+                actionsManagerScriptableObject.PerformAction(
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].action_id,
+                    this,
+                    new DamageInstance
+                    {
+                    damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
+                    damageInstanceElement = (DamageInstance.DamageInstanceElement)primaryActionElement,
+                    damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
+                        equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].modifierStatID
+                        ).value.modifiedValue
+                    });
             }
             else
             {
-                actionsManagerScriptableObject.PerformAction(equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].action_id,
-                                                             this,
-                                                             new DamageInstance
-                                                             {
-                                                                damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
-                                                                damageInstanceElement = (DamageInstance.DamageInstanceElement)secondaryActionElement,
-                                                                damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
-                                                                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].modifierStatID
-                                                                    ).value.modifiedValue
-                                                             });
+                actionsManagerScriptableObject.PerformAction(
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].action_id,
+                    this,
+                    new DamageInstance
+                    {
+                    damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
+                    damageInstanceElement = (DamageInstance.DamageInstanceElement)secondaryActionElement,
+                    damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
+                        equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].modifierStatID
+                        ).value.modifiedValue
+                    });
             }
         }
 
@@ -433,10 +395,14 @@ namespace Manapotion.PartySystem
         }
 
         #if UNITY_EDITOR
-        private void OnDrawGizmosSelected() {
-            Gizmos.color = Color.green;
-            float r = characterTargeting.lockOnRange;
-            Gizmos.DrawWireSphere(transform.position, r);
+        private void OnDrawGizmos() {
+            if (gameObject.tag != "PlayerPartyLeader")
+            {
+                return;
+            }
+
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, characterTargeting.GetCurrentTargetPosition());
         }
         #endif
     }

@@ -60,7 +60,7 @@ namespace Manapotion.PartySystem.Cam
             {
                 targets = new List<Transform>();
             }
-            if (!_canAddTarget)
+            if (!_canRemoveTarget)
             {
                 return false;
             }
@@ -80,7 +80,8 @@ namespace Manapotion.PartySystem.Cam
             }
 
             targets.Add(target);
-            CameraTargetAdded.Invoke();
+            CameraTargetAdded?.Invoke();
+            yield break;
         }
 
         public IEnumerator RemoveCameraTarget(Transform target)
@@ -91,7 +92,8 @@ namespace Manapotion.PartySystem.Cam
             }
 
             targets.Remove(target);
-            CameraTargetRemoved.Invoke();
+            CameraTargetRemoved?.Invoke();
+            yield break;
         }
 
         public IEnumerator SetCameraTargets(List<Transform> targets)

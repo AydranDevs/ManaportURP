@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
   m_Name: WinsleyPiqurettaSwitch
   m_EditorClassIdentifier: 
-  nodes: []
+  nodes:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 08168842d8ce7f04c8ec5b711231e76a, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 0301938fab3f1c1479e37b1e83df9d3b, type: 2}
   controlDriver:
     name: facingState
     autoIncrement: 0

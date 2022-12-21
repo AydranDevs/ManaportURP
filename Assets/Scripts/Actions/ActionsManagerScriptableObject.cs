@@ -28,7 +28,7 @@ namespace Manapotion.Actions
             {
                 if (possibleActions[i].action_id == actionID)
                 {
-                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member));
+                    member.StartCoroutine(possibleActions[i].PerformAction(member));
                     return possibleActions[i];
                 }
             }
@@ -50,7 +50,7 @@ namespace Manapotion.Actions
             {
                 if (possibleActions[i].action_id == actionID)
                 {
-                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, damageInstance));
+                    member.StartCoroutine(possibleActions[i].PerformAction(member, damageInstance));
                     return possibleActions[i];
                 }
             }
@@ -77,7 +77,7 @@ namespace Manapotion.Actions
             {
                 if (possibleActions[i] == a)
                 {
-                    ManaBehaviour.instance.StartCoroutine(possibleActions[i].PerformAction(member, damageInstance));
+                    member.StartCoroutine(possibleActions[i].PerformAction(member, damageInstance));
                     return possibleActions[i];
                 }
             }

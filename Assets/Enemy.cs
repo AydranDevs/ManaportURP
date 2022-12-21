@@ -9,4 +9,9 @@ public class Enemy : MonoBehaviour, ITargetable
     {
         pos = new Vector2(transform.position.x, transform.position.y);
     }
+
+    public Transform GetTransform()
+    {
+        return this.transform;
+    }
 }

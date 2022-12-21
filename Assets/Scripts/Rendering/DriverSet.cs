@@ -5,10 +5,5 @@ namespace Manapotion.Rendering
     {
         public string driverName;
         public int set;
-
-        [UnityEngine.Header("On Animation Complete")]
-        public string watchDriver;
-        public string onComplete_driverName;
-        public int onComplete_set;
     }
 }

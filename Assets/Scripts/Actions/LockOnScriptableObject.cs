@@ -8,11 +8,14 @@ namespace Manapotion.Actions
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New LockOnScriptableObject")]
     public class LockOnScriptableObject : ActionScriptableObject
     {
-        public override IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
+        protected override void HandlePerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
-            InvokeActionPerformedEvent();
             HandleTargeting(member);
-            yield break;
+        }
+
+        protected override void HandleConcludeAction(PartyMember member)
+        {
+            member.characterTargeting.DropCurrentlyTargeted();
         }
 
         public void HandleTargeting(PartyMember member)
