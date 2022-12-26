@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
+  m_Name: WinsleyPiqurettaComboEast
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 11400000, guid: 553b933350fff5846a45403496054054, type: 2}
+  - {fileID: 11400000, guid: 7b24bed9210ee4143b9db41882b5456f, type: 2}
+  - {fileID: 11400000, guid: 5481b3a7f6f2ef64eadc6304b0dcabb3, type: 2}
+  controlDriver:
+    name: comboState
+    autoIncrement: 0
+    percentageBased: 0
+    guid: 3ef2ad16-7fc9-4b2d-9427-58a483113429
+  drivers:
+    keys: []
+    values: 

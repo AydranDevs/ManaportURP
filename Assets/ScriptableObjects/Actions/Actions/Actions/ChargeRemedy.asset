@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e453f0c9933b68347bdccd7f476d7bb8, type: 3}
   m_Name: ChargeRemedy
   m_EditorClassIdentifier: 
+  requiredAction: {fileID: 0}
   projectileHandler: {fileID: 0}
-  targetHandler: {fileID: 0}
-  action_id: 6
+  targetDefinition: {fileID: 0}
+  actionID: Charge_Remedy
   isToggled: 1
   whenPerformedWillRestrictUntilEvent: 1
   driverToWatchToUnrestrictAfterPerformed: umbrellaOpenedEvent
@@ -47,25 +48,13 @@ MonoBehaviour:
   actionPerformed_driverSetsArray:
   - driverName: state
     set: 1
-    watchDriver: 
-    onComplete_driverName: 
-    onComplete_set: 0
   - driverName: abilityState
     set: 0
-    watchDriver: 
-    onComplete_driverName: 
-    onComplete_set: 0
   actionConcluded_driverSetsArray:
   - driverName: state
     set: 1
-    watchDriver: 
-    onComplete_driverName: 
-    onComplete_set: 0
   - driverName: abilityState
     set: 1
-    watchDriver: 
-    onComplete_driverName: 
-    onComplete_set: 0
   costPointID: 2
   cost: 0
   modifierStatID: 4

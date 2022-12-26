@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Manapotion.PartySystem.LaurieCharacter;
+using Manapotion.PartySystem;
 
 public class PrimarySpellImage : MonoBehaviour
 {

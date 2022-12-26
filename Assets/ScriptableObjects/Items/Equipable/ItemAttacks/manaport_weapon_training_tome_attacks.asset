@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: manaport_weapon_training_tome_attacks
   m_EditorClassIdentifier: 
   attacksArray:
-  - {fileID: 11400000, guid: 202a5c23bf352b44bafb0e148f0d2c51, type: 2}
+  - {fileID: 11400000, guid: 45499e145dc79f74b98dfeb07e658435, type: 2}

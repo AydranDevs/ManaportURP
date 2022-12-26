@@ -12,14 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc1b88a06b81d5c47a0653ca5034fbce, type: 3}
   m_Name: DanceDeDestreza
   m_EditorClassIdentifier: 
-  requiredAction: {fileID: 0}
-  projectileHandler: {fileID: 0}
-  targetDefinition: {fileID: 0}
-  action_id: 7
-  isToggled: 1
-  whenPerformedWillRestrictUntilEvent: 1
-  driverToWatchToUnrestrictAfterPerformed: swordRaisedEvent
-  _restrictionsAppliedAfterPerformedUntilDriver:
+  modifierStatID: 0
+  performedDriverHandles: []
+  concludedDriverHandles: []
+  performedRestriction:
     canIdle: 1
     canWalk: 0
     canSprint: 0
@@ -27,7 +23,7 @@ MonoBehaviour:
     canUsePrimary: 0
     canUseSecondary: 1
     canUseAux: 0
-  _restrictionsAppliedWhileActive:
+  activeRestriction:
     canIdle: 1
     canWalk: 1
     canSprint: 0
@@ -35,26 +31,3 @@ MonoBehaviour:
     canUsePrimary: 1
     canUseSecondary: 1
     canUseAux: 0
-  _restrictionsAppliedAfterConcludedUntilDriver:
-    canIdle: 1
-    canWalk: 0
-    canSprint: 0
-    canDash: 0
-    canUsePrimary: 0
-    canUseSecondary: 1
-    canUseAux: 0
-  whenConcludedWillRestrictUntilEvent: 1
-  driverToWatchToUnrestrictAfterConcluded: swordLoweredEvent
-  actionPerformed_driverSetsArray:
-  - driverName: state
-    set: 1
-  - driverName: abilityState
-    set: 0
-  actionConcluded_driverSetsArray:
-  - driverName: state
-    set: 1
-  - driverName: abilityState
-    set: 1
-  costPointID: 0
-  cost: 0
-  modifierStatID: 0

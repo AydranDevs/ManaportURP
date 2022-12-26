@@ -29,9 +29,7 @@ MonoBehaviour:
     drivers:
       keys:
       - swordRaisedEvent
-      - state
-      - hasSword
-      values: 000000000000000001000000
+      values: 00000000
   controlDriver:
     name: raiseSword
     autoIncrement: 1

@@ -85,7 +85,7 @@ namespace Manapotion.PartySystem
         // public StatusEffectParticles statusEffectParticles;
 
         [Header("Manager ScriptableObjects")]
-        public ActionsManagerScriptableObject actionsManagerScriptableObject;
+        public PartyMemberActionsManager actionsManagerScriptableObject;
         public StatsManagerScriptableObject statsManagerScriptableObject;
         public EquipmentManagerScriptableObject equipmentManagerScriptableObject;
         public PointsManagerScriptableObject pointsManagerScriptableObject;
@@ -130,7 +130,7 @@ namespace Manapotion.PartySystem
             }
             for (int i = 0; i < actionsManagerScriptableObject.possibleActions.Count; i++)
             {
-                actionsManagerScriptableObject.possibleActions[i].OnActionPerformedEvent += OnActionPerformedEvent_UseActionPoints;
+                // actionsManagerScriptableObject.possibleActions[i].OnActionPerformedEvent += OnActionPerformedEvent_UseActionPoints;
             }
             
             // max out all status points
@@ -269,34 +269,34 @@ namespace Manapotion.PartySystem
             if (action == 0)
             {
                 actionsManagerScriptableObject.PerformAction(
-                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].action_id,
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0],
                     this,
                     new DamageInstance
                     {
                     damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
                     damageInstanceElement = (DamageInstance.DamageInstanceElement)primaryActionElement,
                     damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
-                        equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].modifierStatID
+                        equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].GetModifierStatID()
                         ).value.modifiedValue
                     });
             }
             else
             {
                 actionsManagerScriptableObject.PerformAction(
-                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].action_id,
+                    equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1],
                     this,
                     new DamageInstance
                     {
                     damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
                     damageInstanceElement = (DamageInstance.DamageInstanceElement)secondaryActionElement,
                     damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
-                        equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].modifierStatID
+                        equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].GetModifierStatID()
                         ).value.modifiedValue
                     });
             }
         }
 
-        public void OnActionPerformedEvent_UseActionPoints(object sender, ActionScriptableObject.OnActionPerformedEventArgs e)
+        public void OnActionPerformedEvent_UseActionPoints(object sender, PartyMemberAction.OnActionPerformedEventArgs e)
         {
             if (e.costPointID == actionPoints && e.cost > 0)
             {

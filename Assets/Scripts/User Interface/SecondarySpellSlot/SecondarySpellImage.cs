@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Manapotion.PartySystem.LaurieCharacter;
+using Manapotion.PartySystem;
 
 public class SecondarySpellImage : MonoBehaviour
 {

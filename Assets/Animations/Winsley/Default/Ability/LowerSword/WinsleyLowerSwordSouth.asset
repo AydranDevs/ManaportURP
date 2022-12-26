@@ -28,11 +28,8 @@ MonoBehaviour:
   - sprite: {fileID: 7660341811770188929, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
     drivers:
       keys:
-      - hasSword
-      - abilityState
-      - state
       - swordLoweredEvent
-      values: 00000000000000000000000000000000
+      values: 00000000
   controlDriver:
     name: lowerSword
     autoIncrement: 1

@@ -51,8 +51,8 @@ namespace Manapotion.Input
 
             foreach (var action in _member.actionsManagerScriptableObject.possibleActions)
             {
-                action.OnActionPerformedRestrictingMovementEvent += OnActionPerformedRestrictingMovementEvent_AddDriverListener;
-                action.OnActionConcludedRestrictingMovementEvent += OnActionConcludedRestrictingMovementEvent_AddDriverListener; 
+                // action.OnActionPerformedRestrictingMovementEvent += OnActionPerformedRestrictingMovementEvent_AddDriverListener;
+                // action.OnActionConcludedRestrictingMovementEvent += OnActionConcludedRestrictingMovementEvent_AddDriverListener; 
             }
 
             _inputProvider.OnPrimary += OnPrimary;
@@ -214,7 +214,7 @@ namespace Manapotion.Input
         }
         #endregion
 
-        public void OnActionPerformedRestrictingMovementEvent_AddDriverListener(object sender, ActionScriptableObject.OnActionPerformedRestrictingMovementEventArgs e)
+        public void OnActionPerformedRestrictingMovementEvent_AddDriverListener(object sender, PartyMemberAction.OnActionPerformedRestrictingMovementEventArgs e)
         {
             // when the watch driver event is called, grant control back to the character.
             _member.characterRenderer.GetReanimator().AddListener(e.watchDriver, () =>
@@ -224,7 +224,7 @@ namespace Manapotion.Input
             );
         }
 
-        public void OnActionConcludedRestrictingMovementEvent_AddDriverListener(object sender, ActionScriptableObject.OnActionConcludedRestrictingMovementEventArgs e)
+        public void OnActionConcludedRestrictingMovementEvent_AddDriverListener(object sender, PartyMemberAction.OnActionConcludedRestrictingMovementEventArgs e)
         {
             // when the watch driver event is called, grant control back to the character.
             _member.characterRenderer.GetReanimator().AddListener(e.watchDriver, () =>
