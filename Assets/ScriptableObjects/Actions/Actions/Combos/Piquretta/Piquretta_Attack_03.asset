@@ -12,12 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974b54c185a300548a15a1838641a030, type: 3}
   m_Name: Piquretta_Attack_03
   m_EditorClassIdentifier: 
-  attackMode: 0
-  comboParent: {fileID: 0}
-  actionID: Piquretta_Attack_03
+  attackMode: 1
+  comboParent: {fileID: 11400000, guid: 7f0a200d8bfb08e43ae9b5770bb791f2, type: 2}
   requiredAction: {fileID: 0}
-  projectileHandler: {fileID: 0}
   costPointID: 0
   cost: 0
   modifierStatID: 0
-  driverHandles: []
+  performedDriverHandles:
+  - driverName: state
+    driverValue: 1
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0
+  - driverName: abilityState
+    driverValue: 2
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0
+  - driverName: comboState
+    driverValue: 2
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0
+  endDriverHandles: []
+  attackEndDriverHandle:
+    driverName: 
+    driverValue: 0
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0

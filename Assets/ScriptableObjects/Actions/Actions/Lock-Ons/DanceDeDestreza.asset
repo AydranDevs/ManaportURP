@@ -13,8 +13,48 @@ MonoBehaviour:
   m_Name: DanceDeDestreza
   m_EditorClassIdentifier: 
   modifierStatID: 0
-  performedDriverHandles: []
-  concludedDriverHandles: []
+  performedDriverHandles:
+  - driverName: state
+    driverValue: 1
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0
+  - driverName: abilityState
+    driverValue: 0
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0
+  - driverName: hasSword
+    driverValue: 1
+    conditional: 1
+    conditionalDriverName: swordRaisedEvent
+    conditionalDriverValue: 0
+  - driverName: state
+    driverValue: 0
+    conditional: 1
+    conditionalDriverName: swordRaisedEvent
+    conditionalDriverValue: 0
+  concludedDriverHandles:
+  - driverName: state
+    driverValue: 1
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0
+  - driverName: abilityState
+    driverValue: 1
+    conditional: 0
+    conditionalDriverName: 
+    conditionalDriverValue: 0
+  - driverName: hasSword
+    driverValue: 0
+    conditional: 1
+    conditionalDriverName: swordLoweredEvent
+    conditionalDriverValue: 0
+  - driverName: state
+    driverValue: 0
+    conditional: 1
+    conditionalDriverName: swordLoweredEvent
+    conditionalDriverValue: 0
   performedRestriction:
     canIdle: 1
     canWalk: 0

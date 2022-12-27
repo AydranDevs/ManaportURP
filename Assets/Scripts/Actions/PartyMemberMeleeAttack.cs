@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,12 @@ namespace Manapotion.Actions
     [CreateAssetMenu(menuName = "Manapotion/ScriptableObjects/Actions/New Melee Attack")]
     public class PartyMemberMeleeAttack : APartyMemberAction
     {   
+        public event EventHandler<OnMeleeAttackEndedArgs> OnMeleeAttackEnded;
+        public class OnMeleeAttackEndedArgs : EventArgs
+        {
+            public PartyMember member;
+        }
+
         public enum AttackMode
         {
             Standalone,
@@ -39,6 +46,12 @@ namespace Manapotion.Actions
         }
 
         public List<DriverHandle> performedDriverHandles;
+        public List<DriverHandle> endDriverHandles;
+
+        public DriverHandle attackEndDriverHandle;
+
+        [NonSerialized]
+        public bool isActive = false;
 
         public override IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
@@ -59,42 +72,98 @@ namespace Manapotion.Actions
             }
             
             HandleAttack(member, damageInstance);
-            HandleAnimation(member);
         }
         
         // handle the attack (spawn projectiles, run animations, etc)
         private void HandleAttack(PartyMember member, DamageInstance damageInstance)
         {
-        }
-
-        public void HandleAnimation(PartyMember member)
-        {
-            if (performedDriverHandles.Count < 1)
+            if (isActive)
             {
                 return;
             }
+            isActive = true;
+            HandleAnimation(member, 0);
 
-            for (int i = 0; i < performedDriverHandles.Count; i++)
-            {
-                var driverHandle = performedDriverHandles[i];
-                
-                if (driverHandle.conditional)
+            // end attack when attackEndDriverHandle is passed in the Reanimator current state
+            member.characterRenderer.GetReanimator().AddListener(attackEndDriverHandle.driverName, () => {
+                if (member.characterRenderer.GetReanimator().State.Get(attackEndDriverHandle.driverName) == attackEndDriverHandle.driverValue)
                 {
-                    member.characterRenderer.SetDriverConditional(
-                        driverHandle.driverName,
-                        driverHandle.driverValue,
-                        driverHandle.conditionalDriverName,
-                        driverHandle.conditionalDriverValue
-                    );
+                    EndAttack(member);
                 }
-                else
+            });
+        }
+
+        public void HandleAnimation(PartyMember member, int mode)
+        {
+            if (mode == 0)
+            {
+                if (performedDriverHandles.Count < 1)
                 {
-                    member.characterRenderer.SetDriver(
-                        driverHandle.driverName,
-                        driverHandle.driverValue
-                    );
+                    return;
+                }
+
+                for (int i = 0; i < performedDriverHandles.Count; i++)
+                {
+                    var driverHandle = performedDriverHandles[i];
+                    
+                    if (driverHandle.conditional)
+                    {
+                        member.characterRenderer.SetDriverConditional(
+                            driverHandle.driverName,
+                            driverHandle.driverValue,
+                            driverHandle.conditionalDriverName,
+                            driverHandle.conditionalDriverValue
+                        );
+                    }
+                    else
+                    {
+                        member.characterRenderer.SetDriver(
+                            driverHandle.driverName,
+                            driverHandle.driverValue
+                        );
+                    }
+                }
+            }
+            else
+            {
+                if (endDriverHandles.Count < 1)
+                {
+                    return;
+                }
+
+                for (int i = 0; i < endDriverHandles.Count; i++)
+                {
+                    var driverHandle = endDriverHandles[i];
+                    
+                    if (driverHandle.conditional)
+                    {
+                        member.characterRenderer.SetDriverConditional(
+                            driverHandle.driverName,
+                            driverHandle.driverValue,
+                            driverHandle.conditionalDriverName,
+                            driverHandle.conditionalDriverValue
+                        );
+                    }
+                    else
+                    {
+                        member.characterRenderer.SetDriver(
+                            driverHandle.driverName,
+                            driverHandle.driverValue
+                        );
+                    }
                 }
             }
         }
+    
+        private void EndAttack(PartyMember member)
+        {
+            if (!isActive)
+            {
+                return;
+            }
+            isActive = false;
+            HandleAnimation(member, 1);
+            OnMeleeAttackEnded?.Invoke(this, new OnMeleeAttackEndedArgs {member = member});
+        }   
     }
 }

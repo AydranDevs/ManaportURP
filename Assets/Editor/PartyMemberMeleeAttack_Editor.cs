@@ -20,7 +20,6 @@ public class PartyMemberMeleeAttack_Editor : Editor
     SerializedProperty modifierStatID;
 
     private bool _animationSettingsExpanded;
-    SerializedProperty driverHandles;
 
     private void OnEnable()
     {
@@ -35,8 +34,6 @@ public class PartyMemberMeleeAttack_Editor : Editor
         cost = serializedObject.FindProperty("cost");
 
         modifierStatID = serializedObject.FindProperty("modifierStatID");
-
-        driverHandles = serializedObject.FindProperty("driverHandles");
     }
 
     public override void OnInspectorGUI()
@@ -75,7 +72,10 @@ public class PartyMemberMeleeAttack_Editor : Editor
 
         if (_animationSettingsExpanded)
         {
+            #region Performed Driver Handles
             EditorGUILayout.BeginVertical();
+            EditorGUILayout.LabelField(new GUIContent("Performed Driver Handles", "The drivers that will be set in the member Reanimtor when this attack is performed."));
+            
             for (int i = 0; i < _partyMemberMeleeAttack.performedDriverHandles.Count; i++)
             {
                 EditorGUILayout.BeginVertical(boxStyle);
@@ -97,7 +97,7 @@ public class PartyMemberMeleeAttack_Editor : Editor
                 EditorGUILayout.EndVertical();
             }
 
-            #region Add and remove elements from the attacksList
+            #region Add and remove elements
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Add Driver Handle"))
             {
@@ -110,9 +110,63 @@ public class PartyMemberMeleeAttack_Editor : Editor
             EditorGUILayout.EndHorizontal();
             #endregion
             EditorGUILayout.EndVertical();
+            #endregion
+            
+            #region Attack End Driver Handle
+            EditorGUILayout.LabelField(new GUIContent("Attack End Driver Handle", "This is the driver that when passed in the reanimator state, signifies the attack ending. This will likely be the control driver in whatever animation this attack plays last."));
+            
+            EditorGUILayout.BeginVertical(boxStyle);
+                    
+            _partyMemberMeleeAttack.attackEndDriverHandle.driverName = EditorGUILayout.DelayedTextField("Check", _partyMemberMeleeAttack.attackEndDriverHandle.driverName);
+            _partyMemberMeleeAttack.attackEndDriverHandle.driverValue = EditorGUILayout.DelayedIntField("For", _partyMemberMeleeAttack.attackEndDriverHandle.driverValue);
+            _partyMemberMeleeAttack.attackEndDriverHandle.conditional = false;
+            
+            EditorGUILayout.EndVertical();
+            #endregion
+            #region Attack End Driver Handles
+            EditorGUILayout.BeginVertical();
+            EditorGUILayout.LabelField(new GUIContent("Attack End Driver Handles", "The drivers that will be set in the member Reanimtor when this attack ends."));
+
+            for (int i = 0; i < _partyMemberMeleeAttack.endDriverHandles.Count; i++)
+            {
+                EditorGUILayout.BeginVertical(boxStyle);
+                EditorGUILayout.LabelField($"Driver Handle {i + 1}");
+                
+                EditorGUILayout.BeginVertical(boxStyle);
+                
+                _partyMemberMeleeAttack.endDriverHandles[i].driverName = EditorGUILayout.DelayedTextField("Set", _partyMemberMeleeAttack.endDriverHandles[i].driverName);
+                _partyMemberMeleeAttack.endDriverHandles[i].driverValue = EditorGUILayout.DelayedIntField("To", _partyMemberMeleeAttack.endDriverHandles[i].driverValue);
+                _partyMemberMeleeAttack.endDriverHandles[i].conditional = EditorGUILayout.Toggle("Conditional?", _partyMemberMeleeAttack.endDriverHandles[i].conditional);
+                if (_partyMemberMeleeAttack.endDriverHandles[i].conditional)
+                {
+                    _partyMemberMeleeAttack.endDriverHandles[i].conditionalDriverName = EditorGUILayout.DelayedTextField("When", _partyMemberMeleeAttack.endDriverHandles[i].conditionalDriverName);
+                    _partyMemberMeleeAttack.endDriverHandles[i].conditionalDriverValue = EditorGUILayout.DelayedIntField("Is", _partyMemberMeleeAttack.endDriverHandles[i].conditionalDriverValue);
+                } 
+                
+                EditorGUILayout.EndVertical();
+
+                EditorGUILayout.EndVertical();
+            }
+
+            #region Add and remove elements
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("Add Driver Handle"))
+            {
+                _partyMemberMeleeAttack.endDriverHandles.Add(new DriverHandle());
+            }
+            if (GUILayout.Button("Remove Driver Handle"))
+            {
+                _partyMemberMeleeAttack.endDriverHandles.Remove(_partyMemberMeleeAttack.endDriverHandles[_partyMemberMeleeAttack.endDriverHandles.Count - 1]);
+            }
+            EditorGUILayout.EndHorizontal();
+            #endregion
+            EditorGUILayout.EndVertical();
+            #endregion
         }
+
         EditorGUILayout.EndVertical();
 
+        EditorUtility.SetDirty(_partyMemberMeleeAttack);
         serializedObject.ApplyModifiedProperties();
     }
 }

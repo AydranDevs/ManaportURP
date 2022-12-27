@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Piquretta_Combo
   m_EditorClassIdentifier: 
   requiredAction: {fileID: 11400000, guid: d2776a8f02e8e0d4f8a157b1a31b76b1, type: 2}
-  actionID: Piquretta_Combo
   modifierStatID: 0
   attacksList:
   - {fileID: 11400000, guid: 8dbcc5a225da4274cbed40a126407c63, type: 2}

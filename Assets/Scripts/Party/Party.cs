@@ -32,6 +32,8 @@ namespace Manapotion.PartySystem
 
         private InputAction _nextLeader;
         private InputAction _previousLeader;
+
+        public PartyMember startingLeader;
         
         public PartyMember partyLeader;
         public PartyMember previousLeader;
@@ -61,7 +63,15 @@ namespace Manapotion.PartySystem
             previousLeader = members[1];
             oldestLeader = members[2];
             
-            StartCoroutine(_partyCameraManager.SetCameraTargets(new List<Transform>{ members[0].transform, members[1].transform, members[2].transform, }));
+            if (startingLeader != null)
+            {
+                while (partyLeader != startingLeader)
+                {
+                    NextPartyMember();
+                }
+            }
+            
+            StartCoroutine(_partyCameraManager.SetCameraTargets(new List<Transform>{ partyLeader.transform }));
             _partyCameraManager.SetCameraMode(CameraMode.Soft_Follow);
 
             foreach (var member in members)
@@ -70,11 +80,11 @@ namespace Manapotion.PartySystem
             }
 
             _inputActionMap = _controls.FindActionMap("Player");
-            UtilitiesClass.CreateInputAction(_inputActionMap, NextPartyMember, _nextLeader, "Next");
-            UtilitiesClass.CreateInputAction(_inputActionMap, PreviousPartyMember, _previousLeader, "Previous");
+            UtilitiesClass.CreateInputAction(_inputActionMap, OnNext, _nextLeader, "Next");
+            UtilitiesClass.CreateInputAction(_inputActionMap, OnPrevious, _previousLeader, "Previous");
         }
 
-        public void NextPartyMember(InputAction.CallbackContext context)
+        public void OnNext(InputAction.CallbackContext context)
         {
             if (!context.started)
             {
@@ -88,6 +98,12 @@ namespace Manapotion.PartySystem
             {
                 return;
             }
+
+            NextPartyMember();
+        }
+
+        public void NextPartyMember()
+        {
 
             int index = Array.IndexOf(members, partyLeader);
 
@@ -107,7 +123,7 @@ namespace Manapotion.PartySystem
             PartyLeaderChanged();
         }
 
-        public void PreviousPartyMember(InputAction.CallbackContext context)
+        public void OnPrevious(InputAction.CallbackContext context)
         {
             if (!context.started)
             {
@@ -122,6 +138,11 @@ namespace Manapotion.PartySystem
                 return;
             }
             
+            PreviousPartyMember();
+        }
+        
+        public void PreviousPartyMember()
+        {
             int index = Array.IndexOf(members, partyLeader);
 
             index--;

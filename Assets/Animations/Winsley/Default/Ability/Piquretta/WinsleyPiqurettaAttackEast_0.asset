@@ -44,7 +44,7 @@ MonoBehaviour:
       - attackEnd
       values: 00000000
   controlDriver:
-    name: 
+    name: piqurettaAttack_0
     autoIncrement: 1
     percentageBased: 0
     guid: 5f09502e-308d-4fdc-94ac-29204b7acbe9

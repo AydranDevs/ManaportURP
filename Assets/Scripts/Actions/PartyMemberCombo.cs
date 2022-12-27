@@ -26,7 +26,9 @@ namespace Manapotion.Actions
         public List<PartyMemberMeleeAttack> attacksList;
         
         [System.NonSerialized]
-        private int currentlyPerformingAttackIndex;
+        private int _currentlyPerformingAttackIndex = 0;
+        [System.NonSerialized]
+        private bool _willAdvanceToNextAttack = false;
         
         public override IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
@@ -34,9 +36,34 @@ namespace Manapotion.Actions
             {
                 yield break;
             }
+            
+            if (attacksList[_currentlyPerformingAttackIndex].isActive && !_willAdvanceToNextAttack)
+            {
+                attacksList[_currentlyPerformingAttackIndex].OnMeleeAttackEnded += OnMeleeAttackEnded;
+                _willAdvanceToNextAttack = true;
+            }
 
-            attacksList[0].PerformAction(member, damageInstance);
+            member.StartCoroutine(attacksList[0].PerformAction(member, damageInstance));
+            _currentlyPerformingAttackIndex = 0;
+
             yield break;
+        }
+
+        public void OnMeleeAttackEnded(object sender, PartyMemberMeleeAttack.OnMeleeAttackEndedArgs e)
+        {
+            AdvanceToNextAttack(e.member);
+            attacksList[_currentlyPerformingAttackIndex].OnMeleeAttackEnded -= OnMeleeAttackEnded;
+        }
+
+        public void AdvanceToNextAttack(PartyMember member)
+        {
+            _currentlyPerformingAttackIndex++;
+            if (_currentlyPerformingAttackIndex < attacksList.Count - 1)
+            {
+                _currentlyPerformingAttackIndex = 0;
+            }
+            member.StartCoroutine(attacksList[_currentlyPerformingAttackIndex].PerformAction(member));
+            _willAdvanceToNextAttack = false;
         }
     }
 }

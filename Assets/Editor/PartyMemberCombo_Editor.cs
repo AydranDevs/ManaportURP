@@ -62,6 +62,8 @@ public class PartyMemberCombo_Editor : Editor
             EditorGUILayout.EndVertical();
             EditorGUILayout.EndHorizontal();
         }
+
+        EditorUtility.SetDirty(_partyMemberCombo);
         serializedObject.ApplyModifiedProperties();
     }
 }

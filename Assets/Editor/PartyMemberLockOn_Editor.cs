@@ -140,6 +140,7 @@ public class PartyMemberLockOn_Editor : Editor
         EditorGUILayout.EndVertical();
         #endregion
         
+        EditorUtility.SetDirty(_partyMemberLockOn);
         serializedObject.ApplyModifiedProperties();
     }
 }

@@ -40,11 +40,10 @@ MonoBehaviour:
       values: 
   - sprite: {fileID: -1692454323141990060, guid: 47374ec72d817e04da22b65bdf5b8971, type: 3}
     drivers:
-      keys:
-      - attackEnd
-      values: 01000000
+      keys: []
+      values: 
   controlDriver:
-    name: 
+    name: piqurettaAttack_1
     autoIncrement: 1
     percentageBased: 0
     guid: 0ad2df4c-b2de-47cf-b1a3-bc01b263b14c

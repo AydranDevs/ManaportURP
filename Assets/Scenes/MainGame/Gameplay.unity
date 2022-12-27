@@ -2686,6 +2686,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1263515340}
     - target: {fileID: 8575495456905702048, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: startingLeader
+      value: 
+      objectReference: {fileID: 1084825548}
+    - target: {fileID: 8575495456905702048, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: _partyCameraManager
       value: 
       objectReference: {fileID: 11400000, guid: f274007e95172e240b51bb0218fcfc6e, type: 2}
