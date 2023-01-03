@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Manapotion.Input
 {
     public enum MovementState { Idle, Push, Walk, Sprint, Dash, Skid, AuxilaryMovement }
-    public enum DirectionState { North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest }
+    public enum DirectionState { None, Foward, Right, Left, Backward }
     public enum FacingState { North, East, South, West }
 
     [System.Serializable]
@@ -19,8 +19,9 @@ namespace Manapotion.Input
         private Rigidbody2D _rigidbody;
 
         public MovementState movementState = MovementState.Idle;
-        public DirectionState directionState = DirectionState.South;
+        public DirectionState directionState = DirectionState.None;
         public FacingState facingState = FacingState.South;
+        public Vector2 forwardVector = Vector2.down;
         public float dashThreshold = 8f; 
 
         public CharacterControllerRestriction characterControllerRestriction = CharacterControllerRestriction.NoRestrictions;
@@ -39,8 +40,6 @@ namespace Manapotion.Input
         private Vector2 _reconstructedMovement;
 
         private float _sprintDuration;
-
-        private bool _noDiagonalMovement;
 
         public void Init(PartyMember member)
         {
@@ -64,10 +63,83 @@ namespace Manapotion.Input
         {
             if (GameStateManager.Instance.state != GameState.Main)
             {
+                facingState = FacingState.South;
                 return;
             }
 
             Move(Time.deltaTime);
+
+            // Set the correct facing state
+            if (_member.characterTargeting.currentlyTargeted != null)
+            {
+                facingState = _member.characterTargeting.GetFacingStateToTarget();
+                switch (facingState)
+                {
+                    case FacingState.North: forwardVector = Vector2.up; break;
+                    case FacingState.East: forwardVector = Vector2.right; break;
+                    case FacingState.South: forwardVector = Vector2.down; break;
+                    case FacingState.West: forwardVector = Vector2.left; break;
+                }
+            }
+            else
+            {
+                switch (_inputProvider.GetState().movementDirection)
+                {
+                    case Vector2 dir when dir.Equals(new Vector2(0, 1)): 
+                        facingState = FacingState.North;
+                        forwardVector = Vector2.up;
+                        break;
+                    case Vector2 dir when dir.Equals(new Vector2(1, 1)): 
+                        facingState = FacingState.North;
+                        forwardVector = Vector2.up;
+                        break;
+                    case Vector2 dir when dir.Equals(new Vector2(1, 0)): 
+                        facingState = FacingState.East;
+                        forwardVector = Vector2.right;
+                        break;
+                    case Vector2 dir when dir.Equals(new Vector2(1, -1)): 
+                        facingState = FacingState.East;
+                        forwardVector = Vector2.right;
+                        break;
+                    case Vector2 dir when dir.Equals(new Vector2(0, -1)): 
+                        facingState = FacingState.South;
+                        forwardVector = Vector2.down;
+                        break;
+                    case Vector2 dir when dir.Equals(new Vector2(-1, -1)): 
+                        facingState = FacingState.South;
+                        forwardVector = Vector2.down;
+                        break;
+                    case Vector2 dir when dir.Equals(new Vector2(-1, 0)): 
+                        facingState = FacingState.West;
+                        forwardVector = Vector2.left;
+                        break;
+                    case Vector2 dir when dir.Equals(new Vector2(-1, 1)): 
+                        facingState = FacingState.West;
+                        forwardVector = Vector2.left;
+                        break;
+                }
+            }
+
+            if (_inputProvider.GetState().movementDirection.normalized == forwardVector)
+            {
+                directionState = DirectionState.Foward;
+            }
+            else if (_inputProvider.GetState().movementDirection.normalized == new Vector2(forwardVector.y, -forwardVector.x))
+            {
+                directionState = DirectionState.Right;
+            }
+            else if (_inputProvider.GetState().movementDirection.normalized == new Vector2(-forwardVector.y, forwardVector.x))
+            {
+                directionState = DirectionState.Left;
+            }
+            else if (Vector2.Dot(forwardVector, _inputProvider.GetState().movementDirection.normalized) == -1)
+            {
+                directionState = DirectionState.Backward;
+            }
+            else
+            {
+                directionState = DirectionState.None;
+            }
         }
 
         #region Controlled by InputProvider
@@ -232,6 +304,11 @@ namespace Manapotion.Input
                     characterControllerRestriction = CharacterControllerRestriction.NoRestrictions;
                 }
             );
+        }
+
+        public void SetFacingState(FacingState state)
+        {
+            this.facingState = state;
         }
     }
 }

@@ -14,4 +14,11 @@ public class Enemy : MonoBehaviour, ITargetable
     {
         return this.transform;
     }
+
+    private void Start() {
+        DamageNumber.Create(transform.position, new Manapotion.Actions.DamageInstance
+        {
+            damageInstanceAmount = 5
+        });
+    }
 }

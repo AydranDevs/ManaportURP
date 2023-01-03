@@ -36,11 +36,17 @@ namespace Manapotion.Actions
             {
                 yield break;
             }
+            if (_willAdvanceToNextAttack)
+            {
+                yield break;
+            }
             
             if (attacksList[_currentlyPerformingAttackIndex].isActive && !_willAdvanceToNextAttack)
             {
+                Debug.Log($"Clicked during {attacksList[_currentlyPerformingAttackIndex].name}");
                 attacksList[_currentlyPerformingAttackIndex].OnMeleeAttackEnded += OnMeleeAttackEnded;
                 _willAdvanceToNextAttack = true;
+                yield break;
             }
 
             member.StartCoroutine(attacksList[0].PerformAction(member, damageInstance));
@@ -51,14 +57,16 @@ namespace Manapotion.Actions
 
         public void OnMeleeAttackEnded(object sender, PartyMemberMeleeAttack.OnMeleeAttackEndedArgs e)
         {
-            AdvanceToNextAttack(e.member);
             attacksList[_currentlyPerformingAttackIndex].OnMeleeAttackEnded -= OnMeleeAttackEnded;
+            
+            Debug.Log("Attack ended");
+            AdvanceToNextAttack(e.member);
         }
 
         public void AdvanceToNextAttack(PartyMember member)
         {
             _currentlyPerformingAttackIndex++;
-            if (_currentlyPerformingAttackIndex < attacksList.Count - 1)
+            if (_currentlyPerformingAttackIndex > attacksList.Count - 1)
             {
                 _currentlyPerformingAttackIndex = 0;
             }

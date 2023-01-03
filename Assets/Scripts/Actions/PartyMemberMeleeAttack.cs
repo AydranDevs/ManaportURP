@@ -55,7 +55,7 @@ namespace Manapotion.Actions
 
         public override IEnumerator PerformAction(PartyMember member, DamageInstance damageInstance = null)
         {
-            if (damageInstance == null)
+            if (comboParent == null && damageInstance == null)
             {
                 yield break;
             }

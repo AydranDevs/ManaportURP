@@ -76,7 +76,7 @@ namespace Manapotion.Actions
                 {
                     damageInstanceType = damageInstance.damageInstanceType,
                     damageInstanceElement = damageInstance.damageInstanceElement,
-                    damageInstanceAmount = (float)member.statsManagerScriptableObject.GetStat(modifierStatID).value.modifiedValue
+                    damageInstanceAmount = member.statsManagerScriptableObject.GetStat(modifierStatID).value.modifiedValue
                 }
             ));
         }

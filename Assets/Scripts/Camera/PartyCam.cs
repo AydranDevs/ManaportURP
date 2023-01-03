@@ -19,7 +19,6 @@ namespace Manapotion.PartySystem.Cam
 
         Camera cam;
 
-
         private Vector2 _targetPosition;
 
         private Vector2 _maxTargetPosition;

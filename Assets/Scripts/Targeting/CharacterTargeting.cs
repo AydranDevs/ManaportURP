@@ -69,31 +69,36 @@ namespace Manapotion.Actions.Targets
         }
         
         /// <summary>
-        /// Get the facing state int value that would make the character face the target.
+        /// Get the facing state that would make the character face the target.
         /// </summary>
         /// <returns></returns>
-        public int GetFacingStateToTarget()
+        public Input.FacingState GetFacingStateToTarget()
         {
+            if (currentlyTargeted == null)
+            {
+                return Input.FacingState.South; 
+            }
+
             Vector2 targetDir = ((Vector3)_member.characterTargeting.GetCurrentTargetPosition() - _member.transform.position).normalized;
 
             if (targetDir.x >= .7f)
             {
-                return (int)Input.FacingState.East;
+                return Input.FacingState.East;
             }
             else if (targetDir.x <= -.7f)
             {
-                return (int)Input.FacingState.West;
+                return Input.FacingState.West;
             }
             else if (targetDir.y >= .7f)
             {
-                return (int)Input.FacingState.North;
+                return Input.FacingState.North;
             }
             else if (targetDir.y <= -.7f)
             {
-                return (int)Input.FacingState.South;
+                return Input.FacingState.South;
             }
 
-            return (int)Input.FacingState.South; 
+            return Input.FacingState.South; 
         }
         
         #endregion
@@ -105,7 +110,12 @@ namespace Manapotion.Actions.Targets
 
         void Update()
         {
-            
+            if (currentlyTargeted == null)
+            {
+                return;
+            }
+
+            _member.characterController.SetFacingState(GetFacingStateToTarget());
         }
     }
 }

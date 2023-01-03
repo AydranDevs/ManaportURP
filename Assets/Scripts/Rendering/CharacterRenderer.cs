@@ -33,54 +33,8 @@ namespace Manapotion.Rendering
 
         private void Update()
         {
-            if (GameStateManager.Instance.state != GameState.Main)
-            {
-                _member.characterController.facingState = FacingState.South;
-            }
-
-            if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, 1))) 
-            { // north 
-                _member.characterController.facingState = FacingState.North; // north
-            }
-            else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 1)))
-            { // northeast
-                _member.characterController.facingState = FacingState.North; 
-            }
-            else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, 0)))
-            { // east
-                _member.characterController.facingState = FacingState.East; // east
-            }
-            else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(1, -1)))
-            { // southeast
-                _member.characterController.facingState = FacingState.East;
-            }
-            else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(0, -1)))
-            { // south
-                _member.characterController.facingState = FacingState.South; // south
-            }
-            else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, -1))) 
-            { // southwest
-                _member.characterController.facingState = FacingState.South;
-            }
-            else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 0)))
-            { // west
-                _member.characterController.facingState = FacingState.West; // west
-            }
-            else if (_member.characterInput.GetInputProvider().GetState().movementDirection.Equals(new Vector2(-1, 1))) 
-            { // northwest
-                _member.characterController.facingState = FacingState.West;
-            }
-
             _reanimator.Set(Drivers.FACING_STATE, ((int)_member.characterController.facingState));
             _reanimator.Set(Drivers.MOVEMENT_STATE, ((int)_member.characterController.movementState));
-
-            if (_member.characterTargeting.currentlyTargeted == null)
-            {
-                return;
-            }
-            
-            _member.characterController.facingState = (FacingState)_member.characterTargeting.GetFacingStateToTarget();
-            _reanimator.Set(Drivers.FACING_STATE, _member.characterTargeting.GetFacingStateToTarget());
         }
 
         public void SetDriver(string driverName, int driverValue)

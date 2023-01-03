@@ -6,6 +6,6 @@ namespace Manapotion.Actions
         public DamageInstanceType damageInstanceType = DamageInstanceType.Physical;
         public enum DamageInstanceElement { Arcane, Pyro, Cryo, Toxi, Volt }
         public DamageInstanceElement damageInstanceElement = DamageInstanceElement.Arcane;
-        public float damageInstanceAmount;   
+        public int damageInstanceAmount;   
     }
 }

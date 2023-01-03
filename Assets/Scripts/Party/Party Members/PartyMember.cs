@@ -109,9 +109,6 @@ namespace Manapotion.PartySystem
         public PrimaryActionElement primaryActionElement = PrimaryActionElement.Arcane;
         public SecondaryActionElement secondaryActionElement = SecondaryActionElement.Arcane;
         public DamageType damageType;
-
-        // [field: SerializeField]
-        // public PartyMemberStats stats { get; protected set; }
         
         private void Start()
         {
@@ -275,7 +272,7 @@ namespace Manapotion.PartySystem
                     {
                     damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
                     damageInstanceElement = (DamageInstance.DamageInstanceElement)primaryActionElement,
-                    damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
+                    damageInstanceAmount = this.statsManagerScriptableObject.GetStat(
                         equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[0].GetModifierStatID()
                         ).value.modifiedValue
                     });
@@ -289,7 +286,7 @@ namespace Manapotion.PartySystem
                     {
                     damageInstanceType = (DamageInstance.DamageInstanceType)damageType,
                     damageInstanceElement = (DamageInstance.DamageInstanceElement)secondaryActionElement,
-                    damageInstanceAmount = (float)this.statsManagerScriptableObject.GetStat(
+                    damageInstanceAmount = this.statsManagerScriptableObject.GetStat(
                         equipmentManagerScriptableObject.weapon.itemScriptableObject.attacksManagerScriptableObject.attacksArray[1].GetModifierStatID()
                         ).value.modifiedValue
                     });
@@ -403,6 +400,12 @@ namespace Manapotion.PartySystem
 
             Gizmos.color = Color.red;
             Gizmos.DrawLine(transform.position, characterTargeting.GetCurrentTargetPosition());
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)characterInput.GetInputProvider().inputState.movementDirection);
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)characterController.forwardVector);
+            Gizmos.color = Color.cyan;
+            
         }
         #endif
     }
