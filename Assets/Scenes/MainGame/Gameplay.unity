@@ -1846,6 +1846,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4536639332912630902, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.directionState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536639332912630902, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterTargeting._partyCameraManager
       value: 
       objectReference: {fileID: 11400000, guid: f274007e95172e240b51bb0218fcfc6e, type: 2}
@@ -1976,6 +1980,10 @@ PrefabInstance:
     - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterTargeting.lockOnRange
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
+      propertyPath: characterController.directionState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6822457150433077822, guid: 75349ec34f0206343ac87b8de77379c9, type: 3}
       propertyPath: characterTargeting._partyCameraManager

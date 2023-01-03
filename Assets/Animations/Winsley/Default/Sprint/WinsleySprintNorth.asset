@@ -13,27 +13,27 @@ MonoBehaviour:
   m_Name: WinsleySprintNorth
   m_EditorClassIdentifier: 
   cels:
-  - sprite: {fileID: -1662281853241026179, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+  - sprite: {fileID: -7351821415485462153, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 299738818906231507, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+  - sprite: {fileID: 4568673056569893644, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: -5229256622614015930, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+  - sprite: {fileID: -3673921815004085799, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 6670574867771426641, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+  - sprite: {fileID: -9036340947583192174, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 2231731082891954622, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+  - sprite: {fileID: 3649179642449742948, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: -408847289422981801, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+  - sprite: {fileID: 187564268845774948, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 

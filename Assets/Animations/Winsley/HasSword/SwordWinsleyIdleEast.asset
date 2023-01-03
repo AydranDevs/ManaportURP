@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SwordWinsleyIdleEast
   m_EditorClassIdentifier: 
   cels:
-  - sprite: {fileID: -1497667024576756614, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+  - sprite: {fileID: -1468284716455466949, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 

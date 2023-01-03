@@ -13,19 +13,11 @@ MonoBehaviour:
   m_Name: WinsleyLowerSwordEast
   m_EditorClassIdentifier: 
   cels:
-  - sprite: {fileID: 3988803283856273506, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+  - sprite: {fileID: -1468284716455466949, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: 3988803283856273506, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
-    drivers:
-      keys: []
-      values: 
-  - sprite: {fileID: 666533376863303859, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
-    drivers:
-      keys: []
-      values: 
-  - sprite: {fileID: 803599714378272238, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+  - sprite: {fileID: -3231320576840184006, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys:
       - swordLoweredEvent
