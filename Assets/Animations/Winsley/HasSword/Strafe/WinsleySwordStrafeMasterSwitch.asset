@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: MirabelleMovementSwitch
+  m_Name: WinsleySwordStrafeMasterSwitch
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 11400000, guid: af643ce6197009c4c96be8f2f88d1ee6, type: 2}
-  - {fileID: 11400000, guid: a6dc805b6755fef46abca802089d8648, type: 2}
   - {fileID: 0}
-  - {fileID: 11400000, guid: cc75b2ffd8b8fbf4689984de28f037ee, type: 2}
-  - {fileID: 11400000, guid: 8712c66ffcc94e747906b0fd541aad87, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: d63c874ec8e60d1418832ef6fa8183fb, type: 2}
+  - {fileID: 0}
   controlDriver:
-    name: movementState
+    name: facingState
     autoIncrement: 0
     percentageBased: 0
-    guid: 2e9dffa6-c56d-4dde-aa91-79435ff33cc2
+    guid: ee9e034e-f0eb-4d60-bdc5-73c668b582e9
   drivers:
     keys: []
     values: 

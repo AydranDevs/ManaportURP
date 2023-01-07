@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02f1da0b6abdb7d45aa4315eccab639b, type: 3}
+  m_Name: WinsleySwordStrafeSouthRight
+  m_EditorClassIdentifier: 
+  cels:
+  - sprite: {fileID: 3050665001957535859, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 7373888340501701864, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 327454097837609206, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 3853112125321509698, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 7084847337270356440, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: 8357283311999606579, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  - sprite: {fileID: -3454032665272127023, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
+    drivers:
+      keys: []
+      values: 
+  controlDriver:
+    name: 
+    autoIncrement: 1
+    percentageBased: 0
+    guid: 4fd1809b-9aea-4709-8870-e8181fd6d394
+  drivers:
+    keys: []
+    values: 

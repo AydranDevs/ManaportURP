@@ -22,3 +22,5 @@ MonoBehaviour:
     toNode: {fileID: 11400000, guid: d2f852890409b8645a51fac6f839e690, type: 2}
   - fromNode: {fileID: 11400000, guid: 278452f9bc27572489bdac0e9c8c5935, type: 2}
     toNode: {fileID: 11400000, guid: 6b767ac5db8bac247963b6d264aa48e2, type: 2}
+  - fromNode: {fileID: 11400000, guid: 07265b4301a02bf408af15a927347271, type: 2}
+    toNode: {fileID: 11400000, guid: 6b767ac5db8bac247963b6d264aa48e2, type: 2}

@@ -5,10 +5,6 @@ using UnityEngine;
 
 namespace Manapotion.Input
 {
-    public enum MovementState { Idle, Push, Walk, Sprint, Dash, Skid, AuxilaryMovement }
-    public enum DirectionState { None, Foward, Right, Left, Backward }
-    public enum FacingState { North, East, South, West }
-
     [System.Serializable]
     public class CharacterController
     {
@@ -203,7 +199,15 @@ namespace Manapotion.Input
             {
                 if (characterControllerRestriction.canWalk)
                 {
-                    movementState = MovementState.Walk;
+                    if (directionState != DirectionState.Foward && directionState != DirectionState.Backward)
+                    {
+                        movementState = MovementState.Strafe;
+                    }
+                    else
+                    {
+                        movementState = MovementState.Walk;
+                    }
+
                     _movementSp = ManaMath.DexCalc_MoveSp(_member.statsManagerScriptableObject.GetStat(Stats.StatID.DEX).value.modifiedValue);
                     _sprintDuration = 0f;
                 }

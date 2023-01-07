@@ -19,6 +19,7 @@ namespace Manapotion.Rendering
         // drivers that are modified by this class
         private static class Drivers 
         {
+            public const string DIRECTION = "direction";
             public const string MOVEMENT_STATE = "movementState";
             public const string FACING_STATE = "facingState";
         }
@@ -35,6 +36,15 @@ namespace Manapotion.Rendering
         {
             _reanimator.Set(Drivers.FACING_STATE, ((int)_member.characterController.facingState));
             _reanimator.Set(Drivers.MOVEMENT_STATE, ((int)_member.characterController.movementState));
+
+            if (_member.characterController.directionState == DirectionState.Left)
+            {
+                _reanimator.Set(Drivers.DIRECTION, 0);
+            }
+            else if (_member.characterController.directionState == DirectionState.Right)
+            {
+                _reanimator.Set(Drivers.DIRECTION, 1);
+            }
         }
 
         public void SetDriver(string driverName, int driverValue)
@@ -48,7 +58,6 @@ namespace Manapotion.Rendering
             {
                 if (_reanimator.State.Get(conditionalDriverName) == conditionalDriverValue)
                 {
-                    Debug.Log($"{conditionalDriverName} is currently {conditionalDriverValue}");
                     _reanimator.Set(driverName, driverValue);
                 }
             });
