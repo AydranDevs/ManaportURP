@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b935bc3bfd4944ab93c4a574dfd0da, type: 3}
-  m_Name: WinsleySwordStrafeMasterSwitch
+  m_Name: WinsleySwordStrafeNorthSwitch
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 11400000, guid: df7c3f3d48e27884888a182dfa59c1b6, type: 2}
-  - {fileID: 11400000, guid: a2b98fcb537c5e841b4e50b1b75186bb, type: 2}
-  - {fileID: 11400000, guid: d63c874ec8e60d1418832ef6fa8183fb, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: e5d38ba3bc50f4c4c827c039fb742723, type: 2}
+  - {fileID: 11400000, guid: 66491b7732f84a34092ac9ecb19ca17f, type: 2}
   controlDriver:
-    name: facingState
+    name: direction
     autoIncrement: 0
     percentageBased: 0
-    guid: ee9e034e-f0eb-4d60-bdc5-73c668b582e9
+    guid: ef3e6d9b-f24f-4f0c-a2e3-051fc599b292
   drivers:
     keys: []
     values: 
