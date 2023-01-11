@@ -132,7 +132,7 @@ namespace Manapotion.Input
             {
                 directionState = DirectionState.Backward;
             }
-            else
+            else if (_inputProvider.GetState().movementDirection == Vector2.zero)
             {
                 directionState = DirectionState.None;
             }

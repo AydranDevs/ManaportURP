@@ -13,23 +13,14 @@ MonoBehaviour:
   m_Name: WinsleyRaiseSwordWest
   m_EditorClassIdentifier: 
   cels:
-  - sprite: {fileID: -7653333080746462389, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+  - sprite: {fileID: 4185462705210474382, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: -8301239730947650339, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
+  - sprite: {fileID: -4514860983245821343, guid: 72ded4618a9930e4a865443b6dcfc7be, type: 3}
     drivers:
       keys: []
       values: 
-  - sprite: {fileID: -5598502038588242002, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
-    drivers:
-      keys: []
-      values: 
-  - sprite: {fileID: -5598502038588242002, guid: f63078e953000374c9ca9c4090cf103c, type: 3}
-    drivers:
-      keys:
-      - swordRaisedEvent
-      values: 00000000
   controlDriver:
     name: raiseSword
     autoIncrement: 1
